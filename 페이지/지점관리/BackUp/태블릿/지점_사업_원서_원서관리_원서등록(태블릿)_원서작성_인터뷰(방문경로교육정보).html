@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="overflow-y: scroll !important;">
+
+	<div class="modal-wrap" id="pageModal11" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">인터뷰</h5>
+					<div>
+						<button type="submit" class="btn btn-point btn-sm">인터뷰</button>
+						<button type="submit" class="btn btn-outline-cancel btn-sm">원서</button>
+					</div>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<dl class="mbody-subject">
+						<dt>교육 인터뷰 신청서(SBS아카데미컴퓨터아트학원)</dt>
+						<dd>여러분이 작성하신 교육 인터뷰 신청서는 SBS아카데미컴퓨터아트학원의 발전 및 수강생들에 대한 서비스 반영 등 소중하게 사용 될 자료 입니다.<br />최대한 자세히 체크 부탁드립니다.</dd>
+					</dl><!-- // mbody-subject -->
+
+					<div class="mbody-title">방문경로</div><!-- // mbody-title -->
+					<div class="mbody-forms mbody-rounded">
+
+						<div class="mbody-title mb-3">현재 수강 예정인 과정의 정보를 처음 접하고 관심을 가지게 된 경로는?</div>
+						<dl class="row">
+							<dt>일반</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_1" autocomplete="off">
+										<label class="btn" for="textRadio3_1">신문</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_2" autocomplete="off">
+										<label class="btn" for="textRadio3_2">TV</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_3" autocomplete="off">
+										<label class="btn" for="textRadio2_3">영화</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_4" autocomplete="off">
+										<label class="btn" for="textRadio3_4">유튜브</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_5" autocomplete="off">
+										<label class="btn" for="textRadio3_5">추천</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_6" autocomplete="off">
+										<label class="btn" for="textRadio3_6">기타</label>
+									</div>
+									<div>
+										<input type="text" class="form-control" placeholder="직접입력">
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>포털</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio4" id="textRadio4_1" autocomplete="off">
+										<label class="btn" for="textRadio4_1">포털(네이버)</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio4" id="textRadio4_2" autocomplete="off">
+										<label class="btn" for="textRadio4_2">포털(다음)</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio4" id="textRadio4_3" autocomplete="off">
+										<label class="btn" for="textRadio4_3">포털(구글)</label>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>SNS</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_1" autocomplete="off">
+										<label class="btn" for="textRadio5_1">페이스북</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_2" autocomplete="off">
+										<label class="btn" for="textRadio5_2">인스타그램</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_3" autocomplete="off">
+										<label class="btn" for="textRadio5_3">기타</label>
+									</div>
+									<div>
+										<input type="text" class="form-control" placeholder="직접입력">
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+					</div><!-- // mbody-forms -->
+					
+					<div class="mbody-title">교육 관련 정보</div><!-- // mbody-title -->
+					<div class="mbody-forms mbody-rounded">
+
+						<dl class="row">
+							<dt>교육경험</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio6" id="textRadio6_1" autocomplete="off">
+										<label class="btn" for="textRadio6_1">유</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio6" id="textRadio6_2" autocomplete="off">
+										<label class="btn" for="textRadio6_2">무</label>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>수강과목</dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-340px"><input type="text" class="form-control" placeholder=""></div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>교육기간</dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-200px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">6개월</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>관심과목</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_1" autocomplete="off">
+										<label class="btn" for="textRadio7_1">취업/이직</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_2" autocomplete="off">
+										<label class="btn" for="textRadio7_2">자격증취득</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_3" autocomplete="off">
+										<label class="btn" for="textRadio7_3">업무보충</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio7" id="textRadio5_4" autocomplete="off">
+										<label class="btn" for="textRadio5_4">학과보충</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_5" autocomplete="off">
+										<label class="btn" for="textRadio7_5">취미</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_6" autocomplete="off">
+										<label class="btn" for="textRadio7_6">기타</label>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>관심과목</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_1" autocomplete="off">
+										<label class="btn" for="textRadio8_1">광고편집</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_2" autocomplete="off">
+										<label class="btn" for="textRadio8_2">웹디자인</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_3" autocomplete="off">
+										<label class="btn" for="textRadio8_3">실내건축</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_4" autocomplete="off">
+										<label class="btn" for="textRadio8_4">제품디자인</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_5" autocomplete="off">
+										<label class="btn" for="textRadio8_5">취미</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_6" autocomplete="off">
+										<label class="btn" for="textRadio8_6">프로그래밍</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_7" autocomplete="off">
+										<label class="btn" for="textRadio8_7">게임제작</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_8" autocomplete="off">
+										<label class="btn" for="textRadio8_8">자격증취득</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_9" autocomplete="off">
+										<label class="btn" for="textRadio8_9">게임제작</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_10" autocomplete="off">
+										<label class="btn" for="textRadio8_10">특수효과</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_11" autocomplete="off">
+										<label class="btn" for="textRadio8_11">영상편집</label>
+									</div>
+								</div>
+								<div class="form-inline mt-1 ms-0">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_12" autocomplete="off">
+										<label class="btn" for="textRadio8_12">아트웍</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_13" autocomplete="off">
+										<label class="btn" for="textRadio8_13">자격증</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_14" autocomplete="off">
+										<label class="btn" for="textRadio8_14">기타</label>
+									</div>
+									<div>
+										<input type="text" class="form-control" placeholder="직접입력">
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>수강시<br />고려사항</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio9" id="textRadio9_1" autocomplete="off">
+										<label class="btn" for="textRadio9_1">교육과정</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio9" id="textRadio9_2" autocomplete="off">
+										<label class="btn" for="textRadio9_2">강의수준</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio9" id="textRadio9_3" autocomplete="off">
+										<label class="btn" for="textRadio9_3">수강료</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio9" id="textRadio9_4" autocomplete="off">
+										<label class="btn" for="textRadio9_4">학사관리</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio9" id="textRadio9_5" autocomplete="off">
+										<label class="btn" for="textRadio9_5">민원처리</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio9" id="textRadio9_6" autocomplete="off">
+										<label class="btn" for="textRadio9_6">시설</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio9" id="textRadio9_7" autocomplete="off">
+										<label class="btn" for="textRadio9_7">기타</label>
+									</div>
+									<div>
+										<input type="text" class="form-control" placeholder="직접입력">
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+					</div><!-- // mbody-forms -->	
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+						<button type="submit" class="btn btn-point">다음</button>
+				</div><!-- // modal-footer -->
+
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal : pageModal11 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="overflow-y: scroll !important;">
+
+	<div class="modal-wrap" id="pageModal11" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">인터뷰</h5>
+					<div>
+						<button type="submit" class="btn btn-point btn-sm">인터뷰</button>
+						<button type="submit" class="btn btn-outline-cancel btn-sm">원서</button>
+					</div>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<dl class="mbody-subject">
+						<dt>교육 인터뷰 신청서(SBS아카데미컴퓨터아트학원)</dt>
+						<dd>여러분이 작성하신 교육 인터뷰 신청서는 SBS아카데미컴퓨터아트학원의 발전 및 수강생들에 대한 서비스 반영 등 소중하게 사용 될 자료 입니다.<br />최대한 자세히 체크 부탁드립니다.</dd>
+					</dl><!-- // mbody-subject -->
+
+					<div class="mbody-title">학생정보</div><!-- // mbody-title -->
+					<div class="mbody-forms mbody-rounded">
+
+						<dl class="row">
+							<dt>이름</dt>
+							<dd>김길동</dd>
+						</dl>
+						<dl class="row">
+							<dt>핸드폰번호</dt>
+							<dd>010-1234-1234</dd>
+						</dl>
+						<dl class="row">
+							<dt>생년월일</dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-90px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">년</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-90px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">월</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-90px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">일</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>성별</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio1" id="textRadio1_1" autocomplete="off" checked="">
+										<label class="btn" for="textRadio1_1">남자</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio1" id="textRadio1_2" autocomplete="off">
+										<label class="btn" for="textRadio1_2">여자</label>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>직업</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_1" autocomplete="off">
+										<label class="btn" for="textRadio2_1">직장인</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_2" autocomplete="off">
+										<label class="btn" for="textRadio2_2">학생</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_3" autocomplete="off">
+										<label class="btn" for="textRadio2_3">취업준비생</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_4" autocomplete="off">
+										<label class="btn" for="textRadio2_4">자영업</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_5" autocomplete="off">
+										<label class="btn" for="textRadio2_5">기타</label>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>거주지역</dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-200px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">지역</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-200px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">구</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>메일주소</dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-200px"><input type="text" class="form-control" placeholder="메일주소"></div>
+									<div class="col-auto col-dash">@</div>
+									<div class="col-200px"><input type="text" class="form-control" placeholder="직접입력"></div>
+									<div class="col-200px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">직접입력</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>전공여부</dt>
+							<dd>
+								<div class="form-inline">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
+										<label class="form-check-label" for="inlineRadio1_a">전공</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+										<label class="form-check-label" for="inlineRadio1_b">비전공</label>
+									</div>
+								</div>
+							</dd>
+						</dl>
+
+					</div><!-- // mbody-forms -->				
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+						<button type="submit" class="btn btn-point">다음</button>
+				</div><!-- // modal-footer -->
+
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal : pageModal11 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+</body>
+</html>

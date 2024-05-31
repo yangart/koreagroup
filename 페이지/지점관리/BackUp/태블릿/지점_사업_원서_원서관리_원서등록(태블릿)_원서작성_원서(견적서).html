@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="overflow-y: scroll !important;">
+
+	<div class="modal-wrap" id="pageModal11" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">원서</h5>
+					<div>
+						<button type="submit" class="btn btn-outline-cancel btn-sm">인터뷰</button>
+						<button type="submit" class="btn btn-point btn-sm">원서</button>
+					</div>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<dl class="mbody-subject">
+						<dt>APPLICATION 입학원서</dt>
+						<dd>상기 본인은 SBS아카데미컴퓨터아트학원에 입학하여 다음 과정을 전공하려 합니다.</dd>
+					</dl><!-- // mbody-subject -->
+
+					<div class="table-head">
+						<div class="table-title">수강 과목</div>
+						<div class="table-btn">
+							<a href="#" class="btn btn-point btn-sm">추가</a>
+						</div>
+					</div>
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+							<col style="width:">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>순번</th>
+								<th>구분</th>
+								<th>과목</th>
+								<th>평일/주말</th>
+								<th>개강일</th>
+								<th>교육시간</th>
+								<th>할인</th>
+								<th>유/무료</th>
+								<th>원수강료(원)</th>
+								<th>관리</th>
+								<th>삭제</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>패키지</td>
+								<td class="text-start">포토샵 초급</td>
+								<td>평일</td>
+								<td>2023.09.10</td>
+								<td>14:00-16:00 (월수금) 5층 A 임소연 강사</td>
+								<td>가능</td>
+								<td>유료</td>
+								<td>500,000</td>
+								<td><a href="#pageModal18" data-bs-toggle="modal" class="btn btn-outline-active btn-sm">상세</a></td>
+								<td><a href="#pageModalB" data-bs-toggle="modal" class="btn btn-outline-active btn-sm">삭제</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="table-head">
+						<div class="table-title">할인 (원)</div>
+						<div class="table-btn">
+							<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point btn-sm">추가</a>
+						</div>
+					</div>
+					<table class="table table-card table-align-left">
+						<colgroup>
+							<col style="width:12%">
+							<col style="">
+							<col style="width:18%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>과목할인</th>
+								<td>150,000 (10%)</td>
+								<td rowspan="2" class="text-center"><strong>총할인율 <br>40%</strong></td>
+							</tr>
+							<tr>
+								<th>추가할인</th>
+								<td>135,000 (직권 10%) <a href="#" class="btn-delete">삭제</a> 243,000 (추천 20%) <a href="#" class="btn-delete">삭제</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="table-head">
+						<div class="table-title">수강료 (원)</div>
+						<div class="table-btn">
+							<a href="#" class="btn btn-point btn-sm">추가</a>
+						</div>
+					</div>
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:33.33%">
+							<col style="width:33.33%">
+							<col style="">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>원수강료</th>
+								<th>할인금액</th>
+								<th>총수강료</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>과목</td>
+								<td>1,500,000</td>
+								<td>150,000</td>
+								<td rowspan="2" class="text-center"><strong>3,350,000</strong></td>
+							</tr>
+							<tr>
+								<td>패키지</td>
+								<td>3,000,000</td>
+								<td>1,000,000</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="table-head">
+						<div class="table-title">온라인 강의</div>
+						<div class="table-btn">
+							<a href="#" class="btn btn-point btn-sm">추가</a>
+						</div>
+					</div>
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:16%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>패키지 이름</th>
+								<th>원수강료</th>
+								<th>할인금액</th>
+								<th>총수강료</th>
+								<th>삭제</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>온라인 강의 상품3</td>
+								<td>300,000</td>
+								<td>100,000</td>
+								<td>200,000</td>
+								<td><a href="#" class="btn btn-outline-active btn-sm">삭제</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="table-head">
+						<div class="table-title">교재</div>
+						<div class="table-btn">
+							<a href="#" class="btn btn-point btn-sm">추가</a>
+						</div>
+					</div>
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:16%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>이름</th>
+								<th>판매가</th>
+								<th>수량</th>
+								<th>금액</th>
+								<th>삭제</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>교보재3</td>
+								<td>10,000</td>
+								<td><input type="text" class="form-control text-center" placeholder="" value="1"></td>
+								<td>200,000</td>
+								<td><a href="#" class="btn btn-outline-active btn-sm">삭제</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="table-head">
+						<div class="table-title">교보재</div>
+						<div class="table-btn">
+							<a href="#" class="btn btn-point btn-sm">추가</a>
+						</div>
+					</div>
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:22%">
+							<col style="width:16%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>이름</th>
+								<th>판매가</th>
+								<th>수량</th>
+								<th>금액</th>
+								<th>삭제</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>교보재3</td>
+								<td>10,000</td>
+								<td><input type="text" class="form-control text-center" placeholder="" value="1"></td>
+								<td>200,000</td>
+								<td><a href="#" class="btn btn-outline-active btn-sm">삭제</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="w-100 align-center mt-5">
+						<button type="submit" class="btn btn-point-deep">신규 저장</button>
+						<button type="submit" class="btn btn-point-deep">견적서 저장</button>
+						<button type="submit" class="btn btn-outline-cancel">초기화</button>
+						<button type="submit" class="btn btn-point" data-bs-toggle="modal" data-bs-target="#pageModal110">보기</button>
+					</div>
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+						<button type="submit" class="btn btn-point">다음</button>
+				</div><!-- // modal-footer -->
+
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal : pageModal11 -->
+
+	<!-- pageModalB -->
+	<div class="modal fade" id="pageModalB" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xs modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-body">
+
+					<div class="modal-text">패키지 과정은 한 과목만 삭제할 수 없고<br>과정 전체를 삭제해야 합니다.<br>삭제하시겠습니까?</div>
+					<a href="#" class="btn btn-danger">전송</a>
+
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : pageModalB -->
+
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+</body>
+</html>
