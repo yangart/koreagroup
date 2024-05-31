@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body><!-- 2024-03-15 수정 -->
+	<div class="modal-wrap">
+
+		<div class="modal-body">
+
+			<div class="header-fixed"><!-- 2024-03-15 수정 -->
+				<div class="table-head">
+					<div class="flex-grow-1 row">
+						<div class="col-auto mt-0">
+							<a href="#" class="btn btn-point-deep">더블조회</a>
+							<a href="#" class="btn btn-point-deep">DB 재입력</a>
+							<a href="#" class="btn btn-point-deep">비대면 등록</a>
+						</div>
+					</div>
+					<div class="flex-shrink-0 row">
+						<div class="col-auto mt-0">
+							<a href="#" class="btn btn-point-deep">닫기</a>
+							<a href="#" class="btn btn-point">저장</a>
+						</div>
+					</div>
+				</div>
+				<div class="row row-db-wrap g-0">
+					<div class="col-12">
+						<div class="db-profile">
+							<div class="db-member">
+								<div class="db-member-title">김선희</div>
+								<div class="db-member-text">010-1234-1234</div>
+								<div class="db-member-btn"><button class="btn">비대면 등록</button></div>
+							</div><!-- // db-member -->
+							<div class="db-table">
+								<table class="table table-card">
+									<colgroup>
+										<col style="width:12%">
+										<col style="">
+										<col style="width:12%">
+										<col style="">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="cell-left">담당</th>
+											<td class="cell-left">
+												<div class="row gx-6px flex-middle">
+													<div class="col-auto">[강남공식2] 홍길동</div>
+													<div class="col-auto">
+														<input type="text" class="form-control" placeholder="최종 담당">
+													</div>
+													<div class="col-auto">
+														<a href="#" class="btn btn-outline-light btn-review"><small class="d-lg-none">상세보기</small></a>
+													</div>
+												</div>
+												<div class="row gx-6px flex-middle d-none">
+													<div class="col-auto">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">중복</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+													<div class="col-auto">
+														<input type="text" class="form-control" placeholder="담당자">
+													</div>
+													<div class="col-auto">
+														<a href="#" class="btn btn-outline-light btn-review"><small class="d-lg-none">상세보기</small></a>
+													</div>
+												</div>
+												<div class="row gx-6px flex-middle d-none">
+													<div class="col-auto">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">일반</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+													<div class="col-auto">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">공식턴</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+													<div class="col-auto">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">담당자</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+												<div class="row gx-6px flex-middle d-none">
+													<div class="col-auto">[강남공식2] 홍길동</div>
+												</div>
+											</td>
+											<th class="cell-left">문의 과목</th>
+											<td class="cell-left">포토샵,일러스트,광고편집디자인,포트폴리오,광고편집취업과정</td>
+										</tr>
+										<tr>
+											<th class="cell-left">수강 구분</th>
+											<td class="cell-left">
+												<div class="form-inline">
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
+														<label class="form-check-label" for="inlineRadio1_a">일반</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+														<label class="form-check-label" for="inlineRadio1_b">국비</label>
+													</div>
+												</div>												
+											</td>
+											<th class="cell-left">문의 지점</th>
+											<td class="cell-left">컴퓨터강남</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div><!-- // db-table -->
+						</div><!-- // db-profile -->
+					</div><!-- // col -->
+				</div><!-- // row -->
+			</div><!-- // 헤더고적 -->
+
+			<div class="row row-db-wrap g-0 content-fixed"><!-- 2024-03-15 수정 -->
+				<div class="col-db">
+					<div class="mbody-db" style="height: calc(100vh - 407px);"><!-- 2024-03-15 수정 -->
+
+						<div class="mbody-title-outline">DB정보</div>
+
+						<ul class="card-contact-list minimal" style="overflow-y: auto; height: calc(100% - 70px);"><!-- 2024-3-09 수정 -->
+							<li>
+								<div class="contact-list-name">성별</div>
+								<div class="contact-list-data">
+									<div class="form-category">
+										<div>
+											<input type="radio" class="btn-check" name="textRadio1" id="textRadio1_a" autocomplete="off" checked>
+											<label class="btn" for="textRadio1_a">남</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio1" id="textRadio1_b" autocomplete="off">
+											<label class="btn" for="textRadio1_b">여</label>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contact-list-name">성격</div>
+								<div class="contact-list-data">
+									<div class="form-category">
+										<div>
+											<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_a" autocomplete="off" checked>
+											<label class="btn" for="textRadio2_a">적극적</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_b" autocomplete="off">
+											<label class="btn" for="textRadio2_b">평범</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_c" autocomplete="off">
+											<label class="btn" for="textRadio2_c">소극적</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_d" autocomplete="off">
+											<label class="btn" for="textRadio2_d">어눌</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_e" autocomplete="off">
+											<label class="btn" for="textRadio2_e">다혈질</label>
+										</div>
+										<div class="col-200px"><input type="text" class="form-control" placeholder="직접입력"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contact-list-name">목적</div>
+								<div class="contact-list-data">
+									<div class="form-category">
+										<div>
+											<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_a" autocomplete="off" checked>
+											<label class="btn" for="textRadio3_a">진학</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_b" autocomplete="off">
+											<label class="btn" for="textRadio3_b">취업</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_c" autocomplete="off">
+											<label class="btn" for="textRadio3_c">창업</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_d" autocomplete="off">
+											<label class="btn" for="textRadio3_d">취미</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_e" autocomplete="off">
+											<label class="btn" for="textRadio3_e">학업보충학업보충</label>
+										</div>
+										<div class="col-200px"><input type="text" class="form-control" placeholder="세계여행"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contact-list-name">전공</div>
+								<div class="contact-list-data">
+									<div class="form-category">
+										<div>
+											<input type="radio" class="btn-check" name="textRadio4" id="textRadio4_a" autocomplete="off" checked>
+											<label class="btn" for="textRadio4_a">전공</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio4" id="textRadio4_b" autocomplete="off">
+											<label class="btn" for="textRadio4_b">비전공</label>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contact-list-name">나이</div>
+								<div class="contact-list-data">
+									<div class="form-category">
+										<div>
+											<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_a" autocomplete="off" checked>
+											<label class="btn" for="textRadio5_a">10대</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_b" autocomplete="off">
+											<label class="btn" for="textRadio5_b">20대</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_c" autocomplete="off">
+											<label class="btn" for="textRadio5_c">30대</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_d" autocomplete="off">
+											<label class="btn" for="textRadio5_d">40대</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_e" autocomplete="off">
+											<label class="btn" for="textRadio5_e">50대</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio5" id="textRadio5_f" autocomplete="off">
+											<label class="btn" for="textRadio5_f">60대</label>
+										</div>
+										<div class="col-200px"><input type="text" class="form-control" placeholder="직접입력"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contact-list-name">직업</div>
+								<div class="contact-list-data">
+									<div class="form-category">
+										<div>
+											<input type="radio" class="btn-check" name="textRadio6" id="textRadio6_a" autocomplete="off" checked>
+											<label class="btn" for="textRadio6_a">회사원</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio6" id="textRadio6_b" autocomplete="off">
+											<label class="btn" for="textRadio6_b">디자이너</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio6" id="textRadio6_c" autocomplete="off">
+											<label class="btn" for="textRadio6_c">개발자</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio6" id="textRadio6_d" autocomplete="off">
+											<label class="btn" for="textRadio6_d">기획자</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio6" id="textRadio6_e" autocomplete="off">
+											<label class="btn" for="textRadio6_e">설계사</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio6" id="textRadio6_f" autocomplete="off">
+											<label class="btn" for="textRadio6_f">무직</label>
+										</div>
+										<div class="col-200px"><input type="text" class="form-control" placeholder="직접입력"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contact-list-name">희망 과정</div>
+								<div class="contact-list-data">
+									<div class="form-category">
+										<div>
+											<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_a" autocomplete="off" checked>
+											<label class="btn" for="textRadio7_a">웹</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_b" autocomplete="off">
+											<label class="btn" for="textRadio7_b">광고</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_c" autocomplete="off">
+											<label class="btn" for="textRadio7_c">인테리어</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_d" autocomplete="off">
+											<label class="btn" for="textRadio7_d">영상</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_e" autocomplete="off">
+											<label class="btn" for="textRadio7_e">아트웍</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_f" autocomplete="off">
+											<label class="btn" for="textRadio7_f">자격증</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio7" id="textRadio7_d" autocomplete="off">
+											<label class="btn" for="textRadio7_d">영상</label>
+										</div>
+										<div class="col-200px"><input type="text" class="form-control" placeholder="직접입력"></div>
+										<div class="col-200px"><input type="text" class="form-control" placeholder="두줄이면"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contact-list-name">희망 개강</div>
+								<div class="contact-list-data">
+									<div class="form-category">
+										<div>
+											<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_a" autocomplete="off" checked>
+											<label class="btn" for="textRadio8_a">지금</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_b" autocomplete="off">
+											<label class="btn" for="textRadio8_b">금월</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_c" autocomplete="off">
+											<label class="btn" for="textRadio8_c">익월</label>
+										</div>
+										<div>
+											<input type="radio" class="btn-check" name="textRadio8" id="textRadio8_d" autocomplete="off">
+											<label class="btn" for="textRadio8_d">상관없음</label>
+										</div>
+										<div class="col-200px"><input type="text" class="form-control" placeholder="직접입력"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="contact-list-name">메모</div>
+								<div class="contact-list-data">
+									<textarea class="form-control form-editor" rows="10" placeholder="최대 1,000자" style="height: 200px !important;"></textarea>
+								</div>
+							</li>
+						</ul>
+
+					</div><!-- // mbody-db -->
+
+					<div class="mbody-title-outline">유입정보</div>
+					<div class="mt-3 db-table table-scroll simplebar-scrollable-y" data-simplebar style="max-height: 131px;"><!-- 2024-3-09 수정 -->
+						<table class="table table-card td-h32"><!-- 2024-3-09 추가 : td-h32 -->
+							<colgroup>
+								<col style="width:20%">
+								<col style="width:20%">
+								<col style="width:20%">
+								<col style="width:20%">
+								<col style="width:20%">
+							</colgroup>
+							<thead class="table-light">
+								<tr>
+									<th>유입 시간</th>
+									<th>유입 경로</th>
+									<th>유입 지역</th>
+									<th>유입 디바이스</th>
+									<th>유입 페이지</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2023-08-03 11:05</td>
+									<td>네이버, 블로그, 포토샵학원</td>
+									<td>서울 강남구</td>
+									<td>PC</td>
+									<td>방학특강조회</td>
+								</tr>
+								<tr>
+									<td>2023-08-03 11:05</td>
+									<td>네이버, 블로그, 포토샵학원</td>
+									<td>서울 강남구</td>
+									<td>PC</td>
+									<td>방학특강조회</td>
+								</tr>
+								<tr>
+									<td>2023-08-03 11:05</td>
+									<td>네이버, 블로그, 포토샵학원</td>
+									<td>서울 강남구</td>
+									<td>PC</td>
+									<td>방학특강조회</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- // db-table -->
+
+				</div><!-- // col -->
+				<div class="col-memo">
+
+					<div class="mbody-memo mt-3" style="height: calc(100vh - 260px);"><!-- 2024-03-15 수정 -->
+
+						<div class="mbody-memo-toggle" id="accordionExample">
+							<div class="toggle-head">
+								<div>컨택 메모</div>
+								<div>홍길동 대리 (컴퓨터강남 2-1팀)</div>
+							</div><!-- // toggle-head -->
+							<a class="toggle-btn collapsed" href="#" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">작성</a>
+							<div class="toggle-body collapse" id="collapseOne" data-bs-parent="#accordionExample">
+								<div class="row g-0">
+									<div class="col card-search-option">
+										<div class="row gx-8px gy-0">
+											<div class="col-180px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">상담예정</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div><!-- // col -->
+											<div class="col-100px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">강조</option>
+													<option value="02">★</option>
+													<option value="03">●</option>
+													<option value="04">■</option>
+													<option value="05">▲</option>
+													<option value="06">◆</option>
+												</select>
+											</div><!-- // col -->
+											<div class="col-180px">
+												<div class="input-group-flatpickr">
+													<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+												</div>
+											</div><!-- // col -->
+											<div class="col-100px"><input type="text" class="form-control" placeholder="시"></div><!-- // col -->
+											<div class="col-100px"><input type="text" class="form-control" placeholder="분"></div><!-- // col -->
+										</div><!-- // row -->
+									</div><!-- // col -->
+
+									<div class="col card-search-btn col-120px">
+										<div class="flex-center"><input type="text" class="form-control" placeholder="통화량"><span class="form-unit">분</span></div>
+									</div><!-- // col -->
+								</div><!-- // row -->
+
+								<div class="row g-0 d-none">
+									<div class="col card-search-option">
+										<div class="row gx-8px gy-0">
+											<div class="col-180px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">관심없음</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div><!-- // col -->
+											<div class="col-100px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">강조</option>
+													<option value="02">★</option>
+													<option value="03">●</option>
+													<option value="04">■</option>
+													<option value="05">▲</option>
+													<option value="06">◆</option>
+												</select>
+											</div><!-- // col -->
+											<div class="col-410px"><input type="text" class="form-control" placeholder="메모"></div><!-- // col -->
+										</div><!-- // row -->
+									</div><!-- // col -->
+
+									<div class="col card-search-btn col-120px">
+										<div class="flex-center"><input type="text" class="form-control" placeholder="통화량"><span class="form-unit">분</span></div>
+									</div><!-- // col -->
+								</div><!-- // row -->
+
+								<div class="row g-0 d-none">
+									<div class="col card-search-option">
+										<div class="row gx-8px gy-0">
+											<div class="col-180px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">컨택중</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div><!-- // col -->
+											<div class="col-100px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">강조</option>
+													<option value="02">★</option>
+													<option value="03">●</option>
+													<option value="04">■</option>
+													<option value="05">▲</option>
+													<option value="06">◆</option>
+												</select>
+											</div><!-- // col -->
+										</div><!-- // row -->
+									</div><!-- // col -->
+
+									<div class="col card-search-btn col-120px">
+										<div class="flex-center"><input type="text" class="form-control" placeholder="통화량"><span class="form-unit">분</span></div>
+									</div><!-- // col -->
+								</div><!-- // row -->
+
+								<div class="row g-0">
+									<div class="col-12"><textarea class="form-control" placeholder="내용을 입력하세요."></textarea></div>
+								</div><!-- // row -->
+								<div class="row g-0">
+									<div class="col-12">
+										<div class="mbody-btn align-right m-0">
+											<button type="submit" class="btn btn-point btn-sm">저장</button>
+										</div>
+									</div>
+								</div><!-- // row -->
+							</div><!-- // toggle-body -->
+						</div><!-- // mbody-memo-toggle -->
+
+						<div class="memo-scroll h680 simplebar-scrollable-y" data-simplebar data-simplebar-auto-hide="false" style="max-height: 100%;margin-top: 0;"><!-- 2024-03-15 수정 -->
+							<ul class="scroll-list pe-0"><!-- 2024-3-09 추가 : pr-0 -->
+								<li class="border-top-0"><!-- 2024-3-09 추가 : border-top-0 -->
+									<div class="list-item-info d-flex justify-content-between">
+										<strong><span>홍길동 대리 (컴퓨터강남 2-1팀)</span><span>2023.11.01 11:12</span></strong>
+										<span>통화량 0분</span>
+									</div>
+									<div class="list-item-box"><!-- 2024-3-09 추가 -->
+										<div class="list-item-info">
+											<div>
+												<b>상태</b><span>상담예정</span>
+												<b>일정</b><span>2023.11.01 11:12</span>
+											</div>
+										</div>
+										<div class="list-item-text">현재 레스토랑 매니저로 근무중이심. <br>내년에 스마트스토어 등 본인 사업 하실 생각임.<br>
+										현재 인력이 안구해져서 거의 풀타임 근무중이라 시간이 안나서 일단 온라인 강의로 기초 공부하고,<br>심화수업 오프로 들어가자고 했음. 수강료 부담 있어서 일단 cod 결제, 따즈아 먼저 결제했음.</div>
+									</div>
+								</li>
+								<li class="border-top-0">
+									<div class="list-item-info d-flex justify-content-between">
+										<strong><span>홍길동 대리 (컴퓨터강남 2-1팀)</span><span>2023.11.01 11:12</span></strong>
+										<span>통화량 0분</span>
+									</div>
+									<div class="list-item-box">	
+										<div class="list-item-info">
+											<div>
+												<b>상태</b><span>상담예정</span>
+												<b>메모</b><span>메모메모메모메모메모메모메모메모</span>
+											</div>
+										</div>
+										<div class="list-item-text">현재 레스토랑 매니저로 근무중이심. <br>내년에 스마트스토어 등 본인 사업 하실 생각임.<br>
+										현재 인력이 안구해져서 거의 풀타임 근무중이라 시간이 안나서 일단 온라인 강의로 기초 공부하고,<br>심화수업 오프로 들어가자고 했음. 수강료 부담 있어서 일단 cod 결제, 따즈아 먼저 결제했음.</div>
+									</div>
+								</li>
+								<li class="border-top-0">
+									<div class="list-item-info d-flex justify-content-between">
+										<strong><span>홍길동 대리 (컴퓨터강남 2-1팀)</span><span>2023.11.01 11:12</span></strong>
+										<span>통화량 0분</span>
+									</div>
+									<div class="list-item-box">	
+										<div class="list-item-info">
+											<div>
+												<b>상태</b><span>컨택중 </span>
+											</div>
+										</div>
+										<div class="list-item-text">현재 레스토랑 매니저로 근무중이심. <br>내년에 스마트스토어 등 본인 사업 하실 생각임.<br>
+										현재 인력이 안구해져서 거의 풀타임 근무중이라 시간이 안나서 일단 온라인 강의로 기초 공부하고,<br>심화수업 오프로 들어가자고 했음. 수강료 부담 있어서 일단 cod 결제, 따즈아 먼저 결제했음.</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div><!-- // mbody-memo -->
+
+				</div><!-- // col -->
+
+			</div><!-- // row -->
+
+		</div><!-- // modal-body -->
+
+	</div><!-- // layout-wrapper -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal110').modal('show');
+	});
+	</script>
+
+</body>
+</html>

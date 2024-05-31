@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+
+		<div class="navbar-menu navbar-type2">
+
+			<div class="navbar-search">
+				<input type="text" class="form-control" placeholder="직원명을 입력하세요.">
+			</div><!-- // navbar-search -->
+
+			<div id="scrollbar" class="simplebar-scrollable-y h-100" data-simplebar>
+
+				<ul class="navbar-nav" id="navbarNav">
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2">
+							<span>멘토정보</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav2">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#" class="nav-link">2차메뉴1</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">2차메뉴2</a>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>MY학생</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>사업정보</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>일지정보</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>특별처리</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>수수료정보</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>인사정보</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>근태정보</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>교육정보</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>설문정보</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>콘테스트</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>상담</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>민원</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>만족도</span>
+						</a>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#">
+							<span>기타</span>
+						</a>
+					</li><!-- nav-item -->
+				</ul>
+				<div class="sidebar-background"></div>
+			</div><!-- // scrollbar -->
+
+		</div><!-- // navbar-menu -->
+		<div class="vertical-overlay"></div>
+
+		<!---- main-content ---->
+		<div class="main-content">
+			<div class="page-content page-content-full">
+				<div class="container-fluid">
+
+					<!-- page-header -->
+					<div class="page-header navbar-header">
+						<div class="page-header-left">
+							<div class="page-header-name">김은혜 대리</div>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">1_1팀</li>
+							</ol>
+						</div>
+
+					</div><!-- // page-header -->
+
+					<!-- card -->
+					<div class="card">
+						<div class="card-header card-search">
+
+							<h5 class="card-title">DB현황</h5>
+
+							<div class="row">
+								<div class="col-11 row-cols">
+									<div class="col-auto d-flex align-items-center">
+										<label for="" class="form-label mb-0">유입일</label>
+									</div>
+									<div class="col-xxxl-13 col-xxl-3 col-4 row-cols-2">
+										<div class="input-group-flatpickr">
+											<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+										</div>
+										<div class="input-group-flatpickr">
+											<input type="text" id="endDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+										</div>
+									</div>
+									<div class="col-auto">
+										<a href="#" class="btn btn-point">오늘</a>
+									</div>
+									<div class="col-xxxl-13 col-xxl-3 col-4">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">상담결과</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-xxxl-13 col-xxl-3 col-4">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">팀선택</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-auto">
+										<input type="text" class="form-control" placeholder="멘토 이름">
+									</div>
+									<div class="col-xxxl-13 col-xxl-3 col-4">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">이름</option>
+											<option value="02">휴대폰 번호</option>
+											<option value="03">담당자</option>
+											<option value="04">문의과목</option>
+											<option value="05">출처</option>
+											<option value="06">등록 IP</option>
+											<option value="07">학과</option>
+										</select>
+									</div>
+									<div class="col-auto">
+										<input type="text" class="form-control" placeholder="검색어">
+									</div>
+									<div class="col-xxxl-13 col-xxl-3 col-4">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">이름</option>
+											<option value="02">휴대폰 번호</option>
+											<option value="03">담당자</option>
+											<option value="04">문의과목</option>
+											<option value="05">출처</option>
+											<option value="06">등록 IP</option>
+											<option value="07">학과</option>
+										</select>
+									</div>
+									<div class="col-auto">
+										<input type="text" class="form-control" placeholder="검색어">
+									</div>									
+								</div>
+								<div class="col-1">
+									<div class="col-12"><button type="button" class="btn btn-point search-btn">초기화</button></div>
+									<div class="col-12"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
+								</div>
+							</div><!-- // row -->
+
+						</div><!-- 검색영역 -->
+
+						<!-- card-body -->
+						<div id="innerscroll" class="card-body inner-scroll">
+							<div class="table-head">
+								<div class="flex-grow-1 row">
+									<div class="col-auto"><h5 class="table-result">검색결과 총 <span class="text-point">165</span>건</h5></div>
+								</div>
+								<div class="flex-shrink-0 row">
+									<div class="col-auto"><a href="#" class="btn btn-point-deep">유입현황</a></div>
+									<div class="col-auto">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">20개</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div>
+
+							</div><!-- // table-head -->
+
+							<div class="table-responsive">
+								<table class="table table-card">
+									<thead class="table-light">
+										<tr>
+											<th>번호</th>
+											<th>이름</th>
+											<th>전화번호</th>
+											<th>담당자</th>
+											<th>상담결과</th>
+											<th>과목</th>
+											<th>출처</th>
+											<th>유입시간</th>
+											<th>DB 관리</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>13</td>
+											<td>정휘찬</td>
+											<td>010-3041-7876</td>
+											<td class="text-start">[강남페북4]고성희</td>
+											<td>전화안받음 08.04 13:00</td>
+											<td>편집디자인학과, 편집디자인학과[편집디자인 정규과정 (SIGNATURE)]</td>
+											<td>sbsacademyschool.com수강료조회</td>
+											<td>23-08-03 오전 8:55:23</td>
+											<td><a href="#"class="btn btn-outline-active btn-sm">상세</a></td>
+										</tr>
+										<tr>
+											<td>13</td>
+											<td>정휘찬</td>
+											<td>010-3041-7876</td>
+											<td class="text-start">[강남페북4]고성희</td>
+											<td>전화안받음 08.04 13:00</td>
+											<td>기타</td>
+											<td><input type="text" class="form-control" placeholder="직접등록"></td>
+											<td>23-08-03 오전 8:55:23</td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">상세</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- // table-responsive -->
+						</div><!-- // card-body -->
+
+					</div><!-- // card -->
+
+				</div><!-- // container-fluid -->
+			</div><!-- // page-content -->
+
+			<!-- page-footer -->
+			<div class="page-footer">
+				<div class="page-footer-row">
+					<ul class="pagination pagination-separated">
+						<li class="page-item disabled">
+							<a href="#" class="page-link">←</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">1</a>
+						</li>
+						<li class="page-item active">
+							<a href="#" class="page-link">2</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">3</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">4</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">5</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">→</a>
+						</li>
+					</ul>
+					<div class="page-footer-btn-right">
+						<a href="#pageModal7" data-bs-toggle="modal" class="btn btn-point">등록</a>
+					</div>
+				</div>
+			</div><!-- // page-footer -->
+
+		</div><!-- // main-content -->
+
+	</div><!-- // layout-wrapper -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal110').modal('show');
+	});
+	</script>
+
+</body>
+</html>

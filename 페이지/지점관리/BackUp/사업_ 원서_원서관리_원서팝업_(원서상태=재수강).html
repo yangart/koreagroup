@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="overflow-y: auto;">
+
+	<div class="modal-wrap application-wrap" tabindex="-1" role="dialog" aria-hidden="false"><!-- 2024-01-30 테블릿 페이지 가로 스크롤 없애기 class="application-wrap" 추가 -->
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<div class="modal-flex">
+						<h5 class="modal-title">application-wrap 입학원서</h5>
+						<ul class="list-array fs-14px ms-3"><!-- 2024-03-09 수정 -->
+							<li>(재수강  : 2024-01-02 11:22:33)</li>
+							<li>원서번호 : 11111-123456789)</li>
+						</ul>
+					</div>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<div class="form-btn float-wrap">
+						<div class="float-right">
+							<button type="button" class="btn btn-danger">재수강 취소</button>
+						</div>
+					</div><!-- // form-btn -->
+
+					<div class="mbody-title">학생정보</div><!-- // mbody-title -->
+					<table class="table table-card table-align-left">
+						<colgroup>
+							<col style="width:11%">
+							<col style="width:22%">
+							<col style="width:11%">
+							<col style="width:22%">
+							<col style="width:12%">
+							<col style="width:22%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>이름</th>
+								<td>홍길동</td>
+								<th>연락처</th>
+								<td>010-1224-1234</td>
+								<th>생년월일</th>
+								<td>921023</td>
+							</tr>
+							<tr>
+								<th>메일주소</th>
+								<td>abc@gmail.com</td>
+								<th>직업</th>
+								<td>대학생</td>
+								<th>거주지역</th>
+								<td>서울 동작구</td>
+							</tr>
+							<tr>
+								<th>국비여부</th>
+								<td>없음</td>
+								<th>담당멘토 </th>
+								<td>나멘토2</td>
+								<th>추천인</th>
+								<td>홍길동 (010-1234-5555)</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:11%;">
+							<col style="width:30%;">
+							<col style="width:10%;">
+							<col style="width:16%;">
+							<col style="width:11%;">
+							<col style="width:12%;">
+							<col style="width:10%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th class="cell-left">과목</th>
+								<th>평일/주말</th>
+								<th>개강일</th>
+								<th>강의요일</th>
+								<th>교육시간</th>
+								<th>수강료</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>재수강</td>
+								<td class="cell-left">일러스트레이터 초급</td>
+								<td>평일</td>
+								<td>2023-12-10</td>
+								<td>월수금월수</td>
+								<td>14:00~16:00</td>
+								<td>1,500,000</td>
+							</tr>
+							<tr>
+								<td>재수강</td>
+								<td class="cell-left">일러스트레이터 초급</td>
+								<td>주말</td>
+								<td>-</td>
+								<td>월</td>
+								<td>-</td>
+								<td>무료</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:21%">
+							<col style="width:22%">
+							<col style="width:27%">
+							<col style="">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>원수강료</th>
+								<th>총수강료</th>
+								<th>할인금액</th>
+								<th class="cell-left">할인</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>99,999,999 원</td>
+								<td><b>99,999,999,999 원</b></td>
+								<td>99,999,999,999 원</td>
+								<td class="cell-left">
+									지점 특별 할인 10% <br>
+									강사 직권 할인 15% <br>
+									상품권 할인 <br>
+									패키지 할인 (일러스트레이터 초급)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="mbody-rounded mbody-clause">
+
+						<div class="mbody-clause-title">SBS아카데미컴퓨터아트학원 학칙 <span>(다음 학칙에 대해 반드시 동의 후 서명해 주시기 바랍니다.)</span></div>
+						<ul class="mbody-clause-list">
+							<li>① 출석율 80% 이상의 경우에만 수료증 발급 및 취업지원을 받을 수 있습니다.</li>
+							<li>② 상기 등록 된 사항은 개강 3일전까지만 취소, 연기, 시간 및 과목변경 등이 가능하며, 그 이후는 취소, 연기, 시간 및 과목변경이 불가능 합니다.</li>
+							<li>③ 중퇴 후 환불 시 교육청 기준으로 공제 됩니다.</li>
+							<li>④ 환불신청은 “코리아교육그룹-스마트러닝“ 어플을 통해 신청 가능합니다.</li>
+							<li>⑤ 교육 이수 중 제작 된 결과물에 대해서는 <span class="text-req">SBS아카데미컴퓨터아트학원</span>의 홍보 및 전시 등 여러가지 목적으로 자유롭게 사용 할 수 있습니다</li>
+						</ul>
+						<div class="mbody-clause-title">따즈아 온라인 이용안내</div>
+						<ul class="mbody-clause-list">
+							<li>
+								환불규정
+								<ul class="mbody-clause-list">
+									<li>1) 쿠폰(코드번호) 미입력 시 전액환불</li>
+									<li>
+										2) 코드 입력 시
+										<ul class="mbody-clause-list">
+											<li>- 코드 입력 후 강의 수강 이력이 없는 경우 : 전액환불</li>
+											<li>- 코드 입력 후 강의 수강 이력이 있는 경우 : 실제 강의 판매금액 – 위약금(10%) – 일자공제 차감 후 환불(단, 7일 미만일 경우 위약금 10% 없음)</li>
+										</ul>
+									</li>
+									<li>
+										3) 1년 이상의 수강상품은 구매일로부터 365일을 기준으로 강의수수료(일자공제)로 공제합니다. (최초 수강기간인 1년 (365일)이 초과된 경우에는 환불이 불가합니다.
+										<ul class="mbody-clause-list">
+											<li>★ 학원 수강 쿠폰(코드) 구매자들은 환불 요청 시, 담당 멘토에게 문의 바랍니다.</li>
+											<li>★ 위약금 = 실제 판매금액의 10%</li>
+											<li>★ 일자공제 = (판매금액 / 수강기간) X (수강개시일부터 ~ 환불요청일)</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>2. 기타 자세한 사이트 이용약관은 따즈아 홈페이지 <span class="text-req">www.ddazua.com</span> 에서 확인 하실 수 있습니다.</li>
+						</ul>
+
+						<div class="mbody-clause-agree">
+							<div class="mbody-clause-title">위 내용에 대하여 읽어보았으며 동의합니다.</div>
+							<div class="mbody-clause-check">
+								<div class="form-inline">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="">
+										<label class="form-check-label" for="">동의합니다.</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="mbody-clause-sign">
+								<div class="title"><b>2023년 11월 21일</b></div>
+								<div class="sign">(서명)</div>
+							</div><!-- // mbody-clause-sign -->
+
+						</div><!-- // mbody-clause-agree -->
+
+					</div><!-- // mbody-rounded -->
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="w-100 align-center">
+						<button type="submit" class="btn btn-point">원서 저장</button>
+					</div>
+				</div><!-- // modal-footer -->
+
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+</body>
+</html>

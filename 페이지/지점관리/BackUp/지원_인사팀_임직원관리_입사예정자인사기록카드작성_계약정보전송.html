@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="overflow-y">
+	<div id="profile-wrapper">
+
+		<div class="app-menu navbar-menu">
+			<div id="scrollbar">
+				<div id="two-column-menu"></div>
+				<ul class="navbar-nav" id="navbar-nav"></ul>
+			</div><!-- scrollbar -->
+		</div><!-- // navbar-menu -->
+
+		<div class="profile-card-top">
+			<div class="navbar-brand-box">
+				<a href="#" class="logo"><img src="./assets/img/app-menu-logo@2x.png" alt=""></a>
+				<button type="button" class="btn" id="vertical-hover"></button>
+			</div><!-- // navbar-brand-box -->
+			<h3 class="profile-card-title">인사기록카드</h3>
+			<a class="profile-card-close" href="#"><i class="ri-logout-box-line"></i> <span class="fs-14">나가기</span></a>
+
+		</div><!-- // profile-card-top -->
+
+		<div class="profile-content">
+			<div class="container-fluid">
+
+				<!-- card : 본인 인증 -->
+				<div class="card card-form">
+					<div class="card-header">
+						<h4 class="card-title">본인 인증</h4>
+					</div>
+					<div class="card-body">
+						<div class="row row-gap-12x col-lg-12">
+							<div class="col-lg-12 text-center">
+								<label for="" class="form-label visually-hidden">휴대폰 본인 인증허기</label>
+								<div><a href="#" class="btn btn-point-deep">휴대폰 본인 인증허기</a></div>
+							</div>
+						</div>
+						<div class="form-btn">
+							<button type="submit" class="btn btn-point" disabled="disabled">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- // card : 본인 인증-->
+
+				<!-- card : 재입사 여부 확인 -->
+				<div class="card card-form">
+					<div class="card-header">
+						<h4 class="card-title">재입사 여부 확인</h4>
+					</div>
+					<div class="card-body">
+						<div class="row row-gap-12x col-lg-8">
+							<div class="col-lg-12 d-flex align-items-center">
+								<label for="" class="col-2 form-label mb-0">이름</label>	
+								<div class="col-10">
+									<input type="text" readonly class="form-control-plaintext fs-14px" id="staticEmail" value="홍길동">
+								</div>								
+							</div>
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">주민등록번호</label>								
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/credit-card.svg" alt="주민등록번호"></span>
+									<input type="text" class="form-control" id="userNum" placeholder="910205-1111111">
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">확인</label>
+								<div><a href="#" class="btn btn-point-deep">확인</a></div>
+							</div>
+						</div>
+						<div class="form-btn d-flex align-items-center justify-content-end">
+							<span class="fs-13px me-3">
+								신규 입사자 입니다. 다음 버튼을 클릭해서 아이디를 생성하세요.재입사자 입니다.<br />
+								다음 버튼을 클릭해서 인사기록카드를 작성하세요.
+							</span>
+							<button type="submit" class="btn btn-point">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- // card : 재입사 여부 확인 -->
+
+				<!-- card : 플랫폼 아이디 -->
+				<div class="card card-form">
+					<div class="card-header">
+						<h4 class="card-title">플랫폼 아이디</h4>
+					</div>
+					<div class="card-body">
+						<div class="row row-gap-12x col-lg-8">
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">아이디</label>								
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/user.svg" alt="아이디"></span>
+									<input type="text" class="form-control" id="" placeholder="아이디를 입력하세요.">
+								</div>
+								<span class="form-warning">중복된 아이디가 있습니다.</span>
+							</div>
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">중복확인</label>
+								<div><a href="#" class="btn btn-point-deep">중복확인</a></div>
+							</div>
+						</div>
+						<div class="row row-gap-12x col-lg-8">
+							<div class="col-lg-6">
+								<label for="userPw" class="form-label visually-hidden">비밀번호</label>
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/lock.svg" alt="비밀번호"></span>
+									<input type="password" class="form-control" id="userPw" placeholder="12자~16자, 영문/숫자 필수">
+								</div>								
+								<span class="form-warning">12자~16자, 영문/숫자 필수</span>
+							</div>
+							<div class="col-lg-6">
+								<label for="userPwChk" class="form-label visually-hidden">비밀번호확인</label>
+								<div class="input-group">
+									<input type="password" class="form-control" id="userPwChk" placeholder="12자~16자, 영문/숫자 필수">
+								</div>	
+								<span class="form-warning">비밀번호가 일치하지 않습니다.</span>								
+							</div>
+						</div>
+						<div class="form-btn d-flex align-items-center justify-content-end">
+							<span class="fs-13px me-3">
+								아이디가 생성되었습니다. 다음 버튼을 클릭해서 인사기록카드를 작성하세요.
+							</span>
+							<button type="submit" class="btn btn-point">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- // card : 플랫폼 아이디 -->
+
+				<!-- card : 직원정보 -->
+				<div class="card card-form">
+					<div class="card-header">
+						<h4 class="card-title">개인정보</h4>
+					</div>
+					<div class="card-body card-member">
+						<div class="row">
+
+							<div class="card-member-profile col-auto">
+								<div class="member-profile-box">
+									<div class="member-profile-img"><img src="./assets/img/profile-sample.jpg" alt="프로필 사진"></div>
+									<div class="member-profile-edit">
+										<a href="#" title="프로필 사진 변경">변경</a>
+										<a href="#" title="프로필 사진 삭제">삭제</a>
+									</div>
+								</div>
+							</div><!-- // card-member-profile -->
+
+							<div class="card-member-info col-auto">
+								<div class="row">
+									<div class="col-6">
+										<div class="card-member-head">
+											<h6>홍길동(hongdong) 차장/팀장</h6>
+											<span class="badge bg-danger">정규직(직원)</span>
+										</div>
+										<div class="card-member-list">
+											<div><span>1986-05-11(양력)</span><span>남자</span></div>
+											<ol class="breadcrumb">
+												<li class="breadcrumb-item">컴퓨터</li>
+												<li class="breadcrumb-item">컴퓨터 강남</li>
+												<li class="breadcrumb-item">사업부</li>
+												<li class="breadcrumb-item">1_1팀</li>
+											</ol>
+										</div>
+									</div>
+									<div class="col-6 d-flex align-items-end">
+										<div class="form-inline">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio11" id="inlineRadio11_a" value="a" checked="checked">
+												<label class="form-check-label" for="inlineRadio11_a">신규</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio11" id="inlineRadio11_b" value="b">
+												<label class="form-check-label" for="inlineRadio11_b">재입사</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-6">
+										<label for="userPw" class="form-label visually-hidden">주민등록번호</label>
+										<div class="flex-grow-shrink">
+											<div class="grow">
+												<div class="input-group">
+													<span class="input-group-text" id=""><img src="./assets/img/credit-card.svg" alt="주민등록번호"></span>
+													<input type="text" class="form-control" id="userNum" placeholder="910205-1111111">
+												</div>
+											</div>
+											<div class="shrink">
+												<div class="form-inline">
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a">
+														<label class="form-check-label" for="inlineRadio1_a">양력</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+														<label class="form-check-label" for="inlineRadio1_b">음력</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">휴대폰번호</label>										
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/smartphone.svg" alt="휴대폰번호"></span>
+											<input type="text" class="form-control" id="" value="010-1234-1234">
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">개인 이메일</label>										
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/mail.svg" alt="이메일"></span>
+											<input type="text" class="form-control" id="" value="mail@mail.com">
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">비상연락처</label>
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/phone.svg" alt="비상연락처"></span>
+											<input type="text" class="form-control" id="" value="010-1234-1234">										
+										</div>
+									</div>
+									<div class="col-12">
+										<label for="" class="form-label visually-hidden">주소</label>		
+										<div class="flex-grow-shrink">
+											<div class="grow">
+												<div class="input-group">
+													<span class="input-group-text" id=""><img src="./assets/img/map-pin.svg" alt="주소"></span>
+													<input type="text" class="form-control" id="" value="서울시 강남구 강남대로 286 부영빌딩 3층">										
+												</div>
+											</div>
+											<div class="shrink ps-2">
+												<div class="form-inline">
+													<label for="" class="form-label visually-hidden">검색</label>
+													<div><a href="#" class="btn btn-point-deep">검색</a></div>
+												</div>
+											</div>
+											<div class="shrink">
+												<div class="form-inline">
+													<input type="text" class="form-control" id="" value="상세 주소 입력">
+												</div>
+											</div>
+										</div>										
+									</div>
+									<div class="col-12">
+										<label for="" class="form-label visually-hidden">기족사항</label>
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/users.svg" alt="기족사항"></span>
+											<!-- <textarea class="form-control" rows="3" placeholder="기족사항을 입력하세요."></textarea> -->
+											<a href="#" class="form-control form-link" data-bs-toggle="modal" data-bs-target="#pageModal14">총 3명</a>	
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">학력사항</label>
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/edit.svg" alt="학력사항"></span>
+											<!-- <textarea class="form-control" rows="3" placeholder="학력사항을 입력하세요."></textarea> -->
+											<a href="#" class="form-control form-link" data-bs-toggle="modal" data-bs-target="#pageModal11">서울디지털대학교(졸업)</a>	
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">경력사항</label>										
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/edit.svg" alt="경력사항"></span>
+											<!-- <textarea class="form-control" rows="3" placeholder="경력사항을 입력하세요."></textarea> -->
+											<a href="#" class="form-control form-link" data-bs-toggle="modal" data-bs-target="#pageModal12">부산게임아카데미</a>	
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">자격사항</label>										
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/edit.svg" alt="자격사항"></span>
+											<!-- <textarea class="form-control" rows="3" placeholder="자격사항을 입력하세요."></textarea> -->
+											<a href="#" class="form-control form-link" data-bs-toggle="modal" data-bs-target="#pageModal13">게임프로그래밍전문가</a>	
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">병역사항</label>
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/edit.svg" alt="병역사항"></span>
+											<!-- <textarea class="form-control" rows="3" placeholder="병역사항을 입력하세요."></textarea> -->
+											<a href="#" class="form-control form-link" data-bs-toggle="modal" data-bs-target="#pageModal14">군필</a>	
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">은행명</label>
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/dollar-sign.svg" alt="은행명"></span>
+											<select id="" class="form-select" data-choices data-choices-search-false>
+												<option value="01">국민은행</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>													
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label visually-hidden">예금주</label>
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/user-check.svg" alt="예금주"></span>
+											<input type="text" class="form-control" id="" value="홍길동">																								
+										</div>
+									</div>
+									<div class="col-12">
+										<label for="" class="form-label visually-hidden">계좌번호</label>										
+										<div class="input-group">
+											<span class="input-group-text" id=""><img src="./assets/img/tag.svg" alt="계좌번호"></span>
+											<input type="text" class="form-control" id="" value="12313143424234243">														
+										</div>
+									</div>
+								</div><!-- // row -->
+
+							</div><!-- // card-member-info -->
+
+						</div><!-- // row -->
+
+					</div><!-- // card-body -->
+
+				</div><!-- // card : 직원정보 -->
+
+				<!-- card : 입사서류 -->
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title mb-0 flex-grow-1">입사서류</h4>
+					</div>
+					<div class="card-body">
+
+						<div class="table-responsive">
+							<table class="table table-card table-align-left">
+								<thead class="table-light">
+									<tr>
+										<th scope="col">입사서류명</th>
+										<th scope="col">다운로드</th>
+										<th scope="col">파일첨부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>신분증 사본 또는 주민등록등본 <span class="text-req">*</span></td>
+										<td><a href="#" class="file-down">파일있음</a></td>
+										<!-- <td><input class="form-control" type="file"></td> -->
+										<td>[특별처리] 환불공제금변경.pdf <a href="#" class="btn-delete">삭제</a></td>
+									</tr>
+									<tr>
+										<td>경력증명서</td>
+										<td><div href="#" class="file-down disabled">파일없음</div></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>최종 졸업증명서</td>
+										<td><a href="#" class="file-down">파일있음</a></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>통장사본 <span class="text-req">*</span></td>
+										<td><a href="#" class="file-down">파일있음</a></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>자격증사본</td>
+										<td><div href="#" class="file-down disabled">파일없음</div></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>위촉계약서 일체(위탁업무약정서, 온라인강좌 판매 위탁업무약정서 및 수수료 기준) <span class="text-req">*</span> </td>
+										<td><div href="#" class="file-down disabled">파일없음</div></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>CCTV 설치 및 촬영저장 동의서 <span class="text-req">*</span></td>
+										<td><a href="#" class="file-down">파일있음</a></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>개인정보 수집 활용 동의서 <span class="text-req">*</span></td>
+										<td><a href="#" class="file-down">파일있음</a></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>업무 서약서</td>
+										<td><div href="#" class="file-down disabled">파일없음</div></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>성범죄 조회 동의서 <span class="text-req">*</span></td>
+										<td><a href="#" class="file-down">파일있음</a></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+									<tr>
+										<td>이력서</td>
+										<td><a href="#" class="file-down">파일있음</a></td>
+										<td><input class="form-control" type="file"></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- // card : 입사서류 -->
+
+				<!-- card : 동의 서류 -->
+				<div class="card">
+					<div class="card-header">
+						<h4 class="card-title mb-0 flex-grow-1">동의 서류</h4>
+					</div>
+					<div class="card-body">
+
+						<div class="accordion">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">CCTV 설치 및 촬영저장 동의서</button>
+								</h2>
+								<div id="collapse-1" class="accordion-collapse collapse">
+									<div class="accordion-body">
+
+										<div class="mbody-title">01. 티이틀</div>
+										<table class="table table-card">
+											<colgroup>
+												<col style="width:33.33%">
+												<col style="width:33.33%">
+												<col style="">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>수집 항목</th>
+													<th>수집 및 이용 목적</th>
+													<th>보유 및 이용기간</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>강의실 내부 영상녹화</td>
+													<td>시설관리 (화재,범죄,도난방지)</td>
+													<td>약1개월</td>
+												</tr>
+												<tr>
+													<td colspan="3" class="align-left">※ 저희 학원은 위와 같이 영상정보처리기기를 설치,운영합니다.</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="3">
+
+														<div class="form-inline">
+															<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+															<div class="form-check">
+																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_a" value="a" checked="">
+																<label class="form-check-label" for="inlineRadio5_a">예</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_b" value="b">
+																<label class="form-check-label" for="inlineRadio5_b">아니오</label>
+															</div>
+														</div>
+
+													</td>
+												</tr>
+											</tfoot>
+										</table>
+
+										<div class="mbody-clause-agree">
+											<div class="mbody-clause-title">위 내용에 대하여 읽어보았으며 동의합니다.</div>
+											<div class="mbody-clause-check">
+												<div class="form-inline">
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_a" value="a" checked="">
+														<label class="form-check-label" for="inlineRadio_a">예</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_b" value="b">
+														<label class="form-check-label" for="inlineRadio_b">아니오</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="mbody-clause-sign">
+												<div class="title"><b>2023년 11월 21일</b></div>
+												<div class="sign">(서명)</div>
+											</div><!-- // mbody-clause-sign -->
+										</div><!-- // mbody-clause-agree -->
+
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">개인정보 수집 활용 동의서</button>
+								</h2>
+								<div id="collapse-2" class="accordion-collapse collapse">
+									<div class="accordion-body">
+
+										<div class="mbody-title">02. 티이틀</div>
+										<table class="table table-card">
+											<colgroup>
+												<col style="width:33.33%">
+												<col style="width:33.33%">
+												<col style="">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>수집 항목</th>
+													<th>수집 및 이용 목적</th>
+													<th>보유 및 이용기간</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>강의실 내부 영상녹화</td>
+													<td>시설관리 (화재,범죄,도난방지)</td>
+													<td>약1개월</td>
+												</tr>
+												<tr>
+													<td colspan="3" class="align-left">※ 저희 학원은 위와 같이 영상정보처리기기를 설치,운영합니다.</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="3">
+
+														<div class="form-inline">
+															<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+															<div class="form-check">
+																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_a" value="a" checked="">
+																<label class="form-check-label" for="inlineRadio5_a">예</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_b" value="b">
+																<label class="form-check-label" for="inlineRadio5_b">아니오</label>
+															</div>
+														</div>
+
+													</td>
+												</tr>
+											</tfoot>
+										</table>
+
+										<div class="mbody-clause-agree">
+											<div class="mbody-clause-title">위 내용에 대하여 읽어보았으며 동의합니다.</div>
+											<div class="mbody-clause-check">
+												<div class="form-inline">
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_a" value="a" checked="">
+														<label class="form-check-label" for="inlineRadio_a">예</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_b" value="b">
+														<label class="form-check-label" for="inlineRadio_b">아니오</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="mbody-clause-sign">
+												<div class="title"><b>2023년 11월 21일</b></div>
+												<div class="sign">(서명)</div>
+											</div><!-- // mbody-clause-sign -->
+										</div><!-- // mbody-clause-agree -->
+
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">업무 서약서</button>
+								</h2>
+								<div id="collapse-3" class="accordion-collapse collapse">
+									<div class="accordion-body">
+
+										<div class="mbody-title">03. 티이틀</div>
+										<table class="table table-card">
+											<colgroup>
+												<col style="width:33.33%">
+												<col style="width:33.33%">
+												<col style="">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>수집 항목</th>
+													<th>수집 및 이용 목적</th>
+													<th>보유 및 이용기간</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>강의실 내부 영상녹화</td>
+													<td>시설관리 (화재,범죄,도난방지)</td>
+													<td>약1개월</td>
+												</tr>
+												<tr>
+													<td colspan="3" class="align-left">※ 저희 학원은 위와 같이 영상정보처리기기를 설치,운영합니다.</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="3">
+
+														<div class="form-inline">
+															<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+															<div class="form-check">
+																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_a" value="a" checked="">
+																<label class="form-check-label" for="inlineRadio5_a">예</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_b" value="b">
+																<label class="form-check-label" for="inlineRadio5_b">아니오</label>
+															</div>
+														</div>
+
+													</td>
+												</tr>
+											</tfoot>
+										</table>
+
+										<div class="mbody-clause-agree">
+											<div class="mbody-clause-title">위 내용에 대하여 읽어보았으며 동의합니다.</div>
+											<div class="mbody-clause-check">
+												<div class="form-inline">
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_a" value="a" checked="">
+														<label class="form-check-label" for="inlineRadio_a">예</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_b" value="b">
+														<label class="form-check-label" for="inlineRadio_b">아니오</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="mbody-clause-sign">
+												<div class="title"><b>2023년 11월 21일</b></div>
+												<div class="sign">(서명)</div>
+											</div><!-- // mbody-clause-sign -->
+										</div><!-- // mbody-clause-agree -->
+
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">성범죄 조회 동의서</button>
+								</h2>
+								<div id="collapse-4" class="accordion-collapse collapse">
+									<div class="accordion-body">
+
+										<div class="mbody-title">04. 티이틀</div>
+										<table class="table table-card">
+											<colgroup>
+												<col style="width:33.33%">
+												<col style="width:33.33%">
+												<col style="">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>수집 항목</th>
+													<th>수집 및 이용 목적</th>
+													<th>보유 및 이용기간</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>강의실 내부 영상녹화</td>
+													<td>시설관리 (화재,범죄,도난방지)</td>
+													<td>약1개월</td>
+												</tr>
+												<tr>
+													<td colspan="3" class="align-left">※ 저희 학원은 위와 같이 영상정보처리기기를 설치,운영합니다.</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="3">
+
+														<div class="form-inline">
+															<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+															<div class="form-check">
+																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_a" value="a" checked="">
+																<label class="form-check-label" for="inlineRadio5_a">예</label>
+															</div>
+															<div class="form-check">
+																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_b" value="b">
+																<label class="form-check-label" for="inlineRadio5_b">아니오</label>
+															</div>
+														</div>
+
+													</td>
+												</tr>
+											</tfoot>
+										</table>
+
+										<div class="mbody-clause-agree">
+											<div class="mbody-clause-title">위 내용에 대하여 읽어보았으며 동의합니다.</div>
+											<div class="mbody-clause-check">
+												<div class="form-inline">
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_a" value="a" checked="">
+														<label class="form-check-label" for="inlineRadio_a">예</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_b" value="b">
+														<label class="form-check-label" for="inlineRadio_b">아니오</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="mbody-clause-sign">
+												<div class="title"><b>2023년 11월 21일</b></div>
+												<div class="sign">(서명)</div>
+											</div><!-- // mbody-clause-sign -->
+										</div><!-- // mbody-clause-agree -->
+
+									</div>
+								</div>
+							</div>
+						</div><!-- // accordion -->
+
+						<div class="form-btn">
+							<button type="submit" class="btn btn-point-deep btn-sm">동의</button>
+						</div>
+
+					</div>
+				</div>
+				<!-- // card : 동의 서류 -->
+
+				<div class="form-btn">
+					<span class="fs-13px me-3">아이디가 생성되었습니다. 다음 버튼을 클릭해서 인사기록카드를 작성하세요.</span>
+					<button type="submit" class="btn btn-point">저장</button>
+					<button type="submit" class="btn btn-point">전송</button>
+					<button type="submit" class="btn btn-point">완료</button>
+				</div>
+
+			</div>
+		</div><!-- // profile-content -->
+
+	</div><!-- // profile-wrapper -->
+
+		<!-- 학력사항 등록/수정 -->
+	<div class="modal fade" id="pageModal11" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">학력사항 등록/수정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">					
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">학력사항</div></div>
+							</div>
+							<div class="flex-shrink-0 row">
+								<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+							</div>
+
+						</div><!-- // table-head -->
+
+						<table class="table table-card">
+							<thead class="table-light">
+								<tr>
+									<th>항목</th>
+									<th>삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<dl class="row">
+											<dt>학력구분</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-286px"><input type="text" class="form-control" placeholder="학교명"></div>
+													<div class="col-200px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">대학교(2년제)</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+											</dd>
+										</dl>
+										<dl class="row pt-2">
+											<dt>전공</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-492px"><input type="text" class="form-control" placeholder="전공"></div>
+												</div>
+											</dd>
+										</dl>
+										<dl class="row pt-2">
+											<dt>입학구분</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-140px"><input type="text" class="form-control" placeholder="입학월"></div>
+													<div class="col-140px"><input type="text" class="form-control" placeholder="졸업월(예정포함)"></div>
+													<div class="col-200px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">졸업</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+											</dd>
+										</dl>										
+									</td>
+									<td><a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 학력사항 등록/수정 -->
+
+
+	<!-- 경력사항 등록/수정 -->
+	<div class="modal fade" id="pageModal12" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">경력사항 등록/수정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">					
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">경력사항</div></div>
+							</div>
+							<div class="flex-shrink-0 row">
+								<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+							</div>
+
+						</div><!-- // table-head -->
+
+						<table class="table table-card">
+							<thead class="table-light">
+								<tr>
+									<th>항목</th>
+									<th>삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<dl class="row">
+											<dt>경력구분</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-286px"><input type="text" class="form-control" placeholder="회사명"></div>
+													<div class="col-200px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">대학교(2년제)</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+											</dd>
+										</dl>
+										<dl class="row pt-2">
+											<dt>직무</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-243px"><input type="text" class="form-control" placeholder="역할(직무)"></div>
+													<div class="col-243px"><input type="text" class="form-control" placeholder="직급"></div>
+												</div>
+											</dd>
+										</dl>
+										<dl class="row pt-2">
+											<dt>입사구분</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-140px"><input type="text" class="form-control" placeholder="입사일"></div>
+													<div class="col-140px"><input type="text" class="form-control" placeholder="퇴직일"></div>
+													<div class="col-200px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">계약유형(선택)</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+											</dd>
+										</dl>										
+									</td>
+									<td><a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 경력사항 등록/수정 -->
+
+	<!-- 자격사항 등록/수정 -->
+	<div class="modal fade" id="pageModal13" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">자격사항 등록/수정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">					
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">자격사항</div></div>
+							</div>
+							<div class="flex-shrink-0 row">
+								<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+							</div>
+
+						</div><!-- // table-head -->
+
+						<table class="table table-card">
+							<thead class="table-light">
+								<tr>
+									<th>항목</th>
+									<th>삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<dl class="row">
+											<dt>자격명</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-286px"><input type="text" class="form-control" placeholder="자격명"></div>
+													<div class="col-200px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">종별</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+											</dd>
+										</dl>
+										<dl class="row pt-2">
+											<dt>자격증</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-140px"><input type="text" class="form-control" placeholder="자격번호"></div>
+													<div class="col-140px"><input type="text" class="form-control" placeholder="자격취득월"></div>
+													<div class="col-200px"><input type="text" class="form-control" placeholder="기관명"></div>
+												</div>
+											</dd>
+										</dl>										
+									</td>
+									<td><a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 자격사항 등록/수정 -->
+
+	<!-- 가족사항 등록/수정 -->
+	<div class="modal fade" id="pageModal14" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">가족사항 등록/수정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">					
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">가족사항</div></div>
+							</div>
+							<div class="flex-shrink-0 row">
+								<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+							</div>
+
+						</div><!-- // table-head -->
+
+						<table class="table table-card">
+							<thead class="table-light">
+								<tr>
+									<th>항목</th>
+									<th>삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<dl class="row">
+											<dt>이름</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-286px"><input type="text" class="form-control" placeholder="이름"></div>
+													<div class="col-200px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">관계(선택)</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+											</dd>
+										</dl>
+										<dl class="row pt-2">
+											<dt>생년월일</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-140px"><input type="text" class="form-control" placeholder="생년월일"></div>
+													<div class="col-140px"><input type="text" class="form-control" placeholder="직업(선택)"></div>
+													<div class="col-200px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">동거여부(선택)</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+											</dd>
+										</dl>										
+									</td>
+									<td><a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 가족사항 등록/수정 -->
+
+	<!-- 병력사항 등록/수정 -->
+	<div class="modal fade" id="pageModal15" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">병력사항 등록/수정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">					
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">병력사항</div></div>
+							</div>
+							<div class="flex-shrink-0 row">
+								<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+							</div>
+
+						</div><!-- // table-head -->
+
+						<table class="table table-card">
+							<thead class="table-light">
+								<tr>
+									<th>항목</th>
+									<th>삭제</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<dl class="row pt-2">
+											<dt>병력</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-140px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">병역구분(선택)</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+													<div class="col-140px"><input type="text" class="form-control" placeholder="입대일"></div>
+													<div class="col-200px"><input type="text" class="form-control" placeholder="전역일"></div>
+												</div>
+											</dd>
+										</dl>	
+										<dl class="row pt-2">
+											<dt>군별</dt>
+											<dd>
+												<div class="row row-x6">
+													<div class="col-140px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">군별(선택)</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+													<div class="col-140px"><input type="text" class="form-control" placeholder="계급"></div>
+													<div class="col-200px">
+														<select class="form-select" data-choices data-choices-search-false>
+															<option value="01">전역구분(선택)</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+											</dd>
+										</dl>										
+									</td>
+									<td><a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 병력사항 등록/수정 -->
+
+	<!-- pageModalB -->
+	<div class="modal fade" id="pageModalB" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xs modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-body">
+
+					<div class="modal-text">인사기록카드 작성 완료 처리를 하면<br />더 이상 수정할 수 없습니다.<br />완료 처리 하시겠습니까?</div>
+					<a href="#" class="btn btn-point-deep">확인</a>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : pageModalB -->
+
+	<!-- 계약정보 전송 -->
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">계약정보 전송</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">
+					
+						<div class="card-member-head mb-4">
+							<h6>홍길동</h6>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<dl class="row">
+									<dt>휴대폰</dt>
+									<dd>010-0000-0000</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>메일주소</dt>
+									<dd>sample@mail.com</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>입사 요청일</dt>
+									<dd>2023.12.28 </dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>계약유형</dt>
+									<dd>정규직(직원)</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>계약기간</dt>
+									<dd>
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">선택</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>									
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>지급기준</dt>
+									<dd>
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">연봉</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>									
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>계약금액</dt>
+									<dd><input type="text" class="form-control" value="30,000,000"></dd>
+								</dl>
+							</div>
+							<div class="col-6">
+								<dl class="row">
+									<dt>수습기간</dt>
+									<dd>개월</dd>
+								</dl>
+							</div>
+							<div class="col-6">
+								<dl class="row">
+									<dt>수습비율</dt>
+									<dd>70%</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>메모</dt>
+									<dd><textarea class="form-control">메모</textarea></dd>
+								</dl>
+							</div>
+						</div>
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point-deep">전송</button>
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 계약정보 전송 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal17').modal('show');
+	});
+	</script>
+
+
+</body>
+</html>

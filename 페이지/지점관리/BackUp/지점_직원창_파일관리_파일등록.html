@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+
+		<div class="navbar-menu navbar-type2">
+
+			<div class="navbar-search">
+				<input type="text" class="form-control" placeholder="직원명을 입력하세요.">
+			</div><!-- // navbar-search -->
+
+			<div id="scrollbar" class="simplebar-scrollable-y h-100" data-simplebar>
+
+				<ul class="navbar-nav" id="navbarNav">
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav1">
+							<span>기본정보</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav1">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#" class="nav-link">개인정보</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">인사 발령 내역</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">근태</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">재증명</a>
+								</li>
+								<li class="nav-item">
+									<a href="#sideNav4-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4-3">교육</a>
+									<div class="menu-dropdown collapse" id="sideNav4-3">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">과정 목록</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">나의 강의실</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">파일관리</a>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2">
+							<span>강사</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav2">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#" class="nav-link">My 겅의</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">강사급여</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">계약현황</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">강사평가</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">커리큘럼</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">교육통계</a>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3">
+							<span>멘토</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav3">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#sideNav3-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3-1">사업관리</a>
+									<div class="menu-dropdown collapse" id="sideNav3-1">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">DB 현황 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">방문 상담 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">인터뷰 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">원서 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">멘토 과정 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">당직표</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+				</ul>
+				<div class="sidebar-background"></div>
+			</div><!-- // scrollbar -->
+
+		</div><!-- // navbar-menu -->
+		<div class="vertical-overlay"></div>
+
+		<!---- main-content ---->
+		<div class="main-content">
+			<div class="page-content page-content-full">
+				<div class="container-fluid">
+
+					<!-- page-header -->
+					<div class="page-header navbar-header">
+						<div class="page-header-left">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">컴퓨터강남</li>
+								<li class="breadcrumb-item">사업부	</li>
+								<li class="breadcrumb-item">1_1팀</li>
+							</ol>
+							<div class="page-header-name ms-3">김은혜 대리</div>
+						</div>
+
+						<div class="page-header-right gap-4px">
+							<a href="#" class="btn btn-outline-light btn-round">근무중</a>
+						</div>
+					</div><!-- // page-header -->
+
+					<!-- card -->
+					<div class="card">
+
+						<div id="innerscroll" class="card-body inner-scroll">
+
+							<div class="table-head">
+								<div class="flex-grow-1 row">
+									<div class="col-auto"><h5 class="table-result">파일 관리</h5></div>
+								</div>
+
+							</div><!-- // table-head -->
+
+							<div class="table-responsive">
+								<table class="table table-card">
+									<thead class="table-light">
+										<tr>
+											<th>구분</th>
+											<th>제목</th>
+											<th>파일 다운로드</th>
+											<th>관리</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>입사서류</td>
+											<td class="text-start">위촉계약서 일체(위탁업무약정서, 온라인강좌 판매 위탁업무약정서 및 수수료 기준)</td>
+											<td><a href="#" class="file-down">파일있음</a></td>
+											<td><a href="#" class="btn btn-outline-light btn-sm btn-regi"><small class="d-lg-none">등록</small></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- // table-responsive -->
+
+						</div><!-- // card-body -->
+
+					</div><!-- // card -->
+
+				</div><!-- // container-fluid -->
+			</div><!-- // page-content -->
+
+			<!-- page-footer -->
+			<div class="page-footer">
+				<div class="page-footer-row">
+					<div class="page-footer-btn-right">
+						<a href="#pageModal7" data-bs-toggle="modal" class="btn btn-point-deep">등록</a>
+					</div>
+				</div>
+			</div><!-- // page-footer -->
+
+		</div><!-- // main-content -->
+
+	</div><!-- // layout-wrapper -->
+
+	<!-- 파일 등록 -->
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">파일 등록</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">	
+
+						<dl class="row">
+							<dt>구분</dt>
+							<dd>
+								<div class="col-200px">
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">입사서류</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>	
+								</div>									
+							</dd>
+						</dl>					
+						<dl class="row">
+							<dt>제목</dt>
+							<dd>
+								<div class="col-200px">
+									<input type="text" class="form-control" value="블라블라">
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>첨부파일</dt>
+							<dd><input type="file" class="form-control" id=""></dd>
+						</dl>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 파일 등록 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal17').modal('show');
+	});
+	</script>
+
+</body>
+</html>

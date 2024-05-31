@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="overflow-y: auto;">
+	<div id="card-wrapper">
+
+		<!-- card -->
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">강의시간표</h4>
+			</div>
+			<div class="card-search">
+
+				<div class="row g-8px">
+					<div class="col card-search-option">
+						<div class="row g-8px">
+							<div class="col-xl-2 col-4">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">계열선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-xl-2 col-4">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">지점선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-xl-2 col-4">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">강의실</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-xl-2 col-4">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">강의실</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-xl-2 col-4">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">강의실</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-xl-2 col-4">
+								<input type="text" class="form-control" placeholder="강사명, 과목명 입력">
+							</div>
+							<div class="col-auto d-flex align-items-center">
+								<label for="" class="form-label mb-0">개강일</label>
+							</div>
+							<div class="col-auto">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">2023.07.12</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-auto d-flex align-items-center">
+								<label for="" class="form-label mb-0">기간</label>
+							</div>
+							<div class="col-xxxl-13 col-xxl-3 col-4 row-cols-2">
+								<div class="input-group-flatpickr">
+									<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+								</div>
+								<div class="input-group-flatpickr">
+									<input type="text" id="endDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+								</div>
+							</div>
+							<div class="col-auto d-flex align-items-center">
+								<label for="" class="form-label mb-0">시간선택</label>
+							</div>
+							<div class="col-auto">
+								<div>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">평일/주말</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">요일</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-auto">
+								<div>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">시간대</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+							</div>
+						</div><!-- // row -->
+					</div><!-- // col -->
+
+					<div class="col card-search-btn col-120px">
+						<div class="row gy-8px">
+							<div class="col-12"><button type="button" class="btn btn-point search-btn">초기화</button></div>
+							<div class="col-12"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
+						</div>
+					</div><!-- // col -->
+
+				</div><!-- // row -->
+
+			</div><!-- 검색영역 -->
+
+			<!-- card-body -->
+			<div class="card-body">
+				<div class="card-search-result">
+
+					<div class="dropdown">
+						<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+						총강의수 : 192(<span class="color-danger">정규직 : 92</span>, <span class="color-primary">프리 : 100</span>), 총정원수 : 3942(<span class="color-danger">개강일 총 배정수 : 1639</span>, <span class="color-primary">금일 총 배정수 : 1600</span>), 모집률 : 41.58%, 전체출석률 : 80%, <span class="color-danger">매출 : 190,000,000원</span>, <span class="color-primary">환불 : 5,000,000원</span></a>
+						<ul class="dropdown-menu dropdown-select" aria-labelledby="dropdownMenuLink">
+							<li><a class="dropdown-item" href="#">option 2</a></li>
+							<li><a class="dropdown-item" href="#">option 2</a></li>
+							<li><a class="dropdown-item" href="#">option 2</a></li>
+						</ul>
+					</div>
+				</div><!-- // card-search-result -->
+
+				<div class="table-head">
+					<div class="flex-grow-1 row">
+						<div class="col-auto"><a href="#" class="btn btn-schedule-list">빈 강의실 찾기</a></div><!-- // col -->
+						<div class="col-auto"><!-- // col -->
+							<div class="form-inline">
+								<div>
+									<input type="radio" class="btn-check" name="scheduleRadio" id="scheduleRadio_a" autocomplete="off" checked="">
+									<label class="btn" for="scheduleRadio_a">운영(기본)</label>
+								</div>
+								<div>
+									<input type="radio" class="btn-check" name="scheduleRadio" id="scheduleRadio_b" autocomplete="off">
+									<label class="btn" for="scheduleRadio_b">운영(상세)</label>
+								</div>
+								<div>
+									<input type="radio" class="btn-check" name="scheduleRadio" id="scheduleRadio_c" autocomplete="off">
+									<label class="btn" for="scheduleRadio_c">사업</label>
+								</div>
+								<div>
+									<input type="radio" class="btn-check" name="scheduleRadio" id="scheduleRadio_d" autocomplete="off">
+									<label class="btn" for="scheduleRadio_d">교육</label>
+								</div>
+								<div>
+									<input type="radio" class="btn-check" name="scheduleRadio" id="scheduleRadio_e" autocomplete="off">
+									<label class="btn" for="scheduleRadio_e">매출</label>
+								</div>
+								<div>
+									<input type="radio" class="btn-check" name="scheduleRadio" id="scheduleRadio_f" autocomplete="off">
+									<label class="btn" for="scheduleRadio_f">기타</label>
+								</div>
+							</div>
+						</div><!-- // col -->
+						<div class="col-auto">
+							<div class="dropdown">
+								<button class="btn btn-outline-secondary btn-round" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">강의상태</button>
+								<ul class="dropdown-menu state-dropdown" aria-labelledby="dropdownMenuButton1">
+									<li class="type type1"><a href="#">정원미달</a></li>
+									<li class="type type2"><a href="#">정원마감</a></li>
+									<li class="type type3"><a href="#">정원초과</a></li>
+									<li class="type type4"><a href="#">폐강예정</a></li>
+									<li class="icon icon1"><a href="#">국비과정</a></li>
+									<li class="icon icon2"><a href="#">배정인원</a></li>
+									<li class="icon icon3"><a href="#">대기</a></li>
+									<li class="icon icon4"><a href="#">재수강</a></li>
+								</ul>
+							</div>
+
+<!-- 						<a href="#" class="btn btn-outline-secondary btn-round">강의상태</a> -->
+						</div><!-- // col -->
+					</div><!-- // row -->
+					<div class="flex-shrink-0 row">
+						<div class="col-auto"><a href="#" class="btn btn-outline-primary">빈 강의실 찾기</a></div>
+						<div class="col-auto"><a href="#" class="btn btn-point-deep">시간표 작성</a></div>
+						<div class="col-auto"><a href="#" class="btn btn-point-deep">불러오기</a></div>
+					</div><!-- // row -->
+
+				</div><!-- // table-head -->
+
+				<div class="table-responsive">
+					<table class="table table-schedule expanded">
+						<thead>
+							<tr>
+								<th class="type" rowspan="2">강의실</th>
+								<th class="accent" colspan="2">05층 A 12 (11)</th>
+								<th class="accent">05층 B</th>
+								<th class="accent">05층 C</th>
+								<th class="accent">05층 D</th>
+								<th class="accent">05층 E</th>
+								<th class="accent">05층 F</th>
+								<th class="accent">05층 G</th>
+								<th class="accent">05층 H</th>
+								<th class="accent">05층 I</th>
+								<th class="accent">05층 J</th>
+								<th class="accent">05층 K</th>
+								<th class="accent">05층 L</th>
+								<th class="accent">05층 M</th>
+								<th class="accent">05층 N</th>
+								<th class="accent">05층 O</th>
+								<th class="accent">05층 P</th>
+								<th class="accent">05층 Q</th>
+								<th class="accent">05층 R</th>
+								<th class="accent">05층 S</th>
+								<th class="accent">05층 T</th>
+								<th class="accent">05층 U</th>
+							</tr>
+							<tr>
+								<th>05층 A-1</th>
+								<th>05층 A-2</th>
+								<th>05층 B-1</th>
+								<th>05층 C-1</th>
+								<th>05층 D-1</th>
+								<th>05층 E-1</th>
+								<th>05층 F-1</th>
+								<th>05층 G-1</th>
+								<th>05층 H-1</th>
+								<th>05층 I-1</th>
+								<th>05층 J-1</th>
+								<th>05층 K-1</th>
+								<th>05층 L-1</th>
+								<th>05층 M-1</th>
+								<th>05층 N-1</th>
+								<th>05층 O-1</th>
+								<th>05층 P-1</th>
+								<th>05층 Q-1</th>
+								<th>05층 R-1</th>
+								<th>05층 S-1</th>
+								<th>05층 T-1</th>
+								<th>05층 U-1</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th class="type">09:00</th>
+								<td><div class="cell">
+									<div class="event" style="top:30%;height:230%">
+										<dl class="type1">
+											<dt>디지털드로잉/포토샵/디지털...</dt>
+											<dd>월수금 10:00 <br>임재은 / 정원 : 10 <br>개:2023-09-08 <br>종:2023-10-04<br>출석율 : 20%</dd>
+											<dd>
+												<span class="icon icon2">23</span>
+												<span class="icon icon3">13</span>
+												<span class="icon icon4">10</span>
+											</dd>
+											<dd>
+												<span class="edit">10.2(월) 휴강 / 10.10(화) 보강 동일강의실, 동일시…</span>
+											</dd>
+										</dl>
+										<div class="event-btn">
+											<a href="#"><img src="./assets/img/schedule-event-ico@2x.png" alt=""></a>
+										</div>
+									</div>
+								</div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">10:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell">
+									<div class="event" style="top:70%;height:330%">
+										<dl class="type4">
+											<dt>디지털드로잉/포토샵/디지털...</dt>
+											<dd>월수금 10:00 <br>임재은 / 정원 : 10 <br>개:2023-09-08 <br>종:2023-10-04<br>출석율 : 20%</dd>
+											<dd>
+												<span class="icon icon2">23</span>
+												<span class="icon icon3">13</span>
+												<span class="icon icon4">10</span>
+											</dd>
+											<dd>
+												<span class="edit">10.2(월) 휴강 / 10.10(화) 보강 동일강의실, 동일시…</span>
+											</dd>
+										</dl>
+										<div class="event-btn">
+											<a href="#"><img src="./assets/img/schedule-event-ico@2x.png" alt=""></a>
+										</div>
+									</div>
+								</div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell">
+									<div class="event" style="height:200%;">
+										<dl class="type4">
+											<dt>디지털드로잉/포토샵/디지털...</dt>
+											<dd>월수금 10:00 <br>임재은 / 정원 : 10 <br>개:2023-09-08 <br>종:2023-10-04<br>출석율 : 20%</dd>
+											<dd>
+												<span class="icon icon2">23</span>
+												<span class="icon icon3">13</span>
+												<span class="icon icon4">10</span>
+											</dd>
+											<dd>
+												<span class="edit">10.2(월) 휴강 / 10.10(화) 보강 동일강의실, 동일시…</span>
+											</dd>
+										</dl>
+										<div class="event-btn">
+											<a href="#"><img src="./assets/img/schedule-event-ico@2x.png" alt=""></a>
+										</div>
+									</div>
+								</div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">11:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell">
+									<div class="event" style="top:50%;height:250%">
+										<dl class="type3">
+											<dt>디지털드로잉/포토샵/디지털...</dt>
+											<dd>월수금 10:00 <br>임재은 / 정원 : 10 <br>개:2023-09-08 <br>종:2023-10-04<br>출석율 : 20%</dd>
+											<dd>
+												<span class="icon icon2">23</span>
+												<span class="icon icon3">13</span>
+												<span class="icon icon4">10</span>
+											</dd>
+											<dd>
+												<span class="edit">10.2(월) 휴강 / 10.10(화) 보강 동일강의실, 동일시…</span>
+											</dd>
+										</dl>
+										<div class="event-btn">
+											<a href="#"><img src="./assets/img/schedule-event-ico@2x.png" alt=""></a>
+										</div>
+									</div>
+								</div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">12:00</th>
+								<td><div class="cell">
+									<div class="event" style="top:30%;height:330%">
+										<dl class="type2">
+											<dt>디지털드로잉/포토샵/디지털...</dt>
+											<dd>월수금 10:00 <br>임재은 / 정원 : 10 <br>개:2023-09-08 <br>종:2023-10-04<br>출석율 : 20%</dd>
+											<dd>
+												<span class="icon icon2">23</span>
+												<span class="icon icon3">13</span>
+												<span class="icon icon4">10</span>
+											</dd>
+											<dd>
+												<span class="edit">10.2(월) 휴강 / 10.10(화) 보강 동일강의실, 동일시…</span>
+											</dd>
+										</dl>
+										<div class="event-btn">
+											<a href="#"><img src="./assets/img/schedule-event-ico@2x.png" alt=""></a>
+										</div>
+									</div>
+								</div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">13:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">14:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">15:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">16:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">17:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">18:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+							<tr>
+								<th class="type">19:00</th>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+								<td><div class="cell"></div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!-- // table-responsive -->
+
+			</div><!-- // card-body -->
+
+		</div><!-- // card -->
+
+	</div><!-- // card-wrapper -->
+
+	<!-- 시간표관리 -->
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xxl modal-dialog-centered" >
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<div class="modal-header-info">
+						<h5 class="modal-title">애프터이펙트 (일반)</h5>
+						<div>05층 C (12/13)</div>
+						<div>2023.07.12~2023.08.10</div>
+						<div>월~금 09:30~11:30</div>
+						<div>오강사</div>
+						<span class="badge">수강중</span>
+					</div>
+
+					</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<ul class="nav modal-tabmenu" id="modalTabMenu" role="tablist">
+						<li><a class="tab-btn" href="#modalTabs1" data-bs-toggle="tab" role="tab" aria-controls="modalTabs1" aria-selected="false">강의관리</a></li>
+						<li><a class="tab-btn active" href="#modalTabs2" data-bs-toggle="tab" role="tab" aria-controls="modalTabs2" aria-selected="true">강의일정</a></li>
+						<li><a class="tab-btn" href="#modalTabs3" data-bs-toggle="tab" role="tab" aria-controls="modalTabs3" aria-selected="false">수강생 관리</a></li>
+						<li><a class="tab-btn" href="#modalTabs4" data-bs-toggle="tab" role="tab" aria-controls="modalTabs3" aria-selected="false">강의정보</a></li>
+						<li><a class="tab-btn" href="#modalTabs5" data-bs-toggle="tab" role="tab" aria-controls="modalTabs3" aria-selected="false">Q&A</a></li>
+						<li><a class="tab-btn" href="#modalTabs6" data-bs-toggle="tab" role="tab" aria-controls="modalTabs3" aria-selected="false">자료실</a></li>
+						<li><a class="tab-btn" href="#modalTabs7" data-bs-toggle="tab" role="tab" aria-controls="modalTabs3" aria-selected="false">칭찬접수</a></li>
+						<li><a class="tab-btn" href="#modalTabs8" data-bs-toggle="tab" role="tab" aria-controls="modalTabs3" aria-selected="false">불편접수</a></li>
+					</ul>
+					<div class="modal-tabpanel" id="modalTabPanel">
+						<div class="tab-pane" id="modalTabs1" role="tabpanel">강의관리</div>
+						<div class="tab-pane" id="modalTabs2" role="tabpanel">강의일정</div>
+						<div class="tab-pane active" id="modalTabs3" role="tabpanel">
+
+							<div class="row">
+								<div class="col-45p">
+
+									<div class="mbody-title">
+										<div>강의일정</div>
+										<div>
+											<a href="#" class="btn btn-outline-active">커리큘럼 불러오기</a>
+										</div>
+									</div><!-- // mbody-title -->
+
+									<div class="mbody-attendance simplebar-scrollable-y" data-simplebar>
+
+										<table class="table table-card">
+											<colgroup>
+												<col style="width:42px">
+												<col style="width:12%">
+												<col style="width:25%">
+												<col style="">
+												<col style="width:15%">
+											</colgroup>
+											<thead class="table-light">
+												<tr>
+													<th scope="col"><div class="form-check empty"><input class="form-check-input" type="checkbox" name="t-check-all" id="t-check-all" value="a"></div></th>
+													<th scope="col">회차</th>
+													<th scope="col">날짜</th>
+													<th scope="col">강의 주제</th>
+													<th scope="col">강사</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><div class="form-check empty"><input class="form-check-input" type="checkbox" name="t-check-row14" id="t-check-row14" value="a"></div></td>
+													<td>1 회</td>
+													<td>2023.12.18 (월)<span id="startDate"><a href="#"class="btn-icon align-middle d-inline-block ms-1"><i class="ico-date">달력</i></a></span></td>
+													<td class="title">브러쉬와 올가미 툴을 통한 채색</td>
+													<td><span class="badge bg-danger me-1">초과</span>오지헌</td>
+												</tr>
+											</tbody>
+										</table>
+									</div><!-- // mbody-attendance -->
+
+									<div class="mbody-btn" style="position: absolute; right: 10px; bottom: 0;">
+										<div class="float-end">
+											<button type="button" class="btn btn-success">강사변경</button>
+											<button type="button" class="btn btn-success">일정변경</button>
+										</div>
+									</div><!-- // mbody-btn -->
+
+								</div><!-- // col -->
+								<div class="col-55p">
+									<div class="calendar-box">
+										<div class="calendar-head">
+											<div class="calendar-btn calendar-prev"></div>
+											<div class="calendar-title">12월</div>
+											<div class="calendar-btn calendar-next"></div>
+										</div>
+										<div class="calendar-body">
+											<div class="calendar-name">
+												<div class="calendar-cell">일</div>
+												<div class="calendar-cell">월</div>
+												<div class="calendar-cell">화</div>
+												<div class="calendar-cell">수</div>
+												<div class="calendar-cell">목</div>
+												<div class="calendar-cell">금</div>
+												<div class="calendar-cell">토</div>
+											</div>
+											<div class="calendar-day">
+												<div class="calendar-week">
+													<div class="calendar-cell other"><span>26</span></div>
+													<div class="calendar-cell other"><span>27</span></div>
+													<div class="calendar-cell other"><span>28</span></div>
+													<div class="calendar-cell other"><span>29</span></div>
+													<div class="calendar-cell other"><span>31</span></div>
+													<div class="calendar-cell"><span>1</span></div>
+													<div class="calendar-cell"><span>2</span></div>
+												</div>
+												<div class="calendar-week">
+													<div class="calendar-cell"><span>3</span></div>
+													<div class="calendar-cell"><span>4</span></div>
+													<div class="calendar-cell"><span>5</span></div>
+													<div class="calendar-cell"><span>6</span></div>
+													<div class="calendar-cell"><span>7</span></div>
+													<div class="calendar-cell"><span>8</span></div>
+													<div class="calendar-cell"><span>9</span></div>
+												</div>
+												<div class="calendar-week">
+													<div class="calendar-cell"><span>10</span></div>
+													<div class="calendar-cell"><span>11</span></div>
+													<div class="calendar-cell"><span>12</span></div>
+													<div class="calendar-cell"><span>13</span></div>
+													<div class="calendar-cell"><span>14</span></div>
+													<div class="calendar-cell"><span>15</span></div>
+													<div class="calendar-cell"><span>16</span></div>
+												</div>
+												<div class="calendar-week">
+													<div class="calendar-cell"><span>17</span></div>
+													<div class="calendar-cell event active">
+														<span>18</span>
+														<div>선긋기와 타블렛 이용의 기본 출석율 82%</div>
+													</div>
+													<div class="calendar-cell"><span>19</span></div>
+													<div class="calendar-cell event today">
+														<span>20</span>
+														<div>컨투어 드로잉을 통한 관찰력 습득</div>
+													</div>
+													<div class="calendar-cell"><span>21</span></div>
+													<div class="calendar-cell event">
+														<span>22</span>
+														<div>인체의 기본 비율</div>
+													</div>
+													<div class="calendar-cell"><span>23</span></div>
+												</div>
+												<div class="calendar-week">
+													<div class="calendar-cell"><span>24</span></div>
+													<div class="calendar-cell event">
+														<span>25</span>
+														<div>각 인체별 그리기 연습</div>
+													</div>
+													<div class="calendar-cell"><span>26</span></div>
+													<div class="calendar-cell event">
+														<span>27</span>
+														<div>인체 기본기 종합</div>
+													</div>
+													<div class="calendar-cell"><span>28</span></div>
+													<div class="calendar-cell event">
+														<span>29</span>
+														<div>브러쉬와 올가미 툴을 통한 채색</div>
+													</div>
+													<div class="calendar-cell"><span>30</span></div>
+												</div>
+												<div class="calendar-week">
+													<div class="calendar-cell"><span>31</span></div>
+													<div class="calendar-cell other"><span>1</span></div>
+													<div class="calendar-cell other"><span>2</span></div>
+													<div class="calendar-cell event other">
+														<span>3</span>
+														<div>소재 드로잉</div>
+													</div>
+													<div class="calendar-cell other"><span>4</span></div>
+													<div class="calendar-cell event other">
+														<span>5</span>
+														<div>이팩트와 텍스쳐 이용</div>
+													</div>
+													<div class="calendar-cell other"><span>6</span></div>
+												</div>
+												<div class="calendar-week">
+													<div class="calendar-cell other"><span>7</span></div>
+													<div class="calendar-cell event other">
+														<span>8</span>
+														<div>스케치와 구성</div>
+													</div>
+													<div class="calendar-cell other"><span>9</span></div>
+													<div class="calendar-cell other"><span>10</span></div>
+													<div class="calendar-cell other"><span>11</span></div>
+													<div class="calendar-cell other"><span>12</span></div>
+													<div class="calendar-cell other"><span>13</span></div>
+												</div>
+											</div>
+										</div>
+									</div><!-- // datepicker-box -->
+
+								</div><!-- // col -->
+							</div><!-- // row -->
+
+						</div><!-- // tab-pane -->
+						<div class="tab-pane" id="modalTabs4" role="tabpanel">강의정보</div><!-- // tab-pane -->
+						<div class="tab-pane" id="modalTabs5" role="tabpanel">Q&A</div><!-- // tab-pane -->
+						<div class="tab-pane" id="modalTabs6" role="tabpanel">자료실</div><!-- // tab-pane -->
+						<div class="tab-pane" id="modalTabs7" role="tabpanel">
+
+							<div class="mbody-title">
+								<div class="table-title">답변하기</div>
+							</div><!-- // mbody-title -->
+
+							<table class="table table-opened">
+								<colgroup>
+									<col style="width:82px">
+									<col style="">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>등록자</th>
+										<td><div class="txt-table">오학생 2023-07-09</div></td>
+									</tr>
+									<tr>
+										<th>카테고리</th>
+										<td><div class="txt-table">수업관리</div></td>
+									</tr>
+									<tr>
+										<th>제목</th>
+										<td><div class="txt-table">칭찬해요</div></td>
+									</tr>
+									<tr>
+										<th><div class="txt-table">내용</div></th>
+										<td>
+											<div class="txt-table">수업 너무 꼼꼼하게 잘 가르쳐 주세요!</div>
+											<div class="img-table"><img src="./assets/img/modal-sample.png" alt=""></div>
+
+											<div class="file-table"><input class="form-control" type="file"></div>
+											<div class="file-table"><input class="form-control" type="file"></div>
+
+										</td>
+									</tr>
+									<tr>
+										<th>댓글</th>
+										<td><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+									</tr>
+									<tr>
+										<th>댓글</th>
+										<td>
+											<div class="comment-list">
+												<p><b>광고편집학과 포토샵 박교육 원장</b> (2023-09-18) 14:23:00)</p>
+												<p>땡큐 베리 감사</p>
+												<div class="comment-btn">
+													<a href="#" class="btn btn-outline-active">수정</a>
+													<a href="#" class="btn btn-outline-active">삭제</a>
+												</div>
+											</div>
+											<div class="comment-enter">
+												<div class="comment-enter-input"><input type="text" class="form-control" placeholder="내용을 입력하세요."></div>
+												<div class="comment-enter-btn"><button type="submit" class="btn btn-success">입력</button></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>상태</th>
+										<td>
+											<div class="flex-shrink-0 row">
+												<div class="select-table">
+													<select class="form-select" data-choices data-choices-search-false>
+														<option value="01">상태</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="form-btn tab-pane-btn">
+								<button type="submit" class="btn btn-outline-cancel">취소</button>
+								<button type="submit" class="btn btn-point">저장</button>
+							</div>
+
+						</div><!-- // tab-pane -->
+						<div class="tab-pane" id="modalTabs8" role="tabpanel">불편접수</div><!-- // tab-pane -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div><!-- // modal : 시간표관리 -->
+
+	<!-- pageModal : 일정 변경 -->
+	<div class="modal fade" id="pageModal10" tabindex="-1" role="dialog" aria-hidden="false"><!-- 2024-03-24 수정 -->
+		<div class="modal-dialog modal-xs modal-dialog-centered" style="position: absolute; top: 165px; left: 70px; width: 785px; max-width: 100%; min-width: 785px; height: 497px; max-height: 100%; margin: 0 !important; align-items: flex-start;">
+			<div class="modal-content border border-1 border-primary shadow" style="height: 750px;">
+
+				<div class="modal-header">
+					<h5 class="modal-title">일정 변경</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+
+					<div class="mbody-forms">	
+
+						<div class="row">
+							<div class="col-12">
+								<dl class="row">
+									<dt style="width: 150px;">기준일 선택</dt>
+									<dd>
+										<div class="row row-x6">
+											<div class="col-12">
+												<select class="form-select" data-choices="" data-choices-search-false="">
+													<option value="01">기준일 선택</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>	
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt style="width: 150px;">변경 방법</dt>
+									<dd>
+										<div class="row row-x6">
+											<div class="col-12">
+												<select class="form-select" data-choices="" data-choices-search-false="">
+													<option value="01">변경 선택</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>	
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt style="width: 150px;">변경일 선택</dt>
+									<dd>
+										<div class="col-140px">
+											<div class="input-group-flatpickr">
+												<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt style="width: 150px;">변경 강의장</dt>
+									<dd>
+										<div class="row row-x6">
+											<div class="col-12">
+												<select class="form-select" data-choices="" data-choices-search-false="">
+													<option value="01">강의장 목록</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>	
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12"><!-- 2024-03-15 수정 -->
+								<dl class="row">
+									<dt style="width: 150px;">진행중 강의</dt>
+									<dd>
+										<ul>
+											<li>09:30 ~ 11:30 빈강의실</li>
+											<li>09:30 ~ 11:30 빈강의실</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt style="width: 150px;">변경 시간</dt>
+									<dd>
+										<div class="row row-x6">
+											<div class="col-12">
+												<select class="form-select" data-choices="" data-choices-search-false="">
+													<option value="01">변경 시간 선택</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>	
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="layer-btn-wrap">
+						<button type="submit" class="btn btn-point">확인</button>
+						<button type="submit" class="btn btn-outline-active">닫기</button>
+					</div>
+
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // pageModal : 일정 변경 -->
+
+
+	<!-- pageModalB -->
+	<div class="modal fade" id="pageModalB" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xs modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-body">
+
+					<div class="modal-text">해당 날짜부터 일정을<br />조정하시겠습니까?</div>
+					<a href="#" class="btn btn-point-deep">확인</a>
+
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : pageModalB -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal10').modal('show');
+		$('#pageModal17').modal('show');
+	});
+	</script>
+
+</body>
+</html>

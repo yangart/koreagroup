@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="overflow-y: auto;">
+
+	<div class="modal-wrap application-wrap" tabindex="-1" role="dialog" aria-hidden="false"><!-- 2024-01-30 테블릿 페이지 가로 스크롤 없애기 class="application-wrap" 추가 -->
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<div class="modal-flex">
+						<h5 class="modal-title">APPLICATION 입학원서</h5>
+						<ul class="nav modal-header-step step1">
+							<li class="item1">SETP1 <b>기본정보</b></li>
+							<li class="item2">SETP2 <b>견적서</b></li>
+							<li class="item3">SETP3 <b>원서화면</b></li>
+						</ul>
+					</div>
+
+					<div class="modal-user">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+					</div>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<div class="mbody-rounded mbody-clause">
+
+						<div class="mbody-clause-text">상기 본인은 SBS아카데미컴퓨터아트학원에 입학하여 다음 과정을 전공하려 합니다.</div>
+
+						<div class="mbody-title">학생 정보</div><!-- // mbody-title -->
+						<table class="table table-card table-align-left">
+							<colgroup>
+								<col style="width:12%">
+								<col style="width:38%">
+								<col style="width:12%">
+								<col style="width:38%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>이름 <i class="text-req">*</i></th>
+									<td>
+										<div class="row row-x6">
+											<div class="col-200px"><input type="text" class="form-control" value="김길동"></div>
+										</div>									
+									</td>
+									<th>연락처 <i class="text-req">*</i></th>
+									<td>
+										<div class="row row-x6">
+											<div class="col-200px"><input type="text" class="form-control" value="010-1234-5678"></div>
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th>생년월일 <i class="text-req">*</i></th>
+									<td>
+										<div class="row row-x6">
+											<div class="col-90px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">년</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+											<div class="col-90px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">월</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+											<div class="col-90px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">일</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+										</div>									
+									</td>
+									<th>성별 <i class="text-req">*</i></th>
+									<td>
+										<div class="form-inline">
+											<div>
+												<input type="radio" class="btn-check" name="textRadio1" id="textRadio1_a" autocomplete="off" checked="">
+												<label class="btn" for="textRadio1_a">남자</label>
+											</div>
+											<div>
+												<input type="radio" class="btn-check" name="textRadio1" id="textRadio1_b" autocomplete="off">
+												<label class="btn" for="textRadio1_b">여자</label>
+											</div>
+										</div>									
+									</td>
+								</tr>
+								<tr>
+									<th>직업</th>
+									<td colspan="3">
+										<div class="form-inline">
+											<div>
+												<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_a" autocomplete="off" checked="">
+												<label class="btn" for="textRadio1_a">직장인</label>
+											</div>
+											<div>
+												<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_b" autocomplete="off">
+												<label class="btn" for="textRadio1_b">학생</label>
+											</div>
+											<div>
+												<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_c" autocomplete="off">
+												<label class="btn" for="textRadio1_c">취업준비생</label>
+											</div>
+											<div>
+												<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_d" autocomplete="off">
+												<label class="btn" for="textRadio1_d">자영업</label>
+											</div>
+											<div>
+												<input type="radio" class="btn-check" name="textRadio2" id="textRadio2_e" autocomplete="off">
+												<label class="btn" for="textRadio1_e">기타</label>
+											</div>
+										</div>								
+									</td>
+								</tr>
+								<tr>
+									<th>메일주소</th>
+									<td colspan="3">
+										<div class="row row-x6">
+											<div class="col-200px"><input type="text" class="form-control" placeholder="메일주소"></div>
+											<div class="col-auto col-dash">@</div>
+											<div class="col-200px"><input type="text" class="form-control" placeholder="직접입력"></div>
+											<div class="col-200px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">직접입력</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+										</div>									
+									</td>
+								</tr>
+								<tr>
+									<th>거주지역</th>
+									<td>
+										<div class="row row-x6">
+											<div class="col-200px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">지역</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+											<div class="col-200px">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">구</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+										</div>									
+									</td>
+									<th>전공여부</th>
+									<td>
+										<div class="form-inline">
+											<div>
+												<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_a" autocomplete="off" checked="">
+												<label class="btn" for="textRadio1_a">전공</label>
+											</div>
+											<div>
+												<input type="radio" class="btn-check" name="textRadio3" id="textRadio3_b" autocomplete="off">
+												<label class="btn" for="textRadio1_b">비전공</label>
+											</div>
+										</div>									
+									</td>
+								</tr>
+								<tr>
+									<th>국비여부 <i class="text-req">*</i></th>
+									<td>
+										<div class="form-inline">
+											<div>
+												<input type="radio" class="btn-check" name="textRadio4" id="textRadio4_a" autocomplete="off" checked="">
+												<label class="btn" for="textRadio1_a">일반</label>
+											</div>
+											<div>
+												<input type="radio" class="btn-check" name="textRadio4" id="textRadio4_b" autocomplete="off">
+												<label class="btn" for="textRadio1_b">재직자</label>
+											</div>
+											<div>
+												<input type="radio" class="btn-check" name="textRadio4" id="textRadio4_c" autocomplete="off">
+												<label class="btn" for="textRadio1_c">실업자</label>
+											</div>
+										</div>									
+									</td>
+									<th>추천인</th>
+									<td>
+										<div class="row row-x6">
+											<div class="col-200px"><input type="text" class="form-control" placeholder="이름"></div>
+											<div class="col-200px"><input type="text" class="form-control" placeholder="연락처"></div>
+										</div>									
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="mbody-title">멘토 정보</div><!-- // mbody-title -->
+						<table class="table table-card table-align-left">
+							<colgroup>
+								<col style="width:12%">
+								<col style="width:38%">
+								<col style="width:12%">
+								<col style="width:38%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>이름 <i class="text-req">*</i></th>
+									<td>
+										<div class="row row-x6">
+											<div class="col-200px"><input type="text" class="form-control" value="김길동"></div>
+											<div class="col-auto"><a href="#" class="btn btn-outline-light btn-review"><small class="d-lg-none">미리보기</small></a></div>
+										</div>									
+									</td>
+									<th>멘토 </th>
+									<td>
+										<div class="row row-x6">
+											<div class="col-200px"><input type="text" class="form-control" value="010-1234-5678"></div>
+											<div class="col-auto"><a href="#" class="btn btn-outline-light btn-review"><small class="d-lg-none">미리보기</small></a></div>
+										</div>										
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div><!-- // mbody-rounded -->
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer tuition-footer">
+					<div class="item1 d-flex">
+						<div><button type="button" class="btn btn-primary nowrap">원서 보기</button></div>
+						<div><button type="button" class="btn btn-outline-primary nowrap">견적서 저장</button></div>
+						<div><button type="button" class="btn btn-outline-primary nowrap">저장</button></div>
+					</div>
+				</div><!-- // modal-footer -->
+
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+</body>
+</html>

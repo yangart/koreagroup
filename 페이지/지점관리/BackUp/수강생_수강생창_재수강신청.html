@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+
+		<div class="navbar-menu navbar-type2">
+
+			<div class="navbar-search">
+				<input type="text" class="form-control" placeholder="직원명을 입력하세요.">
+			</div><!-- // navbar-search -->
+
+			<div id="scrollbar" class="simplebar-scrollable-y h-100" data-simplebar>
+
+				<ul class="navbar-nav" id="navbarNav">
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav1">
+							<span>기본정보</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav1">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#" class="nav-link">개인정보</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">인사 발령 내역</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">근태</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">재증명</a>
+								</li>
+								<li class="nav-item">
+									<a href="#sideNav4-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4-3">교육</a>
+									<div class="menu-dropdown collapse" id="sideNav4-3">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">과정 목록</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">나의 강의실</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">파일관리</a>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2">
+							<span>강사</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav2">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#" class="nav-link">My 겅의</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">강사급여</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">계약현황</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">강사평가</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">커리큘럼</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">교육통계</a>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3">
+							<span>멘토</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav3">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#sideNav3-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3-1">사업관리</a>
+									<div class="menu-dropdown collapse" id="sideNav3-1">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">DB 현황 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">방문 상담 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">인터뷰 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">원서 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">멘토 과정 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">당직표</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+				</ul>
+				<div class="sidebar-background"></div>
+			</div><!-- // scrollbar -->
+
+		</div><!-- // navbar-menu -->
+		<div class="vertical-overlay"></div>
+
+		<!---- main-content ---->
+		<div class="main-content">
+			<div class="page-content page-content-full">
+				<div class="container-fluid">
+
+					<!-- page-header -->
+					<div class="page-header navbar-header">
+						<div class="page-header-left">
+							<div class="page-header-name ms-3">정수혜(여)</div>
+						</div>
+
+						<div class="page-header-right gap-4px">
+							<a href="#" class="btn btn-outline-light btn-round">재학중</a>
+							<a href="#" class="btn btn-outline-light btn-round">관리</a>
+							<a href="#" class="btn btn-outline-light btn-round">사업부더블</a>
+						</div>
+					</div><!-- // page-header -->
+
+					<!-- card -->
+					<div class="card card-form">
+						<div class="card-header">
+							<h4 class="card-title mb-0">학생정보</h4>
+						</div>
+
+						<div id="innerscroll" class="card-body inner-scroll">
+
+							<div class="table-head">
+								<div class="table-title">개인정보</div>
+							</div>
+							<div class="row">
+								<div class="col-3">
+									<label for="" class="form-label">이름</label>
+									<input type="text" class="form-control" id="" value="정수혜">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">아이디</label>
+									<input type="text" class="form-control" id="" value="미등록">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">휴대폰</label>
+									<input type="text" class="form-control" id="" value="미등록">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">비밀번호</label>
+									<a href="#" class="btn btn-light w-100"><b>비밀번호 초기화</b></a>
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">메일주소</label>
+									<input type="text" class="form-control" id="" value="123@123.com">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">거주지역</label>
+									<input type="text" class="form-control" id="" value="서울시">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">구</label>
+									<input type="text" class="form-control" id="" value="강남구">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">성별</label>
+									<div class="form-inline">
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a">
+											<label class="form-check-label" for="inlineRadio1_a">남</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+											<label class="form-check-label" for="inlineRadio1_b">여</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">멘토</label>
+									<a href="#" class="form-control form-link" data-bs-toggle="modal" data-bs-target="#pageModal1">컴퓨터강남 / 김미영</a>
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">서브멘토</label>
+									<input type="text" class="form-control" id="" value="한치혁">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">수강상태</label>
+									<input type="text" class="form-control" id="" value="재학">
+								</div>
+							</div><!-- // row -->
+
+							<div class="table-head mt-4">
+								<div class="table-title">원서키별 멘토</div>
+							</div>							
+							<div class="row">
+								<div class="co-12">
+									<table class="table table-card">
+										<colgroup>
+											<col style="width:18%">
+											<col style="width:18%">
+											<col style="">
+											<col style="">
+											<col style="width:18%">
+										</colgroup>
+										<thead class="table-light">
+											<tr>
+												<th scope="col">No</th>
+												<th scope="col">원서키</th>
+												<th scope="col">지점명</th>
+												<th scope="col">멘토</th>
+												<th scope="col">멘토종료</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>213212</td>
+												<td>컴퓨터 홍대</td>
+												<td>이지은(1-1)팀</td>
+												<td>2023-11-01 </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div><!-- // row -->
+
+							<div class="table-head mt-4">
+								<div class="table-title">자격증</div>
+							</div>							
+							<div class="row">
+								<div class="co-12">
+									<table class="table table-card">
+										<colgroup>
+											<col style="width:18%">
+											<col style="">
+											<col style="width:18%">
+										</colgroup>
+										<thead class="table-light">
+											<tr>
+												<th scope="col">No</th>
+												<th scope="col">자격증</th>
+												<th scope="col">취득일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td class="text-start">Adobe Certified Professional InDesign CC2020</td>
+												<td>2023-11-01</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div><!-- // row -->
+
+							<div class="table-head mt-4">
+								<div class="table-title">취업 리스트</div>
+							</div>							
+							<div class="row">
+								<div class="co-12">
+									<table class="table table-card">
+										<colgroup>
+											<col style="width:18%">
+											<col style="">
+											<col style="width:18%">
+										</colgroup>
+										<thead class="table-light">
+											<tr>
+												<th scope="col">No</th>
+												<th scope="col">취업</th>
+												<th scope="col">취업일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td class="text-start">숭실대 사이버 캠퍼스</td>
+												<td>2023-11-01</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div><!-- // row -->
+
+						</div><!-- // card-body -->
+					</div><!-- // card : 개인정보 -->
+
+				</div><!-- // container-fluid -->
+			</div><!-- // page-content -->
+
+			<!-- page-footer -->
+			<div class="page-footer">
+				<div class="page-footer-row">
+					<div class="page-footer-btn-right">
+						<a href="#pageModal7" data-bs-toggle="modal" class="btn btn-point">저장</a>
+					</div>
+				</div>
+			</div><!-- // page-footer -->
+
+		</div><!-- // main-content -->
+
+	</div><!-- // layout-wrapper -->
+
+	<div class="modal fade" id="pageModal12" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">재수강 신청</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<div class="table-head">
+						<div class="flex-grow-1 row gx-8px"><!-- 2024-03-10 수정 -->
+							<div class="col-auto mt-0">
+								<div class="table-title">홍길동 010-1234-5678  (재수강 잔여 : N 개)</div>
+							</div>
+						</div>
+						<div class="flex-shrink-0 row">
+							<div class="col-auto mt-0">
+								<ul class="nav nav-pills" role="tablist">
+									<li><a class="nav-link active" href="#modalTabs1" data-bs-toggle="tab" role="tab" aria-controls="modalTabs1" aria-selected="true">신청내역</a></li>
+									<li><a class="nav-link" href="#modalTabs2" data-bs-toggle="tab" role="tab" aria-controls="modalTabs2" aria-selected="false">신청</a></li>
+								</ul>	
+							</div>
+						</div>
+					</div><!-- // table-head -->
+
+					<div class="modal-tabpanel" id="modalTabPanel"><!-- 2024-03-10 수정 -->
+						<div class="tab-pane active" id="modalTabs1" role="tabpanel">
+							<div class="table-head">
+								<div class="flex-grow-1 row gx-8px">
+									<div class="col-auto"><div class="table-title">재수강 신청 목록</div></div>
+								</div>
+							</div><!-- // table-head -->
+
+							<table class="table table-card">
+								<colgroup>
+									<col style="width:12%">
+									<col style="">
+									<col style="width:12%">
+									<col style="width:18%">
+									<col style="width:12%">
+									<col style="width:25%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>원서번호</th>
+										<th>과목</th>
+										<th>평일/주말</th>
+										<th>수강료</th>
+										<th>상태</th>
+										<th>등록일시(취소일시)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td class="text-start">포토샵 시작하기</td>
+										<td>평일</td>
+										<td>1,000,000</td>
+										<td>취소</td>
+										<td>2022-11-12  14:43:22(2022-11-13 11:11:33)</td>
+									</tr>
+								</tbody>
+							</table>									
+						</div>
+						<div class="tab-pane" id="modalTabs2" role="tabpanel">
+							<div class="row row-survey row-x40">
+								<div class="col-50p">
+									<div class="mbody-search">
+										<div class="row row-x4 row-y0">
+											<div class="col-auto col-title text-dark">과목 선택</div>
+										</div>
+									</div><!-- // mbody-title -->
+
+									<div class="mbody-survey">
+										<div class="mbody-survey-list simplebar-scrollable-y" data-simplebar data-simplebar-auto-hide="false" style="max-height: 520px;"><!-- 2024-03-10 수정 -->
+											<div class="list-item">
+												<div class="subject">[머리말 핵융합의 원료는 주로 우라늄이 사용된다.</div>
+												<div class="week">평일</div>
+												<div class="payment">1,000,000</div>
+												<a href="#" class="btn btn-outline-active btn-sm">선택</a>
+											</div>
+											<div class="list-item">
+												<div class="subject">[머리말 핵융합의 원료는 주로 우라늄이 사용된다.</div>
+												<div class="week">평일</div>
+												<div class="payment">1,000,000</div>
+												<a href="#" class="btn btn-outline-active btn-sm">선택</a>
+											</div>
+											<div class="list-item">
+												<div class="subject">[머리말 핵융합의 원료는 주로 우라늄이 사용된다.</div>
+												<div class="week">평일</div>
+												<div class="payment">1,000,000</div>
+												<a href="#" class="btn btn-outline-active btn-sm">선택</a>
+											</div>
+											<div class="list-item">
+												<div class="subject">[머리말 핵융합의 원료는 주로 우라늄이 사용된다.</div>
+												<div class="week">평일</div>
+												<div class="payment">1,000,000</div>
+												<a href="#" class="btn btn-outline-active btn-sm">선택</a>
+											</div>
+											<div class="list-item">
+												<div class="subject">[머리말 핵융합의 원료는 주로 우라늄이 사용된다.</div>
+												<div class="week">평일</div>
+												<div class="payment">1,000,000</div>
+												<a href="#" class="btn btn-outline-active btn-sm">선택</a>
+											</div>
+										</div>
+									</div><!-- // mbody-survey -->
+
+								</div><!-- // col -->
+
+								<div class="col-50p">
+
+									<div class="mbody-search">
+										<div class="row row-x4 row-y0">
+											<div class="col-auto col-title text-dark">재수강 신청 과목</div>
+										</div>
+									</div><!-- // mbody-title -->
+
+									<div class="mbody-survey">
+										<div class="mbody-survey-list simplebar-scrollable-y" data-simplebar data-simplebar-auto-hide="false" style="max-height: 520px;"><!-- 2024-03-10 수정 -->
+											<div class="list-item">
+												<div class="subject">[머리말 핵융합의 원료는 주로 우라늄이 사용된다.</div>
+												<div class="week">평일</div>
+												<div class="payment">999,000,000</div>
+												<a href="#" class="delete">삭제</a>
+											</div>
+										</div>
+									</div><!-- // mbody-survey -->
+
+								</div><!-- // col -->
+
+							</div><!-- // row -->											
+						</div>
+					</div>
+
+					<div class="form-btn float-wrap">
+						<div class="float-left">
+							<button type="submit" class="btn btn-outline-active">닫기</button>
+						</div>
+						<div class="float-right">
+							<button type="submit" class="btn btn-point">재수강 신청</button>
+						</div>
+					</div><!-- // form-btn -->
+
+				</div><!-- // modal-body -->
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal : pageModal12 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal12').modal('show');
+	});
+	</script>
+
+</body>
+</html>
