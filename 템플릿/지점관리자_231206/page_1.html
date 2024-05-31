@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+
+		<div id="page-topbar">
+			<div class="navbar-hamburger">
+				<button type="button" class="topnav-hamburger" id="topnav-hamburger-icon">
+					<div class="hamburger-icon"><span></span><span></span><span></span></div>
+				</button>
+			</div>
+		</div><!-- // page-topbar -->
+
+		<div class="app-menu navbar-menu">
+
+			<div class="navbar-brand-box">
+				<a href="#" class="logo"><img src="./assets/img/app-menu-logo@2x.png" alt=""></a>
+				<button type="button" class="btn" id="vertical-hover"></button>
+			</div><!-- // navbar-brand-box -->
+
+			<div id="scrollbar">
+				<div class="container-fluid">
+
+					<div id="two-column-menu"></div>
+					<ul class="navbar-nav" id="navbar-nav">
+
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2">
+								<i class="ico2"></i> <span>영업관리</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav2">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav2-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav2-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav2-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav2-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav2-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav2-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3">
+								<i class="ico3"></i> <span>교육관리</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav3">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav3-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav3-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav3-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav3-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav3-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav3-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav4" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4">
+								<i class="ico4"></i> <span>운영관리</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav4">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav4-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav4-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav4-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav4-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav4-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav4-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav5" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav5">
+								<i class="ico5"></i> <span>수강생관리</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav5">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav5-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav5-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav5-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav5-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav5-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav5-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav5-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav5-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav5-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav6" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav6">
+								<i class="ico6"></i> <span>대시보드</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav6">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav6-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav6-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav6-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav6-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav6-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav6-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav6-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav6-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav6-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav7" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav7">
+								<i class="ico7"></i> <span>매출관리</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav7">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav7-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav7-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav7-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav7-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav7-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav7-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav7-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav7-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav7-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav8" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav8">
+								<i class="ico8"></i> <span>통계관리</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav8">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav8-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav8-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav8-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav8-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav8-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav8-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav8-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav8-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav8-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav9" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav9">
+								<i class="ico9"></i> <span>광고관리</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav9">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav9-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav9-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav9-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav9-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav9-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav9-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav9-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav9-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav9-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav10" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav10">
+								<i class="ico10"></i> <span>게시판</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav10">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav10-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav10-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav10-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav10-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav10-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav10-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav10-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav10-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav10-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav11" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav11">
+								<i class="ico11"></i> <span>멘토창</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav11">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav11-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav11-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav11-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav11-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav11-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav11-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav11-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav11-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav11-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav12" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav12">
+								<i class="ico12"></i> <span>설정</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav12">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav12-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav12-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav12-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav12-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav12-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav12-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav12-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav12-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav12-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav13" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav13">
+								<i class="ico13"></i> <span>설문&시험</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav13">
+								<ul class="nav nav-sm flex-column">
+
+									<li class="nav-item">
+										<a href="#sideNav13-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav13-1">2차메뉴1</a>
+										<div class="menu-dropdown collapse" id="sideNav13-1">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav13-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav13-2">2차메뉴2</a>
+										<div class="menu-dropdown collapse" id="sideNav13-2">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a href="#sideNav13-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav13-3">2차메뉴3</a>
+										<div class="menu-dropdown collapse" id="sideNav13-3">
+											<ul class="nav nav-sm flex-column">
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+												<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#"><i class="ico14"></i> <span>로그아웃</span></a>
+						</li><!-- nav-item -->
+
+					</ul>
+
+				</div>
+				<div class="sidebar-background"></div>
+			</div><!-- // scrollbar -->
+
+		</div><!-- // navbar-menu -->
+		<div class="vertical-overlay"></div>
+
+		<!---- main-content ---->
+		<div class="main-content">
+			<div class="page-content">
+				<div class="container-fluid">
+
+					<!-- page-header -->
+					<div class="page-header navbar-header">
+						<div class="page-header-left">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active">임직원 관리</li>
+								<li class="breadcrumb-item">인사팀</li>
+								<li class="breadcrumb-item">경영지원</li>
+							</ol>
+						</div>
+
+						<div class="page-header-right">
+
+							<a href="#" class="btn-topbar"><i class="topbar-star"></i></a>
+							<a href="#" class="btn-topbar"><i class="topbar-calendar"></i></a>
+
+							<div class="dropdown topbar-head-dropdown" id="notificationDropdown">
+								<button type="button" class="btn-topbar" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+									<i class="topbar-bell"></i>
+									<span class="badge">83</span>
+								</button>
+
+								<div class="alram-dropdown dropdown-menu dropdown-menu-end" aria-labelledby="page-header-notifications-dropdown">
+									<div>
+										<div class="alram-header"><h6 class="alram-header-bell">알림</h6></div>
+										<div class="alram-item simplebar-scrollable-y" data-simplebar style="max-height: 310px;">
+											<ul>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+											</ul>
+										</div>
+										<div class="alram-header"><h6 class="alram-header-star">나의 업무</h6></div>
+										<div class="alram-item simplebar-scrollable-y" data-simplebar style="max-height: 310px;">
+											<ul>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">방문상담 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21 14:30)</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div><!-- // page-header -->
+
+					<!-- card -->
+					<div class="card">
+						<div class="card-header">
+							<ul class="nav nav-pills" role="tablist">
+								<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab">조직정보 관리</a></li>
+								<li><a href="#" class="nav-link " data-bs-toggle="tab" role="tab">부서구분/직위/직책 관리</a></li>
+							</ul>
+						</div><!-- // card-header -->
+
+						<div class="card-body filter-group">
+							<div class="row row-cols-4 g-0">
+
+								<!-- 계열 -->
+								<div class="col">
+									<div class="filter-head">
+										<h4 class="card-title flex-grow-1">계열</h4>
+										<div class="flex-shrink-0">
+											<a href="#" class="btn btn-outline-active">추가</a>
+										</div>
+									</div>
+									<div class="filter-body simplebar-scrollable-y" data-simplebar>
+										<ul class="filter-list">
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">본사</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item active">
+													<div class="flex-grow-1">
+														<h5 class="listname">컴퓨터</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">게임</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">IT</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">뷰티</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">요리</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">승무원</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item disabled">
+													<div class="flex-grow-1">
+														<h5 class="listname">CG</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+
+								</div><!-- // 계열 -->
+
+								<!-- 지점 -->
+								<div class="col">
+									<div class="filter-head">
+										<h4 class="card-title flex-grow-1">지점</h4>
+										<div class="flex-shrink-0">
+											<a href="#" class="btn btn-outline-active">추가</a>
+										</div>
+									</div>
+									<div class="filter-body simplebar-scrollable-y" data-simplebar>
+										<ul class="filter-list">
+											<li>
+												<a href="#" class="filter-item active">
+													<div class="flex-grow-1">
+														<h5 class="listname">컴퓨터강남</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">컴퓨터홍대</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">컴퓨터신촌</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">컴퓨터인천</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">컴퓨터부산</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+
+								</div><!-- // 지점 -->
+
+								<!-- 부서 -->
+								<div class="col">
+									<div class="filter-head">
+										<h4 class="card-title flex-grow-1">부서</h4>
+										<div class="flex-shrink-0">
+											<a href="#" class="btn btn-outline-active">추가</a>
+										</div>
+									</div>
+									<div class="filter-body simplebar-scrollable-y" data-simplebar>
+										<ul class="filter-list">
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">교육부</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item active">
+													<div class="flex-grow-1">
+														<h5 class="listname">사업1부</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">사업2부</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">운영부</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+
+										</ul>
+									</div>
+								</div><!-- // 부서 -->
+
+								<!-- 팀 -->
+								<div class="col">
+									<div class="filter-head">
+										<h4 class="card-title flex-grow-1">팀</h4>
+										<div class="flex-shrink-0">
+											<a href="#" class="btn btn-outline-active">추가</a>
+										</div>
+									</div>
+									<div class="filter-body simplebar-scrollable-y" data-simplebar>
+										<ul class="filter-list">
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">1-1팀</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">1-2팀</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">2-1팀</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">2-2팀</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item">
+													<div class="flex-grow-1">
+														<h5 class="listname">2-3팀</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="#" class="filter-item disabled">
+													<div class="flex-grow-1">
+														<h5 class="listname">3-1팀</h5>
+													</div>
+													<div class="flex-shrink-0 ms-2">
+														<button type="button" class="btn btn-point">관리</button>
+													</div>
+												</a>
+											</li>
+
+										</ul>
+									</div>
+								</div><!-- // 팀 -->
+
+							</div>
+						</div><!-- // card-body -->
+
+					</div><!-- // card -->
+
+				</div><!-- container-fluid -->
+			</div><!-- page-content -->
+
+		</div><!-- // main-content -->
+
+	</div><!-- // layout-wrapper -->
+
+	<button class="btn" id="backToTop">Top</button>
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>

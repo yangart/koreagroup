@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<div class="modal-wrap" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<div class="modal-flex">
+						<h5 class="modal-logo"><img src="./assets/img/app-menu-logo@2x.png" alt=""></h5>
+						<ul class="nav modal-header-tabs" id="modalHeaderTabs" role="tablist">
+							<li><a class="tab-btn active" href="#modalHtabs1" data-bs-toggle="tab" role="tab" aria-controls="modalHtabs1" aria-selected="false">신규 수강생</a></li>
+							<li><a class="tab-btn" href="#modalHtabs2" data-bs-toggle="tab" role="tab" aria-controls="modalHtabs2" aria-selected="true">인터뷰 관리</a></li>
+							<li><a class="tab-btn" href="#modalHtabs3" data-bs-toggle="tab" role="tab" aria-controls="modalHtabs3" aria-selected="false">원서 관리</a></li>
+							<li><a class="tab-btn" href="#modalHtabs4" data-bs-toggle="tab" role="tab" aria-controls="modalHtabs3" aria-selected="false">추가 등록</a></li>
+						</ul>
+					</div>
+
+					<div class="modal-user">
+						<div><b>컴퓨터강남 홍길동1 대리 (팀장)</b> 님</div>
+						<a href="#" class="btn-logout">로그아웃</a>
+					</div>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<div class="table-head mt-0">
+						<div class="flex-grow-1 row gx-6px">
+							<div class="col-120px col-sm">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">1-1팀</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-120px col-sm">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">홍길동1</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-120px col-sm">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">당일</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-120px col-sm">
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">상태</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+						</div>
+						<div class="flex-shrink-0 row gx-6px">
+							<div class="col-200px"><input type="text" class="form-control form-control-sm" placeholder="이름/연락처"></div>
+							<div class="col-auto"><a href="#" class="btn btn-point-deep btn-sm">검색</a></div>
+						</div>
+
+					</div><!-- // table-head -->
+
+					<table class="table table-card">
+						<colgroup>
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+						</colgroup>
+						<thead class="table-light">
+							<tr>
+								<th scope="col">번호</th>
+								<th scope="col">상담일시</th>
+								<th scope="col">이름</th>
+								<th scope="col">연락처</th>
+								<th scope="col">담당자</th>
+								<th scope="col">방문유형</th>
+								<th scope="col">방문상태</th>
+								<th scope="col">방문일시</th>
+								<th scope="col">관리</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>10</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>비대면 상담</td>
+								<td>상담예정</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>비대면 상담</td>
+								<td>미등록</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>첫방문</td>
+								<td>완납 (3,850,000)</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>첫방문</td>
+								<td>COD (100,000)</td>
+								<td>-</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>비대면 상담</td>
+								<td>방문취소</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>비대면 상담</td>
+								<td>상담예정</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>비대면 상담</td>
+								<td>상담예정</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm active">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm active">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>비대면 상담</td>
+								<td>상담예정</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm active">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>비대면 상담</td>
+								<td>상담예정</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2023-11-10:23:10</td>
+								<td>제임스</td>
+								<td>010-1234-5678</td>
+								<td>홍길동1 (1-1팀)</td>
+								<td>비대면 상담</td>
+								<td>상담예정</td>
+								<td>2023-11-10:23:10</td>
+								<td class="nowrap">
+									<a href="#" class="btn btn-outline-active btn-sm">인터뷰</a>
+									<a href="#" class="btn btn-outline-active btn-sm">원서</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="mbody-btn">
+						<button type="button" class="btn btn-outline-cancel btn-sm">더보기</button>
+					</div>
+
+				</div><!-- // modal-body -->
+
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+
+		<div class="navbar-menu navbar-type2">
+
+			<div class="navbar-search">
+				<input type="text" class="form-control" placeholder="직원명을 입력하세요.">
+			</div><!-- // navbar-search -->
+
+			<div id="scrollbar" class="simplebar-scrollable-y h-100" data-simplebar>
+
+				<ul class="navbar-nav" id="navbarNav">
+
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav1">
+							<i class="ico1"></i><span>개인정보</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav1">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2">
+							<i class="ico2"></i><span>인사</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav2">
+							<ul class="nav nav-sm flex-column" id="sideNav2-depth2">
+								<li class="nav-item">
+									<a href="#sideNav2-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2-1">2차메뉴1</a>
+									<div class="menu-dropdown collapse" data-bs-parent="#sideNav2-depth2" id="sideNav2-1">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#sideNav2-2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2-2">2차메뉴2</a>
+									<div class="menu-dropdown collapse" data-bs-parent="#sideNav2-depth2" id="sideNav2-2">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#sideNav2-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2-3">2차메뉴3</a>
+									<div class="menu-dropdown collapse" data-bs-parent="#sideNav2-depth2" id="sideNav2-3">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴1</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴2</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">3차메뉴3</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3">
+							<i class="ico3"></i><span>근태</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav3">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav4" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4">
+							<i class="ico4"></i><span>교육</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav4">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav5" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav5">
+							<i class="ico5"></i><span>설문</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav5">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav6" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav6">
+							<i class="ico6"></i><span>시험</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav6">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav7" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav7">
+							<i class="ico7"></i><span>평가</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav7">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav8" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav8">
+							<i class="ico8"></i><span>재증명</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav8">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav9" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav9">
+							<i class="ico9"></i><span>강의</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav9">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav10" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav10">
+							<i class="ico10"></i><span>내학생</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav10">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav11" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav11">
+							<i class="ico11"></i><span>파일관리</span>
+						</a>
+						<div class="menu-dropdown collapse" data-bs-parent="#navbarNav" id="sideNav11">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">서브메뉴</a></li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico12"></i><span>나가기</span></a>
+					</li><!-- nav-item -->
+
+				</ul>
+				<div class="sidebar-background"></div>
+			</div><!-- // scrollbar -->
+
+		</div><!-- // navbar-menu -->
+		<div class="vertical-overlay"></div>
+
+		<!---- main-content ---->
+		<div class="main-content">
+			<div class="page-content">
+				<div class="container-fluid">
+
+					<!-- page-header -->
+					<div class="page-header navbar-header">
+						<div class="page-header-left">
+							<div class="page-header-name">김은혜 대리</div>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active">컴퓨터강남</li>
+								<li class="breadcrumb-item">사업부</li>
+								<li class="breadcrumb-item">1_1팀</li>
+							</ol>
+						</div>
+
+						<div class="page-header-right gap-4px">
+
+							<a href="#" class="btn btn-outline-light btn-round">상태</a>
+							<a href="#" class="btn btn-point-deep">버튼</a>
+
+						</div>
+
+					</div><!-- // page-header -->
+
+					<!-- card : 직원정보 -->
+					<div class="card card-form">
+
+						<div class="card-body card-member">
+							<div class="row">
+
+								<div class="card-member-profile col-auto">
+									<div class="member-profile-box">
+										<div class="member-profile-img"><img src="./assets/img/profile-sample.jpg" alt="프로필 사진"></div>
+										<div class="member-profile-edit">
+											<a href="#" title="프로필 사진 등록">등록</a>
+											<a href="#" title="프로필 사진 삭제">삭제</a>
+										</div>
+									</div>
+								</div><!-- // card-member-profile -->
+
+								<div class="card-member-info col-auto">
+									<div class="card-member-head">
+										<h6>홍길동(hongdong)</h6>
+										<select id="" class="form-select" data-choices data-choices-search-false>
+											<option value="01">차장</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+										<span class="badge bg-danger">재직중</span>
+										<span class="badge bg-danger">정규직</span>
+									</div>
+									<div class="card-member-list">
+										<div><span>1986-05-11(양력)</span><span>남자</span></div>
+										<ol class="breadcrumb">
+											<li class="breadcrumb-item">컴퓨터</li>
+											<li class="breadcrumb-item">컴퓨터 강남</li>
+											<li class="breadcrumb-item">사업부</li>
+											<li class="breadcrumb-item">1_1팀</li>
+										</ol>
+									</div>
+
+									<div class="card-member-icon col-5">
+										<div class="col-lg-6">
+											<div class="input-group">
+												<span class="input-group-text" id="userPhone"><img src="./assets/img/card-member-phone@2x.png" alt="User Phone"></span>
+												<input type="text" class="form-control" aria-describedby="userPhone" value="010-1234-1234">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="input-group">
+												<span class="input-group-text" id="userMail"><img src="./assets/img/card-member-email@2x.png" alt="User Mail"></span>
+												<input type="text" class="form-control" aria-describedby="userMail" value="email@email.com">
+											</div>
+										</div>
+									</div>
+									<div class="col-5">
+
+										<div class="table-head">
+											<div class="table-title">면접 현황</div>
+											<div class="table-btn">
+												<a href="#" class="btn btn-point btn-sm">추가</a>
+											</div>
+										</div>
+
+										<table class="table table-card">
+											<colgroup>
+												<col style="width:18%">
+												<col style="width:18%">
+												<col style="width:18%">
+												<col style="">
+												<col style="width:18%">
+											</colgroup>
+											<thead class="table-light">
+												<tr>
+													<th scope="col">계열</th>
+													<th scope="col">지점</th>
+													<th scope="col">직책</th>
+													<th scope="col">최종수정일</th>
+													<th scope="col">관리</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>컴퓨터</td>
+													<td>강남</td>
+													<td><b class="text-point">팀장</b></td>
+													<td>2023.07.01</td>
+													<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+												</tr>
+												<tr>
+													<td>게임</td>
+													<td>강남</td>
+													<td>본부장</td>
+													<td>2023.07.01</td>
+													<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+												</tr>
+											</tbody>
+										</table>
+
+									</div>
+									<div class="col-12"><a href="#" class="btn btn-light"><b>비밀번호 초기화</b></a></div>
+									<div class="row">
+										<div class="col-3">
+											<label for="" class="form-label">주민등록번호</label>
+											<div class="flex-grow-shrink">
+												<div class="grow">
+													<input type="text" class="form-control" id="userNum" placeholder="910205-1111111">
+												</div>
+												<div class="shrink">
+													<div class="form-inline">
+														<div class="form-check">
+															<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a">
+															<label class="form-check-label" for="inlineRadio1_a">양력</label>
+														</div>
+														<div class="form-check">
+															<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+															<label class="form-check-label" for="inlineRadio1_b">음력</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-3">
+											<label for="" class="form-label">휴대폰번호</label>
+											<input type="text" class="form-control" id="" value="010-1234-1234">
+										</div>
+										<div class="col-3">
+											<label for="" class="form-label">개인 이메일</label>
+											<input type="text" class="form-control" id="" value="mail@mail.com">
+										</div>
+										<div class="col-3">
+											<label for="" class="form-label">비상연락처</label>
+											<input type="text" class="form-control" id="" value="010-1234-1234">
+										</div>
+										<div class="col-12">
+											<label for="" class="form-label">주소</label>
+											<input type="text" class="form-control" id="" value="서울시 강남구 강남대로 286 부영빌딩 3층">
+										</div>
+										<div class="col-3">
+											<label for="" class="form-label">학력사항</label>
+											<textarea class="form-control" rows="3" placeholder="내용을 입력하세요."></textarea>
+										</div>
+										<div class="col-3">
+											<label for="" class="form-label">경력사항</label>
+											<textarea class="form-control" rows="3" placeholder="내용을 입력하세요."></textarea>
+										</div>
+										<div class="col-3">
+											<label for="" class="form-label">자격사항</label>
+											<textarea class="form-control" rows="3" placeholder="내용을 입력하세요."></textarea>
+										</div>
+										<div class="col-3">
+											<label for="" class="form-label">병역사항</label>
+											<textarea class="form-control" rows="3" placeholder="내용을 입력하세요."></textarea>
+										</div>
+									</div><!-- // row -->
+
+								</div><!-- // card-member-info -->
+							</div><!-- // row -->
+<!--
+									<div class="talk-btn">
+										<a href="#talkModal" data-bs-toggle="modal" class="btn btn-secondary waves-effect waves-light">문자(또는 알림)</a>
+									</div> -->
+
+						</div><!-- // card-body -->
+
+					</div><!-- // card : 직원정보 -->
+
+					<!-- card : 면접등록 -->
+					<div class="card card-form">
+						<div class="card-header">
+							<h4 class="card-title">면접등록</h4>
+						</div>
+						<div class="card-body">
+
+							<div class="row">
+								<div class="col-3">
+									<label for="" class="form-label">이름</label>
+									<input type="text" class="form-control" id="" value="정수혜">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">아이디</label>
+									<input type="text" class="form-control" id="" value="미등록">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">비밀번호</label>
+									<a href="#" class="btn btn-light w-100">비밀번호 초기화</a>
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">광고자</label>
+									<input type="text" class="form-control" id="" value="김미영">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">성별</label>
+									<input type="text" class="form-control" id="" value="남/여">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">메일주소</label>
+									<input type="text" class="form-control" id="" value="123@123.com">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">거주지역</label>
+									<input type="text" class="form-control" id="" value="서울시">
+								</div>
+								<div class="col-3">
+									<label for="" class="form-label">구</label>
+									<input type="text" class="form-control" id="" value="강남구">
+								</div>
+							</div><!-- // row -->
+							<div class="form-btn">
+								<button type="submit" class="btn btn-point-deep btn-sm">수정</button>
+							</div>
+						</div><!-- // card-body -->
+
+					</div><!-- // card : 면접등록 -->
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+
+				</div><!-- // container-fluid -->
+			</div><!-- // page-content -->
+
+		</div><!-- // main-content -->
+
+	</div><!-- // layout-wrapper -->
+
+	<!-- modalInterview -->
+	<div class="modal fade" id="modalInterview" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">면접등록</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-6">
+							<label for="" class="form-label">계열</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">개강일</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">지점</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">강남</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">부서</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">사업부</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">팀</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">1_1팀</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">면접자</label>
+							<input type="text" class="form-control" value="홍길동">
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">주민번호</label>
+							<input type="text" class="form-control" value="920323-*******">
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">연락처</label>
+							<input type="text" class="form-control" value="010-1234-5678">
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">메일주소</label>
+							<input type="text" class="form-control" value="mail@mail.com">
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">계약유형</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">정규직</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">소스</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">잡코리아</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">직위</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">대리</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">직책</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">팀장</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">이력서</label>
+							<input type="file" class="form-control" id="">
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label disabled">입사구분</label>
+							<div class="form-inline">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a">
+									<label class="form-check-label" for="inlineRadio1_a">신규</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+									<label class="form-check-label" for="inlineRadio1_b">재입사</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">사용여부</label>
+							<div class="form-inline">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_a" value="a">
+									<label class="form-check-label" for="inlineRadio2_a">신규</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_b" value="b">
+									<label class="form-check-label" for="inlineRadio2_b">재입사</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">추가항목</label>
+							<div><a href="#" class="btn btn-point-deep btn-sm">사용</a></div>
+						</div>
+
+					</div><!-- // row -->
+
+					<div class="table-head">
+						<div class="table-title">면접 현황</div>
+						<div class="table-btn">
+							<a href="#" class="btn btn-point btn-sm">추가</a>
+						</div>
+					</div>
+
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:12%">
+							<col style="width:25%">
+							<col style="width:15%">
+							<col style="">
+							<col style="width:12%">
+						</colgroup>
+						<thead class="table-light">
+							<tr>
+								<th>횟수</th>
+								<th>면접일시</th>
+								<th>면접관</th>
+								<th>메모</th>
+								<th>관리</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>2023.07.01 16:00</td>
+								<td>박팀장</td>
+								<td>메모 메모</td>
+								<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>2023.07.01 16:00</td>
+								<td>박팀장</td>
+								<td>메모 메모</td>
+								<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div>
+	<!-- // modalInterview -->
+
+	<button class="btn" id="backToTop">Top</button>
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>

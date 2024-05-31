@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<div class="modal-wrap" id="pageModal11" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">원서</h5>
+					<div>
+						<button type="submit" class="btn btn-outline-cancel btn-sm">인터뷰</button>
+						<button type="submit" class="btn btn-point btn-sm">원서</button>
+					</div>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<dl class="mbody-subject">
+						<dt>APPLICATION 입학원서 <span>(일반과정)</span></dt>
+						<dd>상기 본인은 SBS아카데미컴퓨터아트학원에 입학하여 다음 과정을 전공하려 합니다.</dd>
+					</dl><!-- // mbody-subject -->
+
+					<div class="mbody-title">학생정보</div><!-- // mbody-title -->
+					<table class="table table-card table-align-left">
+						<colgroup>
+							<col style="width:12%">
+							<col style="width:38%">
+							<col style="width:12%">
+							<col style="width:38%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>이름</th>
+								<td>홍길동</td>
+								<th>핸드폰</th>
+								<td>010-1224-1234</td>
+							</tr>
+							<tr>
+								<th>생년월일</th>
+								<td>921023</td>
+								<th>이메일</th>
+								<td>abc@gmail.com</td>
+							</tr>
+							<tr>
+								<th>성별</th>
+								<td>남</td>
+								<th>주소</th>
+								<td>서울 동작구</td>
+							</tr>
+							<tr>
+								<th>담당멘토</th>
+								<td>현충섭2</td>
+								<th>서브멘토</th>
+								<td>홍길동</td>
+							</tr>
+							<tr>
+								<th>추천인</th>
+								<td>추천인없음</td>
+								<th>학부모</th>
+								<td>010-1234-1234,서울 동작구</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="mbody-title">수강정보</div><!-- // mbody-title -->
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>과목</th>
+								<th>개강일</th>
+								<th>주말/평일</th>
+								<th>원수강료</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>포토샵 초급</td>
+								<td>2023.11.01</td>
+								<td>평일</td>
+								<td>300,000</td>
+							</tr>
+							<tr>
+								<td>포토샵 초급</td>
+								<td>2023.11.01</td>
+								<td>평일</td>
+								<td>300,000</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="mbody-title">할인(원)</div><!-- // mbody-title -->
+					<table class="table table-card table-align-left">
+						<colgroup>
+							<col style="width:12%">
+							<col style="">
+							<col style="width:18%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>과목할인</th>
+								<td>150,000 (10%)</td>
+								<td rowspan="2" class="text-center"><b>총할인율 <br>40%</b></td>
+							</tr>
+							<tr>
+								<th>추가할인</th>
+								<td>135,000 (직권 10%) <a href="#" class="btn-delete">삭제</a> 243,000 (추천 20%) <a href="#" class="btn-delete">삭제</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="mbody-title">수강료</div><!-- // mbody-title -->
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:33.33%">
+							<col style="width:33.33%">
+							<col style="">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>원수강료</th>
+								<th>할인금액</th>
+								<th>총수강료</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>600,000</td>
+								<td>240,000</td>
+								<td>360,000</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="mbody-title">온라인 강의</div><!-- // mbody-title -->
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>패키지 이름</th>
+								<th>원수강료</th>
+								<th>할인금액</th>
+								<th>총수강료</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>온라인 강의 상품3</td>
+								<td>300,000</td>
+								<td>100,000</td>
+								<td>200,000</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="mbody-title">교보재</div><!-- // mbody-title -->
+					<table class="table table-card">
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>이름</th>
+								<th>판매가</th>
+								<th>수량</th>
+								<th>금액</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>교보재3</td>
+								<td>10,000</td>
+								<td>1</td>
+								<td>200,000</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="mbody-rounded mbody-clause">
+
+						<div class="mbody-clause-title">SBS아카데미컴퓨터아트학원 학칙 <span>(다음 학칙에 대해 반드시 동의 후 서명해 주시기 바랍니다.)</span></div>
+						<ul class="mbody-clause-list">
+							<li>① 출석율 80% 이상의 경우에만 수료증 발급 및 취업지원을 받을 수 있습니다.</li>
+							<li>② 상기 등록 된 사항은 개강 3일전까지만 취소, 연기, 시간 및 과목변경 등이 가능하며, 그 이후는 취소, 연기, 시간 및 과목변경이 불가능 합니다.</li>
+							<li>③ 중퇴 후 환불 시 교육청 기준으로 공제 됩니다.</li>
+							<li>④ 환불신청은 “코리아교육그룹-스마트러닝“ 어플을 통해 신청 가능합니다.</li>
+							<li>⑤ 교육 이수 중 제작 된 결과물에 대해서는 <span class="text-req">SBS아카데미컴퓨터아트학원</span>의 홍보 및 전시 등 여러가지 목적으로 자유롭게 사용 할 수 있습니다</li>
+						</ul>
+						<div class="mbody-clause-title">따즈아 온라인 이용안내</div>
+						<ul class="mbody-clause-list">
+							<li>
+								환불규정
+								<ul class="mbody-clause-list">
+									<li>1) 쿠폰(코드번호) 미입력 시 전액환불</li>
+									<li>
+										2) 코드 입력 시
+										<ul class="mbody-clause-list">
+											<li>- 코드 입력 후 강의 수강 이력이 없는 경우 : 전액환불</li>
+											<li>- 코드 입력 후 강의 수강 이력이 있는 경우 : 실제 강의 판매금액 – 위약금(10%) – 일자공제 차감 후 환불(단, 7일 미만일 경우 위약금 10% 없음)</li>
+										</ul>
+									</li>
+									<li>
+										3) 1년 이상의 수강상품은 구매일로부터 365일을 기준으로 강의수수료(일자공제)로 공제합니다. (최초 수강기간인 1년 (365일)이 초과된 경우에는 환불이 불가합니다.
+										<ul class="mbody-clause-list">
+											<li>★ 학원 수강 쿠폰(코드) 구매자들은 환불 요청 시, 담당 멘토에게 문의 바랍니다.</li>
+											<li>★ 위약금 = 실제 판매금액의 10%</li>
+											<li>★ 일자공제 = (판매금액 / 수강기간) X (수강개시일부터 ~ 환불요청일)</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>2. 기타 자세한 사이트 이용약관은 따즈아 홈페이지 <span class="text-req">www.ddazua.com</span> 에서 확인 하실 수 있습니다.</li>
+						</ul>
+
+						<div class="mbody-clause-agree">
+							<div class="mbody-clause-title">위 내용에 대하여 읽어보았으며 동의합니다.</div>
+							<div class="mbody-clause-check">
+								<div class="form-inline">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_a" value="a" checked="">
+										<label class="form-check-label" for="inlineRadio_a">예</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio" id="inlineRadio_b" value="b">
+										<label class="form-check-label" for="inlineRadio_b">아니오</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="mbody-clause-sign">
+								<div class="title"><b>2023년 11월 21일</b></div>
+								<div class="sign">(서명)</div>
+							</div><!-- // mbody-clause-sign -->
+
+						</div><!-- // mbody-clause-agree -->
+
+					</div><!-- // mbody-rounded -->
+
+					<dl class="mbody-subject">
+						<dt>APPLICATION 입학원서 <span>(일반과정)</span></dt>
+						<dd>개인정보 수집ㆍ이용 동의</dd>
+					</dl><!-- // mbody-subject -->
+
+					<div class="mbody-rounded mbody-clause">
+
+						<div class="mbody-clause-title text-center">수강신청 및 관리를 위한 개인정보 수집ㆍ이용 동의서</div>
+						<div class="mbody-clause-text text-center">
+							저희 학원은 수강신청 및 관리를 위하여 개인정보를 수집하고 있습니다. <br>
+							아래의 개인정보 수집ㆍ이용에 대한 내용을 자세히 읽어보신 후 동의 여부를 결정하여 주시기 바랍니다.
+						</div>
+
+						<div class="mbody-title">01. 개인정보 수집ㆍ이용내역(필수사항)</div><!-- // mbody-title -->
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:33.33%">
+								<col style="width:33.33%">
+								<col style="">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>수집 항목</th>
+									<th>수집 및 이용 목적</th>
+									<th>보유 및 이용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>성명, 전화번호, 생년월일, 교습과목</td>
+									<td>강의수강 및 안내</td>
+									<td>3년(학원법) <br>5년(국세기본법)</td>
+								</tr>
+								<tr>
+									<td colspan="3" class="align-left">※ 기타고지사항: 위의 정보는 개인정보 보호법 제15조 제1항 제2호에 따라 정보주체의 동의 없이 개인정보를 수집ㆍ이용합니다. (수집 근거 : 학원법 시행령, 국세기본법)</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3">
+
+										<div class="form-inline">
+											<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
+												<label class="form-check-label" for="inlineRadio1_a">예</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+												<label class="form-check-label" for="inlineRadio1_b">아니오</label>
+											</div>
+										</div>
+
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+
+						<div class="mbody-title">02. 선택적 개인정보 수집ㆍ이용내역(선택)</div><!-- // mbody-title -->
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:33.33%">
+								<col style="width:33.33%">
+								<col style="">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>수집 항목</th>
+									<th>수집 및 이용 목적</th>
+									<th>보유 및 이용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>주소, 성별, 이메일, 출신학교, 직장명, 포트폴리오 등</td>
+									<td>수강관리 및 취업지원서비스, 취업시 홍보 활용 <br>(이름, 회사명), 포폴 게시</td>
+									<td>관리, 취업지원 : 강의종류후 1년 <br>취업처 홍보 및 포폴게시 : 거부시까지</td>
+								</tr>
+								<tr>
+									<td colspan="3" class="align-left">※ 위의 개인정보 수집ㆍ이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 원활한 수강관리 및 취업지원서비스 등에 제한을 받을 수 있습니다.</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3">
+
+										<div class="form-inline">
+											<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_a" value="a" checked="">
+												<label class="form-check-label" for="inlineRadio2_a">예</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_b" value="b">
+												<label class="form-check-label" for="inlineRadio2_b">아니오</label>
+											</div>
+										</div>
+
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+
+						<div class="mbody-title">03. 마케팅목적 활용동의(선택)</div><!-- // mbody-title -->
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:33.33%">
+								<col style="width:33.33%">
+								<col style="">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>수집 항목</th>
+									<th>수집 및 이용 목적</th>
+									<th>보유 및 이용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>성명, 전화번호, 이메일</td>
+									<td>공지사항, 개강 강의 안내, 할인이벤트 안내 (문자,전화)</td>
+									<td>3년/수신거부시까지</td>
+								</tr>
+								<tr>
+									<td colspan="3" class="align-left">※ 위의 개인정보 수집ㆍ이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 공지사항 및 개강, 할인정보 제공에 제한을 받을 수 있습니다.</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3">
+
+										<div class="form-inline">
+											<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio3" id="inlineRadio3_a" value="a" checked="">
+												<label class="form-check-label" for="inlineRadio3_a">예</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio3" id="inlineRadio3_b" value="b">
+												<label class="form-check-label" for="inlineRadio3_b">아니오</label>
+											</div>
+										</div>
+
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+
+						<div class="mbody-title">04. 개인정보 제3자 제공동의 (선택)</div><!-- // mbody-title -->
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:22%">
+								<col style="">
+								<col style="width:22%">
+								<col style="width:22%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>제공받는 기관</th>
+									<th>제공 항목</th>
+									<th>제공 목적</th>
+									<th>보유 및 이용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>(주)코리아교육그룹</td>
+									<td>성명, 수강한 과목, 교육 이수 중 제작된 결과물</td>
+									<td>마케팅 활용</td>
+									<td>3년</td>
+								</tr>
+								<tr>
+									<td>㈜에스씨에이아카데미</td>
+									<td>성명, 수강한 과목, 교육 이수 중 제작된 결과물</td>
+									<td>마케팅 활용</td>
+									<td>3년</td>
+								</tr>
+								<tr>
+									<td>㈜에스씨에이게임</td>
+									<td>성명, 수강한 과목, 교육 이수 중 제작된 결과물</td>
+									<td>마케팅 활용</td>
+									<td>3년</td>
+								</tr>
+								<tr>
+									<td>㈜올댓뷰티아카데미</td>
+									<td>성명, 수강한 과목, 교육 이수 중 제작된 결과물</td>
+									<td>마케팅 활용</td>
+									<td>3년</td>
+								</tr>
+								<tr>
+									<td colspan="4" class="align-left">※ 위의 개인정보 수집ㆍ이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 취업지원서비스 등에 제한을 받을 수 있습니다.</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="4">
+
+										<div class="form-inline">
+											<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio4" id="inlineRadio4_a" value="a" checked="">
+												<label class="form-check-label" for="inlineRadio4_a">예</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio4" id="inlineRadio4_b" value="b">
+												<label class="form-check-label" for="inlineRadio4_b">아니오</label>
+											</div>
+										</div>
+
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+
+						<div class="mbody-title">05. 영상정보처리기기(CCTV)설치 (선택)</div><!-- // mbody-title -->
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:33.33%">
+								<col style="width:33.33%">
+								<col style="">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>수집 항목</th>
+									<th>수집 및 이용 목적</th>
+									<th>보유 및 이용기간</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>강의실 내부 영상녹화</td>
+									<td>시설관리 (화재,범죄,도난방지)</td>
+									<td>약1개월</td>
+								</tr>
+								<tr>
+									<td colspan="3" class="align-left">※ 저희 학원은 위와 같이 영상정보처리기기를 설치,운영합니다.</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3">
+
+										<div class="form-inline">
+											<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_a" value="a" checked="">
+												<label class="form-check-label" for="inlineRadio5_a">예</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_b" value="b">
+												<label class="form-check-label" for="inlineRadio5_b">아니오</label>
+											</div>
+										</div>
+
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+
+						<div class="mbody-title">14세 미만 아동의 개인 정보 이용 동의 (법적대리인의 동의 필요)</div><!-- // mbody-title -->
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:33.33%">
+								<col style="width:33.33%">
+								<col style="">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>법적대리인 성명</th>
+									<th>법적대리인 연락처</th>
+									<th>법적대리인과의 관계</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="3">(서명)</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="mbody-clause-agree">
+							<div class="mbody-clause-text fw-600">수강등록 : 해당하는 사항을 적어주세요</div>
+							<div class="mbody-clause-text">(만 19세 기준 : 2023.00.00 이후 출생자)</div>
+
+							<div class="mbody-clause-check">
+								<div class="form-inline">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio6" id="inlineRadio6_a" value="a" checked="">
+										<label class="form-check-label" for="inlineRadio6_a">만 19세 이상(성인)</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio6" id="inlineRadio6_b" value="b">
+										<label class="form-check-label" for="inlineRadio6_b">만 19세 미만(미성년자)</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="mbody-clause-text">해당 수강을 신청하는 수강생의 보호자 본인은 미성년자 자녀의 부모로서 취업을 <br>목적으로 SBS아카데미컴퓨터아트학원에서 수업을 수강하는 것에 관하여 동의합니다.</div>
+
+							<div class="mbody-clause-sign">
+								<div class="title">2023년 11월 21일</div>
+								<div class="title"><b>위 친권자:</b></div>
+								<div class="sign">(서명)</div>
+							</div><!-- // mbody-clause-sign -->
+
+							<div class="mbody-clause-text">※ 서명은 반드시 자필로 서명 바랍니다.</div>
+
+							<div class="mbody-clause-sign">
+								<div class="title"><b>2023년 11월 21일</b></div>
+								<div class="sign">(서명)</div>
+							</div><!-- // mbody-clause-sign -->
+
+						</div><!-- // mbody-clause-agree -->
+
+					</div><!-- // mbody-rounded -->
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="w-100 align-center">
+						<button type="submit" class="btn btn-outline-cancel">인쇄</button>
+						<button type="submit" class="btn btn-point-deep"><i class="ico-doc"></i>원서</button>
+						<button type="submit" class="btn btn-point">아이디 생성 전송</button>
+						<button type="submit" class="btn btn-point">바로 생성</button>
+					</div>
+				</div><!-- // modal-footer -->
+
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal : pageModal11 -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>

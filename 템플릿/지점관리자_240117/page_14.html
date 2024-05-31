@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<div class="modal-wrap" id="pageModal11" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">원서</h5>
+					<div>
+						<button type="submit" class="btn btn-outline-cancel btn-sm">인터뷰</button>
+						<button type="submit" class="btn btn-point btn-sm">원서</button>
+					</div>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+
+					<dl class="mbody-subject">
+						<dt>APPLICATION 입학원서</dt>
+						<dd>상기 본인은 SBS아카데미컴퓨터아트학원에 입학하여 다음 과정을 전공하려 합니다.</dd>
+					</dl><!-- // mbody-subject -->
+
+					<div class="mbody-title">학생정보</div><!-- // mbody-title -->
+
+					<div class="mbody-forms mbody-rounded">
+
+						<dl class="row">
+							<dt>이름 <i class="text-req">*</i></dt>
+							<dd>박지용</dd>
+						</dl>
+						<dl class="row">
+							<dt>핸드폰번호 <i class="text-req">*</i></dt>
+							<dd>010-1234-1234</dd>
+						</dl>
+						<dl class="row">
+							<dt>멘토 <i class="text-req">*</i></dt>
+							<dd><b class="txt-primary">안근원3</b></dd>
+						</dl>
+						<dl class="row">
+							<dt>서브멘토</dt>
+							<dd><button type="submit" class="btn btn-outline-primary">서브멘토</button></dd>
+						</dl>
+						<dl class="row">
+							<dt>생년월일 <i class="text-req">*</i></dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-90px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">년</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-90px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">월</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-90px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">일</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>성별</dt>
+							<dd>
+								<div class="form-inline">
+									<div>
+										<input type="radio" class="btn-check" name="textRadio1" id="textRadio1_a" autocomplete="off" checked="">
+										<label class="btn" for="textRadio1_a">남자</label>
+									</div>
+									<div>
+										<input type="radio" class="btn-check" name="textRadio1" id="textRadio1_b" autocomplete="off">
+										<label class="btn" for="textRadio1_b">여자</label>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>거주지역 <i class="text-req">*</i></dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-200px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">지역</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-200px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">구</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>메일주소 <i class="text-req">*</i></dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-200px"><input type="text" class="form-control" placeholder="메일주소"></div>
+									<div class="col-auto col-dash">@</div>
+									<div class="col-200px"><input type="text" class="form-control" placeholder="직접입력"></div>
+									<div class="col-200px">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">직접입력</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>학과 <i class="text-req">*</i></dt>
+							<dd>
+								<div class="col-200px">
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">학과</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>국비여부</dt>
+							<dd>
+								<div class="form-inline">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
+										<label class="form-check-label" for="inlineRadio1_a">일반</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+										<label class="form-check-label" for="inlineRadio1_b">재직자</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_c" value="c">
+										<label class="form-check-label" for="inlineRadio1_c">실업자</label>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="row">
+							<dt>추천인</dt>
+							<dd>
+								<div class="row row-x6">
+									<div class="col-200px"><input type="text" class="form-control" placeholder="이름"></div>
+									<div class="col-200px"><input type="text" class="form-control" placeholder="연락처"></div>
+								</div>
+							</dd>
+						</dl>
+
+					</div><!-- // mbody-forms -->
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+						<button type="submit" class="btn btn-point">다음</button>
+				</div><!-- // modal-footer -->
+
+			</div><!-- // modal-content -->
+		</div><!-- // modal-dialog -->
+	</div><!-- // modal : pageModal11 -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>
