@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div id="header">
+			<h1 class="header-logo"><a href="#"><img src="./assets/img/header-logo.png" alt=""></a></h1>
+			<ul class="header-nav nav" id="headerNav">
+				<li><a href="#" class="nav-btn active">홈</a></li>
+				<li class="hoverdown">
+					<a href="#" class="nav-btn" id="hNavHoverdown2">수강내역</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown2">
+						<li><a class="dropdown-item" href="#">공지사항</a></li>
+						<li><a class="dropdown-item" href="#">이벤트</a></li>
+						<li><a class="dropdown-item" href="#">특강/세미나</a></li>
+						<li><a class="dropdown-item" href="#">자격증 정보(민간)</a></li>
+						<li><a class="dropdown-item" href="#">자격증 정보(공공)</a></li>
+						<li><a class="dropdown-item" href="#">취업 및 진학정보 게시판</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="nav-btn">커뮤니티</a></li>
+				<li><a href="#" class="nav-btn">교육과정</a></li>
+				<li class="hoverdown">
+					<a href="#" class="nav-btn" id="hNavHoverdown5">학원정보</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown5">
+						<li><a class="dropdown-item" href="#">빈강의실 찾기</a></li>
+						<li><a class="dropdown-item" href="#">학원내부맵</a></li>
+						<li><a class="dropdown-item" href="#">따즈아 소개</a></li>
+					</ul>
+				</li>
+			</ul><!-- // headerNav -->
+
+			<ul class="header-icon nav" id="headerIcon">
+				<li><a href="#" class="nav-btn"><i class="h-ico-user"></i></a></li>
+				<li><a href="#" class="nav-btn"><i class="h-ico-out"></i></a></li>
+			</ul><!-- // headerIcon -->
+		</div>
+		<!-- // header -->
+
+		<!-- container -->
+		<div id="container">
+
+			<div class="row col-group">
+
+				<div class="col-12">
+
+					<div class="page-header">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item active">MAIN</li>
+							<li class="breadcrumb-item">마이페이지</li>
+							<li class="breadcrumb-item">알림</li>
+						</ol>
+					</div>
+
+					<div class="card fixed-card">
+
+						<div class="card-subject">
+							<div class="title">홍길동</div>
+							<div class="text">(국비대상)</div>
+							<div class="state">수강중</div>
+							<div class="depth cont-info">
+								<p><i class="ico-user"></i> <b>담당멘토 이미애 강남1점</b></p>
+								<p>1-1팀</p>
+							</div>
+							<div class="state second">상담</div>
+						</div><!-- // card-subject -->
+
+						<ul class="nav card-tabs" id="stateNav" role="tablist">
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">알림</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">나의 자료실</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">결제/환불내역</a></li>
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" aria-selected="true">나의 견적서, 원서</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">상담센터</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">취업관리 현황</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">칭찬 불만 게시판</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">증명서 발급</a></li>
+						</ul><!-- // card-tabs -->
+
+						<div class="card-result-pin"><a href="#">정보수정</a></div>
+
+					</div><!-- // card -->
+
+					<div class="card fluid-card search-card">
+						<div class="card-head">
+							<div>나의 견적서, 원서</div>
+
+							<div class="card-search row g-6px">
+								<div class="col-2">
+									<div class="datepicker-wrap">
+										<input type="text" class="form-control form-datepicker" placeholder="2023-11-01~2023-11-07">
+										<div class="datepicker-box">
+											<div class="datepicker-head">
+												<div class="datepicker-btn datepicker-prev"></div>
+												<div class="datepicker-title">2023 11월</div>
+												<div class="datepicker-btn datepicker-next"></div>
+											</div>
+											<div class="datepicker-body">
+												<div class="datepicker-name">
+													<div class="datepicker-cell">일</div>
+													<div class="datepicker-cell">월</div>
+													<div class="datepicker-cell">화</div>
+													<div class="datepicker-cell">수</div>
+													<div class="datepicker-cell">목</div>
+													<div class="datepicker-cell">금</div>
+													<div class="datepicker-cell">토</div>
+												</div>
+												<div class="datepicker-day">
+													<div class="datepicker-cell other"><span>29</span></div>
+													<div class="datepicker-cell other"><span>30</span></div>
+													<div class="datepicker-cell other"><span>31</span></div>
+													<div class="datepicker-cell"><span>1</span></div>
+													<div class="datepicker-cell"><span>2</span></div>
+													<div class="datepicker-cell"><span>3</span></div>
+													<div class="datepicker-cell"><span>4</span></div>
+													<div class="datepicker-cell"><span>5</span></div>
+													<div class="datepicker-cell"><span>6</span></div>
+													<div class="datepicker-cell"><span>7</span></div>
+													<div class="datepicker-cell active"><span>8</span></div>
+													<div class="datepicker-cell"><span>9</span></div>
+													<div class="datepicker-cell"><span>10</span></div>
+													<div class="datepicker-cell"><span>11</span></div>
+													<div class="datepicker-cell"><span>12</span></div>
+													<div class="datepicker-cell"><span>13</span></div>
+													<div class="datepicker-cell"><span>14</span></div>
+													<div class="datepicker-cell"><span>15</span></div>
+													<div class="datepicker-cell"><span>16</span></div>
+													<div class="datepicker-cell"><span>17</span></div>
+													<div class="datepicker-cell"><span>18</span></div>
+													<div class="datepicker-cell"><span>19</span></div>
+													<div class="datepicker-cell"><span>20</span></div>
+													<div class="datepicker-cell"><span>21</span></div>
+													<div class="datepicker-cell"><span>22</span></div>
+													<div class="datepicker-cell"><span>23</span></div>
+													<div class="datepicker-cell"><span>24</span></div>
+													<div class="datepicker-cell"><span>25</span></div>
+													<div class="datepicker-cell"><span>26</span></div>
+													<div class="datepicker-cell"><span>27</span></div>
+													<div class="datepicker-cell"><span>28</span></div>
+													<div class="datepicker-cell"><span>29</span></div>
+													<div class="datepicker-cell"><span>30</span></div>
+													<div class="datepicker-cell other"><span>1</span></div>
+													<div class="datepicker-cell other"><span>2</span></div>
+												</div>
+											</div>
+										</div><!-- // datepicker-box -->
+									</div><!-- // datepicker-wrap -->
+								</div>
+								<div class="col-2"><input type="text" class="form-control" placeholder="원서 번호"></div>
+								<div class="col-auto"><button type="button" class="btn btn-black search-btn">검색</button></div>
+							</div><!-- // row -->
+
+						</div><!-- // card-head -->
+
+						<div class="card-body">
+
+							<div class="card-result-pin">전체 <b>4</b></div>
+
+							<ul class="card-flex-table card-flex-thead">
+								<li>
+									<div class="num">번호</div>
+									<div class="cate">구분</div>
+									<div class="doc-num">원서번호</div>
+									<div class="doc-date">원서 등록일</div>
+									<div class="date">등록일</div>
+									<div class="state">상태</div>
+									<div class="admin">관리</div>
+								</li>
+							</ul>
+							<ul class="card-flex-table card-flex-tbody">
+								<li>
+									<div class="num">4</div>
+									<div class="cate">견적서</div>
+									<div class="doc-num">54686212</div>
+									<div class="doc-date">2023-11-01 <a href="#" class="btn btn-outline-light btn-sm">원서보기</a></div>
+									<div class="date">2023-11-01</div>
+									<div class="state">미납</div>
+									<div class="admin"><a href="#" class="btn-underline">미리보기</a></div>
+								</li>
+								<li>
+									<div class="num">3</div>
+									<div class="cate">견적서</div>
+									<div class="doc-num">54686212</div>
+									<div class="doc-date">2023-11-01 <a href="#" class="btn btn-outline-light btn-sm">원서보기</a></div>
+									<div class="date">2023-11-01</div>
+									<div class="state">미납</div>
+									<div class="admin"><a href="#" class="btn-underline">미리보기</a></div>
+								</li>
+								<li>
+									<div class="num">2</div>
+									<div class="cate">견적서</div>
+									<div class="doc-num">54686212</div>
+									<div class="doc-date">2023-11-01 <a href="#" class="btn btn-outline-light btn-sm">원서보기</a></div>
+									<div class="date">2023-11-01</div>
+									<div class="state">미납</div>
+									<div class="admin"><a href="#" class="btn-underline">미리보기</a></div>
+								</li>
+								<li>
+									<div class="num">1</div>
+									<div class="cate">견적서</div>
+									<div class="doc-num">54686212</div>
+									<div class="doc-date">2023-11-01 <a href="#" class="btn btn-outline-light btn-sm">원서보기</a></div>
+									<div class="date">2023-11-01</div>
+									<div class="state">미납</div>
+									<div class="admin"><a href="#" class="btn-underline">미리보기</a></div>
+								</li>
+							</ul><!-- // card-list-simple -->
+
+						</div><!-- // card-body -->
+
+					</div><!-- // card -->
+				</div><!-- // col -->
+
+			</div><!-- // row -->
+
+		</div><!-- // container -->
+
+	</div><!-- // wrapper -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>

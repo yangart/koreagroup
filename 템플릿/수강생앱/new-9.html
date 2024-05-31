@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div id="header">
+			<h1 class="header-logo"><a href="#"><img src="./assets/img/header-logo.png" alt=""></a></h1>
+			<ul class="header-icon nav" id="headerIcon">
+				<li><a href="#" class="nav-btn"><i class="h-ico-user"></i></a></li>
+				<li><a href="#" class="nav-btn"><i class="h-ico-out"></i></a></li>
+			</ul><!-- // headerIcon -->
+		</div>
+		<!-- // header -->
+
+		<!-- container -->
+		<div id="container">
+
+			<div class="page-header">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active">MAIN</li>
+					<li class="breadcrumb-item">마이페이지</li>
+					<li class="breadcrumb-item">알림</li>
+				</ol>
+			</div>
+
+			<div class="card fixed-card">
+
+				<div class="card-subject">
+					<div class="title">홍길동</div>
+					<div class="text">(국비대상)</div>
+					<div class="state">수강중</div>
+					<div class="depth cont-info">
+						<p><i class="ico-user"></i> <b>담당멘토 이미애 강남1점</b></p>
+						<p>1-1팀</p>
+					</div>
+					<div class="state second">상담</div>
+				</div><!-- // card-subject -->
+
+				<ul class="nav card-tabs" id="stateNav" role="tablist">
+					<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">알림</a></li>
+					<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">나의 자료실</a></li>
+					<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">결제/환불내역</a></li>
+					<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">나의 견적서, 원서</a></li>
+					<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">상담센터</a></li>
+					<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">취업관리 현황</a></li>
+					<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">칭찬 불만 게시판</a></li>
+					<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">증명서 발급</a></li>
+				</ul><!-- // card-tabs -->
+
+				<div class="card-result-pin"><a href="#">정보수정</a></div>
+
+			</div><!-- // card -->
+
+			<div class="card fluid-card view-card">
+				<div class="card-head">
+					<div>정보 수정</div>
+				</div><!-- // card-head -->
+
+				<div class="card-body">
+
+					<div class="card-form">
+						<div class="warning">
+							<label for="" class="form-label">이름 <b class="req">*</b></label>
+							<input type="text" class="form-control" id="" value="정수혜">
+							<div class="form-warning">필수 입력 데이터를 확인해주세요.</div>
+						</div>
+						<div>
+							<label for="" class="form-label">아이디 <b class="req">*</b></label>
+							<input type="text" class="form-control" id="" value="koreakeg" disabled>
+						</div>
+						<div>
+							<label for="" class="form-label">생년월일 <b class="req">*</b></label>
+							<input type="text" class="form-control" id="" value="2002-05-05">
+						</div>
+						<div>
+							<label for="" class="form-label">휴대폰 <b class="req">*</b></label>
+							<input type="text" class="form-control" id="" value="010-1234-1234">
+						</div>
+						<div>
+							<label for="" class="form-label">비밀번호</label>
+							<a href="#" class="btn btn-outline-light form-btn">비밀번호 변경</a>
+						</div>
+						<div>
+							<label for="" class="form-label">멘토</label>
+							<div class="form-cover">
+								<input type="text" class="form-control" id="" value="김미영">
+								<button class="btn btn-black btn-sm">변경관리</button>
+							</div>
+						</div>
+						<div>
+							<label for="" class="form-label">세브멘토</label>
+							<input type="text" class="form-control" id="" value="한치혁" disabled>
+						</div>
+						<div>
+							<label for="" class="form-label">성별</label>
+							<div class="form-inline">
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked>
+									<label class="form-check-label" for="inlineRadio1_a">남</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+									<label class="form-check-label" for="inlineRadio1_b">여</label>
+								</div>
+							</div>
+						</div>
+						<div>
+							<label for="" class="form-label">메일주소</label>
+							<input type="text" class="form-control" id="" value="123@123.com">
+						</div>
+						<div>
+							<label for="" class="form-label">거주지역</label>
+							<input type="text" class="form-control" id="" value="서울시">
+						</div>
+						<div>
+							<label for="" class="form-label">구</label>
+							<input type="text" class="form-control" id="" value="강남구">
+						</div>
+						<div>
+							<label for="" class="form-label">수강상태</label>
+							<input type="text" class="form-control" id="" value="수강중" disabled>
+						</div>
+
+					</div><!-- // row -->
+
+					<div class="btn-wrap line">
+						<a href="#" class="btn btn-second btn-lg">수정완료</a>
+					</div><!-- // btn-wrap -->
+
+				</div><!-- // card-body -->
+
+			</div><!-- // card -->
+
+		</div><!-- // container -->
+
+		<div class="mobile-menu">
+			<ul>
+				<li class="item1 on"><a href="#"><em>홈</em></a></li>
+				<li class="item2"><a href="#"><em>수강내역</em></a></li>
+				<li class="item3"><a href="#"><em>커뮤니티</em></a></li>
+				<li class="item4"><a href="#"><em>교육과정</em></a></li>
+				<li class="item5"><a href="#"><em>학원정보</em></a></li>
+			</ul>
+		</div><!-- // mobile-menu -->
+
+	</div><!-- // wrapper -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>
