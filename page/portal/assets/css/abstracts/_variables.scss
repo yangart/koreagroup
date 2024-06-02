@@ -1,0 +1,395 @@
+
+:root {
+    --wrap-gap: 0;
+    --fs-3xlg: 4.4rem;
+    --fs-2xlg: 3.2rem;
+    --fs-xlg: 2.4rem;
+    --fs-lg: 1.8rem;
+    --fs-md: 1.6rem;
+    --fs-sm: 1.4rem;
+    --fs-xsm: 1.2rem;
+}
+
+// Grayscale
+$wh: #fff; 
+$gr10:#F8F8FB;
+$gr20:#EFEEF3;
+$gr30:#DDDAE3;
+$gr40:#C1BFC8;
+$gr50:#918F97;
+$gr60:#727077;
+$gr70:#5A585E;
+$gr80:#333333;
+$gr90:#1A1A1A;
+$bk: #0A0A0A;
+
+// Palette
+$color-palette: (
+  primary-blue: #100380, 
+  primary-lightblue: #00B6ED, 
+  primary-mint: #00BFB8, 
+  secondary-blue: #005FBE, 
+  secondary-green: #78BF26, 
+  secondary-yellow: #FFD200, 
+  secondary-red: #F94868, 
+  gray-wram: #DFDAD6, 
+  gray-cool: #E2E2E0, 
+  gold: #8B6E4C, 
+  silver: #8B9191
+);
+
+$palette: (
+	primary: #100380, 
+	secondary: #00B6ED, 
+	yellow: #FFD200, 
+	red: #F94868, 
+	green: #78BF26, 
+	blue: #005FBE, 
+	gray-wram: #F3F0EE, 
+);
+
+$primary: map-get($palette, primary);
+$secondary: map-get($palette, secondary);
+$positive: map-get($palette, green);        
+$negative: map-get($palette, red);          
+$bg: map-get($palette, gray-wram);  
+
+$rd: $negative;
+$or: map-get($palette, yellow);
+$gn: $positive;
+$bl: map-get($palette, blue);
+
+$gradient-primary: linear-gradient(110deg, $secondary 0%, $or 100%);
+$gradient-secondary: linear-gradient(180deg, $primary 0%, $secondary 100%);
+$accent: $gradient-primary; 
+
+$spacing-none:0;
+$spacing-3xsm:.2rem;
+$spacing-2xsm:.4rem;
+$spacing-xsm:.8rem;
+$spacing-sm:1.2rem;
+$spacing-md: 1.6rem;
+$spacing-lg:2rem;
+$spacing-xlg: 2.4rem;
+$spacing-2xlg: 3.2rem;
+$spacing-3xlg: 4rem;
+$spacing-4xlg: 8rem;
+
+$radius-xsm:.4rem;
+$radius-sm: .8rem;
+$radius-md: 1.6rem;
+$radius-lg: 2.4rem;
+$radius-xlg: 4rem;
+$radius-full:100%;
+
+$stroke-xsm: .1rem;
+$stroke-sm: .2rem;
+$stroke-md: .4rem;
+$stroke-lg: .8rem;
+
+$border-primary: $stroke-xsm solid $gr30;
+$border-primary-hover:$gr40;
+$border-secondary: $stroke-xsm solid $gr20;
+$border-teriary: $stroke-sm solid $gr80;
+
+$opacity-lg: .75;
+$opacity-md: .5;
+$opacity-sm: .25;
+
+$wrap-full: 192rem;
+$wrap-lg: 128rem;
+$wrap-md: 80rem;
+$wrap-sm: 37.5rem;
+
+$url-img: '../../assets/images/';
+
+$shadow-md:.5rem .5rem 2rem rgba($bk, .05);
+$shadow-lg:.2rem .2rem 4rem rgba($bk, .2);
+
+$backdrop: blur(2rem);
+
+$fontFamily: "NanumSquare Neo", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", 
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+$fs-tit-2xlg: var(--fs-3xlg);
+$fs-tit-xlg :var(--fs-2xlg);
+$fs-tit-lg: var(--fs-xlg);
+$fs-tit-md: var(--fs-lg); 
+$fs-tit-sm: var(--fs-sm); 
+
+$fs-body-md: var(--fs-md);
+$fs-body-sm: var(--fs-sm);
+$fs-body-xsm: var(--fs-xsm);
+
+$line-h-xlg:1.5;
+$line-h-lg:1.4;
+$line-h-md:1.3;
+$line-h-sm:1.2;
+
+$fc-primary: $gr80;
+$fc-secondary: $gr70;
+$fc-teriary: $gr60;
+$fc-quaternary: $gr60;
+
+$fc-primary-wh: $wh;
+$fc-secondary-wh: $gr10;
+$fc-teriary-wh: $gr20;
+$fc-quaternary-wh: $gr30;
+
+$tablet: 1279px;
+$tablet-sm: 1023px;
+$mobile: 767px;
+$mobile-md: 639px;
+$mobile-sm: 374px;
+
+$ico-xlg: 40;
+$ico-lg: 32;
+$ico-md: 24;
+$ico-sm: 20;
+$ico-xsm: 16;
+$ico-2xsm: 12;
+$ico-col: 20;
+$ico-list: (
+  "add",
+  "add-large",
+  "add-alt",
+  "add-filled",
+  "alarm",
+  "alarm-add",
+  "alarm-subtract",
+  "arrow-down",
+  "arrow-down-left",
+  "arrow-down-right",
+  "arrow-left",
+  "arrow-right",
+  "arrow-up",
+  "arrow-up-left",
+  "arrow-up-right",
+  "arrows-horizontal",
+  "arrows-vertical",
+  "at",
+  "attachment",
+  "book",
+  "bookmark",
+  "bookmark-add",
+  "bookmark-filled",
+  "calendar",
+  "calendar-add",
+  "calendar-add-alt",
+  "calendar-settings",
+  "camera",
+  "bullhorn",
+  "building",
+  "bus",
+  "car-front",
+  "caret-down",
+  "caret-left",
+  "caret-right",
+  "caret-up",
+  "caret-sort",
+  "center-circle",
+  "chat",
+  "chat-off",
+  "checkbox",
+  "checkbox-checked",
+  "checkbox-checked-filled",
+  "checkbox-indeterminate",
+  "checkbox-indeterminate-filled",
+  "checkmark",
+  "checkmark-outline",
+  "checkmark-filled",
+  "chevron-left",
+  "chevron-right",
+  "chevron-up",
+  "chevron-down",
+  "chevron-sort",
+  "chevron-up-outline",
+  "chevron-down-outline",
+  "close",
+  "close-large",
+  "close-outline",
+  "close-filled",
+  "copy",
+  "copy-file",
+  "cube",
+  "document",
+  "document-add",
+  "document-attachment",
+  "document-audio",
+  "document-blank",
+  "document-configuration",
+  "document-download",
+  "document-export",
+  "document-subtract",
+  "document-tasks",
+  "document-unknown",
+  "draggable",
+  "download",
+  "edit",
+  "edit-off",
+  "email",
+  "erase",
+  "error",
+  "error-filled",
+  "export",
+  "favorite",
+  "favorite-filled",
+  "filter",
+  "filter-remove",
+  "flag",
+  "flag-filled",
+  "folder",
+  "folder-add",
+  "folder-off",
+  "gift",
+  "grid",
+  "headphones",
+  "headset",
+  "home",
+  "idea",
+  "identification",
+  "image",
+  "image-copy",
+  "image-search",
+  "image-search-alt",
+  "import-export",
+  "information",
+  "information-filled",
+  "information-disabled",
+  "information-square",
+  "information-square-filled",
+  "keyboard",
+  "keyboard-off",
+  "launch",
+  "layers",
+  "location",
+  "location-filled",
+  "locked",
+  "list-boxes",
+  "list",
+  "link",
+  "menu",
+  "microphone",
+  "microphone-filled",
+  "microphone-off",
+  "microphone-off-filled",
+  "music",
+  "next-outline",
+  "next-filled",
+  "no-image",
+  "notebook",
+  "notification",
+  "notification-filled",
+  "notification-off",
+  "notification-off-filled",
+  "ordinal",
+  "overflow-menu-horizontal",
+  "overflow-menu-vertical",
+  "pan-horizontal",
+  "pan-vertical",
+  "pause",
+  "pause-filled",
+  "pause-outline",
+  "pause-outline-filled",
+  "pen",
+  "pending",
+  "pending-filled",
+  "phone",
+  "phone-filled",
+  "phone-off",
+  "phone-off-filled",
+  "pin",
+  "pin-filled",
+  "plan",
+  "play",
+  "play-filled-alt",
+  "play-outline",
+  "play-filled",
+  "policy",
+  "popup",
+  "power",
+  "previous-filled",
+  "previous-outline",
+  "printer",
+  "radio-button",
+  "radio-button-checked",
+  "recently-viewed",
+  "redo",
+  "renew",
+  "repeat",
+  "restart",
+  "reset",
+  "save",
+  "screen",
+  "screen-off",
+  "search",
+  "search-advanced",
+  "search-locate",
+  "security",
+  "send-alt",
+  "send-alt-filled",
+  "settings",
+  "settings-adjust",
+  "share",
+  "shopping-cart",
+  "shuffle",
+  "star",
+  "star-filled",
+  "star-half",
+  "stay-inside",
+  "stop",
+  "stop-filled-alt",
+  "stop-outline",
+  "stop-filled",
+  "subtract",
+  "subtract-alt",
+  "subtract-filled",
+  "switcher",
+  "tag",
+  "thumbs-down",
+  "thumbs-down-filled",
+  "thumbs-up",
+  "thumbs-up-filled",
+  "ticket",
+  "time",
+  "time-filled",
+  "triangle-down-outline",
+  "triangle-down-solid",
+  "triangle-left-outline",
+  "triangle-left-solid",
+  "triangle-outline",
+  "triangle-right-outline",
+  "triangle-right-solid",
+  "triangle-solid",
+  "unlocked",
+  "undo",
+  "upload",
+  "user",
+  "user-filled",
+  "user-avatar",
+  "user-avatar-filled",
+  "video",
+  "video-filled",
+  "video-off",
+  "video-off-filled",
+  "view",
+  "view-filled",
+  "view-off",
+  "view-off-filled",
+  "volume-down",
+  "volume-down-filled",
+  "volume-down-alt",
+  "volume-down-filled-alt",
+  "volume-mute",
+  "volume-mute-filled",
+  "volume-up",
+  "volume-up-filled",
+  "volume-up-alt",
+  "volume-up-filled-alt",
+  "warning",
+  "warning-filled",
+  "warning-alt",
+  "warning-alt-filled",
+  "zoom-in",
+  "zoom-out"
+);

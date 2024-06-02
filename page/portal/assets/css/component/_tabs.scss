@@ -1,0 +1,126 @@
+.tabs-normal .tabs-cont {
+	display: none;
+}
+.tabs-nav {
+	margin-bottom: $spacing-3xlg;
+	display: flex;
+	border-radius: $radius-sm;
+	border:$border-primary;
+	overflow: hidden;
+	li {
+		flex:1;
+		&:first-of-type {
+			a {
+				border-top-left-radius:0;
+				border-bottom-left-radius:0;
+			}		
+		}
+		&:last-of-type {
+			a {
+				border-top-right-radius:0;
+				border-bottom-right-radius:0;
+			}		
+		}
+		a {
+			position: relative;
+			display: flex;
+			height: 5.6rem;
+			align-items: center;
+			justify-content: center;
+			color:$fc-primary;
+			border-radius: $radius-sm;
+			font-weight: 700;
+			&.is-active {
+				background: $gradient-primary;
+				color:$wh;
+			}
+			&:not(.is-active):hover,
+			&:not(.is-active):focus {
+				background: $gr10;
+			}
+			&:focus {
+				&::after {
+					@extend %focus;
+				}
+			}
+		}	
+	}	
+}
+
+.tabs-nav-sm { 
+	margin-bottom: 2.8rem;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	gap:$spacing-md;;
+	li {
+		display: flex;
+		align-items: center;
+		position: relative;
+		&::after {
+			content: " ";
+			right:-2rem;
+			display: inline-block;
+			border-radius: $radius-full;
+			width: .4rem;
+			height: .4rem;
+			margin-left:$spacing-md;
+			background-color: $gr30;
+		}
+		&:last-of-type {
+			&::after {
+				display: none;
+			}
+		}
+	}
+	a {
+		position: relative;
+		display: flex;
+		height: 4.8rem;
+		align-items: center;
+		justify-content: center;
+		@include typo('tit-sm');
+		color:$fc-teriary;
+
+		&::before {
+			content: " ";
+			position: absolute;
+			inset:auto 0 0 0;
+			height:.4rem;
+			transition: background .3s;
+		}
+		&.is-active {
+			color:$fc-primary;
+			&::before {
+				background: $gradient-primary;
+			}
+		}
+		&:hover,
+		&:focus {
+			&::before {
+				background: $gradient-primary;
+			}
+		}
+	}
+
+}
+@include tablet {
+	.tabs-nav-sm {
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		width: calc(100% + .4rem);
+		padding-left:.2rem;
+		padding-right:.2rem;
+		margin-left:-.2rem;
+		box-sizing: border-box;
+		li {
+			flex:none;
+		}
+	}	
+}
+@include mobile {
+
+}

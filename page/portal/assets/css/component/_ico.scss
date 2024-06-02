@@ -1,0 +1,34 @@
+.ico {
+    @include ico-list($ico-md);
+}
+.ico-sm {
+    @include ico-list($ico-sm);
+}
+.ico-xsm {
+    @include ico-list($ico-xsm);
+}
+.ico-xxsm {
+    @include ico-list($ico-2xsm);
+}
+[class^=ico-].back {
+	margin-left:$spacing-xsm;
+}
+// .ico-likeOn,
+// .ico-sm-likeOn,
+// .ico-starOn,
+// .ico-sm-starOn {
+//     background-color: $accent;
+//     margin-top:-2rem;
+// }
+/* -------------------------------------------------    
+	- TABLET
+------------------------------------------------- */
+@include tablet {
+}
+
+/* -------------------------------------------------    
+	- mobile
+------------------------------------------------- */
+@include mobile {
+
+}

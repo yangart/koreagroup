@@ -1,0 +1,269 @@
+.btn-cont,
+.btn-flex-cont {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+	gap: $spacing-xsm;	
+	margin:$spacing-3xlg 0 $spacing-4xlg;
+}
+.btn-cont {
+	justify-content: center;
+	&.al {
+		justify-content: flex-start;
+	}
+	&.ar {
+		justify-content: flex-end;
+	}
+}
+.btn-flex-cont {
+	justify-content: space-between;
+	.l-area,
+	.r-area  {
+		display: flex;
+		gap: $spacing-xsm;
+		> {
+			.btn,
+			.btn-sm,
+			.btn-lg,
+			.btn-ico  {
+				flex:none;
+			}
+		}
+	}
+	.r-area  {
+		justify-content: flex-end;
+	}
+	.btn,
+	.btn-sm,
+	.btn-lg,
+	.btn-ico  {
+		flex:1;
+	}
+}
+$button-types: (
+  ".btn",
+  ".btn-sm",
+  ".btn-lg"
+);
+
+$button-styles: (
+  'spot': $primary,
+  'primary': $primary,
+  'spot2': $secondary,
+  'secondary': $secondary,
+  'spot3': $gradient-primary,
+  'accent': $gradient-primary,
+  'negative': $negative,
+  'positive': $positive,
+);
+
+$button-size: (
+	sm: 3.6rem,
+	md: 4.8rem,
+	lg: 6.4rem,
+);
+
+@each $type in $button-types {
+  #{$type} {
+	display:inline-flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: color, filter;
+	transition-property: color, filter;
+	border-radius:$radius-xsm;
+	font-weight: 700;
+	gap: $spacing-2xsm;	
+    background: $gr90;
+    color: $wh;
+	filter: brightness(1);
+	&.btn {
+		padding: 0 2.4rem;
+		height: map-get($button-size, md);
+		font-size:1.6rem;
+	}
+	
+	&.btn-sm{
+		padding: 0 1.6rem;
+		height: map-get($button-size, sm);
+		font-size: 1.4rem;
+	}
+	
+	&.btn-lg {
+		padding: 0 4rem;
+		height: map-get($button-size, lg);
+		font-size:1.8rem;
+	}
+
+    &:disabled,
+    &.is-disabled {
+      background: $gr60;
+      color: $fc-secondary-wh;
+	  cursor: default;
+    }
+
+    &:not(:disabled, .is-disabled):hover {
+		filter: brightness(1.1);
+    }
+
+    @each $state, $color in $button-styles {
+      &.#{$state} {
+        @if $state == 'spot3' or $state == 'accent' {
+          background-image: $color;
+        } @else {
+          background: $color;
+        }
+      }
+    }
+
+    &.line {
+      background: $wh;
+      border-width: $stroke-xsm;
+      border: $stroke-xsm solid $gr90;
+      color: $fc-primary;
+      &:disabled,
+      &.is-disabled {
+        border-color: $gr30;
+        color: $fc-quaternary;
+      }
+
+      @each $state, $border-color in $button-styles {
+        &.#{$state} {
+          @if $state == 'accent' or $state == 'spot3' {
+            border-color: transparent;
+            background: linear-gradient(0deg, $wh, $wh), $gradient-primary;
+            background-clip: padding-box, border-box;
+            background-origin: padding-box, border-box;
+          } @else {
+            border-color: $border-color;
+            color: $border-color;
+          }
+        }
+      }
+    }
+	&[class*="ico"]{
+		&::before {
+			background: $wh;
+		}	
+		&.ico {
+			@include ico-btn($ico-md);
+		}
+		&.is-disabled,
+			&:disabled {
+			&::before {
+				background:$gr30;
+			}
+		}
+		&.back {
+			&::before {
+				order:1;
+			}
+		}	
+		&.line {		
+			&::before {
+				background:$gr90;
+			}
+			@each $state, $border-color in $button-styles {
+				&.#{$state} {
+					&::before {
+						background:$border-color;
+					}
+				}
+			}
+			&.is-disabled,
+			&:disabled {
+				&::before {
+					background:$gr60;
+				}
+			}	
+		}
+	}
+	&.ico-only {
+		font-size:0;
+		padding:0;
+		gap:0;
+		&.btn {
+			width: map-get($button-size, md);
+		}
+		&.btn-sm {
+			width: map-get($button-size, sm);
+		}
+		&.btn-lg {
+			width: map-get($button-size, lg);
+		}
+	}
+  }
+}
+.btn-sm {
+	&[class*="ico"]{
+		&.ico {
+			@include ico-btn($ico-sm);
+		}
+	}
+}
+
+.btn-like {
+	position: relative;
+	width: 3.6rem;
+	height: 3.6rem;
+	text-indent: -9999rem;
+	border-radius:50%;
+	border:$border-primary;
+	&::before {
+		content: " ";
+		position: absolute;
+		top: 50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+	}
+}
+.btn-like.is-active {
+	border-color: $accent;
+	background-color: $accent;
+	&::before {
+		content: " ";
+	}
+}
+.btn-like.ico-like.is-active,
+.btn-like.ico-like.btn-like-on  {
+}
+.btn-like.ico-sm-like.is-active,
+.btn-like.ico-sm-like.btn-like-on {
+}
+
+.btn-del-sm {
+	position: relative;
+	width: 1.6rem;
+	height: 1.6rem;
+	text-indent: -9999rem;
+	&::before {
+		content: " ";
+		position: absolute;
+		top: 50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+		background-color: $gr60;
+	}
+}
+
+
+/* -------------------------------------------------    
+	- TABLET
+------------------------------------------------- */
+@include tablet {
+}
+
+/* -------------------------------------------------    
+	- mobile
+------------------------------------------------- */
+@include mobile {
+	.btn-cont,
+	.btn-flex-cont {
+		margin:$spacing-xlg 0 $spacing-3xlg;
+	}
+}

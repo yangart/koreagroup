@@ -1,0 +1,99 @@
+.site-body {
+    padding-bottom:$spacing-2xlg;
+	min-width: 100%;
+}
+.contents  {
+	padding-top:6.4rem;
+}
+.section {
+	margin-bottom:$spacing-4xlg;
+	&:last-child {
+		margin-bottom:0;
+	}
+}
+.section-sm {
+	margin-bottom:$spacing-2xlg;
+	&:last-child {
+		margin-bottom:0;
+	}
+}
+//aside-area
+.aside-area {
+	$asideW: 8.8rem;
+    position: sticky;
+    top: $spacing-xlg;
+    right:0;
+   	height:0;
+    // display: flex;
+	// justify-content: flex-end;
+	width: 100%;
+	max-width: $wrap-lg;
+	margin:0 auto;
+	transform: translate($asideW + ($spacing-3xlg *2)) ;
+    z-index: 3;
+	@at-root .site-body:has(.aside-area) {
+		position: relative;
+	}
+	.aside-nav {
+		$asideNavSize: 4rem;				
+		$asideNavs : (
+			'lecuture',
+			'qna',
+			'faq',
+			'guide'
+		);
+		transform: translateY($spacing-2xlg);
+		margin-left:auto;
+		display: flex;
+		flex-direction: column;
+		gap:$spacing-xlg;
+		width: $asideW;
+		border-radius: math.div($asideW, 2);
+		background: $wh;
+		@include gradient-line($stroke-sm);
+		padding:$spacing-2xlg $spacing-xsm;
+		height:auto;
+		a {
+			display: block;
+			text-align: center;
+			word-break: keep-all;
+			@include typo('body-sm');
+			&:hover {
+				color:$fc-secondary;				
+			}
+
+			&::before {
+				content: " ";
+				display: block;
+				margin:0 auto $spacing-2xsm;
+				width: $asideNavSize;
+				height:$asideNavSize;
+				background:url($url-img + 'common/ico-aside.svg');
+				background-size: auto $asideNavSize;
+			}
+			
+			@each $aside in $asideNavs {
+				&.aside-#{$aside} {
+					&::before {
+						$i: index($asideNavs, $aside) -  1;
+						$x: calc($i * $asideNavSize) * -1;
+
+						background-position: #{$x} 0;
+					}
+				}	
+			}
+		}
+
+	}
+}
+
+/* -------------------------------------------------    
+	- TABLET
+------------------------------------------------- */
+@include tablet {
+}
+/* -------------------------------------------------    
+	- mobile
+------------------------------------------------- */
+@include mobile {
+}

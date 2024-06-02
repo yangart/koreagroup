@@ -1,0 +1,59 @@
+/* label */
+.label-area {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $spacing-2xsm;
+}
+$label-colors: (
+	"spot": $primary,
+	"primary": $primary,
+	"spot2": $secondary,
+	"secondary": $secondary,
+	"bl": $bl,
+	"gn": $gn,
+	"rd": $rd,
+	"bk": $gr90,
+);
+.label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 2.4rem;
+	box-sizing: border-box;
+	color: $fc-secondary;
+	background-color: $gr20;
+	padding: 0 .8rem;
+	font-size: $fs-body-xsm;
+	vertical-align: middle;
+
+	@each $class, $color in $label-colors {
+		&.#{$class} {
+			background-color: $color;
+			color: $wh;
+		}
+	}
+	
+	&.line {
+		background-color: $wh;
+		border: $stroke-xsm solid $gr60;
+		@each $class, $color in $label-colors {
+		  &.#{$class} {
+			border-color: $color;
+			color: $color;
+		  }
+		}
+	}
+
+	&.round {
+		width: 6.4rem;
+		height:6.4rem;
+		padding:0;
+		border-radius: $radius-full;
+		font-weight: 700;
+		font-size: $fs-body-md;
+	}
+}
+
+@include mobile {
+
+}

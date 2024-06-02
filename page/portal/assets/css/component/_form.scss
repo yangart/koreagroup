@@ -1,0 +1,249 @@
+$input-height: 4.8rem;
+$input-height-sm: 3.6rem;
+$input-padding:2.4rem;
+
+@mixin inputStyle() {
+	min-height: $input-height;
+	border: $stroke-xsm solid $gr90;
+	border-radius: $radius-xsm;
+	background-color: $wh;
+	max-width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	vertical-align: middle;
+	&[disabled] {
+		border-color: $gr30;
+		color:$fc-quaternary;
+	}
+	&[readonly] {
+		border-color: $gr30;
+		&:focus {
+			outline: none;
+			pointer-events: none;
+		}
+	}
+	&::placeholder {
+		color: $fc-quaternary;
+	}
+	&.sm {
+		min-height: $input-height-sm;
+	}
+}
+
+select {
+	padding: 0 5.6rem 0 $input-padding;
+	background: url($url-img + 'common/sel-arr.svg') right $input-padding center no-repeat;
+	@include inputStyle;
+	&.border-none {
+		border:none;
+		padding:0 $spacing-2xlg 0 $spacing-md;
+		background-position: right 0 center;
+	}
+	&.sm {
+		padding:0 $spacing-xlg 0 $spacing-xsm;
+		background-position: right 0 center;
+	}
+	&.sel-sort {
+		background-image: url($url-img + 'common/sel-sort.svg');
+	}
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+input[type=tel],
+input[type=time],
+input[type=date] {
+	padding: 0 $input-padding;
+	width: 36rem;
+	@include inputStyle;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+input[type=time],
+input[type=date] {
+	width: 24rem;
+}
+input[type=number] {
+	-moz-appearance: textfield;
+	text-align: center;
+	width: 16rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button  {
+	-webkit-appearance: none;
+}
+input[type="file"],
+input[type="file"]:hover,
+input[type="file"]:focus {
+	padding: 0;
+	border: none;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	@include inputStyle;
+	padding: 1.6rem $input-padding;
+}
+
+/*checkbox, radio */
+.checkradio {
+	display:inline-block;
+	align-items: center;
+	position: relative;
+	margin-right:$spacing-xlg;
+	min-width: 2.4rem;
+	min-height: 2.4rem;
+	vertical-align: middle;
+	word-break: keep-all;
+	padding-top: $spacing-2xsm;
+
+	&:only-child,
+	&:last-child {
+		margin-right: 0;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {		
+		@include hide;
+		& ~ label {
+			position: relative;
+			display: inline-flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-right:$spacing-2xlg;
+			min-width:0;
+			padding-left: 3.6rem;
+			cursor: pointer;
+			min-height: 2.4rem;
+			box-sizing: border-box;
+			word-break:normal;
+
+			&:before {
+				content: " ";
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				width: 2.4rem;
+				height: 2.4rem;
+				background: $wh;
+				border: $stroke-xsm solid $gr90;
+				border-radius: $radius-xsm;
+			}
+
+			&.txt-hide {
+				position: relative;
+				top: initial;
+				left: initial;
+				display: block;
+				width: 2.4rem;
+				height:2.4rem;
+				overflow: hidden;
+				font-size: 0;
+				text-indent: 0;
+				clip-path: none;
+				margin:0;
+				&:before {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&:focus ~ label {
+			outline:$stroke-sm solid $bk;
+		}
+
+		&:disabled ~ label {
+			color:$fc-teriary;
+			pointer-events: none;
+			opacity: .5;
+		}
+	}
+	input[type="checkbox"] {
+		& ~ label { 
+			&:after {
+				content: " ";
+				position: absolute;
+				top: .4rem;
+				left: .8rem;
+				width: .8rem;
+				height: 1.2rem;
+				border-bottom:$border-primary;
+				border-right:$border-primary;
+				border-width: $stroke-sm;
+				transform: rotate(45deg);
+				transform-origin: center center;
+			}
+		}
+		&:checked {
+			& ~ label {
+				&:before,
+				&:after {
+					border-width: $stroke-sm;
+					border-color: $secondary;
+				}
+			}
+		}
+	}
+	input[type="radio"] {
+		& ~ label {
+			&:before,
+			&:after {
+				border-radius: 50%;
+			}
+			&:after  {
+				content: " ";
+				position: absolute;
+				display: block;
+				top: .6rem;
+				left: .6rem;
+				width: 1.2rem;
+				height: 1.2rem;
+				background: $gr30;
+			}
+		}
+		&:checked {
+			& ~ label {
+
+				&:before {
+					border-width: $stroke-sm;
+					border-color: $secondary;
+				}
+				&:after {
+					background-color: $secondary;
+				}
+			}
+		}
+	}
+}
+
+.checkradio-area {
+	display: flex;
+	flex-wrap: wrap;
+	gap:$spacing-xsm;
+	align-items: center;
+}
+
+/* -------------------------------------------------    
+	- TABLET
+------------------------------------------------- */
+@include tablet {
+	.checkradio {
+		margin-right: $spacing-xlg;
+	}
+	input[type=text],
+	input[type=password],
+	input[type=email],
+	input[type=tel] {
+		width: 24rem;
+	}
+}
+
+/* -------------------------------------------------    
+	- mobile
+------------------------------------------------- */
+@include mobile {
+}
