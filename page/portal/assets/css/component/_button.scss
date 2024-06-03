@@ -424,6 +424,29 @@
     }
 }
 
+
+.btn-icon i {
+    text-indent: -9999px;
+    font-size: 0;
+}
+
+.btn {
+    &.disabled,
+    &:disabled {
+        opacity: 0.3;
+    }
+}
+
+fieldset:disabled .btn {
+    opacity: 0.3;
+}
+
+:is(.btn.show, 
+.btn:first-child:active,
+:not(.btn-check) + .btn:active) {
+    /* border-color:transparent */
+}
+
 .btn-warning {
     color: #fff;
     background-color: #ffa133;

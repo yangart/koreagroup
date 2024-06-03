@@ -101,8 +101,8 @@
 }
 .fc {
     $font-colors : (        
-		negative: $negative,
-		positive: $positive,
+		negative: $rd,
+		positive: $nv,
 		rd: $rd,
 		bl: $bl,
 		gn: $gn,
@@ -110,10 +110,9 @@
 		bk: $bk,
 		gr: $gr60,
 		wh: $wh,
-		spot: $primary,
 		priamry: $primary,
-		spot2: $secondary,
-		secondary: $secondary       
+		secondary: $secondary,
+		thirdary: $thirdary 
     );
     @each $key, $color in $font-colors {
         &-#{$key} {
@@ -599,7 +598,6 @@ hr {
 			transform: translate(-50%, -50%);
 			width: 1.6rem;
 			height: 1.6rem;
-			//@include ico($ico-xsm, plus);
 		}
 	}
 	input[type=text] {
@@ -624,7 +622,6 @@ hr {
 			display: inline-block;
 			vertical-align: middle;
 			margin-right:0.4rem;
-			//@include ico($ico-xsm, file);
 		}
 		&:hover {
 			text-decoration: underline;

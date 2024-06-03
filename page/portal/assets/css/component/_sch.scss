@@ -33,10 +33,6 @@
 		height: 4.8rem;
 		text-indent: -99999rem;
 		font-size:0;
-		&::before {
-			content:" ";
-			@include ico($ico-md, search);
-		}
 	}
 }
 /* total-count */

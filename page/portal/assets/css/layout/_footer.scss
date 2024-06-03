@@ -30,16 +30,6 @@
                 @include before-position-c;
             }
         }
-        .cs-ico-tel {
-            &::before {
-                @include ico($ico-sm, phone, gr)
-            }
-        }
-        .cs-ico-email {
-            &::before {
-                @include ico($ico-sm, email, gr)
-            }
-        }
     }
     .info {
         display: flex;
@@ -52,7 +42,6 @@
                 position: absolute;
                 left:0;
                 display: inline-block;
-                @include ico($ico-xlg, time, gr);
             }
             strong {
                 @include typo('tit-lg');

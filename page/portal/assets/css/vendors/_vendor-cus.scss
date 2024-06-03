@@ -125,10 +125,10 @@ input[type=text].datepicker {  display: inline-block !important; width:19rem !im
 	border: 0;
 }
 .ui-datepicker th.ui-datepicker-week-end span[title=Sunday] {
-    color:$negative;
+    color:$rd;
 } 
 .ui-datepicker td:first-child a{
-     color:$negative;
+     color:$rd;
 }
 .ui-datepicker tr:first-child td { border-top:0; }
 .ui-datepicker td {	
@@ -441,7 +441,6 @@ input[type=text].datepicker {  display: inline-block !important; width:19rem !im
 	}
 	&:after {
 		@include before-position-c;
-		@include ico(40, chevron-right);
 		
 	}
 	&.swiper-button-disabled {
@@ -451,16 +450,13 @@ input[type=text].datepicker {  display: inline-block !important; width:19rem !im
 .swiper-button-prev {
 	left:0;
 	&::after {
-		@include ico(40, chevron-left);
 	}
 }
 .swiper-button-next {
 	right:0;
 	&.bk {
 		border-radius: 0.8rem 0 0 0.8rem;
-		&::after {
-			//@include ico($ico-md, arrow-right,wh);
-		}
+		
 	}
 }
 .btn-playStop {
@@ -472,12 +468,10 @@ input[type=text].datepicker {  display: inline-block !important; width:19rem !im
 	&::before {
 		content: " ";
 		@include before-position-c;
-		@include ico($ico-xsm,pause-filled);
 
 	}
 	&.stop {
 		&::before {
-			@include ico($ico-xsm,caret-right);
 		}
 	}
 }

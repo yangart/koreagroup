@@ -46,7 +46,6 @@
             &::after {
                 content: " ";
                 display: inline-block;
-                //@include ico($ico-xsm, home, wh);
                 margin-top: -1rem;
                 vertical-align: middle;
             }
@@ -359,7 +358,6 @@
                 width: 1.6rem;
                 height: 1.6rem;
                 overflow: hidden;
-                //@include ico($ico-md, arrow-down);
                 opacity: 0.3;
             }
             &:last-of-type {

@@ -83,12 +83,8 @@
 		top:50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		@include ico($ico-xlg, close);
 	}
 	.wh {
-		&::before {
-			@include ico($ico-xlg, close, wh);
-		}
 	}
 }
 /* mn-popup-area */

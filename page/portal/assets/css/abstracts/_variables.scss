@@ -22,41 +22,41 @@ $gr80:#333333;
 $gr90:#1A1A1A;
 $bk: #0A0A0A;
 
-// Palette
-$color-palette: (
-  primary-blue: #100380, 
-  primary-lightblue: #00B6ED, 
-  primary-mint: #00BFB8, 
-  secondary-blue: #005FBE, 
-  secondary-green: #78BF26, 
-  secondary-yellow: #FFD200, 
-  secondary-red: #F94868, 
-  gray-wram: #DFDAD6, 
-  gray-cool: #E2E2E0, 
-  gold: #8B6E4C, 
-  silver: #8B9191
-);
-
 $palette: (
-	primary: #100380, 
-	secondary: #00B6ED, 
-	yellow: #FFD200, 
-	red: #F94868, 
-	green: #78BF26, 
-	blue: #005FBE, 
-	gray-wram: #F3F0EE, 
+	primary: #6a48b3, 
+	secondary: #ff710a, 
+  thirdary: #00b031,
+	yellow: #ffa133, 
+	red: #ff3366, 
+	green: #00b031, 
+  orange: #ff710a,
+  blue: #076aff,
+	darkblue: #005FBE, 
+  violet:#845ae0,
+  darkviolet: #6a48b3,
+  pink:#ff65d4,
+  navy:#405189,
+  darknavy:#364574,
+	lightgray: #f0f1f7, 
+  gray: #c0c2c3
 );
 
 $primary: map-get($palette, primary);
 $secondary: map-get($palette, secondary);
-$positive: map-get($palette, green);        
-$negative: map-get($palette, red);          
-$bg: map-get($palette, gray-wram);  
+$thirdary: map-get($palette, thirdary);
+$placeholder: map-get($palette, gray);   
+$bg: map-get($palette, lightgray);  
 
-$rd: $negative;
-$or: map-get($palette, yellow);
-$gn: $positive;
+$rd: map-get($palette, red);
+$or: map-get($palette, orange);
+$ye: map-get($palette, yellow);
+$gn: map-get($palette, green);
 $bl: map-get($palette, blue);
+$vi: map-get($palette, violet);
+$pk: map-get($palette, pink);
+$nv: map-get($palette, navy);
+$ltgr: map-get($palette, lightgray);
+$gr : map-get($palette, gray);
 
 $gradient-primary: linear-gradient(110deg, $secondary 0%, $or 100%);
 $gradient-secondary: linear-gradient(180deg, $primary 0%, $secondary 100%);

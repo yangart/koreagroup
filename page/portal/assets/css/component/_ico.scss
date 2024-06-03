@@ -1,25 +1,16 @@
-.ico {
-    @include ico-list($ico-md);
-}
-.ico-sm {
-    @include ico-list($ico-sm);
-}
-.ico-xsm {
-    @include ico-list($ico-xsm);
-}
-.ico-xxsm {
-    @include ico-list($ico-2xsm);
-}
+
 [class^=ico-].back {
 	margin-left:$spacing-xsm;
 }
-// .ico-likeOn,
-// .ico-sm-likeOn,
-// .ico-starOn,
-// .ico-sm-starOn {
-//     background-color: $accent;
-//     margin-top:-2rem;
-// }
+
+.ico-attendance {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    background: url(../images/attendance-ico@2x.png) no-repeat 50% 50% / 16px 16px;
+}
+
 /* -------------------------------------------------    
 	- TABLET
 ------------------------------------------------- */

@@ -78,7 +78,6 @@
 				font-size:0;
 				&::before {
 					@include before-position-c;
-					@include ico($ico-md,search);
 				}
 			}
 		}
@@ -202,7 +201,6 @@
 	box-shadow: $shadow-lg;
 	&::before {
 		@include before-position-c;
-		@include ico($ico-md, close, wh);
 	}
 }
 .site-nav-area {
