@@ -14,14 +14,10 @@
         font-size:0;
         &::before {
             @include before-position-c;
-            @include ico($ico-sm, view-filled, gr);
         }
     }
     &.is-active {
         .btn-pw-toggle {
-            &::before {
-                @include ico($ico-sm, view-off-filled, gr);
-            }
         }
 
     }
@@ -78,7 +74,7 @@
         }
         .msg {
             &.error {
-                color:$negative;
+                color:$rd;
             }
         }
     }
