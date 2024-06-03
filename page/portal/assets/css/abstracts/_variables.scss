@@ -1,4 +1,3 @@
-
 :root {
     --wrap-gap: 0;
     --fs-3xlg: 4.4rem;
@@ -108,8 +107,7 @@ $shadow-lg:.2rem .2rem 4rem rgba($bk, .2);
 
 $backdrop: blur(2rem);
 
-$fontFamily: "NanumSquare Neo", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", 
-"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+$fontFamily: 'Pretendard', sans-serif;
 
 $fs-tit-2xlg: var(--fs-3xlg);
 $fs-tit-xlg :var(--fs-2xlg);
