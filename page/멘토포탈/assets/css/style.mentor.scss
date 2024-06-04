@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*
+	Author	: Somi Park, Hyojeong Yang
+	Date	: 2024-06-01
+	Project	: Korea Edu Group
+*/
+
+@use "sass:meta";
+@use "sass:list";
+@use "sass:math";
+
+@import "scss/mentor";
+
+@import "scss/reset";
+@import "scss/layout";
+@import "scss/component";
+@import "scss/common";

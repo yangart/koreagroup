@@ -323,6 +323,9 @@ textarea.form-editor{height:392px;}
 .g-40px,.gx-40px{--bs-gutter-x:40px !important;}
 .g-40px,.gy-40px{--bs-gutter-y:40px !important;}
 
+.h6, h6 { font-size:1.2rem }
+.fs-7 { font-size:.9rem; }
+
 @media (min-width:1400px){
 	.g-xxl-4px,.gx-xxl-4px{--bs-gutter-x:4px !important;}
 	.g-xxl-4px,.gy-xxl-4px{--bs-gutter-y:4px !important;}

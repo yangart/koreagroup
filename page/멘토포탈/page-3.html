@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>멘토포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="멘토포털">
+	<meta property="og:description" content="멘토포털">
+	<meta name="description" content="멘토포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+
+		<div id="page-topbar">
+			<div class="navbar-hamburger">
+				<button type="button" class="topnav-hamburger" id="topnav-hamburger-icon">
+					<div class="hamburger-icon"><span></span><span></span><span></span></div>
+				</button>
+			</div>
+		</div><!-- // page-topbar -->
+
+		<div class="app-menu navbar-menu">
+
+			<div class="navbar-brand-box">
+				<a href="#" class="logo"><img src="./assets/img/app-menu-logo@2x.png" alt=""></a>
+				<button type="button" class="btn" id="vertical-hover"></button>
+			</div><!-- // navbar-brand-box -->
+
+			<div class="app-menu-info">
+				<div class="cate">
+					<em>정규직</em>
+					<span>2023-11-10</span>
+				</div>
+				<div class="text">[컴퓨터강남] 1-1팀</div>
+				<div class="name">홍길동 대리(idididid)</div>
+				<div class="link"><a href="#">마이페이지</a></div>
+			</div>
+
+			<div id="scrollbar">
+				<div class="container-fluid">
+
+					<div id="two-column-menu"></div>
+					<ul class="navbar-nav" id="navbar-nav">
+
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>사업정보</span></a>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>MY 학생</span></a>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#"><i class="ico4"></i> <span>인사정보</span></a>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>교육이수</span></a>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a>
+						</li><!-- nav-item -->
+
+					</ul><!-- // navbar-nav -->
+
+				</div>
+			</div><!-- // scrollbar -->
+
+			<div class="app-menu-info type-foot">
+				<div class="text">로그인 2023-11-10 21:34</div>
+				<div class="link"><a href="#">로그아웃</a></div>
+			</div>
+
+		</div><!-- // navbar-menu -->
+
+		<!---- main-content ---->
+		<div class="main-content">
+
+			<!-- page-header -->
+			<div class="page-header flex-right">
+
+				<div class="page-header-topbar">
+
+					<div><a href="#" class="btn-topbar"><i class="topbar-calendar"></i></a></div>
+
+					<div class="dropdown topbar-dropdown" id="topbarSchedule">
+						<button type="button" class="btn-topbar" id="topbar-schedule-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+							<i class="topbar-time"></i>
+						</button>
+
+						<div class="alram-dropdown dropdown-menu dropdown-menu-end" aria-labelledby="topbar-schedule-dropdown">
+
+							<div class="alram-tabs">
+
+								<ul class="nav round-tabmenu" id="alramTabMenu" role="tablist">
+									<li><a class="tab-btn active" href="#alramTabs1" data-bs-toggle="tab" role="tab" aria-controls="alramTabs1" aria-selected="false">미니 시간표</a></li>
+									<li><a class="tab-btn" href="#alramTabs2" data-bs-toggle="tab" role="tab" aria-controls="alramTabs2" aria-selected="true">미니 스케줄</a></li>
+								</ul>
+								<div class="alram-tabpanel" id="alramTabPanel">
+									<div class="tab-pane active" id="alramTabs1" role="tabpanel">
+
+										<div class="row row-wrap g-0">
+											<div class="col col-auto">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">시작 개강일</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+											<div class="col col-dash">~</div>
+											<div class="col col-auto">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">마지막 개강일</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+										</div><!-- // row -->
+										<div class="row row-wrap g-0">
+											<div class="col col-auto">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">시작 시간</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+											<div class="col col-dash">~</div>
+											<div class="col col-auto">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">마지막 시간</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+										</div><!-- // row -->
+										<div class="row g-0">
+											<div class="col">
+												<select class="form-select" data-choices data-choices-search-false>
+													<option value="01">학과 선택</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+										</div><!-- // row -->
+										<div class="row g-0">
+											<div class="col btn-group-xs">
+												<a href="#" class="btn btn-outline-primary">과목명</a>
+												<a href="#" class="btn btn-outline-light">과목명</a>
+												<a href="#" class="btn btn-outline-primary">과목명</a>
+												<a href="#" class="btn btn-outline-light">과목명</a>
+												<a href="#" class="btn btn-outline-primary">과목명</a>
+												<a href="#" class="btn btn-outline-primary">과목명</a>
+												<a href="#" class="btn btn-outline-light">과목명</a>
+											</div>
+										</div><!-- // row -->
+										<div class="row g-0">
+											<div class="col-12"><button type="button" class="btn btn-primary search-btn">검색</button></div>
+										</div><!-- // row -->
+										<div class="row g-0">
+											<div class="col-12"><button type="button" class="btn btn-outline-secondary btn-timetable-arrow">닫기</button></div>
+										</div><!-- // row -->
+
+										<div class="card-timetable">
+											<div class="timetable-scroll simplebar-scrollable-y" data-simplebar>
+												<div class="table-title"><10월></div>
+												<ul class="scroll-list">
+													<li>
+														<div class="list-item-title">개강일 : 10.10 / 종강일 : 10.19</div>
+														<div class="list-item-info">
+															<div class="cell accent">09:30 <br><span class="day">월~금</span></div>
+															<div class="cell data">
+																<span class="type">제작자</span>
+																<span>포토샵</span>
+																<span>홍길동 강사</span>
+															</div>
+															<div class="cell">c05 <br>(12/10)</div>
+														</div>
+														<div class="list-item-info">
+															<div class="cell accent">09:30 <br><span class="day">월~금</span></div>
+															<div class="cell data">
+																<span class="type">제작자</span>
+																<span>포토샵</span>
+																<span>홍길동 강사</span>
+															</div>
+															<div class="cell">c05 <br>(12/10)</div>
+														</div>
+													</li>
+													<li>
+														<div class="list-item-title">개강일 : 10.10 / 종강일 : 10.19</div>
+														<div class="list-item-info">
+															<div class="cell accent">09:30 <br><span class="day">월~금</span></div>
+															<div class="cell data">
+																<span class="type">제작자</span>
+																<span>포토샵</span>
+																<span>홍길동 강사</span>
+															</div>
+															<div class="cell">c05 <br>(12/10)</div>
+														</div>
+														<div class="list-item-info">
+															<div class="cell accent">09:30 <br><span class="day">월~금</span></div>
+															<div class="cell data">
+																<span class="type">제작자</span>
+																<span>포토샵</span>
+																<span>홍길동 강사</span>
+															</div>
+															<div class="cell">c05 <br>(12/10)</div>
+														</div>
+													</li>
+												</ul>
+												<div class="table-title"><11월></div>
+												<ul class="scroll-list">
+													<li>
+														<div class="list-item-title">개강일 : 10.10 / 종강일 : 10.19</div>
+														<div class="list-item-info">
+															<div class="cell accent">09:30 <br><span class="day">월~금</span></div>
+															<div class="cell data">
+																<span class="type">제작자</span>
+																<span>포토샵</span>
+																<span>홍길동 강사</span>
+															</div>
+															<div class="cell">c05 <br>(12/10)</div>
+														</div>
+														<div class="list-item-info">
+															<div class="cell accent">09:30 <br><span class="day">월~금</span></div>
+															<div class="cell data">
+																<span class="type">제작자</span>
+																<span>포토샵</span>
+																<span>홍길동 강사</span>
+															</div>
+															<div class="cell">c05 <br>(12/10)</div>
+														</div>
+													</li>
+													<li>
+														<div class="list-item-title">개강일 : 10.10 / 종강일 : 10.19</div>
+														<div class="list-item-info">
+															<div class="cell accent">09:30 <br><span class="day">월~금</span></div>
+															<div class="cell data">
+																<span class="type">제작자</span>
+																<span>포토샵</span>
+																<span>홍길동 강사</span>
+															</div>
+															<div class="cell">c05 <br>(12/10)</div>
+														</div>
+														<div class="list-item-info">
+															<div class="cell accent">09:30 <br><span class="day">월~금</span></div>
+															<div class="cell data">
+																<span class="type">제작자</span>
+																<span>포토샵</span>
+																<span>홍길동 강사</span>
+															</div>
+															<div class="cell">c05 <br>(12/10)</div>
+														</div>
+													</li>
+												</ul>
+											</div><!-- // timetable-scroll -->
+										</div><!-- // card-timetable -->
+
+									</div><!-- // tab-pane -->
+									<div class="tab-pane" id="alramTabs2" role="tabpanel">
+
+										<div class="table-title"><11월 14일(화)></div>
+										<div class="schedule-scroll simplebar-scrollable-y" data-simplebar>
+											<ul class="scroll-list">
+												<li><a href="#"><span class="time">11:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">12:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">12:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">13:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">13:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">14:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">14:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">15:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">15:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">16:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">16:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">17:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">17:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">18:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">18:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">19:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">19:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">20:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+												<li><a href="#"><span class="time">20:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">21:00</span><span class="cate cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
+											</ul>
+										</div>
+
+									</div><!-- // tab-pane -->
+								</div><!-- // alram-tabpanel -->
+
+							</div><!-- // alram-tabs -->
+
+						</div>
+					</div><!-- // topbar-dropdown -->
+
+					<div class="dropdown topbar-dropdown" id="topbarNotification">
+						<button type="button" class="btn-topbar" id="topbar-notification-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+							<i class="topbar-bell"></i>
+							<span class="badge">83</span>
+						</button>
+
+						<div class="alram-dropdown dropdown-menu dropdown-menu-end" aria-labelledby="topbar-notification-dropdown">
+							<div>
+								<div class="alram-header">
+									<h6 class="alram-header-bell">알림</h6>
+									<div class="alram-header-pin">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">전체선택</label>
+										</div>
+										<a href="#" class="btn">삭제</a>
+									</div>
+								</div>
+								<div class="alram-item simplebar-scrollable-y" data-simplebar style="max-height: 600px;">
+									<ul>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="" checked>
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="" checked>
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+										<li class="form-check">
+											<input class="form-check-input" type="checkbox" id="">
+											<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div><!-- // topbar-dropdown -->
+
+				</div><!-- // page-header-topbar -->
+
+			</div><!-- // page-header -->
+
+			<div class="page-content">
+
+				<div class="page-content-title">- 멘토 과정 관리</div>
+
+				<div class="card fluid-card">
+					<div class="card-head">
+
+						<ul class="nav card-nav" id="mentorTabs" role="tablist">
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel1" aria-controls="mentorPanel1" aria-selected="false">DB 현황 관리</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel2" aria-controls="mentorPanel2" aria-selected="false">방문 상담 관리</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel3" aria-controls="mentorPanel3" aria-selected="false">인터뷰 관리</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel4" aria-controls="mentorPanel4" aria-selected="false">원서 관리</a></li>
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel5" aria-controls="mentorPanel5" aria-selected="true">DB 현황 관리</a></li>
+						</ul><!-- // card-nav -->
+
+					</div><!-- // card-head -->
+
+					<div class="card-body">
+
+							<div class="card-search">
+								<div class="row g-6px flex-middle">
+									<div class="col-auto"><div class="form-text">등록일</div></div>
+									<div class="col-auto w-280px">
+										<div class="datepicker-wrap">
+											<input type="text" class="form-control form-datepicker" placeholder="날짜를 선택하세요">
+											<div class="datepicker-box">
+												<div class="datepicker-head">
+													<div class="datepicker-btn datepicker-prev"></div>
+													<div class="datepicker-title">2023 11월</div>
+													<div class="datepicker-btn datepicker-next"></div>
+												</div>
+												<div class="datepicker-body">
+													<div class="datepicker-name">
+														<div class="datepicker-cell">일</div>
+														<div class="datepicker-cell">월</div>
+														<div class="datepicker-cell">화</div>
+														<div class="datepicker-cell">수</div>
+														<div class="datepicker-cell">목</div>
+														<div class="datepicker-cell">금</div>
+														<div class="datepicker-cell">토</div>
+													</div>
+													<div class="datepicker-day">
+														<div class="datepicker-cell other"><span>29</span></div>
+														<div class="datepicker-cell other"><span>30</span></div>
+														<div class="datepicker-cell other"><span>31</span></div>
+														<div class="datepicker-cell"><span>1</span></div>
+														<div class="datepicker-cell"><span>2</span></div>
+														<div class="datepicker-cell"><span>3</span></div>
+														<div class="datepicker-cell"><span>4</span></div>
+														<div class="datepicker-cell"><span>5</span></div>
+														<div class="datepicker-cell"><span>6</span></div>
+														<div class="datepicker-cell"><span>7</span></div>
+														<div class="datepicker-cell active"><span>8</span></div>
+														<div class="datepicker-cell"><span>9</span></div>
+														<div class="datepicker-cell"><span>10</span></div>
+														<div class="datepicker-cell"><span>11</span></div>
+														<div class="datepicker-cell"><span>12</span></div>
+														<div class="datepicker-cell"><span>13</span></div>
+														<div class="datepicker-cell"><span>14</span></div>
+														<div class="datepicker-cell"><span>15</span></div>
+														<div class="datepicker-cell"><span>16</span></div>
+														<div class="datepicker-cell"><span>17</span></div>
+														<div class="datepicker-cell"><span>18</span></div>
+														<div class="datepicker-cell"><span>19</span></div>
+														<div class="datepicker-cell"><span>20</span></div>
+														<div class="datepicker-cell"><span>21</span></div>
+														<div class="datepicker-cell"><span>22</span></div>
+														<div class="datepicker-cell"><span>23</span></div>
+														<div class="datepicker-cell"><span>24</span></div>
+														<div class="datepicker-cell"><span>25</span></div>
+														<div class="datepicker-cell"><span>26</span></div>
+														<div class="datepicker-cell"><span>27</span></div>
+														<div class="datepicker-cell"><span>28</span></div>
+														<div class="datepicker-cell"><span>29</span></div>
+														<div class="datepicker-cell"><span>30</span></div>
+														<div class="datepicker-cell other"><span>1</span></div>
+														<div class="datepicker-cell other"><span>2</span></div>
+													</div>
+												</div>
+											</div><!-- // datepicker-box -->
+										</div><!-- // datepicker-wrap -->
+									</div>
+									<div class="col-auto"><button type="button" class="btn btn-outline-light">오늘</button></div>
+									<div class="col-auto">
+										<select id="" class="form-select" data-choices data-choices-search-false>
+											<option value="01">사용여부</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</div><!-- // row -->
+
+								<div class="row g-6px flex-middle">
+									<div class="col-auto w-280px"><input type="text" class="form-control" placeholder="과정명을 입력하세요"></div>
+									<div class="col-auto"><button type="button" class="btn btn-outline-first">검색</button></div>
+								</div><!-- // row -->
+
+							</div><!-- // row -->
+
+						<div class="table-responsive">
+							<table class="table-basic">
+								<colgroup>
+									<col style="width:7%">
+									<col>
+									<col>
+									<col style="width:16%">
+									<col style="width:7.5%">
+									<col style="width:8%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th class="start">과정명</th>
+										<th class="start">설명</th>
+										<th>등록일</th>
+										<th>사용여부</th>
+										<th>관리</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>10</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="start">광고편집 과정</td>
+										<td class="start">포토+일러+광고 전체</td>
+										<td>2023-11-16</td>
+										<td>사용</td>
+										<td><a href="#pageModal2" data-bs-toggle="modal" class="btn btn-outline-first">관리</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- // table-responsive -->
+
+						<div style="padding-top:20px">
+
+							<button type="button" class="btn btn-first" data-bs-toggle="modal" data-bs-target="#pageModal1">팝업1</button>
+							<button type="button" class="btn btn-first" data-bs-toggle="modal" data-bs-target="#pageModal2">팝업2</button>
+							<button type="button" class="btn btn-first" data-bs-toggle="modal" data-bs-target="#pageModal3">팝업3</button>
+						</div>
+
+					</div><!-- // card-body -->
+
+				</div><!-- // card -->
+
+			</div><!-- page-content -->
+
+			<!-- page-footer -->
+			<div class="page-footer">
+
+				<div class="page-footer-row">
+					<div class="page-footer-btn-left row gx-8px flex-middle">
+
+							<div class="col-auto">
+								<select id="" class="form-select" data-choices data-choices-search-false>
+									<option value="01">20</option>
+									<option value="02">30</option>
+									<option value="03">40</option>
+								</select>
+							</div>
+							<div class="col-auto">검색결과 총 <b>23</b>건</div>
+
+					</div>
+					<ul class="pagination pagination-separated">
+						<li class="page-item disabled">
+							<a href="#" class="page-link">←</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">1</a>
+						</li>
+						<li class="page-item active">
+							<a href="#" class="page-link">2</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">3</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">4</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">5</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">→</a>
+						</li>
+					</ul>
+					<div class="page-footer-btn-right">
+						<a href="#" class="btn btn-outline-first">다운로드</a>
+						<a href="#pageModal1" data-bs-toggle="modal" class="btn btn-first">등록</a>
+					</div>
+				</div>
+			</div><!-- // page-footer -->
+
+		</div><!-- // main-content -->
+
+	</div><!-- // layout-wrapper -->
+
+	<!-- pageModal1 -->
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">멘토 과정 등록</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-6">
+							<label for="" class="form-label">과정명</label>
+							<input type="text" class="form-control" value="">
+						</div>
+						<div class="col-6">
+							<label for="" class="form-label">사용여부</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">사용</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">메모</label>
+							<input type="text" class="form-control" value="">
+						</div>
+					</div><!-- // row -->
+
+					<div class="table-head">
+						<div class="table-title">과목구성</div>
+						<div class="table-btn">
+							<a href="#" class="btn btn-point btn-sm">step 추가</a>
+						</div>
+					</div>
+
+					<ul class="card-list-simple">
+						<li class="head">
+							<div class="step">Step</div>
+							<div class="name">학과</div>
+							<div class="name">과목</div>
+							<div class="price">수강료(원)</div>
+							<div class="link">관리</div>
+						</li>
+						<li class="multi">
+							<div class="multi-row">
+								<div class="step">1</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="price">50,000</div>
+								<div class="link"><a href="#" class="btn btn-outline-first btn-sm">추가</a></div>
+							</div>
+							<div class="multi-row">
+								<div class="step"></div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="price">1,250,000</div>
+								<div class="link"><a href="#" class="btn btn-outline-first btn-sm">삭제</a></div>
+							</div>
+						</li>
+						<li class="multi">
+							<div class="multi-row">
+								<div class="step">2</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="price">500,000</div>
+								<div class="link">
+									<a href="#" class="btn btn-outline-first btn-sm">추가</a>
+									<a href="#" class="btn btn-outline-first btn-sm">삭제</a>
+								</div>
+							</div>
+							<div class="multi-row">
+								<div class="step"></div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="price">150,000</div>
+								<div class="link"><a href="#" class="btn btn-outline-first btn-sm">삭제</a></div>
+							</div>
+						</li>
+						<li>
+							<div class="step">3</div>
+							<div class="name">
+								<select id="" class="form-select" data-choices data-choices-search-false>
+									<option value="01">선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="name">
+								<select id="" class="form-select" data-choices data-choices-search-false>
+									<option value="01">선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="price">50,000</div>
+							<div class="link"><a href="#" class="btn btn-outline-first btn-sm">삭제</a></div>
+						</li>
+					</ul><!-- // card-list-simple -->
+
+					<div class="form-btn float-wrap">
+						<div class="float-left">
+							<button type="submit" class="btn btn-outline-light btn-sm">초기화</button>
+						</div>
+						<div class="float-right">
+							<button type="submit" class="btn btn-outline-light btn-sm">닫기</button>
+							<button type="submit" class="btn btn-first btn-sm">저장</button>
+						</div>
+
+					</div><!-- // form-btn -->
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : pageModal1 -->
+
+	<!-- pageModal2 -->
+	<div class="modal fade" id="pageModal2" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title"></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+
+					<ul class="card-list-simple">
+						<li class="head">
+							<div class="step">Step</div>
+							<div class="name">학과</div>
+							<div class="name">과목</div>
+							<div class="price">수강료(원)</div>
+							<div class="link">관리</div>
+						</li>
+						<li class="multi">
+							<div class="multi-row">
+								<div class="step">1</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="price">50,000</div>
+								<div class="link"><a href="#" class="btn btn-outline-first btn-sm">추가</a></div>
+							</div>
+							<div class="multi-row">
+								<div class="step"></div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="price">1,250,000</div>
+								<div class="link"><a href="#" class="btn btn-outline-first btn-sm">삭제</a></div>
+							</div>
+						</li>
+						<li class="multi">
+							<div class="multi-row">
+								<div class="step">2</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="price">500,000</div>
+								<div class="link">
+									<a href="#" class="btn btn-outline-first btn-sm">추가</a>
+									<a href="#" class="btn btn-outline-first btn-sm">삭제</a>
+								</div>
+							</div>
+							<div class="multi-row">
+								<div class="step"></div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="name">
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="price">150,000</div>
+								<div class="link"><a href="#" class="btn btn-outline-first btn-sm">삭제</a></div>
+							</div>
+						</li>
+						<li>
+							<div class="step">3</div>
+							<div class="name">
+								<select id="" class="form-select" data-choices data-choices-search-false>
+									<option value="01">선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="name">
+								<select id="" class="form-select" data-choices data-choices-search-false>
+									<option value="01">선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="price">50,000</div>
+							<div class="link"><a href="#" class="btn btn-outline-first btn-sm">삭제</a></div>
+						</li>
+					</ul><!-- // card-list-simple -->
+
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : pageModal2 -->
+
+	<!-- pageModal3 -->
+	<div class="modal fade" id="pageModal3" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">스케줄</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+
+					<div class="row">
+						<div class="col-6 offset-right-6">
+							<label for="" class="form-label">날짜</label>
+							<div class="datepicker-wrap">
+								<input type="text" class="form-control form-datepicker" placeholder="날짜를 선택하세요" value="2023-11-01">
+								<div class="datepicker-box">
+									<div class="datepicker-head">
+										<div class="datepicker-btn datepicker-prev"></div>
+										<div class="datepicker-title">2023 11월</div>
+										<div class="datepicker-btn datepicker-next"></div>
+									</div>
+									<div class="datepicker-body">
+										<div class="datepicker-name">
+											<div class="datepicker-cell">일</div>
+											<div class="datepicker-cell">월</div>
+											<div class="datepicker-cell">화</div>
+											<div class="datepicker-cell">수</div>
+											<div class="datepicker-cell">목</div>
+											<div class="datepicker-cell">금</div>
+											<div class="datepicker-cell">토</div>
+										</div>
+										<div class="datepicker-day">
+											<div class="datepicker-cell other"><span>29</span></div>
+											<div class="datepicker-cell other"><span>30</span></div>
+											<div class="datepicker-cell other"><span>31</span></div>
+											<div class="datepicker-cell"><span>1</span></div>
+											<div class="datepicker-cell"><span>2</span></div>
+											<div class="datepicker-cell"><span>3</span></div>
+											<div class="datepicker-cell"><span>4</span></div>
+											<div class="datepicker-cell"><span>5</span></div>
+											<div class="datepicker-cell"><span>6</span></div>
+											<div class="datepicker-cell"><span>7</span></div>
+											<div class="datepicker-cell active"><span>8</span></div>
+											<div class="datepicker-cell"><span>9</span></div>
+											<div class="datepicker-cell"><span>10</span></div>
+											<div class="datepicker-cell"><span>11</span></div>
+											<div class="datepicker-cell"><span>12</span></div>
+											<div class="datepicker-cell"><span>13</span></div>
+											<div class="datepicker-cell"><span>14</span></div>
+											<div class="datepicker-cell"><span>15</span></div>
+											<div class="datepicker-cell"><span>16</span></div>
+											<div class="datepicker-cell"><span>17</span></div>
+											<div class="datepicker-cell"><span>18</span></div>
+											<div class="datepicker-cell"><span>19</span></div>
+											<div class="datepicker-cell"><span>20</span></div>
+											<div class="datepicker-cell"><span>21</span></div>
+											<div class="datepicker-cell"><span>22</span></div>
+											<div class="datepicker-cell"><span>23</span></div>
+											<div class="datepicker-cell"><span>24</span></div>
+											<div class="datepicker-cell"><span>25</span></div>
+											<div class="datepicker-cell"><span>26</span></div>
+											<div class="datepicker-cell"><span>27</span></div>
+											<div class="datepicker-cell"><span>28</span></div>
+											<div class="datepicker-cell"><span>29</span></div>
+											<div class="datepicker-cell"><span>30</span></div>
+											<div class="datepicker-cell other"><span>1</span></div>
+											<div class="datepicker-cell other"><span>2</span></div>
+										</div>
+									</div>
+								</div><!-- // datepicker-box -->
+							</div><!-- // datepicker-wrap -->
+
+						</div>
+						<div class="col-6 offset-right-6">
+							<label for="" class="form-label">시간</label>
+							<div class="row-cols-2">
+								<div>
+									<select id="" class="form-select" data-choices data-choices-search-false>
+										<option value="01">14</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div>
+									<input type="text" class="form-control" value="0">
+								</div>
+							</div><!-- // row-cols-2 -->
+
+						</div>
+						<div class="col-6 offset-right-6">
+							<label for="" class="form-label">구분</label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">면담</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">메모</label>
+							<input type="text" class="form-control" value="메모메모메모">
+						</div>
+					</div><!-- // row -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-outline-light btn-sm">닫기</button>
+						<button type="submit" class="btn btn-first btn-sm">저장</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : pageModal3 -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>

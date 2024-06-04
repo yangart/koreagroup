@@ -1,0 +1,67 @@
+:root {
+    --min-width:1480px;
+    --appmenu-width:240px;
+    --appmenu-width-sm:70px;
+    --font-family:'Pretendard',sans-serif;
+    --font-size:16px;
+    --font-weight:400;
+    --line-height:1.25;
+    --text-align:left;
+    --body-color:#212529;
+    --body-bg:#f0f1f7;
+    --border-bg:#fff;
+    --border-color:#ced4da;
+    --border-color-light:#efefef;
+    --border-width:1px;
+    --border-radius:4px;
+    --btn-padding-y:4px;
+    --btn-padding-x:16px;
+    --btn-padding-ico:30px;
+    --btn-font-size:14px;
+    --btn-line-height:20px;
+    --placeholder-color:#c0c2c3;
+    --btn-point-color:#845ae0;
+    --btn-point-color-h:#6a48b3;
+    --btn-deep-color:#405189;
+    --btn-deep-color-h:#364574;
+    --form-control-height:32px;
+    --first-color:#845ae0;
+    --second-color:#ff710a;
+    --third-color:#00b031;
+    --fourth-color:#3ba4fd;
+    --gray-color:#9a9a9a;
+
+   /* --fc : fullCalendar js */
+    --fc-small-font-size: .85em;
+    --fc-page-bg-color: #fff;
+    --fc-neutral-bg-color: #fff;
+    --fc-neutral-text-color: #808080;
+    --fc-border-color: var(--border-color-light);
+  
+    --fc-button-text-color: #fff;
+    --fc-button-bg-color: var(--btn-point-color-h);
+    --fc-button-border-color: #fff;
+    --fc-button-hover-bg-color: #ffffff33;
+    --fc-button-hover-border-color: #fff;
+    --fc-button-active-bg-color: #fff;
+    --fc-button-active-border-color: #fff;
+  
+    --fc-event-bg-color: #fff;
+    --fc-event-border-color: #fff;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0);
+  
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+  
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
+  
+    --fc-non-business-color: rgba(215, 215, 215, 0.3);
+    --fc-bg-event-color: rgb(143, 223, 130);
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, 0.3);
+    --fc-today-bg-color: rgba(255, 220, 40, 0.15);
+    --fc-now-indicator-color: red;
+}

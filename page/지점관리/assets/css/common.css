@@ -273,6 +273,7 @@
 .mbody-survey-foot dt * + em::after{display:block;clear:both;content:'';position:absolute;top:50%;left:0;width:1px;height:8px;margin-top:-4px;background:#d9d9d9;}
 
 /* 설문지 */
+.pt-survey-head {margin-bottom:1rem;}
 .mbody-survey{padding-bottom:16px;border-radius:4px;border:solid 1px #ced4da;}
 .mbody-survey-list{max-height:546px;padding:0 20px 0 16px;}
 .mbody-survey-list .list-item{display:flex;justify-content:center;align-items:center;height:52px;padding:16px 0 16px;font-size:14px;line-height:1.43;color:#212529;}
