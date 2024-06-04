@@ -506,28 +506,23 @@ a {
 }
 
 .bg-primary {
-  background-color: #845ae0 !important;
+  background-color:var(--first-color);
   color: #fff;
 }
-
 .bg-secondary {
-  background-color: #ced4da !important;
+  background-color: var(--second-color);
 }
-
 .bg-warning {
-  background-color: #ffa133 !important;
+  background-color: var(--color-ye);
 }
-
 .bg-danger {
-  background-color: #ff3366 !important;
+  background-color: var(--color-rd);
 }
-
 .bg-light {
-  background-color: #ff65d4 !important;
+  background-color: var(--color-pk);
 }
-
 .bg-success {
-  background-color: #405189 !important;
+  background-color: var(--color-nv);
 }
 
 .btn-link {
@@ -544,59 +539,29 @@ a {
   }
 }
 
-.txt-primary {
-  color: #845ae0 !important;
-}
-
-.txt-secondary {
-  color: #ced4da !important;
-}
-
-.txt-warning {
-  color: #ffa133 !important;
-}
-
-.txt-danger {
-  color: #ff3366 !important;
-}
-
-.txt-light {
-  color: #ff65d4 !important;
-}
-
-.txt-success {
-  color: #405189 !important;
-}
-
 .color-primary {
-  color: #076aff !important;
+  color: var(--color-bl);
 }
-
 .color-secondary {
-  color: #ced4da !important;
+  color: var(--color-gr);
 }
-
 .color-warning {
-  color: #ffa133 !important;
+  color:var(--color-ye);
 }
-
 .color-danger {
-  color: #ff3366 !important;
+  color: var(--color-rd);
 }
-
 .color-light {
-  color: #ff65d4 !important;
+  color: var(--color-pk);
 }
-
 .color-success {
-  color: #405189 !important;
+  color: var(--color-nv);
 }
 
 .btn-icon i {
   text-indent: -9999px;
   font-size: 0;
 }
-
 .ico-attendance {
   display: block;
   width: 16px;
@@ -826,7 +791,7 @@ textarea.form-control {
     opacity: 0;
   }
 
-  .require { color:red; }
+  em { color:red; }
 }
 
 .form-inline {

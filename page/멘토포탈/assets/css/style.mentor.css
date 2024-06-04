@@ -27,17 +27,28 @@
   --btn-padding-ico:30px;
   --btn-font-size:14px;
   --btn-line-height:20px;
+  --color-ye:#ffa133;
+  --color-or:#ff710a;
+  --color-rd:#ff3366;
+  --color-pk:#ff65d4;
+  --color-nv:#405189;
+  --color-nv-dk:#364574;
+  --color-sk:#3ba4fd;
+  --color-bl:#076aff;
+  --color-gn:#00b031;
+  --color-vi:#845ae0;
+  --color-vi-dk:#6a48b3;
+  --color-gr:#ced4da;
+  --color-gr-dk:#9a9a9a;
   --placeholder-color:#c0c2c3;
-  --btn-point-color:#845ae0;
-  --btn-point-color-h:#6a48b3;
-  --btn-deep-color:#405189;
-  --btn-deep-color-h:#364574;
+  --btn-point-color:var(--color-vi);
+  --btn-point-color-h:var(--color-vi-dk);
+  --btn-deep-color:var(--color-nv);
+  --btn-deep-color-h:var(--color-nv-dk);
   --form-control-height:32px;
-  --first-color:#845ae0;
-  --second-color:#ff710a;
-  --third-color:#00b031;
-  --fourth-color:#3ba4fd;
-  --gray-color:#9a9a9a;
+  --first-color:var(--color-vi);
+  --second-color:var(--color-or);
+  --third-color:var(--color-gn);
   /* --fc : fullCalendar js */
   --fc-small-font-size: .85em;
   --fc-page-bg-color: #fff;
@@ -544,28 +555,28 @@ a:hover, a:active, a:focus {
 }
 
 .bg-primary {
-  background-color: #845ae0 !important;
+  background-color: var(--first-color);
   color: #fff;
 }
 
 .bg-secondary {
-  background-color: #ced4da !important;
+  background-color: var(--second-color);
 }
 
 .bg-warning {
-  background-color: #ffa133 !important;
+  background-color: var(--color-ye);
 }
 
 .bg-danger {
-  background-color: #ff3366 !important;
+  background-color: var(--color-rd);
 }
 
 .bg-light {
-  background-color: #ff65d4 !important;
+  background-color: var(--color-pk);
 }
 
 .bg-success {
-  background-color: #405189 !important;
+  background-color: var(--color-nv);
 }
 
 .btn-link {
@@ -581,52 +592,28 @@ a:hover, a:active, a:focus {
   color: inherit;
 }
 
-.txt-primary {
-  color: #845ae0 !important;
-}
-
-.txt-secondary {
-  color: #ced4da !important;
-}
-
-.txt-warning {
-  color: #ffa133 !important;
-}
-
-.txt-danger {
-  color: #ff3366 !important;
-}
-
-.txt-light {
-  color: #ff65d4 !important;
-}
-
-.txt-success {
-  color: #405189 !important;
-}
-
 .color-primary {
-  color: #076aff !important;
+  color: var(--color-bl);
 }
 
 .color-secondary {
-  color: #ced4da !important;
+  color: var(--color-gr);
 }
 
 .color-warning {
-  color: #ffa133 !important;
+  color: var(--color-ye);
 }
 
 .color-danger {
-  color: #ff3366 !important;
+  color: var(--color-rd);
 }
 
 .color-light {
-  color: #ff65d4 !important;
+  color: var(--color-pk);
 }
 
 .color-success {
-  color: #405189 !important;
+  color: var(--color-nv);
 }
 
 .btn-icon i {
@@ -852,7 +839,7 @@ textarea.form-control {
 .form-label.disabled {
   opacity: 0;
 }
-.form-label .require {
+.form-label em {
   color: red;
 }
 
