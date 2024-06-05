@@ -1279,6 +1279,18 @@ body {
   min-width: 72px;
 }
 
+.input-group {
+  .choices {
+    margin-bottom:0;
+    &:nth-of-type(1) {
+      .choices__inner {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+    }
+  }
+}
+
 .choices__list {
   margin: 0;
   padding-left: 0;

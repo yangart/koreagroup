@@ -295,3 +295,523 @@
         box-shadow: none;
     }
 }
+
+
+/* bootstrap datepicker */
+.dropdown-menu {
+    border: 0 none;
+    // box-shadow: (-4px) 0 12px 0 rgba(0, 0, 0, 0.03), inset 1px 0 0 0 #e7e7e7;
+    animation-name: DropDownSlide;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    position: absolute;
+    z-index: 1000;
+}
+.datepicker {
+    padding: 12px;
+    border-radius: 4px;
+    direction: ltr;
+    border:1px solid var(--color-gr);
+    
+    table {
+      margin: 0;
+      user-select: none;
+    }  
+    td, th {
+      text-align: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: none;
+      font-size:14px;
+    }
+}  
+.datepicker-inline {
+    width: 240px;
+}
+  
+  .datepicker-rtl {
+    direction: rtl;  
+    &.dropdown-menu {
+      left: auto;
+    }  
+    table tr td span {
+      float: right;
+    }
+  }
+  
+  .datepicker-dropdown {
+    top: 0;
+    left: 0;
+  
+    &:before {
+      content: '';
+      display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #999;
+      border-top: 0;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      position: absolute;
+    }  
+    &:after {
+      content: '';
+      display: inline-block;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #fff;
+      border-top: 0;
+      position: absolute;
+    }  
+    &.datepicker-orient-left {
+      &:before {
+        left: 6px;
+      }  
+      &:after {
+        left: 7px;
+      }
+    }  
+    &.datepicker-orient-right {
+      &:before {
+        right: 6px;
+      }  
+      &:after {
+        right: 7px;
+      }
+    }  
+    &.datepicker-orient-bottom {
+      &:before {
+        top: -7px;
+      }  
+      &:after {
+        top: -6px;
+      }
+    }  
+    &.datepicker-orient-top {
+      &:before {
+        bottom: -7px;
+        border-bottom: 0;
+        border-top: 7px solid #999;
+      }  
+      &:after {
+        bottom: -6px;
+        border-bottom: 0;
+        border-top: 6px solid #fff;
+      }
+    }
+  }
+  
+  .table-striped .datepicker table tr {
+    td, th {
+      background-color: transparent;
+    }
+  }
+  
+  .datepicker {
+    table tr td {
+      &.day {
+        &:hover, &.focused {
+          background: #eee;
+          cursor: pointer;
+        }
+      }  
+      &.old, &.new {
+        color: #999;
+      }
+  
+      &.disabled {
+        background: none;
+        color: #999;
+        cursor: default;
+  
+        &:hover {
+          background: none;
+          color: #999;
+          cursor: default;
+        }
+      }
+  
+      &.highlighted {
+        background: #d9edf7;
+        border-radius: 0;
+      }
+  
+      &.today {
+        background-color: #fde19a;
+        color: #000;
+  
+        &:hover {
+          color: #000;
+        }
+  
+        &.disabled,
+        &[disabled] {
+            color:#999;
+          &:hover, &:active, &:hover:active {
+            background-color: #fde19a;
+            color:#999;
+          }
+        }
+      }
+  
+      &.range {
+        background: #eee;
+        border-radius: 0;  
+        &:hover {
+          background: #eee;
+        }  
+        &.disabled {
+          background: #eee;  
+        }
+  
+        &.today {
+          background-color: #f3d17a;  
+          &:hover {
+            background-color: #f3d17a;
+          }
+  
+          &.disabled {
+            background-color: #f3d17a;
+            color:#999;  
+          }  
+        }
+      }
+  
+      &.selected {
+        background-color: var(--first-color);
+        color: #fff;
+  
+        &:hover,&.disabled:hover, &:active, &:hover:active {
+            background-color: var(--first-color);
+        }
+  
+        &.disabled {          
+          color: #999;  
+          &:hover, &:active, &:hover:active {
+            color: #999;
+          }
+        }
+  
+  
+        &.active, &:hover.active {
+          background-color: #808080;
+        }
+  
+        &.disabled {
+          &.active, &:hover.active {
+            background-color: #808080;
+          }
+  
+          background-color: #808080;
+        }
+  
+        &:hover.disabled {
+          background-color: #808080;
+        }
+  
+        &.disabled {
+          &.disabled, &:hover.disabled {
+            background-color: #808080;
+          }
+        }
+  
+        &[disabled], &:hover[disabled] {
+          background-color: #808080;
+        }
+  
+        &.disabled {
+          &[disabled], &:hover[disabled] {
+            background-color: #808080;
+          }
+        }
+  
+        &:active, &:hover:active {
+          background-color: #666666 \9;
+        }
+  
+        &.disabled {
+          &:active, &:hover:active {
+            background-color: #666666 \9;
+          }
+        }
+  
+        &.active, &:hover.active {
+          background-color: #666666 \9;
+        }
+  
+        &.disabled {
+          &.active, &:hover.active {
+            background-color: #666666 \9;
+          }
+        }
+      }
+  
+      &.active {
+        background-color: var(--btn-point-color);        
+        color: #fff;
+  
+        &:hover {
+          background-color: var(--btn-point-color-h);
+        }
+  
+        &.disabled {
+          background-color: var(--color-gr-dk);
+          color: #fff;
+  
+          &:hover {
+            background-color: var(--color-gr-dk);
+          }
+        }
+  
+        &:hover, &.disabled:hover, &:active, &:hover:active {
+          background-color: var(--btn-point-color);
+        }
+  
+        &.disabled {
+          &:active, &:hover:active {
+            background-color: var(--btn-point-color);
+          }
+        }
+  
+        &.active, &:hover.active {
+          background-color: var(--btn-point-color);
+        }
+  
+        &.disabled {
+          &.active, &:hover.active {
+            background-color: var(--btn-point-color);
+          }
+  
+          background-color: var(--btn-point-color);
+        }
+  
+        &:hover.disabled {
+          background-color: var(--btn-point-color);
+        }
+  
+        &.disabled {
+          &.disabled, &:hover.disabled {
+            background-color: var(--btn-point-color);
+          }
+        }
+  
+        &[disabled], &:hover[disabled] {
+          background-color: var(--btn-point-color);
+        }
+  
+      }
+  
+      span {
+        display: block;
+        width: 23%;
+        height: 54px;
+        line-height: 54px;
+        float: left;
+        margin: 1%;
+        cursor: pointer;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+  
+        &:hover, &.focused {
+          background: #eee;
+        }
+  
+        &.disabled {
+          background: none;
+          color: #999;
+          cursor: default;
+  
+          &:hover {
+            background: none;
+            color: #999;
+            cursor: default;
+          }
+        }
+  
+        &.active {
+          background-color: var(--btn-point-color);
+          background-repeat: repeat-x;
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--btn-point-color)', GradientType=0);
+          border-color: var(--btn-point-color) var(--btn-point-color) var(--btn-point-color-h);
+          border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+          filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+          color: #fff;
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  
+          &:hover {
+            background-color: var(--btn-point-color);
+            background-image: -moz-linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-image: -ms-linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--btn-point-color)));
+            background-image: -webkit-linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-image: -o-linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-image: linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--btn-point-color)', GradientType=0);
+            border-color: var(--btn-point-color) var(--btn-point-color) var(--btn-point-color-h);
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+          }
+  
+          &.disabled {
+            background-color: var(--btn-point-color);
+            background-image: -moz-linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-image: -ms-linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--btn-point-color)));
+            background-image: -webkit-linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-image: -o-linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-image: linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--btn-point-color)', GradientType=0);
+            border-color: var(--btn-point-color) var(--btn-point-color) var(--btn-point-color-h);
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  
+            &:hover {
+              background-color: var(--btn-point-color);
+              background-image: -moz-linear-gradient(to bottom, #08c, var(--btn-point-color));
+              background-image: -ms-linear-gradient(to bottom, #08c, var(--btn-point-color));
+              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--btn-point-color)));
+              background-image: -webkit-linear-gradient(to bottom, #08c, var(--btn-point-color));
+              background-image: -o-linear-gradient(to bottom, #08c, var(--btn-point-color));
+              background-image: linear-gradient(to bottom, #08c, var(--btn-point-color));
+              background-repeat: repeat-x;
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--btn-point-color)', GradientType=0);
+              border-color: var(--btn-point-color) var(--btn-point-color) var(--btn-point-color-h);
+              border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+              filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+              color: #fff;
+              text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+            }
+          }
+  
+          &:hover, &.disabled:hover, &:active, &:hover:active {
+            background-color: var(--btn-point-color);
+          }
+  
+          &.disabled {
+            &:active, &:hover:active {
+              background-color: var(--btn-point-color);
+            }
+          }
+  
+          &.active, &:hover.active {
+            background-color: var(--btn-point-color);
+          }
+  
+          &.disabled {
+            &.active, &:hover.active {
+              background-color: var(--btn-point-color);
+            }
+  
+            background-color: var(--btn-point-color);
+          }
+  
+          &:hover.disabled {
+            background-color: var(--btn-point-color);
+          }
+  
+          &.disabled {
+            &.disabled, &:hover.disabled {
+              background-color: var(--btn-point-color);
+            }
+          }
+  
+          &[disabled], &:hover[disabled] {
+            background-color: var(--btn-point-color);
+          }
+  
+          &.disabled {
+            &[disabled], &:hover[disabled] {
+              background-color: var(--btn-point-color);
+            }
+          }
+  
+          &:active, &:hover:active {
+            background-color: var(--btn-point-color-h)  \9;
+          }
+  
+          &.disabled {
+            &:active, &:hover:active {
+              background-color: var(--btn-point-color-h)  \9;
+            }
+          }
+  
+          &.active, &:hover.active {
+            background-color: var(--btn-point-color-h)  \9;
+          }
+  
+          &.disabled {
+            &.active, &:hover.active {
+              background-color: var(--btn-point-color-h)  \9;
+            }
+          }
+        }
+      }
+    }
+  
+    .datepicker-switch {
+      width: 145px;
+      cursor: pointer;
+    }
+  
+    .prev, .next, tfoot tr th {
+      cursor: pointer;
+    }  
+    .datepicker-switch:hover {
+        color:var(--btn-point-color);
+    }
+    .prev:hover, .next:hover, tfoot tr th:hover {
+        background: #eee;
+    }  
+    .prev.disabled, .next.disabled {
+        visibility: hidden;
+    }  
+    .cw {
+      font-size: 10px;
+      width: 12px;
+      padding: 0 2px 0 5px;
+      vertical-align: middle;
+    }
+  }  
+  .input-append.date .add-on, 
+  .input-prepend.date .add-on {
+    cursor: pointer;
+  }  
+  .input-append.date .add-on i, 
+  .input-prepend.date .add-on i {
+    margin-top: 3px;
+  }  
+  .input-daterange {
+    input {
+      text-align: center;  
+      &:first-child {
+        border-radius: 3px 0 0 3px;
+      }  
+      &:last-child {
+        border-radius: 0 3px 3px 0;
+      }
+    }  
+    .add-on {
+      display: inline-block;
+      width: auto;
+      min-width: 16px;
+      height: 18px;
+      padding: 4px 5px;
+      font-weight: normal;
+      line-height: 18px;
+      text-align: center;
+      text-shadow: 0 1px 0 #fff;
+      vertical-align: middle;
+      background-color: #eee;
+      border: 1px solid #ccc;
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+  }
+  

@@ -7,7 +7,13 @@
   font-weight: 400;
   font-style: normal;
 }
-
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 16px
+}
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -93,7 +99,7 @@ pre {
   white-space: -o-pre-wrap;
   word-break: break-all;
 }
-
+hr { opacity:.1; }
 ol, ul {
   list-style: none;
 }
@@ -172,6 +178,9 @@ a, button {
   outline: 0 !important;
   position: relative;
   text-decoration: none;
+  border:0;
+  background:none;
+  padding:0;
 }
 
 address, em, i {
@@ -589,7 +598,7 @@ fieldset:disabled .btn {
 }
 
 .text-req {
-  color: #ff3366;
+  color: var(--color-rd);
 }
 
 .form-select {
@@ -628,6 +637,7 @@ fieldset:disabled .btn {
   line-height: 1.43;
   text-align: center;
   color: #212529;
+  margin-top:.3em;
 }
 
 .form-link {
@@ -678,6 +688,8 @@ textarea.form-control {
   text-align: left;
   color: #f36;
 }
+
+
 
 .input-group-text {
   display: flex;
@@ -748,6 +760,10 @@ textarea.form-control {
   }
 }
 
+.row > .form-check {
+  margin-top: var(--bs-gutter-y);
+}
+
 .form-check-input, .form-check-label {
   line-height: 20px;
 }
@@ -780,18 +796,21 @@ textarea.form-control {
 }
 
 .form-label {
-  margin-bottom: 7px;
+  margin-bottom: 4px;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   text-align: left;
-  color: #aaa;
+  color: #999;
 
   &.disabled {
     opacity: 0;
   }
-
-  em { color:red; }
+  .text-req { 
+    margin-left:4px;
+    transform:translateY(2px);
+    display:inline-block;
+  }
 }
 
 .form-inline {
