@@ -171,7 +171,9 @@
 .modal{min-width:1024px;padding:0 1.75rem !important}
 .modal-dialog{margin:1.75rem auto;}
 
-.modal.show{display:block;	}
+/* 2024-06-05 modal dim */
+.modal.show{display:block;background: rgba(0, 0, 0, .3);}
+.modal-backdrop.show {display: none;}
 .modal-reg{max-width:850px;}
 
 .modal-xxl{max-width:1800px;min-width:1480px;}
@@ -554,3 +556,7 @@
 
 .mbody-timetable{margin-top:16px;}
 .mbody-timetable * + .table-title{margin-top:16px;}
+
+/* 2024-06-05 content scroll-y */
+.survey-cont.overflow-y-scroll{padding-top:10px;padding-right:5px;margin:10px 0;max-height: calc((100vh - 46vh));}
+.survey-cont.overflow-y-scroll .row > ul{margin-top:0;}
