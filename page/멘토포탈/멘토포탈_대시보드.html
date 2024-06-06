@@ -615,7 +615,7 @@
 				</div><!-- // modal-header -->
 
 				<div class="modal-body">
-					<div class="row">
+					<div class="row row-y16">
 						<div class="col-6">
 							<label for="" class="form-label">계열<em class="text-req">*</em></label>
 							<input type="text" class="form-control" value="">
@@ -666,10 +666,14 @@
 						</div>
 						<div class="col-6">
 							<label for="" class="form-label">생년월일</label>
-							<div class="row">
+							<div class="row row-x8">
 								<div class="col-6"><input type="text" class="form-control" value="" placeholder="- 없이 작성하세요"></div>
-								<div class="col-2"><input type="text" class="form-control" value="" readonly></div>
-								<div class="col-auto"><div class="form-unit">세</div></div>
+								<div class="col-3">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="" readonly>
+										<span class="input-group-text">세</span>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="col-6">
@@ -718,7 +722,7 @@
 						</div>
 						<div class="col-6">
 							<label for="" class="form-label">계약기간</label>							
-							<div class="row">
+							<div class="row row-x8">
 								<div class="col-6">
 									<select id="" class="form-select" data-choices data-choices-search-false>
 										<option value="01">선택</option>
@@ -764,7 +768,7 @@
 						</div>
 						<div class="col-6">
 							<label for="" class="form-label">거주지</label>							
-							<div class="row">
+							<div class="row row-x8">
 								<div class="col-6">
 									<select id="" class="form-select" data-choices data-choices-search-false>
 										<option value="01">선택</option>
@@ -792,8 +796,8 @@
 						<div class="col-12">
 							<label for="" class="form-label">입사 요청일<em class="text-req">*</em></label>
 							<div class="row align-items-center">
-								<div class="datepicker-wrap col-3">
-									<input type="text" class="form-control form-datepicker" id="datepicker" placeholder="날짜를 선택하세요" value="2024-06-05">
+								<div class="col-3">
+									<input type="text" class="form-control form-datepicker" placeholder="날짜를 선택하세요" value="2024-06-05">
 								</div>							
 								<div class="form-check col-auto ms-4">
 									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -824,7 +828,7 @@
 						<colgroup>
 							<col style="width:7%">
 							<col>
-							<col>
+							<col style="width:25%">
 							<col style="width:8%">
 						</colgroup>
 						<thead>
@@ -837,51 +841,221 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>5</td>
+								<td>1</td>
 								<td>2023-11-16 10:00</td>
-								<td>김혁신 과장</td>
-								<td><button type="button" class="btn-delete"></button></td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>2023-11-16</td>
-								<td>사용</td>
-								<td><button type="button" class="btn-delete"></button></td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>2023-11-16</td>
-								<td>사용</td>
+								<td>김혁신 팀장</td>
 								<td><button type="button" class="btn-delete"></button></td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td>2023-11-16</td>
-								<td>사용</td>
+								<td>2023-11-16 10:00</td>
+								<td>일이삼 실장</td>
 								<td><button type="button" class="btn-delete"></button></td>
 							</tr>
 							<tr>
-								<td>1</td>
-								<td>2023-11-16</td>
-								<td>사용</td>
+								<td>3</td>
+								<td>
+									<div class="d-inline-flex row-x8">
+										<div class="col-5 me-2">
+											<input type="text" class="form-control form-datepicker" placeholder="날짜를 선택하세요" value="2024-06-05">
+										</div>
+										<div class="col">
+											<div class="input-group">
+												<select id="" class="form-select" data-choices data-choices-search-false>
+													<option value="01">00</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+												<span class="input-group-text">시</span>
+											</div>
+										</div>
+										<div class="col">
+											<div class="input-group">
+												<select id="" class="form-select" data-choices data-choices-search-false>
+													<option value="01">00</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+												<span class="input-group-text">분</span>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>홍길동 대표</td>
 								<td><button type="button" class="btn-delete"></button></td>
 							</tr>
 						</tbody>
 					</table>
+					<div class="row row-y16 mt-1">
+						<div class="col-12">
+							<label for="" class="form-label">메모</label>	
+							<textarea class="form-control" cols="" rows=""></textarea>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">면접상태</label>
+							<div class="input-group">
+								<select class="form-select">
+									<option>합격</option>
+									<option>불합격</option>
+								</select>
+								<div class="input-group-text col-8 ms-2">
+									김혁신 팀장 2024-06-14
+								</div>
+							</div>
+						</div>
+					</div>
 				</div><!-- // modal-body -->
 
 				<div class="modal-footer form-btn justify-content-between">
 					<div>
-						<button type="submit" class="btn btn-outline-light btn-sm">초기화</button>
+						<button type="submit" class="btn btn-outline-light btn-md">삭제</button>
 					</div>
 					<div>
-						<button type="submit" class="btn btn-outline-light btn-sm">닫기</button>
-						<button type="submit" class="btn btn-first btn-sm">저장</button>
+						<button type="submit" class="btn btn-first btn-md">저장</button>
+						<button type="submit" class="btn btn-first btn-md">전송</button>
 					</div>
 				</div><!-- // form-btn -->
 			</div>
 		</div>
 	</div><!-- // modal : pageModal1 -->
+
+	<!-- 스케줄 설정 -->
+	<div class="modal fade" id="pageModalSchedule" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+			<div class="modal-content"> 
+				<div class="modal-header">
+					<h5 class="modal-title">스케줄 설정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="row row-y16">
+						<div class="col-5">
+							<label for="" class="form-label">날짜<em class="text-req">*</em></label>
+							<input type="text" class="form-control form-datepicker" placeholder="날짜를 선택하세요" value="2024-06-05">
+						</div>
+						<div class="col-7">
+							<label for="" class="form-label">시간<em class="text-req">*</em></label>
+							<div class="row row-x8">
+								<div class="col-auto">
+									<div class="input-group">
+										<select id="" class="form-select" data-choices data-choices-search-false>
+											<option value="01">00</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+										<span class="input-group-text">시</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="input-group">
+										<select id="" class="form-select" data-choices data-choices-search-false>
+											<option value="01">00</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+										<span class="input-group-text">분</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-5">
+							<label for="" class="form-label">구분<em class="text-req">*</em></label>
+							<select id="" class="form-select" data-choices data-choices-search-false>
+								<option value="01">면담</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">내용</label>
+							<input type="text" class="form-control" placeholder="내용을 입력하세요.">
+						</div>
+					</div><!-- // row -->
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer form-btn justify-content-between">
+					<div>
+						<button type="submit" class="btn btn-outline-light btn-md">닫기</button>
+					</div>
+					<div>
+						<button type="submit" class="btn btn-first btn-md">저장</button>
+					</div>
+				</div><!-- // form-btn -->
+			</div>
+		</div>
+	</div>
+
+	<!-- 즐겨찾기 게시판 설정 -->
+	<div class="modal fade" id="pageModalBookmark" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+			<div class="modal-content"> 
+				<div class="modal-header">
+					<h5 class="modal-title">즐겨찾기 게시판 설정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<h6 class="mb-2 text-secondary">그룹공지</h6>
+					<ul class="list-group mb-4">
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark1-1">그룹공지</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark1-1">
+						</li>
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark1-2">고객칭찬접수게시판</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark1-2">
+						</li>
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark1-3">인사발령/위촉</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark1-3">
+						</li>
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark1-4">시설 및 청결관리</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark1-4">
+						</li>
+					</ul>
+
+					<h6 class="mb-2 text-secondary">계열/지정게시판</h6>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark2-1">계열전체공지</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark2-1">
+						</li>
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark2-2">계열 사업부게시판</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark2-2">
+						</li>
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark2-3">지점전체공지</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark2-3">
+						</li>
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark2-4">지점 사업부게시판</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark2-4">
+						</li>
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark2-5">학사관리</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark2-5">
+						</li>
+						<li class="list-group-item">
+							<label class="form-check-label" for="bookmark2-6">지점이야기</label>
+							<input class="form-check-input" type="checkbox" value="" id="bookmark2-6">
+						</li>
+					</ul>
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer form-btn justify-content-between">
+					<div>
+						<button type="submit" class="btn btn-outline-light btn-md">닫기</button>
+					</div>
+					<div>
+						<button type="submit" class="btn btn-first btn-md">저장</button>
+					</div>
+				</div><!-- // form-btn -->
+			</div>
+		</div>
+	</div>
 
 	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
@@ -1058,8 +1232,14 @@
 	  
 		$(function () {
 			$('#pageModalInterview').modal('show');
+			$('#pageModalSchedule').modal('show');
+			$('#pageModalBookmark').modal('show');
+			
+			$(document).on('hidden.bs.modal', '.modal', function () {
+				 $('.modal:visible').length && $(document.body).addClass('modal-open');
+			});
 
-			$('#datepicker').datepicker({
+			$('.form-datepicker').datepicker({
 				format: "yyyy-mm-dd",	
 				autoclose : true,	
 				datesDisabled : ['2024-06-06','2024-06-26'],

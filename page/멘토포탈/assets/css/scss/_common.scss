@@ -564,13 +564,13 @@
 }
 
 .modal-xxl {
-  max-width: 1800px;
-  min-width: 1480px;
+  max-width: 1320px;
+  min-width: 1280px;
 }
 
 .modal-xl {
-  max-width: 1600px;
-  min-width: 1280px;
+  max-width: 1200px;
+  min-width: 1080px;
 }
 
 .modal-lg {
@@ -966,12 +966,12 @@ body:not(.modal-open) .modal-footer {
   }
 
   .row {
-    --bs-gutter-x:24px;
-    --bs-gutter-y:16px;
+    // --bs-gutter-x:24px;
+    // --bs-gutter-y:16px;
 
-    > * > .row {
-       --bs-gutter-x:8px;
-    }
+    // > * > .row {
+    //    --bs-gutter-x:8px;
+    // }
   }
 
   .form-control {
@@ -3156,5 +3156,32 @@ a.list-more {
 .main-container {
   .schedule-card, .details-card {
     height: 584px;
+  }
+}
+
+
+.list-group {
+  .list-group-item {
+    padding:0;
+
+    &:has(:checked) {
+      .form-check-label {
+        background:var(--first-color-alpha);
+        color:var(--color-vi-dk);
+      }
+    }
+
+    .form-check-label {
+      padding:12px 32px 12px 16px;
+      font-size:14px;
+      line-height:20px;
+      display:block;
+      &:hover { background:var(--first-color-alpha); }
+    }
+    .form-check-input {
+      position:absolute;
+      top:12px;
+      right:16px;
+    }
   }
 }

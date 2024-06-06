@@ -26,7 +26,6 @@
     background:transparant;
 }
 
-
 html {
   position: relative;
   height: 100%;
@@ -637,7 +636,7 @@ fieldset:disabled .btn {
   line-height: 1.43;
   text-align: center;
   color: #212529;
-  margin-top:.3em;
+  margin-top:.35em;
 }
 
 .form-link {
@@ -689,25 +688,26 @@ textarea.form-control {
   color: #f36;
 }
 
-
-
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: 8px 14px;
-  font-size: 1rem;
+  padding: 6px 8px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #212529;
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
 
   img {
     width: 16px;
   }
+}
+.input-group:has(.input-group-text) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+  border-radius: var(--border-radius);
 }
 
 .input-group > {
@@ -1182,10 +1182,10 @@ textarea.form-editor {
   align-items: stretch !important;
 }
 
-.row {
-  --bs-gutter-x:4px;
-  --bs-gutter-y:0px;
-}
+// .row {
+//   --bs-gutter-x:4px;
+//   --bs-gutter-y:0px;
+// }
 
 .row-0 {
   --bs-gutter-x:0px !important;
@@ -2707,4 +2707,8 @@ textarea.form-editor {
   0% {
     width: 0;
   }
+}
+
+@function add-alpha($color-variable, $alpha) {
+  @return "#{$color-variable}#{$alpha}";
 }
