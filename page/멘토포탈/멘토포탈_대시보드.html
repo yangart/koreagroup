@@ -1071,141 +1071,107 @@
 	<script>
 
 		document.addEventListener('DOMContentLoaded', function() {
-		  var calendarEl = document.getElementById('calendar');
+			var calendarEl = document.getElementById('calendar');
 	  
-		  var events = [
+			var events = [
 		  	  {
 				category:'상담',
-				bgcolor: 'var(--second-color)', 
 				title: '종일이벤트는 시간표시 안함',
 				start: '2024-06-01',
 			  },
 			  {
 				category:'면담',
-				bgcolor: 'var(--fourth-color)', 
 				title: '종일이벤트는 시간표시 안함',
 				start: '2024-06-07',
 				end: '2024-06-10'
 			  },
 			  {
 				category:'면접',
-				bgcolor: 'var(--third-color)', 
 				groupId: 999,
 				title: 'Repeating Event',
 				start: '2024-06-04T16:00:00'
 			  },
 			  {
 				category:'면접',
-				bgcolor: 'var(--third-color)', 
 				groupId: 999,
 				title: 'Repeating Event',
 				start: '2024-06-16T16:00:00'
 			  },
 			  {
 				category:'기타',
-				bgcolor: 'var(--gray-color)', 
 				title: 'Conference',
 				start: '2024-06-11',
 				end: '2024-06-13'
 			  },
 			  {
 				category:'컨택',
-				bgcolor: 'var(--first-color)', 
 				title: 'Meeting',
 				start: '2024-06-12T10:30:00',
 				end: '2024-06-12T12:30:00'
 			  },
 			  {
 				category:'상담',
-				bgcolor: 'var(--second-color)', 
 				title: '1 상담이 30분 단위라면?',
 				start: '2024-06-05T12:00:00'
 			  },
 			  {
 				category:'상담',
-				bgcolor: 'var(--second-color)', 
 				title: '2 상담이 30분 단위라면? 2',
 				start: '2024-06-12T12:30:00'
 			  },
 			  {
 				category:'상담',
-				bgcolor: 'var(--second-color)', 
 				title: '3 상담이 30분 단위라면? 3',
 				start: '2024-06-12T13:00:00'
 			  },
 			  {
 				category:'면담',
-				bgcolor: 'var(--fourth-color)', 
 				title: 'Meeting',
 				start: '2024-06-12T14:30:00'
 			  },
 			  {
 				category:'면담',
-				bgcolor: 'var(--fourth-color)', 
 				title: 'Happy Hour',
 				start: '2024-06-12T17:30:00'
 			  },
 			  {
 				category:'면담',
-				bgcolor: 'var(--fourth-color)', 
 				title: 'Dinner',
 				start: '2024-06-12T20:00:00'
 			  },
 			  {
 				category:'면접',
-				bgcolor: 'var(--fourth-color)', 
 				title: 'Birthday Party',
 				start: '2024-06-13T07:00:00'
 			  },
 			  {
 				category:'면접',
-				bgcolor: 'var(--fourth-color)', 
 				title: 'Click for Google',
-				url: 'http://google.com/',
 				start: '2024-06-28'
 			  }
-		  ];
+			];
 
-		  var calendar = new FullCalendar.Calendar(calendarEl, {
-			initialDate: new Date(),
-			locale: 'ko',
-			initialView: 'dayGridMonth',
-			nowIndicator: true,
-			headerToolbar: {
-				left: 'prev,title,next today',
-				right: 'dayGridMonth,timeGridWeek'
-			},
-			navLinks: true, // can click day/week names to navigate views
-			editable: true,
-			selectable: true,
-			selectMirror: true,
-			dayMaxEvents: true, // allow "more" link when too many events
-			moreLinkText: function(num) {
-			return `+ ${num}개 더보기`; 
-			},
-			titleFormat: {},
-			datesSet: function(info) {
-				var start = info.start;
-				var end = new Date(info.end - 1); // end date is exclusive, adjust to include it
-				var options = { month: 'long', day: 'numeric' };
-				var startStr = start.toLocaleDateString('ko-KR', options);
-				var endStr = end.toLocaleDateString('ko-KR', options);
-
-				document.querySelector('.fc-toolbar-title').textContent = `${startStr} ~ ${endStr}`;
-			},
-			dayHeaderFormat: { 
-				weekday: 'short'
-			},
-			views: {
-				timeGridWeek: { 
-					dayHeaderFormat: { weekday: 'short',  day: 'numeric' },
-					slotLabelFormat: { hour: '2-digit', minute: '2-digit', hour12: false } 
+		  	events = events.map(event => {
+				switch (event.category) {
+					case '상담':
+						event.className = 'event-counsel';
+						break;
+					case '면담':
+						event.className = 'event-facetoface';
+						break;
+					case '면접':
+						event.className = 'event-interview';
+						break;
+					case '컨텍':
+						event.className = 'event-contact';
+						break;
+					default:
+						event.className = 'event-etc';
 				}
-			},
-			slotMinTime: '08:00:00',
-			slotMaxTime: '20:00:00',
-			events: events,
-			eventContent: function(arg) {
+				return event;
+			});
+
+			function eventContentSet(arg) {
 				let dotEl = document.createElement('span');
 				dotEl.classList.add('fc-event-cate');
 				dotEl.style.backgroundColor = arg.event.extendedProps.bgcolor;
@@ -1225,16 +1191,69 @@
 				}
 				return { domNodes: arrayOfDomNodes };
 			}
-		  });
+
+			function handleEventClick(info) {
+				var eventCategory = info.event.extendedProps.category;
+				if (eventCategory === '면접') {
+					$('#pageModalInterview').modal('show');
+				} else if (eventCategory === '상담') {
+					window.open('popup.html', '_blank', 'width=600,height=400');
+				}
+			}
+
+			function handleDateClick(info) {
+				$('#pageModalSchedule').modal('show');
+			}
+
+			var calendar = new FullCalendar.Calendar(calendarEl, {
+				initialDate: new Date(),
+				locale: 'ko',
+				initialView: 'dayGridMonth',
+				nowIndicator: true,
+				headerToolbar: {
+					left: 'prev,title,next today',
+					right: 'dayGridMonth,timeGridWeek'
+				},
+				navLinks: true, // can click day/week names to navigate views
+				editable: true,
+				selectable: true,
+				selectMirror: true,
+				dayMaxEvents: true, // allow "more" link when too many events
+				moreLinkText: function(num) {
+					return `+ ${num}개 더보기`; 
+				},
+				titleFormat: {},
+				datesSet: function(info) {
+					var start = info.start;
+					var end = new Date(info.end - 1); // end date is exclusive, adjust to include it
+					var options = { month: 'long', day: 'numeric' };
+					var startStr = start.toLocaleDateString('ko-KR', options);
+					var endStr = end.toLocaleDateString('ko-KR', options);
+
+					document.querySelector('.fc-toolbar-title').textContent = `${startStr} ~ ${endStr}`;
+				},
+				dayHeaderFormat: { 
+					weekday: 'short'
+				},
+				views: {
+					timeGridWeek: { 
+						dayHeaderFormat: { weekday: 'short',  day: 'numeric' },
+						slotLabelFormat: { hour: '2-digit', minute: '2-digit', hour12: false } 
+					}
+				},
+				slotMinTime: '08:00:00',
+				slotMaxTime: '20:00:00',
+				events: events,
+				eventContent: eventContentSet,
+				eventClick: handleEventClick,
+				dateClick: handleDateClick 
+			});
 	  
-		  calendar.render();
+			calendar.render();
 		});
 	  
 		$(function () {
-			$('#pageModalInterview').modal('show');
-			$('#pageModalSchedule').modal('show');
-			$('#pageModalBookmark').modal('show');
-			
+			/* 모달 2개 이상일 때 */
 			$(document).on('hidden.bs.modal', '.modal', function () {
 				 $('.modal:visible').length && $(document.body).addClass('modal-open');
 			});

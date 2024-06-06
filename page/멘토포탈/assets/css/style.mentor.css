@@ -4345,6 +4345,21 @@ body {
   font-weight: 600;
   font-size: 12px;
 }
+.fc-theme-standard .event-counsel .fc-event-cate {
+  background: var(--second-color);
+}
+.fc-theme-standard .event-facetoface .fc-event-cate {
+  background: var(--fourth-color);
+}
+.fc-theme-standard .event-interview .fc-event-cate {
+  background: var(--third-color);
+}
+.fc-theme-standard .event-contact .fc-event-cate {
+  background: var(--first-color);
+}
+.fc-theme-standard .event-etc .fc-event-cate {
+  background: var(--gray-color);
+}
 .fc-theme-standard .fc-event-title {
   flex: 1;
   white-space: nowrap;
@@ -5315,7 +5330,7 @@ body {
 
 .modal.show {
   display: block;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-backdrop.show {

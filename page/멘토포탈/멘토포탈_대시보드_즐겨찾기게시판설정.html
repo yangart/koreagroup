@@ -1254,9 +1254,9 @@
 		});
 	  
 		$(function () {
-			$('#pageModalInterview').modal('show');
+			//$('#pageModalInterview').modal('show');
 			//$('#pageModalSchedule').modal('show');
-			//$('#pageModalBookmark').modal('show');
+			$('#pageModalBookmark').modal('show');
 			
 			$(document).on('hidden.bs.modal', '.modal', function () {
 				 $('.modal:visible').length && $(document.body).addClass('modal-open');
