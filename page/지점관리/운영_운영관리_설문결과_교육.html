@@ -759,45 +759,22 @@
 							<h5 class="card-title">설문 결과</h5>
 							
 							<ul class="nav nav-pills" role="tablist">
-								<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab">일반</a></li>
+								<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">일반</a></li>
 								<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">강의</a></li>
-								<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">교육</a></li>
+								<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab">교육</a></li>
 							</ul>
 
-							<div class="row">
-								<div class="col-11 gap-2">
-									<select class="form-select mb-0" data-choices data-choices-search-false>
-										<option value="01">설문진행일</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<div class="d-flex gap-1 align-items-center">
-										<div class="input-group-flatpickr">
-											<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
-										</div>
-										<button type="button" class="btn btn-outline-light">오늘</button>
-									</div>
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">설문 대상 (전체)</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">설문 상태 (전체)</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
+							<div class="row flex-area">
+								<div class="col-9"></div>
+								<div class="col-3 r-area">
 									<div class="d-flex gap-1">
 										<div class="col-auto">
 											<input type="text" class="form-control" placeholder="설문 제목을 입력하세요.">
 										</div>
-									</div>									
-								</div>
-								<div class="col-1">
-									<div class="col-12"><button type="button"
-											class="btn btn-point search-btn">초기화</button></div>
-									<div class="col-12"><button type="button"
-											class="btn btn-point-deep search-btn">검색</button></div>
+									</div>	
+									<div class="col-4">
+										<button type="button" class="btn btn-point-deep search-btn">검색</button>
+									</div>
 								</div>
 							</div><!-- // row -->
 						</div><!-- // card-header -->
@@ -811,11 +788,8 @@
 										<tr>
 											<th>번호</th>
 											<th>대상 유형</th>
-											<th class="text-start">대상 상세</th>
-											<th>설문 시작일</th>
-											<th>설문 기간</th>
+											<th class="text-start">과정명</th>
 											<th class="text-start">설문 제목</th>
-											<th>설문 상태</th>
 											<th>총 대상자</th>
 											<th>총 참여자</th>
 											<th>참여율</th>
@@ -827,12 +801,9 @@
 									<tbody>
 										<tr>
 											<td>13</td>
-											<td>수강생</td>
-											<td class="text-start">컴퓨터</td>
-											<td>2024-03-01</td>
-											<td>3일</td>
-											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">포인트 500점 받아가세요. 예상 참여 시간 1분 예상 참여 시간 1분 예상 참여 시간 1분</span></td>
-											<td>진행</td>
+											<td>임직원</td>
+											<td class="text-start">초급 마케팅 기획</td>
+											<td class="text-start">초급 마케팅 기획 시험</td>
 											<td>10.000</td>
 											<td>499</td>
 											<td>4.9%</td>
@@ -842,32 +813,26 @@
 										</tr>
 										<tr>
 											<td>13</td>
-											<td>수강생</td>
-											<td class="text-start">컴퓨터</td>
-											<td>2024-03-01</td>
-											<td>3일</td>
-											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">시설 만족도 조사</span></td>
-											<td>진행</td>
-											<td>10.000</td>
-											<td>4.999</td>
-											<td>49.9%</td>
+											<td>임직원</td>
+											<td class="text-start">초급 마케팅 기획</td>
+											<td class="text-start">초급 마케팅 기획 설문</td>
+											<td>999.999</td>
+											<td>100.000</td>
+											<td>10.0%</td>
 											<td></td>
 											<td>85.1/100</td>
 											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
 										</tr>
 										<tr>
 											<td>13</td>
-											<td>수강생</td>
-											<td class="text-start">컴퓨터 > 강남 > 사업부, 3년 이상 5년 미만</td>
-											<td>2024-03-01</td>
-											<td>3일</td>
-											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">포인트 500점 받아가세요. 예상 참여 시간 1분 예상 참여 시간 1분 예상 참여 시간 1분</span></td>
-											<td>진행</td>
+											<td>임직원</td>
+											<td class="text-start">초급 마케팅 기획</td>
+											<td class="text-start">초급 마케팅 기획 시험</td>
 											<td>10.000</td>
-											<td>4.999</td>
-											<td>49.9%</td>
+											<td>499</td>
+											<td>4.9%</td>
+											<td>4.3/5</td>
 											<td></td>
-											<td>85.1/100</td>
 											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
 										</tr>
 									</tbody>

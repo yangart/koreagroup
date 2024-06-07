@@ -604,8 +604,8 @@
 						<div class="page-header-left">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item active">운영</li>
-								<li class="breadcrumb-item">운영 관리</li>
-								<li class="breadcrumb-item">설문 결과</li>
+								<li class="breadcrumb-item">설문 관리</li>
+								<li class="breadcrumb-item">설문지 관리</li>
 							</ol>
 						</div>
 
@@ -756,13 +756,7 @@
 					<!-- card -->
 					<div class="card">
 						<div class="card-header card-search">
-							<h5 class="card-title">설문 결과</h5>
-							
-							<ul class="nav nav-pills" role="tablist">
-								<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab">일반</a></li>
-								<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">강의</a></li>
-								<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">교육</a></li>
-							</ul>
+							<h5 class="card-title">설문지 관리 </h5>
 
 							<div class="row">
 								<div class="col-11 gap-2">
@@ -778,18 +772,39 @@
 										<button type="button" class="btn btn-outline-light">오늘</button>
 									</div>
 									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">설문 대상 (전체)</option>
+										<option value="01">계열선택</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
 									</select>
 									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">설문 상태 (전체)</option>
+										<option value="01">지점선택</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
 									</select>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">설문유형선택</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">설문대상</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">설문상태</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">사용여부</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									
 									<div class="d-flex gap-1">
 										<div class="col-auto">
-											<input type="text" class="form-control" placeholder="설문 제목을 입력하세요.">
+											<input type="text" class="form-control" placeholder="설문 제목, 등록자를 입력하세요.">
 										</div>
 									</div>									
 								</div>
@@ -810,65 +825,50 @@
 									<thead class="table-light">
 										<tr>
 											<th>번호</th>
-											<th>대상 유형</th>
-											<th class="text-start">대상 상세</th>
+											<th>설문 유형</th>
+											<th>설문 대상</th>
+											<th>대상 상세</th>
 											<th>설문 시작일</th>
 											<th>설문 기간</th>
-											<th class="text-start">설문 제목</th>
+											<th>설문 제목</th>
+											<th>문항수</th>
 											<th>설문 상태</th>
-											<th>총 대상자</th>
-											<th>총 참여자</th>
-											<th>참여율</th>
-											<th>평균/총점<br>(점수형)</th>
-											<th>평균/총점<br>(시험형)</th>
-											<th>결과</th>
+											<th>사용 여부</th>
+											<th>등록자</th>
+											<th>등록일시</th>
+											<th>관리</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>13</td>
+											<td>일반</td>
 											<td>수강생</td>
 											<td class="text-start">컴퓨터</td>
 											<td>2024-03-01</td>
 											<td>3일</td>
-											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">포인트 500점 받아가세요. 예상 참여 시간 1분 예상 참여 시간 1분 예상 참여 시간 1분</span></td>
-											<td>진행</td>
-											<td>10.000</td>
-											<td>499</td>
-											<td>4.9%</td>
-											<td>4.3/5</td>
-											<td></td>
-											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
+											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 280px;">포인트 500점 받아가세요. 예상 참여 시간 1분 예상 참여 시간 1분 예상 참여 시간 1분</span></td>
+											<td>1</td>
+											<td>대기</td>
+											<td>사용</td>
+											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
+											<td>23-12-12 15:30</td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
 										</tr>
 										<tr>
 											<td>13</td>
+											<td>일반</td>
 											<td>수강생</td>
-											<td class="text-start">컴퓨터</td>
-											<td>2024-03-01</td>
-											<td>3일</td>
-											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">시설 만족도 조사</span></td>
+											<td class="text-start">IT, 2024년 1월 (2024-01-08 ~ 2024-02-06)</td>
+											<td>개강일 3일 후</td>
+											<td>7일</td>
+											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 280px;">2024년 1월 강의 만족도 조사</span></td>
+											<td>1</td>
 											<td>진행</td>
-											<td>10.000</td>
-											<td>4.999</td>
-											<td>49.9%</td>
-											<td></td>
-											<td>85.1/100</td>
-											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
-										</tr>
-										<tr>
-											<td>13</td>
-											<td>수강생</td>
-											<td class="text-start">컴퓨터 > 강남 > 사업부, 3년 이상 5년 미만</td>
-											<td>2024-03-01</td>
-											<td>3일</td>
-											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">포인트 500점 받아가세요. 예상 참여 시간 1분 예상 참여 시간 1분 예상 참여 시간 1분</span></td>
-											<td>진행</td>
-											<td>10.000</td>
-											<td>4.999</td>
-											<td>49.9%</td>
-											<td></td>
-											<td>85.1/100</td>
-											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
+											<td>미사용</td>
+											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
+											<td>23-12-12 15:30</td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
 										</tr>
 									</tbody>
 								</table>
@@ -923,6 +923,9 @@
 							<a href="#" class="page-link">→</a>
 						</li>
 					</ul>
+					<div class="page-footer-btn-right">
+						<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point">등록</a>
+					</div>
 				</div>
 			</div><!-- // page-footer -->
 
