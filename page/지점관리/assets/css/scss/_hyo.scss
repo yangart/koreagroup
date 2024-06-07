@@ -26,3 +26,26 @@
     z-index: 2;
   }
 }
+.fnc-area,
+.flex-area {
+  display: flex;
+  gap:1rem;
+  justify-content: space-between;
+  align-items: center;
+  .l-area,
+  .r-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    align-items: center;
+    .choices {
+      margin-bottom: 0;
+    }
+  }
+  .r-area {
+    justify-content: flex-end;
+  }
+}
+.fnc-area {
+  margin-bottom: 1rem;
+}
