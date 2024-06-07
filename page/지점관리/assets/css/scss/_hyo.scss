@@ -31,25 +31,31 @@
   display: flex;
   gap:1rem;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   .l-area,
   .r-area {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
     align-items: center;
-    width: 100%;
+    > * {
+      display: inline-block;
+    }
     .choices {
       margin-bottom: 0;
     }
+    // .form-control {
+    //   width: auto;
+    // }
   }
   .r-area {
     justify-content: flex-end;
+    margin-left:auto;
   }
 
 }
 .fnc-area {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 .btn {
   text-wrap: nowrap;
