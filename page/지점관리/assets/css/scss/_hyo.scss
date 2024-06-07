@@ -1,0 +1,12 @@
+.scroll-y-area {
+  position: relative;
+  overflow-y: auto;
+  table {
+    border-collapse: separate;
+  }
+  .sticky-y {
+    position: sticky;
+    top:0;
+    z-index: 3;
+  }
+}
