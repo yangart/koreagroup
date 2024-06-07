@@ -37,7 +37,7 @@
 				<div class="modal-body">
 					<table class="table table-card">
 						<colgroup>
-							<col style="width:18%">
+							<col style="width:20%">
 							<col style="">
 						</colgroup>
 						<tbody>
@@ -46,31 +46,56 @@
 								<td class="cell-left">DB변경</td>
 							</tr>
 							<tr>
-								<th>수강 구분</th>
+								<th>제목</th>
 								<td class="cell-left"><input type="text" class="form-control" placeholder="최종 담당"></td>
 							</tr>
 							<tr>
-								<th>문의 지점</th>
-								<td class="cell-left">컴퓨터강남</td>
-							</tr>
-							<tr>
-								<th>검색어</th>
-								<td class="cell-left">일반</td>
-							</tr>
-							<tr>
-								<th>유입 경로</th>
-								<td class="cell-left">일반</td>
-							</tr>
-							<tr>
-								<th>담당</th>
+								<th>담당자</th>
 								<td class="cell-left">
-									<div class="row gx-12px flex-middle">
-										<div class="col-auto">[강남공식2] 홍길동</div>
-										<div class="col-200px"><input type="text" class="form-control" placeholder="최종 담당"></div>
+									<div class="d-flex gap-1">
+										<div>
+											<input type="text" class="form-control" placeholder="담당자" aria-colcount="">
+										</div>
+										<button class="btn btn-point-deep">검색</button>
 									</div>
 								</td>
 							</tr>
-
+							<tr>
+								<th>변경 대상</th>
+								<td class="cell-left">
+									<button class="btn btn-outline-primary">DB선택</button>
+									 <a href="#none" class="small"><u>김방문(011-123-4567) 외 99명</u></a>
+								</td>
+							</tr>
+							<tr>
+								<th>담당자 선택</th>
+								<td class="cell-left">
+									<button class="btn btn-outline-primary">DB선택</button>
+									<a href="#none" class="small"><u>김방문(011-123-4567) 외 99명</u></a>
+								</td>
+							</tr>
+							<tr>
+								<th>변경사유</th>
+								<td class="cell-left">
+									<div class="col-4">
+										<select class="form-select" data-choices>
+											<option value="01">20개</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>안내</th>
+								<td class="cell-left">
+									<p class="small text-secondary">
+										선택한 DB의 담당자를 변경 담당자로 변경 처리 합니다<br>
+										다수의 사업부 직원으로 변경 시 1명씩 순차적으로 분배됩니다<br>
+										최종 승인자의 승인 처리 완료 시 변경 처리 진행됩니다
+									</p>
+								</td>
+							</tr>
 						</tbody>
 					</table>
 					<!-- // mbody-forms -->
