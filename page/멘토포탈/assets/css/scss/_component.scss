@@ -1,10 +1,16 @@
 /* fullCalendar js */
 .fc.fc-direction-ltr {
     height: 100%;
+    .fc-daygrid-body { width:100% !important;height:100%;}
+    .fc-timegrid-body { width:100% !important;min-height:100%;}
+    .fc-scrollgrid table {
+        width:100% !important;
+        height:100% !important;
+    }
     .fc-toolbar.fc-header-toolbar {
         height: 68px;
         padding: 0 12px;
-        background: var(--btn-point-color-h);
+        background: var(--first-color-h);
         margin-bottom: 16px;
     }
 
@@ -40,6 +46,7 @@
 }
 .fc-view-harness {
     margin: 0 16px 16px;
+    height:auto !important;
 }
 .fc-theme-standard {
     td {
@@ -156,11 +163,11 @@
         font-size: 12px;
     }
 
-    .event-counsel .fc-event-cate { background:var(--second-color); }
-    .event-facetoface .fc-event-cate { background:var(--fourth-color); }
-    .event-interview .fc-event-cate { background:var(--third-color); }
-    .event-contact .fc-event-cate { background:var(--first-color); }
-    .event-etc .fc-event-cate { background:var(--gray-color); }
+    .event-counsel .fc-event-cate { background:var(--color-or); }
+    .event-facetoface .fc-event-cate { background:var(--color-bl); }
+    .event-interview .fc-event-cate { background:var(--color-gn); }
+    .event-contact .fc-event-cate { background:var(--color-vi); }
+    .event-etc .fc-event-cate { background:var(--color-gr-h); }
 
     .fc-event-title {
         flex: 1;
@@ -294,7 +301,7 @@
 .fc .fc-button-primary:not(:disabled) {
     &.fc-button-active,
     &:active {
-        color: var(--btn-point-color-h);
+        color: var(--first-color-h);
     }
 
     &.fc-button-active:focus,
@@ -554,56 +561,56 @@
       }
   
       &.active {
-        background-color: var(--btn-point-color);        
+        background-color: var(--first-color);        
         color: #fff;
   
         &:hover {
-          background-color: var(--btn-point-color-h);
+          background-color: var(--first-color-h);
         }
   
         &.disabled {
-          background-color: var(--color-gr-dk);
+          background-color: var(--color-gr-h);
           color: #fff;
   
           &:hover {
-            background-color: var(--color-gr-dk);
+            background-color: var(--color-gr-h);
           }
         }
   
         &:hover, &.disabled:hover, &:active, &:hover:active {
-          background-color: var(--btn-point-color);
+          background-color: var(--first-color);
         }
   
         &.disabled {
           &:active, &:hover:active {
-            background-color: var(--btn-point-color);
+            background-color: var(--first-color);
           }
         }
   
         &.active, &:hover.active {
-          background-color: var(--btn-point-color);
+          background-color: var(--first-color);
         }
   
         &.disabled {
           &.active, &:hover.active {
-            background-color: var(--btn-point-color);
+            background-color: var(--first-color);
           }
   
-          background-color: var(--btn-point-color);
+          background-color: var(--first-color);
         }
   
         &:hover.disabled {
-          background-color: var(--btn-point-color);
+          background-color: var(--first-color);
         }
   
         &.disabled {
           &.disabled, &:hover.disabled {
-            background-color: var(--btn-point-color);
+            background-color: var(--first-color);
           }
         }
   
         &[disabled], &:hover[disabled] {
-          background-color: var(--btn-point-color);
+          background-color: var(--first-color);
         }
   
       }
@@ -637,26 +644,26 @@
         }
   
         &.active {
-          background-color: var(--btn-point-color);
+          background-color: var(--first-color);
           background-repeat: repeat-x;
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--btn-point-color)', GradientType=0);
-          border-color: var(--btn-point-color) var(--btn-point-color) var(--btn-point-color-h);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--first-color)', GradientType=0);
+          border-color: var(--first-color) var(--first-color) var(--first-color-h);
           border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
           filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
           color: #fff;
           text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   
           &:hover {
-            background-color: var(--btn-point-color);
-            background-image: -moz-linear-gradient(to bottom, #08c, var(--btn-point-color));
-            background-image: -ms-linear-gradient(to bottom, #08c, var(--btn-point-color));
-            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--btn-point-color)));
-            background-image: -webkit-linear-gradient(to bottom, #08c, var(--btn-point-color));
-            background-image: -o-linear-gradient(to bottom, #08c, var(--btn-point-color));
-            background-image: linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-color: var(--first-color);
+            background-image: -moz-linear-gradient(to bottom, #08c, var(--first-color));
+            background-image: -ms-linear-gradient(to bottom, #08c, var(--first-color));
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--first-color)));
+            background-image: -webkit-linear-gradient(to bottom, #08c, var(--first-color));
+            background-image: -o-linear-gradient(to bottom, #08c, var(--first-color));
+            background-image: linear-gradient(to bottom, #08c, var(--first-color));
             background-repeat: repeat-x;
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--btn-point-color)', GradientType=0);
-            border-color: var(--btn-point-color) var(--btn-point-color) var(--btn-point-color-h);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--first-color)', GradientType=0);
+            border-color: var(--first-color) var(--first-color) var(--first-color-h);
             border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
             filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
             color: #fff;
@@ -664,32 +671,32 @@
           }
   
           &.disabled {
-            background-color: var(--btn-point-color);
-            background-image: -moz-linear-gradient(to bottom, #08c, var(--btn-point-color));
-            background-image: -ms-linear-gradient(to bottom, #08c, var(--btn-point-color));
-            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--btn-point-color)));
-            background-image: -webkit-linear-gradient(to bottom, #08c, var(--btn-point-color));
-            background-image: -o-linear-gradient(to bottom, #08c, var(--btn-point-color));
-            background-image: linear-gradient(to bottom, #08c, var(--btn-point-color));
+            background-color: var(--first-color);
+            background-image: -moz-linear-gradient(to bottom, #08c, var(--first-color));
+            background-image: -ms-linear-gradient(to bottom, #08c, var(--first-color));
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--first-color)));
+            background-image: -webkit-linear-gradient(to bottom, #08c, var(--first-color));
+            background-image: -o-linear-gradient(to bottom, #08c, var(--first-color));
+            background-image: linear-gradient(to bottom, #08c, var(--first-color));
             background-repeat: repeat-x;
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--btn-point-color)', GradientType=0);
-            border-color: var(--btn-point-color) var(--btn-point-color) var(--btn-point-color-h);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--first-color)', GradientType=0);
+            border-color: var(--first-color) var(--first-color) var(--first-color-h);
             border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
             filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
             color: #fff;
             text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   
             &:hover {
-              background-color: var(--btn-point-color);
-              background-image: -moz-linear-gradient(to bottom, #08c, var(--btn-point-color));
-              background-image: -ms-linear-gradient(to bottom, #08c, var(--btn-point-color));
-              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--btn-point-color)));
-              background-image: -webkit-linear-gradient(to bottom, #08c, var(--btn-point-color));
-              background-image: -o-linear-gradient(to bottom, #08c, var(--btn-point-color));
-              background-image: linear-gradient(to bottom, #08c, var(--btn-point-color));
+              background-color: var(--first-color);
+              background-image: -moz-linear-gradient(to bottom, #08c, var(--first-color));
+              background-image: -ms-linear-gradient(to bottom, #08c, var(--first-color));
+              background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08c), to(var(--first-color)));
+              background-image: -webkit-linear-gradient(to bottom, #08c, var(--first-color));
+              background-image: -o-linear-gradient(to bottom, #08c, var(--first-color));
+              background-image: linear-gradient(to bottom, #08c, var(--first-color));
               background-repeat: repeat-x;
-              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--btn-point-color)', GradientType=0);
-              border-color: var(--btn-point-color) var(--btn-point-color) var(--btn-point-color-h);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='var(--first-color)', GradientType=0);
+              border-color: var(--first-color) var(--first-color) var(--first-color-h);
               border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
               filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
               color: #fff;
@@ -698,64 +705,64 @@
           }
   
           &:hover, &.disabled:hover, &:active, &:hover:active {
-            background-color: var(--btn-point-color);
+            background-color: var(--first-color);
           }
   
           &.disabled {
             &:active, &:hover:active {
-              background-color: var(--btn-point-color);
+              background-color: var(--first-color);
             }
           }
   
           &.active, &:hover.active {
-            background-color: var(--btn-point-color);
+            background-color: var(--first-color);
           }
   
           &.disabled {
             &.active, &:hover.active {
-              background-color: var(--btn-point-color);
+              background-color: var(--first-color);
             }
   
-            background-color: var(--btn-point-color);
+            background-color: var(--first-color);
           }
   
           &:hover.disabled {
-            background-color: var(--btn-point-color);
+            background-color: var(--first-color);
           }
   
           &.disabled {
             &.disabled, &:hover.disabled {
-              background-color: var(--btn-point-color);
+              background-color: var(--first-color);
             }
           }
   
           &[disabled], &:hover[disabled] {
-            background-color: var(--btn-point-color);
+            background-color: var(--first-color);
           }
   
           &.disabled {
             &[disabled], &:hover[disabled] {
-              background-color: var(--btn-point-color);
+              background-color: var(--first-color);
             }
           }
   
           &:active, &:hover:active {
-            background-color: var(--btn-point-color-h)  \9;
+            background-color: var(--first-color-h)  \9;
           }
   
           &.disabled {
             &:active, &:hover:active {
-              background-color: var(--btn-point-color-h)  \9;
+              background-color: var(--first-color-h)  \9;
             }
           }
   
           &.active, &:hover.active {
-            background-color: var(--btn-point-color-h)  \9;
+            background-color: var(--first-color-h)  \9;
           }
   
           &.disabled {
             &.active, &:hover.active {
-              background-color: var(--btn-point-color-h)  \9;
+              background-color: var(--first-color-h)  \9;
             }
           }
         }
@@ -771,7 +778,7 @@
       cursor: pointer;
     }  
     .datepicker-switch:hover {
-        color:var(--btn-point-color);
+        color:var(--first-color);
     }
     .prev:hover, .next:hover, tfoot tr th:hover {
         background: #eee;

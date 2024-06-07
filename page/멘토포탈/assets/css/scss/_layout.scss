@@ -161,7 +161,7 @@ body {
 .navbar-menu {
   width: var(--appmenu-width);
   z-index: 1002;
-  background: #101c42;
+  background:var(--dark-color);
   bottom: 0;
   margin-top: 0;
   position: fixed;
@@ -190,10 +190,10 @@ body {
       font-weight: 600;
       line-height: 1.43;
       text-align: left;
-      color: #a3aed1;
+      color: #ffffffaa;
 
       &.active, &:hover {
-        background-color: #24325f;
+        background-color: #ffffff22;
         color: #fff;
       }
 
@@ -463,17 +463,17 @@ body {
         }
 
         &[aria-expanded=true] {
-          color: #845ae0;
+          color: var(--first-color);
 
           &:after {
             -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-            color: #845ae0;
+            color: var(--first-color);
           }
 
           &:before {
             opacity: 1;
-            background-color: #845ae0;
+            background-color: var(--first-color);
           }
         }
       }
@@ -512,19 +512,19 @@ body {
         }
 
         &:hover {
-          color: #845ae0;
+          color: var(--first-color);
 
           &:before {
-            background-color: #845ae0 !important;
+            background-color: var(--first-color) !important;
             opacity: 1;
           }
         }
 
         &.active {
-          color: #845ae0;
+          color: var(--first-color);
 
           &:before {
-            background-color: #845ae0;
+            background-color: var(--first-color);
           }
         }
       }
@@ -593,7 +593,6 @@ body {
 
 [data-sidebar-size=sm] {
   /*min-height:1400px*/
-
   min-height: 100%;
 
   .main-content {
@@ -694,6 +693,7 @@ body {
       .nav-link {
         padding: 12px 16px;
         text-align: center;
+        &:hover { background:var(--first-color); }
 
         i {
           width: 24px;
@@ -746,7 +746,7 @@ body {
 
 /*
 [data-sidebar-size=sm] .navbar-menu .navbar-nav .nav-link.active,
-[data-sidebar-size=sm] .navbar-menu .navbar-nav .nav-link:hover{background-color: #24325f;color: #101c42;}
+[data-sidebar-size=sm] .navbar-menu .navbar-nav .nav-link:hover{background-color: #ffffff22;color: #101c42;}
  */
 
 .navbar-search {
@@ -760,7 +760,7 @@ body {
   font-size: 12px;
   line-height: 1.33;
   text-align: left;
-  color: #a3aed1;
+  color: #ffffffaa;
 
   .cate {
     line-height: 16px;
@@ -774,13 +774,13 @@ body {
       margin-right: 4px;
       padding: 0 4px;
       border-radius: 4px;
-      background-color: #845ae0;
+      background-color: var(--first-color);
       font-weight: 700;
       color: #fff;
     }
 
     span {
-      color: #a3aed1;
+      color: #ffffffaa;
     }
   }
 
@@ -804,7 +804,7 @@ body {
       display: block;
       padding: 6px 16px;
       border-radius: 8px;
-      background-color: #845ae0;
+      background-color: var(--first-color);
       font-size: 14px;
       font-weight: 600;
       line-height: 1.43;
@@ -824,8 +824,8 @@ body {
       margin-top: 6px;
 
       a {
-        background-color: #142d53;
-        color: #a3aed1;
+        background-color: #ffffff22;
+        color: #ffffffaa;
       }
     }
   }
@@ -843,9 +843,6 @@ body {
   height:100%;
   overflow:hidden;
 
-  &.onPageFooter {
-    padding-bottom: 56px;
-  }
   .page-content {
     flex:1;
     overflow-y:auto;
@@ -869,7 +866,7 @@ body {
   font-weight: bold;
   line-height: 1.4;
   text-align: left;
-  color: #212529;
+  color: var(--dark-color);
 }
 
 .page-header-topbar {
@@ -925,12 +922,12 @@ body {
     right: -10px !important;
     top: 0 !important;
     padding: 2px 6px;
-    background: #845ae0;
+    background: var(--first-color);
     font-size: 12px;
     line-height: 1.17;
     color: #fff;
     color: #fff;
-    border-radius: 16px;
+    border-radius: var(--border-radius-4x);
     border: 1px solid #fff;
   }
 }
@@ -947,7 +944,7 @@ body {
   font-weight: 600;
   line-height: 24px;
   text-align: left;
-  color: #212529;
+  color: var(--dark-color);
 }
 
 /*
@@ -955,11 +952,7 @@ body {
 .page-content-full .card{min-height:calc(100vh - 44px - 80px);}
 */
 
-.page-footer {
-  bottom: 0;
-  position: fixed;
-  right: 0;
-  left: var(--appmenu-width);
+.page-footer {  
   height: 56px;
   padding: 12px 24px;
   box-shadow: inset 0 1px 0 0 #e9ebec;
@@ -974,7 +967,7 @@ body {
   font-size: 14px;
   line-height: 1.43;
   text-align: left;
-  color: #212529;
+  color: var(--dark-color);
 }
 
 .page-footer-btn-left, .page-footer-btn-right {
@@ -992,14 +985,15 @@ body {
 
 .alram-dropdown {
   width: 300px;
-  padding: 14px 16px 20px;
+  padding: 16px 16px 20px;
 
   &.show {
     position: fixed !important;
-    top: 8px !important;
+    top: 12px !important;
     bottom: 0px !important;
     right: -40px !important;
     margin-left: 40px !important;
+    box-shadow:0 16px 16px rgba(0,0,0,.1);
   }
 }
 
@@ -1052,19 +1046,19 @@ body {
 
 .alram-dropdown .alram-header-pin {
   .form-check-input:checked + .form-check-label {
-    color: #212529;
+    color: var(--dark-color);
     text-decoration: none;
   }
 
   .btn {
     margin-left: 12px;
     padding: 4px 12px;
-    border-radius: 8px;
-    background-color: #f3eefc;
+    border-radius: var(--border-radius-2x);
+    background-color: var(--first-color-alpha);
     font-size: 14px;
     line-height: 1.43;
     text-align: left;
-    color: #212529;
+    color: var(--dark-color);
   }
 }
 
@@ -1196,7 +1190,7 @@ body {
       content: "\f0140";
       position: absolute;
       border: 0;
-      border-color: #212529 transparent transparent;
+      border-color: var(--dark-color) transparent transparent;
       right: 11.5px;
       left: auto;
       font-family: "Material Design Icons";
@@ -1319,8 +1313,8 @@ body {
     margin-right: 3.75px;
     margin-bottom: 3.75px;
     margin-top: 2px;
-    background-color: #405189;
-    border: 1px solid #405189;
+    background-color: var(---btn-deep-color);
+    border: 1px solid var(---btn-deep-color);
     word-break: break-all;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1333,15 +1327,15 @@ body {
     }
 
     &.is-highlighted {
-      background-color: #405189;
-      border: 1px solid #405189;
+      background-color: var(---btn-deep-color);
+      border: 1px solid var(---btn-deep-color);
     }
   }
 }
 
 .is-disabled .choices__list--multiple .choices__item {
-  background-color: #845ae0;
-  border: 1px solid #845ae0;
+  background-color: var(--first-color);
+  border: 1px solid var(--first-color);
 }
 
 .choices__list--dropdown {
@@ -1750,7 +1744,7 @@ body {
   height: 45px;
   padding: 0 16px;
   border-radius: 4px 4px 0 0;
-  background-color: #405189;
+  background-color: var(---btn-deep-color);
 }
 
 .datepicker-title, .datepicker-btn {
@@ -1914,7 +1908,7 @@ body {
 .calendar-body {
   padding: 0;
   border: solid 1px #e9ebec;
-  border-top: 1px solid #845ae0;
+  border-top: 1px solid var(--first-color);
 }
 
 .calendar-week, .calendar-name {
@@ -1965,7 +1959,7 @@ body {
   &.today span {
     color: #fff;
     border: none;
-    background: #845ae0;
+    background: var(--first-color);
     border-radius: 28px;
   }
 
@@ -1974,7 +1968,7 @@ body {
     font-size: 12px;
     line-height: 1.33;
     text-align: left;
-    color: #212529;
+    color: var(--dark-color);
   }
 }
 
@@ -2002,13 +1996,13 @@ body {
   font-size: 14px;
   line-height: 1.43;
   text-align: left;
-  color: #212529;
+  color: var(--dark-color);
 }
 
 .schedule-body {
   padding: 0;
   border: solid 1px #e9ebec;
-  border-top: 1px solid #845ae0;
+  border-top: 1px solid var(--first-color);
 }
 
 .schedule-week, .schedule-name {
@@ -2059,7 +2053,7 @@ body {
   &.today span {
     color: #fff;
     border: none;
-    background: #845ae0;
+    background: var(--first-color);
     border-radius: 28px;
   }
 
@@ -2068,7 +2062,7 @@ body {
     font-size: 12px;
     line-height: 1.33;
     text-align: left;
-    color: #212529;
+    color: var(--dark-color);
   }
 }
 
@@ -2096,5 +2090,5 @@ body {
   font-size: 14px;
   line-height: 1.43;
   text-align: left;
-  color: #212529;
+  color: var(--dark-color);
 }

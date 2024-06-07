@@ -3,15 +3,15 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>멘토포털</title>
+	<title>강사포털</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no" />
-	<meta property="og:title" content="멘토포털">
-	<meta property="og:description" content="멘토포털">
-	<meta name="description" content="멘토포털">
+	<meta property="og:title" content="강사포털">
+	<meta property="og:description" content="강사포털">
+	<meta name="description" content="강사포털">
 	<script src="./assets/js/layout.js"></script>
 	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.instructor.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -1062,13 +1062,14 @@
 	<script src="./assets/libs/feather-icons/feather.min.js"></script>
 	<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
 	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.min.js"></script>
+	<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.ko.js"></script>
 	<script src="./assets/js/plugins.js"></script>
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
 
-	<!-- calendar 관련 -->
-	<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
 	<script>
+
 		document.addEventListener('DOMContentLoaded', function() {
 			var calendarEl = document.getElementById('calendar');
 	  
@@ -1146,6 +1147,7 @@
 			  {
 				category:'면접',
 				title: 'Click for Google',
+				url: 'http://google.com/',
 				start: '2024-06-28'
 			  }
 			];
@@ -1249,7 +1251,26 @@
 			});
 	  
 			calendar.render();
-		});	  
+		});
+	  
+		$(function () {
+			//$('#pageModalInterview').modal('show');
+			//$('#pageModalSchedule').modal('show');
+			//$('#pageModalBookmark').modal('show');
+			
+			$(document).on('hidden.bs.modal', '.modal', function () {
+				 $('.modal:visible').length && $(document.body).addClass('modal-open');
+			});
+
+			$('.form-datepicker').datepicker({
+				format: "yyyy-mm-dd",	
+				autoclose : true,	
+				datesDisabled : ['2024-06-06','2024-06-26'],
+				daysOfWeekDisabled : [0,6],	
+				todayHighlight : true,
+				language : "ko"					
+			});
+		});
 	  </script>
 </body>
 </html>

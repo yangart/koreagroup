@@ -9,15 +9,15 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 :root {
   /* Color Pallete */
-  --dark-color:#101c42;
-  --deep-color:#405189;
+  --dark-color:#29282b;
+  --deep-color:#101c42;
   --deep-color-h:#364574;
-  --first-color:#845ae0;
-  --first-color-h:#6a48b3;
-  --first-color-alpha:#845ae011;
-  --second-color:#ff710a;
-  --third-color:#00b031;
-  --fourth-color:#076aff;
+  --first-color:#494b4d;
+  --first-color-h:#333335;
+  --first-color-alpha:#494b4d11;
+  --second-color:#e69a17;
+  --third-color:#705d56;
+  --fourth-color:#6d7677;
 }
 
 @font-face {
@@ -8448,4 +8448,4 @@ a.list-more {
 
 .fnc-area {
   margin-bottom: 1rem;
-}/*# sourceMappingURL=style.mentor.css.map */
+}/*# sourceMappingURL=style.executive.css.map */
