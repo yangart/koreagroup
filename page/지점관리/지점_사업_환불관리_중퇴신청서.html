@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+	<style>
+	
+	</style>
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1_1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">중퇴신청서</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="row">
+						<div class="col">
+							<div class="flex-area">
+								<div class="l-area">
+									<p class="table-title fs-5">기본 정보</p>
+								</div>
+								<div class="r-area">
+									<a href="#" class="btn btn-point-deep">저장</a>
+									<a href="#" class="btn btn-outline-primary">인쇄</a>
+								</div>
+							</div>
+							<div class="ccontainer border rounded p-3 mt-2 mb-4">
+								<dl>
+									<dt class="mb-1">지점</dt>
+									<dd class="mb-1">컴퓨터강남</dd>
+									<dt class="mb-1">수강생</dt>
+									<dd class="mb-1">김환불(010-1111-1111)</dd>
+									<dt class="mb-1">멘토</dt>
+									<dd class="mb-1">김담당1 선임멘토</dd>
+									<dt class="mb-1">환불사유</dt>
+									<dd class="mb-1">멘토(언행/연락두절/상담과 다른 수업내용), 강사(언행/수업내용/수업시간 미준수), 시설(청소상태 불만)</dd>
+									<dt class="mb-1">환불 정보</dt>
+									<dd>
+										<div class="d-flex gap-1">
+											<a href="#" class="btn btn-outline-primary">은행 검색</a>
+											<input type="text" class="form-control" placeholder="은행을 선택하세요." value="국민은행" readonly>
+										</div>
+										<div class="d-flex gap-1 mt-1">
+											<input type="number" class="form-control" placeholder="계좌번호">
+											<input type="text" class="form-control" placeholder="예금주">
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="fnc-area">
+								<div class="l-area">
+									<table-title>과목 선택 (0/6)</table-title>
+								</div>
+								<div class="r-area">
+									<div class="col-auto">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="chk1_1">
+											<label class="form-check-label" for="chk1_1">
+											  전체 원서 보기
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-scroll-y" style="max-height: 240px;">
+								<table class="table table-card">
+									<colgroup>
+										<col style="width: 42px;">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+			
+									<thead>
+										<tr>
+											<th>
+												<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+											</th>
+											<th>원서번호</th>
+											<th>구분</th>
+											<th>과목</th>
+											<th>원수강료</th>
+											<th>수강상태</th>
+											<th>환불적용</th>
+											<th>공제금(원)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+											</td>
+											<td>11111-123456789</td>
+											<td>온라인</td>
+											<td>일러스트레이터 초급</td>
+											<td>350,000</td>
+											<td>수료</td>
+											<td>전액 공제</td>
+											<td>350,000</td>
+										</tr>						
+										<tr>
+											<td>
+												<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+											</td>
+											<td>11111-123456789</td>
+											<td>온라인</td>
+											<td>일러스트레이터 초급</td>
+											<td>350,000</td>
+											<td>수료</td>
+											<td>전액 공제</td>
+											<td>350,000</td>
+										</tr>						
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col">
+							<div class="fnc-area">
+								<div class="l-area">
+									<p class="table-title fs-5">결제내역</p>
+									<span>원서번호 1111-123456</span>
+								</div>
+								<div class="r-area">
+									<small>단위 : 원</small>
+								</div>
+							</div>
+							<div class="table-scroll-y" style="max-height: 240px;">
+								<table class="table table-card">
+									<colgroup>
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+			
+									<thead>
+										<tr>
+											<th scope="row">구분</th>
+											<th>결제금액</th>
+											<th>PG(카드)</th>
+											<th>PG(현금)</th>
+											<th>단말기(카드)</th>
+											<th>단말기(현금)</th>
+											<th>공제금</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">수강료</th>
+											<td>600,000</td>
+											<td>600,000</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>350,000</td>
+										</tr>				
+										<tr>
+											<th scope="row">온라인</th>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>				
+										<tr>
+											<th scope="row">국비</th>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>				
+										<tr class="table-active">
+											<th scope="row">합계</th>
+											<td>600,000</td>
+											<td>600,000</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>350,000</td>
+										</tr>				
+									</tbody>
+								</table>
+							</div>
+							<div class="p-3 rounded mt-2 text-bg-light mb-4">
+								<p class="table-tit mb-1">결제 상세</p>
+								<ul class="fs-7 text-secondary">
+									<li>- 승인번호 결제방식(추가) 결제일시 결제금액 결제방식</li>
+									<li>- 1111111 PG(카드) YYYY-MM-DD hh:mm:ss 50,000원</li>
+									<li>- 2222222 PG(현금)(010-1234-5678) YYYY-MM-DD hh:mm:ss 50,000원</li>
+									<li>- 3333333 단말기(카드) YYYY-MM-DD hh:mm:ss 50,000원</li>
+									<li>- 4444444 단말기(현금)(110-424-44442) YYYY-MM-DD hh:mm:ss 50,000원</li>
+								</ul>
+							</div>
+							<div class="fnc-area">
+								<div class="l-area">
+									<p class="table-title fs-5">결제내역</p>
+									<span>원서번호 1111-123456</span>
+								</div>
+								<div class="r-area">
+									<small>단위 : 원</small>
+								</div>
+							</div>
+							<div class="table-scroll-y" style="max-height: 240px;">
+								<table class="table table-card">
+									<colgroup>
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+										<col style="">
+									</colgroup>
+			
+									<thead>
+										<tr>
+											<th scope="row">구분</th>
+											<th>결제금액</th>
+											<th>PG(카드)</th>
+											<th>PG(현금)</th>
+											<th>단말기(카드)</th>
+											<th>단말기(현금)</th>
+											<th>공제금</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">수강료</th>
+											<td>600,000</td>
+											<td>600,000</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>350,000</td>
+										</tr>				
+										<tr>
+											<th scope="row">온라인</th>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>				
+										<tr>
+											<th scope="row">국비</th>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>				
+										<tr class="table-active">
+											<th scope="row">합계</th>
+											<td>600,000</td>
+											<td>600,000</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>350,000</td>
+										</tr>				
+									</tbody>
+								</table>
+							</div>
+							<div class="p-3 rounded mt-2 text-bg-light">
+								<p class="table-tit mb-1">결제 상세</p>
+								<ul class="fs-7 text-secondary">
+									<li>- 승인번호 결제방식(추가) 결제일시 결제금액 결제방식</li>
+									<li>- 1111111 PG(카드) YYYY-MM-DD hh:mm:ss 50,000원</li>
+									<li>- 2222222 PG(현금)(010-1234-5678) YYYY-MM-DD hh:mm:ss 50,000원</li>
+									<li>- 3333333 단말기(카드) YYYY-MM-DD hh:mm:ss 50,000원</li>
+									<li>- 4444444 단말기(현금)(110-424-44442) YYYY-MM-DD hh:mm:ss 50,000원</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100 gap-4">
+						<div class="row align-items-center">
+							<div class="d-flex gap-1">
+								<a href="#" class="btn btn-outline-primary">신청취소</a>
+								<a href="#" class="btn btn-point">보류</a>
+								<a href="#" class="btn btn-point">협의</a>
+								<a href="#" class="btn btn-point">진행</a>
+							</div>
+						</div>
+						<div class="d-flex gap-1 row align-items-center">
+							<small class="text-end">(총 0과목, 총 원수강료 0원)</small>
+							<div class="row">
+								<dl class="col-4">
+									<dt class="text-end">총 결제 금액</dt>
+									<dd class="text-end">1,650,000<small>원</small></dd>
+								</dl>
+								<dl class="col-4">
+									<dt class="text-end">총 공제 금액</dt>
+									<dd class="text-end">0<small>원</small></dd>
+								</dl>
+								<dl class="col-4">
+									<dt class="text-end">최종 환불 금액</dt>
+									<dd class="text-end"><strong class="text-primary">0원</strong></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1_1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>
