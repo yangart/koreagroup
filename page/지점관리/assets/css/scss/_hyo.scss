@@ -1,4 +1,17 @@
-
+:root {
+  --color-ye:#ffa133;
+  --color-or:#ff710a;
+  --color-rd:#ff3366;
+  --color-pk:#ff65d4;
+  --color-nv:#405189;
+  --color-sk:#3ba4fd;
+  --color-bl:#076aff;
+  --color-gn:#00b031;
+  --color-vi:#845ae0;
+  --color-gr:#ced4da;
+  --color-gr-h:#9a9a9a;
+}
+/*공통 */
 .card-header.card-search .row>div {
   align-items: flex-start;
 }
@@ -65,7 +78,7 @@
     font-size:14px;
     height:56px;
     box-sizing: border-box;
-    padding:8px 0;
+    padding:8px 16px;
     border-bottom: 1px solid #e9ebec;
   }
   th {
@@ -78,5 +91,112 @@
 
   td {
     text-align: left;
+  }
+}
+.table-info{
+  table {
+    table-layout: fixed;
+    border-left:1px solid #e9ebec;
+    border-top:1px solid #e9ebec;
+  }
+  th,
+  td {
+    font-size:14px;
+    height:36px;
+    box-sizing: border-box;
+    padding:8px 16px;
+    border-bottom: 1px solid #e9ebec;
+    text-align: center;
+    border-right: 1px solid #e9ebec;
+  }
+  th {
+    font-weight: 600;
+    width: 78px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #aaa;
+    background-color: #f3f6f9;
+  }
+}
+
+/*sub*/
+.sign-area {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  .img-area {
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    flex:none;
+    width: 25%;
+    font-size:14px;
+    figure {
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 100%;
+    }   
+  }
+  .sign {
+    td {
+      height:80px;
+    }
+  }
+  table {
+    table-layout: fixed;
+    border-left:1px solid #e9ebec;
+    border-top:1px solid #e9ebec;
+  }
+  th,
+  td {
+    font-size:14px;
+    height:36px;
+    box-sizing: border-box;
+    padding:8px 16px;
+    border-bottom: 1px solid #e9ebec;
+    text-align: center;
+    border-right: 1px solid #e9ebec;
+  }
+  th {
+    font-weight: 600;
+    width: 78px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #aaa;
+    background-color: #f3f6f9;
+  }
+}
+
+.label-sign-positive,
+.label-sign-negative {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  margin:0 auto;
+  border:3px solid transparent;
+  font-weight: 500;
+}
+.label-sign-positive {
+  border-color: var(--color-rd);
+  color:var(--color-rd);
+}
+.label-sign-negative {
+  border-color: var(--color-gr);
+  color:var(--color-gr);
+}
+.dl-info {
+  dt {
+    margin-bottom: 8px;
+  } 
+  dd {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
