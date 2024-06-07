@@ -52,7 +52,7 @@
     gap: .5rem;
     align-items: center;
     flex: 0 0 auto;
-    width: auto;
+    // width: auto;
     > * {
       display: inline-block;
     }
@@ -68,6 +68,7 @@
 }
 .fnc-area {
   margin-bottom: .5rem;
+  // font-size:14px;
 }
 .btn {
   text-wrap: nowrap;
@@ -116,6 +117,15 @@
     font-weight: 600;
     color: #aaa;
     background-color: #f3f6f9;
+  }
+}
+
+/* modal */
+.modal-content {
+  display: flex;
+  max-height: calc(100vh - (var(--bs-modal-margin) * 2));
+  .modal-body {
+    overflow-y: auto;
   }
 }
 
@@ -179,7 +189,7 @@
   border-radius: 100%;
   margin:0 auto;
   border:3px solid transparent;
-  font-weight: 500;
+  font-weight: 700;
 }
 .label-sign-positive {
   border-color: var(--color-rd);

@@ -19,96 +19,77 @@
 	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
 	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
 	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
-
-	<style>
-	
-	</style>
 </head>
 
 <body>
 	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
 		<div class="modal-dialog modal-md modal-dialog-centered">
 			<div class="modal-content">
+
 				<div class="modal-header">
-					<h5 class="modal-title">특별처리 신청서</h5>
+					<h5 class="modal-title">강의 선택</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
 						id="close-modal"></button>
 				</div><!-- // modal-header -->
 				<div class="modal-body">
-					<table class="table-write">
-						<colgroup>
-							<col style="width:20%">
-							<col style="">
-						</colgroup>
-						<tbody>
-							<tr>
-								<th>유형</th>
-								<td>DB변경</td>
-							</tr>
-							<tr>
-								<th>제목</th>
-								<td><input type="text" class="form-control" placeholder=""></td>
-							</tr>
-							<tr>
-								<th>담당자</th>
-								<td>
-									<div class="d-flex gap-1">
-										<div>
-											<input type="text" class="form-control" placeholder="담당자" aria-colcount="">
-										</div>
-										<button class="btn btn-point-deep">검색</button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<th>변경 대상</th>
-								<td>
-									<button class="btn btn-outline-primary">DB선택</button>
-									 <a href="#none" class="small"><u>김방문(011-123-4567) 외 99명</u></a>
-								</td>
-							</tr>
-							<tr>
-								<th>담당자 선택</th>
-								<td>
-									<button class="btn btn-outline-primary">담당자 선택</button>
-									<a href="#none" class="small"><u>김방문(011-123-4567) 외 99명</u></a>
-								</td>
-							</tr>
-							<tr>
-								<th>변경사유</th>
-								<td>
-									<div class="col-4">
-										<select class="form-select form-inline" data-choices data-choices-search-false>
-											<option value="01">선택</option>
-											<option value="02">option 2</option>
-											<option value="03">option 3</option>
-										</select>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<th>안내</th>
-								<td>
-									<p class="small text-secondary">
-										선택한 DB의 담당자를 변경 담당자로 변경 처리 합니다<br>
-										다수의 사업부 직원으로 변경 시 1명씩 순차적으로 분배됩니다<br>
-										최종 승인자의 승인 처리 완료 시 변경 처리 진행됩니다
-									</p>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<p class="bg-light p-3 mb-3 small">담당자 : 김담당1 선임멘토 (퇴사)</p>
+					<div class="fnc-area">
+						<div class="l-area">
+							<div class="table-title">선택 1/3000</div>
+						</div>
+						<div class="r-area">
+							<span class="small text-secondary">김수강 010-1111-2222 / 김담당1 선임멘토</span>
+						</div>
+					</div>
+					<div class="table-scroll-y" style="max-height: 240px;">
+						<table class="table table-card">
+							<colgroup>
+								<col style="width: 42px;">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="width:25%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</th>
+									<th>강의명</th>
+									<th>기간</th>
+									<th>시간</th>
+									<th>요일</th>
+									<th>강의실</th>
+									<th>강사</th>
+									<th>비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>강의명</td>
+									<td>2023.07.12~2023.08.10</td>
+									<td>09:30~11:30</td>
+									<td>월수금</td>
+									<td>05층 C</td>
+									<td>김강사</td>
+									<td>수업6일(출석1일)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 					<!-- // mbody-forms -->
 				</div><!-- // modal-body -->
 				<div class="modal-footer">
 					<div class="d-flex justify-content-between w-100">
 						<div class="d-flex gap-1">
 							<a href="#" class="btn btn-outline-primary">닫기</a>
-							<a href="#" class="btn btn-outline-primary">삭제</a>
 						</div>
 						<div class="d-flex gap-1">
-							<a href="#" class="btn btn-point-deep">상신</a>
-							<a href="#" class="btn btn-point">저장</a>
+							<a href="#" class="btn btn-point">선택</a>
 						</div>
 					</div>
 				</div>

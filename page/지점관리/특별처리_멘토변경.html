@@ -21,7 +21,7 @@
 	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
 
 	<style>
-	
+
 	</style>
 </head>
 
@@ -43,11 +43,24 @@
 						<tbody>
 							<tr>
 								<th>유형</th>
-								<td>DB변경</td>
+								<td>멘토 변경</td>
 							</tr>
 							<tr>
 								<th>제목</th>
 								<td><input type="text" class="form-control" placeholder=""></td>
+							</tr>
+							<tr>
+								<th>변경범위</th>
+								<td>
+									<div class="form-check-inline">
+										<input class="form-check-input" type="checkbox" id="c1">
+										<label class="form-check-label" for="c1" checked>멘토</label>
+									  </div>
+									  <div class="form-check-inline">
+										<input class="form-check-input" type="checkbox" id="c2">
+										<label class="form-check-label" for="c2" checked>수담자</label>
+									  </div>
+								</td>
 							</tr>
 							<tr>
 								<th>담당자</th>
@@ -63,8 +76,8 @@
 							<tr>
 								<th>변경 대상</th>
 								<td>
-									<button class="btn btn-outline-primary">DB선택</button>
-									 <a href="#none" class="small"><u>김방문(011-123-4567) 외 99명</u></a>
+									<button class="btn btn-outline-primary">수강생 선택</button>
+									<a href="#none" class="small"><u>김방문(011-123-4567) 외 99명</u></a>
 								</td>
 							</tr>
 							<tr>
@@ -90,9 +103,10 @@
 								<th>안내</th>
 								<td>
 									<p class="small text-secondary">
-										선택한 DB의 담당자를 변경 담당자로 변경 처리 합니다<br>
+										선택한 수강생의 멘토(수당자), 서브멘토를 변경처리 합니다<br>
 										다수의 사업부 직원으로 변경 시 1명씩 순차적으로 분배됩니다<br>
 										최종 승인자의 승인 처리 완료 시 변경 처리 진행됩니다
+
 									</p>
 								</td>
 							</tr>

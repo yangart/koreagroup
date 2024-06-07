@@ -27,7 +27,7 @@
 
 <body>
 	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
-		<div class="modal-dialog modal-md modal-dialog-centered">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title">특별처리 신청서</h5>
@@ -35,6 +35,49 @@
 						id="close-modal"></button>
 				</div><!-- // modal-header -->
 				<div class="modal-body">
+					<div class="sign-area">
+						<div class="img-area">
+							<figure>
+								<img src="./assets/img/logo-light.png" alt="korea">
+							</figure>
+							<p>문서번호: 12345</p>
+							<p>유형: 배정제외</p>
+						</div>
+						<div class="txt-area">
+							<div>
+								<table>
+									<colgroup>
+										<col style="width: 30px;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th rowspan="4">결재</th>
+											<th>팀장</th>
+											<th>부원장</th>
+											<th>원장</th>
+										</tr>
+										<tr>
+											<td>김책임</td>
+											<td>이인자</td>
+											<td>이인자</td>
+										</tr>
+										<tr class="sign">
+											<td><span class="label-sign-positive">승인</span></td>
+											<td><span class="label-sign-negative">반려</span></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td><small>2024.03.13 13:01</small></td>
+											<td><small>2024.03.13 13:01</small></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+						</div>
+					</div>
+					<p class="bg-light p-3 mb-3 small">아래와 같은 내용으로 특별처리 신청서를 제출하니, 재가하여 주시기 바랍니다</p>
 					<table class="table-write">
 						<colgroup>
 							<col style="width:20%">
@@ -42,59 +85,40 @@
 						</colgroup>
 						<tbody>
 							<tr>
-								<th>유형</th>
-								<td>DB변경</td>
+								<th>기안자</th>
+								<td>김담당1 선임멘토 / 브랜뉴강남 사업부1부서</td>
+							</tr>
+							<tr>
+								<th>요청일시</th>
+								<td>2024.03.11 14:00</td>
 							</tr>
 							<tr>
 								<th>제목</th>
-								<td><input type="text" class="form-control" placeholder=""></td>
+								<td>김담당1 퇴사로 인한 DB변경 신청</td>
 							</tr>
 							<tr>
-								<th>담당자</th>
-								<td>
-									<div class="d-flex gap-1">
-										<div>
-											<input type="text" class="form-control" placeholder="담당자" aria-colcount="">
-										</div>
-										<button class="btn btn-point-deep">검색</button>
-									</div>
-								</td>
+								<th>사유</th>
+								<td>담당자 퇴사</td>
 							</tr>
 							<tr>
-								<th>변경 대상</th>
+								<th>내용</th>
 								<td>
-									<button class="btn btn-outline-primary">DB선택</button>
-									 <a href="#none" class="small"><u>김방문(011-123-4567) 외 99명</u></a>
-								</td>
-							</tr>
-							<tr>
-								<th>담당자 선택</th>
-								<td>
-									<button class="btn btn-outline-primary">담당자 선택</button>
-									<a href="#none" class="small"><u>김방문(011-123-4567) 외 99명</u></a>
-								</td>
-							</tr>
-							<tr>
-								<th>변경사유</th>
-								<td>
-									<div class="col-4">
-										<select class="form-select form-inline" data-choices data-choices-search-false>
-											<option value="01">선택</option>
-											<option value="02">option 2</option>
-											<option value="03">option 3</option>
-										</select>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<th>안내</th>
-								<td>
-									<p class="small text-secondary">
-										선택한 DB의 담당자를 변경 담당자로 변경 처리 합니다<br>
-										다수의 사업부 직원으로 변경 시 1명씩 순차적으로 분배됩니다<br>
-										최종 승인자의 승인 처리 완료 시 변경 처리 진행됩니다
+									<p class="mb-2">
+										<strong>수강생이 강의에서 배정 제외 처리됩니다</strong>
 									</p>
+									<dl class="dl-info">
+										<dt>수강생정보</dt>
+										<dd><u>김방문(011-123-4567) 외 99명</u></dd>
+										<dt>변경전</dt>
+										<dd>김담당</dd>
+										<dt>변경후</dt>
+										<dd><u>포토샵 외 1개</u></dd>
+									</dl>
 								</td>
+							</tr>
+							<tr>
+								<th>반려사유</th>
+								<td>등록한 반려사유 노출</td>
 							</tr>
 						</tbody>
 					</table>
@@ -104,11 +128,11 @@
 					<div class="d-flex justify-content-between w-100">
 						<div class="d-flex gap-1">
 							<a href="#" class="btn btn-outline-primary">닫기</a>
-							<a href="#" class="btn btn-outline-primary">삭제</a>
 						</div>
 						<div class="d-flex gap-1">
-							<a href="#" class="btn btn-point-deep">상신</a>
-							<a href="#" class="btn btn-point">저장</a>
+							<a href="#" class="btn btn-point-deep">반려</a>
+							<a href="#" class="btn btn-point">재기안</a>
+							<a href="#" class="btn btn-point">승인</a>
 						</div>
 					</div>
 				</div>
