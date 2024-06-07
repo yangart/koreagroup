@@ -993,11 +993,6 @@
 										</tbody>
 									</table>
 								</div>
-
-								<div class="mbody-btn text-lg-start">
-									<button type="submit" class="btn btn-outline-active btn-sm">닫기</button>
-									<button type="submit" class="btn btn-outline-active btn-sm">삭제</button>
-								</div>
 							</div><!-- // col -->
 
 							<div class="col-50p">
@@ -1038,47 +1033,51 @@
 													<button type="submit" class="btn btn-outline-active btn-sm position-absolute bottom-0 start-0 ms-1 mb-2">+ 질문 추가</button>
 												</th>
 												<td colspan="3">
-													<div class="row mb-1 mt-0">
-														<span class="form-text col-1 pt-1">질문1</span>
-														<div class="col-11">
-															<input type="text" class="form-control" placeholder="질문을 입력하세요. (최대 500자)" value="">
+													<div class="modal-survey-list">
+														<div class="survey-list">
+															<div class="row mb-1 mt-0">
+																<span class="form-text col-1 pt-1">질문1</span>
+																<div class="col-11">
+																	<input type="text" class="form-control" placeholder="질문을 입력하세요. (최대 500자)" value="">
+																</div>
+															</div>
+															<div class="row align-items-center mt-1 pt-1">
+																<div class="col-12">
+																	<a href="#" class="btn col-140px btn-outline-active inline-block align-middle">이미지 추가</a>
+																	<span class="form-text mt-0 ms-1"><button type="button" class="border-0 bg-white align-middle mb-1">ⓧ</button> 파일명.png</span>
+																</div>
+															</div>
+															<div class="row row-x4 align-items-center mt-1 pt-1">
+																<div class="col-2">
+																	<select class="form-select" data-choices data-choices-search-false>
+																		<option value="01">객관식</option>
+																		<option value="02">option 2</option>
+																		<option value="03">option 3</option>
+																	</select>
+																</div>
+																<div class="col-2">
+																	<select class="form-select" data-choices data-choices-search-false>
+																		<option value="01">2개</option>
+																		<option value="02">option 2</option>
+																		<option value="03">option 3</option>
+																	</select>
+																</div>
+															</div>
+															<div class="row row-x4 align-items-center mt-1 pt-1">
+																<div class="form-list mb-2">
+																	<input type="text" class="form-control" placeholder="항목1 입력하세요" value="">
+																</div>
+																<div class="form-list mb-2">
+																	<input type="text" class="form-control" placeholder="항목2 입력하세요" value="">
+																</div>
+															</div>	
+															<div class="row mt-3">
+																<div class="col-lg-12 text-lg-end">
+																	<button type="submit" class="btn btn-outline-active btn-sm">삭제</button>
+																</div>
+															</div>		
 														</div>
-													</div>
-													<div class="row align-items-center mt-1 pt-1">
-														<div class="col-12">
-															<a href="#" class="btn col-140px btn-outline-active inline-block align-middle">이미지 추가</a>
-															<span class="form-text mt-0 ms-1"><button type="button" class="border-0 bg-white align-middle mb-1">ⓧ</button> 파일명.png</span>
-														</div>
-													</div>
-													<div class="row row-x4 align-items-center mt-1 pt-1">
-														<div class="col-2">
-															<select class="form-select" data-choices data-choices-search-false>
-																<option value="01">객관식</option>
-																<option value="02">option 2</option>
-																<option value="03">option 3</option>
-															</select>
-														</div>
-														<div class="col-2">
-															<select class="form-select" data-choices data-choices-search-false>
-																<option value="01">2개</option>
-																<option value="02">option 2</option>
-																<option value="03">option 3</option>
-															</select>
-														</div>
-													</div>
-													<div class="row row-x4 align-items-center mt-1 pt-1">
-														<div class="form-list mb-2">
-															<input type="text" class="form-control" placeholder="항목1 입력하세요" value="">
-														</div>
-														<div class="form-list mb-2">
-															<input type="text" class="form-control" placeholder="항목2 입력하세요" value="">
-														</div>
-													</div>	
-													<div class="row mt-3">
-														<div class="col-lg-12 text-lg-end">
-															<button type="submit" class="btn btn-outline-active btn-sm">삭제</button>
-														</div>
-													</div>							
+													</div>					
 												</td>
 											</tr>
 											<tr>
@@ -1091,18 +1090,26 @@
 											</tr>
 										</tbody>
 									</table>
-								</div>							
-
-								<div class="mbody-btn text-lg-end">
-									<button type="button" class="btn btn-outline-active btn-sm">복사</button>
-									<button type="submit" class="btn btn-point btn-sm">저장</button>
-								</div>
+								</div>		
 
 							</div><!-- // col -->
 						</div><!-- // row -->
 
 					</div><!-- // mbody-forms -->
 				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<button type="submit" class="btn btn-outline-active btn-sm">닫기</button>
+							<button type="submit" class="btn btn-outline-active btn-sm">삭제</button>
+						</div>
+						<div class="d-flex gap-1">
+							<button type="button" class="btn btn-outline-active btn-sm">복사</button>
+							<button type="submit" class="btn btn-point btn-sm">저장</button>
+						</div>
+					</div>
+				</div><!-- // modal-footer -->
 
 			</div>
 		</div>
