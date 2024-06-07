@@ -887,7 +887,7 @@
 											<col style="width:110px">
 											<col style="">
 											<col style="width:110px">
-											<col style="width:40%">
+											<col style="">
 										</colgroup>
 										<tbody>
 											<tr>
@@ -896,7 +896,7 @@
 													<div class="col-auto">
 														<div class="form-inline">
 															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a">
+																<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
 																<label class="form-check-label" for="inlineRadio1_a">일반</label>
 															</div>
 															<div class="form-check col-4">
@@ -904,7 +904,7 @@
 																<label class="form-check-label" for="inlineRadio1_b">강의 (만족도)</label>
 															</div>
 															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_c" value="b" checked="">
+																<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_c" value="b">
 																<label class="form-check-label" for="inlineRadio1_c">교육</label>
 															</div>
 														</div>
@@ -917,11 +917,11 @@
 													<div class="col-auto">
 														<div class="form-inline">
 															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_a" value="a" disabled>
+																<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_a" value="a" checked="">
 																<label class="form-check-label" for="inlineRadio2_a">수강생 (재학생)</label>
 															</div>
 															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_b" value="b" checked="">
+																<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_b" value="b">
 																<label class="form-check-label" for="inlineRadio2_b">임직원 (재직)</label>
 															</div>
 														</div>
@@ -929,23 +929,59 @@
 												</td>
 											</tr>
 											<tr>
-												<th>대상 상세 <i class="text-req ms-1">*</i></th>
+												<th class="align-top pt-3">대상 상세 <i class="text-req ms-1">*</i></th>
 												<td colspan="3">
-													<p>[ 수강생 포탈 > 수강 내역 > 만족도 조사 ] 버튼</p>
+													<p class="text-primary">지정하지 않은 항목은 [전체] 대상으로 설정됩니다.</p>
+													<div class="row row-x4 align-items-center mt-1">
+														<div class="col-4">
+															<select class="form-select" data-choices data-choices-search-false>
+																<option value="01">계열</option>
+																<option value="02">option 2</option>
+																<option value="03">option 3</option>
+															</select>
+														</div>
+														<div class="col-4">
+															<select class="form-select" data-choices data-choices-search-false>
+																<option value="01">지점</option>
+																<option value="02">option 2</option>
+																<option value="03">option 3</option>
+															</select>
+														</div>
+														<div class="col-4">
+															<select class="form-select" data-choices data-choices-search-false>
+																<option value="01">학과</option>
+																<option value="02">option 2</option>
+																<option value="03">option 3</option>
+															</select>
+														</div>
+													</div>
+													<div class="row row-x4 align-items-center mt-1 pt-1 border-top">
+														<div class="col-8">
+															<select class="form-select" data-choices data-choices-search-false>
+																<option value="01">개강일</option>
+																<option value="02">option 2</option>
+																<option value="03">option 3</option>
+															</select>
+														</div>
+													</div>									
 												</td>
 											</tr>
 											<tr>
 												<th>설문 시작일 <i class="text-req ms-1">*</i></th>
 												<td>
-													<div class="row row-x4">
-														<p>-</p>
-													</div>
+													<div class="col-140px">
+														<div class="input-group-flatpickr">
+															<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+														</div>
+													</div>	
 												</td>
 												<th>설문 기간 <i class="text-req ms-1">*</i></th>
 												<td>
-													<div class="row row-x4">
-														<p>-</p>
-													</div>
+													<div class="col-150px">
+														<div class=" align-items-center">
+															<input type="text" class="form-control text-end col-140px d-inline-block align-middle" value="7"><span class="form-text mt-0 ms-1">일</span>
+														</div>
+													</div>	
 												</td>
 											</tr>
 											<tr>
@@ -968,7 +1004,18 @@
 											<tr>
 												<th>접근 경로<i class="text-req ms-1">*</i></th>
 												<td colspan="3">
-													<p>-</p>								
+													<div class="col-auto">
+														<div class="form-inline">
+															<div class="form-check col-5">
+																<input class="form-check-input" type="radio" name="inlineRadio4" id="inlineRadio4_a" value="a" checked="">
+																<label class="form-check-label" for="inlineRadio4_a">버튼</label>
+															</div>
+															<div class="form-check col-5">
+																<input class="form-check-input" type="radio" name="inlineRadio4" id="inlineRadio4_b" value="b">
+																<label class="form-check-label" for="inlineRadio4_b">메인 팝업 + 버튼</label>
+															</div>
+														</div>
+													</div>										
 												</td>
 											</tr>
 											<tr>
