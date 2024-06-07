@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 jQuery(function($){
 
+	/* 모달 2개 이상일 때 */
+	$(document).on('hidden.bs.modal', '.modal', function () {
+		$('.modal:visible').length && $(document.body).addClass('modal-open');
+	});
 /*
 	$(".form-datepicker").click(function() {
 		$(".datepicker-box").fadeOut(150);

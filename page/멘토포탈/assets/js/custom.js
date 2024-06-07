@@ -17,26 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 jQuery(function($){
-
-	$(".form-datepicker").on('click', function(){
-		$(".datepicker-box").fadeOut(150);
-        if($(this).parents('.datepicker-wrap').hasClass('show')){
-			return false;
-		}else{
-			$(this).parents('.datepicker-wrap').addClass('show');
-			$(this).siblings('.datepicker-box').fadeIn(150);
-			return false;
-		}
-	});
-	$(".datepicker-wrap").on('click', function(){
-        if($(this).hasClass('show')){
-			$(this).removeClass('show');
-			$(this).find('.datepicker-box').fadeOut(150);
-		}else{
-			return false;
-		}
-	});
-
+	
 	$(".modal-side-toggle").on('click', function(){
         if($(this).parents('.modal-body').hasClass('expanded')){
 			$(this).parents('.modal-body').removeClass('expanded');
@@ -47,6 +28,20 @@ jQuery(function($){
 		}
 	});
 
+	/* 모달 2개 이상일 때 */
+	$(document).on('hidden.bs.modal', '.modal', function () {
+			$('.modal:visible').length && $(document.body).addClass('modal-open');
+	});
+
+	$('.form-datepicker').datepicker({
+		format: "yyyy-mm-dd",	
+		autoclose : true,	
+		datesDisabled : ['2024-06-06','2024-06-26'],
+		daysOfWeekDisabled : [0,6],	
+		todayHighlight : true,
+		language : "ko"					
+	});
+	
 	fluidAutoHeight();
 	$(window).resize(fluidAutoHeight);
 	function fluidAutoHeight(){
