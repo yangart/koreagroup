@@ -196,7 +196,7 @@ body{overflow-y: hidden;margin:0;font-family:var(--font-family);font-size:var(--
 
 #backToTop{display:block;position:fixed;bottom:100px;right:28px;width:37px;height:37px;padding:0;border-radius:2px;background:#ff2d5b url(../img/scroll-top-ico@2x.png) no-repeat 50% 50% / 12px auto;text-indent:-9999px;font-size:0;-webkit-transition:all .5s ease;transition:all .5s ease;z-index:1000}
 
-.choices{position:relative;margin-bottom:24px;font-size:16px}
+.choices{position:relative;/*margin-bottom:24px;*/font-size:16px}
 .choices:focus{outline:0}
 .choices:last-child{margin-bottom:0}
 .choices.is-disabled .choices__inner,.choices.is-disabled .choices__input{background-color:rgba(var(--bs-light-rgb),.75);cursor:not-allowed;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
