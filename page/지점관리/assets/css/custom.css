@@ -123,3 +123,10 @@ input:-webkit-autofill{ -webkit-text-fill-color: #212529 !important; }
 .mbody-subject dt span{font-size:20px;font-weight:600;}
 .mbody-subject dd{font-size:16px;font-weight:600;line-height:1.5;color:#495057;}
 .mbody-subject dt + dd{margin-top:4px;}
+
+/* 2024-06-06 */
+.table-title + .title-right-btn{position:absolute;top:50%;transform: translate(0,-50%);right:1%;}
+.table-body{min-height: calc((100vh - 45vh));}
+.table-body .table th{vertical-align: middle;font-size: 14px;line-height: 1.43; color: #212529;border-bottom: 1px solid #e9ebec;}
+.table-body .table td{font-size:14px;}
+.table-body .table td .row > div{margin-top:0;}

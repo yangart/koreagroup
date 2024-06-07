@@ -172,7 +172,7 @@
 .modal-dialog{margin:1.75rem auto;}
 
 /* 2024-06-05 modal dim */
-.modal.show{display:block;background: rgba(0, 0, 0, .3);}
+.modal.show{display:block;background: rgba(0, 0, 0, .5);}
 .modal-backdrop.show {display: none;}
 .modal-reg{max-width:850px;}
 
