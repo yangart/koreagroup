@@ -1250,23 +1250,7 @@
 			});
 	  
 			calendar.render();
-		});
-	  
-		$(function () {
-			/* 모달 2개 이상일 때 */
-			$(document).on('hidden.bs.modal', '.modal', function () {
-				 $('.modal:visible').length && $(document.body).addClass('modal-open');
-			});
-
-			$('.form-datepicker').datepicker({
-				format: "yyyy-mm-dd",	
-				autoclose : true,	
-				datesDisabled : ['2024-06-06','2024-06-26'],
-				daysOfWeekDisabled : [0,6],	
-				todayHighlight : true,
-				language : "ko"					
-			});
-		});
+		});	  
 	  </script>
 </body>
 </html>
