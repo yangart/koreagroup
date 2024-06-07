@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	<div class="modal fade" id="pageModal1_1" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
 		<div class="modal-dialog modal-md modal-dialog-centered">
 			<div class="modal-content">
 
@@ -36,27 +36,15 @@
 						id="close-modal"></button>
 				</div><!-- // modal-header -->
 				<div class="modal-body">
+					<p class="bg-light p-3 mb-3 small">담당자 : 김담당1 선임멘토 (퇴사)</p>
 					<div class="fnc-area">
 						<div class="l-area">
-							<small>선택 1/3000</small>
+							<div class="table-title">선택 1/3000</div>
 						</div>
 						<div class="r-area">
-							<select class="form-select" data-choices data-choices-search-false disabled>
-								<option value="01">컴퓨터</option>
-								<option value="02">option 2</option>
-								<option value="03">option 3</option>
-							</select>
-							<select class="form-select" data-choices data-choices-search-false disabled>
-								<option value="01">강남</option>
-								<option value="02">option 2</option>
-								<option value="03">option 3</option>
-							</select>
-							<div class="col-auto">
-								<select class="form-select" data-choices data-choices-search-false>
-									<option value="01">팀</option>
-									<option value="02">option 2</option>
-									<option value="03">option 3</option>
-								</select>
+							<label for="" class="form-label mb-0">유입일</label>
+							<div class="input-group-flatpickr">
+								<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="날짜를 선택하세요">
 							</div>
 							<div class="col-auto"><button type="button" class="btn btn-point-deep">검색</button></div>
 						</div>
@@ -69,25 +57,18 @@
 								<col style="">
 								<col style="">
 								<col style="">
-								<col style="">
-								<col style="">
-								<col style="">
-								<col style="">
+								<col style="width:25%;">
 							</colgroup>
-	
 							<thead>
 								<tr>
 									<th>
 										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
 									</th>
 									<th>이름</th>
-									<th>별칭</th>
 									<th>연락처</th>
-									<th>계열</th>
-									<th>지점</th>
-									<th>부서</th>
-									<th>팀</th>
-									<th>직책</th>
+									<th>담당자</th>
+									<th>최종담당자</th>
+									<th>유입일시</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -96,14 +77,11 @@
 										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
 									</td>
 									<td>홍길동</td>
-									<td>선담당1</td>
 									<td>010-000-0000</td>
-									<td>컴퓨터</td>
-									<td>강남지점</td>
-									<td>사업부</td>
-									<td>1-1팀</td>
-									<td>신인멘토</td>
-								</tr>						
+									<td>[강남재입력]김당당</td>
+									<td>김담당</td>
+									<td>2023-11-11 23:11:33</td>
+								</tr>
 							</tbody>
 						</table>
 					</div>
@@ -136,9 +114,7 @@
 	<script src="./assets/js/custom.js"></script>
 	<script>
 		$(function () {
-			$('#pageModal1_1').modal('show');
-			$('#pageModal1_2').modal('show');
-			$('#pageModal2').modal('show');
+			$('#pageModal1').modal('show');
 		});
 	</script>
 
