@@ -5,15 +5,12 @@ import {
 } from '../actions/items';
 import { Item } from '../interfaces/item';
 import { State } from '../interfaces/state';
-
 export const defaultState = [];
-
 type ActionTypes =
   | AddItemAction
   | RemoveItemAction
   | HighlightItemAction
   | Record<string, never>;
-
 export default function items(
   state: Item[] = defaultState,
   action: ActionTypes = {},
@@ -37,15 +34,12 @@ export default function items(
           keyCode: null,
         },
       ];
-
       return newState.map((obj: Item) => {
         const item = obj;
         item.highlighted = false;
-
         return item;
       });
     }
-
     case 'REMOVE_ITEM': {
       // Set item to inactive
       return state.map((obj) => {
@@ -53,24 +47,19 @@ export default function items(
         if (item.id === action.id) {
           item.active = false;
         }
-
         return item;
       });
     }
-
     case 'HIGHLIGHT_ITEM': {
       const highlightItemAction = action as HighlightItemAction;
-
       return state.map((obj) => {
         const item = obj;
         if (item.id === highlightItemAction.id) {
           item.highlighted = highlightItemAction.highlighted;
         }
-
         return item;
       });
     }
-
     default: {
       return state;
     }

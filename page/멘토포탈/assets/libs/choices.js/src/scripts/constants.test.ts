@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import { EVENTS, ACTION_TYPES, KEY_CODES, SCROLLING_SPEED } from './constants';
 import { DEFAULT_CLASSNAMES, DEFAULT_CONFIG } from './defaults';
-
 describe('constants', () => {
   describe('type checks', () => {
     describe('DEFAULT_CLASSNAMES', () => {
@@ -37,12 +36,10 @@ describe('constants', () => {
         ]);
       });
     });
-
     describe('DEFAULT_CONFIG', () => {
       it('exports as an object', () => {
         expect(DEFAULT_CONFIG).to.be.an('object');
       });
-
       it('has expected config options', () => {
         expect(DEFAULT_CONFIG.items).to.be.an('array');
         expect(DEFAULT_CONFIG.choices).to.be.an('array');
@@ -85,7 +82,6 @@ describe('constants', () => {
         expect(DEFAULT_CONFIG.callbackOnCreateTemplates).to.equal(null);
       });
     });
-
     describe('EVENTS', () => {
       it('exports as an object with expected keys', () => {
         expect(EVENTS).to.be.an('object');
@@ -103,7 +99,6 @@ describe('constants', () => {
         ]);
       });
     });
-
     describe('ACTION_TYPES', () => {
       it('exports as an object with expected keys', () => {
         expect(ACTION_TYPES).to.be.an('object');
@@ -122,7 +117,6 @@ describe('constants', () => {
         ]);
       });
     });
-
     describe('KEY_CODES', () => {
       it('exports as an object with expected keys', () => {
         expect(KEY_CODES).to.be.an('object');
@@ -138,14 +132,12 @@ describe('constants', () => {
           'PAGE_DOWN_KEY',
         ]);
       });
-
       it('exports each value as a number', () => {
         Object.keys(KEY_CODES).forEach((key) => {
           expect(KEY_CODES[key]).to.be.a('number');
         });
       });
     });
-
     describe('SCROLLING_SPEED', () => {
       it('exports as an number', () => {
         expect(SCROLLING_SPEED).to.be.a('number');

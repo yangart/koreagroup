@@ -1,7 +1,6 @@
 import { ActionType } from './interfaces/action-type';
 import { EventType } from './interfaces/event-type';
 import { KeyCodeMap } from './interfaces/keycode-map';
-
 export const EVENTS: Record<EventType, EventType> = {
   showDropdown: 'showDropdown',
   hideDropdown: 'hideDropdown',
@@ -14,7 +13,6 @@ export const EVENTS: Record<EventType, EventType> = {
   highlightChoice: 'highlightChoice',
   unhighlightItem: 'unhighlightItem',
 };
-
 export const ACTION_TYPES: Record<ActionType, ActionType> = {
   ADD_CHOICE: 'ADD_CHOICE',
   FILTER_CHOICES: 'FILTER_CHOICES',
@@ -28,7 +26,6 @@ export const ACTION_TYPES: Record<ActionType, ActionType> = {
   RESET_TO: 'RESET_TO',
   SET_IS_LOADING: 'SET_IS_LOADING',
 };
-
 export const KEY_CODES: KeyCodeMap = {
   BACK_KEY: 46,
   DELETE_KEY: 8,
@@ -40,10 +37,8 @@ export const KEY_CODES: KeyCodeMap = {
   PAGE_UP_KEY: 33,
   PAGE_DOWN_KEY: 34,
 };
-
 export const TEXT_TYPE: HTMLInputElement['type'] = 'text';
 export const SELECT_ONE_TYPE: HTMLSelectElement['type'] = 'select-one';
 export const SELECT_MULTIPLE_TYPE: HTMLSelectElement['type'] =
   'select-multiple';
-
 export const SCROLLING_SPEED = 4;

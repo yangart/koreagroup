@@ -3,7 +3,6 @@ import { Choice } from './choice';
 import { ClassNames } from './class-names';
 import { EventType } from './event-type';
 import { PassedElementType } from './passed-element-type';
-
 export interface PassedElement extends HTMLElement {
   classNames: ClassNames;
   element: (HTMLInputElement | HTMLSelectElement) & {
@@ -21,7 +20,6 @@ export interface PassedElement extends HTMLElement {
   isDisabled: boolean;
   parentInstance: Choices;
 }
-
 /**
  * Events fired by Choices behave the same as standard events. Each event is triggered on the element passed to Choices (accessible via `this.passedElement`. Arguments are accessible within the `event.detail` object.
  */
@@ -40,7 +38,6 @@ export interface EventMap {
     groupValue: string;
     keyCode: number;
   }>;
-
   /**
    * Triggered each time an item is removed (programmatically or by the user).
    *
@@ -54,7 +51,6 @@ export interface EventMap {
     label: string;
     groupValue: string;
   }>;
-
   /**
    * Triggered each time an item is highlighted.
    *
@@ -68,7 +64,6 @@ export interface EventMap {
     label: string;
     groupValue: string;
   }>;
-
   /**
    * Triggered each time an item is unhighlighted.
    *
@@ -82,7 +77,6 @@ export interface EventMap {
     label: string;
     groupValue: string;
   }>;
-
   /**
    * Triggered each time a choice is selected **by a user**, regardless if it changes the value of the input.
    *
@@ -91,7 +85,6 @@ export interface EventMap {
    * Arguments: choice: Choice
    */
   choice: CustomEvent<{ choice: Choice }>;
-
   /**
    * Triggered each time an item is added/removed **by a user**.
    *
@@ -100,7 +93,6 @@ export interface EventMap {
    * Arguments: value
    */
   change: CustomEvent<{ value: string }>;
-
   /**
    * Triggered when a user types into an input to search choices.
    *
@@ -109,7 +101,6 @@ export interface EventMap {
    * Arguments: value, resultCount
    */
   search: CustomEvent<{ value: string; resultCount: number }>;
-
   /**
    * Triggered when the dropdown is shown.
    *
@@ -118,7 +109,6 @@ export interface EventMap {
    * Arguments: -
    */
   showDropdown: CustomEvent<undefined>;
-
   /**
    * Triggered when the dropdown is hidden.
    *
@@ -127,7 +117,6 @@ export interface EventMap {
    * Arguments: -
    */
   hideDropdown: CustomEvent<undefined>;
-
   /**
    * Triggered when a choice from the dropdown is highlighted.
    *

@@ -13,7 +13,6 @@
         background: var(--first-color-h);
         margin-bottom: 16px;
     }
-
     .fc-toolbar-title {
         font-size: 14px;
         width: 140px;
@@ -22,22 +21,17 @@
         text-align: center;
         color: #fff;
     }
-
     .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk {
         display: flex;
-
         > div {
             display: flex;
         }
     }
-
     .fc-button {
         font-size: 14px;
     }
-
     .fc-toolbar.fc-header-toolbar .fc-button {
         height: 36px;
-
         &.fc-prev-button,
         &.fc-next-button {
             border: 0;
@@ -102,7 +96,6 @@
         &.fc-event-end {
             margin: 0;
         }
-
         &:not(.fc-event-start),
         &:not(.fc-event-end) {
             border-width: 0;
@@ -114,7 +107,6 @@
         overflow: hidden;
         padding: 0;
     }
-
     /* timegrid : week */
     .fc-timegrid-axis-cushion,
     .fc-timegrid-slot-label-cushion {
@@ -147,7 +139,6 @@
     .fc-timegrid-col-events {
         margin: 0;
     }
-
     .fc-event-cate {
         border: 0;
         width: auto;
@@ -162,13 +153,11 @@
         font-weight: 600;
         font-size: 12px;
     }
-
     .event-counsel .fc-event-cate { background:var(--color-or); }
     .event-facetoface .fc-event-cate { background:var(--color-bl); }
     .event-interview .fc-event-cate { background:var(--color-gn); }
     .event-contact .fc-event-cate { background:var(--color-vi); }
     .event-etc .fc-event-cate { background:var(--color-gr-h); }
-
     .fc-event-title {
         flex: 1;
         white-space: nowrap;
@@ -184,7 +173,6 @@
         color:#777;
     }
 
-
     /* daygrid - day */
     .fc-dayGridDay-view {
         .fc-daygrid-day-events {
@@ -197,7 +185,6 @@
                 font-size:13px;
             }
         }
-
         .fc-event-cate {
             border-radius:8px;
             padding:0 8px;
@@ -235,7 +222,6 @@
         .fc-daygrid-dot-event {
             border-radius: 4px;
         }
-
     }
 }
  .fc-daygrid-event .fc-event-time {
@@ -244,7 +230,6 @@
 .fc-daygrid-dot-event .fc-event-title {
     display:none;
 }
-
 .fc-popover {
     padding: 16px;
     border-radius:8px;
@@ -266,7 +251,6 @@
                 font-size:13px;
             }
         }
-
         .fc-event-cate {
             border-radius:8px;
             padding:0 8px;
@@ -292,7 +276,6 @@
         background: url(../img/schedule-next-ico@2x.png) 50% 50% no-repeat;
         background-size: 16px auto;
     }
-
     &.fc-prev-button .fc-icon:before,
     &.fc-next-button .fc-icon:before {
         content: none;
@@ -303,13 +286,11 @@
     &:active {
         color: var(--first-color-h);
     }
-
     &.fc-button-active:focus,
     &:active:focus {
         box-shadow: none;
     }
 }
-
 
 /* bootstrap datepicker */
 .dropdown-menu {

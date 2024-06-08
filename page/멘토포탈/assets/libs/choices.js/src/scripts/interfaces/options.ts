@@ -4,7 +4,6 @@ import { Choice } from './choice';
 import { ClassNames } from './class-names';
 import { PositionOptionsType } from './position-options-type';
 import { Types } from './types';
-
 /**
  * Choices options interface
  *
@@ -23,7 +22,6 @@ export interface Options {
    * @default false
    */
   silent: boolean;
-
   /**
    * Add pre-selected items (see terminology) to text input.
    *
@@ -54,7 +52,6 @@ export interface Options {
    * @default []
    */
   items: string[] | Choice[];
-
   /**
    * Add choices (see terminology) to select input.
    *
@@ -83,7 +80,6 @@ export interface Options {
    * @default []
    */
   choices: Choice[];
-
   /**
    * The amount of choices to be rendered within the dropdown list `("-1" indicates no limit)`. This is useful if you have a lot of choices where it is easier for a user to use the search area to find a choice.
    *
@@ -92,7 +88,6 @@ export interface Options {
    * @default -1
    */
   renderChoiceLimit: number;
-
   /**
    * The amount of items a user can input/select `("-1" indicates no limit)`.
    *
@@ -101,7 +96,6 @@ export interface Options {
    * @default -1
    */
   maxItemCount: number;
-
   /**
    * Whether a user can add items.
    *
@@ -110,7 +104,6 @@ export interface Options {
    * @default true
    */
   addItems: boolean;
-
   /**
    * A filter that will need to pass for a user to successfully add an item.
    *
@@ -119,7 +112,6 @@ export interface Options {
    * @default null
    */
   addItemFilter: string | RegExp | Types.FilterFunction | null;
-
   /**
    * The text that is shown when a user has inputted a new item but has not pressed the enter key. To access the current input value, pass a function with a `value` argument (see the **default config** [https://github.com/jshjohnson/Choices#setup] for an example), otherwise pass a string.
    *
@@ -131,7 +123,6 @@ export interface Options {
    * ```
    */
   addItemText: string | Types.NoticeStringFunction;
-
   /**
    * Whether a user can remove items.
    *
@@ -140,7 +131,6 @@ export interface Options {
    * @default true
    */
   removeItems: boolean;
-
   /**
    * Whether each item should have a remove button.
    *
@@ -149,7 +139,6 @@ export interface Options {
    * @default false
    */
   removeItemButton: boolean;
-
   /**
    * Whether a user can edit items. An item's value can be edited by pressing the backspace.
    *
@@ -158,7 +147,6 @@ export interface Options {
    * @default false
    */
   editItems: boolean;
-
   /**
    * Whether HTML should be rendered in all Choices elements.
    * If `false`, all elements (placeholder, items, etc.) will be treated as plain text.
@@ -171,7 +159,6 @@ export interface Options {
    * @default true
    */
   allowHTML: boolean;
-
   /**
    * Whether each inputted/chosen item should be unique.
    *
@@ -180,7 +167,6 @@ export interface Options {
    * @default true
    */
   duplicateItemsAllowed: boolean;
-
   /**
    * What divides each value. The default delimiter separates each value with a comma: `"Value 1, Value 2, Value 3"`.
    *
@@ -189,7 +175,6 @@ export interface Options {
    * @default ','
    */
   delimiter: string;
-
   /**
    * Whether a user can paste into the input.
    *
@@ -198,7 +183,6 @@ export interface Options {
    * @default true
    */
   paste: boolean;
-
   /**
    * Whether a search area should be shown.
    *
@@ -209,7 +193,6 @@ export interface Options {
    * @default true
    */
   searchEnabled: boolean;
-
   /**
    * Whether choices should be filtered by input or not. If `false`, the search event will still emit, but choices will not be filtered.
    *
@@ -218,7 +201,6 @@ export interface Options {
    * @default true
    */
   searchChoices: boolean;
-
   /**
    * The minimum length a search value should be before choices are searched.
    *
@@ -227,7 +209,6 @@ export interface Options {
    * @default 1
    */
   searchFloor: number;
-
   /**
    * The maximum amount of search results to show.
    *
@@ -236,7 +217,6 @@ export interface Options {
    * @default 4
    */
   searchResultLimit: number;
-
   /**
    * Specify which fields should be used when a user is searching. If you have added custom properties to your choices, you can add these values thus: `['label', 'value', 'customProperties.example']`.
    *
@@ -245,7 +225,6 @@ export interface Options {
    * @default ['label', 'value']
    */
   searchFields: string[];
-
   /**
    * Whether the dropdown should appear above `(top)` or below `(bottom)` the input. By default, if there is not enough space within the window the dropdown will appear above the input, otherwise below it.
    *
@@ -254,7 +233,6 @@ export interface Options {
    * @default 'auto'
    */
   position: PositionOptionsType;
-
   /**
    * Whether the scroll position should reset after adding an item.
    *
@@ -263,7 +241,6 @@ export interface Options {
    * @default true
    */
   resetScrollPosition: boolean;
-
   /**
    * Whether choices and groups should be sorted. If false, choices/groups will appear in the order they were given.
    *
@@ -272,7 +249,6 @@ export interface Options {
    * @default true
    */
   shouldSort: boolean;
-
   /**
    * Whether items should be sorted. If false, items will appear in the order they were selected.
    *
@@ -281,7 +257,6 @@ export interface Options {
    * @default false
    */
   shouldSortItems: boolean;
-
   /**
    * The function that will sort choices and items before they are displayed (unless a user is searching). By default choices and items are sorted by alphabetical order.
    *
@@ -300,7 +275,6 @@ export interface Options {
    * @default sortByAlpha
    */
   sorter: (current: Choice, next: Choice) => number;
-
   /**
    * Whether the input should show a placeholder. Used in conjunction with `placeholderValue`. If `placeholder` is set to true and no value is passed to `placeholderValue`, the passed input's placeholder attribute will be used as the placeholder value.
    *
@@ -319,7 +293,6 @@ export interface Options {
    * @default true
    */
   placeholder: boolean;
-
   /**
    * The value of the inputs placeholder.
    *
@@ -328,7 +301,6 @@ export interface Options {
    * @default null
    */
   placeholderValue: string | null;
-
   /**
    * The value of the search inputs placeholder.
    *
@@ -337,7 +309,6 @@ export interface Options {
    * @default null
    */
   searchPlaceholderValue: string | null;
-
   /**
    * Prepend a value to each item added/selected.
    *
@@ -346,7 +317,6 @@ export interface Options {
    * @default null
    */
   prependValue: string | null;
-
   /**
    * Append a value to each item added/selected.
    *
@@ -355,7 +325,6 @@ export interface Options {
    * @default null
    */
   appendValue: string | null;
-
   /**
    * Whether selected choices should be removed from the list. By default choices are removed when they are selected in multiple select box. To always render choices pass `always`.
    *
@@ -364,7 +333,6 @@ export interface Options {
    * @default 'auto';
    */
   renderSelectedChoices: 'auto' | 'always';
-
   /**
    * The text that is shown whilst choices are being populated via AJAX.
    *
@@ -373,7 +341,6 @@ export interface Options {
    * @default 'Loading...'
    */
   loadingText: string;
-
   /**
    * The text that is shown when a user's search has returned no results. Optionally pass a function returning a string.
    *
@@ -382,7 +349,6 @@ export interface Options {
    * @default 'No results found'
    */
   noResultsText: string | Types.StringFunction;
-
   /**
    * The text that is shown when a user has selected all possible choices. Optionally pass a function returning a string.
    *
@@ -391,7 +357,6 @@ export interface Options {
    * @default 'No choices to choose from'
    */
   noChoicesText: string | Types.StringFunction;
-
   /**
    * The text that is shown when a user hovers over a selectable choice.
    *
@@ -400,7 +365,6 @@ export interface Options {
    * @default 'Press to select'
    */
   itemSelectText: string;
-
   /**
    * The text that is shown when a user has focus on the input but has already reached the **max item count** [https://github.com/jshjohnson/Choices#maxitemcount]. To access the max item count, pass a function with a `maxItemCount` argument (see the **default config** [https://github.com/jshjohnson/Choices#setup] for an example), otherwise pass a string.
    *
@@ -412,14 +376,12 @@ export interface Options {
    * ```
    */
   maxItemText: string | Types.NoticeLimitFunction;
-
   /**
    * If no duplicates are allowed, and the value already exists in the array.
    *
    * @default 'Only unique values can be added'
    */
   uniqueItemText: string | Types.NoticeStringFunction;
-
   /**
    * The text that is shown when addItemFilter is passed and it returns false
    *
@@ -428,7 +390,6 @@ export interface Options {
    * @default 'Only values matching specific conditions can be added'
    */
   customAddItemText: string | Types.NoticeStringFunction;
-
   /**
    * Compare choice and value in appropriate way (e.g. deep equality for objects). To compare choice and value, pass a function with a `valueComparer` argument (see the [default config](https://github.com/jshjohnson/Choices#setup) for an example).
    *
@@ -440,24 +401,20 @@ export interface Options {
    * ```
    */
   valueComparer: Types.ValueCompareFunction;
-
   /**
    * Classes added to HTML generated by  By default classnames follow the BEM notation.
    *
    * **Input types affected:** text, select-one, select-multiple
    */
   classNames: ClassNames;
-
   /**
    * Choices uses the great Fuse library for searching. You can find more options here: https://fusejs.io/api/options.html
    */
   fuseOptions: Fuse.IFuseOptions<Choices>;
-
   /**
    * ID of the connected label to improve a11y. If set, aria-labelledby will be added.
    */
   labelId: string;
-
   /**
    * Function to run once Choices initialises.
    *
@@ -468,7 +425,6 @@ export interface Options {
    * @default null
    */
   callbackOnInit: ((this: Choices) => void) | null;
-
   /**
    * Function to run on template creation. Through this callback it is possible to provide custom templates for the various components of Choices (see terminology). For Choices to work with custom templates, it is important you maintain the various data attributes defined here [https://github.com/jshjohnson/Choices/blob/67f29c286aa21d88847adfcd6304dc7d068dc01f/assets/scripts/src/choices.js#L1993-L2067].
    *

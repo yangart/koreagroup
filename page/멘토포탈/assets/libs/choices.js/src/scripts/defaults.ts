@@ -1,7 +1,6 @@
 import { ClassNames } from './interfaces/class-names';
 import { Options } from './interfaces/options';
 import { sortByAlpha, sanitise } from './lib/utils';
-
 export const DEFAULT_CLASSNAMES: ClassNames = {
   containerOuter: 'choices',
   containerInner: 'choices__inner',
@@ -30,7 +29,6 @@ export const DEFAULT_CLASSNAMES: ClassNames = {
   noResults: 'has-no-results',
   noChoices: 'has-no-choices',
 };
-
 export const DEFAULT_CONFIG: Options = {
   items: [],
   choices: [],

@@ -1,11 +1,9 @@
 import { expect } from 'chai';
 import groups, { defaultState } from './groups';
-
 describe('reducers/groups', () => {
   it('should return same state when no action matches', () => {
     expect(groups(defaultState, {} as any)).to.equal(defaultState);
   });
-
   describe('when groups do not exist', () => {
     describe('ADD_GROUP', () => {
       it('adds group', () => {
@@ -13,7 +11,6 @@ describe('reducers/groups', () => {
         const value = 'Group one';
         const active = true;
         const disabled = false;
-
         const expectedResponse = [
           {
             id,
@@ -22,7 +19,6 @@ describe('reducers/groups', () => {
             disabled,
           },
         ];
-
         const actualResponse = groups(undefined, {
           type: 'ADD_GROUP',
           id,
@@ -30,15 +26,12 @@ describe('reducers/groups', () => {
           active,
           disabled,
         });
-
         expect(actualResponse).to.eql(expectedResponse);
       });
     });
   });
-
   describe('when groups exist', () => {
     let state;
-
     beforeEach(() => {
       state = [
         {
@@ -55,7 +48,6 @@ describe('reducers/groups', () => {
         },
       ];
     });
-
     describe('CLEAR_CHOICES', () => {
       it('restores to defaultState', () => {
         const clonedState = state.slice(0);
@@ -63,7 +55,6 @@ describe('reducers/groups', () => {
         const actualResponse = groups(clonedState, {
           type: 'CLEAR_CHOICES',
         });
-
         expect(actualResponse).to.eql(expectedResponse);
       });
     });

@@ -4,21 +4,18 @@ import groups from './groups';
 import choices from './choices';
 import loading from './loading';
 import { cloneObject } from '../lib/utils';
-
 export const defaultState = {
   groups: [],
   items: [],
   choices: [],
   loading: false,
 };
-
 const appReducer = combineReducers({
   items,
   groups,
   choices,
   loading,
 });
-
 const rootReducer = (passedState, action): object => {
   let state = passedState;
   // If we are clearing all items, groups and options we reassign
@@ -30,8 +27,6 @@ const rootReducer = (passedState, action): object => {
   } else if (action.type === 'RESET_TO') {
     return cloneObject(action.state);
   }
-
   return appReducer(state, action);
 };
-
 export default rootReducer;

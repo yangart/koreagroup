@@ -4,14 +4,11 @@
 	Date	: 2024-06-01
 	Project	: Korea Edu Group
 */
-
 @use "sass:meta";
 @use "sass:list";
 @use "sass:math";
-
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
 @import "theme/mentor";
-
 @import "scss/reset";
 @import "scss/layout";
 @import "scss/component";

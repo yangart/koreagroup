@@ -1,32 +1,26 @@
 import { expect } from 'chai';
 import List from './list';
-
 describe('components/list', () => {
   let instance;
   let choicesElement;
-
   beforeEach(() => {
     choicesElement = document.createElement('div');
     instance = new List({
       element: choicesElement,
     });
   });
-
   afterEach(() => {
     document.body.innerHTML = '';
     instance = null;
   });
-
   describe('constructor', () => {
     it('assigns choices element to class', () => {
       expect(instance.element).to.eql(choicesElement);
     });
-
     it('sets the height of the element', () => {
       expect(instance.height).to.eql(choicesElement.scrollTop);
     });
   });
-
   describe('clear', () => {
     it("clears element's inner HTML", () => {
       const innerHTML = 'test';
@@ -36,7 +30,6 @@ describe('components/list', () => {
       expect(instance.element.innerHTML).to.equal('');
     });
   });
-
   describe('append', () => {
     it('appends passed node to element', () => {
       const elementToAppend = document.createElement('span');
@@ -49,24 +42,20 @@ describe('components/list', () => {
       );
     });
   });
-
   describe('getChild', () => {
     let childElement;
     const childClass = 'test-element';
-
     beforeEach(() => {
       childElement = document.createElement('span');
       childElement.classList.add(childClass);
       instance.element.appendChild(childElement);
     });
-
     it('returns child element', () => {
       const expectedResponse = childElement;
       const actualResponse = instance.getChild(`.${childClass}`);
       expect(expectedResponse).to.eql(actualResponse);
     });
   });
-
   describe('hasChildren', () => {
     describe('when list has children', () => {
       it('returns true', () => {
@@ -76,7 +65,6 @@ describe('components/list', () => {
         expect(response).to.equal(true);
       });
     });
-
     describe('when list does not have children', () => {
       it('returns false', () => {
         instance.element.innerHTML = '';
@@ -85,7 +73,6 @@ describe('components/list', () => {
       });
     });
   });
-
   describe('scrollToTop', () => {
     it("sets the position's scroll position to 0", () => {
       instance.element.scrollTop = 10;

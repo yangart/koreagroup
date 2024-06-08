@@ -5,19 +5,15 @@ import groups from './groups';
 import choices from './choices';
 import items from './items';
 import loading from './loading';
-
 describe('reducers/rootReducer', () => {
   const store = createStore(rootReducer);
-
   it('returns expected reducers', () => {
     const state = store.getState();
-
     expect(state.groups).to.equal(groups(undefined, {} as any));
     expect(state.choices).to.equal(choices(undefined, {} as any));
     expect(state.items).to.equal(items(undefined, {} as any));
     expect(state.loading).to.equal(loading(undefined, {} as any));
   });
-
   describe('CLEAR_ALL', () => {
     it('resets state', () => {
       const output = rootReducer(
@@ -30,7 +26,6 @@ describe('reducers/rootReducer', () => {
           type: 'CLEAR_ALL',
         },
       );
-
       expect(output).to.eql({
         items: [],
         groups: [],
@@ -39,7 +34,6 @@ describe('reducers/rootReducer', () => {
       });
     });
   });
-
   describe('RESET_TO', () => {
     it('replaces state with given state', () => {
       const output = rootReducer(
@@ -53,7 +47,6 @@ describe('reducers/rootReducer', () => {
           state: {},
         },
       );
-
       expect(output).to.eql({});
     });
   });

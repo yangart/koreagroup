@@ -1,7 +1,6 @@
 /* eslint-disable no-new-wrappers */
 import { expect } from 'chai';
 import { stub } from 'sinon';
-
 import {
   cloneObject,
   diff,
@@ -17,7 +16,6 @@ import {
   sortByScore,
   parseCustomProperties,
 } from './utils';
-
 describe('utils', () => {
   describe('getRandomNumber', () => {
     it('returns random number between range', () => {
@@ -28,7 +26,6 @@ describe('utils', () => {
       }
     });
   });
-
   describe('generateChars', () => {
     it('generates a string of random chars with given length', () => {
       const output = generateChars(10);
@@ -36,48 +33,38 @@ describe('utils', () => {
       expect(output).to.have.length(10);
     });
   });
-
   describe('generateId', () => {
     describe('when given element has id value', () => {
       it('generates a unique prefixed id based on given elements id', () => {
         const element = document.createElement('select');
         element.id = 'test-id';
         const prefix = 'test-prefix';
-
         const output = generateId(element, prefix);
-
         expect(output).to.equal(`${prefix}-${element.id}`);
       });
     });
-
     describe('when given element has no id value but name value', () => {
       it('generates a unique prefixed id based on given elements name plus 2 random characters', () => {
         const element = document.createElement('select');
         element.name = 'test-name';
         const prefix = 'test-prefix';
-
         const output = generateId(element, prefix);
         const expectedOutput = `${prefix}-${element.name}-`;
-
         expect(output).to.contain(expectedOutput);
         expect(output).to.have.length(expectedOutput.length + 2);
       });
     });
-
     describe('when given element has no id value and no name value', () => {
       it('generates a unique prefixed id based on 4 random characters', () => {
         const element = document.createElement('select');
         const prefix = 'test-prefix';
-
         const output = generateId(element, prefix);
         const expectedOutput = `${prefix}-`;
-
         expect(output).to.contain(expectedOutput);
         expect(output).to.have.length(expectedOutput.length + 4);
       });
     });
   });
-
   describe('getType', () => {
     it('returns type of given object', () => {
       expect(getType({})).to.equal('Object');
@@ -91,14 +78,12 @@ describe('utils', () => {
       expect(getType('')).to.equal('String');
     });
   });
-
   describe('isType', () => {
     it('checks with given object type equals given type', () => {
       expect(isType('Object', {})).to.equal(true);
       expect(isType('String', {})).to.equal(false);
     });
   });
-
   describe('sanitise', () => {
     describe('when passing a parameter that is not a string', () => {
       it('returns the passed argument', () => {
@@ -109,7 +94,6 @@ describe('utils', () => {
         expect(output).to.equal(value);
       });
     });
-
     describe('when passing a string', () => {
       it('strips HTML from value', () => {
         const value = '<script>somethingMalicious();</script>';
@@ -120,7 +104,6 @@ describe('utils', () => {
       });
     });
   });
-
   describe('sortByAlpha', () => {
     describe('sorting an array', () => {
       it('sorts by value alphabetically', () => {
@@ -130,9 +113,7 @@ describe('utils', () => {
           { value: 'Oasis' },
           { value: 'Tame Impala' },
         ];
-
         const output = values.sort(sortByAlpha);
-
         expect(output).to.eql([
           { value: 'Arctic Monkeys' },
           { value: 'Oasis' },
@@ -140,7 +121,6 @@ describe('utils', () => {
           { value: 'The Strokes' },
         ]);
       });
-
       it('sorts by label alphabetically', () => {
         const values = [
           { value: '0', label: 'The Strokes' },
@@ -148,9 +128,7 @@ describe('utils', () => {
           { value: '0', label: 'Oasis' },
           { value: '0', label: 'Tame Impala' },
         ];
-
         const output = values.sort(sortByAlpha);
-
         expect(output).to.eql([
           { value: '0', label: 'Arctic Monkeys' },
           { value: '0', label: 'Oasis' },
@@ -160,7 +138,6 @@ describe('utils', () => {
       });
     });
   });
-
   describe('sortByScore', () => {
     describe('sorting an array', () => {
       it('sorts by score ascending', () => {
@@ -170,9 +147,7 @@ describe('utils', () => {
           { score: 124 },
           { score: 400 },
         ];
-
         const output = values.sort(sortByScore);
-
         expect(output).to.eql([
           { score: 10 },
           { score: 124 },
@@ -182,7 +157,6 @@ describe('utils', () => {
       });
     });
   });
-
   describe('dispatchEvent', () => {
     it('dispatches custom event of given type on given element', () => {
       const fakeElement = {
@@ -192,9 +166,7 @@ describe('utils', () => {
       const customArgs = {
         testing: true,
       };
-
       dispatchEvent(fakeElement as any, eventType, customArgs);
-
       expect(fakeElement.dispatchEvent.called).to.equal(true);
       const event = fakeElement.dispatchEvent.lastCall.args[0];
       expect(event).to.be.instanceof(CustomEvent);
@@ -203,7 +175,6 @@ describe('utils', () => {
       expect(event.detail).to.equal(customArgs);
     });
   });
-
   describe('existsInArray', () => {
     it('determines whether a value exists within given array', () => {
       const values = [
@@ -212,12 +183,10 @@ describe('utils', () => {
         { value: 'Oasis' },
         { value: 'Tame Impala' },
       ];
-
       expect(existsInArray(values, 'Oasis', 'value')).to.equal(true);
       expect(existsInArray(values, 'The Beatles', 'value')).to.equal(false);
     });
   });
-
   describe('cloneObject', () => {
     it('deeply clones a given object', () => {
       const object = {
@@ -234,14 +203,11 @@ describe('utils', () => {
           },
         },
       };
-
       const output = cloneObject(object);
-
       expect(output).to.not.equal(object);
       expect(output).to.eql(object);
     });
   });
-
   describe('diff', () => {
     it('returns an array of keys present on the first but missing on the second object', () => {
       const obj1 = {
@@ -251,19 +217,15 @@ describe('utils', () => {
       const obj2 = {
         foo: 'bar',
       };
-
       const output = diff(obj1, obj2);
-
       expect(output).to.deep.equal(['baz']);
     });
   });
-
   describe('_parseCustomProperties', () => {
     describe('when custom properties are valid json', () => {
       it('returns the properties as object', () => {
         const customProperties = '{"description": "foo", "bar": "foo"}';
         const result = { description: 'foo', bar: 'foo' };
-
         const value = parseCustomProperties(customProperties);
         expect(value).to.eql(result);
       });
@@ -272,7 +234,6 @@ describe('utils', () => {
       it('returns an empty object', () => {
         const customProperties = undefined;
         const result = {};
-
         const value = parseCustomProperties(customProperties);
         expect(value).to.eql(result);
       });

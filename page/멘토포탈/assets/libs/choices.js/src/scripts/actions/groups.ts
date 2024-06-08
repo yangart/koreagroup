@@ -1,5 +1,4 @@
 import { ACTION_TYPES } from '../constants';
-
 export interface AddGroupAction {
   type: typeof ACTION_TYPES.ADD_GROUP;
   id: number;
@@ -7,7 +6,6 @@ export interface AddGroupAction {
   active: boolean;
   disabled: boolean;
 }
-
 export const addGroup = ({
   value,
   id,

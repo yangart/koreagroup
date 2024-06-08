@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		document.documentElement.scrollTop = 0;
 	}
 });
-
 jQuery(function($){
 	
 	$(".modal-side-toggle").on('click', function(){
@@ -27,12 +26,10 @@ jQuery(function($){
 			return false;
 		}
 	});
-
 	/* 모달 2개 이상일 때 */
 	$(document).on('hidden.bs.modal', '.modal', function () {
 		$('.modal:visible').length && $(document.body).addClass('modal-open');
 	});
-
 	$('.form-datepicker').datepicker({
 		format: "yyyy-mm-dd",	
 		autoclose : true,	
@@ -45,31 +42,24 @@ jQuery(function($){
 	// fluidAutoHeight();
 	// $(window).resize(fluidAutoHeight);
 	// function fluidAutoHeight(){
-
 	// 	var $fluid_height = $(window).outerHeight();
 	// 	var $fluid_inner = 0;
-
 	// 	if($('.fluid-card').length > 0){
-
 	// 		// if($('.fluid-card .card-head').length > 0) $fluid_inner = $fluid_inner + $('.fluid-card .card-head').outerHeight();
 	// 		// if($('.fluid-card .card-body').length > 0) $fluid_inner = $fluid_inner + $('.fluid-card .card-body').outerHeight();
 	// 		// if($('.fluid-card .card-foot').length > 0) $fluid_inner = $fluid_inner + $('.fluid-card .card-foot').outerHeight();
-
 
 	// 		// if($('.page-header').length > 0) $fluid_height = $fluid_height - $('.page-header').outerHeight();
 	// 		// if($('.page-footer').length > 0) $fluid_height = $fluid_height - $('.page-footer').outerHeight();
 	// 		// if($('.page-content-title').length > 0) $fluid_height = $fluid_height - $('.page-content-title').outerHeight();			
 	// 		// if($('.card-l1').length > 0) $fluid_height = $fluid_height - $('.card-l1').outerHeight() - 24;
 	// 		// if($('.page-content').length > 0) $fluid_height = $fluid_height - 36;
-
 		
 	// 		// $('.fluid-card').height($fluid_height - 2);
 	// 		// $('.fluid-card').css('min-height', $fluid_inner);
 	// 	}
-
 	// 	if($('.card-l1').length > 0){
 	// 		$('.main-content').addClass("onPageSchedule");
 	// 	}
 	// }
-
 });

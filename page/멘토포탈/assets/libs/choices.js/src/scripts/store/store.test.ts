@@ -1,26 +1,22 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 import Store from './store';
-
 describe('reducers/store', () => {
   let instance;
   let subscribeStub;
   let dispatchStub;
   let getStateStub;
-
   beforeEach(() => {
     instance = new Store();
     subscribeStub = sinon.stub(instance._store, 'subscribe');
     dispatchStub = sinon.stub(instance._store, 'dispatch');
     getStateStub = sinon.stub(instance._store, 'getState');
   });
-
   afterEach(() => {
     subscribeStub.restore();
     dispatchStub.restore();
     getStateStub.restore();
   });
-
   describe('constructor', () => {
     it('creates redux store', () => {
       expect(instance._store).to.contain.keys([
@@ -30,7 +26,6 @@ describe('reducers/store', () => {
       ]);
     });
   });
-
   describe('subscribe', () => {
     it('wraps redux subscribe method', () => {
       const onChange = (): void => {};
@@ -40,7 +35,6 @@ describe('reducers/store', () => {
       expect(subscribeStub.firstCall.args[0]).to.equal(onChange);
     });
   });
-
   describe('dispatch', () => {
     it('wraps redux dispatch method', () => {
       const action = 'TEST_ACTION';
@@ -50,19 +44,15 @@ describe('reducers/store', () => {
       expect(dispatchStub.firstCall.args[0]).to.equal(action);
     });
   });
-
   describe('state getter', () => {
     it('returns state', () => {
       const state = { items: [] };
       getStateStub.returns(state);
-
       expect(instance.state).to.equal(state);
     });
   });
-
   describe('store selectors', () => {
     let state;
-
     beforeEach(() => {
       state = {
         items: [
@@ -148,24 +138,20 @@ describe('reducers/store', () => {
           },
         ],
       };
-
       getStateStub.returns(state);
     });
-
     describe('items getter', () => {
       it('returns items', () => {
         const expectedResponse = state.items;
         expect(instance.items).to.eql(expectedResponse);
       });
     });
-
     describe('activeItems getter', () => {
       it('returns items that are active', () => {
         const expectedResponse = state.items.filter((item) => item.active);
         expect(instance.activeItems).to.eql(expectedResponse);
       });
     });
-
     describe('highlightedActiveItems getter', () => {
       it('returns items that are active and highlighted', () => {
         const expectedResponse = state.items.filter(
@@ -174,14 +160,12 @@ describe('reducers/store', () => {
         expect(instance.highlightedActiveItems).to.eql(expectedResponse);
       });
     });
-
     describe('choices getter', () => {
       it('returns choices', () => {
         const expectedResponse = state.choices;
         expect(instance.choices).to.eql(expectedResponse);
       });
     });
-
     describe('activeChoices getter', () => {
       it('returns choices that are active', () => {
         const expectedResponse = state.choices.filter(
@@ -190,7 +174,6 @@ describe('reducers/store', () => {
         expect(instance.activeChoices).to.eql(expectedResponse);
       });
     });
-
     describe('selectableChoices getter', () => {
       it('returns choices that are not disabled', () => {
         const expectedResponse = state.choices.filter(
@@ -199,7 +182,6 @@ describe('reducers/store', () => {
         expect(instance.selectableChoices).to.eql(expectedResponse);
       });
     });
-
     describe('searchableChoices getter', () => {
       it('returns choices that are not placeholders and are selectable', () => {
         const expectedResponse = state.choices.filter(
@@ -208,7 +190,6 @@ describe('reducers/store', () => {
         expect(instance.searchableChoices).to.eql(expectedResponse);
       });
     });
-
     describe('getChoiceById', () => {
       describe('passing id', () => {
         it('returns active choice by passed id', () => {
@@ -221,7 +202,6 @@ describe('reducers/store', () => {
         });
       });
     });
-
     describe('placeholderChoice getter', () => {
       it('returns placeholder choice', () => {
         const expectedResponse = state.choices
@@ -230,21 +210,18 @@ describe('reducers/store', () => {
         expect(instance.getPlaceholderChoice).to.eql(expectedResponse);
       });
     });
-
     describe('groups getter', () => {
       it('returns groups', () => {
         const expectedResponse = state.groups;
         expect(instance.groups).to.eql(expectedResponse);
       });
     });
-
     describe('activeGroups getter', () => {
       it('returns active groups', () => {
         const expectedResponse = state.groups.filter((group) => group.active);
         expect(instance.activeGroups).to.eql(expectedResponse);
       });
     });
-
     describe('getGroupById', () => {
       it('returns group by id', () => {
         const id = 1;
