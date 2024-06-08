@@ -400,238 +400,123 @@
 				</div>
 			</div><!-- // page-header -->
 			<div class="page-content">
-				<div class="card">
+				<div class="card card-form">
 					<div class="card-header">
-						<h5 class="card-title">국비관리현황</h5>
+						<h4 class="card-title">학생정보</h4>
 					</div>
-					<div class="card-header card-search">
-						<div class="row">
-							<div class="col-10 gap-2">
-								<div class="d-flex gap-1 align-items-center">
-									<label for="" class="form-label mb-0">등록일</label>
-									<div class="input-group-flatpickr">
-										<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
-									</div>
-									<button type="button" class="btn btn-outline-light">오늘</button>
-								</div>
-								<select class="form-select" data-choices data-choices-search-false>
-									<option value="01">대상자 구분</option>
-									<option value="02">option 2</option>
-									<option value="03">option 3</option>
-								</select>
-								<select class="form-select" data-choices data-choices-search-false>
-									<option value="01">진행상태</option>
-									<option value="02">option 2</option>
-									<option value="03">option 3</option>
-								</select>
-								<div class="col-auto">
-									<input type="text" class="form-control" placeholder="과목명 입력">
-								</div>									
-							</div>
-							<div class="col-2 gap-1 d-flex">
-								<div><button type="button" class="btn btn-secondary search-reset">초기화</button></div>
-								<div class="flex-grow-1"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
-							</div>
-						</div>
-						<!-- // row -->
-					</div><!-- // card-header --><!-- // card-header -->
-
-					<!-- card-body -->
 					<div class="card-body">
+						<div class="row row-0 mb-lg-5">
+							<div class="card-member-profile col-auto">
+								<div class="member-profile-box">
+									<div class="member-profile-img"><img src="./assets/img/profile-sample.jpg" alt="프로필 사진"></div>
+									<!-- <div class="member-profile-edit">
+										<a href="#" title="프로필 사진 변경">변경</a>
+										<a href="#" title="프로필 사진 삭제">삭제</a>
+									</div> -->
+									<button type="button" class="btn w-100">비밀번호 초기화</button>
+								</div>
+							</div><!-- // card-member-profile -->
+
+							<div class="card-member-info col-auto">
+								<div class="card-member-head">
+									<h6>나수강 (여자)</h6>
+								</div>
+								<div class="info-area">
+									<span>여자</span> /
+									<span>2024-01-01</span> /
+									<span>idid</span> /
+									<span>010-000-000</span>
+								</div>
+								<div class="row">
+									<div class="col-4">
+										<label for="" class="form-label">이메일주소</label>
+										<div class="d-flex gap-1">
+											<input type="text" class="form-control" id="" value="010-1234-1234">
+											<input type="text" class="form-control" id="" value="010-1234-1234">
+											<div class="flex-grow-1">
+												<select id="" class="form-select" data-choices data-choices-search-false>
+													<option value="01">직접입력</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-4">
+										<label for="" class="form-label">거주지역</label>
+										<div class="d-flex gap-1">
+											<div class="flex-grow-1">
+												<select id="" class="form-select" data-choices data-choices-search-false>
+													<option value="01">직접입력</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+											<div class="flex-grow-1">
+												<select id="" class="form-select" data-choices data-choices-search-false>
+													<option value="01">일러스트</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-4">
+										<label for="" class="form-label">대표학과 <i class="text-req">*</i></label>
+										<select id="" class="form-select" data-choices data-choices-search-false>
+											<option value="01">직접입력</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label">멘토 <i class="text-req">*</i></label>
+										<input type="text" class="form-control" id="">
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label">서브멘토</label>
+										<input type="text" class="form-control" id="">
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label">국비여부 <i class="text-req">*</i></label>
+										<input type="text" class="form-control" id="">
+									</div>
+									<div class="col-6">
+										<label for="" class="form-label">수강생상태 <i class="text-req">*</i></label>
+										<input type="text" class="form-control" id="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-end">
+									<button type="submit" class="btn btn-primary">저장</button>
+								</div><!-- // row -->
+							</div><!-- // card-member-info -->
+
+						</div><!-- // row -->
 						<div class="table-responsive">
 							<table class="table table-card">
 								<colgroup>
-									<col>
-									<col>
-									<col>
-									<col style="width:30px;">
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
+									<col style="width: 60px;">
+									<col style="width: 240px;">
 									<col>
 								</colgroup>
-								<thead class="table-light">
+								<thead>
 									<tr>
 										<th>번호</th>
-										<th>원서번호</th>
-										<th>과목명</th>
-										<th>회차</th>
-										<th>수강료</th>
-										<th>대상자구분</th>
-										<th>지원대상구분</th>
-										<th>훈련비(자비부담금)</th>
-										<th>결제금액</th>
-										<th>잔액</th>
-										<th>첨부파일</th>
-										<th>등록일시</th>
-										<th>진행상태</th>
-										<th>관리</th>
+										<th>유형</th>
+										<th>내용</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>1</td>
-										<td>1234</td>
-										<td class="text-start" style="width:200px;">디지털컨버전스)임베디드 소프트웨어 융합 풀스택 개발자 양성 과정</td>
-										<td>16</td>
-										<td class="text-end">12,000,000</td>
-										<td>
-											<select class="form-select">
-												<option value="01">진행상태</option>
-												<option value="02">option 2</option>
-												<option value="03">option 3</option>
-											</select>
-										</td>
-										<td>
-											<select class="form-select">
-												<option value="01">진행상태</option>
-												<option value="02">option 2</option>
-												<option value="03">option 3</option>
-											</select>
-										</td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td class="text-end" style="width: 120px;">3,500,000</td>
-										<td><a href="#" class="btn btn-outline-active btn-sm">추가</a></td>
-										<td>2023-11-01 20:11:00</td>
-										<td>결제대기</td>
-										<td><a href="#" class="btn btn-point-deep btn-sm">결제요청</a></td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>1234</td>
-										<td class="text-start" style="width:200px;">디지털컨버전스)임베디드 소프트웨어 융합 풀스택 개발자 양성 과정</td>
-										<td>16</td>
-										<td class="text-end">12,000,000</td>
-										<td>
-											<select class="form-select">
-												<option value="01">진행상태</option>
-												<option value="02">option 2</option>
-												<option value="03">option 3</option>
-											</select>
-										</td>
-										<td>
-											<select class="form-select">
-												<option value="01">진행상태</option>
-												<option value="02">option 2</option>
-												<option value="03">option 3</option>
-											</select>
-										</td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td class="text-end" style="width: 120px;">3,500,000</td>
-										<td><a href="#" class="btn btn-outline-light btn-sm">수정</a></td>
-										
-										<td>2023-11-01 20:11:00</td>
-										<td>결제요청</td>
-										<td><a href="#" class="btn btn-point-deep btn-sm">결제요청</a></td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>1234</td>
-										<td class="text-start" style="width:200px;">디지털컨버전스)임베디드 소프트웨어 융합 풀스택 개발자 양성 과정</td>
-										<td>16</td>
-										<td class="text-end">12,000,000</td>
-										<td>
-											<select class="form-select">
-												<option value="01">진행상태</option>
-												<option value="02">option 2</option>
-												<option value="03">option 3</option>
-											</select>
-										</td>
-										<td>
-											<select class="form-select">
-												<option value="01">진행상태</option>
-												<option value="02">option 2</option>
-												<option value="03">option 3</option>
-											</select>
-										</td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td class="text-end"><del>3,500,000</del></td>
-										<td><a href="#" class="btn btn-outline-light btn-sm">수정</a></td>
-										<td>2023-11-01 20:11:00</td>
-										<td>결제대기</td>
-										<td><a href="#" class="btn btn-danger btn-sm">확정취소</a></td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>1234</td>
-										<td class="text-start" style="width:200px;">디지털컨버전스)임베디드 소프트웨어 융합 풀스택 개발자 양성 과정</td>
-										<td>16</td>
-										<td class="text-end">12,000,000</td>
-										<td>
-											<select class="form-select">
-												<option value="01">진행상태</option>
-												<option value="02">option 2</option>
-												<option value="03">option 3</option>
-											</select>
-										</td>
-										<td>
-											<select class="form-select">
-												<option value="01">진행상태</option>
-												<option value="02">option 2</option>
-												<option value="03">option 3</option>
-											</select>
-										</td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td class="text-end"><del>3,500,000</del></td>
-										<td><a href="#" class="btn btn-outline-light btn-sm">수정</a></td>
-										<td>2023-11-01 20:11:00</td>
-										<td>결제대기</td>
-										<td><a href="#" class="btn btn-danger btn-sm">확정취소</a></td>
-									</tr>
-									<tr class="bg-table-row">
-										<td><span class="material-symbols-outlined">subdirectory_arrow_right</span></td>
-										<td></td>
-										<td class="text-start" style="width:200px;"></td>
-										<td></td>
-										<td class="text-end"></td>
-										<td></td>
-										<td></td>
-										<td style="width: 120px;"></td>
-										<td style="width: 120px;">
-											<input type="text" class="form-control align-right">
-										</td>
-										<td class="text-end">0</td>
-										<td><a href="#" class="btn btn-outline-light btn-sm">수정</a></td>
-										<td>2023-11-01 20:11:00</td>
-										<td>2023-11-01 20:11:00<br>
-											<span class="d-block txt-primary">결제완료</span>
-										</td>
-										<td><a href="#" class="btn btn-point btn-sm">확정</a></td>
+										<td>원서등록(일반)</td>
+										<td  class="text-start">내용내용내용내용내용내용내용내용내용</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
-						<!-- // table-responsive -->
 					</div><!-- // card-body -->
-
-				</div><!-- // container-fluid -->
+				</div>
 			</div><!-- // page-content -->
 
 			<!-- page-footer -->
@@ -677,10 +562,11 @@
 						</li>
 					</ul>
 					<div class="page-footer-btn-right">
-						<a href="#none" data-bs-toggle="modal" class="btn btn-point">저장</a>
+						<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point">등록</a>
 					</div>
 				</div>
 			</div><!-- // page-footer -->
+
 		</div><!-- // main-content -->
 
 	</div><!-- // layout-wrapper -->
@@ -698,6 +584,40 @@
 	<script src="./assets/js/plugins.js"></script>
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function (selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function (selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function (selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate" })]
+		})
+
+	</script>
+
+	<script>
+		$(function () {
+			$('#pageModalB').modal('show');
+			$('#pageModal17').modal('show');
+		});
+	</script>
+
 </body>
 
 </html>

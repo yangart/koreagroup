@@ -5,7 +5,7 @@
     font-weight: 400;
     font-style: normal;
   }
-  
+
   :root {
     --min-width:1480px;
     --appmenu-width:240px;
@@ -25,7 +25,7 @@
     --card-head-padding-y:16px;
     --card-head-padding-x:24px;
     --card-body-padding-y:24px;
-    --card-body-padding-x:16px;
+    --card-body-padding-x:24px;
     --card-filter-padding-y:8px;
     --card-filter-padding-x:24px;
     --btn-padding-y:5px;
@@ -369,7 +369,11 @@
     border-color: var(--second-color);
   }
   
-  /* .btn-secondary:hover,.btn-secondary:focus {color:#fff;background-color:#dc3545;border-color:#dc3545;} */
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color:var(--second-color-h);
+    border-color: var(--second-color-h);
+}
   
   .nowrap {
     white-space: nowrap;
@@ -2225,3 +2229,28 @@
     }
   }
   
+  .material-symbols-outlined {
+    // font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }

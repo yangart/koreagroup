@@ -13,11 +13,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--deep-color);
+  background-color: var(--bs-gray-300);
   border-radius: 10px;
 
   &:hover {
-    background-color: var(--deep-color-h);
+    background-color: var(--bs-gray-400);
     border-radius: 10px;
   }
 }
@@ -947,5 +947,20 @@ input:-webkit-autofill {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+.bg-table-row {
+  td,
+  th {
+    background-color: var(--bs-gray-100);
+  }
+}
+
+.file-cus {
+  input[type=file] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
 }
