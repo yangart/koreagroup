@@ -11,80 +11,112 @@
 	<meta name="description" content="멘토포털">
 	<script src="./assets/js/layout.js"></script>
 	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 	<div id="layout-wrapper">
 
-		<div id="page-topbar">
-			<div class="navbar-hamburger">
-				<button type="button" class="topnav-hamburger" id="topnav-hamburger-icon">
-					<div class="hamburger-icon"><span></span><span></span><span></span></div>
-				</button>
-			</div>
-		</div><!-- // page-topbar -->
+		<div class="navbar-menu navbar-type2">
 
-		<div class="app-menu navbar-menu">
+			<div class="navbar-search">
+				<input type="text" class="form-control" placeholder="직원명을 입력하세요.">
+			</div><!-- // navbar-search -->
 
-			<div class="navbar-brand-box">
-				<a href="#" class="logo"><img src="./assets/img/app-menu-logo@2x.png" alt=""></a>
-				<button type="button" class="btn" id="vertical-hover"></button>
-			</div><!-- // navbar-brand-box -->
+			<div id="scrollbar" class="simplebar-scrollable-y h-100" data-simplebar>
 
-			<div class="app-menu-info">
-				<div class="cate">
-					<em>정규직</em>
-					<span>2023-11-10</span>
-				</div>
-				<div class="text">[컴퓨터강남] 1-1팀</div>
-				<div class="name">홍길동 대리(idididid)</div>
-				<div class="link"><a href="#">마이페이지</a></div>
-			</div>
-
-			<div id="scrollbar">
-				<div class="container-fluid">
-
-					<div id="two-column-menu"></div>
-					<ul class="navbar-nav" id="navbar-nav">
-
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
-						</li><!-- nav-item -->
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>사업정보</span></a>
-						</li><!-- nav-item -->
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>MY 학생</span></a>
-						</li><!-- nav-item -->
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico4"></i> <span>인사정보</span></a>
-						</li><!-- nav-item -->
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>교육이수</span></a>
-						</li><!-- nav-item -->
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a>
-						</li><!-- nav-item -->
-
-					</ul><!-- // navbar-nav -->
-
-				</div>
+				<ul class="navbar-nav" id="navbarNav">
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav1">
+							<span>기본정보</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav1">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#" class="nav-link">개인정보</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">인사 발령 내역</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">근태</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">재증명</a>
+								</li>
+								<li class="nav-item">
+									<a href="#sideNav4-3" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4-3">교육</a>
+									<div class="menu-dropdown collapse" id="sideNav4-3">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">과정 목록</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">나의 강의실</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">파일관리</a>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2">
+							<span>강사</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav2">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#" class="nav-link">My 겅의</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">강사급여</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">계약현황</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">강사평가</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">커리큘럼</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">교육통계</a>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#sideNav3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3">
+							<span>멘토</span>
+						</a>
+						<div class="menu-dropdown collapse" id="sideNav3">
+							<ul class="nav nav-sm flex-column">
+								<li class="nav-item">
+									<a href="#sideNav3-1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3-1">사업관리</a>
+									<div class="menu-dropdown collapse" id="sideNav3-1">
+										<ul class="nav nav-sm flex-column">
+											<li class="nav-item"><a href="#" class="nav-link">DB 현황 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">방문 상담 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">인터뷰 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">원서 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">멘토 과정 관리</a></li>
+											<li class="nav-item"><a href="#" class="nav-link">당직표</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li><!-- nav-item -->
+				</ul>
+				<div class="sidebar-background"></div>
 			</div><!-- // scrollbar -->
 
-			<div class="app-menu-info type-foot">
-				<div class="text">로그인 2023-11-10 21:34</div>
-				<div class="link"><a href="#">로그아웃</a></div>
-			</div>
-
 		</div><!-- // navbar-menu -->
+		<div class="vertical-overlay"></div>
 
 		<!---- main-content ---->
 		<div class="main-content">
-
-			<!-- page-header -->
 			<div class="page-header flex-right">
 
 				<div class="page-header-topbar">
@@ -373,220 +405,153 @@
 				</div><!-- // page-header-topbar -->
 
 			</div><!-- // page-header -->
-
+		
 			<div class="page-content">
+				<div class="container-fluid">
 
-				<div class="page-content-title">- 멘토 과정 관리</div>
+					<!-- card -->
+					<div class="card">
+						<div class="card-header card-search">
+							<h5 class="card-title">나의 강의실</h5>
+						</div><!-- // card-header -->
 
-				<div class="card fluid-card">
-					<div class="card-head">
+						<div id="innerscroll" class="card-body inner-scroll">
 
-						<ul class="nav card-nav" id="mentorTabs" role="tablist">
-							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel1" aria-controls="mentorPanel1" aria-selected="false">DB 현황 관리</a></li>
-							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel2" aria-controls="mentorPanel2" aria-selected="false">방문 상담 관리</a></li>
-							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel3" aria-controls="mentorPanel3" aria-selected="false">인터뷰 관리</a></li>
-							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel4" aria-controls="mentorPanel4" aria-selected="false">원서 관리</a></li>
-							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel5" aria-controls="mentorPanel5" aria-selected="true">DB 현황 관리</a></li>
-						</ul><!-- // card-nav -->
+							<div class="table-head mt-4">
+								<div class="flex-grow-1 row">
+									<div class="col-auto"><h5 class="table-result">수강과정</h5></div>
+								</div>
+							</div><!-- // table-head -->
+							<div class="table-responsive">
+								<table class="table table-card">
+									<thead class="table-light">
+										<tr>
+											<th>번호</th>
+											<th>계열</th>
+											<th>과정명</th>
+											<th>강사</th>
+											<th>차시</th>
+											<th>신청일</th>
+											<th>학습기간</th>
+											<th>진도</th>
+											<th>시청시간</th>
+											<th>수강상태</th>
+											<th>시험</th>
+											<th>설문</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>13</td>
+											<td>컴퓨터</td>
+											<td class="text-start"><a href="#" class="btn-link">학과별 교육2</a></td>
+											<td>김OO 본부장 외1명</td>
+											<td>5</td>
+											<td>2023.07.01</td>
+											<td>2023.07.01~2023.07.31</td>
+											<td>0%</td>
+											<td>55분</td>
+											<td>수강중</td>
+											<td><a href="#" class="btn btn-outline-active btn-sm disabled">응시</a></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm disabled">참여</a></td>
+										</tr>
+										<tr>
+											<td>13</td>
+											<td>컴퓨터</td>
+											<td class="text-start"><a href="#" class="btn-link">학과별 교육2</a></td>
+											<td>김OO 본부장 외1명</td>
+											<td>5</td>
+											<td>2023.07.01</td>
+											<td>2023.07.01~2023.07.31</td>
+											<td>0%</td>
+											<td>55분</td>
+											<td>수강중</td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">응시</a></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">참여</a></td>
+										</tr>
+										<tr>
+											<td>13</td>
+											<td>컴퓨터</td>
+											<td class="text-start"><a href="#" class="btn-link">학과별 교육2</a></td>
+											<td>김OO 본부장 외1명</td>
+											<td>5</td>
+											<td>2023.07.01</td>
+											<td>2023.07.01~2023.07.31</td>
+											<td>0%</td>
+											<td>55분</td>
+											<td>수강중</td>
+											<td><a href="#" class="btn btn-point btn-sm">80점</a></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- // table-responsive -->	
 
-					</div><!-- // card-head -->
+							<div class="table-head mt-4">
+								<div class="flex-grow-1 row">
+									<div class="col-auto"><h5 class="table-result">종료과정</h5></div>
+								</div>
+							</div><!-- // table-head -->
+							<div class="table-responsive">
+								<table class="table table-card">
+									<thead class="table-light">
+										<tr>
+											<th>번호</th>
+											<th>계열</th>
+											<th>과정명</th>
+											<th>강사</th>
+											<th>차시</th>
+											<th>신청일</th>
+											<th>학습기간</th>
+											<th>진도</th>
+											<th>시청시간</th>
+											<th>수강상태</th>
+											<th>시험</th>
+											<th>설문</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>13</td>
+											<td>컴퓨터</td>
+											<td class="text-start"><a href="#" class="btn-link">학과별 교육2</a></td>
+											<td>김OO 본부장 외1명</td>
+											<td>5</td>
+											<td>2023.07.01</td>
+											<td>2023.07.01~2023.07.31</td>
+											<td>0%</td>
+											<td>55분</td>
+											<td>수강중</td>
+											<td><a href="#" class="btn btn-outline-active btn-sm disabled">응시</a></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm disabled">참여</a></td>
+										</tr>
+										<tr>
+											<td>13</td>
+											<td>컴퓨터</td>
+											<td class="text-start"><a href="#" class="btn-link">학과별 교육2</a></td>
+											<td>김OO 본부장 외1명</td>
+											<td>5</td>
+											<td>2023.07.01</td>
+											<td>2023.07.01~2023.07.31</td>
+											<td>0%</td>
+											<td>55분</td>
+											<td>수강중</td>
+											<td><a href="#" class="btn btn-point btn-sm">80점</a></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- // table-responsive -->	
 
-					<div class="card-body">
+						</div><!-- // card-body -->
 
-							<div class="card-search">
-								<div class="row g-6px flex-middle">
-									<div class="col-auto"><div class="form-text">등록일</div></div>
-									<div class="col-auto w-280px">
-										<div class="datepicker-wrap">
-											<input type="text" class="form-control form-datepicker" placeholder="날짜를 선택하세요">
-											<div class="datepicker-box">
-												<div class="datepicker-head">
-													<div class="datepicker-btn datepicker-prev"></div>
-													<div class="datepicker-title">2023 11월</div>
-													<div class="datepicker-btn datepicker-next"></div>
-												</div>
-												<div class="datepicker-body">
-													<div class="datepicker-name">
-														<div class="datepicker-cell">일</div>
-														<div class="datepicker-cell">월</div>
-														<div class="datepicker-cell">화</div>
-														<div class="datepicker-cell">수</div>
-														<div class="datepicker-cell">목</div>
-														<div class="datepicker-cell">금</div>
-														<div class="datepicker-cell">토</div>
-													</div>
-													<div class="datepicker-day">
-														<div class="datepicker-cell other"><span>29</span></div>
-														<div class="datepicker-cell other"><span>30</span></div>
-														<div class="datepicker-cell other"><span>31</span></div>
-														<div class="datepicker-cell"><span>1</span></div>
-														<div class="datepicker-cell"><span>2</span></div>
-														<div class="datepicker-cell"><span>3</span></div>
-														<div class="datepicker-cell"><span>4</span></div>
-														<div class="datepicker-cell"><span>5</span></div>
-														<div class="datepicker-cell"><span>6</span></div>
-														<div class="datepicker-cell"><span>7</span></div>
-														<div class="datepicker-cell active"><span>8</span></div>
-														<div class="datepicker-cell"><span>9</span></div>
-														<div class="datepicker-cell"><span>10</span></div>
-														<div class="datepicker-cell"><span>11</span></div>
-														<div class="datepicker-cell"><span>12</span></div>
-														<div class="datepicker-cell"><span>13</span></div>
-														<div class="datepicker-cell"><span>14</span></div>
-														<div class="datepicker-cell"><span>15</span></div>
-														<div class="datepicker-cell"><span>16</span></div>
-														<div class="datepicker-cell"><span>17</span></div>
-														<div class="datepicker-cell"><span>18</span></div>
-														<div class="datepicker-cell"><span>19</span></div>
-														<div class="datepicker-cell"><span>20</span></div>
-														<div class="datepicker-cell"><span>21</span></div>
-														<div class="datepicker-cell"><span>22</span></div>
-														<div class="datepicker-cell"><span>23</span></div>
-														<div class="datepicker-cell"><span>24</span></div>
-														<div class="datepicker-cell"><span>25</span></div>
-														<div class="datepicker-cell"><span>26</span></div>
-														<div class="datepicker-cell"><span>27</span></div>
-														<div class="datepicker-cell"><span>28</span></div>
-														<div class="datepicker-cell"><span>29</span></div>
-														<div class="datepicker-cell"><span>30</span></div>
-														<div class="datepicker-cell other"><span>1</span></div>
-														<div class="datepicker-cell other"><span>2</span></div>
-													</div>
-												</div>
-											</div><!-- // datepicker-box -->
-										</div><!-- // datepicker-wrap -->
-									</div>
-									<div class="col-auto"><button type="button" class="btn btn-outline-light">오늘</button></div>
-									<div class="col-auto">
-										<select id="" class="form-select" data-choices data-choices-search-false>
-											<option value="01">사용여부</option>
-											<option value="02">option 2</option>
-											<option value="03">option 3</option>
-										</select>
-									</div>
-								</div><!-- // row -->
+					</div><!-- // card -->
 
-								<div class="row g-6px flex-middle">
-									<div class="col-auto w-280px"><input type="text" class="form-control" placeholder="과정명을 입력하세요"></div>
-									<div class="col-auto"><button type="button" class="btn btn-outline-first">검색</button></div>
-								</div><!-- // row -->
-
-							</div><!-- // row -->
-
-						<div class="table-responsive">
-							<table class="table-basic">
-								<colgroup>
-									<col style="width:7%">
-									<col>
-									<col>
-									<col style="width:16%">
-									<col style="width:7.5%">
-									<col style="width:8%">
-								</colgroup>
-								<thead>
-									<tr>
-										<th>번호</th>
-										<th class="start">과정명</th>
-										<th class="start">설명</th>
-										<th>등록일</th>
-										<th>사용여부</th>
-										<th>관리</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>10</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>9</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>8</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>7</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>6</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>4</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td class="start">광고편집 과정</td>
-										<td class="start">포토+일러+광고 전체</td>
-										<td>2023-11-16</td>
-										<td>사용</td>
-										<td><a href="#" class="btn btn-outline-first">관리</a></td>
-									</tr>
-								</tbody>
-							</table>
-						</div><!-- // table-responsive -->
-
-					</div><!-- // card-body -->
-
-				</div><!-- // card -->
-
-			</div><!-- page-content -->
+				</div><!-- // container-fluid -->
+			</div><!-- // page-content -->
 
 			<!-- page-footer -->
 			<div class="page-footer">
-
 				<div class="page-footer-row">
 					<div class="page-footer-btn-left row gx-8px flex-middle">
 						<div class="col-auto">
@@ -623,7 +588,7 @@
 					</ul>
 					<div class="page-footer-btn-right">
 						<a href="#" class="btn btn-outline-first">다운로드</a>
-						<a href="#pageModal3" data-bs-toggle="modal" class="btn btn-first">등록</a>
+						<a href="#pageModal1" data-bs-toggle="modal" class="btn btn-first">등록</a>
 					</div>
 				</div>
 			</div><!-- // page-footer -->
@@ -632,13 +597,125 @@
 
 	</div><!-- // layout-wrapper -->
 
-	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- 학습하기 -->
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">학습하기</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">	
+
+						<div class="row">
+							<div class="col-12">
+								<div class="card-member-head">
+									<h6>마케팅 노하우</h6>
+									<span class="badge bg-secondary">수강중</span>
+								</div>
+								<div class="card-member-list my-3">
+									<div>
+										<span>컴퓨터</span>
+										<span>2023.07.01~2023.07.31</span>
+									</div>
+								</div>
+								<div class="mbody-clause-list fs-14px">본 강의는 블라블라… 본 강의는 블라블라본 강의는 블라블라   본 강의는 블라블라본 강의는 블라블라   본 강의는 블라블라본 강의는 블라블라
+본 강의는 블라블라… 본 강의는 블라블라본 강의는 블라블라   본 강의는 블라블라본 강의는 블라블라   본 강의는…</div>
+							</div>
+						</div>
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">학습 목록</div></div>
+							</div>
+						</div><!-- // table-head -->
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:18%">
+								<col style="">
+								<col style="width:25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>차시</th>
+									<th>제목</th>
+									<th>강사</th>
+									<th>진도</th>
+									<th>시청시간</th>
+									<th>학습하기</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td class="text-start">마케팅과 고객만족경영 & 브랜드 파워 구축</td>
+									<td>김OO 본부장</td>
+									<td>완료</td>
+									<td>12분</td>
+									<td><a href="#" class="btn btn-outline-light btn-sm btn-watch"><small class="d-lg-none">학습하기</small></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">확인</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 학습하기 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
 	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
 	<script src="./assets/libs/feather-icons/feather.min.js"></script>
-	<script src="./assets/js/jquery-1.12.4.min.js"></script>
-	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal17').modal('show');
+	});
+	</script>
 
 </body>
 </html>
