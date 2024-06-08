@@ -1,0 +1,97 @@
+:root {
+    /* Color Pallete */
+    --first-color:#3BA4FD;
+    --first-color-h:#0094FF;
+    --second-color:#FF710A;
+    --second-color-h:#FF5033;
+    --deep-color:#2A364A;
+    --deep-color-h:#222;
+    --gray-color: #e9ebec;
+    --gray-light-color: #f3f6f9;
+}
+
+//지점
+// :root {
+//     /* Color Pallete */
+//     --first-color:#6571ff;
+//     --first-color-h:#2d65cd;
+//     --second-color:#0ab39c;
+//     --second-color-h:#0ab39c;
+//     --deep-color:#405189;
+//     --deep-color-h:#364574;
+//     --gray-color: #e9ebec;
+//     --gray-light-color: #f3f6f9;
+// }
+
+//멘토
+// :root {
+//     --dark-color: #101c42;
+//     --deep-color: #405189;
+//     --deep-color-h: #364574;
+//     --first-color: #845ae0;
+//     --first-color-h: #6a48b3;
+// }
+.navbar-menu {
+    .navbar-nav {
+      .nav-link {
+        i {  
+          &.ico1 {
+            background-image: url(../img/app-menu-ico1@2x.png);
+          }
+  
+          &.ico2 {
+            background-image: url(../img/app-menu-ico2@2x.png);
+          }
+  
+          &.ico3 {
+            background-image: url(../img/app-menu-ico3@2x.png);
+          }
+  
+          &.ico4 {
+            background-image: url(../img/app-menu-ico4@2x.png);
+          }
+  
+          &.ico5 {
+            background-image: url(../img/app-menu-ico5@2x.png);
+          }
+  
+          &.ico6 {
+            background-image: url(../img/app-menu-ico6@2x.png);
+          }
+  
+          &.ico7 {
+            background-image: url(../img/app-menu-ico7@2x.png);
+          }
+  
+          &.ico8 {
+            background-image: url(../img/app-menu-ico8@2x.png);
+          }
+  
+          &.ico9 {
+            background-image: url(../img/app-menu-ico9@2x.png);
+          }
+  
+        //   &.ico10 {
+        //     background-image: url(../img/app-menu-ico10@2x.png);
+        //   }
+  
+        //   &.ico11 {
+        //     background-image: url(../img/app-menu-ico11@2x.png);
+        //   }
+  
+        //   &.ico12 {
+        //     background-image: url(../img/app-menu-ico12@2x.png);
+        //   }
+  
+        //   &.ico13 {
+        //     background-image: url(../img/app-menu-ico13@2x.png);
+        //   }
+  
+        //   &.ico14 {
+        //     background-image: url(../img/app-menu-ico14@2x.png);
+        //   }
+        }
+      }
+    }
+  }
+  
