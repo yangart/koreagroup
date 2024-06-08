@@ -4066,6 +4066,7 @@ body {
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.03);
           box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.03);
   border-color: var(--gray-color);
+  border-top: 2px solid var(--first-color);
 }
 .card + .card {
   margin-top: 18px;
@@ -4082,6 +4083,9 @@ body {
   color: var(--card-title-color);
   border-bottom: 1px solid var(--gray-color);
   background: #fff;
+}
+.card-header .card-title {
+  margin-bottom: 0;
 }
 .card-header:first-child {
   border-radius: 8px 8px 0 0;
@@ -4236,6 +4240,9 @@ body {
 .table-card {
   position: relative;
   margin: 0;
+}
+.table-card th, .table-card td {
+  height: 48px;
 }
 .table-card::before {
   display: block;

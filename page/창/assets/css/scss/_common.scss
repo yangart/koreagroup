@@ -155,7 +155,7 @@
     border-radius: 8px;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.03);
     border-color: var(--gray-color);
-  
+    border-top:2px solid var(--first-color);
     + .card {
       margin-top: 18px;
     }
@@ -168,10 +168,14 @@
   
   .card-header {
     padding: var(--card-head-padding-y) var(--card-head-padding-x);
+
     margin-bottom: 0;
     color: var(--card-title-color);
     border-bottom: 1px solid var(--gray-color);
     background: #fff;
+    .card-title {
+        margin-bottom:0;
+    }
   
     &:first-child {
       border-radius: 8px 8px 0 0;
@@ -332,7 +336,10 @@
   .table-card {
     position: relative;
     margin: 0;
-  
+    th,td {
+        height:48px;
+    }
+
     &::before {
       display: block;
       clear: both;
