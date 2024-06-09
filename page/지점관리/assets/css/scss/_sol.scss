@@ -1,0 +1,13 @@
+.tit-area-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem;
+    background-color: var(--body-bg);
+    margin-bottom: .4rem;
+    & > .tit {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--card-title-color);
+    }
+}
