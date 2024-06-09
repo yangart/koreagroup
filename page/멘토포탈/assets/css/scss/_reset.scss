@@ -301,6 +301,17 @@ a {
     vertical-align: middle;
   }
 }
+.btn-regi {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/plus.svg) no-repeat 50% 50% / 16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+  > small {
+    font-size:0;
+  }
+}
 .btn-link {
   position: relative;
   display: block;

@@ -766,8 +766,13 @@ body {
   }
 }
 /* .page-header-topbar .btn-topbar.active,.page-header-topbar .btn-topbar:active,.page-header-topbar .btn-topbar:focus,.page-header-topbar .btn-topbar:hover{background-color:rgba(53, 119, 241, 0.12);} */
+/* 페이지 flex를 위한 커스텀 */
 .page-content {
   padding: 16px 24px;
+  display:flex;
+  flex-direction: column;
+
+  .card { flex:1; }
 }
 .page-content-title {
   padding-bottom: 16px;
@@ -894,12 +899,12 @@ body {
 #scroll-top {
   display: block;
   position: fixed;
-  bottom: 100px;
+  bottom: 76px;
   right: 28px;
   width: 37px;
   height: 37px;
   padding: 0;
-  border-radius: 2px;
+  border-radius: 8px;
   background: #ff2d5b url(../img/scroll-top-ico@2x.png) no-repeat 50% 50% / 12px auto;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;

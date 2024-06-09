@@ -62,4 +62,14 @@ jQuery(function($){
 	// 		$('.main-content').addClass("onPageSchedule");
 	// 	}
 	// }
+
+	// 테이블 바디 스크롤 : 컬럼 너비를 colgroup에서 가져오기 위함
+	var tables = document.querySelectorAll('table');
+	tables.forEach(function(table, index) {
+		// Get the number of columns in the current table
+		var tableColumns = table.rows[0].cells.length;
+		
+		// Set the Sass variable value dynamically for each table
+		document.documentElement.style.setProperty('--table-columns-' + (index + 1), tableColumns);
+	  });
 });

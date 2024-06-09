@@ -162,80 +162,80 @@
   line-height: 1.43;
   color: #495057;
 }
-.table-card {
-  position: relative;
-  margin: 0;
-  &::before {
-    display: block;
-    clear: both;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    z-index: 1;
-    background: var(--first-color);
-  }
-  > {
-    :not(caption) > * > * {
-      padding: 4px;
-      font-size: 14px;
-      line-height: 1.43;
-      text-align: center;
-      color: #212529;
-      background: #fff;
-      border-bottom: 1px solid #e9ebec;
-      vertical-align: middle;
-    }
-    :not(:last-child) > :last-child > * {
-      border-bottom: 1px solid #e9ebec;
-    }
-  }
-  th {
-    background: #f3f6f9;
-    font-weight: 600;
-    color: #7987a1;
-  }
-  td {
-    color: #212529;
-    min-width: 40px;
-    height: 44px;
-    &.title {
-      text-align: left;
-    }
-  }
-  thead th {
-    &[rowspan], &[colspan] {
-      padding: 6px 4px;
-      border-right: 1px solid #e9ebec;
-    }
-    + th {
-      &[rowspan], &[colspan] {
-        border-left: 1px solid #e9ebec;
-      }
-    }
-  }
-  tfoot {
-    td {
-      padding: 14px 24px !important;
-      background: #f9fafb;
-    }
-    .form-inline {
-      justify-content: flex-end;
-    }
-  }
-  * + {
-    th[rowspan], td[rowspan] {
-      border-left: 1px solid #e9ebec;
-    }
-  }
-  + {
-    .table-card, .box {
-      margin-top: 8px;
-    }
-  }
-}
+// .table-card {
+//   position: relative;
+//   margin: 0;
+//   &::before {
+//     display: block;
+//     clear: both;
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 1px;
+//     z-index: 1;
+//     background: var(--first-color);
+//   }
+//   > {
+//     :not(caption) > * > * {
+//       padding: 4px;
+//       font-size: 14px;
+//       line-height: 1.43;
+//       text-align: center;
+//       color: #212529;
+//       background: #fff;
+//       border-bottom: 1px solid #e9ebec;
+//       vertical-align: middle;
+//     }
+//     :not(:last-child) > :last-child > * {
+//       border-bottom: 1px solid #e9ebec;
+//     }
+//   }
+//   th {
+//     background: #f3f6f9;
+//     font-weight: 600;
+//     color: #7987a1;
+//   }
+//   td {
+//     color: #212529;
+//     min-width: 40px;
+//     height: 44px;
+//     &.title {
+//       text-align: left;
+//     }
+//   }
+//   thead th {
+//     &[rowspan], &[colspan] {
+//       padding: 6px 4px;
+//       border-right: 1px solid #e9ebec;
+//     }
+//     + th {
+//       &[rowspan], &[colspan] {
+//         border-left: 1px solid #e9ebec;
+//       }
+//     }
+//   }
+//   tfoot {
+//     td {
+//       padding: 14px 24px !important;
+//       background: #f9fafb;
+//     }
+//     .form-inline {
+//       justify-content: flex-end;
+//     }
+//   }
+//   * + {
+//     th[rowspan], td[rowspan] {
+//       border-left: 1px solid #e9ebec;
+//     }
+//   }
+//   + {
+//     .table-card, .box {
+//       margin-top: 8px;
+//     }
+//   }
+// }
 .modal-wrap .table-card + .table-card {
   margin-top: 20px;
 }
@@ -249,29 +249,29 @@
   padding: 6px 16px !important;
   text-align: left;
 }
-.table-card {
-  display: block;
-  width: 100%;
-  thead {
-    display: block !important;
-    width: 100%;
-    border: 1px solid #000;
-  }
-  tbody {
-    display: block !important;
-    width: 100%;
-    border: 1px solid #000;
-    margin-top: 20px;
-  }
-  tr {
-    display: table;
-    width: 100%;
-  }
-  th, td {
-    display: table-cell;
-  }
-  tbody {}
-}
+// .table-card {
+//   display: block;
+//   width: 100%;
+//   thead {
+//     display: block !important;
+//     width: 100%;
+//     border: 1px solid #000;
+//   }
+//   tbody {
+//     display: block !important;
+//     width: 100%;
+//     border: 1px solid #000;
+//     margin-top: 20px;
+//   }
+//   tr {
+//     display: table;
+//     width: 100%;
+//   }
+//   th, td {
+//     display: table-cell;
+//   }
+//   tbody {}
+// }
 .table-total {
   border-bottom: 1px solid #e9ebec;
   > :not(caption) > * > * {
@@ -1806,7 +1806,8 @@ body:not(.modal-open) .modal-footer {
     flex-shrink: 0;
   }
 }
-.table-basic {
+.table-basic,
+.table-card {
   position: relative;
   margin: 0;
   > :not(caption) > * > * {
@@ -1834,6 +1835,10 @@ body:not(.modal-open) .modal-footer {
     }
   }
 }
+.table>:not(:last-child)>:last-child>* {
+  border-bottom:0;
+}
+.modal .table-card,
 .modal .table-basic {
   thead {
     th {
@@ -2702,4 +2707,66 @@ a.list-more {
 }
 .fnc-area {
   margin-bottom: 1rem;
+}
+
+
+
+
+
+@mixin column-width($order, $width) {
+  td:nth-child(#{$order}),
+  th:nth-child(#{$order}) {
+    @if $width == 0 {
+      display: none;
+    } @else {
+      width: $width;
+    }
+  }
+}
+
+@mixin column-flex-clear($order) {
+  td:nth-child(#{$order}),
+  th:nth-child(#{$order}) {
+    flex: unset;
+  }
+}
+
+$table-columns: var(--table-columns); 
+
+.table-fixed {
+  thead > tr, tbody > tr {
+    display: flex;
+    justify-content: space-around;
+    flex: 0 0 auto;
+
+    th, td {
+      flex: 1;
+    }
+  }
+
+  @for $j from 1 through $num-tables {
+    $table-columns: var(--table-columns-#{$j});
+    
+    .table-fixed {
+      tbody {
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+    
+        tr {
+          @for $i from 1 through $table-columns {
+            $width: 0;
+          @if ($i <= length($col-width)) {
+            $width: nth($col-width, $i);
+          }
+          @include column-width($i, $width);
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-lock-height > tbody {
+  height: 40vh;
 }
