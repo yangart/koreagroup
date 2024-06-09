@@ -387,8 +387,8 @@
   }
 }
 .card-title {
-  margin: 0;
-  font-size: 16px;
+  margin: 0 0 1rem 0;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.5;
   color: #495057;
@@ -2713,60 +2713,60 @@ a.list-more {
 
 
 
-@mixin column-width($order, $width) {
-  td:nth-child(#{$order}),
-  th:nth-child(#{$order}) {
-    @if $width == 0 {
-      display: none;
-    } @else {
-      width: $width;
-    }
-  }
-}
+// @mixin column-width($order, $width) {
+//   td:nth-child(#{$order}),
+//   th:nth-child(#{$order}) {
+//     @if $width == 0 {
+//       display: none;
+//     } @else {
+//       width: $width;
+//     }
+//   }
+// }
 
-@mixin column-flex-clear($order) {
-  td:nth-child(#{$order}),
-  th:nth-child(#{$order}) {
-    flex: unset;
-  }
-}
+// @mixin column-flex-clear($order) {
+//   td:nth-child(#{$order}),
+//   th:nth-child(#{$order}) {
+//     flex: unset;
+//   }
+// }
 
-$table-columns: var(--table-columns); 
+// $table-columns: var(--table-columns); 
 
-.table-fixed {
-  thead > tr, tbody > tr {
-    display: flex;
-    justify-content: space-around;
-    flex: 0 0 auto;
+// .table-fixed {
+//   thead > tr, tbody > tr {
+//     display: flex;
+//     justify-content: space-around;
+//     flex: 0 0 auto;
 
-    th, td {
-      flex: 1;
-    }
-  }
+//     th, td {
+//       flex: 1;
+//     }
+//   }
 
-  @for $j from 1 through $num-tables {
-    $table-columns: var(--table-columns-#{$j});
+//   @for $j from 1 through $num-tables {
+//     $table-columns: var(--table-columns-#{$j});
     
-    .table-fixed {
-      tbody {
-        overflow: scroll;
-        display: flex;
-        flex-direction: column;
+//     .table-fixed {
+//       tbody {
+//         overflow: scroll;
+//         display: flex;
+//         flex-direction: column;
     
-        tr {
-          @for $i from 1 through $table-columns {
-            $width: 0;
-          @if ($i <= length($col-width)) {
-            $width: nth($col-width, $i);
-          }
-          @include column-width($i, $width);
-          }
-        }
-      }
-    }
-  }
-}
+//         tr {
+//           @for $i from 1 through $table-columns {
+//             $width: 0;
+//           @if ($i <= length($col-width)) {
+//             $width: nth($col-width, $i);
+//           }
+//           @include column-width($i, $width);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-.table-lock-height > tbody {
-  height: 40vh;
-}
+// .table-lock-height > tbody {
+//   height: 40vh;
+// }
