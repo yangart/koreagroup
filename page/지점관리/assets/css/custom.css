@@ -892,4 +892,52 @@ input:-webkit-autofill {
 }
 .dl-info dd:last-child {
   margin-bottom: 0;
+}
+
+.bg-table-row td,
+.bg-table-row th {
+  background-color: var(--bs-gray-100);
+}
+
+.file-cus input[type=file] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.tabs-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.tabs-nav a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  padding: 0 16px;
+  color: var(--bs-gray-500);
+  min-width: 80px;
+  font-size: 15px;
+}
+.tabs-nav a:hover, .tabs-nav a:focus {
+  color: var(--deep-color);
+}
+.tabs-nav a.is-active {
+  color: #fff;
+  font-weight: 700;
+  background-color: var(--deep-color);
 }/*# sourceMappingURL=custom.css.map */

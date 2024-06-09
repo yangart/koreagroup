@@ -20,31 +20,66 @@
 
 <body>
 	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
-		<div class="modal-dialog modal-sm modal-dialog-centered">
+		<div class="modal-dialog modal-md modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">파일관리</h5>
+					<h5 class="modal-title">일지작성</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
 						id="close-modal"></button>
 				</div><!-- // modal-header -->
 				<div class="modal-body">
-					<p class="bg-light p-3 fs-14px mb-2">
-						국비신청서류, 내일배움카드사본을 등록해주세요.<br> 
-						<small class="text-secondary">1개 파일 첨부 필수, 최대 <strong class="txt-primary">2개</strong>까지, 개당 50Mb 까지, exe 파일 제외
-						</small>
+					<p class="fs-14px mb-2">
+						<strong>이지혁(jkolp11) </strong> 컴퓨터 강남 &gt; 사업부 &gt; 1-1팀
+						<br>
+						<small>2023-10-30  11:50</small>
 					</p>
-					<div class="border border-dark  p-3 fs-14px mb-2">
-						<span>
-							원서에서등록한 파일.doc  <button class="btn btn-delete">삭제</button>
-						</span>
-						<span>
-							원서에서등록한 파일.doc  <button class="btn btn-delete">삭제</button>
-						</span>
-					</div>
-					<div class="file-cus">
-						<input type="file" id="file" multiple>
-						<label class="btn btn-outline-light" for="file">파일선택</label>
-					</div>
+					<table class="table-write">
+						<colgroup>
+							<col style="width:15%">
+							<col style="width:35%">
+							<col style="width:15%">
+							<col style="width:35%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>일지구분</th>
+								<td>
+									<select class="form-select">
+										<option value="01">20개</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									
+								</td>
+								<th>면담결과</th>
+								<td>
+									<select class="form-select">
+										<option value="01">20개</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>연락예정일</th>
+								<td>
+									<div class="input-group-flatpickr">
+										<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="">
+									</div>
+								</td>
+								<th>파일첨부</th>
+								<td>
+									<input class="form-control" type="file" id="formFile">
+								</td>
+							</tr>
+							<tr>
+								<th>면담내용</th>
+								<td colspan="3">
+									<textarea class="form-control" rows="5"></textarea>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 					<!-- // mbody-forms -->
 				</div><!-- // modal-body -->
 				<div class="modal-footer">

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">강의 배정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<p class="fs-14px mb-3">
+						포토샵따라하기  <br>
+						<span>오강사  l  05층 C l  2024.03.11~2024.05.03 09:30~11:30 월수금  |  정원 7/10 </span>
+					</p>
+					<div class="row">
+						<div class="col-6">
+							<div class="d-flex justify-content-sm-between align-items-center"  style="height: 48px;">
+								<div class="flex-grow-0">
+									미배정 <strong>0</strong>
+								</div>
+							</div>
+							<div class="border p-3" style="height: 400px; overflow-y: auto;">
+								<div class="d-flex gap-1 align-items-center mb-3">
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">팀</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">멘토</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									<input type="text" class="form-control" placeholder="수강생 입력">
+									<button type="button" class="btn btn-point-deep">검색</button>
+								</div>
+								<ul class="d-flex flex-column gap-1 fs-14px">
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p>김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-outline-active">배정</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p>김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-outline-active">배정</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p>김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-outline-active">배정</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p>김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-outline-active">배정</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p>김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-outline-active">배정</button>
+									</li>
+								</ul>		
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="d-flex justify-content-sm-between align-items-center"  style="height: 48px;">
+								<div class="flex-grow-0">
+									배정 <strong><span class="txt-primary">7</span>/0</strong>
+								</div>
+								<div>
+									<button class="btn btn-outline-primary">COD</button>
+								</div>
+							</div>
+							<div class="border p-3" style="height: 400px; overflow-y: auto;">
+								<ul class="d-flex flex-column gap-1 fs-14px">
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+									<li class="border p-2 d-flex justify-content-between align-items-center">
+										<p><strong>[배정]</strong> 김일번 010-0000-1111 /홍길동1</p>
+										<button class="btn btn-danger">배정취소</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+						<div class="d-flex gap-1">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>

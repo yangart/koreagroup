@@ -45,7 +45,7 @@
 					<div id="two-column-menu"></div>
 					<ul class="navbar-nav" id="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>학생정보</span></a>
+							<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>일지정보</span></a>
 						</li><!-- nav-item -->
 						<li class="nav-item">
 							<a class="nav-link menu-link" href="#sideNav2" data-bs-toggle="collapse" role="button"
@@ -400,123 +400,156 @@
 				</div>
 			</div><!-- // page-header -->
 			<div class="page-content">
-				<div class="card card-form">
+				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title">학생정보</h4>
+						<h5 class="card-title">국비관리현황</h5>
 					</div>
+					<div class="card-header card-search">
+						<div class="row">
+							<div class="col-10 gap-2">
+								<div class="d-flex gap-1 align-items-center">
+									<label for="" class="form-label mb-0">일지작성일자</label>
+									<div class="input-group-flatpickr">
+										<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="">
+									</div>
+								</div>
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">일지 구분</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">면담 결과</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<div class="col-auto">
+									<input type="text" class="form-control" placeholder="작성자이름, 작성자 아이디 입력">
+								</div>									
+							</div>
+							<div class="col-2 gap-1 d-flex">
+								<div><button type="button" class="btn btn-secondary search-reset">초기화</button></div>
+								<div class="flex-grow-1"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
+							</div>
+						</div>
+						<!-- // row -->
+					</div><!-- // card-header --><!-- // card-header -->
+
+					<!-- card-body -->
 					<div class="card-body">
-						<div class="row row-0 mb-lg-5">
-							<div class="card-member-profile col-auto">
-								<div class="member-profile-box">
-									<div class="member-profile-img"><img src="./assets/img/profile-sample.jpg" alt="프로필 사진"></div>
-									<!-- <div class="member-profile-edit">
-										<a href="#" title="프로필 사진 변경">변경</a>
-										<a href="#" title="프로필 사진 삭제">삭제</a>
-									</div> -->
-									<button type="button" class="btn w-100">비밀번호 초기화</button>
-								</div>
-							</div><!-- // card-member-profile -->
-
-							<div class="card-member-info col-auto">
-								<div class="card-member-head">
-									<h6>나수강 (여자)</h6>
-								</div>
-								<div class="info-area">
-									<span>여자</span> /
-									<span>2024-01-01</span> /
-									<span>idid</span> /
-									<span>010-000-000</span>
-								</div>
-								<div class="row">
-									<div class="col-4">
-										<label for="" class="form-label">이메일주소</label>
-										<div class="d-flex gap-1">
-											<input type="text" class="form-control" id="" value="010-1234-1234">
-											<input type="text" class="form-control" id="" value="010-1234-1234">
-											<div class="flex-grow-1">
-												<select id="" class="form-select" data-choices data-choices-search-false>
-													<option value="01">직접입력</option>
-													<option value="02">option 2</option>
-													<option value="03">option 3</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="col-4">
-										<label for="" class="form-label">거주지역</label>
-										<div class="d-flex gap-1">
-											<div class="flex-grow-1">
-												<select id="" class="form-select" data-choices data-choices-search-false>
-													<option value="01">직접입력</option>
-													<option value="02">option 2</option>
-													<option value="03">option 3</option>
-												</select>
-											</div>
-											<div class="flex-grow-1">
-												<select id="" class="form-select" data-choices data-choices-search-false>
-													<option value="01">일러스트</option>
-													<option value="02">option 2</option>
-													<option value="03">option 3</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div class="col-4">
-										<label for="" class="form-label">대표학과 <i class="text-req">*</i></label>
-										<select id="" class="form-select" data-choices data-choices-search-false>
-											<option value="01">직접입력</option>
-											<option value="02">option 2</option>
-											<option value="03">option 3</option>
-										</select>
-									</div>
-									<div class="col-6">
-										<label for="" class="form-label">멘토 <i class="text-req">*</i></label>
-										<input type="text" class="form-control" id="">
-									</div>
-									<div class="col-6">
-										<label for="" class="form-label">서브멘토</label>
-										<input type="text" class="form-control" id="">
-									</div>
-									<div class="col-6">
-										<label for="" class="form-label">국비여부 <i class="text-req">*</i></label>
-										<input type="text" class="form-control" id="">
-									</div>
-									<div class="col-6">
-										<label for="" class="form-label">수강생상태 <i class="text-req">*</i></label>
-										<input type="text" class="form-control" id="">
-									</div>
-								</div>
-								<div class="d-flex justify-content-end">
-									<button type="submit" class="btn btn-primary">저장</button>
-								</div><!-- // row -->
-							</div><!-- // card-member-info -->
-
-						</div><!-- // row -->
-						<div class="table-responsive">
+						<div class="d-flex gap-2 mb-3">	
+							<a href="#none" class="text-decoration-underline"><strong>전체<span class="txt-primary">5</span></strong></a> /
+							<a href="#none" class="text-decoration-underline"><strong>학사<span class="txt-primary">5</span></strong></a> /
+							<a href="#none" class="text-decoration-underline"><strong>교육<span class="txt-primary">5</span></strong></a> /
+							<a href="#none" class="text-decoration-underline"><strong>환불<span class="txt-primary">5</span></strong></a> /
+							<a href="#none" class="text-decoration-underline"><strong>개장일지<span class="txt-primary">5</span></strong></a>
+						</div>
+						<div class="table-responsive mb-3">
 							<table class="table table-card">
 								<colgroup>
-									<col style="width: 60px;">
-									<col style="width: 240px;">
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 15%;">
 									<col>
 								</colgroup>
-								<thead>
-									<tr>
-										<th>번호</th>
-										<th>유형</th>
-										<th>내용</th>
-									</tr>
-								</thead>
 								<tbody>
 									<tr>
-										<td>1</td>
-										<td>원서등록(일반)</td>
-										<td  class="text-start">내용내용내용내용내용내용내용내용내용</td>
+										<th>작성자</th>
+										<td class="text-start">박지은1 강사</td>
+										<th>작성부서</th>
+										<td class="text-start">운영팀</td>
+										<th>작성일</th>
+										<td class="text-start">2024-11-07 20:36</td>
+									</tr>
+									<tr>
+										<th>일지구분 <i class="text-req">*</i></th>
+										<td class="text-start">환불일지</td>
+										<th>면담결과</th>
+										<td class="text-start">양호</td>
+										<th>연락 예정일</th>
+										<td class="text-start">2024-11-07</td>
+									</tr>
+									<tr>
+										<th>파일첨부 <i class="text-req">*</i></th>
+										<td colspan="5" class="text-start"><a href="#none" class="text-decoration-underline">파일명.doc</a></td>
+									</tr>
+									<tr>
+										<th>면담내용 <i class="text-req">*</i></th>
+										<td colspan="5" class="text-start">
+												[상담후]<br>
+												*상담자 : 백지은<br>
+												*직업/나이/성별 : <br>
+												*거주지 : 서울 강남구 (기숙사)<br>
+												*성향 : 시원시원 <br>
+												*특이사항 : <br>
+												*추가등록 가망 : <br>
+												*상담내용 : - 퇴사하고 싶어 알아봤다고 함. <br>
+												- 원래 디자인을 배워보고 싶었고 회사를 알아보니 gtq 우대인 <br>곳들이 많아 문의줌.<br>
+												- 사무직도 생각하고 있어 컴퓨터자격증 필요하다 어필함.<br>
+												- 우선 포/일 공부해서 gtq 시험보는걸로!<br> 
+												*결제권자/완납예정 :
+										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
+						<div class="table-responsive mb-3">
+							<table class="table table-card">
+								<colgroup>
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 15%;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>작성자</th>
+										<td class="text-start">박지은1 강사</td>
+										<th>작성부서</th>
+										<td class="text-start">운영팀</td>
+										<th>작성일</th>
+										<td class="text-start">2024-11-07 20:36</td>
+									</tr>
+									<tr>
+										<th>일지구분 <i class="text-req">*</i></th>
+										<td class="text-start">환불일지</td>
+										<th>면담결과</th>
+										<td class="text-start">양호</td>
+										<th>연락 예정일</th>
+										<td class="text-start">2024-11-07</td>
+									</tr>
+									<tr>
+										<th>파일첨부 <i class="text-req">*</i></th>
+										<td colspan="5" class="text-start"><a href="#none" class="text-decoration-underline">파일명.doc</a></td>
+									</tr>
+									<tr>
+										<th>면담내용 <i class="text-req">*</i></th>
+										<td colspan="5" class="text-start">
+												[상담후]<br>
+												*상담자 : 백지은<br>
+												*직업/나이/성별 : <br>
+												*거주지 : 서울 강남구 (기숙사)<br>
+												*성향 : 시원시원 <br>
+												*특이사항 : <br>
+												*추가등록 가망 : <br>
+												*상담내용 : - 퇴사하고 싶어 알아봤다고 함. <br>
+												- 원래 디자인을 배워보고 싶었고 회사를 알아보니 gtq 우대인 <br>곳들이 많아 문의줌.<br>
+												- 사무직도 생각하고 있어 컴퓨터자격증 필요하다 어필함.<br>
+												- 우선 포/일 공부해서 gtq 시험보는걸로!<br> 
+												*결제권자/완납예정 :
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- // table-responsive -->
 					</div><!-- // card-body -->
-				</div>
+
+				</div><!-- // container-fluid -->
 			</div><!-- // page-content -->
 
 			<!-- page-footer -->
@@ -562,11 +595,10 @@
 						</li>
 					</ul>
 					<div class="page-footer-btn-right">
-						<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point">등록</a>
+						<a href="#none" data-bs-toggle="modal" class="btn btn-point">저장</a>
 					</div>
 				</div>
 			</div><!-- // page-footer -->
-
 		</div><!-- // main-content -->
 
 	</div><!-- // layout-wrapper -->
@@ -584,40 +616,6 @@
 	<script src="./assets/js/plugins.js"></script>
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
-	<script type="text/javascript">
-		$('#startDate').flatpickr({
-			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
-			enableTime: false,        // 시간 선택 활성화
-			time_24hr: false,         // 24시간 형식 사용
-			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
-			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
-			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
-			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
-			locale: 'ko',            // 한국어로 지역화
-			onOpen: function (selectedDates, dateStr, instance) {
-				// 위젯이 열릴 때 실행할 코드
-			},
-			onClose: function (selectedDates, dateStr, instance) {
-				// 위젯이 닫힐 때 실행할 코드
-			},
-			onChange: function (selectedDates, dateStr, instance) {
-				// 날짜가 변경될 때 실행할 코드
-			},
-			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
-			altInput: true,           // 추가 입력란 활성화
-			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
-			"plugins": [new rangePlugin({ input: "#endDate" })]
-		})
-
-	</script>
-
-	<script>
-		$(function () {
-			$('#pageModalB').modal('show');
-			$('#pageModal17').modal('show');
-		});
-	</script>
-
 </body>
 
 </html>
