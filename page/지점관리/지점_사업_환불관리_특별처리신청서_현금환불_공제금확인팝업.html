@@ -30,7 +30,7 @@
 		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">공제금 변경</h5>
+					<h5 class="modal-title">공제금 확인</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
 						id="close-modal"></button>
 				</div><!-- // modal-header -->
@@ -47,7 +47,6 @@
 								<col>
 								<col>
 								<col>
-								<col style="width: 15%;">
 							</colgroup>
 							<thead class="table-light">
 								<tr>
@@ -59,7 +58,6 @@
 									<th>수강상태</th>
 									<th>환불적용</th>
 									<th>공제금(원)</th>
-									<th>변경 공제금(원)</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -72,9 +70,6 @@
 									<td>미배정</td>
 									<td>전액 환불</td>
 									<td>0</td>
-									<td>
-										<input type="number" class="form-control text-end" placeholder="금액 입력" value="0">
-									</td>
 								</tr>
 								<tr>
 									<td>5</td>
@@ -84,44 +79,27 @@
 									<td>350,000</td>
 									<td>미배정</td>
 									<td>전액 환불</td>
-									<td>0</td>
-									<td>
-										<input type="number" class="form-control text-end" placeholder="금액 입력" value="351,320">
-									</td>
+									<td>175,000</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<div class="table-title mt-4 mb-2">사유</div>
-					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-					<div class="d-flex p-3 text-bg-light rounded mt-4 justify-content-between align-items-center">
-						<b class="text-secondary fs-7">총 공제금액</b>
-						<div class="d-flex gap-5 text-end">
-							<dl>
-								<dt>변경 전</dt>
-								<dd>635,687원</dd>
-							</dl>
-							<dl>
-								<dt>변경 후</dt>
-								<dd><strong class="text-primary"> 321,568원</strong></dd>
-							</dl>
+					<div class="container text-bg-light rounded p-3 mt-4">
+						<div class="row mb-2">
+							<small class="col text-end">(총 0과목, 총 원수강료 0원)</small>
 						</div>
-					</div>
-					<div class="d-flex p-3 text-bg-light rounded mt-4 justify-content-end align-items-center">
-						<div class="d-flex gap-5 text-end">
-							<dl>
-								<dt>총 결제 금액</dt>
-								<dd>635,687원</dd>
+						<div class="row row-cols-auto justify-content-end">
+							<dl class="col">
+								<dt class="text-end">총 결제 금액</dt>
+								<dd class="text-end">1,650,000<small>원</small></dd>
 							</dl>
-							<dl>
-								<dt>총 공제 금액</dt>
-								<dd><small>변경 전</small> 635,687원</dd>
-								<dd><small>변경 후</small> <strong class="text-primary">321,568원</strong></dd>
+							<dl class="col">
+								<dt class="text-end">총 공제 금액</dt>
+								<dd class="text-end">0<small>원</small></dd>
 							</dl>
-							<dl>
-								<dt>최종 환불 금액</dt>
-								<dd><small>변경 전</small> 321,568원</dd>
-								<dd><small>변경 후</small><strong class="text-primary"> 321,568원</strong></dd>
+							<dl class="col">
+								<dt class="text-end">최종 환불 금액</dt>
+								<dd class="text-end"><strong class="text-primary">0원</strong></dd>
 							</dl>
 						</div>
 					</div>
@@ -130,9 +108,6 @@
 					<div class="d-flex justify-content-between w-100">
 						<div class="d-flex gap-1">
 							<a href="#" class="btn btn-outline-primary">닫기</a>
-						</div>
-						<div class="d-flex gap-1">
-							<a href="#" class="btn btn-primary">저장</a>
 						</div>
 					</div>
 				</div>
