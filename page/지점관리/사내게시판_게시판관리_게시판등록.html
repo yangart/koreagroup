@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">게시판 등록</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="table-head bg-light p-3 mt-0 mb-0">
+						<div class="table-title">기본 정보</div>
+					</div>
+					<table class="table-write">
+						<colgroup>
+							<col style="width:20%">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>유형</th>
+								<td>
+									<div class="col-4">
+										<select class="form-select" data-choices data-choices-search-false disabled>
+											<option value="01">지점</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>메뉴</th>
+								<td>
+									<div class="col-4">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">지점게시판</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>게시판명</th>
+								<td>
+									<div class="col-4">
+										<input type="text" class="form-control" placeholder="게시판명을 입력하세요">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>설명</th>
+								<td><input type="text" class="form-control" placeholder="관리용으로 사용할 게시판 설명을 입력하세요"></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="table-head bg-light p-3 mt-3 mb-0">
+						<div class="table-title">계열/지점 설정</div>
+					</div>
+					<table class="table-write">
+						<colgroup>
+							<col style="width:20%">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>계열</th>
+								<td>
+									<div class="col-4">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">컴퓨터</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>지점</th>
+								<td class="d-flex-wrap gap-2 align-items-center">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault1" checked>
+										<label class="form-check-label" for="flexCheckDefault1">강남</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault2">
+										<label class="form-check-label" for="flexCheckDefault2">홍대</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault3">
+										<label class="form-check-label" for="flexCheckDefault3">부산</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault4">
+										<label class="form-check-label" for="flexCheckDefault4">부평</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault5">
+										<label class="form-check-label" for="flexCheckDefault5">대구</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault6">
+										<label class="form-check-label" for="flexCheckDefault6">대전</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault7">
+										<label class="form-check-label" for="flexCheckDefault7">광주</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault8">
+										<label class="form-check-label" for="flexCheckDefault8">수원</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault9">
+										<label class="form-check-label" for="flexCheckDefault9">일산</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault10">
+										<label class="form-check-label" for="flexCheckDefault10">구월</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault11">
+										<label class="form-check-label" for="flexCheckDefault11">울산</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault12">
+										<label class="form-check-label" for="flexCheckDefault12">노원</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault13">
+										<label class="form-check-label" for="flexCheckDefault13">분당</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault14">
+										<label class="form-check-label" for="flexCheckDefault14">종로</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault15">
+										<label class="form-check-label" for="flexCheckDefault15">안산</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault16">
+										<label class="form-check-label" for="flexCheckDefault16">안양</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault17">
+										<label class="form-check-label" for="flexCheckDefault17">천안</label>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="table-head bg-light p-3 mt-3 mb-0">
+						<div class="table-title">게시판 설정</div>
+					</div>
+					<table class="table-write">
+						<colgroup>
+							<col style="width:20%">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>템플릿</th>
+								<td>
+									<div class="d-flex gap-1">
+										<select class="form-select" data-choices data-choices-search-false>
+											<option value="01">기본 목록형</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+										<a href="#" class="btn btn-outline-primary">미리보기</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>공지</th>
+								<td class="d-flex gap-4 align-items-center">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault11" checked>
+										<label class="form-check-label" for="flexRadioDefault11">사용</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault12">
+										<label class="form-check-label" for="flexRadioDefault12">미사용</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>파일첨부</th>
+								<td class="d-flex gap-4 align-items-center">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault21" checked>
+										<label class="form-check-label" for="flexRadioDefault21">사용</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault22">
+										<label class="form-check-label" for="flexRadioDefault22">미사용</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>댓글</th>
+								<td class="d-flex align-items-center">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault31" checked>
+										<label class="form-check-label" for="flexRadioDefault31">사용</label>
+									</div>
+									<div class="d-flex ms-2 align-items-center">
+										(
+										<div class="form-check me-2">
+											<input class="form-check-input" type="radio" name="flexRadioDefault31" id="flexRadioDefault311" checked>
+											<label class="form-check-label" for="flexRadioDefault311">무제한 작성</label>
+										</div>
+										<div class="form-check me-2">
+											<input class="form-check-input" type="radio" name="flexRadioDefault31" id="flexRadioDefault312">
+											<label class="form-check-label" for="flexRadioDefault312">1개 제한</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="flexRadioDefault31" id="flexRadioDefault313">
+											<label class="form-check-label" for="flexRadioDefault313">1일 1개 제한</label>
+										</div>
+										)
+									</div>
+									<div class="form-check ms-4">
+										<input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault32">
+										<label class="form-check-label" for="flexRadioDefault32">미사용</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>답글</th>
+								<td class="d-flex align-items-center">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault41" checked>
+										<label class="form-check-label" for="flexRadioDefault41">사용</label>
+									</div>
+									<div class="d-flex ms-2 align-items-center">
+										(
+										<div class="form-check me-2">
+											<input class="form-check-input" type="radio" name="flexRadioDefault41" id="flexRadioDefault411" checked>
+											<label class="form-check-label" for="flexRadioDefault411">무제한 작성</label>
+										</div>
+										<div class="form-check me-2">
+											<input class="form-check-input" type="radio" name="flexRadioDefault31" id="flexRadioDefault412">
+											<label class="form-check-label" for="flexRadioDefault412">1개 제한</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="radio" name="flexRadioDefault31" id="flexRadioDefault413">
+											<label class="form-check-label" for="flexRadioDefault413">1일 1개 제한</label>
+										</div>
+										)
+									</div>
+									<div class="form-check ms-4">
+										<input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault42">
+										<label class="form-check-label" for="flexRadioDefault42">미사용</label>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="table-head bg-light p-3 mt-3 mb-0">
+						<div class="table-title">탭 설정</div>
+					</div>
+					<table class="table-write">
+						<colgroup>
+							<col style="width:20%">
+							<col style="width:30%">
+							<col style="width:20%">
+							<col style="width:30%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>탭 사용여부</th>
+								<td class="d-flex gap-4 align-items-center">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefault81" checked>
+										<label class="form-check-label" for="flexRadioDefault81">사용</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefault82">
+										<label class="form-check-label" for="flexRadioDefault82">미사용</label>
+									</div>
+								</td>
+								<th>탭 수</th>
+								<td>
+									<select class="form-select" data-choices data-choices-search-false disabled>
+										<option value="01">2</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>탭1</th>
+								<td colspan="3">
+									<div class="d-flex gap-4 align-items-center">
+										<div class="col-auto">
+											<input type="text" class="form-control" placeholder="탭 사용명을 입력하세요" disabled>
+										</div>
+										<div class="d-flex gap-4">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault51">
+												<label class="form-check-label" for="flexRadioDefault51">사용</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault52" checked>
+												<label class="form-check-label" for="flexRadioDefault52">미사용</label>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>탭2</th>
+								<td colspan="3">
+									<div class="d-flex gap-4 align-items-center">
+										<div class="col-auto">
+											<input type="text" class="form-control" placeholder="탭 사용명을 입력하세요">
+										</div>
+										<div class="d-flex gap-4">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault61" checked>
+												<label class="form-check-label" for="flexRadioDefault61">사용</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault62">
+												<label class="form-check-label" for="flexRadioDefault62">미사용</label>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="table-write mt-3 border-top">
+						<colgroup>
+							<col style="width:20%">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th class="bg-light">게시판 사용여부</th>
+								<td class="d-flex gap-4 align-items-center">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault71" checked>
+										<label class="form-check-label" for="flexRadioDefault71">사용</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault72">
+										<label class="form-check-label" for="flexRadioDefault72">미사용</label>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+							<a href="#" class="btn btn-outline-primary">삭제</a> <!-- 조회/수정 시 추가-->
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point">저장</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>
