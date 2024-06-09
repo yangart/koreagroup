@@ -215,31 +215,3 @@
     opacity: 0;
   }
 }
-
-.tabs-nav {
-  display: flex;
-  gap:8px;
-  margin-bottom: 20px;
-  // border-bottom: 1px solid var(--deep-color);
-  a {
-    display: inline-flex;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding:0 16px;
-    color:var(--bs-gray-500);
-    min-width: 80px;
-    font-size:15px;
-    &:hover,
-    &:focus {
-      color: var(--deep-color);
-    }
-    &.is-active {
-      color:#fff;
-      font-weight: 700;
-      background-color: var(--deep-color);
-    }
-  }
-}
