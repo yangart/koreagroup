@@ -650,6 +650,18 @@ input:-webkit-autofill {
   font-size: 14px;
 }
 
+.d-flex-wrap {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.d-flex-wrap > div {
+  margin-right: 10px;
+}
+
 .tit-area-bg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -670,12 +682,37 @@ input:-webkit-autofill {
   color: var(--card-title-color);
 }
 
+/* 2024-06-10 */
 .card-header.card-search .row > div {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
+.btn {
+  text-wrap: nowrap;
+}
+
+/* modal */
+.modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: calc(100vh - var(--bs-modal-margin) * 2);
+}
+.modal-content .modal-body {
+  overflow-y: auto;
+}
+
+/* form */
+.file-cus input[type=file] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+/* table */
 .table-scroll-y {
   position: relative;
   overflow-y: auto;
@@ -701,6 +738,32 @@ input:-webkit-autofill {
   z-index: 2;
 }
 
+.table-write th,
+.table-write td {
+  font-size: 14px;
+  min-height: 56px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--bs-gray-200);
+}
+.table-write th {
+  font-weight: 600;
+  width: 78px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #aaa;
+}
+.table-write td {
+  text-align: left;
+}
+
+.bg-table-row td,
+.bg-table-row th {
+  background-color: var(--bs-gray-100);
+}
+
+/* component */
 .fnc-area,
 .flex-area {
   display: -webkit-box;
@@ -755,64 +818,14 @@ input:-webkit-autofill {
   margin-bottom: 0.5rem;
 }
 
-.btn {
-  text-wrap: nowrap;
+.dl-info dt {
+  margin-bottom: 8px;
 }
-
-.table-write th,
-.table-write td {
-  font-size: 14px;
-  height: 56px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 8px 16px;
-  border-bottom: 1px solid var(--bs-gray-200);
+.dl-info dd {
+  margin-bottom: 16px;
 }
-.table-write th {
-  font-weight: 600;
-  width: 78px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #aaa;
-}
-.table-write td {
-  text-align: left;
-}
-
-.table-info table {
-  table-layout: fixed;
-  border-left: 1px solid var(--bs-gray-200);
-  border-top: 1px solid var(--bs-gray-200);
-}
-.table-info th,
-.table-info td {
-  font-size: 14px;
-  height: 36px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 8px 16px;
-  border-bottom: 1px solid var(--bs-gray-200);
-  text-align: center;
-  border-right: 1px solid var(--bs-gray-200);
-}
-.table-info th {
-  font-weight: 600;
-  width: 78px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #aaa;
-  background-color: #f3f6f9;
-}
-
-/* modal */
-.modal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-height: calc(100vh - var(--bs-modal-margin) * 2);
-}
-.modal-content .modal-body {
-  overflow-y: auto;
+.dl-info dd:last-child {
+  margin-bottom: 0;
 }
 
 /*sub*/
@@ -902,62 +915,4 @@ input:-webkit-autofill {
 .label-sign-negative {
   border-color: var(--bs-gray-400);
   color: var(--bs-gray-400);
-}
-
-.dl-info dt {
-  margin-bottom: 8px;
-}
-.dl-info dd {
-  margin-bottom: 16px;
-}
-.dl-info dd:last-child {
-  margin-bottom: 0;
-}
-
-.bg-table-row td,
-.bg-table-row th {
-  background-color: var(--bs-gray-100);
-}
-
-.file-cus input[type=file] {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.tabs-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-.tabs-nav a {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 8px;
-  padding: 0 16px;
-  color: var(--bs-gray-500);
-  min-width: 80px;
-  font-size: 15px;
-}
-.tabs-nav a:hover, .tabs-nav a:focus {
-  color: var(--deep-color);
-}
-.tabs-nav a.is-active {
-  color: #fff;
-  font-weight: 700;
-  background-color: var(--deep-color);
 }/*# sourceMappingURL=custom.css.map */
