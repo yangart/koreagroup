@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- 설문 상세 결과 -->
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xxl modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">설문 상세 결과 (교육)</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<ul class="nav nav-pills mb-2" role="tablist">
+						<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="true">요약</a></li>
+						<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab" aria-selected="true">상세 결과</a></li>
+					</ul>
+	
+					<div class="mbody-forms">
+						<div class="row fnc-area">
+							<div class="col-12 gap-2 l-area">
+								<select>
+									<option value="01">계열 (전체)</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">지점 (전체)</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">부서 (전체)</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">팀 (전체)</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+
+								<select>
+									<option value="01">직위 (전체)</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">직책 (전체)</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+
+								<select>
+									<option value="01">근속기간 (전체)</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div class="table-head bg-light p-3 mt-0 mb-0 position-relative">
+									<div class="table-title">초급 마케팅 기획 시험 및 설문</div>
+								</div><!-- // table-head -->
+
+								<div class="table-responsive table-scroll-y" style="max-height: 400px;">
+									<table class="table table-card">
+										
+										<tbody>
+											<tr>
+												<th>번호</th>
+												<th>참여자명</th>
+												<th>계열</th>
+												<th>지점</th>
+												<th>부서</th>
+												<th>팀</th>
+												<th>직위</th>
+												<th>직책</th>
+												<th>근속기간</th>
+												<th>평균/총점<br>(점수형)</th>
+												<th>평균/총점<br>(시험형)</th>
+												<th>질문1</th>
+												<th>질문2</th>
+												<th>질문3</th>
+												<th>질문4</th>
+												<th>질문5</th>
+												<th>질문6</th>
+												<th>질문7</th>
+												<th>질문8</th>
+												<th>질문9</th>
+												<th>질문10</th>
+												<th>질문11</th>
+												<th>질문12</th>
+												<th>질문13</th>
+												<th>질문14</th>
+												<th>질문15</th>
+												<th>질문16</th>
+												<th>질문17</th>
+												<th>질문18</th>
+												<th>질문19</th>
+												<th>질문20</th>
+												<th>질문21</th>
+												<th>질문22</th>
+												<th>질문23</th>
+												<th>질문24</th>
+												<th>질문25</th>
+												<th>질문26</th>
+												<th>질문27</th>
+												<th>질문28</th>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>김수강</td>
+												<td>컴퓨터</td>
+												<td>강남</td>
+												<td>사업부</td>
+												<td>1-1팀</td>
+												<td>신인멘토</td>
+												<td></td>
+												<td>1개월</td>
+												<td>-</td>
+												<td>85.1/100</td>
+												<td>O</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>김수강</td>
+												<td>컴퓨터</td>
+												<td>강남</td>
+												<td>사업부</td>
+												<td>1-1팀</td>
+												<td>신인멘토</td>
+												<td></td>
+												<td>1개월</td>
+												<td>-</td>
+												<td>85.1/100</td>
+												<td>O</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>김수강</td>
+												<td>컴퓨터</td>
+												<td>강남</td>
+												<td>사업부</td>
+												<td>1-1팀</td>
+												<td>신인멘토</td>
+												<td></td>
+												<td>1개월</td>
+												<td>-</td>
+												<td>85.1/100</td>
+												<td>O</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>김수강</td>
+												<td>컴퓨터</td>
+												<td>강남</td>
+												<td>사업부</td>
+												<td>1-1팀</td>
+												<td>신인멘토</td>
+												<td></td>
+												<td>1개월</td>
+												<td>-</td>
+												<td>85.1/100</td>
+												<td>O</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>김수강</td>
+												<td>컴퓨터</td>
+												<td>강남</td>
+												<td>사업부</td>
+												<td>1-1팀</td>
+												<td>신인멘토</td>
+												<td></td>
+												<td>1개월</td>
+												<td>-</td>
+												<td>85.1/100</td>
+												<td>X</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>초전도체</td>
+												<td>어려워요</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div><!-- // col -->
+						</div><!-- // row -->
+
+					</div><!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<button type="submit" class="btn btn-outline-active btn-sm">닫기</button>
+						</div>
+					</div>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div><!-- // modal : 설문지 작성 -->
+
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModalB').modal('show');
+		$('#pageModal17').modal('show');
+	});
+	</script>
+
+</body>
+</html>

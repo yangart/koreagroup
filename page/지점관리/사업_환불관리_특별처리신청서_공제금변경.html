@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">특별처리 신청서</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<table class="table-write">
+						<colgroup>
+							<col style="width:20%">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>유형</th>
+								<td class="d-flex gap-4 align-items-center">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+										<label class="form-check-label" for="flexRadioDefault1">
+										  공제금 변경
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+										<label class="form-check-label" for="flexRadioDefault2">
+										  현금 환불
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+										<label class="form-check-label" for="flexRadioDefault3">
+										  공제금 변경(현금 환불)
+										</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>제목</th>
+								<td><input type="text" class="form-control" placeholder="제목"></td>
+							</tr>
+							<tr>
+								<th>환불신청번호</th>
+								<td>김환불(010-1111-1111) / 김담당1 선임멘토</td>
+							</tr>
+							<tr>
+								<th>수강생</th>
+								<td>2024-QU-001</td>
+							</tr>
+							<tr>
+								<th>환불 사유</th>
+								<td>
+									<ul>
+										<li>- 멘토(언행/연락두절/상담과 다른 수업 내용)</li>
+										<li>- 강사(언행/수업내용/수업시간 미준수/상담과 다른 교육방식과 내용)</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>환불 정보</th>
+								<td>
+									<div class="d-flex gap-1">
+										<a href="#" class="btn btn-outline-primary">은행 검색</a>
+										<input type="text" class="form-control" placeholder="은행을 선택하세요." value="국민은행" readonly="">
+									</div>
+									<div class="d-flex gap-1 mt-1">
+										<input type="number" class="form-control" placeholder="계좌번호">
+										<input type="text" class="form-control" placeholder="예금주">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>변경 대상</th>
+								<td class="d-flex gap-2 align-items-center">
+									<button class="btn btn-outline-primary">공제금 변경</button>
+									<div>
+										<div>
+											공제금) 변경 전 : 652,000원 / <strong class="text-point">변경 후 : 700,000원</strong>
+										</div>
+										<div>
+											환불금) 변경 전 : 652,000원 / <strong class="text-point">변경 후 : 700,000원</strong>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>변경 사유</th>
+								<td>
+									<div class="col-4">
+										<select>
+											<option value="01">선택</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>안내</th>
+								<td>
+									<p class="small text-secondary">
+										공제금 변경을 진행합니다<br>
+										최종 승인자의 승인 처리 완료 시 변경 처리 진행됩니다
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+							<a href="#" class="btn btn-outline-primary">삭제</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point-deep">상신</a>
+							<a href="#" class="btn btn-point">저장</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>

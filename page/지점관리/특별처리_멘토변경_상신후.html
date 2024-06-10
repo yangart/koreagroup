@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">특별처리 신청서</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="sign-area">
+						<div class="img-area">
+							<figure>
+								<img src="./assets/img/logo-light.png" alt="korea">
+							</figure>
+							<p>문서번호: 12345</p>
+							<p>유형: 멘토변경</p>
+						</div>
+						<div class="txt-area">
+							<div>
+								<table>
+									<colgroup>
+										<col style="width: 30px;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th rowspan="4">결재</th>
+											<th>팀장</th>
+											<th>부원장</th>
+											<th>원장</th>
+										</tr>
+										<tr>
+											<td>김책임</td>
+											<td>이인자</td>
+											<td>이인자</td>
+										</tr>
+										<tr class="sign">
+											<td><span class="label-sign-positive">승인</span></td>
+											<td><span class="label-sign-negative">반려</span></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td><small>2024.03.13 13:01</small></td>
+											<td><small>2024.03.13 13:01</small></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+						</div>
+					</div>
+					<p class="bg-light p-3 mb-3 small">아래와 같은 내용으로 특별처리 신청서를 제출하니, 재가하여 주시기 바랍니다</p>
+					<table class="table-write">
+						<colgroup>
+							<col style="width:20%">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>기안자</th>
+								<td>김담당1 선임멘토 / 브랜뉴강남 사업부1부서</td>
+							</tr>
+							<tr>
+								<th>요청일시</th>
+								<td>2024.03.11 14:00</td>
+							</tr>
+							<tr>
+								<th>제목</th>
+								<td>김담당1 퇴사로 인한 DB변경 신청</td>
+							</tr>
+							<tr>
+								<th>사유</th>
+								<td>담당자 퇴사</td>
+							</tr>
+							<tr>
+								<th>내용</th>
+								<td>
+									<p class="mb-2">
+										<strong>수강생의 멘토, 수당자가 변경됩니다</strong>
+									</p>
+									<dl class="dl-info">
+										<dt>수강생정보</dt>
+										<dd><u>김방문(011-123-4567) 외 99명</u></dd>
+										<dt>변경전</dt>
+										<dd>김담당</dd>
+										<dt>변경후</dt>
+										<dd><u>김방문(011-123-4567) 외 99명</u></dd>
+									</dl>
+								</td>
+							</tr>
+							<tr>
+								<th>반려사유</th>
+								<td>등록한 반려사유 노출</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point-deep">반려</a>
+							<a href="#" class="btn btn-point">재기안</a>
+							<a href="#" class="btn btn-point">승인</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>

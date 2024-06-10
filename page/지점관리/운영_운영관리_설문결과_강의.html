@@ -55,6 +55,7 @@
 							</a>
 							<div class="menu-dropdown collapse" id="sideNav2">
 								<ul class="nav nav-sm flex-column">
+
 									<li class="nav-item">
 										<a href="#sideNav2-1" class="nav-link" data-bs-toggle="collapse" role="button"
 											aria-expanded="false" aria-controls="sideNav2-1">2차메뉴1</a>
@@ -579,9 +580,11 @@
 								</ul>
 							</div>
 						</li><!-- nav-item -->
+
 						<li class="nav-item">
 							<a class="nav-link menu-link" href="#"><i class="ico4"></i> <span>로그아웃</span></a>
 						</li><!-- nav-item -->
+
 					</ul>
 
 				</div>
@@ -600,9 +603,9 @@
 					<div class="page-header navbar-header">
 						<div class="page-header-left">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item active">특별처리</li>
-								<li class="breadcrumb-item">main</li>
-								<!-- <li class="breadcrumb-item"></li> -->
+								<li class="breadcrumb-item active">운영</li>
+								<li class="breadcrumb-item">운영 관리</li>
+								<li class="breadcrumb-item">설문 결과</li>
 							</ol>
 						</div>
 
@@ -753,208 +756,131 @@
 					<!-- card -->
 					<div class="card">
 						<div class="card-header card-search">
-							<h5 class="card-title">특별처리</h5>
+							<h5 class="card-title">설문 결과</h5>
+							
+							<ul class="nav nav-pills" role="tablist">
+								<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">일반</a></li>
+								<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab">강의</a></li>
+								<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">교육</a></li>
+							</ul>
+
 							<div class="row">
-								<div class="col-11 gap-2">
+								<div class="col-10 gap-2">
+									<select class="mb-0">
+										<option value="01">설문진행일</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
 									<div class="d-flex gap-1 align-items-center">
-										<label for="" class="form-label mb-0">등록일</label>
 										<div class="input-group-flatpickr">
 											<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
 										</div>
-										<button type="button" class="btn btn-point">오늘</button>
+										<button type="button" class="btn btn-outline-light">오늘</button>
 									</div>
 									<select>
-										<option value="01">계열선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">지점선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">업무선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">팀</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">담당자</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">유형</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">상태</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">팀</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">담당자</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">유형</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<select>
-										<option value="01">상태</option>
+										<option value="01">설문 상태 (전체)</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
 									</select>
 									<div class="d-flex gap-1">
-										<select>
-											<option value="01">제목제목</option>
-											<option value="02">option 2</option>
-											<option value="03">option 3</option>
-										</select>
-										<input type="text" class="form-control" placeholder="요청자, 제목 입력">
+										<div class="col-auto">
+											<input type="text" class="form-control" placeholder="설문 제목을 입력하세요.">
+										</div>
 									</div>									
 								</div>
-								<div class="col-1">
-									<div class="col-12"><button type="button" class="btn btn-point search-btn">초기화</button></div>
-									<div class="col-12"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
+								<div class="col-2 d-flex">
+									<div class="col-6 pe-1"><button type="button" class="btn btn-point search-btn">초기화</button></div>
+									<div class="col-6"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
 								</div>
 							</div><!-- // row -->
-						</div><!-- // card-header --><!-- // card-header -->
+						</div><!-- // card-header -->
 
 						<!-- card-body -->
-						
 						<div id="innerscroll" class="card-body inner-scroll">
-							<div class="fnc-area">
-								<div class="l-area">
-									<span>fnc-area 마진있음</span>
-									<span>fnc-area / 검색결과 총 <b>23</b>건</span>
-									<a href="#" class="btn btn-outline-primary">선택</a>
-									<a href="#" class="btn btn-point">선택</a>
-									<select>
-										<option value="01">컴퓨터</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="r-area">
-									<a href="#" class="btn btn-point">선택</a>
-									<a href="#" class="btn btn-point">선택</a>
-									<select>
-										<option value="01">컴퓨터</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<div class="d-flex gap-1">
-										<select>
-											<option value="01">제목</option>
-											<option value="02">option 2</option>
-											<option value="03">option 3</option>
-										</select>
-										<div class="col-180px">
-											<input type="text" class="form-control" placeholder="요청자, 제목 입력">
-										</div>
-										<a href="#" class="btn btn-point-deep">검색</a>
-									</div>
-								</div>
-							</div>
-							<div class="flex-area mb-3">
-								<div class="l-area">
-									<span>flex-area 양쪽 정렬 필요시 마진과 결합해서 사용 /</span>
-									<span>검색결과 총 <b>23</b>건</span>
-									<a href="#" class="btn btn-outline-primary">선택</a>
-									<a href="#" class="btn btn-point">선택</a>
-									<select>
-										<option value="01">컴퓨터</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="r-area">
-									<a href="#" class="btn btn-point">선택</a>
-									<a href="#" class="btn btn-point">선택</a>
-									<select>
-										<option value="01">컴퓨터</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-									<div class="d-flex gap-1">
-										<select>
-											<option value="01">제목</option>
-											<option value="02">option 2</option>
-											<option value="03">option 3</option>
-										</select>
-										<input type="text" class="form-control" placeholder="요청자, 제목 입력">
-										<a href="#" class="btn btn-point-deep">검색</a>
-									</div>
-								</div>
-							</div>
+
 							<div class="table-responsive">
 								<table class="table table-card">
 									<thead class="table-light">
 										<tr>
 											<th>번호</th>
-											<th>설문 유형</th>
-											<th>설문 대상</th>
-											<th>대상 상세</th>
+											<th>대상 유형</th>
+											<th class="text-start">대상 상세</th>
 											<th>설문 시작일</th>
 											<th>설문 기간</th>
-											<th>설문 제목</th>
-											<th>문항수</th>
+											<th class="text-start">설문 제목</th>
 											<th>설문 상태</th>
-											<th>사용 여부</th>
-											<th>등록자</th>
-											<th>등록일시</th>
-											<th>관리</th>
+											<th>총 대상자</th>
+											<th>총 참여자</th>
+											<th>참여율</th>
+											<th>평균/총점<br>(점수형)</th>
+											<th>평균/총점<br>(시험형)</th>
+											<th>결과</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>13</td>
-											<td>일반</td>
 											<td>수강생</td>
-											<td class="text-start">컴퓨터</td>
-											<td>2024-03-01</td>
+											<td class="text-start">컴퓨터, 2024년 1월 (2024-01-08 ~ 2024-02-06)</td>
+											<td>종강일 3일 전</td>
 											<td>3일</td>
-											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-w">포인트 500점 받아가세요. 예상 참여 시간 1분 예상 참여 시간 1분 예상 참여 시간 1분</span></td>
-											<td>1</td>
-											<td>대기</td>
-											<td>사용</td>
-											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
-											<td>23-12-12 15:30</td>
-											<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">2024년 1월 강의 만족도 조사</span></td>
+											<td>진행</td>
+											<td>10.000</td>
+											<td>499</td>
+											<td>4.9%</td>
+											<td>4.3/5</td>
+											<td></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
 										</tr>
 										<tr>
 											<td>13</td>
-											<td>일반</td>
 											<td>수강생</td>
 											<td class="text-start">IT, 2024년 1월 (2024-01-08 ~ 2024-02-06)</td>
-											<td>개강일 3일 후</td>
-											<td>7일</td>
-											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width:280px;">2024년 1월 강의 만족도 조사</span></td>
-											<td>1</td>
+											<td>종강일 3일 전</td>
+											<td>3일</td>
+											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">2024년 1월 강의 만족도 조사</span></td>
 											<td>진행</td>
-											<td>미사용</td>
-											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
-											<td>23-12-12 15:30</td>
-											<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+											<td>999.999</td>
+											<td>100.000</td>
+											<td>10.0%</td>
+											<td></td>
+											<td></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
+										</tr>
+										<tr>
+											<td>13</td>
+											<td>수강생</td>
+											<td class="text-start">컴퓨터 > 강남 > 사업부, 3년 이상 5년 미만</td>
+											<td>종강일 3일 전</td>
+											<td>3일</td>
+											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">2024년 1월 강의 만족도 조사</span></td>
+											<td>진행</td>
+											<td>10.000</td>
+											<td>499</td>
+											<td>4.9%</td>
+											<td>77.2/85</td>
+											<td></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
+										</tr>
+										<tr>
+											<td>13</td>
+											<td>수강생</td>
+											<td class="text-start">컴퓨터 > 강남 > 사업부, 3년 이상 5년 미만</td>
+											<td>종강일 3일 전</td>
+											<td>3일</td>
+											<td class="text-start"><span class="d-inline-block text-truncate align-middle" style="max-width: 300px;">2024년 1월 강의 만족도 조사</span></td>
+											<td>진행</td>
+											<td>10.000</td>
+											<td>499</td>
+											<td>4.9%</td>
+											<td>49.9/85</td>
+											<td></td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">결과</a></td>
 										</tr>
 									</tbody>
 								</table>
-							</div>
-							<!-- // table-responsive -->
+							</div><!-- // table-responsive -->
 
 						</div><!-- // card-body -->
 
@@ -1005,9 +931,6 @@
 							<a href="#" class="page-link">→</a>
 						</li>
 					</ul>
-					<div class="page-footer-btn-right">
-						<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point">등록</a>
-					</div>
 				</div>
 			</div><!-- // page-footer -->
 
