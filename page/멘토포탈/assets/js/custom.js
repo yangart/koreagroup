@@ -63,13 +63,19 @@ jQuery(function($){
 	// 	}
 	// }
 
-	// 테이블 바디 스크롤 : 컬럼 너비를 colgroup에서 가져오기 위함
-	var tables = document.querySelectorAll('table');
-	tables.forEach(function(table, index) {
-		// Get the number of columns in the current table
-		var tableColumns = table.rows[0].cells.length;
-		
-		// Set the Sass variable value dynamically for each table
-		document.documentElement.style.setProperty('--table-columns-' + (index + 1), tableColumns);
-	  });
+	// var table = document.querySelector('.table-custom-width');
+    // var colgroup = table.querySelector('colgroup');
+    
+    // colgroup.querySelectorAll('col').forEach(function(col, index) {
+    //     var width = col.style.width;
+    //     table.querySelectorAll(`td:nth-child(${index + 1}), th:nth-child(${index + 1})`).forEach(function(cell) {
+            
+	// 		if(width == "auto") {
+	// 			cell.style.flex = 1;
+	// 		} else {
+	// 			cell.style.width = width;
+    //             cell.style.flex = 'unset';
+	// 		}
+    //     });
+    // });
 });

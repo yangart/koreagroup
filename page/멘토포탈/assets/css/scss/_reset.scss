@@ -595,6 +595,9 @@ fieldset:disabled .btn {
   border-radius: var(--border-radius);
   border-color: var(--border-color);
 }
+.fnc-area {
+  .form-select { width: auto !important; }
+}
 .form-control {
   padding: var(--btn-padding-y) var(--btn-padding-x);
   font-size: var(--btn-font-size);
