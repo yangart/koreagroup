@@ -152,9 +152,11 @@
 .table-result {
   margin: 0;
   margin-right: 12px;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--btn-deep-color);
-  font-weight: 600;
+  font-weight: 700;
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
 }
 .table-title {
   font-size: 14px;
@@ -1852,7 +1854,6 @@ body:not(.modal-open) .modal-footer {
 .modal .table-basic {
   thead {
     th {
-      color:#7987a1;
       border:1px solid var(--first-color-alpha-h);
       padding:4px 8px;
       height:38px;
