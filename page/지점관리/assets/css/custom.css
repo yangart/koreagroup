@@ -630,26 +630,6 @@ input:-webkit-autofill {
   max-height: 40vh;
 }
 
-.table-text-end {
-  font-size: 14px;
-}
-
-.table-write.text-center th, .table-write.text-center td {
-  text-align: center;
-}
-
-.table-x-scroll {
-  overflow-x: scroll;
-}
-
-.table-x-scroll table {
-  white-space: nowrap;
-}
-
-.ft-14 {
-  font-size: 14px;
-}
-
 .d-flex-wrap {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -753,6 +733,11 @@ input:-webkit-autofill {
   font-size: 14px;
   font-weight: 600;
   color: #aaa;
+}
+.table-write thead th {
+  border-top: 1px solid var(--bs-gray-200);
+  background-color: var(--bs-gray-100);
+  color: var(--bs-gray-700);
 }
 .table-write td {
   text-align: left;
