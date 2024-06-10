@@ -726,7 +726,6 @@ input:-webkit-autofill {
     padding: 8px 16px;
     border-bottom: 1px solid var(--bs-gray-200);
   }
-
   th {
     font-weight: 600;
     width: 78px;
@@ -734,7 +733,13 @@ input:-webkit-autofill {
     font-weight: 600;
     color: #aaa;
   }
-
+  thead {
+    th {
+      border-top: 1px solid var(--bs-gray-200);
+      background-color: var(--bs-gray-100);
+      color:var(--bs-gray-700);
+    }
+  }
   td {
     text-align: left;
   }

@@ -7,42 +7,42 @@
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
 :root {
   /* Color Pallete */
-  --first-color:#3BA4FD;
-  --first-color-h:#0094FF;
-  --second-color:#FF710A;
-  --second-color-h:#FF5033;
-  --deep-color:#2A364A;
-  --deep-color-h:#222;
+  --first-color:#6571ff;
+  --first-color-h:#2d65cd;
+  --second-color:#0ab39c;
+  --second-color-h:#0ab39c;
+  --deep-color:#405189;
+  --deep-color-h:#364574;
   --gray-color: #e9ebec;
   --gray-light-color: #f3f6f9;
 }
 
 .navbar-menu .navbar-nav .nav-link i.ico1 {
-  background-image: url(../img/app-menu-ico1@2x.png);
+  background-image: url(../img/app-menu-ico1-staff@2x.png);
 }
 .navbar-menu .navbar-nav .nav-link i.ico2 {
-  background-image: url(../img/app-menu-ico2@2x.png);
+  background-image: url(../img/app-menu-ico2-staff@2x.png);
 }
 .navbar-menu .navbar-nav .nav-link i.ico3 {
-  background-image: url(../img/app-menu-ico3@2x.png);
+  background-image: url(../img/app-menu-ico3-staff@2x.png);
 }
 .navbar-menu .navbar-nav .nav-link i.ico4 {
-  background-image: url(../img/app-menu-ico4@2x.png);
+  background-image: url(../img/app-menu-ico4-staff@2x.png);
 }
 .navbar-menu .navbar-nav .nav-link i.ico5 {
-  background-image: url(../img/app-menu-ico5@2x.png);
+  background-image: url(../img/app-menu-ico5-staff@2x.png);
 }
 .navbar-menu .navbar-nav .nav-link i.ico6 {
-  background-image: url(../img/app-menu-ico6@2x.png);
+  background-image: url(../img/app-menu-ico6-staff@2x.png);
 }
 .navbar-menu .navbar-nav .nav-link i.ico7 {
-  background-image: url(../img/app-menu-ico7@2x.png);
+  background-image: url(../img/app-menu-ico7-staff@2x.png);
 }
 .navbar-menu .navbar-nav .nav-link i.ico8 {
-  background-image: url(../img/app-menu-ico8@2x.png);
+  background-image: url(../img/app-menu-ico8-staff@2x.png);
 }
 .navbar-menu .navbar-nav .nav-link i.ico9 {
-  background-image: url(../img/app-menu-ico9@2x.png);
+  background-image: url(../img/app-menu-ico9-staff@2x.png);
 }
 
 @font-face {
@@ -7274,4 +7274,4 @@ input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofi
 .label-sign-negative {
   border-color: var(--bs-gray-400);
   color: var(--bs-gray-400);
-}/*# sourceMappingURL=style.student.css.map */
+}/*# sourceMappingURL=style.staff.css.map */

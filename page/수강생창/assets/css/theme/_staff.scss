@@ -1,0 +1,27 @@
+//지점
+:root {
+    /* Color Pallete */
+    --first-color:#6571ff;
+    --first-color-h:#2d65cd;
+    --second-color:#0ab39c;
+    --second-color-h:#0ab39c;
+    --deep-color:#405189;
+    --deep-color-h:#364574;
+    --gray-color: #e9ebec;
+    --gray-light-color: #f3f6f9;
+}
+
+.navbar-menu { 
+  .navbar-nav {
+    .nav-link {
+      i {
+        @for $i from 1 through 9 {
+          &.ico#{$i} {
+            background-image: url(../img/app-menu-ico#{$i}-staff@2x.png);
+          }
+        }
+      }
+    }
+  }
+}
+
