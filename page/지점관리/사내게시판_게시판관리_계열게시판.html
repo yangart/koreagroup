@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+
+		<div class="app-menu navbar-menu">
+
+			<div class="navbar-brand-box">
+				<div class="" style="padding:14px 0;"><a href="#" class="btn btn-primary w-100">관리</a></div>
+			</div><!-- // navbar-brand-box -->
+			
+			<div id="scrollbar" class="h-50 border-bottom" style="height:50% !important">
+				<div class="container-fluid">
+					<ul class="navbar-nav" id="navbar-nav">
+						<div id="two-column-menu"></div>
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav1">
+								<span>공통게시판</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav1">								
+								<ul class="nav nav-sm flex-column">
+									<li class="nav-item"><a href="#" class="nav-link">게시판1</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">게시판2</a></li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav2" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav2">
+								<span>공통게시판2</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav2">								
+								<ul class="nav nav-sm flex-column">
+									<li class="nav-item"><a href="#" class="nav-link">게시판1</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">게시판2</a></li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav3" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav3">
+								<span>공통게시판3</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav3">								
+								<ul class="nav nav-sm flex-column">
+									<li class="nav-item"><a href="#" class="nav-link">게시판1</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">게시판2</a></li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav4" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav4">
+								<span>공통게시판</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav4">								
+								<ul class="nav nav-sm flex-column">
+									<li class="nav-item"><a href="#" class="nav-link">게시판1</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">게시판2</a></li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav5" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav5">
+								<span>공통게시판2</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav5">								
+								<ul class="nav nav-sm flex-column">
+									<li class="nav-item"><a href="#" class="nav-link">게시판1</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">게시판2</a></li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+						<li class="nav-item">
+							<a class="nav-link menu-link" href="#sideNav6" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sideNav6">
+								<span>공통게시판3</span>
+							</a>
+							<div class="menu-dropdown collapse" id="sideNav6">								
+								<ul class="nav nav-sm flex-column">
+									<li class="nav-item"><a href="#" class="nav-link">게시판1</a></li>
+									<li class="nav-item"><a href="#" class="nav-link">게시판2</a></li>
+								</ul>
+							</div>
+						</li><!-- nav-item -->
+
+						<li class="nav-item">
+							<div class="nav-link menu-link"><a href="#" class="btn btn-outline-primary w-100">직원신문고</a></div>
+						</li><!-- nav-item -->
+					</ul>
+
+				</div>
+			</div><!-- // scrollbar -->
+
+
+		</div><!-- // navbar-menu -->
+		<div class="vertical-overlay"></div>
+
+		<!---- main-content ---->
+		<div class="main-content">
+			<div class="page-content page-content-full">
+				<div class="container-fluid">
+
+					<!-- page-header -->
+					<div class="page-header navbar-header">
+						<div class="page-header-left">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">사내 게시판</li>
+								<li class="breadcrumb-item active">게시판 관리</li>
+							</ol>
+						</div>
+
+						<div class="page-header-right">
+
+							<a href="#" class="btn-topbar"><i class="topbar-star"></i></a>
+							<a href="#" class="btn-topbar"><i class="topbar-calendar"></i></a>
+
+							<div class="dropdown topbar-head-dropdown" id="notificationDropdown">
+								<button type="button" class="btn-topbar" id="page-header-notifications-dropdown"
+									data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true"
+									aria-expanded="false">
+									<i class="topbar-bell"></i>
+									<span class="badge">83</span>
+								</button>
+
+								<div class="alram-dropdown dropdown-menu dropdown-menu-end"
+									aria-labelledby="page-header-notifications-dropdown">
+									<div>
+										<div class="alram-header">
+											<h6 class="alram-header-bell">알림</h6>
+										</div>
+										<div class="alram-item simplebar-scrollable-y" data-simplebar
+											style="max-height: 310px;">
+											<ul>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">특별관리학생 등록 : 홍길동(포토샵)</label>
+												</li>
+											</ul>
+										</div>
+										<div class="alram-header">
+											<h6 class="alram-header-star">나의 업무</h6>
+										</div>
+										<div class="alram-item simplebar-scrollable-y" data-simplebar
+											style="max-height: 310px;">
+											<ul>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">방문상담 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="">
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+												<li class="form-check">
+													<input class="form-check-input" type="checkbox" id="" checked>
+													<label class="form-check-label" for="">개강 : 홍길동 (2023.07.21
+														14:30)</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div><!-- // page-header -->
+
+					<!-- card -->
+					<div class="card">
+						<div class="card-header card-search">
+							<h5 class="card-title">게시판 관리</h5>
+						</div><!-- // card-header -->
+
+						<!-- card-body -->
+						<div id="innerscroll" class="card-body inner-scroll">
+							<div class="row gap-3 h-100">
+								<div class="col-20p">
+									<div class="border h-100">
+										<div class="title-group border-bottom p-3">
+											<h5 class="fs-16px"><span>메뉴</span></h5>
+										</div>
+										<div class="p-2">
+											<div class="group-div">
+												<div class="tit-area-bg">
+													<div class="tit">공통</div>
+													<div>
+														<button type="button" class="btn btn-outline-active btn-sm">순서변경</button>
+														<button type="button" class="btn btn-outline-active btn-sm">추가</button>
+													</div>
+												</div>
+												<div class="list-group">
+													<button type="button" class="list-group-item list-group-item-action">
+														<span class="d-flex justify-content-between align-items-center">
+															그룹게시판 (N)
+															<a href="#" class="btn btn btn-point btn-sm">관리</a>
+														</span>
+													</button>
+													<button type="button" class="list-group-item list-group-item-action" disabled>
+														<span class="d-flex justify-content-between align-items-center">
+															미사용메뉴 (N)
+															<a href="#" class="btn btn btn-point btn-sm">관리</a>
+														</span>
+													</button>
+												</div>
+											</div>
+											<div class="group-div pt-3">
+												<div class="tit-area-bg">
+													<div class="tit">계열/지점</div>
+													<div>
+														<button type="button" class="btn btn-outline-active btn-sm">순서변경</button>
+														<button type="button" class="btn btn-outline-active btn-sm">추가</button>
+													</div>
+												</div>
+												<div class="list-group">
+													<button type="button" class="list-group-item list-group-item-action bg-light">
+														<span class="d-flex justify-content-between align-items-center">
+															[계열] 계열게시판 (N)
+															<a href="#" class="btn btn btn-point btn-sm">관리</a>
+														</span>
+													</button>
+													<button type="button" class="list-group-item list-group-item-action">
+														<span class="d-flex justify-content-between align-items-center">
+															[지점] 지점게시판 (N)
+															<a href="#" class="btn btn btn-point btn-sm">관리</a>
+														</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-20p">
+									<div class="border h-100">
+										<div class="title-group border-bottom p-3">
+											<h5 class="fs-16px"><span>계열/지점</span></h5>
+										</div>
+										<div class="p-2">
+											<div class="group-div">
+												<div class="list-group">
+													<button type="button" class="list-group-item list-group-item-action bg-light">
+														<span class="d-flex justify-content-between align-items-center">
+															컴퓨터 (N)
+														</span>
+													</button>
+													<button type="button" class="list-group-item list-group-item-action">
+														<span class="d-flex justify-content-between align-items-center">
+															게임 (N)
+														</span>
+													</button>
+													<button type="button" class="list-group-item list-group-item-action">
+														<span class="d-flex justify-content-between align-items-center">
+															IT (N)
+														</span>
+													</button>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+
+								<div class="col-20p">
+									<div class="border h-100">
+										<div class="title-group border-bottom d-flex justify-content-between align-items-center" style="padding: 0.73rem 1rem;">
+											<h5 class="fs-16px"><span>메뉴</span></h5>
+											<div class="">
+												<button type="button" class="btn btn-outline-active btn-sm">순서변경</button>
+												<button type="button" class="btn btn-outline-active btn-sm">추가</button>
+											</div>
+										</div>
+										<div class="p-2">
+											<div class="group-div">
+												<div class="list-group">
+													<button type="button" class="list-group-item list-group-item-action">
+														<span class="d-flex justify-content-between align-items-center">
+															계열게시판1
+															<a href="#" class="btn btn btn-point btn-sm">관리</a>
+														</span>
+													</button>
+													<button type="button" class="list-group-item list-group-item-action">
+														<span class="d-flex justify-content-between align-items-center">
+															계열게시판2
+															<a href="#" class="btn btn btn-point btn-sm">관리</a>
+														</span>
+													</button>
+													<button type="button" class="list-group-item list-group-item-action">
+														<span class="d-flex justify-content-between align-items-center">
+															계열게시판3
+															<a href="#" class="btn btn btn-point btn-sm">관리</a>
+														</span>
+													</button>
+													<button type="button" class="list-group-item list-group-item-action" disabled>
+														<span class="d-flex justify-content-between align-items-center">
+															미사용게시판
+															<a href="#" class="btn btn btn-point btn-sm">관리</a>
+														</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+
+							</div>
+						</div>
+						<!-- // card-body -->
+						
+
+					</div><!-- // card -->
+
+				</div><!-- // container-fluid -->
+			</div><!-- // page-content -->
+
+
+		</div><!-- // main-content -->
+
+	</div><!-- // layout-wrapper -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function (selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function (selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function (selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate" })]
+		})
+
+	</script>
+
+	<script>
+		$(function () {
+			$('#pageModalB').modal('show');
+			$('#pageModal17').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>
