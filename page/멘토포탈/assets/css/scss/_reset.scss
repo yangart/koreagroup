@@ -254,7 +254,7 @@ select {
   border-radius: var(--border-radius);
   border-color: var(--border-color);
 }
-.col-4 {
+[class^=col-] {
   select { display:block;width:100%; }
 }
 .btn {
@@ -826,7 +826,7 @@ textarea.form-editor {
 }
 .form-btn {
   /* display:flex;justify-content:flex-end;align-items:center;*/
-  margin-top: 20px;
+  // margin-top: 20px;
   text-align: right;
   &.tab-pane-btn {
     margin: 20px -24px 0;
@@ -835,6 +835,7 @@ textarea.form-editor {
   }
   .btn {}
 }
+.mbody-forms + .form-btn  { margin-top:20px; }
 .row.row-wrap {
   display: flex;
   justify-content: center;
@@ -1740,6 +1741,10 @@ textarea.form-editor {
   max-width: calc(var(--bs-gutter-x) + 100px);
 }
 .col-120px {
+  width: 100%;
+  max-width: calc(var(--bs-gutter-x) + 120px);
+}
+.col-140px {
   width: 100%;
   max-width: calc(var(--bs-gutter-x) + 120px);
 }
