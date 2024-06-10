@@ -45,20 +45,18 @@
 							<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>사업정보</span></a>
+							<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>강의관리</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>MY 학생</span></a>
+							<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>통계</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico4"></i> <span>인사정보</span></a>
+							<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>교육이수</span></a>
+							<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>게시판</span></a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a></li>
-					</ul><!-- // navbar-nav -->
+					</ul>
 		
 				</div><!-- // scrollbar -->
 		
@@ -91,7 +89,7 @@
 									<div class="tab-pane active" id="alramTabs1" role="tabpanel">
 										<div class="row row-wrap g-0">
 											<div class="col col-auto">
-												<select class="form-select" data-choices data-choices-search-false>
+												<select>
 													<option value="01">시작 개강일</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -99,7 +97,7 @@
 											</div>
 											<div class="col col-dash">~</div>
 											<div class="col col-auto">
-												<select class="form-select" data-choices data-choices-search-false>
+												<select>
 													<option value="01">마지막 개강일</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -109,7 +107,7 @@
 		
 										<div class="row row-wrap g-0">
 											<div class="col col-auto">
-												<select class="form-select" data-choices data-choices-search-false>
+												<select>
 													<option value="01">시작 시간</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -117,7 +115,7 @@
 											</div>
 											<div class="col col-dash">~</div>
 											<div class="col col-auto">
-												<select class="form-select" data-choices data-choices-search-false>
+												<select>
 													<option value="01">마지막 시간</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -127,7 +125,7 @@
 		
 										<div class="row g-0">
 											<div class="col">
-												<select class="form-select" data-choices data-choices-search-false>
+												<select>
 													<option value="01">학과 선택</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -383,7 +381,7 @@
 			</div><!-- // page-header -->
 		
 			<div class="page-content">
-				<div class="page-content-title">- 계약 현황</div>
+				<div class="page-content-title">- 강의 관리</div>
 				
 				<!-- card -->
 				<div class="card">
@@ -394,114 +392,77 @@
 							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사급여</a></li>
 							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab">계약현황</a></li>
 							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사평가</a></li>
-							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">계약현황</a></li>
-							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사평가</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">커리큘럼 관리</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">만족도 조사</a></li>
 						</ul><!-- // card-nav -->		
 					</div>
-					<div class="card-header card-search">
-						<div class="row">
-							<div class="col-11 row-cols">
-								<div class="col-auto">
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">계약일</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="col-320px row-cols-2">
-									<div class="input-group-flatpickr">
-										<input type="text" id="startDate"
-											class="form-control flatpickr-input form-datepicker" placeholder=""
-											value="2022.08.10">
-									</div>
-									<div class="input-group-flatpickr">
-										<input type="text" id="endDate"
-											class="form-control flatpickr-input form-datepicker" placeholder=""
-											value="2022.08.10">
-									</div>
-								</div>
-								<div class="col-auto">
-									<a href="#" class="btn btn-point">오늘</a>
-								</div>
-								<div class="col-xxxl-13 col-xxl-3 col-4">
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">계열선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="col-xxxl-13 col-xxl-3 col-4">
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">지점선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="col-xxxl-13 col-xxl-3 col-4">
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">학과선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="col-xxxl-13 col-xxl-3 col-4">
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">직위선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="col-xxxl-13 col-xxl-3 col-4">
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">고용형태 선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="col-xxxl-13 col-xxl-3 col-4">
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">상태선택</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
-								<div class="col-auto">
-									<input type="text" class="form-control" placeholder="강사명/연락처를 입력해주세요.">
-								</div>
-							</div>
-							<div class="col-1">
-								<div class="col-12"><button type="button"
-										class="btn btn-point search-btn">초기화</button></div>
-								<div class="col-12"><button type="button"
-										class="btn btn-point-deep search-btn">검색</button></div>
-							</div>
-						</div><!-- // row -->
-		
-					</div><!-- 검색영역 -->
-		
+					
 					<!-- card-body -->
 					<div id="innerscroll" class="card-body inner-scroll">
-						<div class="table-head">
-							<div class="flex-grow-1 row">
-								<div class="col-auto">
-									<h5 class="table-result">검색결과 총 <span class="text-point">165</span>건</h5>
+						<div class="fnc-area mb-2">
+							<div class="l-area">
+								<select>
+									<option value="01">계약일</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<div class="input-group d-inline-flex">
+									<div class="input-daterange input-group">
+										<input type="text" class="input-sm form-control" name="start" id="startDate" />
+										<span class="input-group-addon">~</span>
+										<input type="text" class="input-sm form-control" name="end" id="endDate" />
+									</div>
 								</div>
+								<button type="button" class="btn btn-outline-primary" id="selectToday">오늘</button>
 							</div>
-							<div class="flex-shrink-0 row">
-								<div class="col-auto"><a href="#" class="btn btn-point-deep">엑셀</a></div>
-								<div class="col-auto">
-									<select class="form-select" data-choices data-choices-search-false>
-										<option value="01">20개</option>
-										<option value="02">option 2</option>
-										<option value="03">option 3</option>
-									</select>
-								</div>
+						</div>
+						<div class="fnc-area">
+							<div class="l-area">
+								<select>
+									<option value="01">계열 선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">지점 선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">학과 선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">직위선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">고용형태 선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">상태 선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
 							</div>
-						</div><!-- // table-head -->
+							<div class="r-area">
+								<button type="button" class="btn btn-point">초기화</button>
+								<button type="button" class="btn btn-point-deep">검색</button>
+							</div>
+						</div>
+						<div class="fnc-area mb-2">
+							<div class="l-area">
+								<strong class="fs-14px px-2">검색결과 총 <span class="text-point">165</span>건</strong>
+							</div>
+						</div>
 		
 						<div class="table-responsive">
-							<table class="table table-card">
-								<thead class="table-light">
+							<table class="table table-basic">
+								<thead>
 									<tr>
 										<th>번호</th>
 										<th>소속</th>
@@ -551,7 +512,7 @@
 				<div class="page-footer-row">
 					<div class="page-footer-btn-left row gx-8px flex-middle">
 						<div class="col-auto">
-							<select id="" class="form-select" data-choices data-choices-search-false>
+							<select id="">
 								<option value="01">20</option>
 								<option value="02">30</option>
 								<option value="03">40</option>
@@ -599,7 +560,7 @@
 							<dt>강사</dt>
 							<dd>이강사2 학과장</dd>
 						</dl>
-						<table class="table table-card mt-4">
+						<table class="table table-basic mt-4">
 							<colgroup>
 								<col style="width:auto">
 								<col style="width:15%">

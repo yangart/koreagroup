@@ -38,7 +38,21 @@ jQuery(function($){
 		todayHighlight : true,
 		language : "ko"					
 	});
+	$('.input-daterange').datepicker({
+		format: "yyyy-mm-dd",	
+		autoclose : true,	
+		datesDisabled : ['2024-06-06','2024-06-26'],
+		daysOfWeekDisabled : [0,6],	
+		todayHighlight : true,
+		language : "ko"	
+	});
 	
+	$('#selectToday').click(function(){
+        // 오늘 날짜를 가져와서 시작일과 종료일 input에 설정
+        var today = new Date();
+        $('#startDate').datepicker('setDate', today);
+        $('#endDate').datepicker('setDate', today);
+    });
 	// fluidAutoHeight();
 	// $(window).resize(fluidAutoHeight);
 	// function fluidAutoHeight(){

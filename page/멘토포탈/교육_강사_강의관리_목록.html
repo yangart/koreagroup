@@ -46,21 +46,18 @@
 						<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>사업정보</span></a>
+						<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>강의관리</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>MY 학생</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico4"></i> <span>인사정보</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>교육이수</span></a>
+						<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>통계</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a>
 					</li>
-				</ul><!-- // navbar-nav -->
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>게시판</span></a>
+					</li>
+				</ul>
 			</div><!-- // scrollbar -->
 		
 		<div class="app-menu-info type-foot">
@@ -92,7 +89,7 @@
 								<div class="tab-pane active" id="alramTabs1" role="tabpanel">
 									<div class="row row-wrap g-0">
 										<div class="col col-auto">
-											<select class="form-select" data-choices data-choices-search-false>
+											<select>
 												<option value="01">시작 개강일</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -100,7 +97,7 @@
 										</div>
 										<div class="col col-dash">~</div>
 										<div class="col col-auto">
-											<select class="form-select" data-choices data-choices-search-false>
+											<select>
 												<option value="01">마지막 개강일</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -110,7 +107,7 @@
 		
 									<div class="row row-wrap g-0">
 										<div class="col col-auto">
-											<select class="form-select" data-choices data-choices-search-false>
+											<select>
 												<option value="01">시작 시간</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -118,7 +115,7 @@
 										</div>
 										<div class="col col-dash">~</div>
 										<div class="col col-auto">
-											<select class="form-select" data-choices data-choices-search-false>
+											<select>
 												<option value="01">마지막 시간</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -128,7 +125,7 @@
 		
 									<div class="row g-0">
 										<div class="col">
-											<select class="form-select" data-choices data-choices-search-false>
+											<select>
 												<option value="01">학과 선택</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -428,14 +425,14 @@
 			<div class="card">
 				<div class="card-head">
 					<ul class="nav card-nav" id="mentorTabs" role="tablist">
-						<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab">강의정보</a></li>
-						<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">일지정보</a></li>
-						<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사급여</a></li>
-						<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">계약현황</a></li>
-						<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사평가</a></li>
-						<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">계약현황</a></li>
-						<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사평가</a></li>
-					</ul><!-- // card-nav -->		
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab">강의정보</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">일지정보</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사급여</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">계약현황</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사평가</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">커리큘럼 관리</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">만족도 조사</a></li>
+						</ul><!-- // card-nav -->	
 				</div>
 		
 				<!-- card-body -->		
@@ -444,20 +441,20 @@
 						<div class="l-area">
 							<div class="input-group d-inline-flex">
 								<span class="input-group-text">강의 일정</span>
-								<input type="text" class="form-control form-datepicker">
-								<a href="#" class="btn btn-outline-primary">오늘</a>
+								<input type="text" class="form-control form-datepicker" id="startDate">
 							</div>
-							<select class="form-select" data-choices data-choices-search-false>
+							<a href="#" class="btn btn-outline-primary" id="selectToday">오늘</a>
+							<select>
 								<option value="01">개강일 선택</option>
 								<option value="02">option 2</option>
 								<option value="03">option 3</option>
 							</select>
-							<select class="form-select" data-choices data-choices-search-false>
+							<select>
 								<option value="01">과목 선택</option>
 								<option value="02">option 2</option>
 								<option value="03">option 3</option>
 							</select>
-							<select class="form-select" data-choices data-choices-search-false>
+							<select>
 								<option value="01">상태 선택</option>
 								<option value="02">option 2</option>
 								<option value="03">option 3</option>
@@ -475,8 +472,8 @@
 					</div>
 		
 					<div class="table-responsive">
-						<table class="table table-card">
-							<thead class="table-light">
+						<table class="table table-basic">
+							<thead>
 								<tr>
 									<th>번호</th>
 									<th>소속</th>
@@ -531,7 +528,7 @@
 			<div class="page-footer-row">
 				<div class="page-footer-btn-left row gx-8px flex-middle">
 					<div class="col-auto">
-						<select id="" class="form-select" data-choices data-choices-search-false>
+						<select id="">
 							<option value="01">20</option>
 							<option value="02">30</option>
 							<option value="03">40</option>
