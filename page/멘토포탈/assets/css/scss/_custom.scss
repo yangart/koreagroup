@@ -1161,6 +1161,9 @@ select:not(.form-select) {
     > * {
       display: inline-block;
     }
+    > select {
+      width:auto;
+    }
     .choices {
       margin-bottom: 0;
     }
@@ -1172,7 +1175,7 @@ select:not(.form-select) {
 
 }
 .fnc-area {
-  margin-bottom: .5rem;
+  //margin-bottom: .5rem;
   // font-size:14px;
 }
 .dl-info {

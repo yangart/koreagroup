@@ -271,9 +271,9 @@ select {
   border-color: var(--border-color);
 }
 [class^=col-] {
-  select { display:block;width:100%; }
+  > select { display:block;width:100%; }
   &.col-11 {
-    select {
+   > select {
       width:auto;
       display:inline-block;
     }
@@ -1773,7 +1773,7 @@ table + .form-btn  { margin-top:20px; }
 }
 .col-140px {
   width: 100%;
-  max-width: calc(var(--bs-gutter-x) + 120px);
+  max-width: calc(var(--bs-gutter-x) + 140px);
 }
 .col-180px {
   width: 100%;

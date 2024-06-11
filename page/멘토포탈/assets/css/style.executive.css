@@ -326,11 +326,11 @@ select {
   border-color: var(--border-color);
 }
 
-[class^=col-] select {
+[class^=col-] > select {
   display: block;
   width: 100%;
 }
-[class^=col-].col-11 select {
+[class^=col-].col-11 > select {
   width: auto;
   display: inline-block;
 }
@@ -2193,7 +2193,7 @@ table + .form-btn {
 
 .col-140px {
   width: 100%;
-  max-width: calc(var(--bs-gutter-x) + 120px);
+  max-width: calc(var(--bs-gutter-x) + 140px);
 }
 
 .col-180px {
@@ -10168,6 +10168,12 @@ select:not(.form-select) {
 .flex-area .r-area > * {
   display: inline-block;
 }
+.fnc-area .l-area > select,
+.fnc-area .r-area > select,
+.flex-area .l-area > select,
+.flex-area .r-area > select {
+  width: auto;
+}
 .fnc-area .l-area .choices,
 .fnc-area .r-area .choices,
 .flex-area .l-area .choices,
@@ -10180,10 +10186,6 @@ select:not(.form-select) {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-left: auto;
-}
-
-.fnc-area {
-  margin-bottom: 0.5rem;
 }
 
 .dl-info dt {
