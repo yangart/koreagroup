@@ -602,7 +602,7 @@
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item">지원</li>
 								<li class="breadcrumb-item">온라인</li>
-								<li class="breadcrumb-item active">온라인 상품 관리</li>
+								<li class="breadcrumb-item active">온라인 상품 신청 내역</li>
 							</ol>
 						</div>
 
@@ -753,7 +753,7 @@
 					<!-- card -->
 					<div class="card">
 						<div class="card-header card-search">
-							<h5 class="card-title">온라인 상품 관리</h5>
+							<h5 class="card-title">온라인 상품 신청 내역</h5>
 							<div class="row">
 								<div class="col-10 gap-2">
 									<div class="d-flex gap-1 align-items-center">
@@ -768,10 +768,30 @@
 										<option>option 2</option>
 										<option>option 3</option>
 									</select>									
+									<select>
+										<option>지점</option>
+										<option>option 2</option>
+										<option>option 3</option>
+									</select>									
+									<select>
+										<option>팀</option>
+										<option>option 2</option>
+										<option>option 3</option>
+									</select>									
+									<select>
+										<option>멘토</option>
+										<option>option 2</option>
+										<option>option 3</option>
+									</select>									
+									<select>
+										<option>쿠폰상태</option>
+										<option>option 2</option>
+										<option>option 3</option>
+									</select>									
 								</div>
 								<div class="col-2 justify-content-end">
-									<div class="d-flex gap-1">
-										<input type="text" class="form-control" placeholder="상품명/쿠폰헤더코드를 입력하세요.">
+									<div class="d-flex gap-1 justify-content-end">
+										<input type="text" class="form-control col-10" placeholder="원서번호/이름/연락처/과목을 입력하세요.">
 										<a href="#" class="btn btn-point-deep">검색</a>
 									</div>
 								</div>
@@ -786,38 +806,53 @@
 									<thead class="table-light">
 										<tr>
 											<th>번호</th>
-											<th class="text-start">상품명</th>
-											<th>쿠폰헤더코드</th>
-											<th class="text-end">가격</th>
-											<th>계열</th>
-											<th>등록자</th>
-											<th>등록일</th>
-											<th>사용여부</th>
-											<th>관리</th>
+											<th>원서번호</th>
+											<th>계열/지점</th>
+											<th>이름</th>
+											<th>연락처</th>
+											<th class="text-start">과목</th>
+											<th class="text-end">수강료</th>
+											<th>쿠폰번호</th>
+											<th>환불일</th>
+											<th class="text-end">환불금액</th>
+											<th>멘토</th>
+											<th>서브멘토</th>
+											<th>쿠폰상태</th>
+											<th>원서등록일</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>13</td>
-											<td class="text-start">따즈아 3개월 무료패키지</td>
-											<td>UE18</td>
-											<td class="text-end">50,000</td>
-											<td>전체</td>
-											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
-											<td>23-12-12</td>
-											<td>사용</td>
-											<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+											<td><a href="#" class="btn-link">123456</a></td>
+											<td>컴퓨터강남</td>
+											<td><a href="#" class="btn-link">지현우</a></td>
+											<td>01012345678</td>
+											<td class="text-start">2개월 빅데이터기사필기</td>
+											<td class="text-end">500,000</td>
+											<td><a href="#" class="btn btn-outline-active btn-sm">재발급</a></td>
+											<td></td>
+											<td class="text-end"></td>
+											<td>홍길동 대리(3-2팀)</td>
+											<td></td>
+											<td>발급</td>
+											<td>2025-07-91</td>
 										</tr>
 										<tr>
-											<td>12</td>
-											<td class="text-start">따즈아 3개월 무료패키지</td>
-											<td>UE18</td>
-											<td class="text-end">50,000</td>
-											<td>전체</td>
-											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
-											<td>23-12-12</td>
-											<td>미사용</td>
-											<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+											<td>13</td>
+											<td><a href="#" class="btn-link">123456</a></td>
+											<td>컴퓨터강남</td>
+											<td><a href="#" class="btn-link">지현우</a></td>
+											<td>01012345678</td>
+											<td class="text-start">2개월 빅데이터기사필기</td>
+											<td class="text-end">500,000</td>
+											<td>UE2261395368</td>
+											<td>2023-08-05</td>
+											<td class="text-end">30,000</td>
+											<td>홍길동 대리(3-2팀)</td>
+											<td>미문의준(1-3팀)</td>
+											<td>발급</td>
+											<td>2025-07-91</td>
 										</tr>
 									</tbody>
 								</table>
@@ -838,10 +873,10 @@
 					<div class="page-footer-btn-left">
 						<div class="flex-grow-1 row align-items-center">
 							<div class="col-auto">
-								<select>
-									<option>50개</option>
-									<option>option 2</option>
-									<option>option 3</option>
+								<select class="form-select" data-choices data-choices-search-false>
+									<option value="01">50개</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
 								</select>
 							</div>
 							<div class="col-auto ms-2">
@@ -874,7 +909,6 @@
 						</li>
 					</ul>
 					<div class="page-footer-btn-right">
-						<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point">등록</a>
 						<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point-deep">엑셀</a>
 					</div>
 				</div>
