@@ -143,6 +143,8 @@ input:-webkit-autofill{ -webkit-text-fill-color: #212529 !important; }
 .table-body .table td .row > div{margin-top:0;}
 
 // @import "scss/hwa";
-@import "scss/hwa.css";
+@import url("scss/hwa.css");
 @import "scss/sol";
 @import "scss/hyo";
+
+

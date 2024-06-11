@@ -3,7 +3,7 @@
 	Date	: 2024-06-01
 	Project	: Korea Edu Group
 */
-@import "scss/hwa.css";
+@import url("scss/hwa.css");
 #scroll-top {
   display: none;
 }
