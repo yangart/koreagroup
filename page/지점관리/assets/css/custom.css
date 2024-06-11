@@ -3,6 +3,7 @@
 	Date	: 2024-06-01
 	Project	: Korea Edu Group
 */
+@import "scss/hwa.css";
 #scroll-top {
   display: none;
 }
@@ -602,51 +603,6 @@ input:-webkit-autofill {
 
 .table-body .table td .row > div {
   margin-top: 0;
-}
-
-.table-body .table th {
-  height: 49px;
-}
-
-.form-list {
-  padding-left: 20px;
-  position: relative;
-}
-
-.form-list:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  left: 0;
-  top: 10px;
-  border: 1px solid var(--bs-gray-200);
-  border-radius: 100%;
-}
-
-.modal-survey-list.overflow-y-scroll {
-  padding-right: 5px;
-  max-height: 40vh;
-}
-
-.d-flex-wrap {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.d-flex-wrap > div {
-  margin-right: 10px;
-}
-
-.lnb-scroll-y {
-  position: relative;
-  overflow-y: auto;
-  width: 100%;
-  z-index: 0;
 }
 
 .tit-area-bg {
