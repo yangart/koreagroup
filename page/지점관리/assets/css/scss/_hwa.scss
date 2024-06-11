@@ -7,3 +7,5 @@
 
 .d-flex-wrap{display: flex !important;flex-wrap: wrap;}
 .d-flex-wrap > div {margin-right:10px;}
+
+.lnb-scroll-y {position: relative;overflow-y: auto;width: 100%;z-index: 0;} 
