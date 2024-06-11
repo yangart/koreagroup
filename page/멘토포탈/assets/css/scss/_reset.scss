@@ -29,6 +29,15 @@
   --btn-padding-ico:30px;
   --btn-font-size:14px;
   --btn-line-height:22px;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
   --color-ye:#ffa133;
   --color-or:#ff710a;
   --color-rd:#ff3366;
@@ -263,6 +272,12 @@ select {
 }
 [class^=col-] {
   select { display:block;width:100%; }
+  &.col-11 {
+    select {
+      width:auto;
+      display:inline-block;
+    }
+  }
 }
 .btn {
   -webkit-box-shadow: none;
@@ -652,7 +667,7 @@ fieldset:disabled .btn {
   background: url(../img/form-link-ico@2x.png) no-repeat right 12px (center / 16px) 16px;
 }
 .form-date, .form-datepicker {
-  width:132px;
+  width:148px;
   padding-right: var(--btn-padding-ico);
   background: url(../img/form-date-ico@2x.png) no-repeat right 12px (center / 16px) 16px;
   /* pointer-events:none;*/
