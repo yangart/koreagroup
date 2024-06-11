@@ -3,15 +3,15 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>멘토포털</title>
+	<title>강사포털</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no" />
-	<meta property="og:title" content="멘토포털">
-	<meta property="og:description" content="멘토포털">
-	<meta name="description" content="멘토포털">
+	<meta property="og:title" content="강사포털">
+	<meta property="og:description" content="강사포털">
+	<meta name="description" content="강사포털">
 	<script src="./assets/js/layout.js"></script>
 	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.instructor.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="layout-wrapper">
@@ -46,19 +46,16 @@
 						<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>사업정보</span></a>
+						<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>강의관리</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>MY 학생</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico4"></i> <span>인사정보</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>교육이수</span></a>
+						<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>통계</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>게시판</span></a>
 					</li>
 				</ul><!-- // navbar-nav -->
 			</div><!-- // scrollbar -->
@@ -71,6 +68,8 @@
 		
 		<!---- main-content ---->		
 		<div class="main-content">
+			<!-- page-header -->
+		
 			<div class="page-header flex-right">
 				<div class="page-header-topbar">
 					<div><a href="#" class="btn-topbar"><i class="topbar-calendar"></i></a></div>
@@ -776,8 +775,7 @@
 						<li class="page-item"><a href="#" class="page-link">→</a></li>
 					</ul>
 					<div class="page-footer-btn-right">
-						<a href="#" class="btn btn-outline-first">다운로드</a>
-						<a href="#pageModal1" data-bs-toggle="modal" class="btn btn-first">등록</a>
+						<a href="#" class="btn btn-outline-first">엑셀</a>
 					</div>
 				</div>
 			</div><!-- // page-footer -->
@@ -787,70 +785,116 @@
 	</div><!-- // layout-wrapper -->
 		
 	<div class="modal fade" id="pageModal12" tabindex="-1" role="dialog" aria-hidden="false">
-		<div class="modal-dialog  modal-dialog-centered">
+		<div class="modal-dialog modal-md modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">배정턴 복사</h5>
+					<h5 class="modal-title">당일 근무 설정</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
 						id="close-modal"></button>
 				</div><!-- // modal-header -->
 		
 				<div class="modal-body">
+					<div class="table-head mt-0 mb-2">
+						<div class="table-title">당직시간 설정</div>
+					</div><!-- // table-head -->
+		
 					<table class="table table-basic table-align-left">
 						<colgroup>
-							<col style="width:22%">
+							<col style="width:20%">
 							<col style="width:auto">
 						</colgroup>
 						<tbody>
 							<tr>
-								<th>대상</th>
-								<td>2024년01월 (공식 : N명)</td>
-							</tr>
-							<tr>
-								<th>배정턴 선택</th>
+								<td>1차</td>
 								<td>
 									<div class="row row-x6">
-										<div class="col-12">
+										<div class="col-auto">
 											<select>
-												<option value="01">2024년 01월 (2024-01-10 ~ 2024-02-09)</option>
+												<option value="01">2024년</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
 											</select>
 										</div>
-										<div class="col-9 mt-2">
+										<div class="col-auto">
 											<select>
-												<option value="01">사업자</option>
+												<option value="01">2024년</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
 											</select>
 										</div>
-										<div class="col-3 mt-2"><a href="#" class="btn btn-outline-active">추가</a></div>
+										<div class="col-auto col-dash">~</div>
+										<div class="col-auto">
+											<select>
+												<option value="01">2024년</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+										<div class="col-auto">
+											<select>
+												<option value="01">2024년</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
 									</div>
 								</td>
 							</tr>
 							<tr>
-								<td colspan="2">
+								<td>2차</td>
+								<td>
 									<div class="row row-x6">
-										<div class="col-12">
-											<button type="button"
-												class="btn btn-outline-cancel btn-listgroup-del my-1">대표<i
-													class="ico-close"></i></button><!-- 2024-3-09 btn-listgroup-del 추가-->
-		
-											<button type="button"
-												class="btn btn-outline-cancel btn-listgroup-del my-1">내사<i
-													class="ico-close"></i></button>
-											<button type="button"
-												class="btn btn-outline-cancel btn-listgroup-del my-1">퇴사자<i
-													class="ico-close"></i></button>
-											<button type="button"
-												class="btn btn-outline-cancel btn-listgroup-del my-1">CPA<i
-													class="ico-close"></i></button>
-											<button type="button"
-												class="btn btn-outline-cancel btn-listgroup-del my-1">당직<i
-													class="ico-close"></i></button>
+										<div class="col-auto">
+											<select>
+												<option value="01">2024년</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+										<div class="col-auto">
+											<select>
+												<option value="01">2024년</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+										<div class="col-auto col-dash">~</div>
+										<div class="col-auto">
+											<select>
+												<option value="01">2024년</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+										<div class="col-auto">
+											<select>
+												<option value="01">2024년</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
 										</div>
 									</div>
 								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="table-head mb-2">
+						<div class="table-title">당직인원</div>
+					</div><!-- // table-head -->
+		
+					<table class="table table-basic table-align-left">
+						<colgroup>
+							<col style="width:20%">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>홍길동 직책</td>
+								<td>1-1팀</td>
+							</tr>
+							<tr>
+								<td>홍길동 직책</td>
+								<td>1-1팀</td>
 							</tr>
 						</tbody>
 					</table>

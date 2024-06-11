@@ -3,15 +3,15 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>멘토포털</title>
+	<title>강사포털</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no" />
-	<meta property="og:title" content="멘토포털">
-	<meta property="og:description" content="멘토포털">
-	<meta name="description" content="멘토포털">
+	<meta property="og:title" content="강사포털">
+	<meta property="og:description" content="강사포털">
+	<meta name="description" content="강사포털">
 	<script src="./assets/js/layout.js"></script>
 	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.instructor.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="overflow-y: auto;">
 	<div class="modal-wrap application-wrap" tabindex="-1" role="dialog" aria-hidden="false">
@@ -301,13 +301,13 @@
 		
 	</div><!-- // modal -->
 		
-	<!-- 수강료 결제 내역 -->
+	<!-- 원서 추가 등록 -->
 		
 	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
 		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">수강료 결제 내역</h5>
+					<h5 class="modal-title">원서 추가 등록</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
 						id="close-modal"></button>
 				</div><!-- // modal-header -->
@@ -315,67 +315,55 @@
 				<div class="modal-body">
 					<div class="mbody-forms">
 						<div class="table-head">
-							<div class="flex-grow-1 row gx-8px">
-								<div class="col-auto mt-0">
-									<div class="table-title">
-										<ul class="list-array fs-14px">
-											<li>원서상태 (완납 : 200,000원)</li>
-										</ul>
+							<div class="table-title">목록</div>
+							<div class="table-btn">
+								<div class="row row-x6">
+									<div class="col-140px">
+										<input type="text" class="form-control" placeholder="이름">
+									</div>
+									<div class="col-140px">
+										<input type="text" class="form-control" placeholder="연락처">
+									</div>
+									<div class="col-140px">
+										<input type="text" class="form-control" placeholder="수강생번호">
+									</div>
+									<div class="col-auto">
+										<button type="button" class="btn btn-point-deep">검색</button>
 									</div>
 								</div>
 							</div>
 						</div><!-- // table-head -->
 		
 						<table class="table table-basic">
-							<colgroup>
-								<col style="width:10%">
-								<col style="width:auto">
-								<col style="width:15%">
-								<col style="width:10%">
-								<col style="width:15%">
-								<col style="width:18%">
-								<col style="width:18%">
-							</colgroup>
 							<thead>
 								<tr>
-									<th>구분</th>
-									<th>결제방식</th>
-									<th>결제금액</th>
-									<th>결제상태</th>
+									<th>번호</th>
+									<th>수강생번호</th>
+									<th>이름</th>
 									<th>연락처</th>
-									<th>요청일</th>
-									<th>처리일</th>
+									<th>생년월일</th>
+									<th>지점</th>
+									<th>상태</th>
+									<th>담당자</th>
+									<th>등록일시</th>
+									<th>관리</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>수강료</td>
-									<td>온라인</td>
-									<td>50,000</td>
-									<td>완료</td>
+									<td>1</td>
+									<td>151511</td>
+									<td>홍길동</td>
 									<td>010-1234-5678</td>
-									<td>2024-01-10 13:11:44</td>
-									<td><a href="#" class="btn btn-outline-active btn-sm">결제취소</a></td>
-								</tr>
-								<tr>
-									<td>수강료</td>
-									<td>온라인</td>
-									<td>50,000</td>
-									<td>완료</td>
-									<td>010-1234-5678</td>
-									<td>2024-01-10 13:11:44</td>
-									<td>2024-01-10 13:11:44</td>
+									<td>19881212</td>
+									<td>컴퓨터강남</td>
+									<td>수강</td>
+									<td>나담당</td>
+									<td>2022-11-12 14:43:22</td>
+									<td><a href="#" class="btn btn-outline-active btn-sm">원서추가</a></td>
 								</tr>
 							</tbody>
 						</table>
-						<div class="row">
-							<div class="col-12">
-								<dl class="row">
-									<dt>메모</dt>
-									<dd><textarea class="form-control" rows="3">메모메모메모</textarea></dd>
-								</dl>
-							</div>
-						</div>
 					</div><!-- // mbody-forms -->
 		
 					<div class="form-btn float-wrap">
@@ -383,7 +371,7 @@
 							<button type="submit" class="btn btn-outline-active">닫기</button>
 						</div>
 						<div class="float-right">
-							<button type="submit" class="btn btn-point">History</button>
+							<button type="submit" class="btn btn-point">등록</button>
 						</div>
 					</div><!-- // form-btn -->
 		
@@ -391,7 +379,7 @@
 		
 			</div>
 		</div>
-	</div><!-- // modal : 수강료 결제 내역 -->
+	</div><!-- // modal : 원서 추가 등록 -->
 		
 	<button type="button" class="btn" id="scroll-top"></button>
 	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>

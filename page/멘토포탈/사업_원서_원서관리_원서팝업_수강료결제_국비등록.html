@@ -3,15 +3,15 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>멘토포털</title>
+	<title>강사포털</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no" />
-	<meta property="og:title" content="멘토포털">
-	<meta property="og:description" content="멘토포털">
-	<meta name="description" content="멘토포털">
+	<meta property="og:title" content="강사포털">
+	<meta property="og:description" content="강사포털">
+	<meta name="description" content="강사포털">
 	<script src="./assets/js/layout.js"></script>
 	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.instructor.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="overflow-y: auto;">
 	<div class="modal-wrap application-wrap" tabindex="-1" role="dialog" aria-hidden="false">
@@ -324,96 +324,50 @@
 							<div class="flex-shrink-0 row">
 								<div class="col-auto mt-0">
 									<ul class="nav nav-pills" role="tablist">
-										<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">국비 등록</a></li>
+										<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab">국비
+												등록</a></li>
 										<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">온라인 강의</a></li>
-										<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab">수강료</a>
-										</li>
+										<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab">수강료</a></li>
 									</ul>
 								</div>
 							</div>
 						</div><!-- // table-head -->
 		
-						<table class="table table-basic table-align-left mt-1"><!-- 2024-03-10 수정 -->
-		
+						<table class="table table-basic table-align-left mt-1">
 							<colgroup>
-								<col style="width:30%">
+								<col style="width:18%">
 								<col style="width:auto">
-								<col style="width:120px">
 							</colgroup>
 							<tbody>
 								<tr>
-									<td>
-										<dl class="row">
-											<dt>결제 금액</dt>
-											<dd>1,000,000 원</dd>
-										</dl>
-										<dl class="row">
-											<dt>수납액</dt>
-											<dd>0 원</dd>
-										</dl>
-										<dl class="row">
-											<dt>잔액</dt>
-											<dd>1,000,000 원</dd>
-										</dl>
+									<td class="text-center"><!-- 2024-02-26 수정 -->
+		
+										파일 등록
+										<p>
+											<a href="#" class="btn btn-outline-light btn-sm btn-regi mt-2"><small
+													>관리</small></a>
+										</p>
 									</td>
 									<td>
-										<ul class="nav modal-tabmenu" id="modalTabMenu" role="tablist">
-											<li><a class="tab-btn active" href="#modalTabs1" data-bs-toggle="tab"
-													role="tab" aria-controls="modalTabs1" aria-selected="true">카드 결제</a>
-											</li>
-											<li><a class="tab-btn" href="#modalTabs2" data-bs-toggle="tab" role="tab"
-													aria-controls="modalTabs2" aria-selected="false">현금 결제</a></li>
-											<li><a class="tab-btn" href="#modalTabs3" data-bs-toggle="tab" role="tab"
-													aria-controls="modalTabs3" aria-selected="false">온라인 결제</a></li>
-										</ul>
-										<div class="modal-tabpanel" id="modalTabPanel">
-											<div class="tab-pane active" id="modalTabs1" role="tabpanel">
-												<div class="row row-x6">
-													<div class="col-120px">
-														<select>
-															<option value="01">일시불</option>
-															<option value="02">option 2</option>
-															<option value="03">option 3</option>
-														</select>
-													</div>
-													<div class="col-180px"><input type="text" class="form-control"
-															placeholder="금액 입력"></div>
-													<div class="col-auto"><button type="button"
-															class="btn btn-outline-primary">전액</button></div>
+										<div class="row row-x4"><!-- 2024-03-10 수정 -->
+		
+											<div class="col-10">
+												<div class="simplebar-scrollable-y" data-simplebar
+													data-simplebar-auto-hide="false" style="height: 103px !important;">
+													<ul>
+														<li><a href="#" class="btn-delete">삭제</a>포스터 기획 사항.zip</li>
+														<li><a href="#" class="btn-delete">삭제</a>사진이미지.png</li>
+														<li><a href="#" class="btn-delete">삭제</a>포스터 기획 사항.zip</li>
+														<li><a href="#" class="btn-delete">삭제</a>사진이미지.png</li>
+														<li><a href="#" class="btn-delete">삭제</a>포스터 기획 사항.zip</li>
+														<li><a href="#" class="btn-delete">삭제</a>사진이미지.png</li>
+													</ul>
 												</div>
 											</div>
-											<div class="tab-pane" id="modalTabs2" role="tabpanel">
-												<div class="row row-x6">
-													<div class="col-120px">
-														<select>
-															<option value="01">개인</option>
-															<option value="02">사업자</option>
-														</select>
-													</div>
-													<div class="col-180px">
-														<input type="text" class="form-control" placeholder="휴대폰 번호 ">
-														<input type="text" class="form-control d-none"
-															placeholder="사업자 번호">
-													</div>
-												</div>
+											<div class="col-2 d-flex align-items-end justify-content-center mb-2">
+												<button type="submit" class="btn btn-point-deep">수강등록</button>
 											</div>
-											<div class="tab-pane" id="modalTabs3" role="tabpanel">
-												<div class="row row-x6">
-													<div class="col-140px"><input type="text" class="form-control"
-															value="010-1234-5678"></div>
-													<div class="col-180px"><input type="text" class="form-control"
-															placeholder="금액 입력"></div>
-												</div>
-											</div>
-										</div>
-									</td>
-									<td>
-										<div class="d-flex h-100">
-											<div class="col-12 d-flex align-items-end justify-content-center mt-0">
-												<a href="#" class="btn btn-point-deep">결제요청</a>
-												<a href="#" class="btn btn-point-deep d-none">결제취소</a>
-											</div>
-										</div>
+											</dd>
 									</td>
 								</tr>
 							</tbody>
@@ -424,7 +378,6 @@
 									<div class="table-title">
 										<ul class="list-array fs-14px">
 											<li>원서상태 (COD)</li>
-											<li>원서번호 : 11111-123456789)</li>
 										</ul>
 									</div>
 								</div>

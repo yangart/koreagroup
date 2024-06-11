@@ -3,15 +3,15 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>멘토포털</title>
+	<title>강사포털</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no" />
-	<meta property="og:title" content="멘토포털">
-	<meta property="og:description" content="멘토포털">
-	<meta name="description" content="멘토포털">
+	<meta property="og:title" content="강사포털">
+	<meta property="og:description" content="강사포털">
+	<meta name="description" content="강사포털">
 	<script src="./assets/js/layout.js"></script>
 	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.instructor.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="layout-wrapper">
@@ -46,24 +46,19 @@
 						<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>사업정보</span></a>
+						<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>강의관리</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>MY 학생</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico4"></i> <span>인사정보</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>교육이수</span></a>
+						<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>통계</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>게시판</span></a>
+					</li>
 				</ul><!-- // navbar-nav -->
-		
-			</div>
-		</div><!-- // scrollbar -->
+			</div><!-- // scrollbar -->
 		
 		<div class="app-menu-info type-foot">
 			<div class="text">로그인 2023-11-10 21:34</div>
@@ -428,147 +423,129 @@
 			<!-- card -->
 		
 			<div class="card">
-				<div class="row">
-					<div class="col-10 row-cols">
-						<div class="col-auto d-flex align-items-center">
-							<label for="" class="form-label mb-0">등록일</label>
-						</div>
-						<div class="col-xxxl-13 col-xxl-3 col-4 row-cols-2">
-							<div class="input-group-flatpickr">
-								<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker"
-									placeholder="" value="2022.08.10">
+				<div class="card-header card-search">
+					<h5 class="card-title">배정턴 관리</h5>
+					<div class="row">
+						<div class="col-10 row-cols">
+							<div class="col-auto d-flex align-items-center">
+								<label for="" class="form-label mb-0">등록일</label>
 							</div>
-							<div class="input-group-flatpickr">
-								<input type="text" id="endDate" class="form-control flatpickr-input form-datepicker"
-									placeholder="" value="2022.08.10">
+							<div class="col-xxxl-13 col-xxl-3 col-4 row-cols-2">
+								<div class="input-group-flatpickr">
+									<input type="text" id="startDate"
+										class="form-control flatpickr-input form-datepicker" placeholder=""
+										value="2022.08.10">
+								</div>
+								<div class="input-group-flatpickr">
+									<input type="text" id="endDate" class="form-control flatpickr-input form-datepicker"
+										placeholder="" value="2022.08.10">
+								</div>
+							</div>
+							<div class="col-auto">
+								<a href="#" class="btn btn-point">오늘</a>
+							</div>
+							<div class="col-xxxl-13 col-xxl-3 col-4">
+								<select>
+									<option value="01">컴퓨터</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-xxxl-13 col-xxl-3 col-4">
+								<select>
+									<option value="01">강남</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-auto">
+								<select>
+									<option value="01">사용여부</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-auto">
+								<input type="text" class="form-control" placeholder="배정턴명을 입력하세요">
 							</div>
 						</div>
-						<div class="col-auto">
-							<a href="#" class="btn btn-point">오늘</a>
+						<div class="col-2 col-2 d-flex">
+							<div class="col-6 pe-1"><button type="button" class="btn btn-point search-btn">초기화</button>
+							</div>
+							<div class="col-6"><button type="button" class="btn btn-point-deep search-btn">검색</button>
+							</div>
 						</div>
-						<div class="col-xxxl-13 col-xxl-3 col-4">
-							<select>
-								<option value="01">컴퓨터</option>
-								<option value="02">option 2</option>
-								<option value="03">option 3</option>
+					</div><!-- // row -->
+		
+				</div><!-- 검색영역 -->
+		
+				<!-- card-body -->
+		
+				<div id="innerscroll" class="card-body inner-scroll">
+					<div class="table-responsive">
+						<table class="table table-basic">
+							<thead>
+								<tr>
+									<th>번호</th>
+									<th>지점</th>
+									<th>배정턴</th>
+									<th>설명</th>
+									<th>사용여부</th>
+									<th>등록일</th>
+									<th>등록자</th>
+									<th>관리</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>13</td>
+									<td class="text-start">컴퓨터강남</td>
+									<td class="text-start">공식</td>
+									<td class="text-start">강남지점 전용 배정턴</td>
+									<td>사용</td>
+									<td>2022-01-29</td>
+									<td>홍길동1 직책 (1-1팀)</td>
+									<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- // table-responsive -->
+		
+				</div><!-- // card-body -->
+		
+			</div><!-- // card -->
+		
+		</div><!-- // page-content -->
+		
+		<!-- page-footer -->
+			<div class="page-footer">
+				<div class="page-footer-row">
+					<div class="page-footer-btn-left row gx-8px flex-middle">
+						<div class="col-auto">
+							<select id="">
+								<option value="01">20</option>
+								<option value="02">30</option>
+								<option value="03">40</option>
 							</select>
 						</div>
-						<div class="col-xxxl-13 col-xxl-3 col-4">
-							<select>
-								<option value="01">강남</option>
-								<option value="02">option 2</option>
-								<option value="03">option 3</option>
-							</select>
-						</div>
-						<div class="col-auto">
-							<select>
-								<option value="01">사용여부</option>
-								<option value="02">option 2</option>
-								<option value="03">option 3</option>
-							</select>
-						</div>
-						<div class="col-auto">
-							<input type="text" class="form-control" placeholder="배정턴명을 입력하세요">
-						</div>
+						<div class="col-auto">검색결과 총 <b>23</b>건</div>
 					</div>
-					<div class="col-2 col-2 d-flex">
-						<div class="col-6 pe-1"><button type="button" class="btn btn-point search-btn">초기화</button>
-						</div>
-						<div class="col-6"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
-					</div>
-				</div><!-- // row -->
-		
-			</div><!-- 검색영역 -->
-		
-			<!-- card-body -->
-		
-			<div id="innerscroll" class="card-body inner-scroll">
-				<div class="table-responsive">
-					<table class="table table-basic">
-						<thead>
-							<tr>
-								<th>번호</th>
-								<th>지점</th>
-								<th>배정턴</th>
-								<th>설명</th>
-								<th>사용여부</th>
-								<th>등록일</th>
-								<th>등록자</th>
-								<th>관리</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>13</td>
-								<td class="text-start">컴퓨터강남</td>
-								<td class="text-start">공식</td>
-								<td class="text-start">강남지점 전용 배정턴</td>
-								<td>사용</td>
-								<td>2022-01-29</td>
-								<td>홍길동1 직책 (1-1팀)</td>
-								<td><a href="#" class="btn btn-outline-active btn-sm">관리</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</div><!-- // table-responsive -->
-		
-			</div><!-- // card-body -->
-		
-		</div><!-- // card -->
-		
-	</div><!-- // page-content -->
-		
-	<!-- page-footer -->
-		
-	<div class="page-footer">
-		<div class="page-footer-row">
-			<div class="page-footer-btn-left">
-				<div class="flex-grow-1 row align-items-center">
-					<div class="col-auto">
-						<select>
-							<option value="01">20개</option>
-							<option value="02">option 2</option>
-							<option value="03">option 3</option>
-						</select>
-					</div>
-					<div class="col-auto ms-2">
-						<h5 class="table-result">검색결과 총 <span class="text-point">165</span>건</h5>
+					<ul class="pagination pagination-separated">
+						<li class="page-item disabled"><a href="#" class="page-link">←</a></li>
+						<li class="page-item"><a href="#" class="page-link">1</a></li>
+						<li class="page-item active"><a href="#" class="page-link">2</a></li>
+						<li class="page-item"><a href="#" class="page-link">3</a></li>
+						<li class="page-item"><a href="#" class="page-link">4</a></li>
+						<li class="page-item"><a href="#" class="page-link">5</a></li>
+						<li class="page-item"><a href="#" class="page-link">→</a></li>
+					</ul>
+					<div class="page-footer-btn-right">
+						<a href="#" class="btn btn-outline-first">엑셀</a>
 					</div>
 				</div>
-			</div>
-			<ul class="pagination pagination-separated">
-				<li class="page-item disabled">
-					<a href="#" class="page-link">←</a>
-				</li>
-				<li class="page-item">
-					<a href="#" class="page-link">1</a>
-				</li>
-				<li class="page-item active">
-					<a href="#" class="page-link">2</a>
-				</li>
-				<li class="page-item">
-					<a href="#" class="page-link">3</a>
-				</li>
-				<li class="page-item">
-					<a href="#" class="page-link">4</a>
-				</li>
-				<li class="page-item">
-					<a href="#" class="page-link">5</a>
-				</li>
-				<li class="page-item">
-					<a href="#" class="page-link">→</a>
-				</li>
-			</ul>
-			<div class="page-footer-btn-right">
-				<div class="flex-grow-1 row align-items-center">
-					<div class="col-auto"><a href="#" class="btn btn-point">등록</a></div>
-					<div class="col-auto"><a href="#" class="btn btn-point-deep">엑셀</a></div>
-				</div>
-			</div>
-		</div>
-	</div><!-- // page-footer -->
+			</div><!-- // page-footer -->
 		
-	</div><!-- // main-content -->
+		</div><!-- // main-content -->
 		
 	</div><!-- // layout-wrapper -->
 		

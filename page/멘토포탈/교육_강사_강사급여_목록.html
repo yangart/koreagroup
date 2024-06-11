@@ -3,15 +3,15 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>멘토포털</title>
+	<title>강사포털</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no" />
-	<meta property="og:title" content="멘토포털">
-	<meta property="og:description" content="멘토포털">
-	<meta name="description" content="멘토포털">
+	<meta property="og:title" content="강사포털">
+	<meta property="og:description" content="강사포털">
+	<meta name="description" content="강사포털">
 	<script src="./assets/js/layout.js"></script>
 	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.instructor.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="layout-wrapper">
@@ -22,7 +22,7 @@
 				</button>
 			</div>
 		</div><!-- // page-topbar -->
-		
+
 		<div class="app-menu navbar-menu">
 			<div class="navbar-brand-box">
 				<a href="#" class="logo"><img src="./assets/img/app-menu-logo@2x.png" alt=""></a>
@@ -38,30 +38,27 @@
 				<div class="name">홍길동 대리(idididid)</div>
 				<div class="link"><a href="#">마이페이지</a></div>
 			</div>
+
 			<div id="scrollbar">
-				
-					<div id="two-column-menu"></div>
-					<ul class="navbar-nav" id="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>사업정보</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>MY 학생</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico4"></i> <span>인사정보</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>교육이수</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a></li>
-					</ul><!-- // navbar-nav -->
-		
-				</div><!-- // scrollbar -->
+				<div id="two-column-menu"></div>
+				<ul class="navbar-nav" id="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico1"></i> <span>대쉬보드</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico5"></i> <span>강의관리</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico3"></i> <span>통계</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico6"></i> <span>커뮤니티</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link menu-link" href="#"><i class="ico2"></i> <span>게시판</span></a>
+					</li>
+				</ul><!-- // navbar-nav -->
+			</div><!-- // scrollbar -->
 		
 			<div class="app-menu-info type-foot">
 				<div class="text">로그인 2023-11-10 21:34</div>
@@ -92,7 +89,7 @@
 									<div class="tab-pane active" id="alramTabs1" role="tabpanel">
 										<div class="row row-wrap g-0">
 											<div class="col col-auto">
-												<select>
+												<select class="form-select" data-choices data-choices-search-false>
 													<option value="01">시작 개강일</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -100,7 +97,7 @@
 											</div>
 											<div class="col col-dash">~</div>
 											<div class="col col-auto">
-												<select>
+												<select class="form-select" data-choices data-choices-search-false>
 													<option value="01">마지막 개강일</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -110,7 +107,7 @@
 		
 										<div class="row row-wrap g-0">
 											<div class="col col-auto">
-												<select>
+												<select class="form-select" data-choices data-choices-search-false>
 													<option value="01">시작 시간</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -118,7 +115,7 @@
 											</div>
 											<div class="col col-dash">~</div>
 											<div class="col col-auto">
-												<select>
+												<select class="form-select" data-choices data-choices-search-false>
 													<option value="01">마지막 시간</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -128,7 +125,7 @@
 		
 										<div class="row g-0">
 											<div class="col">
-												<select>
+												<select class="form-select" data-choices data-choices-search-false>
 													<option value="01">학과 선택</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -169,7 +166,8 @@
 														<div class="list-item-title">개강일 : 10.10 / 종강일 : 10.19</div>
 														<div class="list-item-info">
 															<div class="cell accent">09:30 <br><span
-																	class="day">월~금</span></div>
+																	class="day">월~금</span>
+															</div>
 															<div class="cell data">
 																<span class="type">제작자</span>
 																<span>포토샵</span>
@@ -179,7 +177,8 @@
 														</div>
 														<div class="list-item-info">
 															<div class="cell accent">09:30 <br><span
-																	class="day">월~금</span></div>
+																	class="day">월~금</span>
+															</div>
 															<div class="cell data">
 																<span class="type">제작자</span>
 																<span>포토샵</span>
@@ -192,7 +191,8 @@
 														<div class="list-item-title">개강일 : 10.10 / 종강일 : 10.19</div>
 														<div class="list-item-info">
 															<div class="cell accent">09:30 <br><span
-																	class="day">월~금</span></div>
+																	class="day">월~금</span>
+															</div>
 															<div class="cell data">
 																<span class="type">제작자</span>
 																<span>포토샵</span>
@@ -202,7 +202,8 @@
 														</div>
 														<div class="list-item-info">
 															<div class="cell accent">09:30 <br><span
-																	class="day">월~금</span></div>
+																	class="day">월~금</span>
+															</div>
 															<div class="cell data">
 																<span class="type">제작자</span>
 																<span>포토샵</span>
@@ -220,7 +221,8 @@
 														<div class="list-item-title">개강일 : 10.10 / 종강일 : 10.19</div>
 														<div class="list-item-info">
 															<div class="cell accent">09:30 <br><span
-																	class="day">월~금</span></div>
+																	class="day">월~금</span>
+															</div>
 															<div class="cell data">
 																<span class="type">제작자</span>
 																<span>포토샵</span>
@@ -230,7 +232,8 @@
 														</div>
 														<div class="list-item-info">
 															<div class="cell accent">09:30 <br><span
-																	class="day">월~금</span></div>
+																	class="day">월~금</span>
+															</div>
 															<div class="cell data">
 																<span class="type">제작자</span>
 																<span>포토샵</span>
@@ -243,7 +246,8 @@
 														<div class="list-item-title">개강일 : 10.10 / 종강일 : 10.19</div>
 														<div class="list-item-info">
 															<div class="cell accent">09:30 <br><span
-																	class="day">월~금</span></div>
+																	class="day">월~금</span>
+															</div>
 															<div class="cell data">
 																<span class="type">제작자</span>
 																<span>포토샵</span>
@@ -253,7 +257,8 @@
 														</div>
 														<div class="list-item-info">
 															<div class="cell accent">09:30 <br><span
-																	class="day">월~금</span></div>
+																	class="day">월~금</span>
+															</div>
 															<div class="cell data">
 																<span class="type">제작자</span>
 																<span>포토샵</span>
@@ -275,7 +280,7 @@
 										</div>
 										<div class="schedule-scroll simplebar-scrollable-y" data-simplebar>
 											<ul class="scroll-list">
-												<li><a href="#"><span class="time">11:30</span><span  cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
+												<li><a href="#"><span class="time">11:30</span><span class="cate cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
 												<li><a href="#"><span class="time">12:00</span><span  cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
 												<li><a href="#"><span class="time">12:30</span><span  cate1">상담</span><em class="text">홍길동(1234)</em></a></li>
 												<li><a href="#"><span class="time">13:00</span><span  cate2">면담</span><em class="text">메모메모메모메모메모메모메모메모메모메모</em></a></li>
@@ -384,384 +389,114 @@
 			</div><!-- // page-header -->
 		
 			<div class="page-content">
-				<!-- // page-header -->
-		
-				<div class="page-content-title">- 배정관리</div>
-					<!-- card -->
-		
-					<div class="card" style="height: calc(100vh - 44px - 24px);">
-						<!-- card-body -->
-		
-						<div id="innerscroll" class="card-body inner-scroll" style="height: 883px;">
-							<div class="row">
-								<div class="col-4 pe-5">
-									<div class="table-head mb-2">
-										<div class="table-title">2024-01-30 (화</div>
-										<div class="table-btn">
-											<a href="#" class="btn btn-danger btn-fit d-flex align-items-center"><i
-													class="ico ico-stop"></i>배정 중지</a>
-										</div>
-									</div><!-- // table-head -->
-		
-									<table class="table table-basic">
-										<colgroup>
-											<col style="width:20%">
-											<col style="width:auto">
-										</colgroup>
-										<tbody>
-											<tr>
-												<th>배정 상태</th>
-												<td class="cell-left">
-													<ul class="list-array">
-														<li><b class="color-primary">진행</b></li>
-														<li>(10:00 , 홍길동2 직책)</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<th>근무 시간</th>
-												<td class="cell-left">09:30~22:00</td>
-											</tr>
-											<tr>
-												<th>당직 시간</th>
-												<td class="cell-left">
-													<ul class="list-array">
-														<li>
-															<span class="list-array-title">1차</span>
-															<span>12:00~13:00</span>
-														</li>
-														<li>
-															<span class="list-array-title">2차</span>
-															<span>19:00~22:00</span>
-														</li>
-													</ul>
-												</td>
-											</tr>
-										</tbody>
-									</table><!-- // 당일 배정 정보 -->
-		
-									<table class="table table-basic mt-4">
-										<colgroup>
-											<col style="width:auto">
-										</colgroup>
-										<thead>
-											<tr>
-												<th class="cell-left">선배정 (3명)</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="cell-left">[공식] 홍길동1 (하나두울세엣네엑다섯) - (1/3)</td>
-											</tr>
-											<tr>
-												<td class="cell-left">[공식] 홍길동1 (재배정) - (1/1)</td>
-											</tr>
-											<tr>
-												<td class="cell-left">[공식] 홍길동1 (재배정) - (0/1)</td>
-											</tr>
-										</tbody>
-									</table><!-- // 선배정 -->
-		
-									<table class="table table-basic mt-4">
-										<colgroup>
-											<col style="width:auto">
-										</colgroup>
-										<thead>
-											<tr>
-												<th class="cell-left">일배정 제외 (2명)</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="cell-left">[전체] 홍길동1 (메모) - (2일) ▶정상배정 (17:00)</td>
-											</tr>
-											<tr>
-												<td class="cell-left">[공식] 홍길동1 (메모) - (1일)</td>
-											</tr>
-										</tbody>
-									</table><!-- // 일배정 제외 -->
-		
-									<table class="table table-basic mt-4">
-										<colgroup>
-											<col style="width:auto">
-										</colgroup>
-										<thead>
-											<tr>
-												<th class="cell-left">턴배정 제외 (1명)</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="cell-left">공식] 홍길동1 (재배정) - (1/3)</td>
-											</tr>
-										</tbody>
-									</table><!-- // 턴배정 제외 -->
-		
-								</div>
-								<div class="col-8">
-									<div class="table-head mb-2">
-										<div class="flex-grow-1 row gx-6px">
-											<div class="col-120px col-sm">
-												<select>
-													<option value="01">컴퓨터</option>
-													<option value="02">option 2</option>
-													<option value="03">option 3</option>
-												</select>
-											</div>
-											<div class="col-120px col-sm">
-												<select>
-													<option value="01">강남</option>
-													<option value="02">option 2</option>
-													<option value="03">option 3</option>
-												</select>
-											</div>
-											<div class="col-auto">
-												<a href="#" class="btn btn-point-deep">배정턴 설정</a>
-											</div>
-											<div class="col-auto">
-												<a href="#" class="btn btn-point-deep">예외 설정</a>
-											</div>
-											<div class="col-auto">
-												<a href="#" class="btn btn-point-deep">당직 설정</a>
-											</div>
-										</div>
-										<div class="flex-shrink-0 row gx-6px">
-											<div class="col-auto">
-												<a href="#" class="btn btn-point-deep">배정턴 현황</a>
-											</div>
-											<div class="col-auto">
-												<a href="#" class="btn btn-point-deep">예외 현황</a>
-											</div>
-										</div>
-									</div><!-- // table-head -->
-		
-									<div class="assign-border">
-										<div class="row g-0 filter-group">
-											<div class="col col-3">
-												<div class="filter-head justify-content-between">
-													<h4 class="card-title">공식 (12월)</h4>
-													<a href="#" class="btn btn-sm btn-outline-active">초기화</a>
-												</div>
-												<div class="filter-body simplebar-scrollable-y" data-simplebar>
-													<ul class="filter-list">
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item active">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item color-primary">(선)[05] 홍길동1
-																(1-1팀) </a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-													</ul>
-												</div>
-											</div><!-- // col -->
-		
-											<div class="col col-3">
-												<div class="filter-head">
-													<h4 class="card-title">대표턴</h4>
-												</div>
-												<div class="filter-body simplebar-scrollable-y" data-simplebar>
-													<ul class="filter-list">
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">①[강남대표06] 이가영(12)</a>
-														</li>
-													</ul>
-												</div>
-											</div><!-- // col -->
-		
-											<div class="col col-3">
-												<div class="filter-head">
-													<h4 class="card-title">내사턴</h4>
-												</div>
-												<div class="filter-body simplebar-scrollable-y" data-simplebar>
-													<ul class="filter-list">
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item active">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item active">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item color-danger">(2일)[06] 홍길동1
-																(1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-													</ul>
-												</div>
-											</div><!-- // col -->
-		
-											<div class="col col-3">
-												<div class="filter-head">
-													<h4 class="card-title">X턴</h4>
-												</div>
-												<div class="filter-body simplebar-scrollable-y" data-simplebar>
-													<ul class="filter-list">
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item color-danger">(1턴)[06] 홍길동1
-																(1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item active">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item color-disabled">(퇴사) 홍길동1
-																(1-1팀)</a>
-														</li>
-													</ul>
-												</div>
-											</div><!-- // col -->
-		
-											<div class="col col-3">
-												<div class="filter-head">
-													<h4 class="card-title">Y턴</h4>
-												</div>
-												<div class="filter-body simplebar-scrollable-y" data-simplebar>
-													<ul class="filter-list">
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item color-danger">[01] 홍길동1
-																(1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item active">[01] 홍길동1 (1-1팀)
-																<span class="color-primary">(현재)</span></a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-														<li>
-															<a href="#" class="filter-item">[01] 홍길동1 (1-1팀)</a>
-														</li>
-													</ul>
-												</div>
-											</div><!-- // col -->
-		
-										</div>
-									</div><!-- // 배정턴 -->
-		
-								</div>
-							</div>
-						</div><!-- // card-body -->
-		
-					</div><!-- // card -->
-		
+				<div class="page-content-title">- 강의 관리</div>
 				
+				<!-- card -->
+				<div class="card">
+					<div class="card-head">
+						<ul class="nav card-nav" id="mentorTabs" role="tablist">
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강의정보</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">일지정보</a></li>
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab">강사급여</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">계약현황</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">강사평가</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">커리큘럼 관리</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab">만족도 조사</a></li>
+						</ul><!-- // card-nav -->	
+					</div>
+					
+					<!-- card-body -->
+					<div id="innerscroll" class="card-body inner-scroll"><div class="row g-10px mb-4">
+						<div class="col-3">
+						  <div class="card h-auto">
+							<div class="card-body d-flex flex-row justify-content-between align-items-center">
+							  <h5 class="card-title fs-14px mb-0">평균시급</h5>
+							  <p class="card-text fs-14px">20,000</p>
+							</div>
+						  </div>
+						</div>
+						<div class="col-3">
+						  <div class="card h-auto">
+							<div class="card-body d-flex flex-row justify-content-between align-items-center">
+							  <h5 class="card-title fs-14px mb-0">강의시간</h5>
+							  <p class="card-text fs-14px">9,999</p>
+							</div>
+						  </div>
+						</div>
+						<div class="col-3">
+						  <div class="card h-auto">
+							<div class="card-body d-flex flex-row justify-content-between align-items-center">
+							  <h5 class="card-title fs-14px mb-0">추가 강의시간</h5>
+							  <p class="card-text fs-14px">9,999</p>
+							</div>
+						  </div>
+						</div>
+						<div class="col-3">
+						  <div class="card h-auto">
+							<div class="card-body d-flex flex-row justify-content-between align-items-center">
+							  <h5 class="card-title fs-14px mb-0">급여</h5>
+							  <p class="card-text fs-14px">99,999,000,000</p>
+							</div>
+						  </div>
+						</div>
+					  </div><!-- // 강사급여 요약 -->
+						<div class="fnc-area mb-2">
+							<div class="l-area">
+								<strong class="fs-14px px-2">총 <span class="text-point">165</span>건</strong>
+							</div>
+							<div class="r-area">
+								<a href="#pageModal1" data-bs-toggle="modal" class="btn btn-first">등록</a>
+							</div>
+						</div>
+
+						<div class="table-responsive">
+							<table class="table table-card">
+								<thead class="table-light">
+									<tr>
+										<th>번호</th>
+										<th>소속</th>
+										<th>강사명</th>
+										<th>연락처</th>
+										<th>고용형태</th>
+										<th>평균시급</th>
+										<th>강의시간</th>
+										<th>추가 강의시간</th>
+										<th>급여</th>
+										<th>지급일</th>
+										<th>상태</th>
+										<th>지급상태</th>
+										<th>관리</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>13</td>
+										<td class="text-start">컴퓨터강남 > 웹학과</td>
+										<td>김강사1 강사</td>
+										<td>010-1234-5678</td>
+										<td>정규직</td>
+										<td>10,000%</td>
+										<td>10</td>
+										<td>10</td>
+										<td>15,000,000</td>
+										<td>2023-11-15</td>
+										<td>재직</td>
+										<td>지급완료</td>
+										<td><a href="#" class="btn btn-outline-light btn-sm btn-regi"><small class="d-lg-none">등록</small></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- // table-responsive -->
+					</div><!-- // card-body -->
+				</div><!-- // card -->
 			</div><!-- // page-content -->
-		
+			
 			<!-- page-footer -->
 			<div class="page-footer">
 				<div class="page-footer-row">
 					<div class="page-footer-btn-left row gx-8px flex-middle">
 						<div class="col-auto">
-							<select id="">
+							<select id="" class="form-select" data-choices data-choices-search-false>
 								<option value="01">20</option>
 								<option value="02">30</option>
 								<option value="03">40</option>
@@ -779,8 +514,7 @@
 						<li class="page-item"><a href="#" class="page-link">→</a></li>
 					</ul>
 					<div class="page-footer-btn-right">
-						<a href="#" class="btn btn-outline-first">다운로드</a>
-						<a href="#pageModal1" data-bs-toggle="modal" class="btn btn-first">등록</a>
+						<a href="#" class="btn btn-outline-first">엑셀</a>
 					</div>
 				</div>
 			</div><!-- // page-footer -->
@@ -788,96 +522,152 @@
 		</div><!-- // main-content -->
 		
 	</div><!-- // layout-wrapper -->
-		
-	<div class="modal fade" id="pageModal12" tabindex="-1" role="dialog" aria-hidden="false">
-		<div class="modal-dialog modal-xl modal-dialog-centered">
+
+	<!-- 강사 급여 내역 -->
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
+
 				<div class="modal-header">
-					<h5 class="modal-title">예외 설정</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-						id="close-modal"></button>
+					<h5 class="modal-title">강사 급여 내역</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
 				</div><!-- // modal-header -->
-		
+
 				<div class="modal-body">
-					<div class="table-head mt-0 mb-2">
-						<div class="table-title">
-							<select>
-								<option value="01">2024년 01월 (2024-01-10 ~ 2024-02-09)</option>
-								<option value="02">option 2</option>
-								<option value="03">option 3</option>
-							</select>
+	
+					<div class="mbody-forms">					
+
+						<div class="card-member-head">
+							<h6>이강사2 학과장</h6>
+							<span class="badge bg-danger">재직중</span>
+							<span class="badge bg-danger">정규직</span>
 						</div>
-						<div class="table-btn">
-							<a href="#" class="btn btn-point-deep search-btn">추가</a>
-						</div>
-					</div><!-- // table-head -->
-		
-					<table class="table table-basic"><!-- 2024-3-09 수정 -->
-		
-						<thead>
-							<tr>
-								<th>No</th>
-								<th>유형</th>
-								<th>제외값</th>
-								<th>배정턴</th>
-								<th>담당자</th>
-								<th>메모</th>
-								<th>등록자</th>
-								<th>등록일시</th>
-								<th>관리</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td></td>
-								<td class="text-start"><input type="text" class="form-control" id="" value=""></td>
-								<td><input type="text" class="form-control" id="" value=""></td>
-								<td><input type="text" class="form-control" id="" value=""></td>
-								<td><input type="text" class="form-control" id="" value=""></td>
-								<td class="text-start"><input type="text" class="form-control" id="" value=""></td>
-								<td><input type="text" class="form-control" id="" value=""></td>
-								<td><input type="text" class="form-control" id="" value=""></td>
-								<td><a href="#" class="btn btn-outline-light btn-sm btn-regi"><small
-											>추가</small></a></td>
-							</tr>
-							<tr>
-								<td>999</td>
-								<td class="text-start">턴배정 제외</td>
-								<td>2</td>
-								<td>공식</td>
-								<td>홍길동3 직책 (1-1팀)</td>
-								<td class="text-start">영업을 잘하니까 하나 더 주는거</td>
-								<td>홍길순2</td>
-								<td>2024-01-11 13:11:44</td>
-								<td>홍길순1<br />2024-01-12</td>
-							</tr>
-							<tr>
-								<td>999</td>
-								<td class="text-start">턴배정 제외</td>
-								<td>2</td>
-								<td>공식</td>
-								<td>홍길동3 직책 (1-1팀)</td>
-								<td class="text-start">영업을 잘하니까 하나 더 주는거</td>
-								<td>홍길순2</td>
-								<td>2024-01-11 13:11:44</td>
-								<td><a href="#" class="btn btn-outline-active btn-sm">정상배정</a></td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="form-btn float-wrap mbody-btn-line">
-						<div class="float-right">
-							<button type="submit" class="btn btn-outline-cancel">닫기</button>
-						</div>
-					</div><!-- // form-btn -->
-		
+
+						<div class="row g-10px mt-2 mb-4">
+						  <div class="col-2">
+							<div class="card h-auto">
+							  <div class="card-body py-3">
+								<h5 class="card-title fs-14px mb-0 py-1">지급상태</h5>
+								<p class="card-text fs-14px py-1">지급전</p>
+							  </div>
+							</div>
+						  </div>
+						  <div class="col-2">
+							<div class="card h-auto">
+							  <div class="card-body py-3">
+								<h5 class="card-title fs-14px mb-0 py-1">지급일</h5>
+								<p class="card-text fs-14px py-1">2023-11-15</p>
+							  </div>
+							</div>
+						  </div>
+						  <div class="col-2">
+							<div class="card h-auto">
+							  <div class="card-body py-3">
+								<h5 class="card-title fs-14px mb-0 py-1">급여</h5>
+								<p class="card-text fs-14px py-1">6,230,000원</p>
+							  </div>
+							</div>
+						  </div>
+						  <div class="col-2">
+							<div class="card h-auto">
+							  <div class="card-body py-3">
+								<h5 class="card-title fs-14px mb-0 py-1">기본급</h5>
+								<p class="card-text fs-14px py-1">5,000,000원</p>
+							  </div>
+							</div>
+						  </div>
+						  <div class="col-2">
+							<div class="card h-auto">
+							  <div class="card-body py-3">
+								<h5 class="card-title fs-14px mb-0 py-1">강사료</h5>
+								<p class="card-text fs-14px py-1">1,230,000원</p>
+							  </div>
+							</div>
+						  </div>
+						  <div class="col-2">
+							<div class="card h-auto">
+							  <div class="card-body py-3">
+								<h5 class="card-title fs-14px mb-0 py-1">추가 강의시간</h5>
+								<p class="card-text fs-14px py-1">100시간</p>
+							  </div>
+							</div>
+						  </div>
+						</div><!-- // 강사 지급 정보 -->
+
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">상세 내역</div></div>
+							</div>
+							<div class="flex-shrink-0 row">
+								<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+							</div>
+						</div><!-- // table-head -->
+
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:18%">
+								<col style="width:18%">
+								<col style="width:18%">
+								<col style="width:18%">
+								<col style="width:auto">
+							</colgroup>
+
+							<thead>
+								<tr>
+									<th>번호</th>
+									<th>과목</th>
+									<th>시급</th>
+									<th>강의시간</th>
+									<th>추가 강의시간</th>
+									<th>강사료</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td class="text-start">기본급</td>
+									<td>30,000</td>
+									<td>60</td>
+									<td>100</td>
+									<td>1,200,000</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td class="row">
+										<div class="col-auto mx-auto"><input type="text" class="form-control" value="인센티브"></div>
+									</td>
+									<td class="row">
+										<div class="col-auto mx-auto"><input type="text" class="form-control text-center" value="10,000"></div>
+									</td>
+									<td>60</td>
+									<td class="row">
+										<div class="col-auto mx-auto"><input type="text" class="form-control text-center" value="2"></div>
+									</td>
+									<td>1,200,000</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<dl class="row">
+							<dt>메모</dt>
+							<dd><textarea class="form-control">메모</textarea></dd>
+						</dl>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">저장</button>
+						<button type="submit" class="btn btn-outline-active">닫기</button>
+					</div>
 				</div><!-- // modal-body -->
-		
-			</div><!-- // modal-content -->
-		
-		</div><!-- // modal-dialog -->
-		
-	</div><!-- // modal : pageModal12 -->
-		
+
+			</div>
+		</div>
+	</div><!-- // modal : 강사 급여 내역 -->
+
+
 	<button type="button" class="btn" id="scroll-top"></button>
 	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
@@ -887,10 +677,6 @@
 	<script src="./assets/js/plugins.js"></script>
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
-	<script>
-		$(function () {
-			$('#pageModal12').modal('show');
-		});
-	</script>
+
 </body>
 </html>

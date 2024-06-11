@@ -899,45 +899,14 @@
 	</div><!-- // layout-wrapper -->
 
 
-	<button type="button" class="btn" id="scroll-top"></button>
-	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
-	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<button type="button" class="btn" id="scroll-top"></button></script>
 	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
 	<script src="./assets/libs/feather-icons/feather.min.js"></script>
-	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
-	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
-	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
-
-	<script src="./assets/js/layout.js"></script>
+	<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/plugins.js"></script>
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
-	<script type="text/javascript">
-		$('#startDate').flatpickr({
-			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
-			enableTime: false,        // 시간 선택 활성화
-			time_24hr: false,         // 24시간 형식 사용
-			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
-			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
-			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
-			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
-			locale: 'ko',            // 한국어로 지역화
-			onOpen: function(selectedDates, dateStr, instance) {
-				// 위젯이 열릴 때 실행할 코드
-			},
-			onClose: function(selectedDates, dateStr, instance) {
-				// 위젯이 닫힐 때 실행할 코드
-			},
-			onChange: function(selectedDates, dateStr, instance) {
-				// 날짜가 변경될 때 실행할 코드
-			},
-			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
-			altInput: true,           // 추가 입력란 활성화
-			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
-			"plugins": [new rangePlugin({ input: "#endDate"})]
-		})
-
-	</script>
 
 </body>
 </html>
