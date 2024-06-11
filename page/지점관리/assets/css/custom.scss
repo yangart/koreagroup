@@ -58,7 +58,7 @@ input:-webkit-autofill{ -webkit-text-fill-color: #212529 !important; }
 .navbar-dbmenu .navbar-nav .nav-link i{display:inline-block;width:16px;height:20px;margin-right:12px;background-repeat:no-repeat;background-position:50% 50%;background-size:16px 16px;}
 .navbar-dbmenu .navbar-nav .nav-link i.ico1{background-image:url(../img/app-menu-ico1@2x.png);}
 .navbar-dbmenu .navbar-nav .nav-link i.ico2{background-image:url(../img/app-menu-ico2@2x.png);}
-.navbar-dbmenu .navbar-nav .nav-link i.ico3{background-image:url(../img/app-menu-ico3@2x.png);}
+.navbar-dbmenu .navbar-nav .nav-link i.ico3{background-image:url(../img/app-menu-ico3@2x.png);} 
 .navbar-dbmenu .navbar-nav .nav-link i.ico4{background-image:url(../img/app-menu-ico4@2x.png);}
 .navbar-dbmenu .navbar-nav .nav-link i.ico5{background-image:url(../img/app-menu-ico5@2x.png);}
 .navbar-dbmenu .navbar-nav .nav-link i.ico6{background-image:url(../img/app-menu-ico6@2x.png);}
@@ -103,7 +103,7 @@ input:-webkit-autofill{ -webkit-text-fill-color: #212529 !important; }
 .navbar-dbmenu .navbar-nav .nav-sm .nav-sm{padding-left:12px}
 .navbar-dbmenu .navbar-nav .nav-sm .nav-sm .nav-link:before{height:5px;width:5px;left:5px;border-radius:50%;background-color:transparent;border:1px solid;top:13.5px}
 .navbar-dbmenu .btn-vertical-sm-hover{display:none}
-
+ 
 .navbar-dbmenu .container-fluid{padding:0}
 [data-sidebar-size=sm] .navbar-dbmenu{position:absolute;width:var(--appmenu-width-sm)!important;padding-top:60px}
 [data-sidebar-size=sm] .navbar-dbmenu .simplebar-content-wrapper,
