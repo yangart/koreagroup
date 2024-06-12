@@ -636,6 +636,92 @@ input:-webkit-autofill {
   text-wrap: nowrap;
 }
 
+.btn-regi {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/plus.svg) no-repeat 50% 50%/16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+.btn-del {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/trash-2.svg) no-repeat 50% 50%/16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+.btn-dot {
+  display: inline-block;
+  width: 28px;
+  min-width: auto;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/more-vertical.svg) no-repeat 50% 50%/16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+.btn-review {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/search.svg) no-repeat 50% 50%/16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+.btn-cancel {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/x.svg) no-repeat 50% 50%/16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+.btn-list-plus {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/chevron-right.svg) no-repeat 50% 50%/16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+.btn-watch {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/monitor.svg) no-repeat 50% 50%/16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+.btn-assign {
+  display: inline-block;
+  width: 64px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/chevron-right.svg) no-repeat 50% 50%/16px auto;
+  text-indent: initial;
+  font-size: 14px;
+  text-align: left;
+  background-position: center right !important;
+}
+
+.btn-exchange {
+  display: inline-block;
+  width: 64px;
+  height: 28px;
+  background: url(../libs/feather-icons/icons/code.svg) no-repeat 34px center/16px auto;
+  text-indent: initial;
+  font-size: 14px;
+  text-align: left;
+  padding: 3px 8px;
+}
+
 /* modal */
 .modal-content {
   display: -webkit-box;

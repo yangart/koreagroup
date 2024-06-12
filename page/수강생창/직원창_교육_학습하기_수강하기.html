@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/style.staff.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">학습하기</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">	
+
+						<div class="row">
+							<div class="col-12">
+								<div class="card-member-head">
+									<h6>마케팅 노하우</h6>
+									<span class="badge bg-secondary">수강중</span>
+								</div>
+								<div class="card-member-list my-3">
+									<div>
+										<span>컴퓨터</span>
+										<span>2023.07.01~2023.07.31</span>
+									</div>
+								</div>
+								<div class="mbody-clause-list fs-14px">본 강의는 블라블라… 본 강의는 블라블라본 강의는 블라블라   본 강의는 블라블라본 강의는 블라블라   본 강의는 블라블라본 강의는 블라블라
+본 강의는 블라블라… 본 강의는 블라블라본 강의는 블라블라   본 강의는 블라블라본 강의는 블라블라   본 강의는…</div>
+							</div>
+						</div>
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">학습 목록</div></div>
+							</div>
+						</div><!-- // table-head -->
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:18%">
+								<col style="">
+								<col style="width:25%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>차시</th>
+									<th>제목</th>
+									<th>강사</th>
+									<th>진도</th>
+									<th>시청시간</th>
+									<th>학습하기</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td class="text-start">마케팅과 고객만족경영 & 브랜드 파워 구축</td>
+									<td>김OO 본부장</td>
+									<td>완료</td>
+									<td>12분</td>
+									<td><a href="#" class="btn btn-outline-light btn-sm btn-watch"><small class="d-lg-none">학습하기</small></a></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div><!-- // mbody-forms -->
+
+					<div class="form-btn">
+						<button type="submit" class="btn btn-point">확인</button>
+					</div>
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 학습하기 -->
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/style.staff.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">업무 요청 등록</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">	
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">업무요청</div></div>
+							</div>
+						</div><!-- // table-head -->
+						<div class="row">
+							<div class="col-12">
+								<dl class="row">
+									<dt>업무</dt>
+									<dd>
+										<div class="col-243px">
+											<select class="form-select" data-choices data-choices-search-false>
+												<option value="01">디자인</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>업무구분</dt>
+									<dd>
+										<div class="col-243px">
+											<select class="form-select" data-choices data-choices-search-false>
+												<option value="01">포스터 제작</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>제목</dt>
+									<dd>
+										<div class="col-auto">
+											<input type="text" class="form-control" value="공모전 진행을 위한 포스터디자인 요청 합니다.">
+										</div>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>세부 내용</dt>
+									<dd>
+										<!-- <table class="table table-card table-align-left">
+											<colgroup>
+												<col style="width:20%">
+												<col style="width:80%">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>업무요청구분</th>
+													<td>-</td>
+												</tr>
+												<tr>
+													<th>타이틀</th>
+													<td>-</td>
+												</tr>
+												<tr>
+													<th>일시</th>
+													<td>-</td>
+												</tr>
+												<tr>
+													<th>장소</th>
+													<td>-</td>
+												</tr>
+												<tr>
+													<th>신청인원</th>
+													<td>-</td>
+												</tr>
+												<tr>
+													<th>신청방법</th>
+													<td>-</td>
+												</tr>
+												<tr>
+													<th>기타(자율형식)</th>
+													<td>-</td>
+												</tr>
+											</tbody>
+										</table> -->	
+										<textarea class="form-control" rows="10"></textarea>
+									</dd>
+								</dl>
+							</div>
+							<div class="col-12">
+								<dl class="row">
+									<dt>파일첨부</dt>
+									<dd>
+										<div class="col-auto">
+												<button type="button" class="btn btn-outline-primary d-none">파일 업로드</button>
+												<input type="file" class="form-control" id="">
+										</div>
+										<div class="col-12">
+											<div class="simplebar-scrollable-y mt-3" data-simplebar data-simplebar-auto-hide="false" style="height: 41px !important;">
+												<ul>
+													<li>포스터 기획 사항.zip <a href="#" class="btn-delete">삭제</a></li>
+													<li>사진이미지.png <a href="#" class="btn-delete">삭제</a></li>
+												</ul>
+											</div>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+
+					</div><!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point">저장</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- // modal : 업무 요청 등록 -->
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>
