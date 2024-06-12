@@ -155,7 +155,9 @@
 																		<th>발령 후</th>
 																		<th>배출 팀장</th>
 																		<th>매출성적<br>(순매출기준)
-																			<button type="button" class="btn-tooltip-info">
+																			<button type="button" class="btn-tooltip-info" data-bs-toggle="tooltip" data-bs-placement="top"
+																			data-bs-custom-class="custom-tooltip"
+																			data-bs-title="안내내용">
 																				안내
 																			</button>
 																		</th>
@@ -277,6 +279,7 @@
 														<ul>
 															<li>- 영업성적표 (개인누적매출만 기입 → 멘토/선임/책임 구분 필요)</li>
 															<li>- 진급 심사평가표</li>
+														</ul>
 													</td>
 												</tr>
 												<tr>
@@ -309,6 +312,7 @@
 	</div>
 	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
 	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+
 	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
 	<script src="./assets/libs/feather-icons/feather.min.js"></script>
 	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
@@ -325,6 +329,14 @@
 		});
 	</script>
 
+	<!-- tooltip -->
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.bundle.js"></script>
+	<script>
+		$(function () {			
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+		});	
+	</script>
 </body>
 
 </html>
