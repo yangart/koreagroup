@@ -11,3 +11,13 @@
         color: var(--card-title-color);
     }
 }
+
+.btn-tooltip-info {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../libs/feather-icons/icons/info.svg) no-repeat center / cover;
+    text-indent: -9999px;
+    font-size: 0;
+    border: 0;
+}
