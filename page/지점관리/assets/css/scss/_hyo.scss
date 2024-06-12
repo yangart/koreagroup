@@ -128,6 +128,29 @@ select:not(.form-select) {
 	vertical-align: middle;
 }
 /* table */
+.table-sticky {
+  overflow-x: auto;
+  position: relative;
+  table {
+    border-collapse: separate !important;
+  } 
+  .sticky-col {
+    position: sticky;
+    border-right:.5px  solid var(--bs-gray-200);
+    border-left:.5px  solid var(--bs-gray-200);
+  }
+  thead {
+    position: sticky;
+    top:0;
+    z-index: 4;
+  }
+}
+.table-card.border-line{
+  th,
+  td {
+    border:1px solid var(--bs-gray-200);
+  }
+}
 .table-scroll-y {
   position: relative;
   overflow-y: auto;

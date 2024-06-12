@@ -7174,6 +7174,29 @@ select:not(.form-select) {
 }
 
 /* table */
+.table-sticky {
+  overflow-x: auto;
+  position: relative;
+}
+.table-sticky table {
+  border-collapse: separate !important;
+}
+.table-sticky .sticky-col {
+  position: sticky;
+  border-right: 0.5px solid var(--bs-gray-200);
+  border-left: 0.5px solid var(--bs-gray-200);
+}
+.table-sticky thead {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+.table-card.border-line th,
+.table-card.border-line td {
+  border: 1px solid var(--bs-gray-200);
+}
+
 .table-scroll-y {
   position: relative;
   overflow-y: auto;
