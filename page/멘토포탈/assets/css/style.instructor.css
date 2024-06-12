@@ -3894,7 +3894,7 @@ body {
 
 /* .page-header{display:flex;justify-content:space-between;align-items:center;height:44px;} */
 #scroll-top {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 76px;
   right: 28px;

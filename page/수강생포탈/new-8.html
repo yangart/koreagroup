@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div id="header">
+			<h1 class="header-logo"><a href="#"><img src="./assets/img/header-logo.png" alt=""></a></h1>
+			<ul class="header-nav nav" id="headerNav">
+				<li><a href="#" class="nav-btn active">홈</a></li>
+				<li class="hoverdown">
+					<a href="#" class="nav-btn" id="hNavHoverdown2">수강내역</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown2">
+						<li><a class="dropdown-item" href="#">공지사항</a></li>
+						<li><a class="dropdown-item" href="#">이벤트</a></li>
+						<li><a class="dropdown-item" href="#">특강/세미나</a></li>
+						<li><a class="dropdown-item" href="#">자격증 정보(민간)</a></li>
+						<li><a class="dropdown-item" href="#">자격증 정보(공공)</a></li>
+						<li><a class="dropdown-item" href="#">취업 및 진학정보 게시판</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="nav-btn">커뮤니티</a></li>
+				<li><a href="#" class="nav-btn">교육과정</a></li>
+				<li class="hoverdown">
+					<a href="#" class="nav-btn" id="hNavHoverdown5">학원정보</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown5">
+						<li><a class="dropdown-item" href="#">빈강의실 찾기</a></li>
+						<li><a class="dropdown-item" href="#">학원내부맵</a></li>
+						<li><a class="dropdown-item" href="#">따즈아 소개</a></li>
+					</ul>
+				</li>
+			</ul><!-- // headerNav -->
+
+			<ul class="header-icon nav" id="headerIcon">
+				<li><a href="#" class="nav-btn"><i class="h-ico-user"></i></a></li>
+				<li><a href="#" class="nav-btn"><i class="h-ico-out"></i></a></li>
+			</ul><!-- // headerIcon -->
+		</div>
+		<!-- // header -->
+
+		<!-- container -->
+		<div id="container">
+
+			<div class="row col-group">
+
+				<div class="col-12">
+
+					<div class="page-header">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item active">MAIN</li>
+							<li class="breadcrumb-item">마이페이지</li>
+							<li class="breadcrumb-item">알림</li>
+						</ol>
+					</div>
+
+					<div class="card fixed-card">
+
+						<div class="card-subject">
+							<div class="title">홍길동</div>
+							<div class="text">(국비대상)</div>
+							<div class="state">수강중</div>
+							<div class="depth cont-info">
+								<p><i class="ico-user"></i> <b>담당멘토 이미애 강남1점</b></p>
+								<p>1-1팀</p>
+							</div>
+							<div class="state second">상담</div>
+						</div><!-- // card-subject -->
+
+						<ul class="nav card-tabs" id="stateNav" role="tablist">
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">알림</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">나의 자료실</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">결제/환불내역</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">나의 견적서, 원서</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">상담센터</a></li>
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" aria-selected="true">취업관리 현황</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">칭찬 불만 게시판</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">증명서 발급</a></li>
+						</ul><!-- // card-tabs -->
+
+						<div class="card-result-pin"><a href="#">정보수정</a></div>
+
+					</div><!-- // card -->
+
+					<div class="card fluid-card tabs-card">
+						<div class="card-head">
+							<div>취업 관리 현황</div>
+
+							<ul class="nav archive-nav" id="archiveNav" role="tablist">
+								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">신청</a></li>
+								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">접수</a></li>
+								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">자료검토</a></li>
+								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">기업매칭</a></li>
+								<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" aria-selected="true">면적관리</a></li>
+								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">취업</a></li>
+							</ul>
+						</div><!-- // card-head -->
+
+						<div class="card-body">
+
+							<div class="cont-manager">
+								<b>취업 담당자</b>
+								<em>홍길동 주임</em>
+							</div><!-- // cont-manager -->
+
+							<div class="card-title">파일 관리</div>
+
+							<div class="file-list">
+								<div class="files">
+									<div class="item">
+										<div class="name">이력서2.doc</div>
+										<div class="size">2.3MB</div>
+										<button class="btn-ico"><i class="ico-delete">삭제</i></button>
+									</div>
+									<div class="item">
+										<div class="name">경령증명서.doc</div>
+										<div class="size">586KB</div>
+										<button class="btn-ico"><i class="ico-delete">삭제</i></button>
+									</div>
+									<div class="item">
+										<div class="name">포트폴리오.ppt</div>
+										<div class="size">8.6MB</div>
+										<button class="btn-ico"><i class="ico-delete">삭제</i></button>
+									</div>
+								</div>
+								<div class="upload">
+									<div class="title">개당 50MB 이하의 파일만 등록</div>
+									<button class="btn btn-black btn-sm">자료 업로드</button>
+								</div>
+							</div>
+
+							<div class="card-title">매칭 현황</div>
+							<ul class="card-flex-table card-flex-thead card-flex-n14">
+								<li>
+									<div class="num">순번</div>
+									<div>기업명</div>
+									<div>학력</div>
+									<div>경력</div>
+									<div>근무형태</div>
+									<div>업무내용</div>
+									<div>급여</div>
+									<div>근무지역</div>
+									<div>채용기간</div>
+									<div>면접일정</div>
+									<div class="addr">면접장소</div>
+									<div class="name">담당자</div>
+									<div class="tel">연락처</div>
+									<div class="state">면접결과</div>
+								</li>
+							</ul>
+							<ul class="card-flex-table card-flex-tbody card-flex-n14">
+								<li>
+									<div class="num">1</div>
+									<div><a href="#" class="btn-underline">코리아교육그룹</a></div>
+									<div>학력무관</div>
+									<div>신입/경력</div>
+									<div>정규직</div>
+									<div>교육사업</div>
+									<div>4,500만원</div>
+									<div>서울 강남구</div>
+									<div>~12.14(목)</div>
+									<div>12.12(화)</div>
+									<div class="addr">서울 강남구 강남대로 286 부영빌딩 3,4층</div>
+									<div class="name">홍길동 부장</div>
+									<div class="tel">010-1234-1234</div>
+									<div class="state color-third">합격</div>
+								</li>
+								<li>
+									<div class="num">2</div>
+									<div><a href="#" class="btn-underline">퀀텀앤쏠</a></div>
+									<div>학력무관</div>
+									<div>신입/경력</div>
+									<div>정규직</div>
+									<div>교육사업</div>
+									<div>4,500만원</div>
+									<div>서울 강남구</div>
+									<div>~12.14(목)</div>
+									<div>12.12(화)</div>
+									<div class="addr">서울 강남구 강남대로 286 부영빌딩 3,4층</div>
+									<div class="name">홍길동 부장</div>
+									<div class="tel">010-1234-1234</div>
+									<div class="state color-second">불합격</div>
+								</li>
+							</ul><!-- // card-list-simple -->
+
+							<div class="btn-wrap">
+								<a href="#" class="btn btn-second btn-sm float-right">관리 요청</a>
+							</div><!-- // btn-wrap -->
+
+						</div><!-- // card-body -->
+
+					</div><!-- // card -->
+				</div><!-- // col -->
+
+			</div><!-- // row -->
+
+		</div><!-- // container -->
+
+	</div><!-- // wrapper -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>
