@@ -132,8 +132,7 @@
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item">사내 게시판</li>
 								<li class="breadcrumb-item">게시판 관리</li>
-								<li class="breadcrumb-item">공통 게시판</li>
-								<li class="breadcrumb-item active">수정</li>
+								<li class="breadcrumb-item active">직원신문고</li>
 							</ol>
 						</div>
 
@@ -295,45 +294,27 @@
 									<tbody>
 										<tr>
 											<td class="text-start">
-												<div class="d-flex gap-2">
-													<div class="col-11"><input type="text" class="form-control" value="게시판 등록 글이 보여집니다." placeholder="제목을 입력하세요."></div>
-													<div class="form-check mt-1">
-														<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault1">
-														<label class="form-check-label" for="flexCheckDefault1">공지</label>
+												<div class="d-flex gap-5 align-items-center">
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="RadioUse" id="Radiouse1" checked="">
+														<label class="form-check-label" for="Radiouse1">직원신문고<p class="fs-12px text-secondary">김영우 부사장님에게 이메일이 발송됩니다</p></label>
 													</div>
-
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="RadioUse" id="Radiouse2">
+														<label class="form-check-label" for="Radiouse2">[지점]직원신문고<p class="fs-12px text-secondary">김영우 부사장님, 김양곤 전무님에게 이메일과 문자가 발송됩니다</p></label>
+													</div>
 												</div>
 											</td>
 										</tr>
 										<tr>
 											<td class="text-start">
-												<div class="d-flex gap-3">
-													<span class="">계열+지점>부서>팀</span>
-													<span>별칭 직위(직책)</span>
-												</div>
+												<input type="text" class="form-control" placeholder="제목을 입력하세요.">
 											</td>
 										</tr>
 										<tr>
 											<td class="text-start">
 												<textarea class="form-control mb-1" style="min-height: 100px;">에디터</textarea>
-												<p>입력한 내용이 보여집니다</p>
-												<figure class="mt-2 mb-2">
-													<img src="./assets/img/modal-sample.png" alt="">
-												</figure>
-												<p>입력한 내용이 보여집니다</p>
-											</td>
-										</tr>
-										<tr>
-											<td class="text-start">
-												<div class="d-flex">
-													<input type="text" class="form-control" value="" placeholder="파일을 이쪽으로 드레그하면 업로드 됩니다." />
-													<a href="#" class="btn btn-outline-active ms-2">파일등록</a>
-												</div>
-												<div class="d-flex gap-3 mt-2">
-													<div>모션그래픽 실무자양성 신청서.docx <button type="button" class="text-danger border-0 bg-white align-middle mb-1">ⓧ</button> </div>
-													<div>첨부파일2.pptx <button type="button" class="text-danger border-0 bg-white align-middle mb-1">ⓧ</button> </div>
-												</div>
-												
+												<textarea class="form-control" style="min-height: 400px;"placeholder="내용을 입력하세요."></textarea>
 											</td>
 										</tr>
 									</tbody>
@@ -351,13 +332,12 @@
 
 			<!-- page-footer -->
 			<div class="page-footer">
-
 				<div class="page-footer-row">
 					<div class="page-footer-btn-left">
-						<a href="#" class="btn btn-outline-active">목록</a>
+						<a href="#" class="btn btn-outline-active">닫기</a>
 					</div>
 					<div class="page-footer-btn-right">
-						<a href="#" class="btn btn-primary">저장</a>
+						<a href="#" class="btn btn-primary">발송</a>
 					</div>
 				</div>
 			</div><!-- // page-footer -->

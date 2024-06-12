@@ -132,8 +132,8 @@
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item">사내 게시판</li>
 								<li class="breadcrumb-item">게시판 관리</li>
-								<li class="breadcrumb-item">공통 게시판</li>
-								<li class="breadcrumb-item active">수정</li>
+								<li class="breadcrumb-item">계열/지점 게시판</li>
+								<li class="breadcrumb-item active">목록</li>
 							</ol>
 						</div>
 
@@ -289,52 +289,89 @@
 
 						<!-- card-body -->
 						<div id="innerscroll" class="card-body inner-scroll">
+							<ul class="nav nav-tabs mb-4">
+								<li class="nav-item"><a class="nav-link active" href="#">탭1 (탭 사용명 노출)</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">탭2 (탭 사용명 노출)</a></li>
+							</ul>
 
+							<div class="fnc-area">
+								<div class="r-area">
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">지점 전체</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									<select class="form-select" data-choices data-choices-search-false>
+										<option value="01">제목</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									<div class="d-flex gap-1">
+										<div class="col-180px">
+											<input type="text" class="form-control" placeholder="검색어를 입력하세요.">
+										</div>
+										<a href="#" class="btn btn-outline-active">초기화</a>
+										<a href="#" class="btn btn-point">검색</a>
+									</div>
+								</div>
+							</div>
+							
 							<div class="table-responsive">
 								<table class="table table-card">
+									<thead class="table-light">
+										<tr>
+											<th>NO</th>
+											<th>지점</th>
+											<th class="text-start">제목</th>
+											<th class="text-start">소속</th>
+											<th>등록자</th>
+											<th>등록일</th>
+											<th>조회수</th>
+										</tr>
+									</thead>
 									<tbody>
 										<tr>
-											<td class="text-start">
-												<div class="d-flex gap-2">
-													<div class="col-11"><input type="text" class="form-control" value="게시판 등록 글이 보여집니다." placeholder="제목을 입력하세요."></div>
-													<div class="form-check mt-1">
-														<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault1">
-														<label class="form-check-label" for="flexCheckDefault1">공지</label>
-													</div>
-
-												</div>
-											</td>
+											<td><b class="text-danger">공지</b></td>
+											<td>본사</td>
+											<td class="text-start"><b>[필독] 공지사항</b> <span class="text-danger">[293]</span><i class="file"></i><i class="new btn-danger text-center rounded-circle fs-10px">N</i></td>
+											<td class="text-start">계열+지점 > 부서 > 팀</td>
+											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
+											<td>YYYY-MM-DD</td>
+											<td>9999</td>
 										</tr>
 										<tr>
-											<td class="text-start">
-												<div class="d-flex gap-3">
-													<span class="">계열+지점>부서>팀</span>
-													<span>별칭 직위(직책)</span>
-												</div>
-											</td>
+											<td>1</td>
+											<td>강남</td>
+											<td class="text-start">G-STAR 2023 ★ SBSGAMEMARKET 뜨거운 열정 속으로 떠나자!</td>
+											<td class="text-start">계열+지점 > 부서 > 팀</td>
+											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
+											<td>YYYY-MM-DD</td>
+											<td>9999</td>
 										</tr>
 										<tr>
-											<td class="text-start">
-												<textarea class="form-control mb-1" style="min-height: 100px;">에디터</textarea>
-												<p>입력한 내용이 보여집니다</p>
-												<figure class="mt-2 mb-2">
-													<img src="./assets/img/modal-sample.png" alt="">
-												</figure>
-												<p>입력한 내용이 보여집니다</p>
-											</td>
+											<td>2</td>
+											<td>홍대</td>
+											<td class="text-start" colspan="5"><div><i class="comment"></i>원글에 첫 답변 처리했을 경우</div></td>
 										</tr>
 										<tr>
-											<td class="text-start">
-												<div class="d-flex">
-													<input type="text" class="form-control" value="" placeholder="파일을 이쪽으로 드레그하면 업로드 됩니다." />
-													<a href="#" class="btn btn-outline-active ms-2">파일등록</a>
-												</div>
-												<div class="d-flex gap-3 mt-2">
-													<div>모션그래픽 실무자양성 신청서.docx <button type="button" class="text-danger border-0 bg-white align-middle mb-1">ⓧ</button> </div>
-													<div>첨부파일2.pptx <button type="button" class="text-danger border-0 bg-white align-middle mb-1">ⓧ</button> </div>
-												</div>
-												
-											</td>
+											<td>3</td>
+											<td>지점1</td>
+											<td class="text-start" colspan="5"><div class="ps-3"><i class="comment"></i>답변 글에 답변 처리했을 경우</div></td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>지점2</td>
+											<!-- <td class="text-start" colspan="5"><div><i class="bi bi-arrow-return-right"></i>원글에 두번째 답변 처리했을 경우</div></td> -->
+											<td class="text-start" colspan="5"><div><i class="comment"></i>원글에 두번째 답변 처리했을 경우</div></td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>성수</td>
+											<td class="text-start">G-STAR 2023 ★ SBSGAMEMARKET 뜨거운 열정 속으로 떠나자!</td>
+											<td class="text-start">계열+지점 > 부서 > 팀</td>
+											<td><a href="#" class="btn-link">길동이 부장(본부장)</a></td>
+											<td>YYYY-MM-DD</td>
+											<td>9999</td>
 										</tr>
 									</tbody>
 								</table>
@@ -354,10 +391,45 @@
 
 				<div class="page-footer-row">
 					<div class="page-footer-btn-left">
-						<a href="#" class="btn btn-outline-active">목록</a>
+						<div class="flex-grow-1 row align-items-center">
+							<div class="col-auto">
+								<select>
+									<option value="01">20개</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+							</div>
+							<div class="col-auto ms-2">
+								<h5 class="table-result">검색결과 총 <span class="text-point">165</span>건</h5>
+							</div>
+						</div>
 					</div>
+
+					<ul class="pagination pagination-separated">
+						<li class="page-item disabled">
+							<a href="#" class="page-link">←</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">1</a>
+						</li>
+						<li class="page-item active">
+							<a href="#" class="page-link">2</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">3</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">4</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">5</a>
+						</li>
+						<li class="page-item">
+							<a href="#" class="page-link">→</a>
+						</li>
+					</ul>
 					<div class="page-footer-btn-right">
-						<a href="#" class="btn btn-primary">저장</a>
+						<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point">등록</a>
 					</div>
 				</div>
 			</div><!-- // page-footer -->
