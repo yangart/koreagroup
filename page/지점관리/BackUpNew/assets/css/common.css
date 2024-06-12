@@ -71,7 +71,7 @@
 .table-title{font-size:14px;font-weight:600;line-height:1.43;color:#495057;}
 .table-card{position:relative;margin:0;}
 .table-card::before{display:block;clear:both;content:'';position:absolute;top:0;left:0;width:100%;height:1px;z-index:1;background:#5a66ff;}
-.table-card>:not(caption)>*>*{padding:4px;font-size:14px;line-height:1.43;text-align:center;color:#212529;background:#fff;border-bottom:1px solid #e9ebec;vertical-align:middle;}
+.table-card>:not(caption)>*>*{padding:8px;font-size:14px;line-height:1.43;text-align:center;color:#212529;background:#fff;border-bottom:1px solid #e9ebec;vertical-align:middle;}
 .table-card>:not(:last-child)>:last-child>*{border-bottom:1px solid #e9ebec;}
 .table-card th{background:#f3f6f9;font-weight:600;color:#7987a1;}
 .table-card td{color:#212529;min-width:40px;height:44px;}
@@ -204,7 +204,7 @@
 
 .modal-body .table-head{margin-top:20px;margin-bottom:8px;}
 
-.modal-body .table-card>:not(caption)>*>*{padding:6px 2px;}
+/* .modal-body .table-card>:not(caption)>*>*{padding:6px 2px;} */
 .modal-body .table-card .badge{margin-right:3px;padding:0 10px;border-radius:20px;line-height:20px;font-size:12px;font-weight:600;text-align:center;color:#fff;}
 .modal-body .form-btn .btn{width:84px;}
 .modal-body .row{--bs-gutter-x:24px;--bs-gutter-y:16px;}

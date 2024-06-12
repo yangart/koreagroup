@@ -689,8 +689,8 @@
 							<h5 class="card-title">설문지 관리 </h5>
 
 							<div class="row">
-								<div class="col-11 gap-2">
-									<select class="form-select mb-0" data-choices data-choices-search-false>
+								<div class="col-10 gap-2">
+									<select class="mb-0">
 										<option value="01">설문진행일</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
@@ -701,32 +701,32 @@
 										</div>
 										<button type="button" class="btn btn-outline-light">오늘</button>
 									</div>
-									<select class="form-select" data-choices data-choices-search-false>
+									<select>
 										<option value="01">계열선택</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
 									</select>
-									<select class="form-select" data-choices data-choices-search-false>
+									<select>
 										<option value="01">지점선택</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
 									</select>
-									<select class="form-select" data-choices data-choices-search-false>
+									<select>
 										<option value="01">설문유형선택</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
 									</select>
-									<select class="form-select" data-choices data-choices-search-false>
+									<select>
 										<option value="01">설문대상</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
 									</select>
-									<select class="form-select" data-choices data-choices-search-false>
+									<select>
 										<option value="01">설문상태</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
 									</select>
-									<select class="form-select" data-choices data-choices-search-false>
+									<select>
 										<option value="01">사용여부</option>
 										<option value="02">option 2</option>
 										<option value="03">option 3</option>
@@ -738,11 +738,9 @@
 										</div>
 									</div>									
 								</div>
-								<div class="col-1">
-									<div class="col-12"><button type="button"
-											class="btn btn-point search-btn">초기화</button></div>
-									<div class="col-12"><button type="button"
-											class="btn btn-point-deep search-btn">검색</button></div>
+								<div class="col-2 d-flex">
+									<div class="col-6 pe-1"><button type="button" class="btn btn-point search-btn">초기화</button></div>
+									<div class="col-6"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
 								</div>
 							</div><!-- // row -->
 						</div><!-- // card-header -->
@@ -818,7 +816,7 @@
                     <div class="page-footer-btn-left">
 						<div class="flex-grow-1 row align-items-center">
 							<div class="col-auto">
-								<select class="form-select" data-choices data-choices-search-false>
+								<select>
 									<option value="01">20개</option>
 									<option value="02">option 2</option>
 									<option value="03">option 3</option>
@@ -876,174 +874,172 @@
 					<div class="mbody-forms">	
 
 						<div class="row">
-							<div class="col-50p">
+							<div class="col-50p overflow-y-auto" style="max-height:500px;">
 								<div class="table-head bg-light p-2 mt-0 position-relative">
 									<div class="table-title">설문 정보</div>
 								</div><!-- // table-head -->
 
-								<div class="table-body">
-									<table class="table">
-										<colgroup>
-											<col style="width:110px">
-											<col style="">
-											<col style="width:110px">
-											<col style="">
-										</colgroup>
-										<tbody>
-											<tr>
-												<th>설문 유형 <i class="text-req ms-1">*</i></th>
-												<td colspan="3">
-													<div class="col-auto">
-														<div class="form-inline">
-															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
-																<label class="form-check-label" for="inlineRadio1_a">일반</label>
-															</div>
-															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
-																<label class="form-check-label" for="inlineRadio1_b">강의 (만족도)</label>
-															</div>
-															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_c" value="b">
-																<label class="form-check-label" for="inlineRadio1_c">교육</label>
-															</div>
+								<table class="table">
+									<colgroup>
+										<col style="width:110px">
+										<col style="">
+										<col style="width:110px">
+										<col style="">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>설문 유형 <i class="text-req ms-1">*</i></th>
+											<td colspan="3">
+												<div class="col-auto">
+													<div class="form-inline">
+														<div class="form-check col-4">
+															<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
+															<label class="form-check-label" for="inlineRadio1_a">일반</label>
 														</div>
-													</div>										
-												</td>
-											</tr>
-											<tr>
-												<th>설문 대상 <i class="text-req ms-1">*</i></th>
-												<td colspan="3">
-													<div class="col-auto">
-														<div class="form-inline">
-															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_a" value="a" checked="">
-																<label class="form-check-label" for="inlineRadio2_a">수강생 (재학생)</label>
-															</div>
-															<div class="form-check col-4">
-																<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_b" value="b">
-																<label class="form-check-label" for="inlineRadio2_b">임직원 (재직)</label>
-															</div>
+														<div class="form-check col-4">
+															<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+															<label class="form-check-label" for="inlineRadio1_b">강의 (만족도)</label>
 														</div>
-													</div>										
-												</td>
-											</tr>
-											<tr>
-												<th class="align-top pt-3">대상 상세 <i class="text-req ms-1">*</i></th>
-												<td colspan="3">
-													<p class="text-primary">지정하지 않은 항목은 [전체] 대상으로 설정됩니다.</p>
-													<div class="row row-x4 align-items-center mt-1">
-														<div class="col-4">
-															<select class="form-select" data-choices data-choices-search-false>
-																<option value="01">계열</option>
-																<option value="02">option 2</option>
-																<option value="03">option 3</option>
-															</select>
-														</div>
-														<div class="col-4">
-															<select class="form-select" data-choices data-choices-search-false>
-																<option value="01">지점</option>
-																<option value="02">option 2</option>
-																<option value="03">option 3</option>
-															</select>
-														</div>
-														<div class="col-4">
-															<select class="form-select" data-choices data-choices-search-false>
-																<option value="01">학과</option>
-																<option value="02">option 2</option>
-																<option value="03">option 3</option>
-															</select>
+														<div class="form-check col-4">
+															<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_c" value="b">
+															<label class="form-check-label" for="inlineRadio1_c">교육</label>
 														</div>
 													</div>
-													<div class="row row-x4 align-items-center mt-1 pt-1 border-top">
-														<div class="col-8">
-															<select class="form-select" data-choices data-choices-search-false>
-																<option value="01">개강일</option>
-																<option value="02">option 2</option>
-																<option value="03">option 3</option>
-															</select>
+												</div>										
+											</td>
+										</tr>
+										<tr>
+											<th>설문 대상 <i class="text-req ms-1">*</i></th>
+											<td colspan="3">
+												<div class="col-auto">
+													<div class="form-inline">
+														<div class="form-check col-4">
+															<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_a" value="a" checked="">
+															<label class="form-check-label" for="inlineRadio2_a">수강생 (재학생)</label>
 														</div>
-													</div>									
-												</td>
-											</tr>
-											<tr>
-												<th>설문 시작일 <i class="text-req ms-1">*</i></th>
-												<td>
-													<div class="col-140px">
-														<div class="input-group-flatpickr">
-															<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+														<div class="form-check col-4">
+															<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_b" value="b">
+															<label class="form-check-label" for="inlineRadio2_b">임직원 (재직)</label>
 														</div>
-													</div>	
-												</td>
-												<th>설문 기간 <i class="text-req ms-1">*</i></th>
-												<td>
-													<div class="col-150px">
-														<div class=" align-items-center">
-															<input type="text" class="form-control text-end col-140px d-inline-block align-middle" value="7"><span class="form-text mt-0 ms-1">일</span>
+													</div>
+												</div>										
+											</td>
+										</tr>
+										<tr>
+											<th class="align-top pt-3">대상 상세 <i class="text-req ms-1">*</i></th>
+											<td colspan="3">
+												<p class="text-primary">지정하지 않은 항목은 [전체] 대상으로 설정됩니다.</p>
+												<div class="row row-x4 align-items-center mt-1">
+													<div class="col-4">
+														<select>
+															<option value="01">계열</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+													<div class="col-4">
+														<select>
+															<option value="01">지점</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+													<div class="col-4">
+														<select>
+															<option value="01">학과</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>
+												<div class="row row-x4 align-items-center mt-1 pt-1 border-top">
+													<div class="col-8">
+														<select>
+															<option value="01">개강일</option>
+															<option value="02">option 2</option>
+															<option value="03">option 3</option>
+														</select>
+													</div>
+												</div>									
+											</td>
+										</tr>
+										<tr>
+											<th>설문 시작일 <i class="text-req ms-1">*</i></th>
+											<td>
+												<div class="col-140px">
+													<div class="input-group-flatpickr">
+														<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													</div>
+												</div>	
+											</td>
+											<th>설문 기간 <i class="text-req ms-1">*</i></th>
+											<td>
+												<div class="col-150px">
+													<div class=" align-items-center">
+														<input type="text" class="form-control text-end col-140px d-inline-block align-middle" value="7"><span class="form-text mt-0 ms-1">일</span>
+													</div>
+												</div>	
+											</td>
+										</tr>
+										<tr>
+											<th>설문지 형태 <i class="text-req ms-1">*</i></th>
+											<td colspan="3">
+												<div class="col-auto">
+													<div class="form-inline">
+														<div class="form-check col-5">
+															<input class="form-check-input" type="radio" name="inlineRadio3" id="inlineRadio3_a" value="a" checked="">
+															<label class="form-check-label" for="inlineRadio3_a">페이지 내 전체 문항</label>
 														</div>
-													</div>	
-												</td>
-											</tr>
-											<tr>
-												<th>설문지 형태 <i class="text-req ms-1">*</i></th>
-												<td colspan="3">
-													<div class="col-auto">
-														<div class="form-inline">
-															<div class="form-check col-5">
-																<input class="form-check-input" type="radio" name="inlineRadio3" id="inlineRadio3_a" value="a" checked="">
-																<label class="form-check-label" for="inlineRadio3_a">페이지 내 전체 문항</label>
-															</div>
-															<div class="form-check col-5">
-																<input class="form-check-input" type="radio" name="inlineRadio3" id="inlineRadio3_b" value="b">
-																<label class="form-check-label" for="inlineRadio3_b">페이지당 1개 문항</label>
-															</div>
+														<div class="form-check col-5">
+															<input class="form-check-input" type="radio" name="inlineRadio3" id="inlineRadio3_b" value="b">
+															<label class="form-check-label" for="inlineRadio3_b">페이지당 1개 문항</label>
 														</div>
-													</div>										
-												</td>
-											</tr>
-											<tr>
-												<th>접근 경로<i class="text-req ms-1">*</i></th>
-												<td colspan="3">
-													<div class="col-auto">
-														<div class="form-inline">
-															<div class="form-check col-5">
-																<input class="form-check-input" type="radio" name="inlineRadio4" id="inlineRadio4_a" value="a" checked="">
-																<label class="form-check-label" for="inlineRadio4_a">버튼</label>
-															</div>
-															<div class="form-check col-5">
-																<input class="form-check-input" type="radio" name="inlineRadio4" id="inlineRadio4_b" value="b">
-																<label class="form-check-label" for="inlineRadio4_b">메인 팝업 + 버튼</label>
-															</div>
+													</div>
+												</div>										
+											</td>
+										</tr>
+										<tr>
+											<th>접근 경로<i class="text-req ms-1">*</i></th>
+											<td colspan="3">
+												<div class="col-auto">
+													<div class="form-inline">
+														<div class="form-check col-5">
+															<input class="form-check-input" type="radio" name="inlineRadio4" id="inlineRadio4_a" value="a" checked="">
+															<label class="form-check-label" for="inlineRadio4_a">버튼</label>
 														</div>
-													</div>										
-												</td>
-											</tr>
-											<tr>
-												<th>사용 여부<i class="text-req ms-1">*</i></th>
-												<td>
-													<div class="col-auto">
-														<div class="form-inline">
-															<div class="form-check col-5">
-																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_a" value="a" checked="">
-															<label class="form-check-label" for="inlineRadio5_a">사용</label>
-															</div>
-															<div class="form-check col-5">
-																<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_b" value="b">
-																<label class="form-check-label" for="inlineRadio5_b">미사용</label>
-															</div>
+														<div class="form-check col-5">
+															<input class="form-check-input" type="radio" name="inlineRadio4" id="inlineRadio4_b" value="b">
+															<label class="form-check-label" for="inlineRadio4_b">메인 팝업 + 버튼</label>
 														</div>
-													</div>										
-												</td>
-												<th></th>
-												<td></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+													</div>
+												</div>										
+											</td>
+										</tr>
+										<tr>
+											<th>사용 여부<i class="text-req ms-1">*</i></th>
+											<td>
+												<div class="col-auto">
+													<div class="form-inline">
+														<div class="form-check col-5">
+															<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_a" value="a" checked="">
+														<label class="form-check-label" for="inlineRadio5_a">사용</label>
+														</div>
+														<div class="form-check col-5">
+															<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_b" value="b">
+															<label class="form-check-label" for="inlineRadio5_b">미사용</label>
+														</div>
+													</div>
+												</div>										
+											</td>
+											<th></th>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
 
 							</div><!-- // col -->
 
-							<div class="col-50p">
+							<div class="col-50p overflow-y-auto" style="max-height:500px;">
 								<div class="table-head bg-light p-2 mt-0 position-relative">
 									<div class="table-title">설문지 작성</div>
 									<div class="title-right-btn">
@@ -1051,81 +1047,79 @@
 									</div>
 								</div><!-- // table-head -->
 
-								<div class="table-body">
-									<table class="table">
-										<colgroup>
-											<col style="width:110px">
-											<col style="">
-											<col style="width:110px">
-											<col style="">
-										</colgroup>
-										<tbody>
-											<tr>
-												<th>설문 제목 <i class="text-req ms-1">*</i></th>
-												<td colspan="3">
-													<div class="col-auto">
-														<input type="text" class="form-control" placeholder="설문 제목을 입력하세요. (최대 100자)" value="">
-													</div>									
-												</td>
-											</tr>
-											<tr>
-												<th class="align-top pt-3">시작 문구</th>
-												<td colspan="3">
-													<div class="comment-enter mt-0">
-														<textarea class="form-control" placeholder="설문지 상단에 노출될 문구를 입력하세요. (최대 2,000자)" rows="3"></textarea>
-													</div>									
-												</td>
-											</tr>
-											<tr>
-												<th class="align-top pt-3 position-relative">설문 문항 <i class="text-req ms-1">*</i>
-													<button type="submit" class="btn btn-outline-active btn-sm position-absolute bottom-0 start-0 ms-1 mb-2">+ 질문 추가</button>
-												</th>
-												<td colspan="3">
-													<div class="modal-survey-list">
-														<div class="survey-list">
-															<div class="row mb-1 mt-0">
-																<span class="form-text col-1 pt-1">질문1</span>
-																<div class="col-11">
-																	<input type="text" class="form-control" placeholder="질문을 입력하세요. (최대 500자)" value="">
-																</div>
+								<table class="table">
+									<colgroup>
+										<col style="width:110px">
+										<col style="">
+										<col style="width:110px">
+										<col style="">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>설문 제목 <i class="text-req ms-1">*</i></th>
+											<td colspan="3">
+												<div class="col-auto">
+													<input type="text" class="form-control" placeholder="설문 제목을 입력하세요. (최대 100자)" value="">
+												</div>									
+											</td>
+										</tr>
+										<tr>
+											<th class="align-top pt-3">시작 문구</th>
+											<td colspan="3">
+												<div class="comment-enter mt-0">
+													<textarea class="form-control" placeholder="설문지 상단에 노출될 문구를 입력하세요. (최대 2,000자)" rows="3"></textarea>
+												</div>									
+											</td>
+										</tr>
+										<tr>
+											<th class="align-top pt-3 position-relative">설문 문항 <i class="text-req ms-1">*</i>
+												<button type="submit" class="btn btn-outline-active btn-sm position-absolute bottom-0 start-0 ms-1 mb-2">+ 질문 추가</button>
+											</th>
+											<td colspan="3">
+												<div class="modal-survey-list">
+													<div class="survey-list">
+														<div class="row mb-1 mt-0">
+															<span class="form-text col-1 pt-1">질문1</span>
+															<div class="col-11">
+																<input type="text" class="form-control" placeholder="질문을 입력하세요. (최대 500자)" value="">
 															</div>
-															<div class="row align-items-center mt-1 pt-1">
-																<div class="col-12">
-																	<a href="#" class="btn col-140px btn-outline-active inline-block align-middle">이미지 추가</a>
-																	<span class="form-text mt-0 ms-1 text-primary">가로 OOO px 권장</span>
-																</div>
-															</div>
-															<div class="row align-items-center mt-1 pt-1">
-																<div class="col-12">
-																	<div class="col-140px">
-																		<select class="form-select" data-choices data-choices-search-false>
-																			<option value="01">문항 유형</option>
-																			<option value="02">option 2</option>
-																			<option value="03">option 3</option>
-																		</select>
-																	</div>
-																</div>
-															</div>	
-															<div class="row mt-3">
-																<div class="col-lg-12 text-lg-end">
-																	<button type="submit" class="btn btn-outline-active btn-sm">삭제</button>
-																</div>
-															</div>	
 														</div>
-													</div>						
-												</td>
-											</tr>
-											<tr>
-												<th class="align-top pt-3">마무리 문구</th>
-												<td colspan="3">
-													<div class="comment-enter mt-0">
-														<textarea class="form-control" placeholder="설문에 참여해 주셔서 감사합니다." rows="3"></textarea>
-													</div>									
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>	
+														<div class="row align-items-center mt-1 pt-1">
+															<div class="col-12">
+																<a href="#" class="btn col-140px btn-outline-active inline-block align-middle">이미지 추가</a>
+																<span class="form-text mt-0 ms-1 text-primary">가로 OOO px 권장</span>
+															</div>
+														</div>
+														<div class="row align-items-center mt-1 pt-1">
+															<div class="col-12">
+																<div class="col-140px">
+																	<select>
+																		<option value="01">문항 유형</option>
+																		<option value="02">option 2</option>
+																		<option value="03">option 3</option>
+																	</select>
+																</div>
+															</div>
+														</div>	
+														<div class="row mt-3">
+															<div class="col-lg-12 text-lg-end">
+																<button type="submit" class="btn btn-outline-active btn-sm">삭제</button>
+															</div>
+														</div>	
+													</div>
+												</div>						
+											</td>
+										</tr>
+										<tr>
+											<th class="align-top pt-3">마무리 문구</th>
+											<td colspan="3">
+												<div class="comment-enter mt-0">
+													<textarea class="form-control" placeholder="설문에 참여해 주셔서 감사합니다." rows="3"></textarea>
+												</div>									
+											</td>
+										</tr>
+									</tbody>
+								</table>	
 							</div><!-- // col -->
 						</div><!-- // row -->
 

@@ -961,14 +961,12 @@
               <h5 class="card-title">설문지 관리 </h5>
 
               <div class="row">
-                <div class="col-11 row-cols">
-                  <div class="col-auto">
-                    <select class="form-select" data-choices data-choices-search-false>
-                      <option value="01">설문진행일</option>
-                      <option value="02">option 2</option>
-                      <option value="03">option 3</option>
-                    </select>
-                  </div>
+                <div class="col-10 gap-2">
+                  <select>
+                    <option value="01">설문진행일</option>
+                    <option value="02">option 2</option>
+                    <option value="03">option 3</option>
+                  </select>
                   <div class="col-140px">
                     <div class="input-group-flatpickr">
                       <input type="text" id="startDate" class="form-control flatpickr-input form-datepicker"
@@ -978,56 +976,45 @@
                   <div class="col-auto">
 										<a href="#" class="btn btn-point">오늘</a>
 									</div>
-                  <div class="col-xxxl-13 col-xxl-3 col-4">
-                    <select class="form-select" data-choices data-choices-search-false>
-                      <option value="01">계열선택</option>
-                      <option value="02">option 2</option>
-                      <option value="03">option 3</option>
-                    </select>
-                  </div>
-                  <div class="col-xxxl-13 col-xxl-3 col-4">
-                    <select class="form-select" data-choices data-choices-search-false>
-                      <option value="01">지점선택</option>
-                      <option value="02">option 2</option>
-                      <option value="03">option 3</option>
-                    </select>
-                  </div>
-                  <div class="col-xxxl-13 col-xxl-3 col-4">
-                    <select class="form-select" data-choices data-choices-search-false>
-                      <option value="01">설문유형선택</option>
-                      <option value="02">option 2</option>
-                      <option value="03">option 3</option>
-                    </select>
-                  </div>
-                  <div class="col-xxxl-13 col-xxl-3 col-4">
-                    <select class="form-select" data-choices data-choices-search-false>
-                      <option value="01">설문대상</option>
-                      <option value="02">option 2</option>
-                      <option value="03">option 3</option>
-                    </select>
-                  </div>
-                  <div class="col-xxxl-13 col-xxl-3 col-4">
-                    <select class="form-select" data-choices data-choices-search-false>
-                      <option value="01">설문상태</option>
-                      <option value="02">option 2</option>
-                      <option value="03">option 3</option>
-                    </select>
-                  </div>
-                  <div class="col-xxxl-13 col-xxl-3 col-4">
-                    <select class="form-select" data-choices data-choices-search-false>
-                      <option value="01">사용여부</option>
-                      <option value="02">option 2</option>
-                      <option value="03">option 3</option>
-                    </select>
-                  </div>
-                  <div class="col-auto">
+                  <select>
+                    <option value="01">계열선택</option>
+                    <option value="02">option 2</option>
+                    <option value="03">option 3</option>
+                  </select>
+                  <select>
+                    <option value="01">지점선택</option>
+                    <option value="02">option 2</option>
+                    <option value="03">option 3</option>
+                  </select>
+                  <select>
+                    <option value="01">설문유형선택</option>
+                    <option value="02">option 2</option>
+                    <option value="03">option 3</option>
+                  </select>
+                  <select>
+                    <option value="01">설문대상</option>
+                    <option value="02">option 2</option>
+                    <option value="03">option 3</option>
+                  </select>
+                  <select>
+                    <option value="01">설문상태</option>
+                    <option value="02">option 2</option>
+                    <option value="03">option 3</option>
+                  </select>
+                  <select>
+                    <option value="01">사용여부</option>
+                    <option value="02">option 2</option>
+                    <option value="03">option 3</option>
+                  </select>
+                  <div class="col-200px">
                     <input type="text" class="form-control" placeholder="설문 제목, 등록자를 입력하세요.">
                   </div>
+                  
                 </div>
-                <div class="col-1">
-                  <div class="col-12"><button type="button" class="btn btn-point search-btn">초기화</button></div>
-                  <div class="col-12"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
-                </div>
+                <div class="col-2 d-flex">
+									<div class="col-6 pe-1"><button type="button" class="btn btn-point search-btn">초기화</button></div>
+									<div class="col-6"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
+								</div>
               </div><!-- // row -->
             </div><!-- // card-header -->
 
@@ -1102,7 +1089,7 @@
           <div class="page-footer-btn-left">
             <div class="flex-grow-1 row align-items-center">
               <div class="col-auto">
-                <select class="form-select" data-choices data-choices-search-false>
+                <select>
                   <option value="01">20개</option>
                   <option value="02">option 2</option>
                   <option value="03">option 3</option>
@@ -1290,12 +1277,12 @@
         <!-- // modal-header -->
 
         <div class="modal-body">
-          <div class="mbody-pt-survey">
+          <div class="mbody-pt-survey overflow-y-auto overflow-x-hidden" style="height: 400px;">
             <div class="pt-survey-head">
               <h6><u>총 4개 설문에 참여하실 수 있습니다.</u></h6>
             </div>
             <div class="survey-drop mt-2">
-              <select class="form-select" data-choices="" data-choices-search-false="">
+              <select>
                 <option value="">설문 참여하고 포인트 500점 받으세요.</option>
                 <option value="a">
                   설문 참여하고 포인트 500점 받으세요1
