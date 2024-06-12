@@ -33,11 +33,19 @@
 		<div class="app-menu navbar-menu">
 			<div class="navbar-brand-box">
 				<div class="brand-select">
-					<select class="form-select" data-choices data-choices-search-false>
+					
+					<!-- <select>
 						<option value="">컴퓨터강남</option>
+						<option value="">option2</option>
+						<option value="">option3</option>
+					</select> -->
+
+					<select>
+						<option value="">컴퓨터강남</option>
+						<option value="">option2</option>
+						<option value="">option3</option>
 					</select>
 				</div>
-				
 			</div><!-- // navbar-brand-box -->
 
 			<div id="scrollbar">
@@ -414,7 +422,7 @@
 							</div> -->
 							<!-- // card-member-profile -->
 
-							<div class="card-member-info col-auto">
+							<div class="card-member-info col-auto w-100 m-0">
 								<div class="card-member-head">
 									<h6>나수강 (여자)</h6>
 								</div>
@@ -427,30 +435,29 @@
 								<div class="row">
 									<div class="col-4">
 										<label for="" class="form-label">이메일주소</label>
-										<div class="d-flex gap-1">
+										<div class="d-flex gap-1 align-items-center">
 											<input type="text" class="form-control" id="" value="010-1234-1234">
+											<span>@</span>
 											<input type="text" class="form-control" id="" value="010-1234-1234">
-											<div class="flex-grow-1">
-												<select id="" class="form-select" data-choices data-choices-search-false>
-													<option value="01">직접입력</option>
-													<option value="02">option 2</option>
-													<option value="03">option 3</option>
-												</select>
-											</div>
+											<select id="" class="form-select">
+												<option value="01">직접입력</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
 										</div>
 									</div>
 									<div class="col-4">
 										<label for="" class="form-label">거주지역</label>
 										<div class="d-flex gap-1">
 											<div class="flex-grow-1">
-												<select id="" class="form-select" data-choices data-choices-search-false>
+												<select id="" class="form-select">
 													<option value="01">직접입력</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
 												</select>
 											</div>
 											<div class="flex-grow-1">
-												<select id="" class="form-select" data-choices data-choices-search-false>
+												<select id="" class="form-select">
 													<option value="01">일러스트</option>
 													<option value="02">option 2</option>
 													<option value="03">option 3</option>
@@ -460,7 +467,7 @@
 									</div>
 									<div class="col-4">
 										<label for="" class="form-label">대표학과 <i class="text-req">*</i></label>
-										<select id="" class="form-select" data-choices data-choices-search-false>
+										<select id="" class="form-select">
 											<option value="01">직접입력</option>
 											<option value="02">option 2</option>
 											<option value="03">option 3</option>
@@ -513,58 +520,52 @@
 								</tbody>
 							</table>
 						</div>
+						<div class="page-footer-row mt-5">
+							<div class="page-footer-btn-left">
+								<div class="flex-grow-1 row align-items-center">
+									<div class="col-auto">
+										<select>
+											<option value="01">20개</option>
+											<option value="02">option 2</option>
+											<option value="03">option 3</option>
+										</select>
+									</div>
+									<div class="col-auto ms-2">
+										<h5 class="table-result">검색결과 총 <span class="text-point">165</span>건</h5>
+									</div>
+								</div>
+							</div>
+		
+							<ul class="pagination pagination-separated">
+								<li class="page-item disabled">
+									<a href="#" class="page-link">←</a>
+								</li>
+								<li class="page-item">
+									<a href="#" class="page-link">1</a>
+								</li>
+								<li class="page-item active">
+									<a href="#" class="page-link">2</a>
+								</li>
+								<li class="page-item">
+									<a href="#" class="page-link">3</a>
+								</li>
+								<li class="page-item">
+									<a href="#" class="page-link">4</a>
+								</li>
+								<li class="page-item">
+									<a href="#" class="page-link">5</a>
+								</li>
+								<li class="page-item">
+									<a href="#" class="page-link">→</a>
+								</li>
+							</ul>
+							<div class="page-footer-btn-right">
+								<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point">등록</a>
+							</div>
+						</div>
 					</div><!-- // card-body -->
 				</div>
 			</div><!-- // page-content -->
-
-			<!-- page-footer -->
-			<div class="page-footer">
-
-				<div class="page-footer-row">
-					<div class="page-footer-btn-left">
-						<div class="flex-grow-1 row align-items-center">
-							<div class="col-auto">
-								<select class="form-select" data-choices data-choices-search-false>
-									<option value="01">20개</option>
-									<option value="02">option 2</option>
-									<option value="03">option 3</option>
-								</select>
-							</div>
-							<div class="col-auto ms-2">
-								<h5 class="table-result">검색결과 총 <span class="text-point">165</span>건</h5>
-							</div>
-						</div>
-					</div>
-
-					<ul class="pagination pagination-separated">
-						<li class="page-item disabled">
-							<a href="#" class="page-link">←</a>
-						</li>
-						<li class="page-item">
-							<a href="#" class="page-link">1</a>
-						</li>
-						<li class="page-item active">
-							<a href="#" class="page-link">2</a>
-						</li>
-						<li class="page-item">
-							<a href="#" class="page-link">3</a>
-						</li>
-						<li class="page-item">
-							<a href="#" class="page-link">4</a>
-						</li>
-						<li class="page-item">
-							<a href="#" class="page-link">5</a>
-						</li>
-						<li class="page-item">
-							<a href="#" class="page-link">→</a>
-						</li>
-					</ul>
-					<div class="page-footer-btn-right">
-						<a href="#pageModal17" data-bs-toggle="modal" class="btn btn-point">등록</a>
-					</div>
-				</div>
-			</div><!-- // page-footer -->
-
 		</div><!-- // main-content -->
 
 	</div><!-- // layout-wrapper -->

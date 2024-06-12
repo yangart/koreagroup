@@ -15,7 +15,7 @@
 	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
 	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
 
-	<link href="./assets/css/style.staff.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -33,8 +33,10 @@
 		<div class="app-menu navbar-menu">
 			<div class="navbar-brand-box">
 				<div class="brand-select">
-					<select class="form-select" data-choices data-choices-search-false>
+					<select>
 						<option value="">컴퓨터강남</option>
+						<option value="">option2</option>
+						<option value="">option3</option>
 					</select>
 				</div>
 				
@@ -410,16 +412,16 @@
 								<div class="d-flex gap-1 align-items-center">
 									<label for="" class="form-label mb-0">등록일</label>
 									<div class="input-group-flatpickr">
-										<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="">
+										<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
 									</div>
-									<button type="button" class="btn btn-outline-light">오늘</button>
+									<button type="button" class="btn btn-point">오늘</button>
 								</div>
-								<select class="form-select" data-choices data-choices-search-false>
+								<select>
 									<option value="01">대상자 구분</option>
 									<option value="02">option 2</option>
 									<option value="03">option 3</option>
 								</select>
-								<select class="form-select" data-choices data-choices-search-false>
+								<select>
 									<option value="01">진행상태</option>
 									<option value="02">option 2</option>
 									<option value="03">option 3</option>
@@ -466,14 +468,14 @@
 										<td>16</td>
 										<td class="text-end">12,000,000</td>
 										<td>
-											<select class="form-select">
+											<select>
 												<option value="01">진행상태</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
 											</select>
 										</td>
 										<td>
-											<select class="form-select">
+											<select>
 												<option value="01">진행상태</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -498,14 +500,14 @@
 										<td>16</td>
 										<td class="text-end">12,000,000</td>
 										<td>
-											<select class="form-select">
+											<select>
 												<option value="01">진행상태</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
 											</select>
 										</td>
 										<td>
-											<select class="form-select">
+											<select>
 												<option value="01">진행상태</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -531,14 +533,14 @@
 										<td>16</td>
 										<td class="text-end">12,000,000</td>
 										<td>
-											<select class="form-select">
+											<select>
 												<option value="01">진행상태</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
 											</select>
 										</td>
 										<td>
-											<select class="form-select">
+											<select>
 												<option value="01">진행상태</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -563,14 +565,14 @@
 										<td>16</td>
 										<td class="text-end">12,000,000</td>
 										<td>
-											<select class="form-select">
+											<select>
 												<option value="01">진행상태</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
 											</select>
 										</td>
 										<td>
-											<select class="form-select">
+											<select>
 												<option value="01">진행상태</option>
 												<option value="02">option 2</option>
 												<option value="03">option 3</option>
@@ -681,6 +683,33 @@
 	<script src="./assets/js/plugins.js"></script>
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
+
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function (selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function (selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function (selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			// "plugins": [new rangePlugin({ input: "#endDate" })]
+		})
+
+	</script>
 </body>
 
 </html>

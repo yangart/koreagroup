@@ -42,47 +42,36 @@
 								<td><strong class="txt-primary">1,000,000</strong>원</td>
 							</tr>
 							<tr>
-								<th>결제수단</th>
+								<th>결재수단</th>
 								<td>
-									<div class="form-inline">
-										<div>
-											<input type="radio" class="btn-check" name="pay" id="pay_a" autocomplete="off" checked="">
-											<label class="btn" for="pay_a">카드결제</label>
+									<ul class="nav modal-tabmenu" id="modalTabMenu" role="tablist">
+										<li><a class="tab-btn active" href="#modalTabs1" data-bs-toggle="tab" role="tab" aria-controls="modalTabs1" aria-selected="true">카드 결제</a></li>
+										<li><a class="tab-btn" href="#modalTabs2" data-bs-toggle="tab" role="tab" aria-controls="modalTabs2" aria-selected="false">온라인 결제</a></li>
+									</ul>
+									<div class="modal-tabpanel" id="modalTabPanel">
+										<div class="tab-pane active" id="modalTabs1" role="tabpanel">
+											<div class="row row-x6">
+												<div class="col-120px">
+													<select class="w-100">
+														<option value="01">일시불</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+												<div class="col-200px"><input type="text" class="form-control" value="1,000,000" disabled="disabled"></div>
+												<div class="col-auto"><button class="btn btn-point-deep">결제요청</button></div>
+											</div>											
 										</div>
-										<div>
-											<input type="radio" class="btn-check" name="pay" id="pay_b" autocomplete="off">
-											<label class="btn" for="pay_b">온라인결제</label>
+										<div class="tab-pane" id="modalTabs2" role="tabpanel">
+											<div class="row row-x6">
+												<div class="col-200px"><input type="text" class="form-control" value="010-1234-5678"></div>
+												<div class="col-200px"><input type="text" class="form-control" value="1,000,000" disabled="disabled"></div>
+												<div class="col-auto"><button class="btn btn-danger">결제취소</button></div>
+											</div>											
 										</div>
-									</div>
-									<div class="d-flex gap-1 mt-2">
-										<select class="form-select" style="width:120px;">
-											<option value="">일시불</option>
-										</select>
-										<input type="text" class="form-control align-right" value="1,000,000" readonly style="width:120px;">
-										<button class="btn btn-point-deep">결제요청</button>
 									</div>
 								</td>
-							</tr>
-							<tr>
-								<th>결제수단</th>
-								<td>
-									<div class="form-inline">
-										<div>
-											<input type="radio" class="btn-check" name="pay1" id="pay_a1" autocomplete="off">
-											<label class="btn" for="pay_a1">카드결제</label>
-										</div>
-										<div>
-											<input type="radio" class="btn-check" name="pay1" id="pay_b1" autocomplete="off"  checked="">
-											<label class="btn" for="pay_b1">온라인결제</label>
-										</div>
-									</div>
-									<div class="d-flex gap-1 mt-2">
-										<input type="text" class="form-control" value="010-000-0000" style="width:120px;">
-										<input type="text" class="form-control align-right" value="1,000,000" readonly style="width:120px;">
-										<button class="btn btn-danger">결제취소</button>
-									</div>
-								</td>
-							</tr>
+							</tr>	
 						</tbody>
 					</table>
 					<!-- // mbody-forms -->

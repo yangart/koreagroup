@@ -49,7 +49,7 @@
 								aria-expanded="false" aria-controls="sideNav1">
 								<i class="ico1"></i> <span>기본정보</span>
 							</a>
-							<div class="menu-dropdown collapse" id="sideNav1">
+							<div class="menu-dropdown collapse show" id="sideNav1">
 								<ul class="nav nav-sm flex-column">
 									<li class="nav-item">
 										<a href="#sideNav1-1" class="nav-link" aria-controls="sideNav1-1">개인정보</a>
@@ -195,11 +195,11 @@
 										<tr>
 											<th>생년월일 <i class="text-req">*</i></th>
 											<td colspan="3">
-												<div class="d-flex gap-2">
+												<div class="d-flex gap-2 col-6">
 													<input type="text" class="form-control">
-													<select id="" class="form-select" data-choices data-choices-search-false>
-														<option value="01">컴퓨터강남 &gt; 사업부 &gt; 1_1팀</option>
-														<option value="02">option 2</option>
+													<select>
+														<option value="01">앙력</option>
+														<option value="02">음력</option>
 														<option value="03">option 3</option>
 													</select>
 												</div>
@@ -270,19 +270,19 @@
 										<tr>
 											<td colspan="4">
 												<div class="d-flex gap-2">
-													<select id="" class="form-select" data-choices data-choices-search-false>
+													<select>
 														<option value="01">부</option>
 														<option value="02">option 2</option>
 														<option value="03">option 3</option>
 													</select>
 													<input type="text" class="form-control" value="김아빠">
 													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
-													<select id="" class="form-select" data-choices data-choices-search-false>
+													<select>
 														<option value="01">건강보험적용</option>
 														<option value="02">option 2</option>
 														<option value="03">option 3</option>
 													</select>
-													<select id="" class="form-select" data-choices data-choices-search-false>
+													<select>
 														<option value="01">비동거</option>
 														<option value="02">option 2</option>
 														<option value="03">option 3</option>
@@ -294,19 +294,43 @@
 										<tr>
 											<td colspan="4">
 												<div class="d-flex gap-2">
-													<select id="" class="form-select" data-choices data-choices-search-false>
+													<select>
 														<option value="01">부</option>
 														<option value="02">option 2</option>
 														<option value="03">option 3</option>
 													</select>
 													<input type="text" class="form-control" value="김아빠">
 													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
-													<select id="" class="form-select" data-choices data-choices-search-false>
+													<select>
 														<option value="01">건강보험적용</option>
 														<option value="02">option 2</option>
 														<option value="03">option 3</option>
 													</select>
-													<select id="" class="form-select" data-choices data-choices-search-false>
+													<select>
+														<option value="01">비동거</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+													<button class="btn btn-danger">삭제</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="4">
+												<div class="d-flex gap-2">
+													<select>
+														<option value="01">부</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+													<input type="text" class="form-control" value="김아빠">
+													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													<select>
+														<option value="01">건강보험적용</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+													<select>
 														<option value="01">비동거</option>
 														<option value="02">option 2</option>
 														<option value="03">option 3</option>
@@ -349,32 +373,260 @@
 								</table>
 							</div>
 							<div class="col-6">
+								<table class="table-write mb-3">
+									<colgroup>
+										<col style="width: 15%;">
+										<col style="width: 30%;">
+										<col style="width: 15%;">
+										<col style="width: 30%;">
+										<col style="width: 10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th colspan="4">학력</th>
+											<th class="text-end"><button class="btn btn-outline-primary">추가</button></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>학교명 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+											<th>학교구분 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+											<td rowspan="3">
+												<button class="btn btn-danger">삭제</button>
+											</td>
+										</tr>
+										<tr>
+											<th>입학일 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex flex-column gap-2">
+													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													<select class="form-select">
+														<option value="01">편입</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</td>
+											<th>졸업일 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex flex-column gap-2">
+													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													<select class="form-select">
+														<option value="01">졸업상태</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>전공 <i class="text-req">*</i></th>
+											<td>
+												<input type="text" class="form-control">
+											</td>
+											<th>학점 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex gap-2">
+													<input type="text" class="form-control">
+													<select class="form-select">
+														<option value="01">만점</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="table-write mb-3">
+									<colgroup>
+										<col style="width: 15%;">
+										<col style="width: 30%;">
+										<col style="width: 15%;">
+										<col style="width: 30%;">
+										<col style="width: 10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th colspan="4">경력</th>
+											<th class="text-end"><button class="btn btn-outline-primary">추가</button></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>회사명 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+											<th>계약 유형 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+											<td rowspan="3">
+												<button class="btn btn-danger">삭제</button>
+											</td>
+										</tr>
+										<tr>
+											<th>입사일 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex flex-column gap-2">
+													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													<select class="form-select">
+														<option value="01">편입</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</td>
+											<th>퇴사일 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex flex-column gap-2">
+													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													<select class="form-select">
+														<option value="01">퇴사상태</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>직위/직책 <i class="text-req">*</i></th>
+											<td>
+												<input type="text" class="form-control">
+											</td>
+											<th>급여 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex gap-2 align-items-center">
+													<select class="form-select">
+														<option value="01">연봉</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+													<input type="text" class="form-control">
+													<span class="fs-12px">원</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 
+								<table class="table-write mb-3">
+									<colgroup>
+										<col style="width: 15%;">
+										<col style="width: 30%;">
+										<col style="width: 15%;">
+										<col style="width: 30%;">
+										<col style="width: 10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th colspan="4">경력</th>
+											<th class="text-end"><button class="btn btn-outline-primary">추가</button></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>회사명 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+											<th>계약 유형 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+											<td rowspan="3">
+												<button class="btn btn-danger">삭제</button>
+											</td>
+										</tr>
+										<tr>
+											<th>입사일 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex flex-column gap-2">
+													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													<select class="form-select">
+														<option value="01">편입</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</td>
+											<th>퇴사일 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex flex-column gap-2">
+													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													<select class="form-select">
+														<option value="01">퇴사상태</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>직위/직책 <i class="text-req">*</i></th>
+											<td>
+												<input type="text" class="form-control">
+											</td>
+											<th>급여 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex gap-2 align-items-center">
+													<select class="form-select">
+														<option value="01">연봉</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+													<input type="text" class="form-control">
+													<span class="fs-12px">원</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>담당업무 <i class="text-req">*</i></th>
+											<td colspan="3">
+												<input type="text" class="form-control">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<table class="table-write mb-3">
+									<colgroup>
+										<col style="width: 15%;">
+										<col style="width: 30%;">
+										<col style="width: 15%;">
+										<col style="width: 30%;">
+										<col style="width: 10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th colspan="4">자격증</th>
+											<th class="text-end"><button class="btn btn-outline-primary">추가</button></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>자격증명 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+											<th>발행처 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+											<td rowspan="3">
+												<button class="btn btn-danger">삭제</button>
+											</td>
+										</tr>
+										<tr>
+											<th>취득일 <i class="text-req">*</i></th>
+											<td>
+												<div class="d-flex flex-column gap-2">
+													<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													<select class="form-select">
+														<option value="01">편입</option>
+														<option value="02">option 2</option>
+														<option value="03">option 3</option>
+													</select>
+												</div>
+											</td>
+											<th>자격번호 <i class="text-req">*</i></th>
+											<td><input type="text" class="form-control"></td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div><!-- // row -->
-						<div class="table-responsive">
-							<table class="table table-card">
-								<colgroup>
-									<col style="width: 60px;">
-									<col style="width: 240px;">
-									<col>
-								</colgroup>
-								<thead>
-									<tr>
-										<th>번호</th>
-										<th>유형</th>
-										<th>내용</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>원서등록(일반)</td>
-										<td  class="text-start">내용내용내용내용내용내용내용내용내용</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
 					</div><!-- // card-body -->
 				</div>
 			</div><!-- // page-content -->
@@ -386,7 +638,7 @@
 					<div class="page-footer-btn-left">
 						<div class="flex-grow-1 row align-items-center">
 							<div class="col-auto">
-								<select class="form-select" data-choices data-choices-search-false>
+								<select class="form-select">
 									<option value="01">20개</option>
 									<option value="02">option 2</option>
 									<option value="03">option 3</option>
@@ -444,40 +696,6 @@
 	<script src="./assets/js/plugins.js"></script>
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
-	<script type="text/javascript">
-		$('#startDate').flatpickr({
-			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
-			enableTime: false,        // 시간 선택 활성화
-			time_24hr: false,         // 24시간 형식 사용
-			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
-			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
-			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
-			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
-			locale: 'ko',            // 한국어로 지역화
-			onOpen: function (selectedDates, dateStr, instance) {
-				// 위젯이 열릴 때 실행할 코드
-			},
-			onClose: function (selectedDates, dateStr, instance) {
-				// 위젯이 닫힐 때 실행할 코드
-			},
-			onChange: function (selectedDates, dateStr, instance) {
-				// 날짜가 변경될 때 실행할 코드
-			},
-			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
-			altInput: true,           // 추가 입력란 활성화
-			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
-			"plugins": [new rangePlugin({ input: "#endDate" })]
-		})
-
-	</script>
-
-	<script>
-		$(function () {
-			$('#pageModalB').modal('show');
-			$('#pageModal17').modal('show');
-		});
-	</script>
-
 </body>
 
 </html>
