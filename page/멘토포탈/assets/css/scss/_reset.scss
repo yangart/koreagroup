@@ -61,7 +61,7 @@
   --card-body-padding-y: 24px;
   --card-body-padding-x: 16px;
   --card-filter-padding-y: 8px;
-  --card-filter-padding-x: 24px;
+  --card-filter-padding-x: 16px;
  /* --fc : fullCalendar js */
   --fc-small-font-size: .85em;
   --fc-page-bg-color: #fff;
@@ -98,16 +98,18 @@
   'GRAD' 0,
   'opsz' 16px
 }
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 8px;
+    height:8px;
 }
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background:rgba(0,0,0,.2);
     border-radius:4px;
     border:1px solid #fff;
   }
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background:transparant;
+    width: 8px;
 }
 html {
   position: relative;

@@ -703,24 +703,26 @@
     &.active{ display:block; }
   }
 } 
-
 .filter-group {
   padding: 0 !important;
-  overflow: hidden;
+  overflow-y: auto;
+  // overflow-x:auto;
+  // flex-wrap: nowrap;
+  // height:100%;
 
   > .row {
-    height: calc(100vh - 115px - 24px);
+    height: 100%;
   }
 
   .col {
     height: 100%;
     border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+     border-bottom: 1px solid var(--border-color);
     padding: 0;
 
-    &:nth-of-type(4n) {
-      border-right: 0;
-    }
+     &:nth-of-type(4n) {
+       border-right: 0;
+     }
 
     $max-filter-columns: 20;
 
@@ -743,6 +745,30 @@
       $k: ($i * 4) + 1;
       &:nth-last-of-type(4):nth-of-type(#{$k}) {
         border-bottom: 0;
+      }
+    }
+  }
+}
+.card-body {
+  .assign-border { 
+    flex: 1;
+    overflow: hidden;
+  }
+  > .row:has(.filter-group) { 
+    height:100%;      
+    flex-wrap: nowrap; 
+    > [class^=col-] {
+      height:100%;
+    }
+    > .col-8 {
+      display:flex;
+      flex-direction: column;
+
+      .filter-group {
+        height:100%;
+        &:has(.col:nth-of-type(5)) {
+          .col { height:50%;overflow:hidden; }
+        }
       }
     }
   }
@@ -802,6 +828,7 @@
     color: #212529;
   }
 }
+.simplebar-wrapper {}
 
 .nav-pills {
   > li > a {
@@ -1144,6 +1171,9 @@ select:not(.form-select) {
 }
 
 /* component */
+.table-responsive + .fnc-area {
+  margin-top:2rem;
+}
 .fnc-area,
 .flex-area {
   display: flex;
@@ -1157,6 +1187,8 @@ select:not(.form-select) {
     gap: .5rem;
     align-items: center;
     flex: 0 0 auto;
+    max-width:100%;
+    min-height:32px;
     // width: auto;
     > * {
       display: inline-block;
@@ -1168,6 +1200,7 @@ select:not(.form-select) {
       margin-bottom: 0;
     }
   }
+  .l-area { flex:1; }
   .r-area {
     justify-content: flex-end;
     margin-left:auto;

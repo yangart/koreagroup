@@ -84,7 +84,7 @@
   --card-body-padding-y: 24px;
   --card-body-padding-x: 16px;
   --card-filter-padding-y: 8px;
-  --card-filter-padding-x: 24px;
+  --card-filter-padding-x: 16px;
   /* --fc : fullCalendar js */
   --fc-small-font-size: .85em;
   --fc-page-bg-color: #fff;
@@ -119,18 +119,20 @@
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 16px;
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   border: 1px solid #fff;
 }
 
-::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: transparant;
+  width: 8px;
 }
 
 html {
@@ -3656,10 +3658,11 @@ body {
   height: 36px;
 }
 .page-header-topbar .btn-topbar {
+  display: inline-block;
   width: 36px;
   height: 36px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   border: 0 none;
   border-radius: 50%;
   background-color: transparent;
@@ -3679,6 +3682,8 @@ body {
   background-position: 50% 50%;
   background-size: 20px 20px;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .page-header-topbar .btn-topbar i.topbar-calendar {
   background-image: url(../img/topbar-calendar-ico@2x.png);
@@ -3688,6 +3693,18 @@ body {
 }
 .page-header-topbar .btn-topbar i.topbar-bell {
   background-image: url(../img/topbar-bell-ico@2x.png);
+}
+.page-header-topbar .btn-topbar:hover {
+  background-color: var(--first-color);
+}
+.page-header-topbar .btn-topbar:hover i.topbar-calendar {
+  background-image: url(../img/topbar-calendar-ico@2x-on.png);
+}
+.page-header-topbar .btn-topbar:hover i.topbar-time {
+  background-image: url(../img/topbar-time-ico@2x-on.png);
+}
+.page-header-topbar .btn-topbar:hover i.topbar-bell {
+  background-image: url(../img/topbar-bell-ico@2x-on.png);
 }
 .page-header-topbar .badge {
   position: absolute;
@@ -3768,6 +3785,9 @@ body {
 
 .page-footer-btn-right {
   right: 0;
+}
+.page-footer-btn-right .btn {
+  margin-left: 0.5rem;
 }
 
 .alram-dropdown {
@@ -5998,13 +6018,13 @@ body {
 }
 
 .modal-xxl {
-  max-width: 1800px;
-  min-width: 1480px;
+  max-width: 1480px;
+  min-width: 1240px;
 }
 
 .modal-xl {
-  max-width: 1600px;
-  min-width: 1280px;
+  max-width: 1200px;
+  min-width: 1080px;
 }
 
 .modal-lg {
@@ -6082,6 +6102,15 @@ body:not(.modal-open) .modal-footer {
 .modal-dialog {
   margin: 1.75rem auto;
   max-height: calc(100vh - 3.5rem);
+}
+.modal-dialog .modal-content {
+  max-height: calc(100vh - 3.5rem);
+}
+.modal-dialog.modal-xl, .modal-dialog.modal-xxl {
+  height: calc(100vh - 3.5rem);
+}
+.modal-dialog.modal-xl .modal-content, .modal-dialog.modal-xxl .modal-content {
+  height: calc(100vh - 3.5rem);
 }
 
 .modal-header {
@@ -9304,10 +9333,10 @@ a.list-more {
 
 .filter-group {
   padding: 0 !important;
-  overflow: hidden;
+  overflow-y: auto;
 }
 .filter-group > .row {
-  height: calc(100vh - 115px - 24px);
+  height: 100%;
 }
 .filter-group .col {
   height: 100%;
@@ -9739,6 +9768,37 @@ a.list-more {
   border-bottom: 0;
 }
 
+.card-body .assign-border {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+}
+.card-body > .row:has(.filter-group) {
+  height: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.card-body > .row:has(.filter-group) > [class^=col-] {
+  height: 100%;
+}
+.card-body > .row:has(.filter-group) > .col-8 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card-body > .row:has(.filter-group) > .col-8 .filter-group {
+  height: 100%;
+}
+.card-body > .row:has(.filter-group) > .col-8 .filter-group:has(.col:nth-of-type(5)) .col {
+  height: 50%;
+  overflow: hidden;
+}
+
 .filter-list {
   margin: 0;
   padding: 0;
@@ -10132,6 +10192,10 @@ select:not(.form-select) {
 }
 
 /* component */
+.table-responsive + .fnc-area {
+  margin-top: 2rem;
+}
+
 .fnc-area,
 .flex-area {
   display: -webkit-box;
@@ -10161,6 +10225,8 @@ select:not(.form-select) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+  max-width: 100%;
+  min-height: 32px;
 }
 .fnc-area .l-area > *,
 .fnc-area .r-area > *,
@@ -10179,6 +10245,12 @@ select:not(.form-select) {
 .flex-area .l-area .choices,
 .flex-area .r-area .choices {
   margin-bottom: 0;
+}
+.fnc-area .l-area,
+.flex-area .l-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .fnc-area .r-area,
 .flex-area .r-area {

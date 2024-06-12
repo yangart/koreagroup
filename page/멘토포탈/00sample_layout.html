@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>멘토포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="멘토포털">
+	<meta property="og:description" content="멘토포털">
+	<meta name="description" content="멘토포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+		
+		<div class="page-topbar"></div><!-- page-topbar -->
+		<div class="app-menu navbar-menu"></div><!-- app-menu -->
+		
+		<!---- main-content ---->		
+		<div class="main-content">
+
+			<div class="page-header"></div><!-- page-header -->
+			
+			<div class="page-content">
+				<div class="page-content-title">- 레이아웃</div>
+
+				<div class="card">
+					<!-- 상단 탭영역 -->
+					<div class="card-head">
+						<ul class="nav card-nav" id="mentorTabs" role="tablist">
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel1" aria-controls="mentorPanel1" aria-selected="false">탭 메뉴 01</a></li>
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel2" aria-controls="mentorPanel2" aria-selected="false">탭 메뉴 02</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel3" aria-controls="mentorPanel3" aria-selected="false">탭 메뉴 03</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel4" aria-controls="mentorPanel4" aria-selected="false">탭 메뉴 04</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#mentorPanel5" aria-controls="mentorPanel5" aria-selected="true">탭 메뉴 05</a></li>
+						</ul><!-- // card-nav -->		
+					</div><!-- // card-head -->
+		
+					<div class="card-body inner-scroll">
+						<!-- 검색 영역 -->
+						<div class="fnc-area">
+							<div class="l-area">
+								<div class="input-group d-inline-flex">
+									<span class="input-group-text">텍스트</span>
+									<input type="text" class="form-control form-datepicker" id="startDate">
+								</div>								
+								<a href="#" class="btn btn-outline-primary" id="selectToday">오늘</a>
+								<select>
+									<option value="01">좌측 영역</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<div class="d-inline-flex">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="r-area">
+								<select>
+									<option value="01">우측 영역</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<div class="input-group d-inline-flex">
+									<input type="text" class="form-control" placeholder="요청자, 제목 입력">
+									<a href="#" class="btn btn-outline-primary">검색</a>
+								</div>
+							</div>
+						</div>
+						<!-- //검색영역 -->
+
+						<div class="table-responsive">
+							콘텐츠(테이블) 영역
+						</div>
+					</div><!-- // card-body -->		
+				</div><!-- // card -->		
+			</div><!-- page-content -->
+
+			<footer class="page-footer"></footer><!-- page-footer -->
+
+		</div><!-- // main-content -->
+	</div><!-- // layout-wrapper -->
+		
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.min.js"></script>
+	<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.ko.js"></script>
+	<script src="./assets/js/includeHtml.js"></script><!-- 퍼블리싱 반복요소 인클루드를 위한 스크립트 -->
+
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+</body>
+</html>

@@ -794,10 +794,11 @@ body {
     height: 36px;
   }
   .btn-topbar {
+    display:inline-block;
     width: 36px;
     height: 36px;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
     border: 0 none;
     border-radius: 50%;
     background-color: transparent;
@@ -815,6 +816,8 @@ body {
       background-position: 50% 50%;
       background-size: 20px 20px;
       background-repeat: no-repeat;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
       &.topbar-calendar {
         background-image: url(../img/topbar-calendar-ico@2x.png);
       }
@@ -823,6 +826,20 @@ body {
       }
       &.topbar-bell {
         background-image: url(../img/topbar-bell-ico@2x.png);
+      }
+    }
+    &:hover {
+      background-color:var(--first-color);
+      i {
+        &.topbar-calendar {
+          background-image: url(../img/topbar-calendar-ico@2x-on.png);
+        }
+        &.topbar-time {
+          background-image: url(../img/topbar-time-ico@2x-on.png);
+        }
+        &.topbar-bell {
+          background-image: url(../img/topbar-bell-ico@2x-on.png);
+        }
       }
     }
   }
@@ -886,6 +903,9 @@ body {
 }
 .page-footer-btn-right {
   right: 0;
+  .btn {
+    margin-left:0.5rem;
+  }
 }
 .alram-dropdown {
   width: 300px;
