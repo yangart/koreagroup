@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 	Author	: Somi Park, Hyojeong Yang
 	Date	: 2024-06-01
@@ -2645,7 +2646,8 @@ body {
       -ms-user-select: none;
           user-select: none;
 }
-.datepicker td, .datepicker th {
+.datepicker td,
+.datepicker th {
   text-align: center;
   width: 28px;
   height: 28px;
@@ -2720,7 +2722,8 @@ body {
   border-top: 6px solid #fff;
 }
 
-.table-striped .datepicker table tr td, .table-striped .datepicker table tr th {
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
   background-color: transparent;
 }
 
@@ -2786,82 +2789,27 @@ body {
 .datepicker table tr td.selected:hover, .datepicker table tr td.selected.disabled:hover, .datepicker table tr td.selected:active, .datepicker table tr td.selected:hover:active {
   background-color: var(--first-color);
 }
-.datepicker table tr td.selected.disabled {
+.datepicker table tr td.selected.disabled, .datepicker table tr td.selected[disabled] {
   color: #999;
+  background-color: #808080;
 }
-.datepicker table tr td.selected.disabled:hover, .datepicker table tr td.selected.disabled:active, .datepicker table tr td.selected.disabled:hover:active {
+.datepicker table tr td.selected.disabled:hover, .datepicker table tr td.selected.disabled:active, .datepicker table tr td.selected.disabled:hover:active, .datepicker table tr td.selected[disabled]:hover, .datepicker table tr td.selected[disabled]:active, .datepicker table tr td.selected[disabled]:hover:active {
   color: #999;
-}
-.datepicker table tr td.selected.active, .datepicker table tr td.selected:hover.active {
   background-color: #808080;
-}
-.datepicker table tr td.selected.disabled {
-  background-color: #808080;
-}
-.datepicker table tr td.selected.disabled.active, .datepicker table tr td.selected.disabled:hover.active {
-  background-color: #808080;
-}
-.datepicker table tr td.selected:hover.disabled {
-  background-color: #808080;
-}
-.datepicker table tr td.selected.disabled.disabled, .datepicker table tr td.selected.disabled:hover.disabled {
-  background-color: #808080;
-}
-.datepicker table tr td.selected[disabled], .datepicker table tr td.selected:hover[disabled] {
-  background-color: #808080;
-}
-.datepicker table tr td.selected.disabled[disabled], .datepicker table tr td.selected.disabled:hover[disabled] {
-  background-color: #808080;
-}
-.datepicker table tr td.selected:active, .datepicker table tr td.selected:hover:active {
-  background-color: #666666 \9 ;
-}
-.datepicker table tr td.selected.disabled:active, .datepicker table tr td.selected.disabled:hover:active {
-  background-color: #666666 \9 ;
-}
-.datepicker table tr td.selected.active, .datepicker table tr td.selected:hover.active {
-  background-color: #666666 \9 ;
-}
-.datepicker table tr td.selected.disabled.active, .datepicker table tr td.selected.disabled:hover.active {
-  background-color: #666666 \9 ;
 }
 .datepicker table tr td.active {
   background-color: var(--first-color);
   color: #fff;
 }
-.datepicker table tr td.active:hover {
-  background-color: var(--first-color-h);
-}
-.datepicker table tr td.active.disabled {
+.datepicker table tr td.active.disabled, .datepicker table tr td.active[disabled], .datepicker table tr td.active:hover[disabled] {
   background-color: var(--color-gr-h);
   color: #fff;
 }
-.datepicker table tr td.active.disabled:hover {
+.datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active[disabled]:hover, .datepicker table tr td.active[disabled]:active, .datepicker table tr td.active[disabled]:hover:active, .datepicker table tr td.active:hover[disabled]:hover, .datepicker table tr td.active:hover[disabled]:active, .datepicker table tr td.active:hover[disabled]:hover:active {
   background-color: var(--color-gr-h);
 }
-.datepicker table tr td.active:hover, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active:active, .datepicker table tr td.active:hover:active {
-  background-color: var(--first-color);
-}
-.datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover:active {
-  background-color: var(--first-color);
-}
-.datepicker table tr td.active.active, .datepicker table tr td.active:hover.active {
-  background-color: var(--first-color);
-}
-.datepicker table tr td.active.disabled {
-  background-color: var(--first-color);
-}
-.datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled:hover.active {
-  background-color: var(--first-color);
-}
-.datepicker table tr td.active:hover.disabled {
-  background-color: var(--first-color);
-}
-.datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:hover.disabled {
-  background-color: var(--first-color);
-}
-.datepicker table tr td.active[disabled], .datepicker table tr td.active:hover[disabled] {
-  background-color: var(--first-color);
+.datepicker table tr td.active:hover, .datepicker table tr td.active:active, .datepicker table tr td.active:hover:active {
+  background-color: var(--first-color-h);
 }
 .datepicker table tr td span {
   display: block;
@@ -2889,7 +2837,7 @@ body {
 .datepicker table tr td span.active {
   background-color: var(--first-color);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="var(--first-color)", GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="#3ba4fd", GradientType=0);
   border-color: var(--first-color) var(--first-color) var(--first-color-h);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
@@ -2898,10 +2846,10 @@ body {
 }
 .datepicker table tr td span.active:hover {
   background-color: var(--first-color);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#08c), to(var(--first-color)));
-  background-image: linear-gradient(to bottom, #08c, var(--first-color));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#08c), to(#3ba4fd));
+  background-image: linear-gradient(to bottom, #08c, #3ba4fd);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="var(--first-color)", GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="#3ba4fd", GradientType=0);
   border-color: var(--first-color) var(--first-color) var(--first-color-h);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
@@ -2910,10 +2858,10 @@ body {
 }
 .datepicker table tr td span.active.disabled {
   background-color: var(--first-color);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#08c), to(var(--first-color)));
-  background-image: linear-gradient(to bottom, #08c, var(--first-color));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#08c), to(#3ba4fd));
+  background-image: linear-gradient(to bottom, #08c, #3ba4fd);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="var(--first-color)", GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="#3ba4fd", GradientType=0);
   border-color: var(--first-color) var(--first-color) var(--first-color-h);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
@@ -2922,10 +2870,10 @@ body {
 }
 .datepicker table tr td span.active.disabled:hover {
   background-color: var(--first-color);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#08c), to(var(--first-color)));
-  background-image: linear-gradient(to bottom, #08c, var(--first-color));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#08c), to(#3ba4fd));
+  background-image: linear-gradient(to bottom, #08c, #3ba4fd);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="var(--first-color)", GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="#3ba4fd", GradientType=0);
   border-color: var(--first-color) var(--first-color) var(--first-color-h);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
@@ -2935,56 +2883,34 @@ body {
 .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover:active {
   background-color: var(--first-color);
 }
-.datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover:active {
-  background-color: var(--first-color);
-}
-.datepicker table tr td span.active.active, .datepicker table tr td span.active:hover.active {
-  background-color: var(--first-color);
-}
 .datepicker table tr td span.active.disabled {
   background-color: var(--first-color);
 }
-.datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:hover.active {
+.datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled:hover.disabled {
   background-color: var(--first-color);
-}
-.datepicker table tr td span.active:hover.disabled {
-  background-color: var(--first-color);
-}
-.datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:hover.disabled {
-  background-color: var(--first-color);
-}
-.datepicker table tr td span.active[disabled], .datepicker table tr td span.active:hover[disabled] {
-  background-color: var(--first-color);
-}
-.datepicker table tr td span.active.disabled[disabled], .datepicker table tr td span.active.disabled:hover[disabled] {
-  background-color: var(--first-color);
-}
-.datepicker table tr td span.active:active, .datepicker table tr td span.active:hover:active {
-  background-color: var(--first-color-h) \9 ;
-}
-.datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover:active {
-  background-color: var(--first-color-h) \9 ;
 }
 .datepicker table tr td span.active.active, .datepicker table tr td span.active:hover.active {
-  background-color: var(--first-color-h) \9 ;
-}
-.datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:hover.active {
-  background-color: var(--first-color-h) \9 ;
+  background-color: var(--first-color);
 }
 .datepicker .datepicker-switch {
   width: 145px;
   cursor: pointer;
 }
-.datepicker .prev, .datepicker .next, .datepicker tfoot tr th {
+.datepicker .prev,
+.datepicker .next,
+.datepicker tfoot tr th {
   cursor: pointer;
 }
 .datepicker .datepicker-switch:hover {
   color: var(--first-color);
 }
-.datepicker .prev:hover, .datepicker .next:hover, .datepicker tfoot tr th:hover {
+.datepicker .prev:hover,
+.datepicker .next:hover,
+.datepicker tfoot tr th:hover {
   background: #eee;
 }
-.datepicker .prev.disabled, .datepicker .next.disabled {
+.datepicker .prev.disabled,
+.datepicker .next.disabled {
   visibility: hidden;
 }
 .datepicker .cw {
@@ -3028,6 +2954,265 @@ body {
   border: 1px solid #ccc;
   margin-left: -5px;
   margin-right: -5px;
+}
+
+/* 모달 */
+body:not(.modal-open) .modal-wrap {
+  background: #f9fafb;
+}
+body:not(.modal-open) .modal-content {
+  padding-top: 52px;
+  padding-bottom: 52px;
+  background: #f9fafb;
+}
+
+.modal-wrap .modal-header,
+body:not(.modal-open) .modal-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  z-index: 100;
+  background: #fff;
+}
+.modal-wrap .modal-content,
+body:not(.modal-open) .modal-content {
+  padding-top: 52px;
+  padding-bottom: 52px;
+  background: #f9fafb;
+}
+.modal-wrap .modal-footer,
+body:not(.modal-open) .modal-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  z-index: 100;
+  background: #fff;
+}
+
+.modal-dialog {
+  margin: 1.75rem auto;
+  max-height: calc(100vh - 3.5rem);
+}
+.modal-dialog .modal-header {
+  position: relative;
+  padding: calc(var(--bs-gutter-y) / 2) var(--bs-gutter-x);
+  border-bottom: 1px solid var(--border-color-light);
+  border-radius: 4px 4px 0 0;
+}
+.modal-dialog .modal-content {
+  border-radius: 8px;
+  border: solid 1px var(--border-color-light);
+}
+.modal-dialog .modal-body {
+  padding: calc(var(--bs-gutter-y) / 2) var(--bs-gutter-x) var(--bs-gutter-y);
+  background: #fff;
+  padding: 24px 24px;
+  background: #fff;
+  overflow-y: auto;
+}
+.modal-dialog .modal-footer {
+  padding: calc(var(--bs-gutter-y) / 2) var(--bs-gutter-x);
+  border-top: 1px solid var(--border-color-light);
+  border-radius: 0 0 4px 4px;
+}
+.modal-dialog .modal-footer > * {
+  margin: 0 2px;
+}
+.modal-dialog .modal-footer .btn {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.modal-header .btn-close {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background: url(../img/modal-close-ico@2x.png) no-repeat 50% 50%;
+  background-size: 16px auto;
+  opacity: 1;
+}
+.modal-header .badge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32px;
+  margin-left: 12px;
+  padding: 0 16px;
+  border-radius: 32px;
+  background: var(--second-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  color: #fff;
+}
+.modal-header .user {
+  display: inline-block;
+}
+
+.modal-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-flex .modal-title {
+  white-space: nowrap;
+}
+
+.modal-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #212529;
+}
+.modal-user b {
+  font-weight: 600;
+}
+
+.modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #495057;
+}
+
+.modal-text {
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: center;
+  color: #212529;
+}
+.modal-text + * {
+  margin-top: 20px;
+}
+
+.modal-xxl .modal-body,
+.modal-xl .modal-body {
+  padding-top: 0;
+}
+
+.modal-xs .modal-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-body .form-control {
+  padding: 12px;
+}
+.modal-body .form-control + .form-control {
+  margin-top: 6px;
+}
+.modal-body .form-control[type=file] {
+  line-height: 44px;
+  padding: 0 12px;
+}
+.modal-body select {
+  height: 44px;
+}
+
+.modal-tabmenu {
+  margin-bottom: 16px;
+  -webkit-box-shadow: inset 0 -1px 0 0 var(--border-color-light);
+          box-shadow: inset 0 -1px 0 0 var(--border-color-light);
+}
+.modal-tabmenu li .tab-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 44px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  color: #b5b5b5;
+}
+.modal-tabmenu li .tab-btn.active {
+  color: #212529;
+  -webkit-box-shadow: inset 0 -2px 0 0 var(--btn-point-color);
+          box-shadow: inset 0 -2px 0 0 var(--btn-point-color);
+}
+
+.round-tabmenu {
+  margin-bottom: 12px;
+}
+.round-tabmenu li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.round-tabmenu li .tab-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  text-align: left;
+  color: var(--btn-point-color);
+}
+.round-tabmenu li .tab-btn.active {
+  color: #fff;
+  background-color: var(--btn-point-color);
+}
+
+.modal-xxl {
+  max-width: 1480px;
+  min-width: 1240px;
+}
+
+.modal-xl {
+  max-width: 1200px;
+  min-width: 1080px;
+}
+
+.modal-lg {
+  max-width: 850px;
+  min-width: 720px;
+}
+
+.modal-md {
+  max-width: 704px;
+  min-width: 680px;
+}
+
+.modal-sm {
+  max-width: 480px;
+  min-width: 480px;
+}
+
+.modal-xs {
+  max-width: 320px;
+  min-width: 320px;
 }
 
 .fnc-area,
@@ -4851,888 +5036,6 @@ a.list-more {
 
 .row-gap-24y {
   --bs-gutter-y: 24px !important;
-}
-
-/* Modal */
-.modal {
-  min-width: 1024px;
-  padding: 0 1.75rem !important;
-}
-
-.modal-dialog {
-  margin: 1.75rem auto;
-}
-
-.modal.show {
-  display: block;
-}
-
-.modal-reg {
-  max-width: 850px;
-}
-
-.modal-full {
-  padding: 0 !important;
-}
-.modal-full .modal-dialog {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: 1024px;
-  min-height: auto !important;
-  margin: 0 !important;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.modal-xxl {
-  max-width: 1800px;
-  min-width: 1480px;
-}
-
-.modal-xl {
-  max-width: 1600px;
-  min-width: 1280px;
-}
-
-.modal-lg {
-  max-width: 850px;
-  min-width: 720px;
-}
-
-.modal-md {
-  max-width: 704px;
-  min-width: 680px;
-}
-
-.modal-sm {
-  max-width: 480px;
-  min-width: 480px;
-}
-
-.modal-xs {
-  max-width: 320px;
-  min-width: 320px;
-}
-
-body:not(.modal-open) .modal-wrap {
-  background: #f9fafb;
-}
-body:not(.modal-open) .modal-content {
-  padding-top: 52px;
-  padding-bottom: 52px;
-  background: #f9fafb;
-}
-
-.modal-wrap .modal-content {
-  padding-top: 52px;
-  padding-bottom: 52px;
-  background: #f9fafb;
-}
-
-body:not(.modal-open) .modal-header,
-.modal-wrap .modal-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 52px;
-  z-index: 100;
-  background: #fff;
-}
-
-body:not(.modal-open) .modal-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
-  z-index: 100;
-  background: #fff;
-}
-
-.modal-wrap .modal-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
-  z-index: 100;
-  background: #fff;
-}
-.modal-wrap .modal-header,
-.modal-wrap .modal-body,
-.modal-wrap .modal-footer {
-  min-width: 1024px;
-}
-
-.modal-dialog {
-  margin: 1.75rem auto;
-}
-
-.modal-content {
-  border-radius: 8px;
-  border: solid 1px var(--border-color-light);
-}
-
-.modal-header {
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--border-color-light);
-  border-radius: 4px 4px 0 0;
-}
-
-.modal-header-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #495057;
-}
-.modal-header-info div {
-  position: relative;
-  margin-left: 6px;
-  padding-left: 7px;
-}
-.modal-header-info div::before {
-  display: block;
-  clear: both;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 1px;
-  height: 8px;
-  margin-top: -4px;
-  background: #d9d9d9;
-}
-
-.modal-header .btn-close {
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  padding: 0;
-  background: url(../img/modal-close-ico@2x.png) no-repeat 50% 50%;
-  background-size: 16px auto;
-  opacity: 1;
-}
-.modal-header .badge {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 32px;
-  margin-left: 12px;
-  padding: 0 16px;
-  border-radius: 32px;
-  background: var(--second-color);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  color: #fff;
-}
-.modal-header .user {
-  display: inline-block;
-}
-
-.modal-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.modal-flex .modal-title {
-  white-space: nowrap;
-}
-
-.modal-header-tabs li {
-  margin-left: 60px;
-}
-.modal-header-tabs li + li {
-  margin-left: 48px;
-}
-.modal-header-tabs li .tab-btn {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 28px;
-  padding: 0;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  text-align: left;
-  color: #818c97;
-}
-.modal-header-tabs li .tab-btn.active {
-  color: #212529;
-}
-.modal-header-tabs li .tab-btn.active::after {
-  display: block;
-  clear: both;
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #212529;
-}
-
-.modal-header-step {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  margin-left: 36px;
-  border-radius: 16px;
-  -webkit-box-shadow: inset 0 0 0 1px var(--border-color-light);
-  box-shadow: inset 0 0 0 1px var(--border-color-light);
-}
-.modal-header-step li {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 32px;
-  padding: 0 16px;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #212529;
-  white-space: nowrap;
-}
-.modal-header-step li b {
-  font-weight: 600;
-}
-.modal-header-step.step1 li.item1 {
-  background: var(--btn-deep-color);
-  color: #fff;
-}
-.modal-header-step.step2 li.item1, .modal-header-step.step2 li.item2 {
-  background: var(--btn-deep-color);
-  color: #fff;
-}
-.modal-header-step.step3 li.item1, .modal-header-step.step3 li.item2, .modal-header-step.step3 li.item3 {
-  background: var(--btn-deep-color);
-  color: #fff;
-}
-.modal-header-step.step1 li.item1 {
-  border-radius: 16px;
-}
-.modal-header-step.step2 li.item1 {
-  border-radius: 16px 0 0 16px;
-}
-.modal-header-step.step2 li.item2 {
-  border-radius: 0 16px 16px 0;
-}
-.modal-header-step.step3 li.item1 {
-  border-radius: 16px 0 0 16px;
-}
-.modal-header-step.step3 li.item2 {
-  border-radius: 0;
-}
-.modal-header-step.step3 li.item3 {
-  border-radius: 0 16px 16px 0;
-}
-.modal-header-step li .tab-btn.active {
-  color: #212529;
-}
-.modal-header-step li .tab-btn.active::after {
-  display: block;
-  clear: both;
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #212529;
-}
-.modal-header-step + div {
-  margin-left: 6px;
-}
-
-.modal-btn-tabs li .tab-btn {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 36px;
-  padding: 0 16px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  color: var(--btn-point-color);
-}
-.modal-btn-tabs li .tab-btn.active {
-  color: #fff;
-  background: var(--btn-point-color);
-}
-
-.modal-user {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #212529;
-}
-.modal-user b {
-  font-weight: 600;
-}
-
-.modal-header .modal-user .btn + .btn {
-  margin-left: 4px;
-}
-.modal-header .modal-user .btn-close {
-  margin-left: 24px;
-}
-
-.modal-logo {
-  height: 20px;
-}
-.modal-logo img {
-  height: 100%;
-  vertical-align: top;
-}
-
-.modal-title {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #495057;
-}
-
-.modal-text {
-  font-size: 14px;
-  line-height: 1.43;
-  text-align: center;
-  color: #212529;
-}
-.modal-text + * {
-  margin-top: 20px;
-}
-
-.modal-body {
-  padding: 12px 20px 20px;
-  background: #fff;
-}
-
-.modal-xxl .modal-body,
-.modal-xl .modal-body {
-  padding: 0 24px 20px;
-}
-
-.modal-sm .modal-body {
-  padding: 12px 20px 24px;
-}
-
-.modal-xs .modal-body {
-  padding: 20px;
-  text-align: center;
-}
-
-.modal-body .table-head {
-  margin-top: 20px;
-  margin-bottom: 8px;
-}
-.modal-body .table-card > :not(caption) > * > * {
-  padding: 6px 2px;
-}
-.modal-body .table-card .badge {
-  margin-right: 3px;
-  padding: 0 10px;
-  border-radius: 20px;
-  line-height: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-  color: #fff;
-}
-.modal-body .row {
-  --bs-gutter-x: 24px;
-  --bs-gutter-y: 16px;
-}
-.modal-body .form-control {
-  padding: 12px;
-}
-.modal-body .form-control + .form-control {
-  margin-top: 6px;
-}
-.modal-body .form-control[type=file] {
-  line-height: 44px;
-  padding: 0 12px;
-}
-.modal-body select {
-  height: 44px;
-}
-.modal-body .form-control-sm {
-  padding-top: calc(var(--form-padding-y) - 2px);
-  padding-bottom: calc(var(--form-padding-y) - 2px);
-}
-.modal-body .choices__inner {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.col-sm .choices__inner {
-  padding-top: calc(var(--form-padding-y) - 2px);
-  padding-bottom: calc(var(--form-padding-y) - 2px);
-}
-
-.modal-footer {
-  padding: 8px 20px;
-  border-top: 1px solid var(--border-color-light);
-  border-radius: 0 0 4px 4px;
-}
-.modal-footer > * {
-  margin: 0 2px;
-}
-.modal-footer .btn {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-/*
-.modal-footer.tuition-footer .item1 > div + div{margin-left:4px;}
-.modal-footer.tuition-footer .item2{text-align:right;font-size:14px;}
-.modal-footer.tuition-footer .item3{ font-size:14px;line-height:1.43;text-align:right;color:#212529;}
-.modal-footer.tuition-footer .item3 b{ font-size:20px;font-weight:600;line-height:1.5;}
-.modal-footer.tuition-footer .tuition b{margin-left:8px;}
-.modal-footer.tuition-footer{height:56px !important;padding:5px 20px;}
-*/
-.modal-tabmenu {
-  margin-bottom: 16px;
-  -webkit-box-shadow: inset 0 -1px 0 0 var(--border-color-light);
-          box-shadow: inset 0 -1px 0 0 var(--border-color-light);
-}
-.modal-tabmenu li .tab-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 44px;
-  padding: 0 12px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  color: #b5b5b5;
-}
-.modal-tabmenu li .tab-btn.active {
-  color: #212529;
-  -webkit-box-shadow: inset 0 -2px 0 0 var(--btn-point-color);
-          box-shadow: inset 0 -2px 0 0 var(--btn-point-color);
-}
-
-.round-tabmenu {
-  margin-bottom: 12px;
-}
-.round-tabmenu li {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-.round-tabmenu li .tab-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 36px;
-  padding: 0 12px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  text-align: left;
-  color: var(--btn-point-color);
-}
-.round-tabmenu li .tab-btn.active {
-  color: #fff;
-  background-color: var(--btn-point-color);
-}
-
-.modal-tabpanel > .tab-pane {
-  display: none;
-}
-.modal-tabpanel > .tab-pane.active {
-  display: block;
-}
-
-.mbody-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 44px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  color: #495057;
-}
-.mbody-title.row-0 {
-  height: auto;
-  margin-top: 20px;
-}
-
-.mbody-title-outline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 44px;
-  margin: 16px 0 12px;
-  padding: 0 12px;
-  border-radius: 4px;
-  border: solid 1px #ced4da;
-  background-color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  color: #212529;
-}
-
-.mbody-attendance {
-  max-height: 738px;
-  margin-bottom: 12px;
-}
-
-.mbody-forms + .mbody-btn {
-  margin-top: 20px;
-}
-
-.mbody-btn {
-  margin-top: 12px;
-  text-align: center;
-}
-.mbody-btn::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-.mbody-btn > * {
-  display: inline-block;
-}
-
-.mbody-btn-line {
-  padding-top: 12px;
-  border-top: 1px solid var(--border-color-light);
-  text-align: right;
-}
-
-.mbody-request {
-  margin-bottom: 8px;
-}
-.mbody-request > .row {
-  --bs-gutter-x: 0px;
-  --bs-gutter-y: 8px;
-}
-.mbody-request > .row + .row {
-  padding-top: 8px;
-}
-.mbody-request dl dt,
-.mbody-request dl dd {
-  min-height: 32px;
-  font-size: 14px;
-  line-height: 1.43;
-  text-align: left;
-}
-.mbody-request dl dt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 32px;
-  font-weight: 600;
-  color: #aaa;
-}
-.mbody-request dl dd {
-  color: #212529;
-}
-.mbody-request dl dt.deep {
-  color: #495057;
-}
-
-.mbody-reply {
-  border: 1px solid #ced4da;
-}
-
-.mbody-reply-list {
-  height: 629px;
-  padding: 16px;
-  padding-top: 0;
-  padding-right: 72px;
-}
-.mbody-reply-list .list-item {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-color-light);
-  font-size: 14px;
-  line-height: 1.43;
-  text-align: left;
-  color: #212529;
-}
-.mbody-reply-list .list-item div + div {
-  margin-top: 6px;
-}
-
-.mbody-reply-enter {
-  padding: 12px;
-  border-top: 1px solid #ced4da;
-}
-.mbody-search {
-  padding: 12px 0;
-}
-.mbody-search > .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.mbody-survey-click {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 50%;
-  right: -24px;
-  width: 48px;
-  height: 48px;
-  margin-top: -24px;
-  border-radius: 50%;
-  background-color: var(--btn-point-color);
-  font-size: 12px;
-  line-height: 1.33;
-  text-align: center;
-  color: #fff;
-}
-.mbody-survey-click img {
-  width: 16px;
-}
-
-.mbody-survey-foot > .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end !important;
-      -ms-flex-pack: end !important;
-          justify-content: flex-end !important;
-}
-.mbody-survey-foot dl {
-  padding: 8px 0;
-}
-.mbody-survey-foot dt,
-.mbody-survey-foot dd {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.43;
-  text-align: left;
-}
-.mbody-survey-foot dt {
-  color: #212529;
-}
-.mbody-survey-foot dt span,
-.mbody-survey-foot dt b,
-.mbody-survey-foot dt em {
-  position: relative;
-  display: inline-block;
-}
-.mbody-survey-foot dt b {
-  font-weight: 600px;
-}
-.mbody-survey-foot dt em {
-  font-weight: 600;
-  color: #aaa;
-}
-.mbody-survey-foot dt * + em {
-  margin-left: 6px;
-  padding-left: 7px;
-}
-.mbody-survey-foot dt * + em::after {
-  display: block;
-  clear: both;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 1px;
-  height: 8px;
-  margin-top: -4px;
-  background: #d9d9d9;
-}
-
-.modal-body .row-tuition .table-head {
-  margin-top: 0;
-}
-
-/* modal-wrap */
-.modal-wrap {
-  min-height: 100vh;
-  padding: 0 !important;
-  background: #fff;
-}
-.modal-wrap .modal-dialog {
-  max-width: 100%;
-  margin: 0 !important;
-}
-.modal-wrap .modal-content {
-  border-radius: 0;
-  border: 0 none;
-}
-.modal-wrap .modal-body {
-  padding: 12px 24px 40px;
-  background-color: #f9fafb;
-}
-.modal-wrap * + .mbody-subject {
-  margin-top: 48px;
-}
-.modal-wrap .mbody-subject {
-  margin-bottom: 20px;
-}
-.modal-wrap .mbody-subject dt {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #212529;
-}
-.modal-wrap .mbody-subject dt span {
-  font-size: 16px;
-  font-weight: 400;
-}
-.modal-wrap .mbody-subject dd {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #495057;
-}
-.modal-wrap .mbody-subject dt + dd {
-  margin-top: 4px;
-}
-.modal-wrap .mbody-title {
-  height: auto;
-  margin-bottom: 8px;
-}
-.modal-wrap * + .mbody-title {
-  margin-top: 20px;
-}
-
-.mbody-forms {
-  position: relative;
-}
-
-.mbody-rounded {
-  position: relative;
-  padding: 16px;
-  border-radius: 8px;
-  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.03);
-          box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.03);
-  background-color: #fff;
-}
-
-*:not(.mbody-title) + .mbody-rounded {
-  margin-top: 20px;
-}
-
-.mbody-forms dl.row {
-  --bs-gutter-x: 0px;
-  --bs-gutter-y: 0px;
-  margin: 0;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-.mbody-forms dl.row .row {
-  --bs-gutter-y: 0px;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
-}
-.mbody-forms dl.row + .row {
-  padding-top: 16px;
-}
-.mbody-forms dl dt,
-.mbody-forms dl dd {
-  min-height: 20px;
-  font-size: 14px;
-  line-height: 1.43;
-  text-align: left;
-}
-.mbody-forms dl dt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90px;
-  font-weight: 600;
-  color: #aaa;
-  -ms-flex-negative: 0 !important;
-      flex-shrink: 0 !important;
-}
-
-.modal-sm .mbody-forms dl dt {
-  width: 70px;
 }
 
 .mbody-forms dl dt i {
