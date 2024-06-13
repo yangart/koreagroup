@@ -52,8 +52,8 @@ body {
   }
 
   a:hover, button:hover, a.active {
-    color: #3ba4fd;
-    border-bottom: 3px solid #3ba4fd;
+    color: var(--btn-point-color);
+    border-bottom: 3px solid var(--btn-point-color);
   }
 }
 
@@ -208,7 +208,7 @@ body {
         }
 
         a {
-          background-color: #3ba4fd;
+          background-color: var(--btn-point-color);
           color: #fff;
         }
       }

@@ -357,7 +357,7 @@
         font-size: 14px;
         line-height: 20px;
         text-align: left;
-        color: #3ba4fd;
+        color: var(--btn-point-color);
 
         &.second {
             color: #fff;
@@ -384,8 +384,8 @@
     font-size: 14px;
     line-height: 20px;
     text-align: left;
-    color: #3ba4fd;
-    &.state1{background-color: #f0f3f7;  color: #3ba4fd;}
+    color: var(--btn-point-color);
+    &.state1{background-color: #f0f3f7;  color: var(--btn-point-color);}
     &.state2{  background-color: #eafaf1;color: #00b027;}
     &.state3{  background-color: #fdf1f1;  color: #fd3b3b;}
 }
@@ -394,7 +394,7 @@ a.list-more {
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    background: #3ba4fd url(../img/ico-list-more.png) no-repeat 50% 50%;
+    background: var(--btn-point-color) url(../img/ico-list-more.png) no-repeat 50% 50%;
 }
 
 .card-subject-column {
@@ -503,7 +503,7 @@ a.list-more {
     height: 248px;
 
     &.card1 {
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 4px 0 0 #3ba4fd;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 4px 0 0 var(--btn-point-color);
     }
 
     &.card2 {
@@ -563,7 +563,7 @@ a.list-more {
             font-size: 14px;
             font-weight: 600;
             line-height: 1.43;
-            color: #3ba4fd;
+            color: var(--btn-point-color);
 
             span {
                 margin-left: 6px;
@@ -692,7 +692,7 @@ a.list-more {
 .card-flex-table .state{width:130px;text-align:left;}
 .card-flex-table .cate{width:84px;text-align:center;}
 .card-flex-table .link{flex-grow:1;padding-left:100px;}
-.card-flex-table .link a{display:flex;align-items:center;font-size:14px;font-weight:600;line-height:1.43;color:#3ba4fd;}
+.card-flex-table .link a{display:flex;align-items:center;font-size:14px;font-weight:600;line-height:1.43;color:var(--btn-point-color);}
 .card-flex-table .name{width:200px;text-align:center;}
 .card-flex-table .date{width:140px;text-align:center;}
  */
@@ -909,17 +909,17 @@ a.list-more {
             color: #212529;
 
             &.type-on {
-                background-color: #3ba4fd;
+                background-color: var(--btn-point-color);
                 color: #fff;
             }
             &.type-late {
-                border: solid 1px #3ba4fd;
+                border: solid 1px var(--btn-point-color);
                 background-color: #f0f3f7;
             }
             &.type-leave {
-                border: solid 1px #3ba4fd;
+                border: solid 1px var(--btn-point-color);
                 background-color: #fff;
-                color: #3ba4fd;
+                color: var(--btn-point-color);
             }
             &.type-off {
                 background-color: #ff5033;
@@ -1070,7 +1070,7 @@ a.list-more {
             color: #212529;
 
             &.active {
-                background-color: #3ba4fd;
+                background-color: var(--btn-point-color);
                 color: #fff;
             }
         }
@@ -1114,7 +1114,7 @@ a.list-more {
     
     .breadcrumb-item {
         &.active {
-            color: #3ba4fd;
+            color: var(--btn-point-color);
             font-weight: 600;
         }
     
@@ -1462,7 +1462,7 @@ a.list-more {
 
         &.active {
             font-size: 14px;
-            color: #3ba4fd;
+            color: var(--btn-point-color);
 
             &::after {
                 display: block;
@@ -1473,7 +1473,7 @@ a.list-more {
                 left: 0;
                 width: 100%;
                 height: 2px;
-                background: #3ba4fd;
+                background: var(--btn-point-color);
             }
         }
     }
@@ -1932,12 +1932,12 @@ body:not(.modal-open) .modal-footer {
 
 .modal-content {
     border-radius: 8px;
-    border: solid 1px #e9ebec;
+    border: solid 1px var(--border-color-light);
 }
 
 .modal-header {
     padding: 12px 20px;
-    border-bottom: 1px solid #e9ebec;
+    border-bottom: 1px solid var(--border-color-light);
     border-radius: 4px 4px 0 0;
 }
 
@@ -1987,7 +1987,7 @@ body:not(.modal-open) .modal-footer {
         margin-left: 12px;
         padding: 0 16px;
         border-radius: 32px;
-        background: #0ab39c;
+        background: var(--second-color);
         font-size: 14px;
         font-weight: 600;
         line-height: 1.43;
@@ -2050,9 +2050,9 @@ body:not(.modal-open) .modal-footer {
     flex-wrap: nowrap;
     margin-left: 36px;
     border-radius: 16px;
-    -webkit-box-shadow: inset 0 0 0 1px #e6e8e9;
-    -moz-box-shadow: inset 0 0 0 1px #e6e8e9;
-    box-shadow: inset 0 0 0 1px #e6e8e9;
+    -webkit-box-shadow: inset 0 0 0 1px var(--border-color-light);
+    -moz-box-shadow: inset 0 0 0 1px var(--border-color-light);
+    box-shadow: inset 0 0 0 1px var(--border-color-light);
 
     li {
         position: relative;
@@ -2072,7 +2072,7 @@ body:not(.modal-open) .modal-footer {
     }
 
     &.step1 li.item1 {
-        background: #405189;
+        background: var(--btn-deep-color);
         color: #fff;
     }
 
@@ -2080,7 +2080,7 @@ body:not(.modal-open) .modal-footer {
 
         &.item1,
         &.item2 {
-            background: #405189;
+            background: var(--btn-deep-color);
             color: #fff;
         }
     }
@@ -2090,7 +2090,7 @@ body:not(.modal-open) .modal-footer {
         &.item1,
         &.item2,
         &.item3 {
-            background: #405189;
+            background: var(--btn-deep-color);
             color: #fff;
         }
     }
@@ -2155,11 +2155,11 @@ body:not(.modal-open) .modal-footer {
     font-size: 14px;
     font-weight: 600;
     line-height: 1.43;
-    color: #6571ff;
+    color: var(--btn-point-color);
 
     &.active {
         color: #fff;
-        background: #6571ff;
+        background: var(--btn-point-color);
     }
 }
 
@@ -2290,7 +2290,7 @@ body:not(.modal-open) .modal-footer {
 
 .modal-footer {
     padding: 8px 20px;
-    border-top: 1px solid #e9ebec;
+    border-top: 1px solid var(--border-color-light);
     border-radius: 0 0 4px 4px;
 
     >* {
@@ -2314,7 +2314,7 @@ body:not(.modal-open) .modal-footer {
 
 .modal-tabmenu {
     margin-bottom: 16px;
-    box-shadow: inset 0 -1px 0 0 #e9ebec;
+    box-shadow: inset 0 -1px 0 0 var(--border-color-light);
 
     li .tab-btn {
         display: flex;
@@ -2329,7 +2329,7 @@ body:not(.modal-open) .modal-footer {
 
         &.active {
             color: #212529;
-            box-shadow: inset 0 -2px 0 0 #6571ff;
+            box-shadow: inset 0 -2px 0 0 var(--btn-point-color);
         }
     }
 }
@@ -2351,11 +2351,11 @@ body:not(.modal-open) .modal-footer {
             font-weight: 600;
             line-height: 1.43;
             text-align: left;
-            color: #6571ff;
+            color: var(--btn-point-color);
 
             &.active {
                 color: #fff;
-                background-color: #6571ff;
+                background-color: var(--btn-point-color);
             }
         }
     }
@@ -2426,7 +2426,7 @@ body:not(.modal-open) .modal-footer {
 
 .mbody-btn-line {
     padding-top: 12px;
-    border-top: 1px solid #e9ebec;
+    border-top: 1px solid var(--border-color-light);
     text-align: right;
 }
 
@@ -2482,7 +2482,7 @@ body:not(.modal-open) .modal-footer {
 
     .list-item {
         padding: 16px 0;
-        border-bottom: 1px solid #e9ebec;
+        border-bottom: 1px solid var(--border-color-light);
         font-size: 14px;
         line-height: 1.43;
         text-align: left;
@@ -2521,7 +2521,7 @@ body:not(.modal-open) .modal-footer {
     height: 48px;
     margin-top: -24px;
     border-radius: 50%;
-    background-color: #6571ff;
+    background-color: var(--btn-point-color);
     font-size: 12px;
     line-height: 1.33;
     text-align: center;
@@ -2990,7 +2990,7 @@ body:not(.modal-open) .modal-footer {
         }
 
         +li {
-            border-top: 1px solid #e9ebec;
+            border-top: 1px solid var(--border-color-light);
         }
     }
 }
@@ -3006,12 +3006,12 @@ body:not(.modal-open) .modal-footer {
 
     .card-header {
         padding: 12px 20px;
-        border-bottom: 1px solid #e9ebec;
+        border-bottom: 1px solid var(--border-color-light);
     }
 
     .card-search {
         padding: 12px 24px;
-        border-bottom: 1px solid #e9ebec;
+        border-bottom: 1px solid var(--border-color-light);
     }
 
     .card-body {
@@ -3117,7 +3117,7 @@ body:not(.modal-open) .modal-footer {
     margin: 0;
     table-layout: fixed;
     width: 100%;
-    border: 1px solid #e9ebec;
+    border: 1px solid var(--border-color-light);
 
     > :not(caption)>*>* {
         padding: 0;
@@ -3174,20 +3174,20 @@ body:not(.modal-open) .modal-footer {
     }
 }
 
-/* .table-schedule::before{display:block;clear:both;content:'';position:absolute;top:0;left:0;width:100%;height:1px;z-index:1;background:#e9ebec;} */
+/* .table-schedule::before{display:block;clear:both;content:'';position:absolute;top:0;left:0;width:100%;height:1px;z-index:1;background:var(--border-color-light);} */
 
 .table> :not(:last-child)> :last-child>* {
     border-bottom: 0 none;
-    -webkit-box-shadow: inset 0 -1px 0 0 #e9ebec;
-    -moz-box-shadow: inset 0 -1px 0 0 #e9ebec;
-    box-shadow: inset 0 -1px 0 0 #e9ebec;
+    -webkit-box-shadow: inset 0 -1px 0 0 var(--border-color-light);
+    -moz-box-shadow: inset 0 -1px 0 0 var(--border-color-light);
+    box-shadow: inset 0 -1px 0 0 var(--border-color-light);
 }
 
 .table-schedule {
 
     th,
     td {
-        border-right: 1px solid #e9ebec;
+        border-right: 1px solid var(--border-color-light);
         border-bottom: 0 none;
     }
 
@@ -3195,7 +3195,7 @@ body:not(.modal-open) .modal-footer {
 
         th,
         td {
-            border-left: 1px solid #e9ebec;
+            border-left: 1px solid var(--border-color-light);
         }
     }
 
@@ -3203,7 +3203,7 @@ body:not(.modal-open) .modal-footer {
 
         td,
         th {
-            border-left: 1px solid #e9ebec;
+            border-left: 1px solid var(--border-color-light);
         }
     }
 
@@ -3244,7 +3244,7 @@ body:not(.modal-open) .modal-footer {
             left: 0;
             width: 100%;
             height: 1px;
-            background: #e9ebec;
+            background: var(--border-color-light);
             z-index: 10;
         }
 
@@ -3374,12 +3374,12 @@ body:not(.modal-open) .modal-footer {
         margin-top: 4px;
         padding: 8px 12px;
         border-radius: 4px;
-        border: solid 1px #6571ff;
+        border: solid 1px var(--btn-point-color);
         background-color: #fff;
         font-size: 14px;
         line-height: 1.14;
         text-align: left;
-        color: #6571ff;
+        color: var(--btn-point-color);
     }
 
     .list-item-info {
@@ -3396,7 +3396,7 @@ body:not(.modal-open) .modal-footer {
             margin-top: 4px;
             padding: 4px 0;
             border-radius: 4px;
-            border: solid 1px #e9ebec;
+            border: solid 1px var(--border-color-light);
             background-color: #fff;
             text-align: center;
 
@@ -3420,7 +3420,7 @@ body:not(.modal-open) .modal-footer {
             .day {
                 padding: 2px 4px;
                 border-radius: 100px;
-                background-color: #0ab39c;
+                background-color: var(--second-color);
                 font-size: 12px;
                 line-height: 1.17;
                 text-align: center;
@@ -3492,7 +3492,7 @@ body:not(.modal-open) .modal-footer {
         }
 
         .cate1 {
-            background-color: #0ab39c;
+            background-color: var(--second-color);
             color: #fff;
         }
 
@@ -3567,7 +3567,7 @@ body:not(.modal-open) .modal-footer {
             +li {
                 margin-top: 12px;
                 padding-top: 13px;
-                border-top: 1px solid #e9ebec;
+                border-top: 1px solid var(--border-color-light);
             }
 
             div+div {
@@ -3834,7 +3834,7 @@ button:focus {
         height: 32px;
         padding: 0 12px;
         text-align: center;
-        border-color: #e6e8e9;
+        border-color: var(--border-color-light);
         border-radius: 4px;
         font-size: 14px;
         color: var(--first-color);
@@ -3847,7 +3847,7 @@ button:focus {
     &.active .page-link {
         color: #fff;
         background-color: var(--first-color);
-        border-color: #e6e8e9;
+        border-color: var(--border-color-light);
     }
 }
 
