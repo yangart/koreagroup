@@ -94,9 +94,40 @@
 					</div>
 					<div class="card-header card-search">
 						<ul class="nav nav-pills" role="tablist">
-							<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab" aria-selected="true">수강목록</a></li>
-							<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1">과정목록</a></li>
+							<li><a href="#" class="nav-link" data-bs-toggle="tab" role="tab" aria-selected="true">수강목록</a></li>
+							<li><a href="#" class="nav-link active" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1">과정목록</a></li>
 						</ul>
+						<div class="row">
+							<div class="col-10 gap-2">
+								<select>
+									<option value="01">계열선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">지점선택</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>		
+								<select>
+									<option value="01">구분</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<div class="d-flex gap-1">
+									<select>
+										<option value="01">과정명</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+									<input type="text" class="form-control" placeholder="검색어를 입력하세요">
+								</div>								
+							</div>
+							<div class="col-2 gap-1 d-flex">
+								<div><button type="button" class="btn btn-secondary search-reset">초기화</button></div>
+								<div class="flex-grow-1"><button type="button" class="btn btn-point-deep search-btn">검색</button></div>
+							</div>
+						</div>
 					</div>
 					<div class="card-body">
 						<h5 class="table-title mb-2">수강과정</h5>

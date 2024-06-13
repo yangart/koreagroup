@@ -576,35 +576,6 @@ input:-webkit-autofill {
   margin-top: 4px;
 }
 
-/* 2024-06-06 */
-.table-title + .title-right-btn {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  right: 1%;
-}
-
-.table-body {
-  min-height: 55vh;
-}
-
-.table-body .table th {
-  vertical-align: middle;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #212529;
-  border-bottom: 1px solid #e9ebec;
-}
-
-.table-body .table td {
-  font-size: 14px;
-}
-
-.table-body .table td .row > div {
-  margin-top: 0;
-}
-
 .tit-area-bg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -731,6 +702,17 @@ input:-webkit-autofill {
   font-size: 14px;
   text-align: left;
   padding: 3px 8px;
+}
+
+.btn-tooltip-info {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../libs/feather-icons/icons/info.svg) no-repeat center/cover;
+  text-indent: -9999px;
+  font-size: 0;
+  border: 0;
+  vertical-align: middle;
 }
 
 /* modal */
