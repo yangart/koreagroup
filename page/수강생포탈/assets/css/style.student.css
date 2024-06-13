@@ -726,7 +726,7 @@ textarea.form-control {
   padding: 0;
 }
 
-.input-group-text {
+.input-group-text-only {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,7 +744,7 @@ textarea.form-control {
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
-.input-group-text img {
+.input-group-text-only img {
   width: 16px;
 }
 
