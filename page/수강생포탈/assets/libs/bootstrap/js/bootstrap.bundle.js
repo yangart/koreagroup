@@ -5231,7 +5231,7 @@
   const DefaultType$3 = {
     animation: 'boolean',
     template: 'string',
-    title: '(string|element|function)',
+   title: '(string|element|function)',
     trigger: 'string',
     delay: '(number|object)',
     html: 'boolean',
@@ -5258,7 +5258,7 @@
     animation: true,
     template: '<div class="tooltip" role="tooltip">' + '<div class="tooltip-arrow"></div>' + '<div class="tooltip-inner"></div>' + '</div>',
     trigger: 'hover focus',
-    title: '',
+   title: '',
     delay: 0,
     html: false,
     selector: false,
@@ -5590,7 +5590,7 @@
       let title = this._element.getAttribute('data-bs-original-title');
 
       if (!title) {
-        title = typeof this._config.title === 'function' ? this._config.title.call(this._element) : this._config.title;
+       title = typeof this._config.title === 'function' ? this._config.title.call(this._element) : this._config.title;
       }
 
       return title;

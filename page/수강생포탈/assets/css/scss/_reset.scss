@@ -7,7 +7,7 @@
 :root {
     --min-width: 1480px;
     --font-family: 'Pretendard', sans-serif;
-    --font-size: 16px;
+    --font-size: 14px;
     --font-weight: 400;
     --line-height: 1.25;
     --text-align: left;
@@ -41,12 +41,21 @@
     --second-color: #ff710a;
     --third-color: #00b031;
 
-    --breakpoint-xs :480px;
-    --breakpoint-sm :576px;
-    --breakpoint-md :768px;
-    --breakpoint-lg :992px;
-    --breakpoint-xl :1200px;
-    --breakpoint-xxl :1400px;
+    --bs-gutter-x: 24px;
+    --bs-gutter-y: 24px;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+    height:12px;
+}
+*::-webkit-scrollbar-thumb {
+    background:rgba(0,0,0,.1);
+    border-radius:0;
+    border-left:6px solid #fff;
+}
+*::-webkit-scrollbar-track {
+    background:transparant;
 }
 html {
     position: relative;
@@ -157,6 +166,21 @@ fieldset,
 img {
     border: none;
 }
+select {
+    padding: 4px 12px;
+    font-size: var(--btn-font-size);
+    height:32px;
+    color: var(--bs-dark);
+    border-radius: var(--border-radius);
+    border-color: var(--border-color);
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 0
+}
 .blockquote {
     padding: 10px 20px;
     border-left: 4px solid #e9ebec;
@@ -212,6 +236,7 @@ a {
         text-decoration: none;
     }
 }
+
 .btn {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -436,6 +461,10 @@ a {
 .color-light{color:#ff65d4 !important;}
 .color-success{color:#405189 !important;}
 
+.color-first {color:var(--first-color);}
+.color-second {color:var(--second-color);}
+.color-third {color:var(--third-color);}
+
 .btn-ico i {
     text-indent: -9999px;
     font-size: 0;
@@ -473,9 +502,6 @@ fieldset:disabled .btn {
 }
 :is(.btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active) {
     /* border-color:transparent */
-}
-.text-point {
-    color: var(--btn-point-color);
 }
 .text-req {
     color: #ff3366;
@@ -591,6 +617,15 @@ textarea.form-control {
         padding: 12px;
     }
 }
+.input-group {
+    &.custom-search {
+        width:auto;
+        display:inline-flex;
+        border-bottom: 1px solid var(    --bs-gray);        
+        .form-control { border:0; }
+        .btn { padding:0; }
+    }
+}
 .input-group-text {
     display: flex;
     align-items: center;
@@ -609,8 +644,8 @@ textarea.form-control {
         width: 16px;
     }
 }
-.input-group> {
-
+.input-group {
+    &.d-inline-flex { width:auto; }
     .form-control,
     .form-select {
         position: relative;
@@ -720,20 +755,24 @@ textarea.form-control {
 textarea.form-editor {
     height: 392px;
 }
-.row.row-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap !important;
+.row {
+    --bs-gutter-x: 24px;
+    --bs-gutter-y: 24px;
+    &.row-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap !important;
 
-    > {
-        * {
-            flex-grow: 1;
-        }
-        .col-dash {
-            padding: 0 4px !important;
-            flex-shrink: 0 !important;
-        }    }
+        > {
+            * {
+                flex-grow: 1;
+            }
+            .col-dash {
+                padding: 0 4px !important;
+                flex-shrink: 0 !important;
+            }    }
+    }
 }
 .d-flex {
     display: flex;
@@ -787,6 +826,10 @@ textarea.form-editor {
 .align-center{text-align:center !important;}
 .align-right{text-align:right !important;}
 
+.overflow-x-scroll { overflow-x:auto; }
+.overflow-y-scroll { overflow-y:auto; }
+.overflow-scroll { overflow:auto; }
+
 .absolute-bottom {
     position: absolute;
     bottom: 0;
@@ -825,61 +868,61 @@ textarea.form-editor {
 .p-40px,.px-40px{padding-left:40px !important;padding-right:40px !important;}
 .p-40px,.py-40px{padding-top:40px !important;padding-bottom:40px !important;}
 
-.row{--bs-gutter-x:0;--bs-gutter-y:0px;}
-.row-0{--bs-gutter-x:0px !important;--bs-gutter-y:0px !important;}
-.row-x0{--bs-gutter-x:0px !important;}
-.row-x2{--bs-gutter-x:2px !important;}
-.row-x4{--bs-gutter-x:4px !important;}
-.row-x6{--bs-gutter-x:6px !important;}
-.row-x8{--bs-gutter-x:8px !important;}
-.row-x10{--bs-gutter-x:10px !important;}
-.row-x12{--bs-gutter-x:12px !important;}
-.row-x14{--bs-gutter-x:14px !important;}
-.row-x16{--bs-gutter-x:16px !important;}
-.row-x18{--bs-gutter-x:18px !important;}
-.row-x20{--bs-gutter-x:20px !important;}
-.row-x40{--bs-gutter-x:40px !important;}
-.row-x80{--bs-gutter-x:80px !important;}
-.row-y0{--bs-gutter-y:0px !important;}
-.row-y2{--bs-gutter-y:2px !important;}
-.row-y4{--bs-gutter-y:4px !important;}
-.row-y6{--bs-gutter-y:6px !important;}
-.row-y8{--bs-gutter-y:8px !important;}
-.row-y10{--bs-gutter-y:10px !important;}
-.row-y12{--bs-gutter-y:12px !important;}
-.row-y14{--bs-gutter-y:14px !important;}
-.row-y16{--bs-gutter-y:16px !important;}
-.row-y18{--bs-gutter-y:18px !important;}
-.row-y20{--bs-gutter-y:20px !important;}
+// .row{--bs-gutter-x:0;--bs-gutter-y:0px;}
+// .row-0{--bs-gutter-x:0px !important;--bs-gutter-y:0px !important;}
+// .row-x0{--bs-gutter-x:0px !important;}
+// .row-x2{--bs-gutter-x:2px !important;}
+// .row-x4{--bs-gutter-x:4px !important;}
+// .row-x6{--bs-gutter-x:6px !important;}
+// .row-x8{--bs-gutter-x:8px !important;}
+// .row-x10{--bs-gutter-x:10px !important;}
+// .row-x12{--bs-gutter-x:12px !important;}
+// .row-x14{--bs-gutter-x:14px !important;}
+// .row-x16{--bs-gutter-x:16px !important;}
+// .row-x18{--bs-gutter-x:18px !important;}
+// .row-x20{--bs-gutter-x:20px !important;}
+// .row-x40{--bs-gutter-x:40px !important;}
+// .row-x80{--bs-gutter-x:80px !important;}
+// .row-y0{--bs-gutter-y:0px !important;}
+// .row-y2{--bs-gutter-y:2px !important;}
+// .row-y4{--bs-gutter-y:4px !important;}
+// .row-y6{--bs-gutter-y:6px !important;}
+// .row-y8{--bs-gutter-y:8px !important;}
+// .row-y10{--bs-gutter-y:10px !important;}
+// .row-y12{--bs-gutter-y:12px !important;}
+// .row-y14{--bs-gutter-y:14px !important;}
+// .row-y16{--bs-gutter-y:16px !important;}
+// .row-y18{--bs-gutter-y:18px !important;}
+// .row-y20{--bs-gutter-y:20px !important;}
 
-.g-0,.gx-0{--bs-gutter-x:0px !important;}
-.g-0,.gy-0{--bs-gutter-y:0px !important;}
-.g-4px,.gx-4px{--bs-gutter-x:4px !important;}
-.g-4px,.gy-4px{--bs-gutter-y:4px !important;}
-.g-6px,.gx-6px{--bs-gutter-x:6px !important;}
-.g-6px,.gy-6px{--bs-gutter-y:6px !important;}
-.g-8px,.gx-8px{--bs-gutter-x:8px !important;}
-.g-8px,.gy-8px{--bs-gutter-y:8px !important;}
-.g-10px,.gx-10px{--bs-gutter-x:10px !important;}
-.g-10px,.gy-10px{--bs-gutter-y:10px !important;}
-.g-12px,.gx-12px{--bs-gutter-x:12px !important;}
-.g-12px,.gy-12px{--bs-gutter-y:12px !important;}
-.g-16px,.gx-16px{--bs-gutter-x:16px !important;}
-.g-16px,.gy-16px{--bs-gutter-y:16px !important;}
-.g-20px,.gx-20px{--bs-gutter-x:20px !important;}
-.g-20px,.gy-20px{--bs-gutter-y:20px !important;}
-.g-24px,.gx-24px{--bs-gutter-x:24px !important;}
-.g-24px,.gy-24px{--bs-gutter-y:24px !important;}
-.g-28px,.gx-28px{--bs-gutter-x:28px !important;}
-.g-28px,.gy-28px{--bs-gutter-y:28px !important;}
-.g-30px,.gx-30px{--bs-gutter-x:30px !important;}
-.g-30px,.gy-30px{--bs-gutter-y:30px !important;}
-.g-32px,.gx-32px{--bs-gutter-x:32px !important;}
-.g-32px,.gy-32px{--bs-gutter-y:32px !important;}
-.g-36px,.gx-36px{--bs-gutter-x:36px !important;}
-.g-36px,.gy-36px{--bs-gutter-y:36px !important;}
-.g-40px,.gx-40px{--bs-gutter-x:40px !important;}
-.g-40px,.gy-40px{--bs-gutter-y:40px !important;}
+// .g-0,.gx-0{--bs-gutter-x:0px !important;}
+// .g-0,.gy-0{--bs-gutter-y:0px !important;}
+// .g-4px,.gx-4px{--bs-gutter-x:4px !important;}
+// .g-4px,.gy-4px{--bs-gutter-y:4px !important;}
+// .g-6px,.gx-6px{--bs-gutter-x:6px !important;}
+// .g-6px,.gy-6px{--bs-gutter-y:6px !important;}
+// .g-8px,.gx-8px{--bs-gutter-x:8px !important;}
+// .g-8px,.gy-8px{--bs-gutter-y:8px !important;}
+// .g-10px,.gx-10px{--bs-gutter-x:10px !important;}
+// .g-10px,.gy-10px{--bs-gutter-y:10px !important;}
+// .g-12px,.gx-12px{--bs-gutter-x:12px !important;}
+// .g-12px,.gy-12px{--bs-gutter-y:12px !important;}
+// .g-16px,.gx-16px{--bs-gutter-x:16px !important;}
+// .g-16px,.gy-16px{--bs-gutter-y:16px !important;}
+// .g-20px,.gx-20px{--bs-gutter-x:20px !important;}
+// .g-20px,.gy-20px{--bs-gutter-y:20px !important;}
+// .g-24px,.gx-24px{--bs-gutter-x:24px !important;}
+// .g-24px,.gy-24px{--bs-gutter-y:24px !important;}
+// .g-28px,.gx-28px{--bs-gutter-x:28px !important;}
+// .g-28px,.gy-28px{--bs-gutter-y:28px !important;}
+// .g-30px,.gx-30px{--bs-gutter-x:30px !important;}
+// .g-30px,.gy-30px{--bs-gutter-y:30px !important;}
+// .g-32px,.gx-32px{--bs-gutter-x:32px !important;}
+// .g-32px,.gy-32px{--bs-gutter-y:32px !important;}
+// .g-36px,.gx-36px{--bs-gutter-x:36px !important;}
+// .g-36px,.gy-36px{--bs-gutter-y:36px !important;}
+// .g-40px,.gx-40px{--bs-gutter-x:40px !important;}
+// .g-40px,.gy-40px{--bs-gutter-y:40px !important;}
 
 .gap-1px{gap:1px;}
 .gap-2px{gap:2px;}
@@ -1215,3 +1258,34 @@ textarea.form-editor {
         width: 0;
     }
 }
+
+$breakpoint : (
+    xs:480px,
+    sm:575px,
+    md:767px, //mo
+    lg:991px,
+    xl:1200px,
+    xxl:1400px
+);
+
+@mixin breakpoint($breakpoint-name) {
+    $value: map-get($breakpoint, $breakpoint-name);
+    @if $value {
+        @media (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint '#{$breakpoint-name}' not found in \$breakpoint map.";
+    }
+}
+
+@include breakpoint(xxl) {
+    :root {
+        --min-width:100%;
+    }
+}
+@include breakpoint(xl) {}
+@include breakpoint(lg) {}
+@include breakpoint(md) {}
+@include breakpoint(sm) {}
+@include breakpoint(xs) {}

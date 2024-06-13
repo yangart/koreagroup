@@ -124,6 +124,99 @@ body {
   }
 }
 
+.mobile-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  z-index: 999;
+  display:none;
+
+  ul {
+    background-color: #2a364a;
+
+    &::after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+
+    > li {
+      float: left;
+      width: 20%;
+
+      a {
+        display: block;
+        height: 60px;
+        padding: 8px 0;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: center;
+        color: #bcbcbc;
+      }
+
+      em {
+        display: block;
+        padding-top: 24px;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -webkit-background-size: 24px 24px;
+        background-size: 24px 24px;
+      }
+
+      &.item1 em {
+        background-image: url(../img/mobile_menu1@2x.png);
+      }
+
+      &.item2 em {
+        background-image: url(../img/mobile_menu2@2x.png);
+      }
+
+      &.item3 em {
+        background-image: url(../img/mobile_menu3@2x.png);
+      }
+
+      &.item4 em {
+        background-image: url(../img/mobile_menu4@2x.png);
+      }
+
+      &.item5 em {
+        background-image: url(../img/mobile_menu5@2x.png);
+      }
+
+      &.on {
+        &.item1 em {
+          background-image: url(../img/mobile_menu1_on@2x.png);
+        }
+
+        &.item2 em {
+          background-image: url(../img/mobile_menu2_on@2x.png);
+        }
+
+        &.item3 em {
+          background-image: url(../img/mobile_menu3_on@2x.png);
+        }
+
+        &.item4 em {
+          background-image: url(../img/mobile_menu4_on@2x.png);
+        }
+
+        &.item5 em {
+          background-image: url(../img/mobile_menu5_on@2x.png);
+        }
+
+        a {
+          background-color: #3ba4fd;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
 #profile-wrapper {
   padding: 0 20px;
 }
@@ -137,587 +230,16 @@ body {
   left: -1px;
 }
 
-[data-simplebar] {
-  position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-.simplebar-wrapper {
-  overflow: hidden;
-  width: inherit;
-  height: inherit;
-  max-width: inherit;
-  max-height: inherit;
-}
-
-.simplebar-mask {
-  direction: inherit;
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: auto !important;
-  height: auto !important;
-  z-index: 0;
-}
-
-.simplebar-offset {
-  direction: inherit !important;
-  -webkit-box-sizing: inherit !important;
-  box-sizing: inherit !important;
-  resize: none !important;
-  position: absolute;
-  top: 0;
-  left: 0 !important;
-  bottom: 0;
-  right: 0 !important;
-  padding: 0;
-  margin: 0;
-  -webkit-overflow-scrolling: touch;
-}
-
-.simplebar-content-wrapper {
-  direction: inherit;
-  -webkit-box-sizing: border-box !important;
-  box-sizing: border-box !important;
-  position: relative;
-  display: block;
-  height: 100%;
-  width: auto;
-  visibility: visible;
-  overflow: auto;
-  max-width: 100%;
-  max-height: 100%;
-  scrollbar-width: none;
-  padding: 0 !important;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.simplebar-hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.simplebar-content {
-  &:after, &:before {
-    content: " ";
-    display: table;
-  }
-}
-
-.simplebar-placeholder {
-  max-height: 100%;
-  max-width: 100%;
-  width: 100%;
-  pointer-events: none;
-}
-
-.simplebar-height-auto-observer-wrapper {
-  -webkit-box-sizing: inherit !important;
-  box-sizing: inherit !important;
-  height: 100%;
-  width: 100%;
-  max-width: 1px;
-  position: relative;
-  float: left;
-  max-height: 1px;
-  overflow: hidden;
-  z-index: -1;
-  padding: 0;
-  margin: 0;
-  pointer-events: none;
-  -webkit-box-flex: inherit;
-  -ms-flex-positive: inherit;
-  flex-grow: inherit;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-}
-
-.simplebar-height-auto-observer {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-  display: block;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1000%;
-  width: 1000%;
-  min-height: 1px;
-  min-width: 1px;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.simplebar-track {
-  z-index: 1;
-  position: absolute;
-  right: 4px;
-  bottom: 4px;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-[data-simplebar].simplebar-dragging {
-  .simplebar-content {
-    pointer-events: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-
-  .simplebar-track {
-    pointer-events: all;
-  }
-}
-
-.simplebar-scrollbar {
-  position: absolute;
-  right: 2px;
-  width: 6px;
-  min-height: 10px;
-
-  &:before {
-    position: absolute;
-    content: "";
-    background: #a2adb7;
-    border-radius: 7px;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    -webkit-transition: opacity .2s linear;
-    transition: opacity .2s linear;
-  }
-
-  &.simplebar-visible:before {
-    opacity: .5;
-    -webkit-transition: opacity 0s linear;
-    transition: opacity 0s linear;
-  }
-}
-
-.simplebar-track {
-  &.simplebar-vertical {
-    top: 4px;
-    width: 10px;
-
-    .simplebar-scrollbar:before {
-      top: 2px;
-      bottom: 2px;
-    }
-  }
-
-  &.simplebar-horizontal {
-    left: 0;
-    height: 10px;
-
-    .simplebar-scrollbar {
-      &:before {
-        height: 100%;
-        left: 2px;
-        right: 2px;
-      }
-
-      right: auto;
-      left: 0;
-      top: 2px;
-      height: 7px;
-      min-height: 0;
-      min-width: 10px;
-      width: auto;
-    }
-  }
-}
-
-[data-simplebar-direction=rtl] .simplebar-track.simplebar-vertical {
-  right: auto;
-  left: 4px;
-}
-
-.hs-dummy-scrollbar-size {
-  direction: rtl;
-  position: fixed;
-  opacity: 0;
-  visibility: hidden;
-  height: 500px;
-  width: 500px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
-
-.simplebar-hide-scrollbar {
-  position: fixed;
-  left: 0;
-  visibility: hidden;
-  overflow-y: scroll;
-  scrollbar-width: none;
-}
-
-.custom-scroll {
-  height: 100%;
-}
-
-.calendar-box {
-  background: #fff;
-}
-
-.calendar-head {
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 32px;
-  margin-bottom: 12px;
-  padding: 0 16px;
-  border-radius: 4px 4px 0 0;
-}
-
-.calendar-title, .calendar-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.calendar-title {
-  padding: 0;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  text-align: center;
-  color: #495057;
-}
-
-.calendar-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 12px auto;
-  cursor: pointer;
-}
-
-.calendar-prev {
-  background-image: url(../img/calendar-prev-ico@2x.png);
-}
-
-.calendar-next {
-  background-image: url(../img/calendar-next-ico@2x.png);
-}
-
-.calendar-date {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-
-  span {
-    font-size: 14px;
-    line-height: 1.43;
-    text-align: left;
-    color: #212529;
-  }
-
-  em {
-    margin-left: 6px;
-    padding: 2px 8px;
-    border-radius: 100px;
-    background-color: #3ba4fd;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.33;
-    text-align: left;
-    color: #fff;
-  }
-}
-
-#scheduleTabs {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.calendar-body {
-  padding: 0;
-  border: solid 1px #f1f1f1;
-}
-
-.calendar-week, .calendar-name {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.calendar-cell {
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 14.28571%;
-  min-height: 28px;
-  text-align: center;
-  z-index: 1;
-
-  + .calendar-cell {
-    border-left: 1px solid #f1f1f1;
-  }
-
-  span {
-    display: inline-block;
-    height: 20px;
-    line-height: 20px;
-    margin-bottom: 2px;
-    border-radius: 4px;
-    text-align: center;
-  }
-
-  &.event {
-    background: #f3f6f9;
-  }
-
-  &.active {
-    background: #fefaef;
-  }
-
-  &.sun span {
-    color: #ff7a00;
-  }
-
-  &.other span {
-    color: #ccd6e0;
-
-    /* opacity:0.5; */
-  }
-
-  &.today span {
-    position: relative;
-    display: block;
-    width: 20px;
-    color: #fff;
-    border: none;
-    background: #3ba4fd;
-    border-radius: 20px;
-  }
-}
-
-.calendar-box {
-  .badge {
-    position: absolute;
-    left: 16px !important;
-    top: -4px !important;
-    padding: 2px 6px;
-    background: #ff5033;
-    font-size: 12px;
-    line-height: 1.17;
-    color: #fff;
-    color: #fff;
-    border-radius: 16px;
-    border: 1px solid #fff;
-  }
-
-  .btn-tooltip {
-    display: block;
-    position: relative;
-    width: 16px;
-    height: 16px;
-    margin: 10px;
-
-    .badge {
-      top: -10px !important;
-      left: 10px !important;
-    }
-  }
-}
-
-.calendar-cell .title {
-  display: block;
-  width: 100%;
-  font-size: 14px;
-  line-height: 1.43;
-  text-align: left;
-  color: #212529;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.calendar-name .calendar-cell {
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 28px;
-  font-size: 14px;
-  line-height: 1.43;
-  text-align: center;
-  color: #212529;
-}
-
-.calendar-day .calendar-cell {
-  flex-direction: column;
-  min-height: 78px;
-  padding: 4px 6px;
-  border-top: 1px solid #f1f1f1;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left;
-  color: #212529;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-}
-
-.schedule-body {
-  padding: 0;
-  border: solid 1px #f1f1f1;
-}
-
-.schedule-week, .schedule-name {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.schedule-cell {
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 14.28571%;
-  height: 28px;
-  text-align: center;
-  z-index: 1;
-
-  + .schedule-cell {
-    border-left: 1px solid #f1f1f1;
-  }
-
-  span {
-    display: block;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    border-radius: 4px;
-    text-align: center;
-  }
-
-  &.event {
-    background: #f3f6f9;
-  }
-
-  &.active {
-    background: #fefaef;
-  }
-
-  &.other span {
-    color: #6db0ff;
-    opacity: 0.5;
-  }
-
-  &.today span {
-    color: #fff;
-    border: none;
-    background: #6571ff;
-    border-radius: 28px;
-  }
-
-  div {
-    padding: 4px 6px 0;
-    font-size: 12px;
-    line-height: 1.33;
-    text-align: left;
-    color: #212529;
-  }
-}
-
-.schedule-name .schedule-cell {
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 28px;
-  background: #f3f6f9;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.43;
-  text-align: center;
-  color: #212529;
-}
-
-.schedule-day .schedule-cell {
-  flex-direction: column;
-  height: 108px;
-  padding: 2px 6px;
-  border-top: 1px solid #f1f1f1;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left;
-  color: #212529;
-}
-
-.schedule-simplebar {
-  position: relative;
-  max-height: 100%;
-}
-
 #container {
-  padding: 24px;
+  padding: var(--bs-gutter-y) var(--bs-gutter-x) calc(var(--bs-gutter-y) - 4px) var(--bs-gutter-x);
   flex:1;
+  height:100%;
+  overflow:hidden;
   transition: all .1s ease-out;
+  display:flex;
+  flex-direction: column;
 
   .col-group {
-    --bs-gutter-x:32px !important;
-    --bs-gutter-y:24px !important;
     height:calc(100% + var(--bs-gutter-y));
   }
 
@@ -733,3 +255,74 @@ body {
     }
   }
 }
+.flex-box-contents {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:calc(var(--bs-gutter-x)* -.5);
+  margin-right:calc(var(--bs-gutter-x)* -.5);
+  overflow:hidden;
+  flex-direction: column;
+  height:100%;
+}
+.flex-box-apply {
+  display: flex;
+  flex-wrap: wrap;
+  flex:1;
+  overflow:hidden;
+  margin-left:calc(var(--bs-gutter-x)* -.5);
+  margin-right:calc(var(--bs-gutter-x)* -.5);
+  [class^=col-group-] {
+    flex: 0 0 auto;
+    width: 50%;
+    height:100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    display:flex;
+    flex-direction: column;
+  }
+}
+
+
+
+@include breakpoint(xxl) {
+  
+}
+@include breakpoint(xl) {
+  :root {
+    --bs-gutter-x: 16px;
+    --bs-gutter-y: 16px;
+  }
+  #container {
+    height: auto;
+    overflow: unset;
+    padding: var(--bs-gutter-y) 0 80px 0;
+
+  }
+  .page-location {
+    padding:0 var(--bs-gutter-x); 
+  }
+  .flex-box-apply {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    [class^=col-group-] {
+      width:100%;
+      flex:1;
+    }
+    .cont-detail-list { max-height:400px; }
+    .card-list-simple { max-height:300px; }
+  } 
+  .card { 
+    border-radius:0; 
+    border-left:0;
+    border-right:0;
+  }
+}
+@include breakpoint(lg) {
+
+}
+@include breakpoint(md) {
+  .header-nav { display:none; }
+  .mobile-menu { display:block; }
+}
+@include breakpoint(sm) {}
+@include breakpoint(xs) {}
