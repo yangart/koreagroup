@@ -609,49 +609,11 @@ textarea.form-control {
     width: 100%;
 }
 .card-form {
-
     .form-select,
     .form-control,
     .form-btn {
         height: 44px;
         padding: 12px;
-    }
-}
-.input-group {
-    &.custom-search {
-        width:auto;
-        display:inline-flex;
-        border-bottom: 1px solid var(    --bs-gray);        
-        .form-control { border:0; }
-        .btn { padding:0; }
-    }
-}
-.input-group-text-only {
-    display: flex;
-    align-items: center;
-    padding: 8px 14px;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 16px;
-    color: #212529;
-    text-align: center;
-    white-space: nowrap;
-    background-color: #e9ecef;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-
-    img {
-        width: 16px;
-    }
-}
-.input-group {
-    &.d-inline-flex { width:auto; }
-    .form-control,
-    .form-select {
-        position: relative;
-        flex: 1 1 auto;
-        width: 1%;
-        min-width: 0;
     }
 }
 .form-check {
