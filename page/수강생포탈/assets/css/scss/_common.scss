@@ -21,6 +21,7 @@
 }
 .fnc-area {
     .form-select { width: auto !important; }
+    align-items: flex-end;
 }
 .form-control {
     padding: var(--btn-padding-y) var(--btn-padding-x);
@@ -2227,7 +2228,7 @@ body:not(.modal-open) .modal-footer {
 }
 
 .modal-xs .modal-body {
-    padding: 30px 20px;
+    padding: 20px;
     text-align: center;
 }
 

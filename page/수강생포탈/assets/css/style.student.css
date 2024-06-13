@@ -351,6 +351,12 @@ a:hover, a:active, a:focus {
   border-color: var(--btn-deep-color-h);
 }
 
+.btn-point2 {
+  color: #fff;
+  background-color: var(--second-color);
+  border-color: var(--second-color);
+}
+
 .btn-primary {
   color: #fff;
   background-color: var(--btn-point-color);
@@ -3063,6 +3069,11 @@ body {
   margin-bottom: 1rem;
 }
 
+.fnc-area {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
 .fnc-area .form-select {
   width: auto !important;
 }
@@ -5248,7 +5259,7 @@ body:not(.modal-open) .modal-footer {
 }
 
 .modal-xs .modal-body {
-  padding: 30px 20px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -7052,6 +7063,33 @@ button:focus {
   margin-bottom: 0;
 }
 
+.card-body:has(.card-cont) {
+  padding: 0;
+}
+.card-body:has(.card-cont) .card-cont {
+  padding-top: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: auto;
+}
+
+.card-flex-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 24px;
+}
+.card-flex-area .c-area {
+  margin: 0 auto;
+}
+.card-flex-area .c-area > * {
+  margin: 0;
+}
+
 .info-block-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7061,7 +7099,7 @@ button:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
-  gap: 8px;
+  gap: 12px;
 }
 
 .info-list {
@@ -7136,9 +7174,10 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color-light);
   border-radius: var(--border-radius);
   height: 100%;
+  overflow: hidden;
 }
 .box-list .box-header,
 .box-list .box-body,
@@ -7150,7 +7189,7 @@ button:focus {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color-light);
 }
 .box-list .box-header small {
   font-size: 12px;
@@ -7168,8 +7207,9 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color-light);
   gap: 8px;
+  background-color: #F3FEFF;
 }
 .box-list .box-footer > * {
   -webkit-box-flex: 1;
@@ -7180,44 +7220,76 @@ button:focus {
   font-size: 16px;
 }
 
-.table-info,
+.table-list,
 .table-write,
-.table-list {
-  table-layout: fixed;
-}
-.table-info th,
-.table-write th,
-.table-list th {
-  background-color: #F3FEFF;
-  color: #777;
-}
-.table-info th,
-.table-info td,
-.table-write th,
-.table-write td,
-.table-list th,
-.table-list td {
-  padding: 8px 16px;
-  border-bottom: 1px solid var(--border-color);
-  border-top: 1px solid var(--border-color);
-  text-align: center;
-}
-
 .table-info {
   table-layout: fixed;
-  border-right: 1px solid var(--border-color);
 }
+.table-list th,
+.table-write th,
+.table-info th {
+  background-color: #F3FEFF;
+  color: #777;
+  font-weight: 500;
+  color: #333;
+}
+.table-list th,
+.table-list td,
+.table-write th,
+.table-write td,
 .table-info th,
 .table-info td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-color-light);
+  border-top: 1px solid var(--border-color-light);
   text-align: center;
-  border-left: 1px solid var(--border-color);
-  padding: 8px;
 }
 
+.table-list {
+  border-spacing: 0 4px;
+  border-collapse: separate;
+}
+.table-list th,
+.table-list td {
+  border-top: 1px solid var(--border-color-light);
+  height: 44px;
+}
+.table-list th:first-child,
+.table-list td:first-child {
+  border-left: 1px solid var(--border-color-light);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+.table-list th:last-child,
+.table-list td:last-child {
+  border-right: 1px solid var(--border-color-light);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+.table-list .table-tit {
+  color: var(--first-color);
+  font-weight: 500;
+}
+.table-list a:hover .table-tit {
+  text-decoration: underline;
+}
+
+.table-write th {
+  background-color: var(--bs-light);
+}
 .table-write th,
 .table-write td {
   height: 56px;
 }
 .table-write td {
   text-align: left;
+}
+
+.table-info {
+  table-layout: fixed;
+  border-right: 1px solid var(--border-color-light);
+}
+.table-info th,
+.table-info td {
+  text-align: center;
+  border-left: 1px solid var(--border-color-light);
+  padding: 8px;
 }/*# sourceMappingURL=style.student.css.map */

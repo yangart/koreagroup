@@ -48,6 +48,7 @@
 }
 $bg-light-primary :#F3FEFF;
 $border: 1px solid var(--border-color);
+$border-light:1px solid var(--border-color-light);
 
 *::-webkit-scrollbar {
     width: 12px;
@@ -327,6 +328,11 @@ a {
         background-color: var(--btn-deep-color-h);
         border-color: var(--btn-deep-color-h);
     }
+}
+.btn-point2 {
+    color: #fff;
+    background-color: var(--second-color);
+    border-color: var(--second-color);
 }
 .btn-primary {
     color: #fff;
