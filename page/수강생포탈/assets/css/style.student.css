@@ -471,7 +471,7 @@ a:hover, a:active, a:focus {
 }
 
 .bg-light {
-  background-color: #ff65d4 !important;
+  background-color: #f8f9fa !important;
 }
 
 .bg-success {
@@ -6910,4 +6910,312 @@ button:focus {
   line-height: 1.43;
   text-align: center;
   color: #fff;
+}
+
+.member-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.member-area .wrap-sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.member-tit-area {
+  margin-bottom: 20px;
+}
+
+.member-card {
+  display: block;
+  padding: 48px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #ededed;
+  background-color: #fff;
+}
+.member-card .btn-link:hover, .member-card .btn-link:focus {
+  text-decoration: underline;
+}
+
+.member-msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  min-height: 80px;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+.member-btn-area {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.member-btn-area > button,
+.member-btn-area > a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.form-area .form-list ~ .form-list {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+.form-area .form-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.form-area .form-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form-area .form-tit {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  min-width: 60px;
+}
+.form-area .form-fnc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  gap: 8px;
+}
+.form-area .form-fnc .btn {
+  border-radius: 2em;
+  min-width: 80px;
+}
+.form-area input[type=text],
+.form-area input[type=password] {
+  min-height: 54px;
+}
+
+.wrap-sm {
+  margin: 0 auto;
+  max-width: 480px;
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section-sm {
+  margin-bottom: 40px;
+}
+.section-sm:last-child {
+  margin-bottom: 0;
+}
+
+.info-block-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
+.info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+}
+.info-list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.info-list > li cite {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  font-style: normal;
+  flex: none;
+  color: #999;
+  min-width: 64px;
+}
+.info-list > li .txt-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.modal-footer > .l-area,
+.modal-footer > .r-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.modal-footer > .r-area {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.box-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+.box-list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  height: 100%;
+}
+.box-list .box-header,
+.box-list .box-body,
+.box-list .box-footer {
+  display: block;
+  padding: 16px;
+}
+.box-list .box-header {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  border-bottom: 1px solid var(--border-color);
+}
+.box-list .box-header small {
+  font-size: 12px;
+  color: #777;
+}
+.box-list .box-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.box-list .box-footer {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid var(--border-color);
+  gap: 8px;
+}
+.box-list .box-footer > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.box-list .box-tit {
+  font-size: 16px;
+}
+
+.table-info,
+.table-write,
+.table-list {
+  table-layout: fixed;
+}
+.table-info th,
+.table-write th,
+.table-list th {
+  background-color: #F3FEFF;
+  color: #777;
+}
+.table-info th,
+.table-info td,
+.table-write th,
+.table-write td,
+.table-list th,
+.table-list td {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.table-info {
+  table-layout: fixed;
+  border-right: 1px solid var(--border-color);
+}
+.table-info th,
+.table-info td {
+  text-align: center;
+  border-left: 1px solid var(--border-color);
+  padding: 8px;
+}
+
+.table-write th,
+.table-write td {
+  height: 56px;
+}
+.table-write td {
+  text-align: left;
 }/*# sourceMappingURL=style.student.css.map */

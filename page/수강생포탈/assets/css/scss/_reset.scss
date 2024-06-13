@@ -44,6 +44,8 @@
     --bs-gutter-x: 24px;
     --bs-gutter-y: 24px;
 }
+$bg-light-primary :#F3FEFF;
+$border: 1px solid var(--border-color);
 
 *::-webkit-scrollbar {
     width: 12px;
@@ -441,7 +443,7 @@ a {
 .bg-secondary{background-color:#0ab39c !important;}
 .bg-warning{background-color:#ffa133 !important;}
 .bg-danger{background-color:#ff3366 !important;}
-.bg-light{background-color:#ff65d4 !important;}
+.bg-light{background-color:#f8f9fa !important;}
 .bg-success{background-color:#405189 !important;}
 .btn-link{text-decoration:underline;color:#076aff;}
 .btn-underline{text-decoration:underline !important;color:inherit;}

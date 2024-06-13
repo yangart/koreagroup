@@ -1,3 +1,139 @@
+
+
+.wrap-sm {
+    margin:0 auto;
+    max-width: 480px;
+    width: 100%;
+}
+.section {
+    margin-bottom: 80px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.section-sm {
+    margin-bottom: 40px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.info-block-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap:8px;
+}
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    font-size:13px;
+    > li {
+        display: flex;
+        gap:8px;
+        cite {
+            flex:none;
+            font-style: normal;
+            flex:none;
+            color:#999;
+            min-width: 64px;
+        }
+        .txt-area {
+            flex:1;
+        }
+    }
+}
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    >.l-area,
+    >.r-area {
+        display: flex;
+        align-items: center;
+        gap:8px;
+    }
+    >.r-area {
+        justify-content: flex-end;
+    }
+}
+.box-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:24px;
+    > li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: $border;
+        border-radius: var(--border-radius);
+        height:100%;
+    }
+    .box-header,
+    .box-body,
+    .box-footer {
+        display: block;
+        padding:16px;
+    }
+    .box-header {
+        flex:none;
+        border-bottom: $border;
+        small {
+            font-size:12px;
+            color:#777;
+        }
+    }
+    .box-body {
+        flex:1;
+    }
+    .box-footer {
+        flex:none;
+        display: flex;
+        border-top: $border;
+        gap:8px;
+        > * {
+            flex:1;
+        }
+    }
+    .box-tit {
+        font-size: 16px;
+    }
+}
+.table-info,
+.table-write,
+.table-list {
+    table-layout: fixed;
+    th {
+        background-color: $bg-light-primary;
+        color:#777;
+    }
+    th,
+    td {
+        padding:8px 16px;
+        border-bottom: $border;
+        border-top:$border;
+        text-align: center;
+    }
+}
+.table-info {
+    table-layout: fixed;
+    border-right: $border;
+    th,
+    td {
+        text-align: center;
+        border-left:$border;
+        padding:8px;
+    }
+}
+.table-write {
+    th,
+    td {
+        height: 56px;
+    }
+    td {
+        text-align: left;
+    }
+}
+
 //pc wide 1400
 @media screen and (max-width:var(--breakpoint-xxl)) {
 

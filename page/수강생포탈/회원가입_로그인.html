@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="member-area">
+		<div class="wrap-sm">
+			<div class="member-card">
+				<div class="member-tit-area">
+					<span class="d-flex align-items-center">
+						<img src="./assets/img/logo-light.png" alt="" height="19">
+					</span>
+					<h4 class="mt-4 fw-bolder">로그인</h4>
+				</div>
+				<div class="member-cont">
+					<fieldset class="form-area">
+						<legend>정보 입력</legend>
+						<ul class="form-list">
+							<li>
+								<div class="input-group">
+									<div class="input-group-text bg-light"><img src="./assets/libs/feather-icons/icons/user.svg" alt="" height="19"></div>
+									<input type="text" class="form-control border-start-0 rounded-0 rounded-start-0 bg-light" id="username" placeholder="아이디">
+								</div>
+							</li>
+							<li>
+								<div class="input-group">
+									<div class="input-group-text bg-light"><img src="./assets/libs/feather-icons/icons/key.svg" alt="" height="19" style="transform: rotate(45deg);"></div>
+									<input type="password" class="form-control border-start-0 rounded-0 rounded-start-0 bg-light" placeholder="비밀번호" id="password-input">
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					<div class="mt-3 d-md-flex d-block justify-content-between">
+						<div class="form-check">
+							<input class="form-check-input rounded-circle" type="checkbox" value="" id="auth-remember-check">
+							<label class="form-check-label" for="auth-remember-check">로그인 정보저장</label>
+						</div>
+					</div>
+					<div class="member-btn-area">
+						<button class="btn btn-point rounded-3 py-3" type="submit">로그인</button>
+					</div>
+				</div>
+				<div class="d-flex gap-2 mt-4 justify-content-center">
+					<a href="#" class="h6 text-muted small btn-link">아이디 찾기</a>
+					<a href="#" class="h6 text-muted small btn-link">비밀번호 찾기</a>
+				</div>
+				<p class="text-muted small mt-4 text-center">Copyright Ⓒ KEG. All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+	$(window).load(function(){
+		//$('#pageModal1').modal('show');
+	});
+	</script>
+
+</body>
+</html>

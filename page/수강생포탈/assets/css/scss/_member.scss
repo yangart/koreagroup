@@ -1,0 +1,85 @@
+.member-area {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    .wrap-sm {
+        display: flex;
+        flex-direction: column;
+        gap:24px;
+    }
+}
+.member-tit-area {
+    margin-bottom: 20px;
+}
+.member-card {
+    display: block;
+    padding:48px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px #ededed;
+    background-color: #fff;
+    .btn-link {
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+.member-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80px;
+    padding:24px;
+    line-height: 1.6;
+}
+.member-btn-area {
+    margin-top:16px;
+    display: flex;
+    gap:8px;
+    > button,
+    > a {
+        flex:1;
+    }
+}
+.form-area {
+    .form-list {
+       &~ .form-list{
+            margin-top:16px;
+            padding-top:16px;
+            border-top:$border;
+       }
+
+   
+}
+.form-list {
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    li {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+       }
+    }
+    .form-tit {
+        flex:none;
+        min-width:60px;
+    }
+    .form-fnc {
+        display: flex;
+        align-items: center;
+        flex:none;
+        gap:8px;
+        .btn {
+            border-radius: 2em;
+            min-width: 80px;
+        }
+    }
+    input[type=text],
+    input[type=password] {
+        min-height: 54px;
+    }
+}
