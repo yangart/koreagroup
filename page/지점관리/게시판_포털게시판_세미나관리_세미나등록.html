@@ -58,7 +58,7 @@
 									</div>
 								</td>
 								<th>학과</th>
-								<td>
+								<td class="text-start">
 									<select>
 										<option value="01">아트윅</option>
 										<option value="02">option 2</option>
@@ -114,7 +114,32 @@
 							</tr>
 							<tr>
 								<th>장소 <i class="text-req">*</i></th>
-								<td colspan="3"><input type="text" class="form-control" placeholder="제목을 입력하세요." value="5층 F강의실"></td>
+								<td colspan="3"><input type="text" class="form-control" placeholder="제목을 입력하세요." value="5층 F강의실" maxlength="100"></td>
+							</tr>
+							<tr>
+								<th>정원 <i class="text-req">*</i></th>
+								<td colspan="3">
+									<div class="d-flex gap-2 align-items-center">
+										<div class="d-flex gap-2 align-items-center">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="RadioUse1" id="Radiouse12" checked="">
+												<label class="form-check-label" for="Radiouse12">대면</label>												
+											</div>
+											<div class="col-4"><input type="number" class="form-control" min="1" max="9999"></div><span>명</span>
+										</div>
+										<div class="d-flex gap-2 align-items-center">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="RadioUse1" id="Radiouse22">
+												<label class="form-check-label" for="Radiouse22">비대면</label>								
+											</div>
+											<div class="col-4"><input type="number" class="form-control" min="1" max="9999" disabled></div><span>명</span>
+											<div class="form-check ms-3">
+												<input class="form-check-input" type="checkbox" name="flexCheckDefault" id="flexCheckDefault1" disabled>
+												<label class="form-check-label" for="flexCheckDefault1">제한없음</label>
+											</div>
+										</div>
+									</div>
+								</td>
 							</tr>
 							<tr>
 								<th>강의 형식 <i class="text-req">*</i></th>
@@ -131,7 +156,7 @@
 									</div>
 								</td>
 								<th>강사 <i class="text-req">*</i></th>
-								<td><input type="text" class="form-control" placeholder="강사이름" value="강사1"></td>
+								<td><input type="text" class="form-control" placeholder="강사이름" value="강사1" maxlength="20"></td>
 							</tr>
 
 							<tr>

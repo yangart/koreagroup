@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1_1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">신청자 관리</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="fnc-area">
+						<div class="l-area">
+							<select>
+								<option value="01">구분</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+							<select>
+								<option value="01">상태</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+							<input type="text" class="form-control w-auto">
+							<button type="button" class="btn btn-point-deep">검색</button>
+						</div>
+						<div class="r-area">
+							<button type="button" class="btn btn-point-deep">엑셀저장</button>
+							<button type="button" class="btn btn-point-deep">문자발송</button>
+						</div>
+					</div>
+					<div class="table-scroll-y" style="max-height: 450px;">
+						<table class="table table-card">
+							<colgroup>
+								<col style="width: 42px;">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</th>
+									<th>번호</th>
+									<th>지점</th>
+									<th>학과</th>
+									<th>구분</th>
+									<th>이름</th>
+									<th>연락처</th>
+									<th>상태</th>
+									<th>신청일시</th>
+									<th>푸시발송여부</th>
+									<th>취소처리</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>3</td>
+									<td>컴퓨터 강남</td>
+									<td>CG</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>신청완료</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td><button type="button" class="btn btn-outline-danger">취소</button></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>2</td>
+									<td>컴퓨터 강남</td>
+									<td>아트윅</td>
+									<td>비대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>대기</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>Y</td>
+									<td><button type="button" class="btn btn-outline-danger">취소</button></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>1</td>
+									<td>컴퓨터 강남</td>
+									<td>웹디자인</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>취소</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td>2024-01-02 02:00:00</td>
+								</tr>	
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>1</td>
+									<td>컴퓨터 강남</td>
+									<td>웹디자인</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>취소</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td>2024-01-02 02:00:00</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>1</td>
+									<td>컴퓨터 강남</td>
+									<td>웹디자인</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>취소</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td>2024-01-02 02:00:00</td>
+								</tr>	
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>3</td>
+									<td>컴퓨터 강남</td>
+									<td>CG</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>신청완료</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td><button type="button" class="btn btn-outline-danger">취소</button></td>
+								</tr>			
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>3</td>
+									<td>컴퓨터 강남</td>
+									<td>CG</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>신청완료</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td><button type="button" class="btn btn-outline-danger">취소</button></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>1</td>
+									<td>컴퓨터 강남</td>
+									<td>웹디자인</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>취소</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td>2024-01-02 02:00:00</td>
+								</tr>	
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>3</td>
+									<td>컴퓨터 강남</td>
+									<td>CG</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>신청완료</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td><button type="button" class="btn btn-outline-danger">취소</button></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+									</td>
+									<td>3</td>
+									<td>컴퓨터 강남</td>
+									<td>CG</td>
+									<td>대면</td>
+									<td>신청자</td>
+									<td>010-1234-5678</td>
+									<td>신청완료</td>
+									<td>2024-01-01 02:00:00</td>
+									<td>N</td>
+									<td><button type="button" class="btn btn-outline-danger">취소</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<button type="button" class="btn btn-outline-primary">닫기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="pageModal2" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xs modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">문자발송</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<input type="text" class="form-control mb-2" placeholder="신청자1,신청자2">
+					<textarea class="form-control" rows="10" placeholder="푸시메세지를 입력하세요."></textarea>
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-point w-100">발송</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1_1').modal('show');
+			$('#pageModal2').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>
