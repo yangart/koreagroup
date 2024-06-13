@@ -22,3 +22,13 @@
     border: 0;
     vertical-align: middle;
 }
+
+ul.bullet-dash {
+    li {
+        margin-left: 10px;
+        text-indent: -10px;
+        &::before {
+            content: "- ";
+        }
+    }
+}
