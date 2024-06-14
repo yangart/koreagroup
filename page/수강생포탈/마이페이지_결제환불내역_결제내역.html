@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">결제내역</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<p class="align-left mb-2">원서번호 : 142349</p>
+					<table class="table-info">
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>결제수단</th>
+								<th>결제금액</th>
+								<th>처리일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>결제</td>
+								<td>카드</td>
+								<td>30,000</td>
+								<td>2024-01-10 13:00:00</td>
+							</tr>
+							<tr>
+								<td class="text-danger">취소</td>
+								<td class="text-danger">카드</td>
+								<td>30,000</td>
+								<td>2024-01-10 13:00:00</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="l-area"><a href="#" class="btn btn-outline-primary">닫기</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+	$(window).load(function(){
+		$('#pageModal1').modal('show');
+	});
+	</script>
+
+</body>
+</html>

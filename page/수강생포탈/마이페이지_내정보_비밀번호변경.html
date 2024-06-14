@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xs modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">비밀번호 변경</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<ul class="info-block-list">
+						<li>
+							<div class="txt-area">
+								<input type="password" class="form-control" placeholder="현재 비밀번호">
+							</div>
+						</li>
+						<li>
+							<div class="txt-area">
+								<input type="password" class="form-control" placeholder="새 비밀번호">
+							</div>
+						</li>
+						<li>
+							<div class="txt-area">
+								<input type="password" class="form-control" placeholder="비밀번호 확인">
+							</div>
+						</li>
+					</ul>
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="l-area"><a href="#" class="btn btn-outline-primary">취소</a></div>
+					<div class="r-area"><a href="#" class="btn btn-point">확인</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+	$(window).load(function(){
+		$('#pageModal1').modal('show');
+	});
+	</script>
+
+</body>
+</html>

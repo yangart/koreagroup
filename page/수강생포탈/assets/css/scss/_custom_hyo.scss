@@ -25,15 +25,27 @@
         overflow-y: auto;
     }
 }
-.card-flex-area {
+.card-footer {
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-top:24px;
+    >.l-area,
+    >.r-area {
+        display: flex;
+        gap:8px;
+    }
     .c-area {
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
         margin:0 auto;
         > * {
             margin:0;
         }
+    }
+    .r-area {
+        margin-left:auto;
     }
 }
 .info-block-list {

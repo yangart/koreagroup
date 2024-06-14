@@ -6363,7 +6363,8 @@ button:focus {
   overflow-y: auto;
 }
 
-.card-flex-area {
+.card-footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6372,11 +6373,25 @@ button:focus {
           justify-content: space-between;
   margin-top: 24px;
 }
-.card-flex-area .c-area {
+.card-footer > .l-area,
+.card-footer > .r-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.card-footer .c-area {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   margin: 0 auto;
 }
-.card-flex-area .c-area > * {
+.card-footer .c-area > * {
   margin: 0;
+}
+.card-footer .r-area {
+  margin-left: auto;
 }
 
 .info-block-list {
