@@ -89,11 +89,24 @@
         }
     }    
     &.custom-search {
+        position:relative;
         width:auto;
         display:inline-flex;
         border-bottom: 1px solid var(    --bs-gray);        
-        .form-control { border:0; }
-        .btn { padding:0; }
+        .form-control { 
+            border:0; 
+            border-radius:0;
+            padding-right:32px;
+            padding-left:0;
+        }
+        .btn-transparent { 
+            position:absolute;
+            right:0;
+            top:0;
+            height:100%;
+            padding:1px 0;
+            z-index:3;
+        }
     }
 }
 .input-group-text-only {
@@ -359,6 +372,7 @@
         line-height: 20px;
         text-align: left;
         color: var(--btn-point-color);
+        text-align:center;
 
         &.second {
             color: #fff;
@@ -415,24 +429,24 @@ a.list-more {
         +.text {
             margin-top: 8px;
         }
-
         li {
             position: relative;
             display: flex;
             align-items: center;
-
             img {
                 margin-right: 4px;
             }
-
             .link img {
                 margin-right: 0;
             }
-
+            cite {
+                font-style:normal;margin-right:4px;
+            }
+            .empty { color:#aaa; }
+            button { font-weight:600;border-bottom:1px solid var(--body-color); }
             +li {
                 margin-left: 8px;
                 padding-left: 9px;
-
                 &::after {
                     display: block;
                     clear: both;
@@ -446,7 +460,6 @@ a.list-more {
                     background: #a4a4a4;
                 }
             }
-
             a {
                 display: flex;
                 align-items: center;
@@ -456,15 +469,15 @@ a.list-more {
     }
 
     .state {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        padding: 4px 16px;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
+        // position: absolute;
+        // top: 50%;
+        // right: 0;
+        // padding: 4px 16px;
+        // -webkit-transform: translateY(-50%);
+        // -moz-transform: translateY(-50%);
+        // -ms-transform: translateY(-50%);
+        // -o-transform: translateY(-50%);
+        // transform: translateY(-50%);
     }
 
     div+.state {
@@ -589,6 +602,7 @@ a.list-more {
     .date {
         width: 140px;
         text-align: center;
+        font-variant-numeric: tabular-nums;
     }
 }
 
@@ -747,31 +761,30 @@ a.list-more {
             margin-left:4px;
         }
     }
+}
 
-    >li .shrink {
-        flex-shrink: 0 !important;
-        font-size: 14px;
-        line-height: 20px;
-        text-align: center;
-        color: #212529;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-
-        .attendance-rate {
-            display:flex;
-            align-items:center;
-            justify-content: center;            
-            span {
-                color:var(--bs-secondary);
-                opacity:.8;
-            }
-            b {
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 1.25;
-                margin-left:8px;
-            }
+.shrink {
+    flex-shrink: 0 !important;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #212529;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .attendance-rate {
+        display:flex;
+        align-items:center;
+        justify-content: center;            
+        span {
+            color:var(--bs-secondary);
+            opacity:.8;
+        }
+        b {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.25;
+            margin-left:8px;
         }
     }
 }
@@ -869,6 +882,7 @@ a.list-more {
         }
     }
 }
+$transition-collapse: height .35s ease;
 
 .card-attendance {
     display: flex;
@@ -909,21 +923,25 @@ a.list-more {
     dd {
         margin-top:8px;
         flex-wrap: wrap;
+        max-height:66px;
+        overflow-y:auto;
 
         .day {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 32px;
-            height: 32px;
+            height: 30px;
             margin-right: 4px;
             margin-bottom: 4px;
+            padding:0 8px;
             border-radius: 100px;
             background-color:var(--border-color-light);
             font-size: 14px;
             line-height: 20px;
             text-align: center;
             color: #212529;
+            cursor:pointer;
+            font-variant-numeric: tabular-nums;
 
             &.type-on {
                 background-color: var(--btn-point-color);
@@ -934,7 +952,6 @@ a.list-more {
                 color: var(--btn-point-color);
             }
             &.type-leave {
-                border: solid 2px var(--btn-point-color);
                 background-color: #3ba4fd33;
                 color: var(--btn-point-color);
             }
@@ -1062,7 +1079,6 @@ a.list-more {
 }
 
 .main-container {
-
     .schedule-card,
     .details-card {
         // height: 584px;
@@ -3482,48 +3498,47 @@ button:focus {
     min-height: calc(100vh - 44px - 80px);
 }
 
-.tooltip {}
-
-.tooltip-inner {
-    font-family: 'Pretendard', sans-serif;
-    border-radius: 6px;
-    padding: 4px 8px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.43;
-    text-align: left;
-    color: #fff;
+.tooltip {
+    .tooltip-inner {
+        font-family: 'Pretendard', sans-serif;
+        border-radius: 6px;
+        padding: 4px 6px;
+        font-size: 12px;
+        line-height: 1.43;
+        text-align: left;
+        color: #fff;
+    }
 }
 
 .mask-tip {
     font-size: 20px;
 }
-
 .tooltip-box {
     display: flex;
-    margin: 4px 0;
-
-    >div {
+    margin: 8px 0;
+    > .book-img {
+        flex:1;
         padding-right: 2px;
-
-        +div {
+        + .book-img {
             padding-right: 0;
             padding-left: 2px;
         }
+        strong {
+            display: block;
+            margin-top:8px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.43;
+            font-weight:normal;
+            text-align: center;
+            color: #fff;
+        }
+        img {
+            display:block;
+            margin:0 auto;
+            width: auto;
+            height: 120px;
+        }
     }
 
-    img {
-        width: 64px;
-        height: 64px;
-    }
-
-    em {
-        display: block;
-        padding-top: 4px;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1.43;
-        text-align: center;
-        color: #fff;
-    }
 }

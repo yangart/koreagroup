@@ -715,7 +715,10 @@
 }
 
 /* 모달 */
-
+.modal { background:rgba(0,0,0,.5); }
+.modal-backdrop.show {
+  display: none;
+}
 body:not(.modal-open) {
   .modal-wrap {
     background: #f9fafb;
