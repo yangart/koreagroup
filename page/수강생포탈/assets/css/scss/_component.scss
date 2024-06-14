@@ -767,11 +767,10 @@ body:not(.modal-open) {
   .modal-content {
     border-radius: 8px;
     border: solid 1px var(--border-color-light);
+    max-height: calc(100vh - 3.5rem);
   }
   .modal-body {
     padding: calc(var(--bs-gutter-y)/2) var(--bs-gutter-x) var(--bs-gutter-y);
-    background: #fff;
-    padding: 24px 24px;
     background: #fff;
     overflow-y: auto;
   }
@@ -816,24 +815,6 @@ body:not(.modal-open) {
     display: inline-block;
   }
 }
-
-.modal-flex {
-  display: flex;
-  align-items: center;
-  .modal-title {
-    white-space: nowrap;
-  }
-}
-.modal-user {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #212529;
-  b {
-    font-weight: 600;
-  }
-}
 .modal-title {
   font-size: 16px;
   font-weight: 600;
@@ -849,17 +830,9 @@ body:not(.modal-open) {
     margin-top: 20px;
   }
 }
-.modal-xxl .modal-body,
-.modal-xl .modal-body {
-  padding-top: 0;
-}
-.modal-xs .modal-body {
-  padding: 20px;
-  text-align: center;
-}
 .modal-body {
   .form-control {
-    padding: 12px;
+    padding: 7px 8px;
     + .form-control {
       margin-top: 6px;
     }
@@ -869,13 +842,12 @@ body:not(.modal-open) {
     }
   }
   select {
-    height: 44px;
+    height: 36px;
   }
 }
 .modal-tabmenu {
   margin-bottom: 16px;
   box-shadow: inset 0 -1px 0 0 var(--border-color-light);
-
   li .tab-btn {
     display: flex;
     justify-content: center;
@@ -886,40 +858,12 @@ body:not(.modal-open) {
     font-weight: 600;
     line-height: 1.43;
     color: #b5b5b5;
-
     &.active {
       color: #212529;
       box-shadow: inset 0 -2px 0 0 var(--btn-point-color);
     }
   }
 }
-.round-tabmenu {
-  margin-bottom: 12px;
-
-  li {
-    flex-grow: 1;
-
-    .tab-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 36px;
-      padding: 0 12px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.43;
-      text-align: left;
-      color: var(--btn-point-color);
-
-      &.active {
-        color: #fff;
-        background-color: var(--btn-point-color);
-      }
-    }
-  }
-}
-
 .modal-xxl {
   max-width: 1480px;
   min-width: 1240px;
