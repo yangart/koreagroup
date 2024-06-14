@@ -1,9 +1,19 @@
 
 
 
-
-
-
+/* 설문지 */
+.survey-area,
+.survey-list {
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+}
+.survey-list {
+    h6 {
+        display: block;
+        margin-bottom:12px;
+    }
+}
 //pc wide 1400
 @media screen and (max-width:var(--breakpoint-xxl)) {
 

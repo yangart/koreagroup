@@ -671,8 +671,8 @@ fieldset:disabled .btn {
         border-radius: 2px;
     }
     &:checked {
-        background-color: #5a66ff;
-        border-color: #5a66ff;
+        background-color: var(--first-color);
+        border-color: var(--first-color);
 
         +.form-check-label {}    }
 }

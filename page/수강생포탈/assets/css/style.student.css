@@ -769,8 +769,8 @@ fieldset:disabled .btn {
   border-radius: 2px;
 }
 .form-check-input:checked {
-  background-color: #5a66ff;
-  border-color: #5a66ff;
+  background-color: var(--first-color);
+  border-color: var(--first-color);
 }
 .form-check-label {
   cursor: pointer;
@@ -6692,4 +6692,22 @@ button:focus {
 .form-area input[type=text],
 .form-area input[type=password] {
   min-height: 54px;
+}
+
+/* 설문지 */
+.survey-area,
+.survey-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.survey-list h6 {
+  display: block;
+  margin-bottom: 12px;
 }/*# sourceMappingURL=style.student.css.map */
