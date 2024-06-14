@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div id="header">
+			<h1 class="header-logo"><a href="javascript:;"><img src="./assets/img/header-logo.png" alt=""></a></h1>
+			<ul class="header-nav nav" id="headerNav">
+				<li><a href="javascript:;" class="nav-btn">홈</a></li>
+				<li class="hoverdown">
+					<a href="javascript:;" class="nav-btn active" id="hNavHoverdown2">수강내역</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown2">
+						<li><a class="dropdown-item" href="javascript:;">공지사항</a></li>
+						<li><a class="dropdown-item" href="javascript:;">이벤트</a></li>
+						<li><a class="dropdown-item" href="javascript:;">특강/세미나</a></li>
+						<li><a class="dropdown-item" href="javascript:;">자격증 정보(민간)</a></li>
+						<li><a class="dropdown-item" href="javascript:;">자격증 정보(공공)</a></li>
+						<li><a class="dropdown-item" href="javascript:;">취업 및 진학정보 게시판</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;" class="nav-btn">커뮤니티</a></li>
+				<li><a href="javascript:;" class="nav-btn">교육과정</a></li>
+				<li class="hoverdown">
+					<a href="javascript:;" class="nav-btn" id="hNavHoverdown5">학원정보</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown5">
+						<li><a class="dropdown-item" href="javascript:;">빈강의실 찾기</a></li>
+						<li><a class="dropdown-item" href="javascript:;">학원내부맵</a></li>
+						<li><a class="dropdown-item" href="javascript:;">따즈아 소개</a></li>
+					</ul>
+				</li>
+			</ul><!-- // headerNav -->
+			<div class="mobile-menu">
+				<ul>
+					<li class="item1 on"><a href="javascript:;"><em>홈</em></a></li>
+					<li class="item2"><a href="javascript:;"><em>수강내역</em></a></li>
+					<li class="item3"><a href="javascript:;"><em>커뮤니티</em></a></li>
+					<li class="item4"><a href="javascript:;"><em>교육과정</em></a></li>
+					<li class="item5"><a href="javascript:;"><em>학원정보</em></a></li>
+				</ul>
+			</div>
+			<ul class="header-icon nav" id="headerIcon">
+				<li><a href="javascript:;" class="nav-btn"><i class="h-ico-user"></i></a></li>
+				<li><a href="javascript:;" class="nav-btn"><i class="h-ico-out"></i></a></li>
+			</ul><!-- // headerIcon -->
+		</div>
+		<!-- // header -->
+
+		<!-- container -->
+		<div id="container">
+			<!-- <div class="page-location">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active">MAIN</li>
+					<li class="breadcrumb-item">수강내역</li>
+				</ol>
+			</div> -->
+			<div class="flex-box-apply">
+				<div class="col-group-left">
+					<div class="page-location">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item active">MAIN</li>
+							<li class="breadcrumb-item">수강내역</li>
+						</ol>
+					</div>
+					<div class="card">
+						<div class="card-subject">
+							<div class="title">수강내역</div>
+						</div><!-- // card-subject -->
+						<ul class="nav card-tabs" id="stateNav" role="tablist">
+							<li><a href="javascript:;" class="nav-btn active" data-bs-toggle="tab" role="tab" aria-selected="true">전체 (23)</a></li>
+							<li><a href="javascript:;" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">수강 (5)</a></li>
+							<li><a href="javascript:;" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">대기 (5)</a></li>
+							<li><a href="javascript:;" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">미배정 (5)</a></li>
+							<li><a href="javascript:;" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">수료 (5)</a></li>
+							<li><a href="javascript:;" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">환불 (3)</a></li>
+						</ul><!-- // card-tabs -->
+						<div class="card-result-pin">전체 <b>23</b></div>
+					</div><!-- // card -->
+
+					<div class="card fluid-card">
+						<div class="card-body">
+							<ul class="cont-detail-list overflow-y-scroll">
+								<li>
+									<div class="grow">
+										<div class="title">
+											<a href="javascript:;">(국비)포토샵 따라하기</a>
+											<small class="bedge">대면</small>
+										</div>
+										<div class="info cont-info">
+											<p><cite>강사</cite> 홍길동</p>
+											<p><i class="ico-date"></i> 2023-11-10~2023-11-26</p>
+											<p>월수금 09:30~11:30</p>
+											<p>5층 104C (8/10)</p>
+										</div>
+										<div class="state1 cont-state">수강</div>
+									</div>
+									<div class="shrink">
+										<div class="attendance-rate">
+											<span>출석률</span><b>76%</b>
+										</div>
+										<button type="button" class="btn btn-point-deep">만족도 조사</button>
+									</div>
+								</li>
+								<li>
+									<div class="grow">
+										<div class="title">
+											<a href="javascript:;">(국비)포토샵 따라하기</a>
+											<small class="bedge">비대면</small>
+										</div>
+										<div class="info cont-info">
+											<p><i class="ico-date"></i> 2023-11-10~2023-11-26</p>
+											<p>월수금 09:30~11:30</p>
+											<p>5층 104C (8/10)</p>
+										</div>
+										<div class="state2 cont-state">대기</div>
+									</div>
+									<div class="shrink">
+									</div>
+								</li>
+								<li>
+									<div class="grow">
+										<div class="title">
+											<a href="javascript:;">(국비)포토샵 따라하기</a>
+											<small class="bedge">비대면</small>
+										</div>
+										<div class="state3 cont-state">미배정</div>
+									</div>
+									<div class="shrink">
+									</div>
+								</li>
+								<li>
+									<div class="grow">
+										<div class="title"><a href="javascript:;">(국비)포토샵 따라하기</a></div>
+										<div class="info cont-info">
+											<p><i class="ico-date"></i> 2023-11-10~2023-11-26</p>
+											<p>월수금 09:30~11:30</p>
+											<p>5층 104C (8/10)</p>
+										</div>
+										<div class="state4 cont-state">수료</div>
+									</div>
+									<div class="shrink">
+										<div class="attendance-rate">
+											<span>출석률</span><b>100%</b>
+										</div>
+										<button type="button" class="btn btn-point">수료증 발급</button>
+										<button type="button" class="btn btn-point-deep">만족도 조사</button>
+									</div>
+								</li>
+								<li>
+									<div class="grow">
+										<div class="title"><a href="javascript:;">(국비)포토샵 따라하기</a></div>
+										<div class="info cont-info">
+											<p><i class="ico-date"></i> 2023-11-10~2023-11-26</p>
+											<p>월수금 09:30~11:30</p>
+											<p>5층 104C (8/10)</p>
+										</div>
+										<div class="state5 cont-state">환불</div>
+									</div>
+									<div class="shrink">
+										<div class="attendance-rate">
+											<span>출석률</span><b>25%</b>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div><!-- // card -->
+				</div><!-- // col -->
+
+				<div class="col-group-right">
+					<div class="card fluid-card">
+						<div class="card-head bg-gray">
+							[KDI] 포토샵 따라하기
+						</div><!-- // card-head -->
+
+						<div class="card-body">
+							<div class="card-subject card-subject-column">
+								<ul class="text">
+									<li><img src="./assets/img/ico-text-user.png" alt=""><b>오수연 강사</b></li>
+									<li><img src="./assets/img/ico-text-date.png" alt="">2023-11-10~2023-11-26</li>
+									<li>월수금 09:30~11:30</li>
+								</ul>
+								<ul class="text">
+									<li>
+										<cite>다음수업일</cite>
+										<b class="txt-primary">5월 5일</b>
+									</li>
+									<li>
+										<cite>출석율</cite>
+										<b class="rate">100%</b>
+									</li>
+									<li>
+										<cite>준비물</cite>
+										<button type="button" class="btn-tooltip" 
+										data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="focus" data-bs-html="true"
+										title="<div class='tooltip-box'>1.개별 노트북<br>2.16GB USB</div>">있음</button>
+									</li>
+									<li>
+										<cite>교재안내</cite>
+											<button type="button" class="btn-tooltip" 
+											data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="focus" data-bs-html="true"
+											title="<div class='tooltip-box'><div class='book-img'><img src='./assets/img/archive-list-sample1.jpeg' alt=''><strong>그의 운명에 대한 아주 개인적인 생각</strong></div><div class='book-img'><img src='./assets/img/archive-list-sample2.png' alt=''><strong>교재</strong></div></div>">2건</button>
+									</li>
+									<li>
+										<cite>교재안내</cite>
+										<b class="empty">없음</b>
+									</li>
+								</ul>
+							</div><!-- // card-subject -->
+
+							<!-- <div class="card-notice">
+								<div><a href="javascript:;"><i><img src="./assets/img/ico-megaphone.png" alt=""></i>학생들 개인별 맞춤 1:1 이력서 교정과 모의면접 등 컨설팅 혜택을...</a></div>
+								<div>2023-12-04</div>
+							</div>// card-notice -->
+
+							<dl class="card-attendance">
+								<dt>
+									<em>출결현황</em>
+								</dt>
+								<dd>
+									<span class="day type-on"data-bs-toggle="tooltip" data-bs-title="출석">05.01</span>
+									<span class="day">05.02</span>
+									<span class="day type-on"data-bs-toggle="tooltip" data-bs-title="출석">05.03</span>
+									<span class="day type-late"data-bs-toggle="tooltip" data-bs-title="지각">05.04</span>
+									<span class="day type-on"data-bs-toggle="tooltip" data-bs-title="출석">05.05</span>
+									<span class="day type-on"data-bs-toggle="tooltip" data-bs-title="출석">05.06</span>
+									<span class="day">05.07</span>
+									<span class="day">05.08</span>
+									<span class="day">05.09</span>
+									<span class="day">05.10</span>
+									<span class="day type-off"data-bs-toggle="tooltip" data-bs-title="결석">05.11</span>
+									<span class="day">05.12</span>
+									<span class="day">05.13</span>
+									<span class="day type-leave"data-bs-toggle="tooltip" data-bs-title="조퇴">05.14</span>
+									<span class="day type-leave"data-bs-toggle="tooltip" data-bs-title="조퇴">05.15</span>
+									<span class="day type-on"data-bs-toggle="tooltip" data-bs-title="출석">05.16</span>
+									<span class="day">05.17</span>
+									<span class="day type-on"data-bs-toggle="tooltip" data-bs-title="출석">05.18</span>
+									<span class="day type-late"data-bs-toggle="tooltip" data-bs-title="지각">05.19</span>
+									<span class="day">05.20</span>
+									<span class="day">05.21</span>
+									<span class="day">05.22</span>
+									<span class="day">05.23</span>
+									<span class="day">05.24</span>
+									<span class="day">05.25</span>
+									<span class="day">05.26</span>
+									<span class="day">05.27</span>
+									<span class="day">05.28</span>
+									<span class="day">05.28</span>
+									<span class="day">05.30</span>
+									<span class="day">05.31</span>
+								</dd>
+							</dl><!-- // card-attendance -->
+
+							<div class="fnc-area">
+								<div class="l-area">
+									<select>
+										<option>공지사항</option>
+										<option>Q&A</option>
+										<option>자료실</option>
+										<option>일이삼사오육칠팔구십</option>
+									</select>
+									<span class="count">총 <strong class="text-point">165</strong>건</span>
+								</div>
+								<div class="r-area">
+									<div class="input-group custom-search">
+										<input type="text" class="form-control" placeholder="검색어를 입력해주세요.">
+										<a href="javascript:;" class="btn btn-transparent"><span class="material-symbols-outlined color-first">search</span></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-panel fluid-card" id="detailsPanel">
+								<div class="tab-pane active" id="detailsPanel1" role="tabpanel">
+									<ul class="card-list-simple">
+										<li>
+											<a href="javascript:;"  data-bs-toggle="modal" data-bs-target="#pageModalNoticeDetail">
+												<div class="link">클릭해 보세요. 공지사항 상세입니다. 자료실 상세도 같습니다.</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" data-bs-toggle="modal" data-bs-target="#pageModalQnaUpdate">
+												<div class="link">Q&A 작성폼 입니다.</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" data-bs-toggle="modal" data-bs-target="#pageModalQnaDetail">
+												<div class="link">Q&A 상세 페이지 입니다.</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div class="link">혹시 제목이 아아아아아아주 길수도 있잖아요?!! 그러면 말줄임을 해야할까나 말까나 어떡할까나~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
+										</li>
+									</ul><!-- // card-list-simple -->
+
+									<div class="card-panel-pin">
+										<a href="javascript:;" class="btn btn-point-deep">버튼</a>
+										<a href="javascript:;" class="btn btn-outline-active btn-sm">사용</a>
+									</div>
+
+								</div>
+							</div><!-- // card-panel -->
+						</div>
+						<div class="card-footer">
+							<div class="c-area">
+								<ul class="pagination">
+									<li class="page-item">
+										<a href="#" class="page-link">←</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">1</a>
+									</li>
+									<li class="page-item active">
+										<a href="#" class="page-link">2</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">3</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">4</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">5</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">→</a>
+									</li>
+								</ul>
+							</div>
+							<div class="r-area">
+								<button type="button" class="btn btn-outline-primary ">문의</button>
+							</div>
+						</div><!-- // card-body -->
+
+					</div><!-- // card -->
+				</div><!-- // col -->
+
+			</div><!-- // row -->
+
+		</div><!-- // container -->
+
+	</div><!-- // wrapper -->
+
+	<!-- modal : 공지사항 상세(자료실 상세 동일) -->
+	<div class="modal fade" id="pageModalNoticeDetail" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">공지사항 상세</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="table-view">
+						<div class="view-header">
+							<strong class="title">한국 태국, 오늘 축구 2차전 중계 시간…북중미 월드컵 예선 일정 총정리</strong>
+							<div class="fnc-area">
+								<div class="l-area">
+									<span class="name">김기자</span>
+								</div>
+								<div class="r-area">
+									<span class="date">2024.05.06 15:00</span>
+								</div>
+							</div>
+						</div>
+						<div class="view-body">
+							2026 FIFA 북중미 월드컵 2차 예선 한국 태국 축구 경기 중계 일정에 관심이 쏠리고 있다. 황선홍 감독이 이끄는 한국 축구대표팀은 태국 '라자망갈라 국립경기장'에서 조별리그 C조 4차전을 26일 치른다.<br><br>
+							<img src="https://cdnweb01.wikitree.co.kr/webdata/editor/202403/26/img_20240326144309_1ed4fc21.webp" alt=""><br>
+							
+							태국은 피파랭킹 101위로 한국(22위)보다 79계단 낮다. 객관적인 전력에서 한 수 아래로 평가받고 있으나 한국 축구 대표팀은 이번 태국전 부담이 적지 않다.<br>
+
+태국의 덥고 습한 날씨에 얼마나 빨리 적응하느냐가 관건이다. 한국은 꽃샘추위가 채 가시지 않았지만, 태국 날씨는 완전히 달라 지난 3차전과 정반대 환경에서 경기에 임해야 한다.<br>
+
+팬들의 열성적인 응원도 걱정거리다. 한국 태국 티켓 예매는 오픈 이후 곧장 전 좌석이 매진됐다. 태국 홈인 라자망갈라 국립경기장에 만원 관중이 들어설 것으로 예상된다.<br>
+						</div>
+						<div class="file-list">
+							<div class="files">
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="이력서2.doc" dwonload>이력서2.doc</a>
+									<span class="size">2.3MB</span>
+								</div>
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="경령증명서.doc" dwonload>경령증명서.doc</a>
+									<span class="size">586KB</span>
+								</div>
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="포트폴리오.ppt" dwonload>포트폴리오.ppt</a>
+									<span class="size">8.6MB</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="l-area">
+						<button type="button" class="btn btn-outline-primary">닫기</button></div>
+					<div class="r-area">
+						<button type="button" class="btn btn-point">저장</button></div>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : 공지사항 상세  -->
+
+	<!-- modal : Q&A 작성 -->
+	<div class="modal fade" id="pageModalQnaUpdate" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">Q&A 등록</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<ul class="info-block-list">
+						<li>
+							<div class="txt-area">
+								<input type="text" class="form-control" placeholder="제목 입력">
+							</div>
+						</li>
+						<li>
+							<div class="txt-area">
+								<textarea class="form-control" placeholder="내용을 입력하세요."></textarea>
+							</div>
+						</li>
+						<li>
+							<input class="form-control" type="file" id="formFile">
+						</li>
+					</ul>
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="l-area">
+						<button type="button" class="btn btn-outline-primary">닫기</button></div>
+					<div class="r-area">
+						<button type="button" class="btn btn-point">저장</button></div>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : Q&A 작성  -->
+
+	<!-- modal : Q&A 상세 -->
+	<div class="modal fade" id="pageModalQnaDetail" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">Q&A 상세</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="table-view">
+						<div class="view-header">
+							<strong class="title"><em class="state">[답변완료]</em> 아이스크림 두 개 먹으면 배탈이 날까요?</strong>
+							<div class="fnc-area">
+								<div class="l-area">
+									<span class="name">김질문</span>
+								</div>
+								<div class="r-area">
+									<span class="date">2024.05.06 15:00</span>
+								</div>
+							</div>
+						</div>
+						<div class="view-body">
+							아이스크림 많이 먹으면 배탈난대요. <br>
+							한개 먹고 두개 먹고 또먹었더니 꾸루루루룩 꾸루루루룩~~~~
+
+							<div class="reply">
+								<span class="material-symbols-outlined reply-arrow">
+									subdirectory_arrow_right
+								</span>
+								네 맞습니다. 아이스크림은 많이먹으면 배가 아픕니다. <br>그렇지만 두 개 정도는 저도 항상 먹어요.
+							</div>
+						</div>
+						<div class="file-list">
+							<div class="files">
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="포트폴리오.ppt" dwonload>아이스크림에대한오해.ppt</a>
+									<span class="size">8.6MB</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="l-area">
+						<button type="button" class="btn btn-outline-primary">닫기</button></div>
+					<div class="r-area">
+						<button type="button" class="btn btn-point">저장</button></div>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : Q&A 상세  -->
+
+	<!-- pageModal1 -->
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">(일반)맥스2</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-12">
+							<label for="" class="form-label">게시판 구분</label>
+							<select id="" class="w-100">
+								<option value="01">선택</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">제목</label>
+							<input type="text" class="form-control" placeholder="제목을 입력해주세요.">
+							<input type="file" class="form-control" id="">
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">내용</label>
+							<textarea class="form-control" placeholder="내용을 입력하세요."></textarea>
+						</div>
+					</div><!-- // row -->
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="l-area">
+						<button type="button" class="btn btn-outline-primary">닫기</button></div>
+					<div class="r-area">
+						<button type="button" class="btn btn-point">저장</button></div>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : pageModal1 -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+	$(window).load(function(){
+		$('#pageModalQnaDetail').modal('show');
+	});
+	</script>
+
+</body>
+</html>
