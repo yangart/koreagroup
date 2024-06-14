@@ -25,7 +25,23 @@ body {
   align-items: center;
   background: #2a364a;
 }
-
+.wrap-sm {
+  margin:0 auto;
+  max-width: 480px;
+  width: 100%;
+}
+.section {
+  margin-bottom: 80px;
+  &:last-child {
+      margin-bottom: 0;
+  }
+}
+.section-sm {
+  margin-bottom: 40px;
+  &:last-child {
+      margin-bottom: 0;
+  }
+}
 .header-logo a {
   display: flex;
   justify-content: center;

@@ -5,7 +5,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 :root {
-    --min-width: 1480px;
+    --min-width: 0;
     --font-family: 'Pretendard', sans-serif;
     --font-size: 14px;
     --font-weight: 400;
@@ -69,6 +69,7 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+* { word-break:break-all; }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, form, fieldset, legend, label, button, input, textarea, select, optgroup, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -555,11 +556,6 @@ fieldset:disabled .btn {
 .form-select {
     padding-right: var(--form-padding-ico);
     background: url(../img/form-select-ico@2x.png) no-repeat right 12px (center / 12px) 12px;
-}
-textarea.form-control {
-    min-height: 120px;
-    padding: 6px 12px;
-    resize: none;
 }
 .form-control {
     &[type=file] {

@@ -211,7 +211,7 @@
 									<li>
 										<cite>교재안내</cite>
 											<button type="button" class="btn-tooltip" 
-											data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="click" data-bs-html="true"
+											data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="focus" data-bs-html="true"
 											title="<div class='tooltip-box'><div class='book-img'><img src='./assets/img/archive-list-sample1.jpeg' alt=''><strong>그의 운명에 대한 아주 개인적인 생각</strong></div><div class='book-img'><img src='./assets/img/archive-list-sample2.png' alt=''><strong>교재</strong></div></div>">2건</button>
 									</li>
 									<li>
@@ -287,49 +287,67 @@
 								<div class="tab-pane active" id="detailsPanel1" role="tabpanel">
 									<ul class="card-list-simple">
 										<li>
-											<div class="link"><a href="javascript:;">과제 게시판 특별과제~~~</a></div>
-											<div class="name">이미애</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;"  data-bs-toggle="modal" data-bs-target="#pageModalNoticeDetail">
+												<div class="link">클릭해 보세요. 공지사항 상세입니다. 자료실 상세도 같습니다.</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 										<li>
-											<div class="link"><a href="javascript:;">자료 01</a></div>
-											<div class="name">이미애</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;" data-bs-toggle="modal" data-bs-target="#pageModalQnaUpdate">
+												<div class="link">Q&A 작성폼 입니다.</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 										<li>
-											<div class="link"><a href="javascript:;">과제 01 (2)</a></div>
-											<div class="name">교육부</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;" data-bs-toggle="modal" data-bs-target="#pageModalQnaDetail">
+												<div class="link">Q&A 상세 페이지 입니다.</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 										<li>
-											<div class="link"><a href="javascript:;">과제 게시판 3D 자료</a></div>
-											<div class="name">이미애</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;">
+												<div class="link">혹시 제목이 아아아아아아주 길수도 있잖아요?!! 그러면 말줄임을 해야할까나 말까나 어떡할까나~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 										<li>
-											<div class="link"><a href="javascript:;"> 공지 특별과제 확인~~~</a></div>
-											<div class="name">교육부</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 										<li>
-											<div class="link"><a href="javascript:;"> 공지 특별과제 확인~~~</a></div>
-											<div class="name">교육부</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 										<li>
-											<div class="link"><a href="javascript:;"> 공지 특별과제 확인~~~</a></div>
-											<div class="name">교육부</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 										<li>
-											<div class="link"><a href="javascript:;"> 공지 특별과제 확인~~~</a></div>
-											<div class="name">교육부</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 										<li>
-											<div class="link"><a href="javascript:;"> 공지 특별과제 확인~~~</a></div>
-											<div class="name">교육부</div>
-											<div class="date">2023-07-01 10:20</div>
+											<a href="javascript:;">
+												<div class="link">과제 게시판 특별과제~~~</div>
+												<div class="name">이미애</div>
+												<div class="date">2023-07-01 10:20</div>
+											</a>
 										</li>
 									</ul><!-- // card-list-simple -->
 
@@ -340,31 +358,36 @@
 
 								</div>
 							</div><!-- // card-panel -->
-
-							<ul class="pagination">
-								<li class="page-item">
-									<span class="page-link">←</a>
-								</li>
-								<li class="page-item">
-									<span class="page-link">1</a>
-								</li>
-								<li class="page-item active">
-									<span class="page-link">2</a>
-								</li>
-								<li class="page-item">
-									<span class="page-link">3</a>
-								</li>
-								<li class="page-item">
-									<span class="page-link">4</a>
-								</li>
-								<li class="page-item">
-									<span class="page-link">5</a>
-								</li>
-								<li class="page-item">
-									<span class="page-link">→</a>
-								</li>
-							</ul><!-- // pagination -->
-
+						</div>
+						<div class="card-footer">
+							<div class="c-area">
+								<ul class="pagination">
+									<li class="page-item">
+										<a href="#" class="page-link">←</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">1</a>
+									</li>
+									<li class="page-item active">
+										<a href="#" class="page-link">2</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">3</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">4</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">5</a>
+									</li>
+									<li class="page-item">
+										<a href="#" class="page-link">→</a>
+									</li>
+								</ul>
+							</div>
+							<div class="r-area">
+								<button type="button" class="btn btn-outline-primary ">문의</button>
+							</div>
 						</div><!-- // card-body -->
 
 					</div><!-- // card -->
@@ -375,6 +398,168 @@
 		</div><!-- // container -->
 
 	</div><!-- // wrapper -->
+
+	<!-- modal : 공지사항 상세(자료실 상세 동일) -->
+	<div class="modal fade" id="pageModalNoticeDetail" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">공지사항 상세</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="table-view">
+						<div class="view-header">
+							<strong class="title">한국 태국, 오늘 축구 2차전 중계 시간…북중미 월드컵 예선 일정 총정리</strong>
+							<div class="fnc-area">
+								<div class="l-area">
+									<span class="name">김기자</span>
+								</div>
+								<div class="r-area">
+									<span class="date">2024.05.06 15:00</span>
+								</div>
+							</div>
+						</div>
+						<div class="view-body">
+							2026 FIFA 북중미 월드컵 2차 예선 한국 태국 축구 경기 중계 일정에 관심이 쏠리고 있다. 황선홍 감독이 이끄는 한국 축구대표팀은 태국 '라자망갈라 국립경기장'에서 조별리그 C조 4차전을 26일 치른다.<br><br>
+							<img src="https://cdnweb01.wikitree.co.kr/webdata/editor/202403/26/img_20240326144309_1ed4fc21.webp" alt=""><br>
+							
+							태국은 피파랭킹 101위로 한국(22위)보다 79계단 낮다. 객관적인 전력에서 한 수 아래로 평가받고 있으나 한국 축구 대표팀은 이번 태국전 부담이 적지 않다.<br>
+
+태국의 덥고 습한 날씨에 얼마나 빨리 적응하느냐가 관건이다. 한국은 꽃샘추위가 채 가시지 않았지만, 태국 날씨는 완전히 달라 지난 3차전과 정반대 환경에서 경기에 임해야 한다.<br>
+
+팬들의 열성적인 응원도 걱정거리다. 한국 태국 티켓 예매는 오픈 이후 곧장 전 좌석이 매진됐다. 태국 홈인 라자망갈라 국립경기장에 만원 관중이 들어설 것으로 예상된다.<br>
+						</div>
+						<div class="file-list">
+							<div class="files">
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="이력서2.doc" dwonload>이력서2.doc</a>
+									<span class="size">2.3MB</span>
+								</div>
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="경령증명서.doc" dwonload>경령증명서.doc</a>
+									<span class="size">586KB</span>
+								</div>
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="포트폴리오.ppt" dwonload>포트폴리오.ppt</a>
+									<span class="size">8.6MB</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="l-area">
+						<button type="button" class="btn btn-outline-primary">닫기</button></div>
+					<div class="r-area">
+						<button type="button" class="btn btn-point">저장</button></div>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : 공지사항 상세  -->
+
+	<!-- modal : Q&A 작성 -->
+	<div class="modal fade" id="pageModalQnaUpdate" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">Q&A 등록</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<ul class="info-block-list">
+						<li>
+							<div class="txt-area">
+								<input type="text" class="form-control" placeholder="제목 입력">
+							</div>
+						</li>
+						<li>
+							<div class="txt-area">
+								<textarea class="form-control" placeholder="내용을 입력하세요."></textarea>
+							</div>
+						</li>
+						<li>
+							<input class="form-control" type="file" id="formFile">
+						</li>
+					</ul>
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="l-area">
+						<button type="button" class="btn btn-outline-primary">닫기</button></div>
+					<div class="r-area">
+						<button type="button" class="btn btn-point">저장</button></div>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : Q&A 작성  -->
+
+	<!-- modal : Q&A 상세 -->
+	<div class="modal fade" id="pageModalQnaDetail" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">Q&A 상세</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="table-view">
+						<div class="view-header">
+							<strong class="title"><em class="state">[답변완료]</em> 아이스크림 두 개 먹으면 배탈이 날까요?</strong>
+							<div class="fnc-area">
+								<div class="l-area">
+									<span class="name">김질문</span>
+								</div>
+								<div class="r-area">
+									<span class="date">2024.05.06 15:00</span>
+								</div>
+							</div>
+						</div>
+						<div class="view-body">
+							아이스크림 많이 먹으면 배탈난대요. <br>
+							한개 먹고 두개 먹고 또먹었더니 꾸루루루룩 꾸루루루룩~~~~
+
+							<div class="reply">
+								<span class="material-symbols-outlined reply-arrow">
+									subdirectory_arrow_right
+								</span>
+								네 맞습니다. 아이스크림은 많이먹으면 배가 아픕니다. <br>그렇지만 두 개 정도는 저도 항상 먹어요.
+							</div>
+						</div>
+						<div class="file-list">
+							<div class="files">
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="포트폴리오.ppt" dwonload>아이스크림에대한오해.ppt</a>
+									<span class="size">8.6MB</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="l-area">
+						<button type="button" class="btn btn-outline-primary">닫기</button></div>
+					<div class="r-area">
+						<button type="button" class="btn btn-point">저장</button></div>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div>
+	</div><!-- // modal : Q&A 상세  -->
 
 	<!-- pageModal1 -->
 	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
