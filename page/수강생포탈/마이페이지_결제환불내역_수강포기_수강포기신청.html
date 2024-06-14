@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">수강포기 신청</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<table class="table-write">
+						<colgroup>
+							<col style="width:18%">
+							<col style="">
+							<col style="width:18%">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>계열</th>
+								<td>
+									<select class="form-select">
+										<option value="01">컴퓨터</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</td>
+								<th>지점</th>
+								<td>
+									<select class="form-select">
+										<option value="01">강남</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>김환불 (010-1111-2222)</td>
+								<th>멘토</th>
+								<td>김담당1 선임멘토</td>
+							</tr>
+							<tr>
+								<th>환불사유</th>
+								<td colspan="3">
+									<p class="mb-3">환불사유를 선택해주세요. <span class="text-danger">(중복선택 가능)</span></p>
+									<div class="row mb-3">
+										<div class="col">
+											<p class="h6">멘토</p>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk1_1">
+												<label class="form-check-label" for="chk1_1">
+												  언행(반말, 폭언, 욕설, 무시)
+												</label>
+											</div>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk1_2">
+												<label class="form-check-label" for="chk1_2">
+												  연락두절(피드백부족, 연락늦음, 안내미흡)
+												</label>
+											</div>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk1_3">
+												<label class="form-check-label" for="chk1_3">
+													상담과 다른 수업 내용
+												</label>
+											</div>
+											<div class="d-flex mb-2 gap-2 align-items-center">
+												<div class="form-check flex-shrink-0">
+													<input class="form-check-input" type="checkbox" value="" id="chk1_4">
+													<label class="form-check-label flex-shrink-0" for="chk1_4">
+														기타
+													</label>
+												</div>
+												<input type="text" class="form-control mt-1" aria-colcount="">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col">
+											<p class="h6">강사</p>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk2_1">
+												<label class="form-check-label" for="chk2_1">
+												  언행(반말, 폭언, 욕설, 무시)
+												</label>
+											</div>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk2_2">
+												<label class="form-check-label" for="chk2_2">
+												  수업내용(CS,피드백부족)
+												</label>
+											</div>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk2_3">
+												<label class="form-check-label" for="chk2_3">
+													수업시간 미준수(지각/조기종료)
+												</label>
+											</div>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk2_4">
+												<label class="form-check-label" for="chk2_4">
+													상담과 다른 교육방식과 내용
+												</label>
+											</div>
+											<div class="d-flex mb-2 gap-2 align-items-center">
+												<div class="form-check flex-shrink-0">
+													<input class="form-check-input" type="checkbox" value="" id="chk2_5">
+													<label class="form-check-label flex-shrink-0" for="chk2_5">
+														기타
+													</label>
+												</div>
+												<input type="text" class="form-control mt-1" aria-colcount="">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col">
+											<p class="h6">시설</p>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk3_1">
+												<label class="form-check-label" for="chk3_1">
+												  강의시설 노후
+												</label>
+											</div>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk3_2">
+												<label class="form-check-label" for="chk3_2">
+												  청소상태 불만
+												</label>
+											</div>
+											<div class="d-flex mb-2 gap-2 align-items-center">
+												<div class="form-check flex-shrink-0">
+													<input class="form-check-input" type="checkbox" value="" id="chk3_3">
+													<label class="form-check-label flex-shrink-0" for="chk3_3">
+														기타
+													</label>
+												</div>
+												<input type="text" class="form-control mt-1" aria-colcount="">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col">
+											<p class="h6">인포데스크</p>
+											<div class="d-flex mb-2 gap-2 align-items-center">
+												<div class="form-check flex-shrink-0">
+													<input class="form-check-input" type="checkbox" value="" id="chk4_1">
+													<label class="form-check-label flex-shrink-0" for="chk4_1">
+														기타
+													</label>
+												</div>
+												<input type="text" class="form-control mt-1" aria-colcount="">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col">
+											<p class="h6">그 외</p>
+											<div class="form-check mb-2">
+												<input class="form-check-input" type="checkbox" value="" id="chk5_1">
+												<label class="form-check-label" for="chk5_1">
+												  개인사정
+												</label>
+											</div>
+											<div class="d-flex mb-2 gap-2 align-items-center">
+												<div class="form-check flex-shrink-0">
+													<input class="form-check-input" type="checkbox" value="" id="chk5_2">
+													<label class="form-check-label flex-shrink-0" for="chk5_2">
+														기타
+													</label>
+												</div>
+												<input type="text" class="form-control mt-1" aria-colcount="">
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="l-area">
+						<a href="#" class="btn btn-outline-primary">닫기</a>
+					</div>
+					<div class="r-area">
+						<a href="#" class="btn btn-point">수강포기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+	$(window).load(function(){
+		$('#pageModal1').modal('show');
+	});
+	</script>
+
+</body>
+</html>
