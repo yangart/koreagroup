@@ -3211,6 +3211,18 @@ body:not(.modal-open) .modal-footer {
 }
 
 /************* TABLE *************/
+.table.border-0 {
+  border: 0 none !important;
+}
+.table.border-0.table-card::before {
+  display: none;
+  height: 0px;
+}
+.table.border-0 td,
+.table.border-0 th {
+  border: 0 none !important;
+}
+
 .table-list,
 .table-write,
 .table-info {
@@ -3261,6 +3273,10 @@ body:not(.modal-open) .modal-footer {
 }
 .table-list a:hover .table-tit {
   text-decoration: underline;
+}
+.table-list tfoot th,
+.table-list tfoot td {
+  background-color: var(--bs-light);
 }
 
 .table-write th {
@@ -3723,7 +3739,8 @@ body:not(.modal-open) .modal-footer {
   right: 24px;
 }
 
-.card-footer {
+.card-footer,
+.card-footer-row {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3734,24 +3751,35 @@ body:not(.modal-open) .modal-footer {
   margin-top: 24px;
 }
 .card-footer > .l-area,
-.card-footer > .r-area {
+.card-footer > .r-area,
+.card-footer-row > .l-area,
+.card-footer-row > .r-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
 }
-.card-footer .c-area {
+.card-footer .c-area,
+.card-footer-row .c-area {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin: 0 auto;
 }
-.card-footer .c-area > * {
+.card-footer .c-area > *,
+.card-footer-row .c-area > * {
   margin: 0;
 }
-.card-footer .r-area {
+.card-footer .r-area,
+.card-footer-row .r-area {
   margin-left: auto;
+}
+.card-footer-row {
+  margin-bottom: 64px;
+}
+.card-footer-row:last-child {
+  margin-bottom: 0;
 }
 
 /* .card-head{display:flex;align-items:center;height:52px;padding:0 24px;} */
@@ -6710,4 +6738,27 @@ button:focus {
 .survey-list h6 {
   display: block;
   margin-bottom: 12px;
+}
+
+/* component */
+.border-box {
+  border: 1px solid var(--body-color);
+  margin-bottom: var(--bs-gutter-y);
+  padding: var(--bs-gutter-x);
+  border-radius: var(--border-radius);
+}
+
+.bullet li,
+.bullet-dash li {
+  position: relative;
+  padding-left: 12px;
+}
+.bullet li::before,
+.bullet-dash li::before {
+  position: absolute;
+  left: 0;
+  content: "⋅";
+}
+.bullet-dash li::before {
+  content: "-";
 }/*# sourceMappingURL=style.student.css.map */
