@@ -922,6 +922,17 @@ body:not(.modal-open) {
 
 
 /************* TABLE *************/
+.table.border-0 {
+  border: 0 none !important;
+  &.table-card::before {
+      display: none;
+      height: 0px;
+  }
+  td,
+  th {
+      border: 0 none !important;
+  }
+}
 .table-list,
 .table-write,
 .table-info {
@@ -966,6 +977,12 @@ body:not(.modal-open) {
                 text-decoration: underline;
             }
         }       
+    }
+    tfoot {
+      th,
+      td {
+        background-color: var(--bs-light);
+      }
     }
 }
 .table-write {

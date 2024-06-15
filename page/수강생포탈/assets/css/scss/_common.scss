@@ -335,7 +335,8 @@
     right: 24px;
 }
 
-.card-footer {
+.card-footer,
+.card-footer-row {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -356,6 +357,12 @@
     }
     .r-area {
         margin-left:auto;
+    }
+    @at-root .card-footer-row {
+        margin-bottom: 64px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 

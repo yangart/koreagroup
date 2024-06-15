@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+		<!-- 수료증 -->
+		<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+	
+					<div class="modal-header">
+						<h5 class="modal-title">수료증</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+					</div><!-- // modal-header -->
+	
+					<div class="modal-body">
+						<div class="mbody-forms">				
+							<div class="border border-dark border-3 p-2">
+								<div class="border border-1 py-5">
+									<div class="row justify-content-center">
+										<div class="col-8"><!-- /* 2024-02-19 수정 */ -->
+											<div class="h2 fw-bold text-center mb-5">수 료 증</div>
+	
+											<table class="table table-card border-0">
+												<colgroup>
+													<col style="width:28%">
+													<col style="width:4%">
+													<col style="width:68%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<td class="text-start fw-bold">성명</td>
+														<td class="text-center">:</td>
+														<td class="text-start">만지은</td>
+													</tr>
+													<tr>
+														<td class="text-start fw-bold">주민등록번호</td>
+														<td class="text-center">:</td>
+														<td class="text-start">999999-1000000</td>
+													</tr>
+													<tr>
+														<td class="text-start fw-bold">과정명</td>
+														<td class="text-center">:</td>
+														<td class="text-start">포토샾가자</td>
+													</tr>
+													<tr>
+														<td class="text-start fw-bold">교육기간</td>
+														<td class="text-center">:</td>
+														<td class="text-start">2024-01-04 ~ 2024-01-1-04</td>
+													</tr>
+													<tr>
+														<td class="text-start fw-bold">교육시간</td>
+														<td class="text-center">:</td>
+														<td class="text-start">30시간</td>
+													</tr>
+													<tr>
+														<td class="text-start fw-bold">출석률</td>
+														<td class="text-center">:</td>
+														<td class="text-start">100%</td>
+													</tr>
+												</tbody>
+											</table>
+	
+											<div class="mbody-clause-agree">
+												<div class="mbody-clause-title">위 사항은 본 SBS아카데미컴퓨터아트학원에서 상기의 과정을<br />수료 하였으므로 이 증서를 수요합니다.</div><!-- /* 2024-02-19 수정 */ -->
+	
+												<div class="mbody-clause-sign flex-column mt-5 pb-5">
+													<div class="title"><b>2024년 01월 31일</b></div>
+													<div class="sign text-start" style="width: auto;">발행인 : <strong>SBS아카데미</strong></div>
+												</div><!-- // mbody-clause-sign -->
+	
+												<p class="d-flex align-items-center justify-content-center mt-5"><!-- /* 2024-02-19 수정 */ -->
+													<span><img src="./assets/img/stamp01-sample.png" alt=""></span>
+													<span class="ms-3"><img src="./assets/img/stamp02-sample.png" alt=""></span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- // mbody-forms -->
+					</div><!-- // modal-body -->
+					<div class="modal-footer">
+						<div class="l-area"><a href="#" class="btn btn-outline-primary">닫기</a></div>
+						<div class="r-area"><a href="#" class="btn btn-point">인쇄</a></div>
+					</div>
+				</div>
+			</div>
+		</div><!-- // modal : 수료증 -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+	$(window).load(function(){
+		$('#pageModal1').modal('show');
+	});
+	</script>
+
+</body>
+</html>

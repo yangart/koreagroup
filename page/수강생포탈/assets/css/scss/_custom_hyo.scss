@@ -14,6 +14,29 @@
         margin-bottom:12px;
     }
 }
+
+/* component */
+.border-box {
+    border:1px solid var(--body-color);
+    margin-bottom: var(--bs-gutter-y);
+    padding:var(--bs-gutter-x);
+    border-radius: var(--border-radius);
+}
+.bullet,
+.bullet-dash  {
+    li {
+        position: relative;
+        padding-left:12px;
+        &::before {
+            position: absolute;
+            left:0;
+            content: "⋅";
+        }
+        @at-root .bullet-dash li::before {
+            content: "-";
+        }
+    }
+}
 //pc wide 1400
 @media screen and (max-width:var(--breakpoint-xxl)) {
 

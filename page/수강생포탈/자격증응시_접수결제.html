@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div id="header">
+			<h1 class="header-logo"><a href="javascript:;"><img src="./assets/img/header-logo.png" alt=""></a></h1>
+			<ul class="header-nav nav" id="headerNav">
+				<li><a href="javascript:;" class="nav-btn">홈</a></li>
+				<li class="hoverdown">
+					<a href="javascript:;" class="nav-btn active" id="hNavHoverdown2">수강내역</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown2">
+						<li><a class="dropdown-item" href="javascript:;">공지사항</a></li>
+						<li><a class="dropdown-item" href="javascript:;">이벤트</a></li>
+						<li><a class="dropdown-item" href="javascript:;">특강/세미나</a></li>
+						<li><a class="dropdown-item" href="javascript:;">자격증 정보(민간)</a></li>
+						<li><a class="dropdown-item" href="javascript:;">자격증 정보(공공)</a></li>
+						<li><a class="dropdown-item" href="javascript:;">취업 및 진학정보 게시판</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;" class="nav-btn">커뮤니티</a></li>
+				<li><a href="javascript:;" class="nav-btn">교육과정</a></li>
+				<li class="hoverdown">
+					<a href="javascript:;" class="nav-btn" id="hNavHoverdown5">학원정보</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown5">
+						<li><a class="dropdown-item" href="javascript:;">빈강의실 찾기</a></li>
+						<li><a class="dropdown-item" href="javascript:;">학원내부맵</a></li>
+						<li><a class="dropdown-item" href="javascript:;">따즈아 소개</a></li>
+					</ul>
+				</li>
+			</ul><!-- // headerNav -->
+			<div class="mobile-menu">
+				<ul>
+					<li class="item1 on"><a href="javascript:;"><em>홈</em></a></li>
+					<li class="item2"><a href="javascript:;"><em>수강내역</em></a></li>
+					<li class="item3"><a href="javascript:;"><em>커뮤니티</em></a></li>
+					<li class="item4"><a href="javascript:;"><em>교육과정</em></a></li>
+					<li class="item5"><a href="javascript:;"><em>학원정보</em></a></li>
+				</ul>
+			</div>
+			<ul class="header-icon nav" id="headerIcon">
+				<li><a href="javascript:;" class="nav-btn"><i class="h-ico-user"></i></a></li>
+				<li><a href="javascript:;" class="nav-btn"><i class="h-ico-out"></i></a></li>
+			</ul><!-- // headerIcon -->
+		</div>
+		<!-- // header -->
+
+		<!-- container -->
+		<div id="container">
+			 <div class="page-location">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active">MAIN</li>
+					<li class="breadcrumb-item">수강내역</li>
+				</ol>
+			</div>
+			<div class="flex-box-contents">
+				<div class="card fluid-card">
+					<div class="card-head">
+						<div>자격증 응시</div>
+					</div>
+					<div class="card-body">
+						<ul class="nav archive-nav" id="archiveNav" role="tablist">
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" aria-selected="true">접수/결제</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">응시내역</a></li>
+						</ul>
+						<div class="card-cont">
+							<div class="border-box">
+								<h5 class="mb-2">자격증 응시 접수/결제 안내</h5>
+								<p class="mb-2">자격증 응시 할 경우 일반접수와 단체접수로 나뉘어집니다.<br>
+									단체접수는 본 사이트에서 결제하는 것으로 할인된 금액이 제공됩니다.</p>
+								<ul class="bullet text-muted mb-2">
+									<li>2 과목 이상  접수 시 과목 할인이 적용됩니다.<br>(ex. 1 과목 접수 \70,000, 2 과목 접수 \130,000, 3 과목 접수 \190,000)</li>
+									<li>재응시 비용은 과목당 \30000 입니다.</li>
+								</ul>
+								<p>자격증 접수 결제 후 STK 접수사이트( <a href="#none" class="text-decoration-underline txt-primary">https://edu.sckcorp.co.kr/홈/홈.asp</a> )  에서 접수하시면 응시완료 처리가 됩니다.</p>
+							</div>
+							<div class="fnc-area">
+								<div class="l-area">
+									<p>총 <strong class="txt-primary">00</strong>건</p>
+								</div>
+								<div class="r-area">
+									<select class="form-select">
+										<option value="">전체</option>
+									</select>
+								</div>
+							</div>
+							<ul class="box-list">
+								<li>
+									<div class="box-header">
+										<h3 class="box-tit">Adobe Certified Professional</h3>
+									</div>
+									<div class="box-body">
+										<ul class="info-list">
+											<li>
+												<cite>계열</cite>
+												<div class="txt-area">컴퓨터</div>
+											</li>
+											<li>
+												<cite>응시과목</cite>
+												<div class="txt-area">Premiere CC2020 (한글)</div>
+											</li>
+											<li>
+												<cite>일반접수</cite>
+												<div class="txt-area"> 9,999,999원</div>
+											</li>
+											<li>
+												<cite>단체접수</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+											<li>
+												<cite>재응시금액</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+										</ul>
+									</div>
+									<div class="box-footer">
+										<button type="button" class="btn btn-point">자격증 응시</button>
+									</div>
+								</li>
+								<li>
+									<div class="box-header">
+										<h3 class="box-tit">Adobe Certified Professional</h3>
+									</div>
+									<div class="box-body">
+										<ul class="info-list">
+											<li>
+												<cite>계열</cite>
+												<div class="txt-area">컴퓨터</div>
+											</li>
+											<li>
+												<cite>응시과목</cite>
+												<div class="txt-area">Premiere CC2020 (한글)</div>
+											</li>
+											<li>
+												<cite>일반접수</cite>
+												<div class="txt-area"> 9,999,999원</div>
+											</li>
+											<li>
+												<cite>단체접수</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+											<li>
+												<cite>재응시금액</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+										</ul>
+									</div>
+									<div class="box-footer">
+										<button type="button" class="btn btn-outline-active">재응시</button>
+									</div>
+								</li><li>
+									<div class="box-header">
+										<h3 class="box-tit">Adobe Certified Professional</h3>
+									</div>
+									<div class="box-body">
+										<ul class="info-list">
+											<li>
+												<cite>계열</cite>
+												<div class="txt-area">컴퓨터</div>
+											</li>
+											<li>
+												<cite>응시과목</cite>
+												<div class="txt-area">Premiere CC2020 (한글)</div>
+											</li>
+											<li>
+												<cite>일반접수</cite>
+												<div class="txt-area"> 9,999,999원</div>
+											</li>
+											<li>
+												<cite>단체접수</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+											<li>
+												<cite>재응시금액</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+										</ul>
+									</div>
+									<div class="box-footer">
+										<button type="button" class="btn btn-outline-active" disabled>재응시</button>
+									</div>
+								</li>
+								<li>
+									<div class="box-header">
+										<h3 class="box-tit">Adobe Certified Professional</h3>
+									</div>
+									<div class="box-body">
+										<ul class="info-list">
+											<li>
+												<cite>계열</cite>
+												<div class="txt-area">컴퓨터</div>
+											</li>
+											<li>
+												<cite>응시과목</cite>
+												<div class="txt-area">Premiere CC2020 (한글)</div>
+											</li>
+											<li>
+												<cite>일반접수</cite>
+												<div class="txt-area"> 9,999,999원</div>
+											</li>
+											<li>
+												<cite>단체접수</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+											<li>
+												<cite>재응시금액</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+										</ul>
+									</div>
+									<div class="box-footer">
+										<button type="button" class="btn btn-point">자격증 응시</button>
+									</div>
+								</li>
+								<li>
+									<div class="box-header">
+										<h3 class="box-tit">Adobe Certified Professional</h3>
+									</div>
+									<div class="box-body">
+										<ul class="info-list">
+											<li>
+												<cite>계열</cite>
+												<div class="txt-area">컴퓨터</div>
+											</li>
+											<li>
+												<cite>응시과목</cite>
+												<div class="txt-area">Premiere CC2020 (한글)</div>
+											</li>
+											<li>
+												<cite>일반접수</cite>
+												<div class="txt-area"> 9,999,999원</div>
+											</li>
+											<li>
+												<cite>단체접수</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+											<li>
+												<cite>재응시금액</cite>
+												<div class="txt-area">999,999원</div>
+											</li>
+										</ul>
+									</div>
+									<div class="box-footer">
+										<button type="button" class="btn btn-point">자격증 응시</button>
+									</div>
+								</li>
+							</ul>
+							<div class="card-footer-row">
+								<div class="c-area">
+									<ul class="pagination">
+										<li class="page-item">
+											<a href="#" class="page-link">←</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">1</a>
+										</li>
+										<li class="page-item active">
+											<a href="#" class="page-link">2</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">3</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">4</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">5</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">→</a>
+										</li>
+									</ul>
+								</div>
+								<div class="r-area">
+									<button type="button" class="btn btn-point2">자격증 접수 결제</button>
+								</div>
+							</div>
+							<table class="table-list">
+								<colgroup>
+									<col style="width: 80px;">
+									<col style="width: 80px;">
+									<col>
+									<col style="width: 15%">
+									<col style="width: 15%">
+									<col>
+									<col>
+									<col>
+									<col style="width: 160px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th><input class="form-check-input" type="checkbox"></th>
+										<th>번호</th>
+										<th>계열</th>
+										<th>자격증명</th>
+										<th>응시과목</th>
+										<th>일반접수</th>
+										<th>단체접수</th>
+										<th>재응시 금액</th>
+										<th>결제</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input class="form-check-input" type="checkbox"></td>
+										<td data-tit="번호">4</td>
+										<td data-tit="계열">컴퓨터</td>
+										<td class="m-row"><p class="table-tit">Adobe Certified Professional</p></td>
+										<td data-tit="응시과목" class="m-row">Premiere CC2020 (한글)</td>
+										<td data-tit="일반접수">99,999원</td>
+										<td data-tit="단체접수">99,999원</td>
+										<td data-tit="재응시 금액">99,999원</td>
+										<td class="m-row">
+											<div class="btn-cont">
+												<button class="btn btn-point">자격증 응시</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><input class="form-check-input" type="checkbox"></td>
+										<td data-tit="번호">4</td>
+										<td data-tit="계열">컴퓨터</td>
+										<td class="m-row"><p class="table-tit">Adobe Certified Professional</p></td>
+										<td data-tit="응시과목" class="m-row">Premiere CC2020 (한글)</td>
+										<td data-tit="일반접수">99,999원</td>
+										<td data-tit="단체접수">99,999원</td>
+										<td data-tit="재응시 금액">99,999원</td>
+										<td class="m-row">
+											<div class="btn-cont">
+												<button class="btn btn-outline-active">재응시</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><input class="form-check-input" type="checkbox"></td>
+										<td data-tit="번호">4</td>
+										<td data-tit="계열">컴퓨터</td>
+										<td class="m-row"><p class="table-tit">Adobe Certified Professional</p></td>
+										<td data-tit="응시과목" class="m-row">Premiere CC2020 (한글)</td>
+										<td data-tit="일반접수">99,999원</td>
+										<td data-tit="단체접수">99,999원</td>
+										<td data-tit="재응시 금액">99,999원</td>
+										<td class="m-row">
+											<div class="btn-cont">
+												<button class="btn btn-outline-active" disabled>재응시</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="card-footer-row">
+								<!-- <div class="c-area">
+									<ul class="pagination">
+										<li class="page-item">
+											<a href="#" class="page-link">←</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">1</a>
+										</li>
+										<li class="page-item active">
+											<a href="#" class="page-link">2</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">3</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">4</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">5</a>
+										</li>
+										<li class="page-item">
+											<a href="#" class="page-link">→</a>
+										</li>
+									</ul>
+								</div> -->
+								<div class="r-area">
+									<button type="button" class="btn btn-point2">자격증 접수 결제</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- // flex-box-content -->
+		</div><!-- // container -->
+	</div><!-- // wrapper -->
+
+	<!-- pageModal1 -->
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">(일반)맥스2</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-12">
+							<label for="" class="form-label">게시판 구분</label>
+							<select id="" class="w-100">
+								<option value="01">선택</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">제목</label>
+							<input type="text" class="form-control" placeholder="제목을 입력해주세요.">
+							<input type="file" class="form-control" id="">
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">내용</label>
+							<textarea class="form-control" placeholder="내용을 입력하세요."></textarea>
+						</div>
+
+					</div><!-- // row -->
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer flex-center">
+					<button type="button" class="btn btn-outline-first">닫기</button>
+					<button type="button" class="btn btn-first">저장</button>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div><!-- // modal : pageModal1 -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+	$(window).load(function(){
+		//$('#pageModal1').modal('show');
+	});
+	</script>
+
+</body>
+</html>
