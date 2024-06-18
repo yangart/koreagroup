@@ -255,6 +255,12 @@ body {
   display:flex;
   flex-direction: column;
 
+  .dashboard {
+    .card:has(.fc) {
+      padding:0;
+    }
+  }
+
   .col-group {
     height:calc(100% + var(--bs-gutter-y));
   }

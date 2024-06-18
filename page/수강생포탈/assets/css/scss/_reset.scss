@@ -45,6 +45,47 @@
 
     --bs-gutter-x: 24px;
     --bs-gutter-y: 24px;
+
+    /* --fc : fullCalendar js */
+    --color-ye:#ffa133;
+    --color-or:#ff710a;
+    --color-rd:#ff3366;
+    --color-pk:#ff65d4;
+    --color-nv:#405189;
+    --color-sk:#3ba4fd;
+    --color-bl:#076aff;
+    --color-gn:#00b031;
+    --color-vi:#845ae0;
+    --color-gr:#ced4da;
+    --color-gr-h:#9a9a9a;
+
+    --fc-small-font-size: .85em;
+    --fc-page-bg-color: #fff;
+    --fc-neutral-bg-color: #fff;
+    --fc-neutral-text-color: #808080;
+    --fc-border-color: var(--border-color-light);
+    --fc-button-text-color: #fff;
+    --fc-button-bg-color: var(--btn-point-color-h);
+    --fc-button-border-color: #fff;
+    --fc-button-hover-bg-color: #ffffff33;
+    --fc-button-hover-border-color: #fff;
+    --fc-button-active-bg-color: #fff;
+    --fc-button-active-border-color: #fff;
+    --fc-event-bg-color: #fff;
+    --fc-event-border-color: #fff;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0);
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
+    --fc-non-business-color: rgba(215, 215, 215, 0.3);
+    --fc-bg-event-color: rgb(143, 223, 130);
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, 0.3);
+    --fc-today-bg-color: rgba(255, 220, 40, 0.15);
+    --fc-now-indicator-color: red;
 }
 $bg-light-primary :#F3FEFF;
 $border: 1px solid var(--border-color);

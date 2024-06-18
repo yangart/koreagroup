@@ -48,6 +48,45 @@
   --dark-color:#2a364a;
   --bs-gutter-x: 24px;
   --bs-gutter-y: 24px;
+  /* --fc : fullCalendar js */
+  --color-ye:#ffa133;
+  --color-or:#ff710a;
+  --color-rd:#ff3366;
+  --color-pk:#ff65d4;
+  --color-nv:#405189;
+  --color-sk:#3ba4fd;
+  --color-bl:#076aff;
+  --color-gn:#00b031;
+  --color-vi:#845ae0;
+  --color-gr:#ced4da;
+  --color-gr-h:#9a9a9a;
+  --fc-small-font-size: .85em;
+  --fc-page-bg-color: #fff;
+  --fc-neutral-bg-color: #fff;
+  --fc-neutral-text-color: #808080;
+  --fc-border-color: var(--border-color-light);
+  --fc-button-text-color: #fff;
+  --fc-button-bg-color: var(--btn-point-color-h);
+  --fc-button-border-color: #fff;
+  --fc-button-hover-bg-color: #ffffff33;
+  --fc-button-hover-border-color: #fff;
+  --fc-button-active-bg-color: #fff;
+  --fc-button-active-border-color: #fff;
+  --fc-event-bg-color: #fff;
+  --fc-event-border-color: #fff;
+  --fc-event-text-color: #fff;
+  --fc-event-selected-overlay-color: rgba(0, 0, 0, 0);
+  --fc-more-link-bg-color: #d0d0d0;
+  --fc-more-link-text-color: inherit;
+  --fc-event-resizer-thickness: 8px;
+  --fc-event-resizer-dot-total-width: 8px;
+  --fc-event-resizer-dot-border-width: 1px;
+  --fc-non-business-color: rgba(215, 215, 215, 0.3);
+  --fc-bg-event-color: rgb(143, 223, 130);
+  --fc-bg-event-opacity: 0.3;
+  --fc-highlight-color: rgba(188, 232, 241, 0.3);
+  --fc-today-bg-color: rgba(255, 220, 40, 0.15);
+  --fc-now-indicator-color: red;
 }
 
 *::-webkit-scrollbar {
@@ -2202,6 +2241,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+#container .dashboard .card:has(.fc) {
+  padding: 0;
+}
 #container .col-group {
   height: calc(100% + var(--bs-gutter-y));
 }
@@ -2327,7 +2369,7 @@ body {
 .fc.fc-direction-ltr .fc-toolbar.fc-header-toolbar {
   height: 68px;
   padding: 0 12px;
-  background: var(--first-color-h);
+  background: var(--first-color);
   margin-bottom: 16px;
 }
 .fc.fc-direction-ltr .fc-toolbar-title {
@@ -2631,7 +2673,7 @@ body {
 }
 
 .fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active {
-  color: var(--first-color-h);
+  color: var(--first-color);
 }
 .fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
   -webkit-box-shadow: none;
@@ -2827,7 +2869,7 @@ body {
   background-color: var(--color-gr-h);
 }
 .datepicker table tr td.active:hover, .datepicker table tr td.active:active, .datepicker table tr td.active:hover:active {
-  background-color: var(--first-color-h);
+  background-color: var(--first-color);
 }
 .datepicker table tr td span {
   display: block;
@@ -2856,7 +2898,7 @@ body {
   background-color: var(--first-color);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="#3ba4fd", GradientType=0);
-  border-color: var(--first-color) var(--first-color) var(--first-color-h);
+  border-color: var(--first-color) var(--first-color) var(--first-color);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   color: #fff;
@@ -2868,7 +2910,7 @@ body {
   background-image: linear-gradient(to bottom, #08c, #3ba4fd);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="#3ba4fd", GradientType=0);
-  border-color: var(--first-color) var(--first-color) var(--first-color-h);
+  border-color: var(--first-color) var(--first-color) var(--first-color);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   color: #fff;
@@ -2880,7 +2922,7 @@ body {
   background-image: linear-gradient(to bottom, #08c, #3ba4fd);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="#3ba4fd", GradientType=0);
-  border-color: var(--first-color) var(--first-color) var(--first-color-h);
+  border-color: var(--first-color) var(--first-color) var(--first-color);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   color: #fff;
@@ -2892,7 +2934,7 @@ body {
   background-image: linear-gradient(to bottom, #08c, #3ba4fd);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08c", endColorstr="#3ba4fd", GradientType=0);
-  border-color: var(--first-color) var(--first-color) var(--first-color-h);
+  border-color: var(--first-color) var(--first-color) var(--first-color);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   color: #fff;
