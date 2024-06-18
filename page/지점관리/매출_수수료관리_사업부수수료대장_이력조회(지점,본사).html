@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1_1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">사업부 수수료대장 이력</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<table class="table-card border-line">
+						<colgroup>
+							<col style="width:25%;">
+							<col style="width:25%;">
+							<col style="width:25%;">
+							<col style="width:25%;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>계열지점</th>
+								<td>컴퓨터강남</td>
+								<th>수수료대장</th>
+								<td>2024-03월<br>(2024-03-08~2024-04-06)</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="table-scroll-y mt-2" style="max-height: 400px;">
+						<table class="table-card border-line">
+							<colgroup>
+								<col style="width:25%;">
+								<col style="width:25%;">
+								<col style="width:25%;">
+								<col style="width:25%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th colspan="4">상세이력</th>
+								</tr>
+								<tr>
+									<th>작성자/승인자/반려자</th>
+									<th>일시</th>
+									<th>Event</th>
+									<th>사유</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>김길동 차장</td>
+									<td>2024-03-11 15:11</td>
+									<td>지급완료</td>
+									<td class="text-start"></td>
+								</tr>
+								<tr>
+									<td>임길동 상무</td>
+									<td>2024-03-10 17:11</td>
+									<td>송금표 다운</td>
+									<td class="text-start"></td>
+								</tr>
+								<tr>
+									<td>박길동 차장</td>
+									<td>2024-03-08 14:11</td>
+									<td>확정취소</td>
+									<td class="text-start">이길동 멘토의 인센티브 금액이 변경되었으니, 확인해 주세요.</td>
+								</tr>
+								<tr>
+									<td>홍길동 차장</td>
+									<td>2024-03-07 13:10</td>
+									<td>승인</td>
+									<td class="text-start"></td>
+								</tr>
+								<tr>
+									<td>홍길동 대리</td>
+									<td>2024-03-06 10:00</td>
+									<td>제출하기</td>
+									<td class="text-start">이번달 사업부 수수료대장 제출합니다. 확인해 주세요.</td>
+								</tr>
+								<tr>
+									<td>홍길동 차장</td>
+									<td>2024-03-07 13:10</td>
+									<td>반려</td>
+									<td class="text-start">윤길동 멘토의 위촉일수를 다시 한번 확인해 주세요.</td>
+								</tr>
+								<tr>
+									<td>홍길동 차장</td>
+									<td>2024-03-07 13:10</td>
+									<td>승인</td>
+									<td class="text-start"></td>
+								</tr>
+								<tr>
+									<td>홍길동 대리</td>
+									<td>2024-03-06 10:00</td>
+									<td>저장</td>
+									<td class="text-start"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1_1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>
