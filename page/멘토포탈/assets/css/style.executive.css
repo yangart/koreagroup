@@ -3558,11 +3558,19 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 60px;
-  padding: 0 20px 0 20px;
+  padding: 0 20px 0 24px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02);
   background-color: #fff;
   z-index: 9;
+}
+.page-header .page-title {
+  margin-right: auto;
+}
+.page-header .page-title h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark-color);
 }
 .page-header .breadcrumb {
   background-color: transparent;

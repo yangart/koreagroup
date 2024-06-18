@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Create the new content
     const newPageHeader = createElement('div', { class: 'page-header flex-right' }, [
+        createElement('div', { class: 'page-title'}, [
+            createElement('h2', { }, ['타이틀 영역'])
+        ]),
         createElement('div', { class: 'page-header-topbar' }, [
             createElement('div', {}, [
                 createElement('a', { href: '#', class: 'btn-topbar' }, [
