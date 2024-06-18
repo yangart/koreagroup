@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>수강생 포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="수강생 포털">
+	<meta property="og:description" content="수강생 포털">
+	<meta name="description" content="수강생 포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.student.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div id="header">
+			<h1 class="header-logo"><a href="javascript:;"><img src="./assets/img/header-logo.png" alt=""></a></h1>
+			<ul class="header-nav nav" id="headerNav">
+				<li><a href="javascript:;" class="nav-btn">홈</a></li>
+				<li class="hoverdown">
+					<a href="javascript:;" class="nav-btn active" id="hNavHoverdown2">수강내역</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown2">
+						<li><a class="dropdown-item" href="javascript:;">공지사항</a></li>
+						<li><a class="dropdown-item" href="javascript:;">이벤트</a></li>
+						<li><a class="dropdown-item" href="javascript:;">특강/세미나</a></li>
+						<li><a class="dropdown-item" href="javascript:;">자격증 정보(민간)</a></li>
+						<li><a class="dropdown-item" href="javascript:;">자격증 정보(공공)</a></li>
+						<li><a class="dropdown-item" href="javascript:;">취업 및 진학정보 게시판</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;" class="nav-btn">커뮤니티</a></li>
+				<li><a href="javascript:;" class="nav-btn">교육과정</a></li>
+				<li class="hoverdown">
+					<a href="javascript:;" class="nav-btn" id="hNavHoverdown5">학원정보</a>
+					<ul class="hoverdown-menu" aria-labelledby="hNavHoverdown5">
+						<li><a class="dropdown-item" href="javascript:;">빈강의실 찾기</a></li>
+						<li><a class="dropdown-item" href="javascript:;">학원내부맵</a></li>
+						<li><a class="dropdown-item" href="javascript:;">따즈아 소개</a></li>
+					</ul>
+				</li>
+			</ul><!-- // headerNav -->
+			<div class="mobile-menu">
+				<ul>
+					<li class="item1"><a href="javascript:;"><em>홈</em></a></li>
+					<li class="item2"><a href="javascript:;"><em>수강내역</em></a></li>
+					<li class="item3"><a href="javascript:;"><em>커뮤니티</em></a></li>
+					<li class="item4"><a href="javascript:;"><em>교육과정</em></a></li>
+					<li class="item5 on"><a href="javascript:;"><em>학원정보</em></a></li>
+				</ul>
+			</div>
+			<ul class="header-icon nav" id="headerIcon">
+				<li><a href="javascript:;" class="nav-btn"><i class="h-ico-user"></i></a></li>
+				<li><a href="javascript:;" class="nav-btn"><i class="h-ico-out"></i></a></li>
+			</ul><!-- // headerIcon -->
+		</div>
+		<!-- // header -->
+
+		<!-- container -->
+		<div id="container">
+			 <!-- <div class="page-location">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active">MAIN</li>
+					<li class="breadcrumb-item">수강내역</li>
+				</ol>
+			</div> -->
+			<div class="flex-box-contents">
+				<div class="card fluid-card">
+					<div class="card-head">
+						<div>학원정보</div>
+					</div>
+					<div class="card-body">
+						<ul class="nav archive-nav" id="archiveNav" role="tablist">
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">교육과정</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">빈강의실 찾기</a></li>
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" aria-selected="true">따즈아 소개</a></li>
+						</ul>
+						<div class="card-cont">
+							<div class="csIntro01">
+								<div class="csIntro">
+									<img src="http://old.ddazua.com/img/course/intro01_txt.png" alt="">
+								</div>
+							</div>
+							<div class="csIntro02">
+								<div class="csIntro">
+									<h3>KOREA EDUCATION GROUP</h3>
+									<div class="csiSlider slick-initialized slick-slider">
+										<div aria-live="polite" class="slick-list draggable">
+											<div class="slick-track" style="opacity: 1; width: 996px; transform: translate3d(0px, 0px, 0px);" role="listbox">
+												<div class="csiCont slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide30" style="width: 166px;">
+													<em style="background:url('http://old.ddazua.com/img/course/intro02_img01.jpg')no-repeat center center;"></em>
+													<h5>SBS아카데미컴퓨터아트학원</h5>
+													<p>컴퓨터, 그래픽디자인, 자격증</p>
+												</div>
+												<div class="csiCont slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide31" style="width: 166px;">
+													<em style="background:url('http://old.ddazua.com/img/course/intro02_img02.jpg')no-repeat center center;"></em>
+													<h5>올댓뷰티아카데미</h5>
+													<p>메이크업, 헤어,네일아트, 에스테틱 </p>
+												</div>
+												<div class="csiCont slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide32" style="width: 166px;">
+													<em style="background:url('http://old.ddazua.com/img/course/intro02_img03.jpg')no-repeat center center;"></em>
+													<h5>코리아요리아트아카데미</h5>
+													<p>조리기능사, 제과/제빵, 바리스타</p>
+												</div>
+												<div class="csiCont slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide33" style="width: 166px;">
+													<em style="background:url('http://old.ddazua.com/img/course/intro02_img04.jpg')no-repeat center center;"></em>
+													<h5>SBS아카데미게임학원</h5>
+													<p>게임디자인, 게임기획, 게임개발</p>
+												</div>
+												<div class="csiCont slick-slide slick-active" data-slick-index="4" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide34" style="width: 166px;">
+													<em style="background:url('http://old.ddazua.com/img/course/intro02_img05.jpg')no-repeat center center;"></em>
+													<h5>코리아IT아카데미</h5>
+													<p>프로그래밍, 정보보안, IT </p>
+												</div>
+												<div class="csiCont slick-slide slick-active" data-slick-index="5" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide35" style="width: 166px;">
+													<em style="background:url('http://old.ddazua.com/img/course/intro02_img06.jpg')no-repeat center center;"></em>
+													<h5>굿잡아카데미컴퓨터아트학원</h5>
+													<p>컴퓨터, 국비지원, 자격증</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="csIntro03">
+								<div class="csIntro">
+									<h3>ddazua imaging process</h3>
+									<div class="csipSlider slick-initialized slick-slider" role="toolbar">
+									<div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 969px; transform: translate3d(0px, 0px, 0px);"><div class="slick-slide slick-current slick-active" tabindex="-1" role="option" aria-describedby="slick-slide40" style="width: 323px;" data-slick-index="0" aria-hidden="false"><em style="background:url('http://old.ddazua.com/img/course/intro03_img01.jpg')no-repeat center center;"></em></div><div class="slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide41" style="width: 323px;" data-slick-index="1" aria-hidden="false"><em style="background:url('http://old.ddazua.com/img/course/intro03_img02.jpg')no-repeat center center;"></em></div><div class="slick-slide slick-active" tabindex="-1" role="option" aria-describedby="slick-slide42" style="width: 323px;" data-slick-index="2" aria-hidden="false"><em style="background:url('http://old.ddazua.com/img/course/intro03_img03.jpg')no-repeat center center;"></em></div></div></div></div>
+									<h4>따즈아의 영상 제작 과정</h4>
+									<p>90%이상의 따즈아 강의는 코리아교육그룹의 전문 강사들이 직접촬영하여 자체 제작합니다.</p>
+									<h5><span>그리고, </span>다양한 혜택</h5>
+									<dl>
+										<dt><span>01</span> 오프라인학원 할인 혜택</dt>
+										<dd>
+											<span>보다 심도 있게 배우고 싶으신 분들에게</span>
+											<span>코리아교육그룹의 오프라인 학원 쿠폰을 드립니다.</span>
+										</dd>
+										<dt><span>02</span> 오프라인학원 특강 이벤트</dt>
+										<dd>
+											<span>코리아교육그룹에서 진행하는 오프라인 특강에</span>
+											<span>여러분을 초대합니다.</span>
+										</dd>
+										<dt><span>03</span> 특가 구매 기회 제공</dt>
+										<dd>
+											<span>지금 구매 하시는 분에게는 특가로 구매 할 수 있는</span>
+											<span>기회를 드리고 있습니다.</span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="csIntro04">
+								<div class="csIntro">
+									<h3>이런분들에게 <span>추천</span>합니다.</h3>
+									<ul>
+										<li>학원에 갈 여건은 되지 않지만, 자격증이 꼭 필요한 분</li>
+										<li>여가를 좀 더 생산적이고 의미 있게 보내고 싶으신 분</li>
+										<li>미래를 대비해 무언가를 배우는 게 취미이신 분</li>
+									</ul>
+								</div>
+							</div>
+							<div class="csIntro05">
+								<div class="csIntro">
+									<h3>
+										1주일에 2일만, <span>영상을 시청해 주세요.</span>
+										<em>(더 많이 시청을 하셔도 됩니다)</em>
+									</h3>
+									<h4>
+										<span>단언컨대, 3개월, 6개월, 1년 뒤의 여러분 모습은 지금과는 많이 달라져 있을 겁니다.</span>
+										<span>그리고, 따즈아를 다른 분들께 추천하고 있을 것입니다.</span>
+									</h4>
+									<h5><b>따즈아</b>만의 <span><b>차별점</b></span></h5>
+									<ul>
+										<li>
+											<em style="background:#333 url('http://old.ddazua.com/img/course/intro05_img01.png')no-repeat center center;"></em>
+											<p>코리아교육그룹<br>현업 강사님들 직강!</p>
+										</li>
+										<li>
+											<em style="background:#333 url('http://old.ddazua.com/img/course/intro05_img02.png')no-repeat center center;"></em>
+											<p>다른곳에서는 들을수 없는<br>취미,생활, 자격증 강의!</p>
+										</li>
+										<li>
+											<em style="background:#333 url('http://old.ddazua.com/img/course/intro05_img03.png')no-repeat center center;"></em>
+											<p>전문 강사님들의<br>명확한 피드백!</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- // flex-box-content -->
+		</div><!-- // container -->
+	</div><!-- // wrapper -->
+
+	<!-- pageModal1 -->
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-sm modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">(일반)맥스2</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-12">
+							<label for="" class="form-label">게시판 구분</label>
+							<select id="" class="w-100">
+								<option value="01">선택</option>
+								<option value="02">option 2</option>
+								<option value="03">option 3</option>
+							</select>
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">제목</label>
+							<input type="text" class="form-control" placeholder="제목을 입력해주세요.">
+							<input type="file" class="form-control" id="">
+						</div>
+						<div class="col-12">
+							<label for="" class="form-label">내용</label>
+							<textarea class="form-control" placeholder="내용을 입력하세요."></textarea>
+						</div>
+
+					</div><!-- // row -->
+
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer flex-center">
+					<button type="button" class="btn btn-outline-first">닫기</button>
+					<button type="button" class="btn btn-first">저장</button>
+				</div><!-- // modal-footer -->
+			</div>
+		</div>
+	</div><!-- // modal : pageModal1 -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+	$(window).load(function(){
+		//$('#pageModal1').modal('show');
+	});
+	</script>
+
+</body>
+</html>

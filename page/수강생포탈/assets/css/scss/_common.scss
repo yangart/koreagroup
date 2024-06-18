@@ -1010,6 +1010,7 @@ $transition-collapse: height .35s ease;
 .fluid-card {
     flex:1;
     height: 100%;
+    max-width:100%;
     overflow: hidden;
     margin-bottom:4px;
 }
