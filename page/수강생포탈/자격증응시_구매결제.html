@@ -61,12 +61,6 @@
 
 		<!-- container -->
 		<div id="container">
-			 <div class="page-location">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item active">MAIN</li>
-					<li class="breadcrumb-item">수강내역</li>
-				</ol>
-			</div>
 			<div class="flex-box-contents">
 				<div class="card fluid-card">
 					<div class="card-head">
@@ -74,8 +68,9 @@
 					</div>
 					<div class="card-body">
 						<ul class="nav archive-nav" id="archiveNav" role="tablist">
-							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="true">접수/결제</a></li>
-							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" aria-selected="false">응시내역</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">안내</a></li>
+							<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" aria-selected="true">구매/결제</a></li>
+							<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" aria-selected="false">구매 내역</a></li>
 						</ul>
 						<div class="card-cont">
 							<div class="fnc-area">
@@ -83,142 +78,175 @@
 									<p>총 <strong class="txt-primary">00</strong>건</p>
 								</div>
 								<div class="r-area">
-									<select class="form-select">
-										<option value="">전체</option>
-									</select>
+									<button class="btn btn-point2">응시료 결제</button>
 								</div>
 							</div>
 							<ul class="box-list">
 								<li>
 									<div class="box-header">
-										<h3 class="box-tit">Adobe Certified Professional</h3>
-										<small>YYYY-MM-DD 결제</small>
+										<div class="box-tit"><input class="form-check-input" type="checkbox"> Adobe Certified Professional</div>
 									</div>
 									<div class="box-body">
 										<ul class="info-list">
 											<li>
-												<cite>계열</cite>
-												<div class="txt-area">컴퓨터</div>
+												<cite>유형</cite>
+												<div class="txt-area">Adobe Certified Professional</div>
 											</li>
 											<li>
-												<cite>응시과목</cite>
-												<div class="txt-area">Premiere CC2020 (한글)</div>
+												<cite>구분</cite>
+												<div class="txt-area">비대면</div>
 											</li>
 											<li>
-												<cite>단체접수코드</cite>
-												<div class="txt-area"><span class="txt-primary">sbsacademy</span></div>
+												<cite>응시료</cite>
+												<div class="txt-area">
+													<del>70,000원</del> 
+													<strong>30,000원</strong>
+													<button class="btn btn-sm btn-outline-active">재응시</button>
+												</div>
 											</li>
 										</ul>
-									</div>
-									<div class="box-footer">
-										<p><strong>응시 완료</strong>
-											<small>YYYY-MM-DD 결제</small></p>
 									</div>
 								</li>
 								<li>
 									<div class="box-header">
-										<h3 class="box-tit">Adobe Certified Professional</h3>
-										<small>YYYY-MM-DD 결제</small>
+										<div class="box-tit"><input class="form-check-input" type="checkbox"> Adobe Certified Professional</div>
 									</div>
 									<div class="box-body">
 										<ul class="info-list">
 											<li>
-												<cite>계열</cite>
-												<div class="txt-area">컴퓨터</div>
+												<cite>유형</cite>
+												<div class="txt-area">Adobe Certified Professional</div>
 											</li>
 											<li>
-												<cite>응시과목</cite>
-												<div class="txt-area">Premiere CC2020 (한글)</div>
+												<cite>구분</cite>
+												<div class="txt-area">비대면</div>
 											</li>
 											<li>
-												<cite>단체접수코드</cite>
-												<div class="txt-area"><span class="txt-primary">sbsacademy</span></div>
+												<cite>응시료</cite>
+												<div class="txt-area">
+													<strong>30,000원</strong>
+												</div>
 											</li>
 										</ul>
-									</div>
-									<div class="box-footer">
-										<p><strong>응시 완료</strong>
-											<small>YYYY-MM-DD 결제</small></p>
 									</div>
 								</li>
 								<li>
 									<div class="box-header">
-										<h3 class="box-tit">Adobe Certified Professional</h3>
-										<small>YYYY-MM-DD 결제</small>
+										<div class="box-tit"><input class="form-check-input" type="checkbox"> Adobe Certified Professional</div>
 									</div>
 									<div class="box-body">
 										<ul class="info-list">
 											<li>
-												<cite>계열</cite>
-												<div class="txt-area">컴퓨터</div>
+												<cite>유형</cite>
+												<div class="txt-area">Adobe Certified Professional</div>
 											</li>
 											<li>
-												<cite>응시과목</cite>
-												<div class="txt-area">Premiere CC2020 (한글)</div>
+												<cite>구분</cite>
+												<div class="txt-area">비대면</div>
 											</li>
 											<li>
-												<cite>단체접수코드</cite>
-												<div class="txt-area"><span class="txt-primary">sbsacademy</span></div>
+												<cite>응시료</cite>
+												<div class="txt-area">
+													<strong>30,000원</strong>
+												</div>
 											</li>
 										</ul>
-									</div>
-									<div class="box-footer">
-										<p><strong>응시 완료</strong>
-											<small>YYYY-MM-DD 결제</small></p>
 									</div>
 								</li>
 								<li>
 									<div class="box-header">
-										<h3 class="box-tit">Adobe Certified Professional</h3>
-										<small>YYYY-MM-DD 결제</small>
+										<div class="box-tit"><input class="form-check-input" type="checkbox"> Adobe Certified Professional</div>
 									</div>
 									<div class="box-body">
 										<ul class="info-list">
 											<li>
-												<cite>계열</cite>
-												<div class="txt-area">컴퓨터</div>
+												<cite>유형</cite>
+												<div class="txt-area">Adobe Certified Professional</div>
 											</li>
 											<li>
-												<cite>응시과목</cite>
-												<div class="txt-area">Premiere CC2020 (한글)</div>
+												<cite>구분</cite>
+												<div class="txt-area">비대면</div>
 											</li>
 											<li>
-												<cite>단체접수코드</cite>
-												<div class="txt-area"><span class="txt-primary">sbsacademy</span></div>
+												<cite>응시료</cite>
+												<div class="txt-area">
+													<strong>30,000원</strong>
+												</div>
 											</li>
 										</ul>
-									</div>
-									<div class="box-footer">
-										<button type="button" class="btn btn-outline-active">환불신청</button>
 									</div>
 								</li>
 								<li>
 									<div class="box-header">
-										<h3 class="box-tit">Adobe Certified Professional</h3>
-										<small>YYYY-MM-DD 결제</small>
+										<div class="box-tit"><input class="form-check-input" type="checkbox"> Adobe Certified Professional</div>
 									</div>
 									<div class="box-body">
 										<ul class="info-list">
 											<li>
-												<cite>계열</cite>
-												<div class="txt-area">컴퓨터</div>
+												<cite>유형</cite>
+												<div class="txt-area">Adobe Certified Professional</div>
 											</li>
 											<li>
-												<cite>응시과목</cite>
-												<div class="txt-area">Premiere CC2020 (한글)</div>
+												<cite>구분</cite>
+												<div class="txt-area">비대면</div>
 											</li>
 											<li>
-												<cite>단체접수코드</cite>
-												<div class="txt-area"><span class="txt-primary">sbsacademy</span></div>
+												<cite>응시료</cite>
+												<div class="txt-area">
+													<strong>30,000원</strong>
+												</div>
 											</li>
 										</ul>
 									</div>
-									<div class="box-footer">
-										<p><strong>환불완료</strong></p>
+								</li>
+								<li>
+									<div class="box-header">
+										<div class="box-tit"><input class="form-check-input" type="checkbox"> Adobe Certified Professional</div>
+									</div>
+									<div class="box-body">
+										<ul class="info-list">
+											<li>
+												<cite>유형</cite>
+												<div class="txt-area">Adobe Certified Professional</div>
+											</li>
+											<li>
+												<cite>구분</cite>
+												<div class="txt-area">비대면</div>
+											</li>
+											<li>
+												<cite>응시료</cite>
+												<div class="txt-area">
+													<strong>30,000원</strong>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="box-header">
+										<div class="box-tit"><input class="form-check-input" type="checkbox"> Adobe Certified Professional</div>
+									</div>
+									<div class="box-body">
+										<ul class="info-list">
+											<li>
+												<cite>유형</cite>
+												<div class="txt-area">Adobe Certified Professional</div>
+											</li>
+											<li>
+												<cite>구분</cite>
+												<div class="txt-area">비대면</div>
+											</li>
+											<li>
+												<cite>응시료</cite>
+												<div class="txt-area">
+													<strong>30,000원</strong>
+												</div>
+											</li>
+										</ul>
 									</div>
 								</li>
 							</ul>
-							<div class="card-footer-row">
+							<!-- <div class="card-footer-row">
 								<div class="c-area">
 									<ul class="pagination">
 										<li class="page-item">
@@ -247,124 +275,7 @@
 								<div class="r-area">
 									<button type="button" class="btn btn-point2">자격증 접수 결제</button>
 								</div>
-							</div>
-							<div class="fnc-area">
-								<div class="l-area">
-									<p><a href="https://edu.sckcorp.co.kr/exam/examination_application1.asp?b_kind=31" target="_blank" class="txt-primary text-decoration-underline">STK 접수사이트</a>에서 자격증 접수를 하면 응시완료처리가 됩니다. 단체접수코드 입력필요</p>
-								</div>
-							</div>
-							<table class="table-list">
-								<colgroup>
-									<col style="width: 80px;">
-									<col>
-									<col style="width: 15%">
-									<col style="width: 15%">
-									<col>
-									<col>
-									<col>
-									<col style="width: 160px;">
-								</colgroup>
-								<thead>
-									<tr>
-										<th>번호</th>
-										<th>계열</th>
-										<th>자격증명</th>
-										<th>응시과목</th>
-										<th>결제일</th>
-										<th>단체접수코드</th>
-										<th>응시상태</th>
-										<th>환불</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td data-tit="번호">4</td>
-										<td data-tit="계열">컴퓨터</td>
-										<td class="m-row"><p class="table-tit">Adobe Certified Professional</p></td>
-										<td data-tit="응시과목" class="m-row">Premiere CC2020 (한글)</td>
-										<td data-tit="결제일">99,999원</td>
-										<td data-tit="단체접수코드"><span class="txt-primary">sbsacademy</span></td>
-										<td data-tit="응시상태">응시완료 2024-12-23</td>
-										<td class="m-row">
-											<div class="btn-cont">
-												<button class="btn btn-point">환불신청</button>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td data-tit="번호">4</td>
-										<td data-tit="계열">컴퓨터</td>
-										<td class="m-row"><p class="table-tit">Adobe Certified Professional</p></td>
-										<td data-tit="응시과목" class="m-row">Premiere CC2020 (한글)</td>
-										<td data-tit="결제일">99,999원</td>
-										<td data-tit="단체접수코드"><span class="txt-primary">sbsacademy</span></td>
-										<td data-tit="응시상태">응시완료 2024-12-23</td>
-										<td class="m-row">
-											<div class="btn-cont">
-												<span>환불완료</span>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td data-tit="번호">4</td>
-										<td data-tit="계열">컴퓨터</td>
-										<td class="m-row"><p class="table-tit">Adobe Certified Professional</p></td>
-										<td data-tit="응시과목" class="m-row">Premiere CC2020 (한글)</td>
-										<td data-tit="결제일">99,999원</td>
-										<td data-tit="단체접수코드"><span class="txt-primary">sbsacademy</span></td>
-										<td data-tit="응시상태">응시완료 2024-12-23</td>
-										<td class="m-row">
-											<div class="btn-cont">
-												<span>환불 처리중</span>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td data-tit="번호">4</td>
-										<td data-tit="계열">컴퓨터</td>
-										<td class="m-row"><p class="table-tit">Adobe Certified Professional</p></td>
-										<td data-tit="응시과목" class="m-row">Premiere CC2020 (한글)</td>
-										<td data-tit="결제일">99,999원</td>
-										<td data-tit="단체접수코드"><span class="txt-primary">sbsacademy</span></td>
-										<td data-tit="응시상태">응시완료 2024-12-23</td>
-										<td class="m-row">
-											<div class="btn-cont">
-												<span>응시완료</span>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="card-footer-row">
-								<!-- <div class="c-area">
-									<ul class="pagination">
-										<li class="page-item">
-											<a href="#" class="page-link">←</a>
-										</li>
-										<li class="page-item">
-											<a href="#" class="page-link">1</a>
-										</li>
-										<li class="page-item active">
-											<a href="#" class="page-link">2</a>
-										</li>
-										<li class="page-item">
-											<a href="#" class="page-link">3</a>
-										</li>
-										<li class="page-item">
-											<a href="#" class="page-link">4</a>
-										</li>
-										<li class="page-item">
-											<a href="#" class="page-link">5</a>
-										</li>
-										<li class="page-item">
-											<a href="#" class="page-link">→</a>
-										</li>
-									</ul>
-								</div> -->
-								<div class="r-area">
-									<button type="button" class="btn btn-point2">자격증 접수 결제</button>
-								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

@@ -37,6 +37,30 @@
         }
     }
 }
+
+/*total */
+.pay-total-list {
+    margin-top:20px;
+    padding:20px;
+    border-top:2px solid var(--body-color);
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    li {
+        display: flex;
+        gap:8px;
+        justify-content: flex-end;
+    }
+}
+.pay-total {
+    display: flex;
+    gap:16px;
+    justify-content: flex-end;
+    font-size:18px;
+    background-color: var(--border-color-light);
+    padding:20px;
+}
 //pc wide 1400
 @media screen and (max-width:var(--breakpoint-xxl)) {
 
