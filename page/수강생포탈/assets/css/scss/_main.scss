@@ -3,14 +3,32 @@
     justify-content: center;
     align-items: center;
     padding:calc(var(--bs-gutter-y)/2) calc(var(--bs-gutter-x)/2);
+    flex-direction: row;
+    padding:0;
+    overflow:hidden;
 
     > strong {
-        width:120px;
+        width:100px;
+        height:100px;
+        overflow:hidden;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background:var(--body-bg);
+        color:var(--dark-color);
+        border-right:$border-light;
+        font-weight:400;
+        b {
+            font-size:18px;
+            font-weight:600;
+        }
     }
 }
 .my-class-list {
     overflow-y:auto;
     height:102px;
+    padding:10px 20px;
     li {
         padding:4px 0 4px 12px;
         overflow:hidden;

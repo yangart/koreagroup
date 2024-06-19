@@ -2255,8 +2255,18 @@ body {
 #container .col-group {
   height: calc(100% + var(--bs-gutter-y));
 }
+#container .col-group-left,
+#container .col-group-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 #container .card + .card {
-  margin-top: 24px;
+  margin-top: calc(var(--bs-gutter-y) / 2);
 }
 #container.container-full {
   padding: 0 24px 80px;
@@ -3834,20 +3844,20 @@ body:not(.modal-open) .modal-footer {
   border: solid 1px #ededed;
   background-color: #fff;
 }
-.card:has(.card-head) {
+.card:has(.card-head), .card:has(.card-footer) {
   padding: 0;
 }
-.card:has(.card-head) .card-body {
+.card:has(.card-head) .card-body, .card:has(.card-footer) .card-body {
   padding: var(--bs-gutter-y) var(--bs-gutter-x);
 }
-.card:has(.card-head) .card-body:has(.archive-nav) {
+.card:has(.card-head) .card-body:has(.archive-nav), .card:has(.card-footer) .card-body:has(.archive-nav) {
   padding-top: calc(var(--card-head-padding-y) / 2);
 }
 
 .card-head {
   border-radius: 4px 4px 0 0;
   border-bottom: solid 1px #ededed;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.25;
   padding: 16px 24px;
@@ -4563,7 +4573,7 @@ a.list-more {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: var(--bs-gutter-y) 0;
+  margin-top: var(--bs-gutter-y);
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -4575,6 +4585,9 @@ a.list-more {
   border: 1px solid var(--border-color-light);
   padding: calc(var(--bs-gutter-y) / 2) calc(var(--bs-gutter-x) / 2);
   border-radius: 8px;
+}
+.card-attendance + .fnc-area {
+  margin-top: var(--bs-gutter-y);
 }
 .card-attendance dt,
 .card-attendance dd {
@@ -4659,6 +4672,7 @@ a.list-more {
       -ms-flex: 1;
           flex: 1;
   max-width: 100%;
+  height: calc(100% - 24px);
   overflow: hidden;
   margin-bottom: 4px;
 }
@@ -7550,14 +7564,44 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: calc(var(--bs-gutter-y) / 2) calc(var(--bs-gutter-x) / 2);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  overflow: hidden;
 }
 .class-list-wrap > strong {
-  width: 120px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: var(--body-bg);
+  color: var(--dark-color);
+  border-right: 1px solid var(--border-color-light);
+  font-weight: 400;
+}
+.class-list-wrap > strong b {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .my-class-list {
   overflow-y: auto;
   height: 102px;
+  padding: 10px 20px;
 }
 .my-class-list li {
   padding: 4px 0 4px 12px;

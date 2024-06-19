@@ -268,7 +268,8 @@
     border: solid 1px #ededed;
     background-color: #fff;
 
-    &:has(.card-head) {
+    &:has(.card-head),
+    &:has(.card-footer) {
         padding:0;
 
         .card-body { 
@@ -283,7 +284,7 @@
 .card-head {
     border-radius: 4px 4px 0 0;
     border-bottom: solid 1px #ededed;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.25;
 
@@ -930,13 +931,17 @@ $transition-collapse: height .35s ease;
 .card-attendance {
     display: flex;
     flex-wrap: wrap;
-    margin:var(--bs-gutter-y) 0;
+    margin-top:var(--bs-gutter-y);
     align-items: flex-start;
     flex-direction: column;
     background:var(--body-bg);
     border:1px solid var(--border-color-light);
     padding:calc(var(--bs-gutter-y)/2) calc(var(--bs-gutter-x)/2);
     border-radius: 8px;
+
+    + .fnc-area {
+        margin-top:var(--bs-gutter-y);
+    }
     dt,
     dd {
         display: flex;
@@ -1015,6 +1020,7 @@ $transition-collapse: height .35s ease;
     flex:1;
     // height: 100%;
     max-width:100%;
+    height: calc(100% - 24px);
     overflow: hidden;
     margin-bottom:4px;
 }
