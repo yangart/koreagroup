@@ -16,7 +16,6 @@
 
 <body>
 	<div id="wrapper">
-
 		<div id="header">
 			<h1 class="header-logo"><a href="javascript:;"><img src="./assets/img/header-logo.png" alt=""></a></h1>
 			<ul class="header-nav nav" id="headerNav">
@@ -61,14 +60,49 @@
 
 		<!-- container -->
 		<div id="container">
-			 <div class="page-location">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item active">MAIN</li>
-					<li class="breadcrumb-item">대시보드</li>
-				</ol>
-			</div>
 			<div class="row col-group dashboard">
 				<div class="card col-7 fluid-card">
+					<div class="class-list-wrap">
+						<strong>수강중 N개</strong>
+						<ul class="my-class-list">
+							<li>
+								<div class="cont-info event-regit">
+									<p class="title">과목명</p>
+									<p><i class="ico-date"></i> 2023-11-10~2023-11-26</p>
+									<p>화목 09:30~11:30</p>
+									<p>강의실</p>
+									<p><cite>강사</cite> 강사명</p>
+								</div>
+							</li>
+							<li>
+								<div class="cont-info event-standby">
+									<p class="title">(국비)포토샵 따라하기</p>
+									<p>5층 104C (8/10)</p>
+									<p><i class="ico-date"></i> 2023-11-10~2023-11-26</p>
+									<p>월수금 09:30~11:30</p>
+									<p><cite>강사</cite> 홍길동</p>
+								</div>
+							</li>
+							<li>
+								<div class="cont-info event-finish">
+									<p class="title">포토샵 따라하기포토샵 따라하기포토샵 따라하기</p>
+									<p>5층 104C (8/10)</p>
+									<p><i class="ico-date"></i> 2023-11-10~2023-11-26</p>
+									<p>월수금 09:30~11:30</p>
+									<p><cite>강사</cite> 홍길동</p>
+								</div>
+							</li>
+							<li>
+								<div class="cont-info event-refund">
+									<p class="title">(국비)포토샵 따라하기</p>
+									<p>5층 104C (8/10)</p>
+									<p><i class="ico-date"></i> 2023-11-10~2023-11-26</p>
+									<p>월수금 09:30~11:30</p>
+									<p><cite>강사</cite> 홍길동</p>
+								</div>
+							</li>
+						</ul>
+					</div>
 					<div id="calendar"></div>
 				</div>
 				<div class="col-5">
@@ -138,95 +172,73 @@
 
 			var events = [
 				{
-					category: '상담',
-					title: '종일이벤트는 시간표시 안함',
-					start: '2024-06-01',
+					category: '수강',
+					title: '종일 이벤트',
+					start: '2024-06-23',
 				},
 				{
-					category: '면담',
-					title: '종일이벤트는 시간표시 안함',
-					start: '2024-06-07',
-					end: '2024-06-10'
+					category: '대기',
+					title: '연일 이벤트',
+					start: '2024-06-24',
+					end: '2024-06-26'
 				},
 				{
-					category: '면접',
-					groupId: 999,
-					title: 'Repeating Event',
-					start: '2024-06-04T16:00:00'
+					category: '수료',
+					title: '포토샵 초급 따라하기 1',
+					start: '2024-06-26T16:00:00',
+					end: '2024-06-26T18:00:00'
 				},
 				{
-					category: '면접',
-					groupId: 999,
-					title: 'Repeating Event',
-					start: '2024-06-16T16:00:00'
+					category: '환불',
+					title: '포토샵 초급 따라하기 2',
+					start: '2024-06-27T12:00:00',
+					start: '2024-06-27T18:00:00'
 				},
 				{
-					category: '기타',
-					title: 'Conference',
-					start: '2024-06-11',
-					end: '2024-06-13'
+					category: '수강',
+					title: '인테리어 포폴(1,2)',
+					start: '2024-06-27T08:30:00',
+					start: '2024-06-27T11:30:00'
 				},
 				{
-					category: '컨택',
-					title: 'Meeting',
-					start: '2024-06-12T10:30:00',
-					end: '2024-06-12T12:30:00'
+					category: '수강',
+					title: '인테리어 포폴(1,2)',
+					start: '2024-06-27T18:30:00',
+					start: '2024-06-27T19:30:00'
 				},
 				{
-					category: '상담',
-					title: '1 상담이 30분 단위라면?',
-					start: '2024-06-05T12:00:00'
+					category: '대기',
+					title: '포토샵 중급 따라하기 1',
+					start: '2024-06-28T10:30:00',
+					end: '2024-06-28T12:30:00'
 				},
 				{
-					category: '상담',
-					title: '2 상담이 30분 단위라면? 2',
-					start: '2024-06-12T12:30:00'
+					category: '수료',
+					title: '2D 원화 일러스트 대회반',
+					start: '2024-06-28T13:30:00',
+					end: '2024-06-28T17:30:00'
 				},
 				{
-					category: '상담',
-					title: '3 상담이 30분 단위라면? 3',
-					start: '2024-06-12T13:00:00'
-				},
-				{
-					category: '면담',
-					title: 'Meeting',
-					start: '2024-06-12T14:30:00'
-				},
-				{
-					category: '면담',
-					title: 'Happy Hour',
-					start: '2024-06-12T17:30:00'
-				},
-				{
-					category: '면담',
-					title: 'Dinner',
-					start: '2024-06-12T20:00:00'
-				},
-				{
-					category: '면접',
-					title: 'Birthday Party',
-					start: '2024-06-13T07:00:00'
-				},
-				{
-					category: '면접',
-					title: 'Click for Google',
-					start: '2024-06-28'
+					category: '환불',
+					title: '2D 원화 일러스트 대회반 2',
+					start: '2024-06-29T10:30:00',
+					end: '2024-06-28T13:30:00'
 				}
 			];
 
 			events = events.map(event => {
 				switch (event.category) {
-					case '상담':
-						event.className = 'event-counsel';
+					case '수강':
+						event.className = 'event-regit';
 						break;
-					case '면담':
-						event.className = 'event-facetoface';
+					case '대기':
+						event.className = 'event-standby';
 						break;
-					case '면접':
-						event.className = 'event-interview';
+					case '수료':
+						event.className = 'event-finish';
 						break;
-					case '컨텍':
-						event.className = 'event-contact';
+					case '환불':
+						event.className = 'event-refund';
 						break;
 					default:
 						event.className = 'event-etc';
@@ -304,8 +316,8 @@
 						slotLabelFormat: { hour: '2-digit', minute: '2-digit', hour12: false }
 					}
 				},
-				slotMinTime: '08:00:00',
-				slotMaxTime: '20:00:00',
+				slotMinTime: '09:00:00',
+				slotMaxTime: '18:30:00',
 				events: events,
 				eventContent: eventContentSet,
 				eventClick: handleEventClick,
