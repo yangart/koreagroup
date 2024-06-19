@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">사업부 수수료 명세서</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="mbody-forms">
+						<div class="border p-2">
+							<div class="border py-5 px-4">
+								<div class="h2 fw-bold text-center mb-5">수수료 명세서</div>
+								
+								<div class="row">
+									<table class="table table-card">
+										<colgroup>
+											<col style="width:25%;">
+											<col style="width:75%;">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>성명</th>
+												<td>홍길동</td>
+											</tr>
+											<tr>
+												<th>지급일</th>
+												<td>2024-04-25</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="table table-card">
+										<colgroup>
+											<col style="width:25%;">
+											<col style="width:25%;">
+											<col style="width:25%;">
+											<col style="width:25%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="2" class="p-3">지급항목</th>
+												<th colspan="2" class="p-3">공제항목</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>등록수수료</th>
+												<td>1,500,000</td>
+												<th>소득세</th>
+												<td>500,000</td>
+											</tr>
+											<tr>
+												<th>유지수수료</th>
+												<td>450,000</td>
+												<th>주민세</th>
+												<td>50,000</td>
+											</tr>
+											<tr>
+												<th>신인수수료</th>
+												<td>0</td>
+												<th>기타공제</th>
+												<td>0</td>
+											</tr>
+											<tr>
+												<th>팀장 리베이트</th>
+												<td>500,000</td>
+												<th>선지급공제</th>
+												<td>100,000</td>
+											</tr>
+											<tr>
+												<th>배출수수료</th>
+												<td>350,000</td>
+												<th>가지급공제</th>
+												<td>200,000</td>
+											</tr>
+											<tr>
+												<th>타등록매출</th>
+												<td>0</td>
+												<th></th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>ACP</th>
+												<td>50,000</td>
+												<th></th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>MCF</th>
+												<td>0</td>
+												<th></th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>부서장 수수료</th>
+												<td></td>
+												<th></th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>기타지원</th>
+												<td>300,000</td>
+												<th></th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>광고비지원</th>
+												<td>0</td>
+												<th></th>
+												<td></td>
+											</tr>
+											<tr>
+												<th>컨테스트</th>
+												<td>100,000</td>
+												<th></th>
+												<td></td>
+											</tr>
+											<tr>
+												<th><b>지급액 계</b></th>
+												<td>3,250,000</td>
+												<th><b>공제액 계</b></th>
+												<td>850,000</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<th><b>실지급액</b></th>
+												<td colspan="3">2,400,000</td>
+											</tr>
+										</tfoot>
+									</table>
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+	<!-- tooltip -->
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.bundle.js"></script>
+	<script>
+		$(function () {			
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+		});	
+	</script>
+</body>
+
+</html>
