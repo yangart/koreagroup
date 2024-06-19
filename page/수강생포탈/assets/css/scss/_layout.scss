@@ -265,8 +265,14 @@ body {
     height:calc(100% + var(--bs-gutter-y));
   }
 
+  .col-group-left,
+  .col-group-right { 
+    display:flex;
+    flex-direction: column;
+   }
+
   .card + .card {
-    margin-top: 24px;
+    margin-top: calc(var(--bs-gutter-y)/2);
   }
 
   &.container-full {
