@@ -9,31 +9,166 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	// table sticky
-	const tables = document.querySelectorAll('.table-sticky');
-	tables.forEach(table => {
-		const isTableSticky = table.classList.contains('table-sticky');
+	// const tables = document.querySelectorAll('.table-sticky');
+	// tables.forEach(table => {
+	// 	const isTableSticky = table.classList.contains('table-sticky');
 
-		if (isTableSticky) {
-			const rows = table.querySelectorAll('tr');
+	// 	if (isTableSticky) {
+	// 		const rows = table.querySelectorAll('tr');
 
-			rows.forEach(row => {
-				const stickyCols = row.querySelectorAll('.sticky-col');
-				let leftOffset = 0; // left 속성 값 초기화
+	// 		rows.forEach(row => {
+	// 			const stickyCols = row.querySelectorAll('.sticky-col');
+	// 			let leftOffset = 0; // left 속성 값 초기화
 
-				stickyCols.forEach(col => {
-					// 각 셀의 너비를 측정
-					const colWidth = col.offsetWidth;
+	// 			stickyCols.forEach(col => {
+	// 				// 각 셀의 너비를 측정
+	// 				const colWidth = col.offsetWidth;
 
-					col.style.position = 'sticky';
-					col.style.left = `${leftOffset}px`;
-					col.style.width = `${colWidth}px`;
-					col.style.zIndex = 3;
-					leftOffset += colWidth;
-				});
-			});
-		}
-	});
+	// 				col.style.position = 'sticky';
+	// 				col.style.left = `${leftOffset}px`;
+	// 				col.style.width = `${colWidth}px`;
+	// 				col.style.zIndex = 3;
+	// 				leftOffset += colWidth;
+	// 			});
+	// 		});
+	// 	}
+	// });
+	// const tables = document.querySelectorAll('.table-sticky');
+
+	// tables.forEach(table => {
+	// 	const theadRows = table.querySelectorAll('thead tr');
+	// 	const tbodyRows = table.querySelectorAll('tbody tr');
+	// 	const tfootRows = table.querySelectorAll('tfoot tr');
+
+	// 	// thead, tbody, tfoot 각 섹션의 셀들에 대한 배열 생성
+	// 	const sections = [
+	// 		{ rows: Array.from(theadRows), stickyClass: 'thead-sticky-col' },
+	// 		{ rows: Array.from(tbodyRows), stickyClass: 'tbody-sticky-col' },
+	// 		{ rows: Array.from(tfootRows), stickyClass: 'tfoot-sticky-col' }
+	// 	];
+
+	// 	// 각 섹션별로 열의 left offset을 저장하는 배열
+	// 	const leftOffsets = sections.map(() => []);
+
+	// 	// 각 섹션별로 셀들에 sticky 속성 적용
+	// 	sections.forEach((section, sectionIndex) => {
+	// 		section.rows.forEach((row, rowIndex) => {
+	// 			const stickyCols = row.querySelectorAll('.sticky-col');
+	// 			let currentLeftOffset = 0;
+
+	// 			stickyCols.forEach((col, colIndex) => {
+	// 				const colWidth = col.offsetWidth;
+	// 				const rowspan = col.getAttribute('rowspan') ? parseInt(col.getAttribute('rowspan'), 10) : 1;
+
+	// 				// 현재 셀의 left offset 설정
+	// 				if (leftOffsets[sectionIndex][colIndex] !== undefined) {
+	// 					currentLeftOffset = leftOffsets[sectionIndex][colIndex];
+	// 				}
+
+	// 				// 셀에 sticky 속성 적용
+	// 				col.style.position = 'sticky';
+	// 				col.style.left = `${currentLeftOffset}px`;
+	// 				col.style.width = `${colWidth}px`;
+	// 				col.style.zIndex = 3;
+	// 				col.classList.add(section.stickyClass);
+
+	// 				// rowspan 처리
+	// 				if (rowspan > 1) {
+	// 					for (let i = 1; i < rowspan; i++) {
+	// 						const nextRowIndex = rowIndex + i;
+	// 						if (nextRowIndex < section.rows.length) {
+	// 							if (leftOffsets[sectionIndex][colIndex] === undefined) {
+	// 								leftOffsets[sectionIndex][colIndex] = 0;
+	// 							}
+	// 							leftOffsets[sectionIndex][colIndex] += colWidth;
+	// 						}
+	// 					}
+	// 				}
+
+	// 				currentLeftOffset += colWidth;
+	// 			});
+	// 		});
+	// 	});
+	// });
+
+	// const tables = document.querySelectorAll('.table-sticky');
+
+	// tables.forEach(table => {
+	// 	const sections = [
+	// 		{ sectionName: 'thead', rows: table.querySelectorAll('thead tr') },
+	// 		{ sectionName: 'tbody', rows: table.querySelectorAll('tbody tr') },
+	// 		{ sectionName: 'tfoot', rows: table.querySelectorAll('tfoot tr') }
+	// 	];
+
+	// 	sections.forEach(section => {
+	// 		const rows = Array.from(section.rows);
+	// 		const columnOffsets = []; // 각 열의 각 행에 대한 left offset을 저장하는 배열
+
+	// 		rows.forEach((row, rowIndex) => {
+	// 			let currentLeftOffset = 0;
+	// 			let columnSpanOffset = []; // rowspan 처리를 위한 임시 배열
+
+	// 			Array.from(row.cells).forEach((cell, colIndex) => {
+	// 				const colWidth = cell.offsetWidth;
+	// 				const rowspan = cell.rowSpan || 1;
+	// 				const colspan = cell.colSpan || 1;
+
+	// 				// sticky-col 클래스가 있는 경우에만 sticky 속성을 적용
+	// 				if (cell.classList.contains('sticky-col')) {
+	// 					// 현재 열에 대한 left offset 설정
+	// 					if (!columnOffsets[colIndex]) {
+	// 						columnOffsets[colIndex] = [];
+	// 					}
+
+	// 					// rowspan 처리를 위한 임시 배열 초기화
+	// 					if (!columnSpanOffset[colIndex]) {
+	// 						columnSpanOffset[colIndex] = 0;
+	// 					}
+
+	// 					// rowspan 처리된 열의 경우, 이전 행의 값을 가져와서 left offset 설정
+	// 					if (columnSpanOffset[colIndex] > 0) {
+	// 						currentLeftOffset = columnOffsets[colIndex][rowIndex - 1];
+	// 					}
+
+	// 					// 현재 셀에 sticky 속성 적용
+	// 					cell.style.position = 'sticky';
+	// 					cell.style.left = `${currentLeftOffset}px`;
+	// 					cell.style.width = `${colWidth}px`;
+	// 					cell.style.zIndex = 3;
+
+	// 					// 현재 행에 대한 left offset 누적
+	// 					columnOffsets[colIndex][rowIndex] = currentLeftOffset;
+
+	// 					// rowspan 처리된 경우, 다음 행들에 대해서도 left offset 누적
+	// 					if (rowspan > 1) {
+	// 						for (let i = 1; i < rowspan; i++) {
+	// 							if (!columnOffsets[colIndex][rowIndex + i]) {
+	// 								columnOffsets[colIndex][rowIndex + i] = 0;
+	// 							}
+	// 							columnOffsets[colIndex][rowIndex + i] += colWidth;
+	// 						}
+	// 					}
+
+	// 					// colspan 처리된 경우, 다음 열에 대한 offset 업데이트
+	// 					if (colspan > 1) {
+	// 						for (let i = 1; i < colspan; i++) {
+	// 							if (!columnSpanOffset[colIndex + i]) {
+	// 								columnSpanOffset[colIndex + i] = 0;
+	// 							}
+	// 							columnSpanOffset[colIndex + i] += colWidth;
+	// 						}
+	// 					}
+	// 				}
+
+	// 				// 현재 열의 left offset 업데이트
+	// 				currentLeftOffset += colWidth;
+	// 			});
+	// 		});
+	// 	});
+	// });
+
 });
+
 jQuery(function ($) {
 
 	/* 모달 2개 이상일 때 */

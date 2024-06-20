@@ -7131,7 +7131,7 @@ select:not(.form-select) {
 .table-sticky table {
   border-collapse: separate !important;
 }
-.table-sticky .sticky-col {
+.table-sticky .sot-left {
   position: sticky;
   border-right: 0.5px solid var(--bs-gray-200);
   border-left: 0.5px solid var(--bs-gray-200);

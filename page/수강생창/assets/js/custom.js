@@ -7,30 +7,30 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 		searchEnabled: false,
 	// 	});
 	// }
-	const tables = document.querySelectorAll('.table-sticky');
-	tables.forEach(table => {
-		const isTableSticky = table.classList.contains('table-sticky');
+	// const tables = document.querySelectorAll('.table-sticky');
+	// tables.forEach(table => {
+	// 	const isTableSticky = table.classList.contains('table-sticky');
 
-		if (isTableSticky) {
-			const rows = table.querySelectorAll('tr');
+	// 	if (isTableSticky) {
+	// 		const rows = table.querySelectorAll('tr');
 
-			rows.forEach(row => {
-				const stickyCols = row.querySelectorAll('.sticky-col');
-				let leftOffset = 0; // left 속성 값 초기화
+	// 		rows.forEach(row => {
+	// 			const stickyCols = row.querySelectorAll('.sticky-col');
+	// 			let leftOffset = 0; // left 속성 값 초기화
 
-				stickyCols.forEach(col => {
-					// 각 셀의 너비를 측정
-					const colWidth = col.offsetWidth;
+	// 			stickyCols.forEach(col => {
+	// 				// 각 셀의 너비를 측정
+	// 				const colWidth = col.offsetWidth;
 
-					col.style.position = 'sticky';
-					col.style.left = `${leftOffset}px`;
-					col.style.width = `${colWidth}px`;
-					col.style.zIndex = 3;
-					leftOffset += colWidth;
-				});
-			});
-		}
-	});
+	// 				col.style.position = 'sticky';
+	// 				col.style.left = `${leftOffset}px`;
+	// 				col.style.width = `${colWidth}px`;
+	// 				col.style.zIndex = 3;
+	// 				leftOffset += colWidth;
+	// 			});
+	// 		});
+	// 	}
+	// });
 });
 jQuery(function ($) {
 
