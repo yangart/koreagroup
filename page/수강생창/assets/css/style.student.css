@@ -7120,6 +7120,10 @@ select:not(.form-select) {
 }
 
 /* table */
+.table-fixed {
+  table-layout: fixed;
+}
+
 .table-sticky {
   overflow-x: auto;
   position: relative;
