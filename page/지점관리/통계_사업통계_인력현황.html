@@ -787,12 +787,12 @@
 						<!-- card-body -->
 
 						<div id="innerscroll" class="card-body inner-scroll">
-							<div class="table-sticky" style="max-height: 100%;">
+							<div class="table-sticky" style="max-height: 100%;" data-sot-left="2">
 								<table class="table-card border-line">
 									<thead>
 										<tr>
-											<th class="sticky-col">계열</th>
-											<th class="sticky-col">지점</th>
+											<th>계열</th>
+											<th>지점</th>
 											<th>실자릿수</th>
 											<th>총원목표</th>
 											<th>경력 목표</th>
@@ -808,8 +808,8 @@
 											<th>전년 대비<br>증가율</th>
 										</tr>
 										<tr class="fw-bold">
-											<th class="sticky-col">합계</th>
-											<td class="sticky-col"></td>
+											<th>합계</th>
+											<td></td>
 											<td class="text-end">6,788</td>
 											<td class="text-end">6,798</td>
 											<td class="text-end">6,798</td>
@@ -827,8 +827,8 @@
 									</thead>
 									<tbody>
 										<tr>
-											<th class="sticky-col">컴퓨터</th>
-											<td class="sticky-col">합계</td>
+											<th>컴퓨터</th>
+											<td>합계</td>
 											<td class="text-end">6,788</td>
 											<td class="text-end">6,798</td>
 											<td class="text-end">6,798</td>
@@ -844,8 +844,8 @@
 											<td>41.40%</td>
 										</tr>
 										<tr>
-											<th class="sticky-col">컴퓨터</th>
-											<td class="sticky-col">강남</td>
+											<th>컴퓨터</th>
+											<td>강남</td>
 											<td class="text-end">6,788</td>
 											<td class="text-end">6,798</td>
 											<td class="text-end">6,798</td>
@@ -903,6 +903,13 @@
 	<!-- 드롭다운 -->
 	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
 
+	<!-- 테이블 고정 -->
+	<script src="./assets/libs/StickyOnTable.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			StickyOnTable.apply(document.querySelector(".table-sticky"));
+		});
+	</script>
 
 </body>
 

@@ -811,12 +811,12 @@
 						<!-- card-body -->
 
 						<div id="innerscroll" class="card-body inner-scroll">
-							<div class="table-sticky" style="max-height: 100%;">
+							<div class="table-sticky" style="max-height: 100%;" data-sot-left="2">
 								<table class="table-card border-line">
 									<thead>
 										<tr>
-											<th class="sticky-col" rowspan="2">기간</th>
-											<th class="sticky-col" rowspan="2">영업일</th>
+											<th rowspan="2">기간</th>
+											<th rowspan="2">영업일</th>
 											<th colspan="8">총 매출</th>
 										</tr>
 										<tr>
@@ -830,8 +830,8 @@
 											<th>기타 학과</th>
 										</tr>
 										<tr class="fw-bold">
-											<th class="sticky-col">합계</th>
-											<td class="sticky-col">2024-01-11 ~ 2024-06-00</td>
+											<th>합계</th>
+											<td>2024-01-11 ~ 2024-06-00</td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -844,8 +844,8 @@
 									</thead>
 									<tbody>
 										<tr>
-											<th class="sticky-col">2024년 1월</th>
-											<td class="sticky-col">2024-01-11 ~ 2024-06-00</td>
+											<th>2024년 1월</th>
+											<td>2024-01-11 ~ 2024-06-00</td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -856,8 +856,8 @@
 											<td>0</td>
 										</tr>
 										<tr>
-											<th class="sticky-col">2024년 1월</th>
-											<td class="sticky-col">2024-01-11 ~ 2024-06-00</td>
+											<th>2024년 1월</th>
+											<td>2024-01-11 ~ 2024-06-00</td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -868,8 +868,8 @@
 											<td>0</td>
 										</tr>
 										<tr>
-											<th class="sticky-col">2024년 1월</th>
-											<td class="sticky-col">2024-01-11 ~ 2024-06-00</td>
+											<th>2024년 1월</th>
+											<td>2024-01-11 ~ 2024-06-00</td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -880,8 +880,8 @@
 											<td>0</td>
 										</tr>
 										<tr>
-											<th class="sticky-col">2024년 1월</th>
-											<td class="sticky-col">2024-01-11 ~ 2024-06-00</td>
+											<th>2024년 1월</th>
+											<td>2024-01-11 ~ 2024-06-00</td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -892,8 +892,8 @@
 											<td>0</td>
 										</tr>
 										<tr>
-											<th class="sticky-col">2024년 1월</th>
-											<td class="sticky-col">2024-01-11 ~ 2024-06-00</td>
+											<th>2024년 1월</th>
+											<td>2024-01-11 ~ 2024-06-00</td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -998,6 +998,14 @@
 
 	<!-- 드롭다운 -->
 	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+
+	<!-- 테이블 고정 -->
+	<script src="./assets/libs/StickyOnTable.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			StickyOnTable.apply(document.querySelector(".table-sticky"));
+		});
+	</script>
 
 
 </body>

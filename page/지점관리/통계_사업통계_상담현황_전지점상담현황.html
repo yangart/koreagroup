@@ -794,12 +794,12 @@
 						<!-- card-body -->
 
 						<div id="innerscroll" class="card-body inner-scroll">
-							<div class="table-sticky" style="max-height: 100%;">
+							<div class="table-sticky" style="max-height: 100%;" data-sot-left="2">
 								<table class="table-card border-line">
 									<thead>
 										<tr>
-											<th class="sticky-col">계열</th>
-											<th class="sticky-col">지점</th>
+											<th>계열</th>
+											<th>지점</th>
 											<th>경력 인원</th>
 											<th>05.18(토)</th>
 											<th>05.19(일)</th>
@@ -814,8 +814,8 @@
 											<th>전 주 동일 요일<br>대비</th>
 										</tr>
 										<tr class="fw-bold">
-											<th class="sticky-col">합계</th>
-											<td class="sticky-col"></td>
+											<th>합계</th>
+											<td></td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -836,8 +836,8 @@
 									</thead>
 									<tbody>
 										<tr>
-											<th class="sticky-col">컴퓨터</th>
-											<td class="sticky-col">합계</td>
+											<th>컴퓨터</th>
+											<td>합계</td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -856,8 +856,8 @@
 											</td>
 										</tr>
 										<tr>
-											<th class="sticky-col">컴퓨터</th>
-											<td class="sticky-col">강남</td>
+											<th>컴퓨터</th>
+											<td>강남</td>
 											<td class="text-end">134,566,788</td>
 											<td class="text-end">123,456,798</td>
 											<td class="text-end">123,456,798</td>
@@ -944,6 +944,13 @@
 	<!-- 드롭다운 -->
 	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
 
+	<!-- 테이블 고정 -->
+	<script src="./assets/libs/StickyOnTable.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			StickyOnTable.apply(document.querySelector(".table-sticky"));
+		});
+	</script>
 
 </body>
 
