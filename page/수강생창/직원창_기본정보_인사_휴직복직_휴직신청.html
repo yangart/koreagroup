@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg"
+	data-preloader="disable">
 
-<head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
-	<meta name="format-detection" content="telephone=no" />
-	<meta property="og:title" content="지점관리자">
-	<meta property="og:description" content="지점관리자">
-	<meta name="description" content="지점관리자">
-	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
-	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta property="og:title" content="지점관리자">
+		<meta property="og:description" content="지점관리자">
+		<meta name="description" content="지점관리자">
+		<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css"
+			rel="stylesheet" type="text/css" />
+		<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet"
+			type="text/css" />
+		<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css"
+			rel="stylesheet" type="text/css" />
+		<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css"
+			rel="stylesheet" type="text/css" />
 
-	<link href="./assets/css/style.staff.css" rel="stylesheet" type="text/css" />
-</head>
+		<link href="./assets/css/style.staff.css" rel="stylesheet" type="text/css" />
+	</head>
 
-<body>
+	<body>
 		<!-- 휴직 신청 -->
-		<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog"
+			aria-hidden="false">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content">
-	
+
 					<div class="modal-header">
 						<h5 class="modal-title">휴직 신청</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close" id="close-modal"></button>
 					</div><!-- // modal-header -->
-	
+
 					<div class="modal-body">
-		
-						<div class="mbody-forms">	
-	
+
+						<div class="mbody-forms">
+
 							<div class="table-head">
 								<div class="flex-grow-1 row gx-8px">
 									<div class="col-auto mt-0"><div class="table-title">대상</div></div>
@@ -45,7 +53,7 @@
 										<dd>
 											<div class="row gx-6px">
 												홍길동
-											</div>																			
+											</div>
 										</dd>
 									</dl>
 								</div>
@@ -80,7 +88,7 @@
 									</dl>
 								</div>
 							</div>
-	
+
 							<div class="table-head mt-5">
 								<div class="flex-grow-1 row gx-8px">
 									<div class="col-auto mt-0"><div class="table-title">휴직 정보</div></div>
@@ -103,7 +111,7 @@
 														<option value="03">option 3</option>
 													</select>
 												</div>
-											</div>									
+											</div>
 										</td>
 									</tr>
 									<tr>
@@ -112,13 +120,17 @@
 											<div class="row gx-6px">
 												<div class="col-140px">
 													<div class="input-group-flatpickr">
-														<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+														<input type="text" id="startDate"
+															class="form-control flatpickr-input form-datepicker" placeholder
+															value="2022.08.10">
 													</div>
 												</div>
 												<div class="col-auto col-dash">~</div>
 												<div class="col-140px">
 													<div class="input-group-flatpickr">
-														<input type="text" id="endDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+														<input type="text" id="endDate"
+															class="form-control flatpickr-input form-datepicker" placeholder
+															value="2022.08.10">
 													</div>
 												</div>
 											</div>
@@ -138,13 +150,17 @@
 										<td>
 											파일 등록
 											<p>
-												<a href="#" class="btn btn-outline-light btn-sm btn-regi mt-2"><small class="d-lg-none">등록</small></a>
+												<a href="#"
+													class="btn btn-outline-light btn-sm btn-regi mt-2"><small
+														class="d-lg-none">등록</small></a>
 											</p>
 										</td>
 										<td>
-											<p class="mb-3 fs-12px">※ 휴직 사유에 대한 증빙 서류를 반드시 첨부하시기 바랍니다.<br> (예 : 질병으로 인한 휴직인 경우 진단서 등)
+											<p class="mb-3 fs-12px">※ 휴직 사유에 대한 증빙 서류를 반드시 첨부하시기 바랍니다.<br> (예 :
+												질병으로 인한 휴직인 경우 진단서 등)
 											</p>
-											<div class="simplebar-scrollable-y" data-simplebar data-simplebar-auto-hide="false" style="height: 103px !important;">
+											<div class="simplebar-scrollable-y" data-simplebar
+												data-simplebar-auto-hide="false" style="height: 103px !important;">
 												<ul>
 													<li><a href="#" class="btn-delete">삭제</a>포스터 기획 사항.zip</li>
 													<li><a href="#" class="btn-delete">삭제</a>사진이미지.png</li>
@@ -153,48 +169,51 @@
 													<li><a href="#" class="btn-delete">삭제</a>포스터 기획 사항.zip</li>
 													<li><a href="#" class="btn-delete">삭제</a>사진이미지.png</li>
 												</ul>
-											</div>									
+											</div>
 										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div><!-- // mbody-forms -->
-	
-						<div class="form-btn float-wrap">
-							<div class="float-left">
-								<button type="submit" class="btn btn-outline-active">닫기</button>
-								<button type="submit" class="btn btn-outline-active">삭제</button>
-							</div>
-							<div class="float-right">
-								<button type="submit" class="btn btn-point">저장</button>
-							</div>
-						</div><!-- // form-btn -->
+
+						<!-- // form-btn -->
 					</div><!-- // modal-body -->
-	
+					<div class="modal-footer">
+						<div class="d-flex justify-content-between w-100">
+							<div class="d-flex gap-1">
+								<a href="#" class="btn btn-outline-primary">닫기</a>
+								<a href="#" class="btn btn-outline-primary">삭제</a>
+							</div>
+							<div class="d-flex gap-1">
+								<a href="#" class="btn btn-point">저장</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div><!-- // modal : 휴직 신청 -->
-	<!-- // layout-wrapper -->
+		<!-- // layout-wrapper -->
 
-	<button type="button" class="btn" id="scroll-top"></button>
-	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
-	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
-	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
-	<script src="./assets/libs/feather-icons/feather.min.js"></script>
-	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
-	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
-	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+		<button type="button" class="btn" id="scroll-top"></button>
+		<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+		<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+		<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+		<script src="./assets/libs/feather-icons/feather.min.js"></script>
+		<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+		<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+		<script
+			src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
 
-	<script src="./assets/js/layout.js"></script>
-	<script src="./assets/js/plugins.js"></script>
-	<script src="./assets/js/common.js"></script>
-	<script src="./assets/js/custom.js"></script>
+		<script src="./assets/js/layout.js"></script>
+		<script src="./assets/js/plugins.js"></script>
+		<script src="./assets/js/common.js"></script>
+		<script src="./assets/js/custom.js"></script>
 
-	<script>
+		<script>
 		$(function(){
 			$('#pageModal17').modal('show');
 		});
 	</script>
-</body>
+	</body>
 
 </html>
