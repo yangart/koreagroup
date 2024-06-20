@@ -2470,6 +2470,15 @@ body {
 .fc.fc-direction-ltr .fc-timegrid-body {
   width: 100% !important;
   min-height: 100%;
+  height: 100%;
+}
+.fc.fc-direction-ltr .fc-timegrid-axis-chunk > table,
+.fc.fc-direction-ltr .fc-timegrid-slots {
+  height: 100%;
+  overflow: auto;
+}
+.fc.fc-direction-ltr .fc-scroller-liquid-absolute {
+  overflow: hidden !important;
 }
 .fc.fc-direction-ltr .fc-scrollgrid table {
   width: 100% !important;
@@ -3905,6 +3914,12 @@ body:not(.modal-open) .modal-footer {
           flex: 1;
   overflow-y: auto;
 }
+.card-body:has(.col-group-left) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
 
 .card-body-total {
   position: absolute;
@@ -3921,7 +3936,6 @@ body:not(.modal-open) .modal-footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 24px;
   min-height: 48px;
 }
 .card-footer > .l-area,
@@ -4207,6 +4221,18 @@ a.list-more {
 }
 .card-list-simple li > a:hover {
   background: var(--body-bg);
+}
+.card-list-simple li.noti-fixed > a {
+  background: var(--finish-bg);
+}
+.card-list-simple li.noti-fixed > a:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/ico-megaphone.png) center center no-repeat;
+  background-size: contain;
+  margin-right: 8px;
 }
 .card-list-simple li + li {
   margin-top: 6px;
@@ -4624,7 +4650,7 @@ a.list-more {
   margin-top: 8px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-height: 66px;
+  max-height: 60px;
   overflow-y: auto;
 }
 .card-attendance dd .day {
@@ -4637,13 +4663,13 @@ a.list-more {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 30px;
+  height: 28px;
   margin-right: 4px;
   margin-bottom: 4px;
   padding: 0 8px;
   border-radius: 100px;
   background-color: var(--border-color-light);
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   text-align: center;
   color: #212529;
@@ -7553,58 +7579,53 @@ button:focus {
     font-weight: 500;
   }
 }
-.class-list-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: calc(var(--bs-gutter-y) / 2) calc(var(--bs-gutter-x) / 2);
+.dashboard .card-body:has(.col-group-left) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0;
+  gap: var(--bs-gutter-x);
+}
+.dashboard .card-body:has(.col-group-left) .col-group-left {
+  width: 60%;
+}
+.dashboard .card-body:has(.col-group-left) .col-group-right {
+  width: 40%;
+}
+.dashboard .card-body .col-group-right .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: calc(var(--bs-gutter-x) / 2);
+}
+.dashboard .card-body .col-group-right h3 {
+  font-size: 16px;
+}
+
+.class-list-wrap {
+  padding: var(--bs-gutter-y) var(--bs-gutter-x);
   overflow: hidden;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 4px 0 0 #fdde3b;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 4px 0 0 #fdde3b;
 }
 .class-list-wrap > strong {
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: var(--body-bg);
-  color: var(--dark-color);
-  border-right: 1px solid var(--border-color-light);
-  font-weight: 400;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 8px;
 }
 .class-list-wrap > strong b {
-  font-size: 18px;
-  font-weight: 600;
+  color: var(--first-color);
 }
 
 .my-class-list {
   overflow-y: auto;
-  height: 102px;
-  padding: 10px 20px;
+  height: 162px;
 }
 .my-class-list li {
-  padding: 4px 0 4px 12px;
+  border: 1px solid var(--border-color-light);
+  padding: 8px 12px 8px 24px;
+  margin: 4px;
+  line-height: 1.4;
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
@@ -7612,9 +7633,9 @@ button:focus {
 .my-class-list li .cont-info:before {
   content: "";
   position: absolute;
-  top: calc(4px + 0.125em);
+  top: 0;
   left: 0;
-  height: 1em;
+  height: 100%;
   width: 4px;
   border-radius: 2px;
 }
@@ -7637,4 +7658,8 @@ button:focus {
 .my-class-list li .title {
   font-weight: 600;
   color: #000;
+}
+
+.nav {
+  margin-bottom: calc(var(--bs-gutter-y) / 2);
 }/*# sourceMappingURL=style.student.css.map */

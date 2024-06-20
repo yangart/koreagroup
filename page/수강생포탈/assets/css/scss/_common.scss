@@ -329,6 +329,9 @@
             overflow-y: auto;
         }
     }
+    &:has(.col-group-left) {
+        flex-direction: row;
+    }
 }
 .card-body-total {
     position: absolute;
@@ -341,7 +344,6 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin-top:24px;
     min-height: 48px;
     >.l-area,
     >.r-area {
@@ -593,7 +595,18 @@ a.list-more {
                 background:var(--body-bg);
             }
         }
-
+        &.noti-fixed > a {
+            background:var(--finish-bg);
+            &:before {
+                content:'';
+                display:block;
+                width:20px;
+                height:20px;
+                background:url(../img/ico-megaphone.png) center center no-repeat;
+                background-size:contain;
+                margin-right:8px;
+            }
+        }
         +li {
             margin-top: 6px;
         }
@@ -971,20 +984,20 @@ $transition-collapse: height .35s ease;
     dd {
         margin-top:8px;
         flex-wrap: wrap;
-        max-height:66px;
+        max-height:60px;
         overflow-y:auto;
 
         .day {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 30px;
+            height: 28px;
             margin-right: 4px;
             margin-bottom: 4px;
             padding:0 8px;
             border-radius: 100px;
             background-color:var(--border-color-light);
-            font-size: 14px;
+            font-size: 12px;
             line-height: 20px;
             text-align: center;
             color: #212529;

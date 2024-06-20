@@ -1,46 +1,54 @@
+.dashboard .card-body {
+    &:has(.col-group-left) {
+        flex-direction: row;
+        gap:var(--bs-gutter-x);
+        .col-group-left { width:60% }
+        .col-group-right { width:40% }
+    }
+    .col-group-right {
+        .card { 
+            flex:1;
+            padding: calc(var(--bs-gutter-x)/2);
+        }
+        h3 {
+            font-size : 16px;
+        }
+    }
+}
 .class-list-wrap {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding:calc(var(--bs-gutter-y)/2) calc(var(--bs-gutter-x)/2);
-    flex-direction: row;
-    padding:0;
+    padding:var(--bs-gutter-y) var(--bs-gutter-x);
     overflow:hidden;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 4px 0 0 #fdde3b;
 
     > strong {
-        width:100px;
-        height:100px;
-        overflow:hidden;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background:var(--body-bg);
-        color:var(--dark-color);
-        border-right:$border-light;
-        font-weight:400;
+        font-size:18px;
+        display:block;
+        margin-bottom:8px;
         b {
-            font-size:18px;
-            font-weight:600;
+            color:var(--first-color);
+            
         }
     }
 }
 .my-class-list {
     overflow-y:auto;
-    height:102px;
-    padding:10px 20px;
+    height:162px;
     li {
-        padding:4px 0 4px 12px;
+        border:$border-light;
+        padding:8px 12px 8px 24px;
+        margin:4px;
+        line-height:1.4;
         overflow:hidden;
         text-overflow: ellipsis;
         position:relative;
+
         .cont-info {
             &:before {
                 content:'';
                 position:absolute;
-                top:calc(4px + 0.125em);
+                top:0;
                 left:0;
-                height:1em;
+                height:100%;
                 width:4px;
                 border-radius:2px;
             }
@@ -58,4 +66,8 @@
             color:#000;
         }
     }
+}
+
+.nav {
+    margin-bottom:calc(var(--bs-gutter-y)/2);
 }
