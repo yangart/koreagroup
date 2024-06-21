@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>멘토포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="멘토포털">
+	<meta property="og:description" content="멘토포털">
+	<meta name="description" content="멘토포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="layout-wrapper">
+
+		<div class="page-topbar"></div><!-- page-topbar -->
+		<div class="app-menu navbar-menu"></div><!-- app-menu -->
+
+		<!---- main-content ---->
+		<div class="main-content">
+
+			<div class="page-header"></div><!-- page-header -->
+
+			<div class="page-content">
+
+				<div class="page-content-title">- 일지정보</div>
+				<div class="card">
+					<div class="card-body inner-scroll">
+						<!-- 검색 영역 -->
+						<div class="fnc-area">
+							<div class="l-area">
+								<div class="input-group d-inline-flex">
+									<span class="input-group-text">일지작성일자</span>
+									<input type="text" class="form-control form-datepicker" id="startDate">
+								</div>
+								<select>
+									<option value="01">일지구분</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<select>
+									<option value="01">면담 결과</option>
+									<option value="02">option 2</option>
+									<option value="03">option 3</option>
+								</select>
+								<div class="d-inline-flex">
+									<input type="text" class="form-control" placeholder="작성자 이름, 작성자 아이디 입력" style="min-width: 240px;">
+								</div>
+							</div>
+							<div class="r-area">
+								<button type="button" class="btn btn-point">초기화</button>
+								<button type="button" class="btn btn-point-deep">검색</button>
+							</div>
+						</div>
+						<!-- //검색영역 -->
+
+						<div class="d-flex gap-2 mb-3">	
+							<a href="#none" class="text-decoration-underline"><strong>전체 <span class="text-point">5</span></strong></a> /
+							<a href="#none" class="text-decoration-underline"><strong>학사 <span class="text-point">5</span></strong></a> /
+							<a href="#none" class="text-decoration-underline"><strong>교육 <span class="text-point">5</span></strong></a> /
+							<a href="#none" class="text-decoration-underline"><strong>환불 <span class="text-point">5</span></strong></a> /
+							<a href="#none" class="text-decoration-underline"><strong>개강일지 <span class="text-point">5</span></strong></a>
+						</div>
+
+						<div class="table-responsive mb-3">
+							<table class="table table-card">
+								<colgroup>
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 15%;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>작성자</th>
+										<td class="text-start">박지은1 강사</td>
+										<th>작성부서</th>
+										<td class="text-start">운영팀</td>
+										<th>작성일</th>
+										<td class="text-start">2024-11-07 20:36</td>
+									</tr>
+									<tr>
+										<th>일지구분 <i class="text-req">*</i></th>
+										<td class="text-start">환불일지</td>
+										<th>면담결과</th>
+										<td class="text-start">양호</td>
+										<th>연락 예정일</th>
+										<td class="text-start">2024-11-07</td>
+									</tr>
+									<tr>
+										<th>파일첨부 <i class="text-req">*</i></th>
+										<td colspan="5" class="text-start"><a href="#none" class="text-decoration-underline">파일명.doc</a></td>
+									</tr>
+									<tr>
+										<th>면담내용 <i class="text-req">*</i></th>
+										<td colspan="5" class="text-start">
+												[상담후]<br>
+												*상담자 : 백지은<br>
+												*직업/나이/성별 : <br>
+												*거주지 : 서울 강남구 (기숙사)<br>
+												*성향 : 시원시원 <br>
+												*특이사항 : <br>
+												*추가등록 가망 : <br>
+												*상담내용 : - 퇴사하고 싶어 알아봤다고 함. <br>
+												- 원래 디자인을 배워보고 싶었고 회사를 알아보니 gtq 우대인 <br>곳들이 많아 문의줌.<br>
+												- 사무직도 생각하고 있어 컴퓨터자격증 필요하다 어필함.<br>
+												- 우선 포/일 공부해서 gtq 시험보는걸로!<br> 
+												*결제권자/완납예정 :
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="table-responsive mb-3">
+							<table class="table table-card">
+								<colgroup>
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 15%;">
+									<col>
+									<col style="width: 15%;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>작성자</th>
+										<td class="text-start">박지은1 강사</td>
+										<th>작성부서</th>
+										<td class="text-start">운영팀</td>
+										<th>작성일</th>
+										<td class="text-start">2024-11-07 20:36</td>
+									</tr>
+									<tr>
+										<th>일지구분 <i class="text-req">*</i></th>
+										<td class="text-start">환불일지</td>
+										<th>면담결과</th>
+										<td class="text-start">양호</td>
+										<th>연락 예정일</th>
+										<td class="text-start">2024-11-07</td>
+									</tr>
+									<tr>
+										<th>파일첨부 <i class="text-req">*</i></th>
+										<td colspan="5" class="text-start"><a href="#none" class="text-decoration-underline">파일명.doc</a></td>
+									</tr>
+									<tr>
+										<th>면담내용 <i class="text-req">*</i></th>
+										<td colspan="5" class="text-start">
+												[상담후]<br>
+												*상담자 : 백지은<br>
+												*직업/나이/성별 : <br>
+												*거주지 : 서울 강남구 (기숙사)<br>
+												*성향 : 시원시원 <br>
+												*특이사항 : <br>
+												*추가등록 가망 : <br>
+												*상담내용 : - 퇴사하고 싶어 알아봤다고 함. <br>
+												- 원래 디자인을 배워보고 싶었고 회사를 알아보니 gtq 우대인 <br>곳들이 많아 문의줌.<br>
+												- 사무직도 생각하고 있어 컴퓨터자격증 필요하다 어필함.<br>
+												- 우선 포/일 공부해서 gtq 시험보는걸로!<br> 
+												*결제권자/완납예정 :
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- // table-responsive -->
+					</div><!-- // card-body -->
+				</div><!-- // card -->
+			</div><!-- page-content -->
+
+			<footer class="page-footer"></footer><!-- page-footer -->
+
+		</div><!-- // main-content -->
+	</div><!-- // layout-wrapper -->
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.min.js"></script>
+	<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.ko.js"></script>
+	<script src="./assets/js/includeHtml.js"></script><!-- 퍼블리싱 반복요소 인클루드를 위한 스크립트 -->
+
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+</body>
+
+</html>

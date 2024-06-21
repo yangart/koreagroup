@@ -549,30 +549,38 @@ select {
   font-size: 0;
   vertical-align: middle;
 }
-.bg-primary {
+.bg-primary,
+.text-bg-primary {
   background-color:var(--first-color);
   color: #fff;
 }
-.bg-secondary {
+.bg-secondary,
+.text-bg-secondary {
   background-color: var(--second-color);
 }
-.bg-warning {
+.bg-warning,
+.text-bg-warning {
   background-color: var(--color-ye);
 }
-.bg-danger {
+.bg-danger,
+.text-bg-danger {
   background-color: var(--color-rd);
 }
-.bg-light {
+.bg-light,
+.text-bg-light {
   background-color: var(--color-pk);
 }
-.bg-success {
+.bg-success,
+.text-bg-success {
   background-color: var(--color-nv);
 }
-.btn-link {
+.btn-link,
+.text-btn-link {
   text-decoration: underline;
   color: #076aff;
 }
-.btn-underline {
+.btn-underline,
+.text-btn-underline {
   text-decoration: underline !important;
   color: inherit;
   &:hover {
@@ -619,13 +627,16 @@ fieldset:disabled .btn {
 :is(.btn.show,.btn:first-child:active,:not(.btn-check)+.btn:active) {
   /* border-color:transparent */
 }
-.text-primary {
+.text-primary,
+.txt-primary {
   color: var(--first-color) !important;
 }
-.text-point {
+.text-point,
+.txt-point {
   color: var(--btn-point-color);
 }
-.text-req {
+.text-req,
+.txt-req {
   color: var(--color-rd);
 }
 .form-select {

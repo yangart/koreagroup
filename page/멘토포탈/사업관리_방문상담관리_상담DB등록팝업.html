@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>멘토포털</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="멘토포털">
+	<meta property="og:description" content="멘토포털">
+	<meta name="description" content="멘토포털">
+	<script src="./assets/js/layout.js"></script>
+	<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- pageModal1 -->
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">상담 DB 등록</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="mbody-forms">
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto">
+									<div class="table-title">DB 정보</div>
+								</div>
+							</div>
+						</div><!-- // table-head -->
+						<table class="table table-basic">
+							<tbody>
+								<tr>
+									<td>
+										<div class="row">
+											<div class="col-12 col-lg-11">
+												<div class="row">
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>이름<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-12">
+																		<input type="text" class="form-control" value=""
+																			placeholder="">
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>연락처<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-12">
+																		<input type="text" class="form-control" value=""
+																			placeholder="">
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>국비여부</dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-12">
+																		<div class="form-inline">
+																			<div class="form-check">
+																				<input class="form-check-input"
+																					type="radio" name="inlineRadio1"
+																					id="inlineRadio1_a" value="a"
+																					checked="">
+																				<label class="form-check-label"
+																					for="inlineRadio1_a">일반</label>
+																			</div>
+																			<div class="form-check">
+																				<input class="form-check-input"
+																					type="radio" name="inlineRadio1"
+																					id="inlineRadio1_b" value="b">
+																				<label class="form-check-label"
+																					for="inlineRadio1_b">국비</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>담당자</dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-8">
+																		<input type="text" class="form-control"
+																			value="홍길동" placeholder="">
+																	</div>
+																	<div class="col">
+																		<a href="#"
+																			class="btn btn-outline-light btn-sm btn-review"><small>검색</small></a>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 mt-2">
+														<dl class="row pt-2">
+															<dt>계열</dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-auto">
+																		<select>
+																			<option value="01">컴퓨터</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																	<div class="col-auto">
+																		<select>
+																			<option value="01">강남</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 mt-2">
+														<dl class="row pt-2">
+															<dt>메모</dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-12">
+																		<textarea class="form-control" rows="3"
+																			placeholder="내용을 입력하세요."></textarea>
+																		<div class="form-text">
+																			(0 / 1,000)
+																		</div>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 mt-2">
+														<dl class="row pt-2">
+															<dt>신청경로<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-auto">
+																		<select>
+																			<option value="01">선택</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto">
+									<div class="table-title">
+										<span>문의 과목</span>
+									</div>
+								</div>
+								<div class="col-auto">
+									<input type="text" class="form-control d-inline" value="" placeholder="">
+								</div>
+							</div>
+							<div class="flex-shrink-0 row">
+								<div class="col">
+									<p class="d-inline-flex gap-1">
+										<button class="btn btn-point btn-sm" type="button" data-bs-toggle="collapse"
+											data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+											열기
+										</button>
+									</p>
+								</div>
+							</div>
+						</div><!-- // table-head -->
+						<div class="collapse pt-2 my-3 border-top" id="collapse1">
+							<div class="row row-x6">
+								<div class="col-auto">
+									<select>
+										<option value="01">컴퓨터</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+								<div class="col-auto">
+									<select>
+										<option value="01">기본단과과정</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="d-flex flex-wrap gap-1 bg-light rounded p-3 mt-2">
+								<button type="button" class="btn btn-outline-active btn-sm">게임 아트웍</button>
+								<button type="button" class="btn btn-outline-active btn-sm">제품디자인포트폴리오</button>
+								<button type="button" class="btn btn-outline-active btn-sm">3D애니메이션</button>
+								<button type="button" class="btn btn-outline-active btn-sm">제품디자인포트폴리오</button>
+								<button type="button" class="btn btn-outline-active btn-sm">제품디자인포트폴리오</button>
+								<button type="button" class="btn btn-outline-active btn-sm">제품디자인포트폴리오</button>
+								<button type="button" class="btn btn-outline-active btn-sm">제품디자인포트폴리오</button>
+							</div>
+						</div>
+						<div class="pt-2 mt-2 border-top">
+							<button type="button" class="btn btn-outline-dark btn-sm">초기화</button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">대표<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">내사<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">퇴사자<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">CPA<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">당직<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">대표<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">내사<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">퇴사자<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">CPA<i
+									class="ico-close"></i></button>
+							<button type="button" class="btn btn-outline-cancel btn-listgroup-del my-1">당직<i
+									class="ico-close"></i></button>
+						</div>
+					</div>
+					<!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point">저장</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
+	<script src="./assets/js/jquery-1.12.4.min.js"></script>
+	<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.min.js"></script>
+	<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.ko.js"></script>
+	<script src="./assets/js/includeHtml.js"></script><!-- 퍼블리싱 반복요소 인클루드를 위한 스크립트. 개발시엔  -->
+
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+
+	<script>
+		$(window).load(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+</body>
+
+</html>
