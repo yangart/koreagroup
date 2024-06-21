@@ -5,6 +5,7 @@
 	Project	: Korea Edu Group
 */
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
@@ -256,6 +257,10 @@ select {
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 0;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 0;
 }
 
 .blockquote {
@@ -2747,6 +2752,29 @@ body {
 .fc-theme-standard .fc-dayGridMonth-view .fc-daygrid-event:not(.fc-event-start), .fc-theme-standard .fc-dayGridMonth-view .fc-daygrid-event:not(.fc-event-end) {
   border-width: 0;
 }
+.fc-theme-standard .material-symbols-rounded {
+  color: #ff5033;
+  position: absolute;
+  top: -16px;
+  right: 4px;
+}
+
+.tooltip.tooltip-noti {
+  padding-bottom: 12px;
+}
+.tooltip.tooltip-noti .tooltip-inner {
+  background: #fff;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  color: #111;
+}
+.tooltip.tooltip-noti .tooltip-arrow:before {
+  border-top-color: #fff;
+}
+.tooltip.tooltip-noti.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow, .tooltip.tooltip-noti.bs-tooltip-top .tooltip-arrow {
+  bottom: 5px;
+}
 
 .fc-daygrid-event .fc-event-time {
   display: none;
@@ -3869,6 +3897,15 @@ body:not(.modal-open) .modal-footer {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.25;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 16px 24px;
 }
 .card-head.type-nav {
@@ -4002,8 +4039,9 @@ body:not(.modal-open) .modal-footer {
 .card-subject div + .text {
   margin-left: 6px;
 }
-.card-subject .text span {
-  color: #ff5033;
+.card-subject .text .material-symbols-outlined {
+  color: #a8b1c7;
+  margin-right: 4px;
 }
 .card-subject .state {
   padding: 4px 8px;
@@ -4078,18 +4116,14 @@ a.list-more {
 .card-subject-column div + .text {
   margin-left: 0;
 }
-.card-subject-column .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.card-subject-column .text + .text,
+.card-subject-column .text + .text-card,
+.card-subject-column .text-card + .text,
+.card-subject-column .text-card + .text-card {
+  margin-top: var(--bs-gutter-y);
 }
-.card-subject-column .text + .text {
-  margin-top: 8px;
-}
-.card-subject-column .text li {
+.card-subject-column .text li,
+.card-subject-column .text-card li {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4098,40 +4132,31 @@ a.list-more {
       -ms-flex-align: center;
           align-items: center;
 }
-.card-subject-column .text li img {
+.card-subject-column .text li img,
+.card-subject-column .text-card li img {
   margin-right: 4px;
 }
-.card-subject-column .text li .link img {
+.card-subject-column .text li .link img,
+.card-subject-column .text-card li .link img {
   margin-right: 0;
 }
-.card-subject-column .text li cite {
+.card-subject-column .text li cite,
+.card-subject-column .text-card li cite {
   font-style: normal;
   margin-right: 4px;
+  color: #777;
 }
-.card-subject-column .text li .empty {
+.card-subject-column .text li .empty,
+.card-subject-column .text-card li .empty {
   color: #aaa;
 }
-.card-subject-column .text li button {
+.card-subject-column .text li button,
+.card-subject-column .text-card li button {
   font-weight: 600;
   border-bottom: 1px solid var(--body-color);
 }
-.card-subject-column .text li + li {
-  margin-left: 8px;
-  padding-left: 9px;
-}
-.card-subject-column .text li + li::after {
-  display: block;
-  clear: both;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 1px;
-  height: 10px;
-  margin-top: -5px;
-  background: #a4a4a4;
-}
-.card-subject-column .text li a {
+.card-subject-column .text li a,
+.card-subject-column .text-card li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4139,6 +4164,37 @@ a.list-more {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 2px;
+}
+.card-subject-column .text li cite {
+  margin-right: 10px;
+}
+.card-subject-column .text li + li {
+  margin-top: 4px;
+}
+.card-subject-column .text-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.card-subject-column .text-card li {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: var(--border-radius);
+  background: var(--refund-bg);
+  border: 1px solid var(--border-color-light);
+  padding: calc(var(--bs-gutter-y) / 2) calc(var(--bs-gutter-x) / 6);
+}
+.card-subject-column .text-card li + li {
+  margin-left: 8px;
 }
 .card-subject-column div + .state {
   margin-left: 0;
@@ -4211,7 +4267,7 @@ a.list-more {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 12px 20px;
+  padding: 8px 16px;
   border-radius: 8px;
   border: solid 1px #efefef;
   background-color: #fff;
@@ -4235,7 +4291,7 @@ a.list-more {
   margin-right: 8px;
 }
 .card-list-simple li + li {
-  margin-top: 6px;
+  margin-top: 4px;
 }
 .card-list-simple .title {
   -webkit-box-flex: 1;
@@ -4599,7 +4655,7 @@ a.list-more {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: var(--bs-gutter-y);
+  margin-top: auto;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -4650,7 +4706,7 @@ a.list-more {
   margin-top: 8px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-height: 60px;
+  max-height: 160px;
   overflow-y: auto;
 }
 .card-attendance dd .day {
@@ -6661,7 +6717,6 @@ button:focus {
 }
 
 .tooltip .tooltip-inner {
-  max-width: 320px;
   font-family: "Pretendard", sans-serif;
   border-radius: 6px;
   padding: 4px 6px;
@@ -6678,9 +6733,6 @@ button:focus {
   margin: 8px 0;
 }
 .tooltip-box > .book-img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   padding-right: 2px;
 }
 .tooltip-box > .book-img + .book-img {
@@ -8132,14 +8184,61 @@ table .bg td {
 .dashboard .card-body:has(.col-group-left) .col-group-right {
   width: 40%;
 }
-.dashboard .card-body .col-group-right .card {
+.dashboard .card-body .col-group-right .fluid-card ~ .fluid-card {
+  margin-top: 12px;
+}
+.dashboard .card-body .col-group-right h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.dashboard .card-body .col-group-right .list-group .list-group-item {
+  padding: 4px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 8px;
+}
+.dashboard .card-body .col-group-right .list-group .list-group-item a {
+  width: 100%;
+  display: block;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: calc(var(--bs-gutter-x) / 2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.dashboard .card-body .col-group-right h3 {
-  font-size: 16px;
+.dashboard .card-body .col-group-right .list-group .list-group-item a:hover {
+  text-decoration: underline;
+}
+.dashboard .card-body .col-group-right .list-group .list-group-item time {
+  font-size: 12px;
+  color: #777;
+}
+
+.card:has(.card-head).class-detail {
+  padding: 4px 0 0;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 4px 0 0 #f93bfd;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 4px 0 0 #f93bfd;
+}
+.card:has(.card-head).class-detail .card-head .btn-sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+.card:has(.card-head).class-detail .card-head .btn-sm .material-symbols-outlined {
+  margin-left: 4px;
 }
 
 .class-list-wrap {

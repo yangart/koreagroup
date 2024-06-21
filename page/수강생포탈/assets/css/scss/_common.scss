@@ -287,6 +287,9 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 1.25;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &.type-nav {
         padding: 0 36px;
@@ -401,8 +404,10 @@
         margin-left: 6px;
     }
 
-    .text span {
-        color: #ff5033;
+    .text .material-symbols-outlined {
+        // color: #ff5033
+        color:#a8b1c7;
+        margin-right:4px;
     }
 
     .state {
@@ -462,13 +467,11 @@ a.list-more {
     div+.text {
         margin-left: 0;
     }
-
-    .text {
-        display: flex;
-        align-items: center;
-
-        +.text {
-            margin-top: 8px;
+    .text,
+    .text-card {
+        +.text,
+        +.text-card {
+            margin-top: var(--bs-gutter-y);
         }
         li {
             position: relative;
@@ -482,29 +485,37 @@ a.list-more {
             }
             cite {
                 font-style:normal;margin-right:4px;
+                color:#777;
             }
             .empty { color:#aaa; }
             button { font-weight:600;border-bottom:1px solid var(--body-color); }
-            +li {
-                margin-left: 8px;
-                padding-left: 9px;
-                &::after {
-                    display: block;
-                    clear: both;
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    width: 1px;
-                    height: 10px;
-                    margin-top: -5px;
-                    background: #a4a4a4;
-                }
-            }
+            
             a {
                 display: flex;
                 align-items: center;
                 margin-left: 2px;
+            }
+        }
+    }
+    .text {
+        li {
+            cite { margin-right:10px; }
+            + li { margin-top:4px; }
+        }
+        &-card {
+            display: flex;
+            align-items: center;
+            width:100%;
+            li {
+                flex-direction: column;
+                flex:1;
+                border-radius:var(--border-radius);
+                background: var(--refund-bg);
+                border: 1px solid var(--border-color-light);
+                padding:calc(var(--bs-gutter-y)/2) calc(var(--bs-gutter-x)/6);
+                +li {
+                    margin-left: 8px;
+                }
             }
         }
     }
@@ -584,7 +595,7 @@ a.list-more {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 20px;
+            padding: 8px 16px;
             border-radius: 8px;
             border: solid 1px #efefef;
             background-color: #fff;
@@ -608,7 +619,7 @@ a.list-more {
             }
         }
         +li {
-            margin-top: 6px;
+            margin-top: 4px;
         }
     }
 
@@ -944,7 +955,8 @@ $transition-collapse: height .35s ease;
 .card-attendance {
     display: flex;
     flex-wrap: wrap;
-    margin-top:var(--bs-gutter-y);
+    // margin-top:var(--bs-gutter-y);
+    margin-top:auto;
     align-items: flex-start;
     flex-direction: column;
     background:var(--body-bg);
@@ -984,7 +996,7 @@ $transition-collapse: height .35s ease;
     dd {
         margin-top:8px;
         flex-wrap: wrap;
-        max-height:60px;
+        max-height:160px;
         overflow-y:auto;
 
         .day {
@@ -3555,7 +3567,7 @@ button:focus {
 
 .tooltip {
     .tooltip-inner {
-        max-width:320px;
+        // max-width:320px;
         font-family: 'Pretendard', sans-serif;
         border-radius: 6px;
         padding: 4px 6px;
@@ -3569,7 +3581,7 @@ button:focus {
     display: flex;
     margin: 8px 0;
     > .book-img {
-        flex:1;
+        // flex:1;
         padding-right: 2px;
         + .book-img {
             padding-right: 0;

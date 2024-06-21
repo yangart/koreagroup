@@ -267,6 +267,29 @@
       }
     }
   }
+  .material-symbols-rounded {
+    color:#ff5033;
+    position:absolute;
+    top:-16px;
+    right:4px;
+  }
+}
+.tooltip.tooltip-noti {
+  padding-bottom:12px;
+
+  .tooltip-inner {
+    background:#fff;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+    padding:16px;
+    color:#111;
+  }
+  .tooltip-arrow:before {
+    border-top-color:#fff;
+  }
+  &.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow, 
+  &.bs-tooltip-top .tooltip-arrow {
+    bottom: 5px;
+  }
 }
 .fc-daygrid-event .fc-event-time {
   // margin-right: 4px;

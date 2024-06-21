@@ -109,20 +109,23 @@
 				</div>
 
 				<div class="col-group-right fluid-card">
-					<div class="card">
+					<div class="card class-detail">
 						<div class="card-head bg-gray">
-							[KDI] 포토샵 따라하기
+							<strong>[KDI] 포토샵 따라하기</strong>
+							<button type="button" class="btn-sm txt-success">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
 						</div><!-- // card-head -->
 
 						<div class="card-body">
 							<div class="col-group-left">
 								<div class="card-subject card-subject-column">
+
 									<ul class="text">
-										<li><img src="./assets/img/ico-text-user.png" alt=""><b>오수연 강사</b></li>
-										<li><img src="./assets/img/ico-text-date.png" alt="">2023-11-10~2023-11-26</li>
-										<li>월수금 09:30~11:30</li>
+										<li><span class="material-symbols-outlined">account_circle</span><cite>강사</cite><b>오수연 강사</b></li>
+										<li><span class="material-symbols-outlined">calendar_today</span><cite>기간</cite>2023-11-10~2023-11-26</li>
+										<li><span class="material-symbols-outlined">timer</span><cite>시간</cite>월수금 09:30~11:30</li>
+										<li><span class="material-symbols-outlined">location_on</span><cite>강의실</cite>5층 104C</li>
 									</ul>
-									<ul class="text">
+									<ul class="text-card">
 										<li>
 											<cite>다음수업일</cite>
 											<b class="txt-primary">5월 5일</b>
@@ -133,16 +136,18 @@
 										</li>
 										<li>
 											<cite>준비물</cite>
-											<button type="button" class="btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="focus" data-bs-html="true" title="" data-bs-original-title="<div class='tooltip-box'>1.개별 노트북<br>2.16GB USB</div>">있음</button>
+											<button type="button" class="btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover focus" 
+											data-bs-html="true" title="" data-bs-original-title="<div class='tooltip-box'>1.개별 노트북<br>2.16GB USB</div>">있음</button>
 										</li>
 										<li>
 											<cite>교재안내</cite>
-												<button type="button" class="btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="focus" data-bs-html="true" title="" data-bs-original-title="<div class='tooltip-box'><div class='book-img'><img src='./assets/img/archive-list-sample1.jpeg' alt=''><strong>그의 운명에 대한 아주 개인적인 생각</strong></div><div class='book-img'><img src='./assets/img/archive-list-sample2.png' alt=''><strong>교재</strong></div></div>">2건</button>
+											<button type="button" class="btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover focus" 
+											data-bs-html="true" title="" data-bs-original-title="<div class='tooltip-box'><div class='book-img'><img src='./assets/img/archive-list-sample1.jpeg' alt=''><strong>그의 운명에 대한 아주 개인적인 생각</strong></div><div class='book-img'><img src='./assets/img/archive-list-sample2.png' alt=''><strong>교재</strong></div></div>">2건</button>
 										</li>
-										<li>
+										<!-- <li> 준비물/교재 없을경우 
 											<cite>교재안내</cite>
 											<b class="empty">없음</b>
-										</li>
+										</li> -->
 									</ul>
 								</div><!-- // card-subject -->
 
@@ -189,28 +194,28 @@
 								<div class="fluid-card">
 									<h3>공지사항</h3>
 									<ul class="list-group">
-										<li class="list-group-item">An item</li>
-										<li class="list-group-item">A second item</li>
-										<li class="list-group-item">A third item</li>
-										<li class="list-group-item">A fourth item</li>
+										<li class="list-group-item"><a href="javascript:;">An item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A second itemA second itemA second itemA second item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A third item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A fourth item</a><time>2024.05.06</time></li>
 									</ul>
 								</div>
 								<div class="fluid-card">
 									<h3>Q&amp;A</h3>
 									<ul class="list-group">
-										<li class="list-group-item">An item</li>
-										<li class="list-group-item">A second item</li>
-										<li class="list-group-item">A third item</li>
-										<li class="list-group-item">A fourth item</li>
+										<li class="list-group-item"><a href="javascript:;">An item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A second itemA second itemA second itemA second item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A third item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A fourth item</a><time>2024.05.06</time></li>
 									  </ul>
 								</div>
 								<div class="fluid-card">
 									<h3>자료실</h3>
 									<ul class="list-group">
-										<li class="list-group-item">An item</li>
-										<li class="list-group-item">A second item</li>
-										<li class="list-group-item">A third item</li>
-										<li class="list-group-item">A fourth item</li>
+										<li class="list-group-item"><a href="javascript:;">An item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A second itemA second itemA second itemA second item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A third item</a><time>2024.05.06</time></li>
+										<li class="list-group-item"><a href="javascript:;">A fourth item</a><time>2024.05.06</time></li>
 									  </ul>
 								</div>
 							</div>
@@ -404,37 +409,39 @@
 					category: '대기',
 					title: '연일 이벤트',
 					start: '2024-06-24',
-					end: '2024-06-26'
+					end: '2024-06-26',
 				},
 				{
 					category: '수료',
 					title: '포토샵 초급 따라하기 1',
 					start: '2024-06-26T16:00:00',
-					end: '2024-06-26T18:00:00'
+					end: '2024-06-26T18:00:00',
 				},
 				{
 					category: '환불',
 					title: '포토샵 초급 따라하기 2',
 					start: '2024-06-27T12:00:00',
-					start: '2024-06-27T18:00:00'
+					start: '2024-06-27T18:00:00',
 				},
 				{
 					category: '수강',
 					title: '인테리어 포폴(1,2)',
 					start: '2024-06-27T08:30:00',
-					start: '2024-06-27T11:30:00'
+					start: '2024-06-27T11:30:00',
 				},
 				{
 					category: '수강',
 					title: '인테리어 포폴(1,2)',
 					start: '2024-06-27T18:30:00',
-					start: '2024-06-27T19:30:00'
+					start: '2024-06-27T19:30:00',
+					description: '<strong>This</strong> is a <em>cool</em> event with HTML content.'
 				},
 				{
 					category: '대기',
 					title: '포토샵 중급 따라하기 1',
 					start: '2024-06-28T10:30:00',
-					end: '2024-06-28T12:30:00'
+					end: '2024-06-28T12:30:00',
+					description: '<strong>This</strong> is a <em>cool</em> event with HTML content.'
 				},
 				{
 					category: '수료',
@@ -543,6 +550,22 @@
 				slotMinTime: '09:00:00',
 				slotMaxTime: '18:30:00',
 				events: events,
+                eventDidMount: function(info) {
+                    var tooltipIcon = $('<span class="material-symbols-rounded">maps_ugc</span>');
+                    tooltipIcon.attr('data-toggle', 'tooltip');
+                    tooltipIcon.attr('data-html', 'true');
+                    tooltipIcon.attr('title', info.event.extendedProps.description);
+                    if (info.event.extendedProps.description && info.view.type === 'timeGridWeek') {
+						$(info.el).append(tooltipIcon);
+						
+						// Initialize Bootstrap tooltips
+						tooltipIcon.tooltip({
+							html: true,
+							customClass: 'tooltip-noti',
+							trigger : 'click'
+						});
+					}
+                },
 				eventContent: eventContentSet,
 				eventClick: handleEventClick,
 				dateClick: handleDateClick
