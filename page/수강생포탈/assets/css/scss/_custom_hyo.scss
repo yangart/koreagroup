@@ -1,6 +1,28 @@
 
+// *::-webkit-scrollbar {
+//     width: 6px;
+//     height: 6px;
+//     box-sizing: border-box;
+// }
+// *::-webkit-scrollbar-thumb {
+//     border-radius: 2em;
+// }
+// *::-webkit-scrollbar-track {
+//     width: 16px;
+//     background-color: transparent;
+// }
 
-
+/*layout*/
+.nav.archive-nav + .nav.card-tabs {
+    margin-top:20px;
+}
+.nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    a {
+        white-space: nowrap;
+    }
+}
 /* 설문지 */
 .survey-area,
 .survey-list {
@@ -16,6 +38,23 @@
 }
 
 /* component */
+.box-list {
+    &.col2 {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.overflow-y-auto {
+    overflow-y: auto;
+}
+.btn-delete {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/modal-survey-ico@2x.png) no-repeat 50% 50% / 16px auto;
+    text-indent: -9999px;
+    font-size: 0;
+    vertical-align: middle;
+}
 .border-box {
     border:1px solid var(--body-color);
     margin-bottom: var(--bs-gutter-y);
@@ -37,8 +76,25 @@
         }
     }
 }
+.file-cus {
+    input[type=file] {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+}
+table {
+    .bg {
+        th,
+        td {
+            background-color: $bg-light-primary;
+        }
+    }
+}
 
-/*total */
+
+/*pay-total */
 .pay-total-list {
     margin-top:20px;
     padding:20px;
@@ -61,6 +117,300 @@
     background-color: var(--border-color-light);
     padding:20px;
 }
+
+/*커뮤니티*/
+.event-list,
+.event-v-list {
+    display: grid;
+ 
+    gap:24px;
+    li {
+        overflow: hidden;
+        &.disabled {
+            a {
+                pointer-events:none;
+            }
+            .img-area {
+                filter: grayscale(1);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(black, .4);
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    a {
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+        &:hover {
+            .img-area {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .img-area {
+        aspect-ratio: 4/1;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: transform .3s;
+        }
+    }
+    .txt-area {
+        display: flex;
+        flex-direction: column;
+        gap:4px;
+        small {
+            font-size:12px;
+        }
+        p {
+            font-weight: 500;
+        }
+    }
+}
+.event-list {
+    grid-template-columns: repeat(3, 1fr);
+    .img-area {
+        aspect-ratio: 4/1;
+    }
+}
+.event-v-list {
+    grid-template-columns: repeat(6, 1fr);
+    .img-area {
+        aspect-ratio: 1/1.47;
+    }
+}
+.job-list {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:24px;
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:16px;
+        height:100%;
+        border:1px solid var(--border-color-light);
+        padding:40px 24px;
+        border-radius: var(--border-radius);
+    }
+    .img-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+        aspect-ratio: 12/3;
+        img {
+            object-fit: contain;
+            display: block;
+            margin:0 auto;
+            height:100%;
+        }
+    }
+    .txt-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:4px;
+        > * {
+            font-style: normal;
+        }
+        em {
+            color:var(--first-color);
+            font-weight: 700;
+        }
+        cite {
+            font-size:18px;
+        }
+    }
+}
+.job-view {
+    margin:0 auto;
+    max-width: 480px;
+    text-align: center;
+    
+    .job-view-cont {
+        display: flex;
+        flex-direction: column;
+        gap:24px;
+    }
+    .company-logo {
+        margin:0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 240px;
+        padding:8px;
+        border:1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 12/3;
+        img {
+            object-fit: contain;
+            display: block;
+            margin:0 auto;
+            height:100%;
+        }
+    }
+    .job-view-info-list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        border-top: 1px solid var(--border-color-light);
+        border-bottom: 1px solid var(--border-color-light);
+        padding:16px;
+        gap:8px;
+        li {
+            display: flex;
+            text-align: left;
+        }
+        cite {
+            font-style: normal;
+            font-weight: 700;
+            width: 80px;
+           
+            flex:none;
+        }
+        .txt-area {
+            flex:1;
+        }
+    }
+    .job-view-txt {
+        text-align: left;
+    }
+    .job-view-etc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:4px;
+        border-top: 1px solid var(--border-color-light);
+        padding-top:24px;
+        ul {
+            display: flex;
+            margin:0 auto;
+            gap:4px 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .etc-logo {
+            margin-top:8px;
+            height: 48px;
+            img {
+                height:100%;
+            }
+        }
+    }
+}
+
+/* 학원정보 */
+.label-room{
+    display: inline-flex;
+    border:1px solid var(--border-color);
+    padding:4px;
+    font-size:12px;
+}
+.table-room-area {
+    overflow: auto;
+    position: relative;
+    overflow: auto;
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    font-size:12px;
+    table {
+        border-collapse: separate;
+        th,
+        td {
+            border-right:1px solid var(--border-color);
+            border-bottom:1px solid var(--border-color);
+            box-sizing: border-box;
+            padding:4px 16px;
+            text-align: center;
+            min-width:80px;
+        }
+        td {
+           background-color:var(--btn-deep-color); 
+           &.blank {
+            background-color: #fff;
+           }
+        }
+    }
+    thead {
+        position: sticky;
+        top:-1px;
+        background-color: $bg-light-primary;
+        z-index: 1;
+        th {
+            border-top: none;
+        }
+    }
+    tbody {
+        position: relative;
+        th {
+            position: sticky;
+            left:0;
+            border-left: none;
+        }
+    }
+    tbody th,
+    .sticky-col {
+        position: sticky;
+        left:-1px;
+        background-color:$bg-light-primary;
+        border-left: none;
+    }
+    
+}
+
+/* 교육과정 */
+.curriculum {
+    max-width:1280px; margin:0 auto; position:relative;
+    .TxtBlueBold{color: #0070f0; font-weight: 900;text-transform:uppercase }
+
+    .page-header { display:block; position:relative; margin:20px 0 40px;}
+    .page-header h3{font-size:32px; font-weight:200; margin-bottom:12px;}
+    .page-header h3 span{display:block; font-weight:900;}
+    .page-header h3 span em{font-weight:300; font-style:normal;}
+
+    .curriculum-wr{display:block; width:100%; padding:80px; z-index:1; position:relative;color:#fff;border-radius:20px; overflow:hidden; background:#03080b; margin-bottom: 60px;}
+    .curriculum-cont{z-index:1; }
+    .curriculum-wr:after{width:100%; height:100%; background: url('https://koreaitacademy.com/2023/img/curriculum-bg.jpg') 50% no-repeat; background-size:cover; display:block; content:""; position:absolute; top:0px; left:0px;z-index:-1; opacity:0.7;}
+    .curriculum-cont-tit{margin-bottom:40px;}
+    .curriculum-cont-tit h3{font-size:40px; font-weight:900; margin-bottom:20px;}
+    .curriculum-cont-tit span{font-size:17px; width:68%; display:block; font-weight:200; line-height:1.6}
+    .count-Texts{display:flex;}
+    .count-Texts>div{width:33.333333%; text-align:center;}
+    .count-Texts>div h3{font-size:80px;}
+    .curriculum-list + div{margin-top:60px;}
+    .curriculum-list {display:block; width:100%;}
+    .curriculum-list .dep03 {
+        display: grid;
+        margin-top:10px;
+        grid-template-columns: repeat(4, 1fr);
+        gap:20px;
+    }
+    .curriculum-list .dep03 li dl dd{display:none;}
+    .curri-4step ul:after, .curri-box-txt dl:after, .lnb-ul:after, .curriculum-list .dep03:after {display:block; content:""; clear:both;}
+    .curriculum-list .dep03 li {margin-top:0}
+    .curriculum-list .dep03 li a{display:flex; width:100%; height:60px; border-radius:12px; border:1px solid #ddd; padding-left:20px; font-weight:700; font-size:15px;    align-items: center;transition: .17s linear;justify-content: space-between;}
+    .curriculum-list .dep03 li a:after {content:""; display:block; width:22px; height:22px; position:relative; background: url('https://koreaitacademy.com/2023/img/icon-ar-right-bk.png') left center no-repeat; background-size:cover;  margin-right:20px;}
+    .curriculum-list .dep03 li a:hover{text-decoration:none; background:#0070f0; color:#fff !important; }
+    .curriculum-list .dep03 li a:hover:after{background: url('https://koreaitacademy.com/2023/img/icon-ar-right-wh.png') left center no-repeat;background-size:cover; }
+}
+
+
 //pc wide 1400
 @media screen and (max-width:var(--breakpoint-xxl)) {
 

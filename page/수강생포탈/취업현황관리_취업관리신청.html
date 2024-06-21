@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg"
+	data-preloader="disable">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>수강생 포털</title>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta property="og:title" content="수강생 포털">
+		<meta property="og:description" content="수강생 포털">
+		<meta name="description" content="수강생 포털">
+		<script src="./assets/js/layout.js"></script>
+		<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+			type="text/css" />
+		<link href="./assets/css/style.student.css" rel="stylesheet"
+			type="text/css" />
+	</head>
+
+	<body>
+		<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog"
+			aria-hidden="false">
+			<div class="modal-dialog modal-md modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">취업관리 신청</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"
+							id="close-modal"></button>
+					</div><!-- // modal-header -->
+					<div class="modal-body">
+						<div class="d-flex flex-column gap-4">
+							<div class="w-100">
+								<div class="border border-dark mb-2 p-3 overflow-y-auto"
+									style="max-height: 128px">
+									<p class="align-center">취업을 진행하기 위해<br>‘이력서’, ‘경력증명서’, ‘포트폴리오’ 를
+										등록해주세요.<br>
+										<small class="text-muted">1개 파일 첨부 필수, 최대 5개까지, 개당 50Mb 까지, exe 파일
+											제외</small>
+									</p>
+									<!-- <ul>
+									<li>원서에서등록한 파일.doc<button class="btn btn-delete vertical-center">삭제</button></li>
+									<li>원서에서등록한 파일.doc<button class="btn btn-delete vertical-center">삭제</button></li>
+								</ul> -->
+								</div>
+								<div class="border border-dark mb-2 p-3 overflow-y-auto"
+									style="max-height: 128px">
+									<!-- <p class="align-center">취업을 진행하기 위해<br>‘이력서’, ‘경력증명서’, ‘포트폴리오’ 를 등록해주세요.<br>
+									<small class="text-muted">1개 파일 첨부 필수, 최대 5개까지, 개당 50Mb 까지, exe 파일 제외</small>
+								</p>  -->
+									<ul>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+									</ul>
+								</div>
+								<div class="file-cus">
+									<input type="file" id="file" multiple>
+									<label class="btn btn-outline-light" for="file">파일선택</label>
+								</div>
+							</div>
+							<div class="border p-3 w-100">
+								<h6 class="mb-2">개인정보 수집 및 이용 동의</h6>
+								<div>
+									* 본 이용 약관은 서비스 이용자에게 공시함으로써 효력이 발생하며, 영업상 중요 사유가 있을 시 변경 할 수
+									있다.<br><br>
+
+									1. 관리자에서 입력한 약관 내용이 노출됩니다<br><br>
+								</div>
+								<p class="txt-primary mb-1">위 내용에 대하여 읽어보았으며 동의합니다.</p>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="agree">
+									<label class="form-check-label" for="agree">동의합니다.</label>
+								</div>
+							</div>
+						</div>
+					</div><!-- // modal-body -->
+					<div class="modal-footer">
+						<div class="d-flex justify-content-between w-100">
+							<div class="d-flex gap-1">
+								<a href="#" class="btn btn-outline-primary">취소</a>
+							</div>
+							<div class="d-flex gap-1">
+								<a href="#" class="btn btn-point">신청</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="./assets/js/jquery-1.12.4.min.js"></script>
+		<script src="./assets/js/plugins.js"></script>
+		<script src="./assets/js/custom.js"></script>
+
+		<script>
+	$(window).load(function(){
+		$('#pageModal1').modal('show');
+	});
+	</script>
+
+	</body>
+</html>

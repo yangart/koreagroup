@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg"
+	data-preloader="disable">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>수강생 포털</title>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta property="og:title" content="수강생 포털">
+		<meta property="og:description" content="수강생 포털">
+		<meta name="description" content="수강생 포털">
+		<script src="./assets/js/layout.js"></script>
+		<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+			type="text/css" />
+		<link href="./assets/css/style.student.css" rel="stylesheet"
+			type="text/css" />
+	</head>
+
+	<body>
+		<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog"
+			aria-hidden="false">
+			<div class="modal-dialog modal-md modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">취업관리 상세</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"
+							id="close-modal"></button>
+					</div><!-- // modal-header -->
+					<div class="modal-body">
+						<div class="d-flex flex-column gap-4">
+							<div class="w-100">
+								<div class="border border-dark mb-2 p-3 overflow-y-auto"
+									style="max-height: 128px">
+									<!-- <p class="align-center">취업을 진행하기 위해<br>‘이력서’, ‘경력증명서’, ‘포트폴리오’ 를 등록해주세요.<br>
+									<small class="text-muted">1개 파일 첨부 필수, 최대 5개까지, 개당 50Mb 까지, exe 파일 제외</small>
+								</p>  -->
+									<ul>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+										<li>원서에서등록한 파일.doc<button
+												class="btn btn-delete vertical-center">삭제</button></li>
+									</ul>
+								</div>
+								<div class="d-flex justify-content-between">
+									<div class="file-cus">
+										<input type="file" id="file" multiple>
+										<label class="btn btn-outline-light" for="file">파일선택</label>
+									</div>
+									<button type="submit" class="btn btn-point">저장</button>
+								</div>
+							</div>
+							<div class="border p-3 w-100">
+								<ul class="info-list">
+									<li>
+										<cite>진행상태</cite>
+										<div class="txt-area">접수</div>
+									</li>
+									<li>
+										<cite>신청일시</cite>
+										<div class="txt-area">YYYY-MM-DD hh:mm</div>
+									</li>
+									<li>
+										<cite>담당자</cite>
+										<div class="txt-area">김담당</div>
+									</li>
+								</ul>
+							</div>
+							<div class="w-100">
+								<h6 class="mb-2">기업매칭 <small>(총2건)</small></h6>
+								<ul class="box-list col2 gap-2">
+									<li>
+										<div class="box-header">
+											<div class="box-tit">코리아교육그룹</div>
+										</div>
+										<div class="box-body">
+											<ul class="info-list">
+												<li>
+													<cite>근무형태</cite>
+													<div class="txt-area"> 정규직</div>
+												</li>
+												<li>
+													<cite>채용기간</cite>
+													<div class="txt-area">YYYY-MM-DD ~ YYYY-MM-DD</div>
+												</li>
+												<li>
+													<cite>경력</cite>
+													<div class="txt-area"> 신입/경력</div>
+												</li>
+												<li>
+													<cite>학력</cite>
+													<div class="txt-area">대졸이상</div>
+												</li>
+												<li>
+													<cite>근무지</cite>
+													<div class="txt-area">서울 강남구</div>
+												</li>
+												<li>
+													<cite>급여</cite>
+													<div class="txt-area">4,500 만원</div>
+												</li>
+												<li>
+													<cite>업무내용</cite>
+													<div class="txt-area">프로그래밍 개발 (.NET) 으로 길면 줄바꿈되서 모두 노출되는것임</div>
+												</li>
+												<li>
+													<cite>담당자</cite>
+													<div class="txt-area">김채용</div>
+												</li>
+												<li>
+													<cite>연락처</cite>
+													<div class="txt-area"> 010-1234-5678</div>
+												</li>
+											</ul>
+										</div>
+										<div class="box-footer">
+											<button type="button" class="btn btn-outline-active">면접거절</button>
+											<button type="button" class="btn btn-point">면접진행</button>
+										</div>
+									</li>
+									<li>
+										<div class="box-header">
+											<div class="box-tit">코리아교육그룹</div>
+										</div>
+										<div class="box-body">
+											<ul class="info-list">
+												<li>
+													<cite>근무형태</cite>
+													<div class="txt-area"> 정규직</div>
+												</li>
+												<li>
+													<cite>채용기간</cite>
+													<div class="txt-area">YYYY-MM-DD ~ YYYY-MM-DD</div>
+												</li>
+												<li>
+													<cite>경력</cite>
+													<div class="txt-area"> 신입/경력</div>
+												</li>
+												<li>
+													<cite>학력</cite>
+													<div class="txt-area">대졸이상</div>
+												</li>
+												<li>
+													<cite>근무지</cite>
+													<div class="txt-area">서울 강남구</div>
+												</li>
+												<li>
+													<cite>급여</cite>
+													<div class="txt-area">4,500 만원</div>
+												</li>
+												<li>
+													<cite>업무내용</cite>
+													<div class="txt-area">프로그래밍 개발 (.NET) 으로 길면 줄바꿈되서 모두 노출되는것임</div>
+												</li>
+												<li>
+													<cite>담당자</cite>
+													<div class="txt-area">김채용</div>
+												</li>
+												<li>
+													<cite>연락처</cite>
+													<div class="txt-area"> 010-1234-5678</div>
+												</li>
+											</ul>
+										</div>
+										<!-- <div class="box-footer"></div> -->
+									</li>
+									<li>
+										<div class="box-header">
+											<div class="box-tit">코리아교육그룹</div>
+										</div>
+										<div class="box-body">
+											<ul class="info-list">
+												<li>
+													<cite>근무형태</cite>
+													<div class="txt-area"> 정규직</div>
+												</li>
+												<li>
+													<cite>채용기간</cite>
+													<div class="txt-area">YYYY-MM-DD ~ YYYY-MM-DD</div>
+												</li>
+												<li>
+													<cite>경력</cite>
+													<div class="txt-area"> 신입/경력</div>
+												</li>
+												<li>
+													<cite>학력</cite>
+													<div class="txt-area">대졸이상</div>
+												</li>
+												<li>
+													<cite>근무지</cite>
+													<div class="txt-area">서울 강남구</div>
+												</li>
+												<li>
+													<cite>급여</cite>
+													<div class="txt-area">4,500 만원</div>
+												</li>
+												<li>
+													<cite>업무내용</cite>
+													<div class="txt-area">프로그래밍 개발 (.NET) 으로 길면 줄바꿈되서 모두 노출되는것임</div>
+												</li>
+												<li>
+													<cite>담당자</cite>
+													<div class="txt-area">김채용</div>
+												</li>
+												<li>
+													<cite>연락처</cite>
+													<div class="txt-area"> 010-1234-5678</div>
+												</li>
+											</ul>
+										</div>
+										<div class="box-footer">
+											<p><strong>면접거절</strong></p>
+										</div>
+									</li>
+									<li>
+										<div class="box-header">
+											<div class="box-tit">코리아교육그룹</div>
+										</div>
+										<div class="box-body">
+											<ul class="info-list">
+												<li>
+													<cite>근무형태</cite>
+													<div class="txt-area"> 정규직</div>
+												</li>
+												<li>
+													<cite>채용기간</cite>
+													<div class="txt-area">YYYY-MM-DD ~ YYYY-MM-DD</div>
+												</li>
+												<li>
+													<cite>경력</cite>
+													<div class="txt-area"> 신입/경력</div>
+												</li>
+												<li>
+													<cite>학력</cite>
+													<div class="txt-area">대졸이상</div>
+												</li>
+												<li>
+													<cite>근무지</cite>
+													<div class="txt-area">서울 강남구</div>
+												</li>
+												<li>
+													<cite>급여</cite>
+													<div class="txt-area">4,500 만원</div>
+												</li>
+												<li>
+													<cite>업무내용</cite>
+													<div class="txt-area">프로그래밍 개발 (.NET) 으로 길면 줄바꿈되서 모두 노출되는것임</div>
+												</li>
+												<li>
+													<cite>담당자</cite>
+													<div class="txt-area">김채용</div>
+												</li>
+												<li>
+													<cite>연락처</cite>
+													<div class="txt-area"> 010-1234-5678</div>
+												</li>
+											</ul>
+										</div>
+										<div class="box-footer">
+											<p><strong>면접진행</strong></p>
+										</div>
+									</li>
+									<li>
+										<div class="box-header">
+											<div class="box-tit">코리아교육그룹</div>
+										</div>
+										<div class="box-body">
+											<ul class="info-list">
+												<li>
+													<cite>근무형태</cite>
+													<div class="txt-area"> 정규직</div>
+												</li>
+												<li>
+													<cite>채용기간</cite>
+													<div class="txt-area">YYYY-MM-DD ~ YYYY-MM-DD</div>
+												</li>
+												<li>
+													<cite>경력</cite>
+													<div class="txt-area"> 신입/경력</div>
+												</li>
+												<li>
+													<cite>학력</cite>
+													<div class="txt-area">대졸이상</div>
+												</li>
+												<li>
+													<cite>근무지</cite>
+													<div class="txt-area">서울 강남구</div>
+												</li>
+												<li>
+													<cite>급여</cite>
+													<div class="txt-area">4,500 만원</div>
+												</li>
+												<li>
+													<cite>업무내용</cite>
+													<div class="txt-area">프로그래밍 개발 (.NET) 으로 길면 줄바꿈되서 모두 노출되는것임</div>
+												</li>
+												<li>
+													<cite>담당자</cite>
+													<div class="txt-area">김채용</div>
+												</li>
+												<li>
+													<cite>연락처</cite>
+													<div class="txt-area"> 010-1234-5678</div>
+												</li>
+											</ul>
+										</div>
+										<div class="box-footer">
+											<p><strong class="txt-primary">합격</strong></p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div><!-- // modal-body -->
+					<div class="modal-footer">
+						<div class="d-flex justify-content-between w-100">
+							<div class="d-flex gap-1">
+								<a href="#" class="btn btn-outline-primary">닫기</a>
+								<a href="#" class="btn btn-outline-primary">취업신청취소</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="./assets/js/jquery-1.12.4.min.js"></script>
+		<script src="./assets/js/plugins.js"></script>
+		<script src="./assets/js/custom.js"></script>
+
+		<script>
+	$(window).load(function(){
+		$('#pageModal1').modal('show');
+	});
+	</script
+</body>
+</html>

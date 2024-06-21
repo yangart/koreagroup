@@ -2,6 +2,7 @@
     display: flex;
     min-height: 100vh;
     align-items: center;
+    padding:20px;
     .wrap-sm {
         display: flex;
         flex-direction: column;
@@ -81,5 +82,16 @@
     input[type=text],
     input[type=password] {
         min-height: 54px;
+    }
+}
+
+@media (max-width:768px) {
+    .member-area {
+        background-color: #fff;
+    }
+    .member-card {
+        box-shadow: none;
+        border:none;
+        padding:0;
     }
 }

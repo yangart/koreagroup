@@ -6876,6 +6876,7 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px;
 }
 .member-area .wrap-sm {
   display: -webkit-box;
@@ -6986,6 +6987,31 @@ button:focus {
   min-height: 54px;
 }
 
+@media (max-width: 768px) {
+  .member-area {
+    background-color: #fff;
+  }
+  .member-card {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+}
+/*layout*/
+.nav.archive-nav + .nav.card-tabs {
+  margin-top: 20px;
+}
+
+.nav {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.nav a {
+  white-space: nowrap;
+}
+
 /* 설문지 */
 .survey-area,
 .survey-list {
@@ -7005,6 +7031,24 @@ button:focus {
 }
 
 /* component */
+.box-list.col2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.btn-delete {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../img/modal-survey-ico@2x.png) no-repeat 50% 50%/16px auto;
+  text-indent: -9999px;
+  font-size: 0;
+  vertical-align: middle;
+}
+
 .border-box {
   border: 1px solid var(--body-color);
   margin-bottom: var(--bs-gutter-y);
@@ -7027,7 +7071,19 @@ button:focus {
   content: "-";
 }
 
-/*total */
+.file-cus input[type=file] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+table .bg th,
+table .bg td {
+  background-color: #F3FEFF;
+}
+
+/*pay-total */
 .pay-total-list {
   margin-top: 20px;
   padding: 20px;
@@ -7063,6 +7119,490 @@ button:focus {
   font-size: 18px;
   background-color: var(--border-color-light);
   padding: 20px;
+}
+
+/*커뮤니티*/
+.event-list,
+.event-v-list {
+  display: grid;
+  gap: 24px;
+}
+.event-list li,
+.event-v-list li {
+  overflow: hidden;
+}
+.event-list li.disabled a,
+.event-v-list li.disabled a {
+  pointer-events: none;
+}
+.event-list li.disabled .img-area,
+.event-v-list li.disabled .img-area {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.event-list li.disabled .img-area::before,
+.event-v-list li.disabled .img-area::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.event-list a,
+.event-v-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.event-list a:hover .img-area img,
+.event-v-list a:hover .img-area img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.event-list .img-area,
+.event-v-list .img-area {
+  aspect-ratio: 4/1;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.event-list .img-area img,
+.event-v-list .img-area img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.event-list .txt-area,
+.event-v-list .txt-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.event-list .txt-area small,
+.event-v-list .txt-area small {
+  font-size: 12px;
+}
+.event-list .txt-area p,
+.event-v-list .txt-area p {
+  font-weight: 500;
+}
+
+.event-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+.event-list .img-area {
+  aspect-ratio: 4/1;
+}
+
+.event-v-list {
+  grid-template-columns: repeat(6, 1fr);
+}
+.event-v-list .img-area {
+  aspect-ratio: 1/1.47;
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+.job-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  height: 100%;
+  border: 1px solid var(--border-color-light);
+  padding: 40px 24px;
+  border-radius: var(--border-radius);
+}
+.job-list .img-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 12/3;
+}
+.job-list .img-area img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+.job-list .txt-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+.job-list .txt-area > * {
+  font-style: normal;
+}
+.job-list .txt-area em {
+  color: var(--first-color);
+  font-weight: 700;
+}
+.job-list .txt-area cite {
+  font-size: 18px;
+}
+
+.job-view {
+  margin: 0 auto;
+  max-width: 480px;
+  text-align: center;
+}
+.job-view .job-view-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.job-view .company-logo {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 240px;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 12/3;
+}
+.job-view .company-logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+.job-view .job-view-info-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--border-color-light);
+  border-bottom: 1px solid var(--border-color-light);
+  padding: 16px;
+  gap: 8px;
+}
+.job-view .job-view-info-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+.job-view .job-view-info-list cite {
+  font-style: normal;
+  font-weight: 700;
+  width: 80px;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+.job-view .job-view-info-list .txt-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.job-view .job-view-txt {
+  text-align: left;
+}
+.job-view .job-view-etc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  border-top: 1px solid var(--border-color-light);
+  padding-top: 24px;
+}
+.job-view .job-view-etc ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  gap: 4px 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.job-view .job-view-etc .etc-logo {
+  margin-top: 8px;
+  height: 48px;
+}
+.job-view .job-view-etc .etc-logo img {
+  height: 100%;
+}
+
+/* 학원정보 */
+.label-room {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: 1px solid var(--border-color);
+  padding: 4px;
+  font-size: 12px;
+}
+
+.table-room-area {
+  overflow: auto;
+  position: relative;
+  overflow: auto;
+  border-left: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+}
+.table-room-area table {
+  border-collapse: separate;
+}
+.table-room-area table th,
+.table-room-area table td {
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.table-room-area table td {
+  background-color: var(--btn-deep-color);
+}
+.table-room-area table td.blank {
+  background-color: #fff;
+}
+.table-room-area thead {
+  position: sticky;
+  top: -1px;
+  background-color: #F3FEFF;
+  z-index: 1;
+}
+.table-room-area thead th {
+  border-top: none;
+}
+.table-room-area tbody {
+  position: relative;
+}
+.table-room-area tbody th {
+  position: sticky;
+  left: 0;
+  border-left: none;
+}
+.table-room-area tbody th,
+.table-room-area .sticky-col {
+  position: sticky;
+  left: -1px;
+  background-color: #F3FEFF;
+  border-left: none;
+}
+
+/* 교육과정 */
+.curriculum {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+.curriculum .TxtBlueBold {
+  color: #0070f0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.curriculum .page-header {
+  display: block;
+  position: relative;
+  margin: 20px 0 40px;
+}
+.curriculum .page-header h3 {
+  font-size: 32px;
+  font-weight: 200;
+  margin-bottom: 12px;
+}
+.curriculum .page-header h3 span {
+  display: block;
+  font-weight: 900;
+}
+.curriculum .page-header h3 span em {
+  font-weight: 300;
+  font-style: normal;
+}
+.curriculum .curriculum-wr {
+  display: block;
+  width: 100%;
+  padding: 80px;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #03080b;
+  margin-bottom: 60px;
+}
+.curriculum .curriculum-cont {
+  z-index: 1;
+}
+.curriculum .curriculum-wr:after {
+  width: 100%;
+  height: 100%;
+  background: url("https://koreaitacademy.com/2023/img/curriculum-bg.jpg") 50% no-repeat;
+  background-size: cover;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.7;
+}
+.curriculum .curriculum-cont-tit {
+  margin-bottom: 40px;
+}
+.curriculum .curriculum-cont-tit h3 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.curriculum .curriculum-cont-tit span {
+  font-size: 17px;
+  width: 68%;
+  display: block;
+  font-weight: 200;
+  line-height: 1.6;
+}
+.curriculum .count-Texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.curriculum .count-Texts > div {
+  width: 33.333333%;
+  text-align: center;
+}
+.curriculum .count-Texts > div h3 {
+  font-size: 80px;
+}
+.curriculum .curriculum-list + div {
+  margin-top: 60px;
+}
+.curriculum .curriculum-list {
+  display: block;
+  width: 100%;
+}
+.curriculum .curriculum-list .dep03 {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.curriculum .curriculum-list .dep03 li dl dd {
+  display: none;
+}
+.curriculum .curri-4step ul:after, .curriculum .curri-box-txt dl:after, .curriculum .lnb-ul:after, .curriculum .curriculum-list .dep03:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.curriculum .curriculum-list .dep03 li {
+  margin-top: 0;
+}
+.curriculum .curriculum-list .dep03 li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.17s linear;
+  transition: 0.17s linear;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.curriculum .curriculum-list .dep03 li a:after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  background: url("https://koreaitacademy.com/2023/img/icon-ar-right-bk.png") left center no-repeat;
+  background-size: cover;
+  margin-right: 20px;
+}
+.curriculum .curriculum-list .dep03 li a:hover {
+  text-decoration: none;
+  background: #0070f0;
+  color: #fff !important;
+}
+.curriculum .curriculum-list .dep03 li a:hover:after {
+  background: url("https://koreaitacademy.com/2023/img/icon-ar-right-wh.png") left center no-repeat;
+  background-size: cover;
 }
 
 .csIntro {
