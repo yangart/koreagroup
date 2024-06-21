@@ -15,8 +15,8 @@
   --deep-color-h:#000000;
   --first-color:#386a1f;
   --first-color-h:#205106;
-  --first-color-alpha:#386a1f11;
-  --first-color-alpha-h:#386a1f33;
+  --first-color-alpha:#F2F5F0;
+  --first-color-alpha-h:#D7E1D2;
   --second-color:#e69a17;
   --third-color:#705d56;
   --fourth-color:#32577a;
@@ -8602,8 +8602,8 @@ a.list-more {
   margin-bottom: 1rem;
 }
 
-.card:has(.table-fixed),
-.card-body:has(.table-fixed) {
+.card:has(.table-sticky),
+.card-body:has(.table-sticky) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8613,12 +8613,12 @@ a.list-more {
           flex-direction: column;
 }
 
-.card-body:has(.table-fixed) {
+.card-body:has(.table-sticky) {
   height: 100%;
   overflow: hidden;
 }
 
-.table-fixed {
+.table-sticky {
   position: relative;
   height: 100%;
   overflow-y: auto;
@@ -8627,28 +8627,32 @@ a.list-more {
           flex: 1;
   border-bottom: 1px solid #efefef;
 }
-.table-fixed::-webkit-scrollbar {
+.table-sticky::-webkit-scrollbar {
   position: absolute;
   margin-top: 37px;
   right: 0;
   width: 8px;
 }
-.table-fixed::-webkit-scrollbar-track {
+.table-sticky::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 4px;
 }
-.table-fixed table {
+.table-sticky table {
   border-collapse: separate;
   border-spacing: 0;
 }
-.table-fixed table th ~ th,
-.table-fixed table td ~ td {
+.table-sticky table th ~ th,
+.table-sticky table td ~ td {
   border-left: 0;
 }
-.table-fixed table td {
+.table-sticky table td {
   border-top: 0;
 }
-.table-fixed thead {
+.table-sticky table tbody th,
+.table-sticky table tbody td {
+  border-top: 0;
+}
+.table-sticky thead {
   position: sticky;
   top: 0px;
   background: #fff;
@@ -10144,6 +10148,33 @@ select:not(.form-select) {
 }
 
 /* table */
+.table-fixed {
+  table-layout: fixed;
+}
+
+.sot-left {
+  position: sticky;
+  z-index: 3;
+}
+
+.table-sticky {
+  overflow-x: auto;
+  position: relative;
+}
+.table-sticky table {
+  border-collapse: separate !important;
+}
+.table-sticky thead {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+.table-card.border-line th,
+.table-card.border-line td {
+  border: 1px solid var(--bs-gray-200);
+}
+
 .table-scroll-y {
   position: relative;
   overflow-y: auto;

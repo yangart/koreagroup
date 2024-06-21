@@ -2753,17 +2753,17 @@ a.list-more {
 //   height: 40vh;
 // }
 
-.card:has(.table-fixed),
-.card-body:has(.table-fixed) {
+.card:has(.table-sticky),
+.card-body:has(.table-sticky) {
   display:flex;
   flex-direction: column;
 }
-.card-body:has(.table-fixed) {
+.card-body:has(.table-sticky) {
   height:100%;
   overflow:hidden;
 }
 
-.table-fixed {
+.table-sticky {
   position:relative;
   height:100%;
   overflow-y: auto;
@@ -2783,8 +2783,14 @@ a.list-more {
     border-collapse: separate;
 	  border-spacing: 0;
     th ~ th,
-    td ~ td { border-left:0; }
+    td ~ td { border-left:0;  }
     td { border-top:0; }
+    tbody {
+      th,
+      td {
+        border-top:0;
+      }
+    }
   }
   thead {
     position:sticky;
