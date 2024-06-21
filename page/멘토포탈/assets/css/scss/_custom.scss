@@ -1316,3 +1316,125 @@ select:not(.form-select) {
 
 .lnb-scroll-y {position: relative;overflow-y: auto;width: 100%;z-index: 0;}
 .title-group{height:52px;}
+
+/* 영수증 */
+.box-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap:24px;
+  &.col1 {
+      grid-template-columns: auto;
+      gap:16px;
+  }
+  > li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+      height:100%;
+      overflow: hidden;
+  }
+  .box-header,
+  .box-body,
+  .box-footer {
+      display: block;
+      padding:16px;
+  }
+  .box-header {
+      flex:none;
+      border-bottom: 1px solid var(--border-color);
+      small {
+          font-size:12px;
+          color:#777;
+      }
+      &:has(.lnk-full) {
+          padding-right: 56px;
+          &::after {
+              content: "→";
+              position: absolute;
+              right:16px;
+              top:50%;
+              width: 16px;
+              height: 16px;
+              font-size:16px;
+              transform: translateY(-50%);
+          }
+      }
+  }
+  .box-body {
+      flex:1;
+  }
+  .box-footer {
+      flex:none;
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid var(--border-color);
+      gap:8px;
+      background-color: var(--bs-gray-200);
+      text-align: center;
+      > * {
+          flex:1;
+      }
+  }
+  .box-tit {
+      font-size: 16px;
+      font-weight: 600;
+  }
+}
+.lnk-full {
+  position: absolute;
+  inset:0;
+  font-size:0;
+  text-indent: -9999px;
+  z-index: 1;
+  cursor: pointer;
+  @at-root *:has(.lnk-full) {
+      position: relative;
+  }
+}
+/*pay-total */
+.pay-total-list {
+  margin-top:20px;
+  padding:20px;
+  border-top:2px solid var(--body-color);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap:4px;
+  li {
+      display: flex;
+      gap:8px;
+      justify-content: flex-end;
+  }
+}
+.pay-total {
+  display: flex;
+  gap:16px;
+  justify-content: flex-end;
+  font-size:18px;
+  background-color: var(--bs-gray-200);
+  padding:20px;
+}
+/*table-info*/
+.table-info {
+  table-layout: fixed;
+  border-right:  1px solid var(--border-color);
+  font-size:14px;
+  th {
+    background-color:var(--bs-gray-200);
+    color:#777;
+    font-weight: 500;
+    color:#333;
+  }
+  th,
+  td {
+      padding:8px 16px;
+      border-bottom: 1px solid var(--border-color);
+      border-top:1px solid var(--border-color);
+      text-align: center;
+      text-align: center;
+      border-left: 1px solid var(--border-color);
+      padding:8px;
+  }
+}
