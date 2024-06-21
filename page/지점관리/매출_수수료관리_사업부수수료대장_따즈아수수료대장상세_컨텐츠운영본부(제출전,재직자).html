@@ -826,7 +826,7 @@
 							</ul>
 							
 							<h5 class="fs-15px mt-3 mb-2">멘토별 수수료 상세</h5>
-							<div class="table-sticky" style="max-height: 345px;">
+							<div class="table-sticky" style="max-height: 345px;" data-sot-left="8">
 								<table class="table-card border-line">
 									<thead>
 										<tr>
@@ -876,7 +876,7 @@
 											<td>컴퓨터</td>
 											<td>컴퓨터강남</td>
 											<td>1-1팀</td>
-											<td>사업-팀장</td>
+											<td>사업-선임멘트</td>
 											<td>문의준</td>
 											<td class="text-end">20,000,000</td>
 											<td class="text-end">410,000</td>
@@ -1019,10 +1019,11 @@
 
 	</script>
 
+	<!-- 테이블 고정 -->
+	<script src="./assets/libs/StickyOnTable.js"></script>
 	<script>
-		$(function () {
-			$('#pageModalB').modal('show');
-			$('#pageModal17').modal('show');
+		document.addEventListener('DOMContentLoaded', function () {
+			StickyOnTable.apply(document.querySelector(".table-sticky"));
 		});
 	</script>
 </body>
