@@ -1174,10 +1174,10 @@ select:not(.form-select) {
   }
   th {
     font-weight: 600;
-    width: 78px;
     font-size: 14px;
     font-weight: 600;
     color: #aaa;
+    height: 56px;
   }
   thead {
     th {
@@ -1188,12 +1188,6 @@ select:not(.form-select) {
   }
   td {
     text-align: left;
-  }
-}
-.bg-table-row {
-  td,
-  th {
-    background-color: var(--bs-gray-100);
   }
 }
 

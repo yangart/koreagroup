@@ -626,41 +626,50 @@ select {
   vertical-align: middle;
 }
 
-.bg-primary {
+.bg-primary,
+.text-bg-primary {
   background-color: var(--first-color);
   color: #fff;
 }
 
-.bg-secondary {
+.bg-secondary,
+.text-bg-secondary {
   background-color: var(--second-color);
 }
 
-.bg-warning {
+.bg-warning,
+.text-bg-warning {
   background-color: var(--color-ye);
 }
 
-.bg-danger {
+.bg-danger,
+.text-bg-danger {
   background-color: var(--color-rd);
 }
 
-.bg-light {
+.bg-light,
+.text-bg-light {
   background-color: var(--color-pk);
 }
 
-.bg-success {
+.bg-success,
+.text-bg-success {
   background-color: var(--color-nv);
 }
 
-.btn-link {
+.btn-link,
+.text-btn-link {
   text-decoration: underline;
   color: #076aff;
 }
 
-.btn-underline {
+.btn-underline,
+.text-btn-underline {
   text-decoration: underline !important;
   color: inherit;
 }
-.btn-underline:hover {
+.btn-underline:hover,
+.text-btn-underline:hover {
   color: inherit;
 }
 
@@ -713,15 +722,18 @@ fieldset:disabled .btn {
   /* border-color:transparent */
 }
 
-.text-primary {
+.text-primary,
+.txt-primary {
   color: var(--first-color) !important;
 }
 
-.text-point {
+.text-point,
+.txt-point {
   color: var(--btn-point-color);
 }
 
-.text-req {
+.text-req,
+.txt-req {
   color: var(--color-rd);
 }
 
@@ -1048,12 +1060,6 @@ table + .form-btn {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .flex-between {
@@ -10211,10 +10217,10 @@ select:not(.form-select) {
 }
 .table-write th {
   font-weight: 600;
-  width: 78px;
   font-size: 14px;
   font-weight: 600;
   color: #aaa;
+  height: 56px;
 }
 .table-write thead th {
   border-top: 1px solid var(--bs-gray-200);
@@ -10223,11 +10229,6 @@ select:not(.form-select) {
 }
 .table-write td {
   text-align: left;
-}
-
-.bg-table-row td,
-.bg-table-row th {
-  background-color: var(--bs-gray-100);
 }
 
 /* component */
