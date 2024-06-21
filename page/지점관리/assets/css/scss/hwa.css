@@ -2,7 +2,7 @@
 .form-list{padding-left:20px;position: relative;}
 .form-list:before{content: '';position:absolute;width:10px;height:10px;left:0;top:10px;border:1px solid var(--bs-gray-200) ;border-radius:100%;}
 .modal-survey-list.overflow-y-scroll {padding-right: 5px;max-height: calc((100vh - 60vh));}
-.lnb-scroll-y {position: relative;overflow-y: auto;width: 100%;z-index: 0;}
+.lnb-scroll-y, .box-scroll-y {position: relative;overflow-y: auto;width: 100%;z-index: 0;}
 .title-group{height:52px;}
 .table td i.file{display: inline-block;vertical-align: middle;width: 16px;height: 16px;background-repeat: no-repeat;background-position: 50% 50%;background-size: 16px 16px;margin-left:2px;background-image:url(../../img/nav-menu-ico11@2x.png);}
 .table td i.new{display: inline-block;vertical-align: middle;width:14px;height:14px;}
