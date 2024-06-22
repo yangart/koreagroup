@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg"
+	data-preloader="disable">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>멘토포털</title>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta property="og:title" content="멘토포털">
+		<meta property="og:description" content="멘토포털">
+		<meta name="description" content="멘토포털">
+		<script src="./assets/js/layout.js"></script>
+		<link href="./assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+			type="text/css" />
+		<link href="./assets/css/style.mentor.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<!-- pageModal1 -->
+		<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog"
+			aria-hidden="false">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">재직증명서</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close" id="close-modal"></button>
+					</div><!-- // modal-header -->
+					<div class="modal-body">
+	
+						<div class="mbody-forms">
+						
+							<div class="border border-dark border-3 p-2">
+								<div class="border border-1 py-5">
+									<div class="row justify-content-center">
+										<div class="col-11">
+											<div class="h2 fw-bold text-center mb-5">재 직 증 명 서</div>
+	
+											<table class="table table-card">
+												<colgroup>
+													<col style="width:12%">
+													<col style="width:17%">
+													<col style="width:28%">
+													<col style="width:17%">
+													<col style="width:26%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th rowspan="2">인적<br />사항</th>
+														<th>성명</th>
+														<td>홍길동</td>
+														<th>주민등록번호</th>
+														<td>000000-0******</td>
+													</tr>
+													<tr>
+														<th>주소</th>
+														<td colspan="3">-</td>
+													</tr>
+													<tr>
+														<th rowspan="6">경력<br />사항</th>
+														<th>법인명</th>
+														<td colspan="3">주식회사 코리아교육그룹</td>
+													</tr>
+													<tr>
+														<th>사업자 번호</th>
+														<td colspan="3">214-87-88737</td>
+													</tr>
+													<tr>
+														<th>주소</th>
+														<td colspan="3">서울특별시 강남구 강남대로 286 (3, 4층)</td>
+													</tr>
+													<tr>
+														<th>부서</th>
+														<td>-</td>
+														<th>직위</th>
+														<td>사원</td>
+													</tr>
+													<tr>
+														<th>재직기간</th>
+														<td colspan="3">년 월 일 ~ 현재까지</td>
+													</tr>
+													<tr>
+														<th>용도</th>
+														<td colspan="3">은행제출용</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div><!-- // row -->
+									<div class="row justify-content-center">
+										<div class="col-9">
+											<div class="mbody-clause-agree">
+												<div class="mbody-clause-title">위 대상자의 재직 사항이 상기와 같음을 증명합니다.</div>
+	
+												<div class="mbody-clause-sign flex-column mt-5 pb-5">
+													<div class="title"><b>2024년 01월 31일</b></div>
+												</div><!-- // mbody-clause-sign -->
+	
+												<div class="position-relative mbody-clause-title">
+													서울특별시 강남구 강남대로 286 (3, 4층)<br />
+													㈜코리아교육그룹<br />
+													대표이사 채 묵 호
+													<p class="position-absolute end-0 top-0" style="">
+														<span><img src="./assets/img/stamp03-sample.png" alt=""></span>
+													</p>												
+												</div>
+											</div>
+										</div>
+									</div><!-- // row -->
+								</div>
+							</div>
+	
+						</div><!-- // mbody-forms -->
+	
+					</div><!-- // modal-body -->
+					<div class="modal-footer">
+						<div class="d-flex justify-content-between w-100">
+							<div class="d-flex gap-1">
+								<a href="#" class="btn btn-outline-primary">닫기</a>
+							</div>
+							<div class="d-flex gap-1">
+								<a href="#" class="btn btn-point">인쇄</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+		<script src="./assets/libs/feather-icons/feather.min.js"></script>
+		<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
+		<script src="./assets/js/jquery-1.12.4.min.js"></script>
+		<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.min.js"></script>
+		<script src="./assets/libs/bootstrap/js/bootstrap-datepicker.ko.js"></script>
+		<script
+			src="./assets/js/includeHtml.js"></script><!-- 퍼블리싱 반복요소 인클루드를 위한 스크립트. 개발시엔  -->
+
+		<script src="./assets/js/plugins.js"></script>
+		<script src="./assets/js/common.js"></script>
+		<script src="./assets/js/custom.js"></script>
+
+		<script>
+		$(window).load(function(){
+			$('#pageModal1').modal('show');
+		});
+	</script>
+	</body>
+</html>
