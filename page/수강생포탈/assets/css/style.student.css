@@ -158,6 +158,10 @@ label {
   margin-bottom: 0.5rem;
 }
 
+.list-group label {
+  margin-bottom: 0;
+}
+
 b, strong {
   font-weight: 700;
 }
@@ -2634,6 +2638,7 @@ body {
   -webkit-transform: translate(-2px, -2px);
           transform: translate(-2px, -2px);
   min-width: calc(100% + 4px);
+  font-size: 0;
 }
 .fc-theme-standard .fc-timegrid-col-events {
   margin: 0;
@@ -2755,25 +2760,64 @@ body {
 .fc-theme-standard .material-symbols-rounded {
   color: #ff5033;
   position: absolute;
-  top: -16px;
-  right: 4px;
+  top: -12px;
+  right: 0px;
+  z-index: 9;
 }
 
-.tooltip.tooltip-noti {
-  padding-bottom: 12px;
+.tooltip {
+  padding: 12px 0;
 }
-.tooltip.tooltip-noti .tooltip-inner {
+.tooltip .tooltip-inner {
   background: #fff;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  color: #111;
+  color: #333;
+  font-family: "Pretendard", sans-serif;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1.43;
+  text-align: left;
 }
-.tooltip.tooltip-noti .tooltip-arrow:before {
-  border-top-color: #fff;
+.tooltip .tooltip-arrow:before {
+  border-color: #fff;
 }
-.tooltip.tooltip-noti.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow, .tooltip.tooltip-noti.bs-tooltip-top .tooltip-arrow {
+.tooltip.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow, .tooltip.bs-tooltip-top .tooltip-arrow {
   bottom: 5px;
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow, .tooltip.bs-tooltip-bottom .tooltip-arrow {
+  top: 5px;
+}
+
+.tooltip-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px 0;
+}
+.tooltip-box > .book-img {
+  padding-right: 2px;
+}
+.tooltip-box > .book-img + .book-img {
+  padding-right: 0;
+  padding-left: 2px;
+}
+.tooltip-box > .book-img strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.43;
+  font-weight: normal;
+  text-align: center;
+  color: #333;
+}
+.tooltip-box > .book-img img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 120px;
 }
 
 .fc-daygrid-event .fc-event-time {
@@ -2842,6 +2886,86 @@ body {
 .fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.popover {
+  border-color: var(--regit);
+}
+.popover .popover-header {
+  background-color: var(--regit-bg);
+  padding: calc(var(--bs-gutter-y) / 2) calc(var(--bs-gutter-x) / 2);
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.popover .popover-header .material-symbols-rounded {
+  cursor: pointer;
+  margin-left: 4px;
+}
+.popover .popover-header:empty {
+  display: none;
+}
+.popover .popover-header .popover-close {
+  font-size: 0;
+}
+.popover.bs-popover-auto[data-popper-placement^=top] > .popover-arrow::before, .popover.bs-popover-top > .popover-arrow::before {
+  border-top-color: var(--regit);
+}
+.popover.bs-popover-auto[data-popper-placement^=bottom] > .popover-arrow::before, .popover.bs-popover-bottom > .popover-arrow::before {
+  border-bottom-color: var(--regit);
+}
+.popover.bs-popover-auto[data-popper-placement^=left] > .popover-arrow::before, .popover.bs-popover-left > .popover-arrow::before {
+  border-left-color: var(--regit);
+}
+.popover.bs-popover-auto[data-popper-placement^=right] > .popover-arrow::before, .popover.bs-popover-right > .popover-arrow::before {
+  border-right-color: var(--regit);
+}
+.popover .popover-body {
+  padding: calc(var(--bs-gutter-y) / 2) calc(var(--bs-gutter-x) / 2);
+}
+.popover .popover-body .popover-noti-list li {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.3;
+  padding-left: 8px;
+}
+.popover .popover-body .popover-noti-list li:before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  top: calc(0.65em - 1px);
+  left: 0;
+  background: #555;
+}
+.popover .popover-body .popover-noti-list li:only-child:before {
+  content: none;
+}
+.popover .popover-body .popover-noti-list li + li {
+  margin-top: 4px;
+}
+.popover .popover-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: calc(var(--bs-gutter-y) / 2);
+}
+
+.popover-set-board {
+  margin-left: -12px !important;
 }
 
 /* bootstrap datepicker */
@@ -3915,11 +4039,27 @@ body:not(.modal-open) .modal-footer {
 .card-head.bg-gray {
   background-color: #fafafa;
 }
+.card-head strong {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
 .card-head .title {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
   color: #495057;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .card-head .text {
   margin-top: 6px;
@@ -4116,11 +4256,15 @@ a.list-more {
 .card-subject-column div + .text {
   margin-left: 0;
 }
+.card-subject-column .text,
+.card-subject-column .text-card {
+  width: 100%;
+}
 .card-subject-column .text + .text,
 .card-subject-column .text + .text-card,
 .card-subject-column .text-card + .text,
 .card-subject-column .text-card + .text-card {
-  margin-top: var(--bs-gutter-y);
+  margin-top: calc(var(--bs-gutter-y) / 2);
 }
 .card-subject-column .text li,
 .card-subject-column .text-card li {
@@ -4142,6 +4286,7 @@ a.list-more {
 }
 .card-subject-column .text li cite,
 .card-subject-column .text-card li cite {
+  white-space: nowrap;
   font-style: normal;
   margin-right: 4px;
   color: #777;
@@ -4165,8 +4310,19 @@ a.list-more {
           align-items: center;
   margin-left: 2px;
 }
+.card-subject-column .text li {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .card-subject-column .text li cite {
   margin-right: 10px;
+}
+.card-subject-column .text li b {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-subject-column .text li + li {
   margin-top: 4px;
@@ -4655,7 +4811,7 @@ a.list-more {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: auto;
+  margin-top: calc(var(--bs-gutter-y) / 2);
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -4706,7 +4862,7 @@ a.list-more {
   margin-top: 8px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-height: 160px;
+  max-height: 150px;
   overflow-y: auto;
 }
 .card-attendance dd .day {
@@ -6716,46 +6872,6 @@ button:focus {
   color: #212529;
 }
 
-.tooltip .tooltip-inner {
-  font-family: "Pretendard", sans-serif;
-  border-radius: 6px;
-  padding: 4px 6px;
-  font-size: 12px;
-  line-height: 1.43;
-  text-align: left;
-  color: #fff;
-}
-
-.tooltip-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 8px 0;
-}
-.tooltip-box > .book-img {
-  padding-right: 2px;
-}
-.tooltip-box > .book-img + .book-img {
-  padding-right: 0;
-  padding-left: 2px;
-}
-.tooltip-box > .book-img strong {
-  display: block;
-  margin-top: 12px;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.43;
-  font-weight: normal;
-  text-align: center;
-  color: #fff;
-}
-.tooltip-box > .book-img img {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  height: 120px;
-}
-
 .info-block-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8184,7 +8300,7 @@ table .bg td {
 .dashboard .card-body:has(.col-group-left) .col-group-right {
   width: 40%;
 }
-.dashboard .card-body .col-group-right .fluid-card ~ .fluid-card {
+.dashboard .card-body .col-group-right .board-group ~ .board-group {
   margin-top: 12px;
 }
 .dashboard .card-body .col-group-right h3 {
@@ -8221,6 +8337,10 @@ table .bg td {
 .dashboard .card-body .col-group-right .list-group .list-group-item time {
   font-size: 12px;
   color: #777;
+}
+.dashboard .card-body .col-group-right.class-board-wrap {
+  max-height: 412px;
+  overflow-y: auto;
 }
 
 .card:has(.card-head).class-detail {

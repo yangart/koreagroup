@@ -112,7 +112,7 @@
 					<div class="card class-detail">
 						<div class="card-head bg-gray">
 							<strong>[KDI] 포토샵 따라하기</strong>
-							<button type="button" class="btn-sm txt-success">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
+							<button type="button" class="btn-sm txt-success" id="showSetBoard" data-bs-toggle="popover" title="게시판 설정">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
 						</div><!-- // card-head -->
 
 						<div class="card-body">
@@ -190,8 +190,8 @@
 									</dd>
 								</dl><!-- // card-attendance -->
 							</div>
-							<div class="col-group-right">
-								<div class="fluid-card">
+							<div class="col-group-right class-board-wrap">
+								<div class="board-group">
 									<h3>공지사항</h3>
 									<ul class="list-group">
 										<li class="list-group-item"><a href="javascript:;">An item</a><time>2024.05.06</time></li>
@@ -200,7 +200,7 @@
 										<li class="list-group-item"><a href="javascript:;">A fourth item</a><time>2024.05.06</time></li>
 									</ul>
 								</div>
-								<div class="fluid-card">
+								<div class="board-group">
 									<h3>Q&amp;A</h3>
 									<ul class="list-group">
 										<li class="list-group-item"><a href="javascript:;">An item</a><time>2024.05.06</time></li>
@@ -209,7 +209,7 @@
 										<li class="list-group-item"><a href="javascript:;">A fourth item</a><time>2024.05.06</time></li>
 									  </ul>
 								</div>
-								<div class="fluid-card">
+								<div class="board-group">
 									<h3>자료실</h3>
 									<ul class="list-group">
 										<li class="list-group-item"><a href="javascript:;">An item</a><time>2024.05.06</time></li>
@@ -332,9 +332,6 @@
 									</li>
 								</ul>
 							</div>
-							<div class="r-area">
-								<button type="button" class="btn btn-outline-primary ">문의</button>
-							</div>
 						</div><!-- // card-footer -->
 					</div>
 				</div>
@@ -344,38 +341,59 @@
 
 	</div><!-- // wrapper -->
 
-	<!-- pageModal1 -->
-	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
-		<div class="modal-dialog modal-sm modal-dialog-centered">
+	<!-- modal : 공지사항 상세(자료실 상세 동일) -->
+	<div class="modal fade" id="pageModalNoticeDetail" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
 			<div class="modal-content">
 
 				<div class="modal-header">
-					<h5 class="modal-title">(일반)맥스2</h5>
+					<h5 class="modal-title">공지사항 상세</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
 				</div><!-- // modal-header -->
 
 				<div class="modal-body">
-					<div class="row">
-						<div class="col-12">
-							<label for="" class="form-label">게시판 구분</label>
-							<select id="" class="w-100">
-								<option value="01">선택</option>
-								<option value="02">option 2</option>
-								<option value="03">option 3</option>
-							</select>
+					<div class="table-view">
+						<div class="view-header">
+							<strong class="title">한국 태국, 오늘 축구 2차전 중계 시간…북중미 월드컵 예선 일정 총정리</strong>
+							<div class="fnc-area">
+								<div class="l-area">
+									<span class="name">김기자</span>
+								</div>
+								<div class="r-area">
+									<span class="date">2024.05.06 15:00</span>
+								</div>
+							</div>
 						</div>
-						<div class="col-12">
-							<label for="" class="form-label">제목</label>
-							<input type="text" class="form-control" placeholder="제목을 입력해주세요.">
-							<input type="file" class="form-control" id="">
-						</div>
-						<div class="col-12">
-							<label for="" class="form-label">내용</label>
-							<textarea class="form-control" placeholder="내용을 입력하세요."></textarea>
-						</div>
+						<div class="view-body">
+							2026 FIFA 북중미 월드컵 2차 예선 한국 태국 축구 경기 중계 일정에 관심이 쏠리고 있다. 황선홍 감독이 이끄는 한국 축구대표팀은 태국 '라자망갈라 국립경기장'에서 조별리그 C조 4차전을 26일 치른다.<br><br>
+							<img src="https://cdnweb01.wikitree.co.kr/webdata/editor/202403/26/img_20240326144309_1ed4fc21.webp" alt=""><br>
+							
+							태국은 피파랭킹 101위로 한국(22위)보다 79계단 낮다. 객관적인 전력에서 한 수 아래로 평가받고 있으나 한국 축구 대표팀은 이번 태국전 부담이 적지 않다.<br>
 
-					</div><!-- // row -->
+태국의 덥고 습한 날씨에 얼마나 빨리 적응하느냐가 관건이다. 한국은 꽃샘추위가 채 가시지 않았지만, 태국 날씨는 완전히 달라 지난 3차전과 정반대 환경에서 경기에 임해야 한다.<br>
 
+팬들의 열성적인 응원도 걱정거리다. 한국 태국 티켓 예매는 오픈 이후 곧장 전 좌석이 매진됐다. 태국 홈인 라자망갈라 국립경기장에 만원 관중이 들어설 것으로 예상된다.<br>
+						</div>
+						<div class="file-list">
+							<div class="files">
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="이력서2.doc" dwonload>이력서2.doc</a>
+									<span class="size">2.3MB</span>
+								</div>
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="경령증명서.doc" dwonload>경령증명서.doc</a>
+									<span class="size">586KB</span>
+								</div>
+								<div class="item">
+									<span class="material-symbols-outlined">attach_file</span>
+									<a class="name" href="포트폴리오.ppt" dwonload>포트폴리오.ppt</a>
+									<span class="size">8.6MB</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div><!-- // modal-body -->
 
 				<div class="modal-footer">
@@ -386,12 +404,66 @@
 				</div><!-- // modal-footer -->
 			</div>
 		</div>
-	</div><!-- // modal : pageModal1 -->
+	</div>
+	</div><!-- // modal : 공지사항 상세  -->
+
+
+	<!-- 게시판 설정 popover-->
+	<div data-name="set-board" style="display:none;">
+		<div class="popover-body-inner">
+			<form>
+				<div class="list-group">
+					<label class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="">
+						공지사항
+					</label>
+					<label class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="">
+						Q&amp;A
+					</label>
+					<label class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="">
+						자료실
+					</label>
+					<label class="list-group-item">
+						<input class="form-check-input me-1" type="checkbox" value="">
+						신규추가게시판
+					</label>
+				</div>
+				<div class="popover-footer">
+					<button type="button" class="btn btn-sm btn-outline-primary popover-close">닫기</button>
+					<button type="button" class="btn btn-sm btn-primary">저장</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- //게시판 설정 popover-->
 
 	<script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script src="./assets/js/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/plugins.js"></script>
 	<script src="./assets/js/custom.js"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			//게시판 설정 popover 띄우기 
+			var setBoardBtn = document.getElementById('showSetBoard');
+			var popover = new bootstrap.Popover(setBoardBtn, {
+				html: true,
+				content: $('[data-name="set-board"] .popover-body-inner'),
+				fallbackPlacements:['bottom'],
+				customClass:'popover-set-board'
+			});
+			setBoardBtn.addEventListener('shown.bs.popover', function () {
+				var popoverId = setBoardBtn.getAttribute('aria-describedby');
+				var popoverElement = document.getElementById(popoverId);
+				var closeButton = popoverElement.querySelector('.popover-set-board .popover-close');
+				closeButton.addEventListener('click', function() {
+					popover.hide();
+				})
+			});
+		});
+	</script>
 
 	<!-- calendar 관련 -->	
 	<script src='./assets/libs/fullcalendar/dist/index.global.js'></script>
@@ -403,7 +475,7 @@
 				{
 					category: '수강',
 					title: '종일 이벤트',
-					start: '2024-06-23',
+					start: '2024-06-23'
 				},
 				{
 					category: '대기',
@@ -416,6 +488,14 @@
 					title: '포토샵 초급 따라하기 1',
 					start: '2024-06-26T16:00:00',
 					end: '2024-06-26T18:00:00',
+					description: [
+						'말풍선 클릭 시 커짐',
+						'해당 과목의 공지사항 ‘표시날짜‘ 등록 시 노출',
+						'제목은 길어지면 말줄임',
+						'말풍선 가로 고정',
+						'제목 클릭 시 상세 팝업 노출',
+						'말풍선은 그대로 유지'
+					]
 				},
 				{
 					category: '환불',
@@ -428,20 +508,32 @@
 					title: '인테리어 포폴(1,2)',
 					start: '2024-06-27T08:30:00',
 					start: '2024-06-27T11:30:00',
+					description: [
+						'공지사항을 입력하면 이곳에 표시됩니다. 길어지면 줄 넘김이 되고요. 얼마나 길어 질 지 모르겠지만 너무 길면 말줄임을 해야할까요? 그리고 혹시 공지를 클릭하면 이동해야 하나요?'
+					]
 				},
 				{
 					category: '수강',
 					title: '인테리어 포폴(1,2)',
 					start: '2024-06-27T18:30:00',
 					start: '2024-06-27T19:30:00',
-					description: '<strong>This</strong> is a <em>cool</em> event with HTML content.'
+					description: [
+						'말풍선 클릭 시 커짐',
+						'해당 과목의 공지사항 ‘표시날짜‘ 등록 시 노출',
+						'제목은 길어지면 말줄임',
+						'말풍선 가로 고정',
+						'제목 클릭 시 상세 팝업 노출',
+						'말풍선은 그대로 유지'
+					]
 				},
 				{
 					category: '대기',
-					title: '포토샵 중급 따라하기 1',
+					title: '타이틀이 길어지면 말줄임이지만 공지사항에서는 전부 노출해볼게요.',
 					start: '2024-06-28T10:30:00',
 					end: '2024-06-28T12:30:00',
-					description: '<strong>This</strong> is a <em>cool</em> event with HTML content.'
+					description: [
+						'공지사항을 입력하면 이곳에 표시됩니다. 길어지면 줄 넘김이 되고요. 얼마나 길어 질 지 모르겠지만 너무 길면 말줄임을 해야할까요? 그리고 혹시 공지를 클릭하면 이동해야 하나요?'
+					]
 				},
 				{
 					category: '수료',
@@ -456,7 +548,7 @@
 					end: '2024-06-28T13:30:00'
 				}
 			];
-
+			
 			events = events.map(event => {
 				switch (event.category) {
 					case '수강':
@@ -477,6 +569,7 @@
 				return event;
 			});
 
+			//이벤트에 카테고리 영역 추가 (수강/대기/수료/환불/기타)
 			function eventContentSet(arg) {
 				let dotEl = document.createElement('span');
 				dotEl.classList.add('fc-event-cate');
@@ -550,22 +643,35 @@
 				slotMinTime: '09:00:00',
 				slotMaxTime: '18:30:00',
 				events: events,
-                eventDidMount: function(info) {
-                    var tooltipIcon = $('<span class="material-symbols-rounded">maps_ugc</span>');
-                    tooltipIcon.attr('data-toggle', 'tooltip');
-                    tooltipIcon.attr('data-html', 'true');
-                    tooltipIcon.attr('title', info.event.extendedProps.description);
-                    if (info.event.extendedProps.description && info.view.type === 'timeGridWeek') {
-						$(info.el).append(tooltipIcon);
-						
-						// Initialize Bootstrap tooltips
-						tooltipIcon.tooltip({
-							html: true,
-							customClass: 'tooltip-noti',
-							trigger : 'click'
+				eventDidMount: function(info) {
+					//공지사항 말풍선 추가 
+					if (info.event.extendedProps.description && info.view.type === 'timeGridWeek') {
+						var icon = document.createElement('span');
+						icon.className = 'material-symbols-rounded';
+						icon.setAttribute('tabindex', '0'); 
+						icon.setAttribute('data-bs-toggle', 'popover');
+						icon.setAttribute('data-bs-title', '<strong>[공지] ' + info.event.title + '</strong><span class="material-symbols-rounded">close</span>');
+						icon.setAttribute('data-bs-content', '<ul class="popover-noti-list">' + info.event.extendedProps.description.map(desc => '<li>' + desc + '</li>').join('') +'</ul>');
+						icon.setAttribute('data-bs-placement', 'top');
+						icon.setAttribute('data-bs-html', 'true');
+						icon.textContent = 'notification_important';
+
+						info.el.appendChild(icon);
+
+						//popover 초기화
+						var popover = new bootstrap.Popover(icon);
+
+						//popover에 닫기버튼 추가
+						icon.addEventListener('shown.bs.popover', function () {
+							var popoverId = icon.getAttribute('aria-describedby');
+							var popoverElement = document.getElementById(popoverId);
+							var closeButton = popoverElement.querySelector('.material-symbols-rounded');
+							closeButton.addEventListener('click', function() {
+							popover.hide();
 						});
+					});
 					}
-                },
+				},
 				eventContent: eventContentSet,
 				eventClick: handleEventClick,
 				dateClick: handleDateClick

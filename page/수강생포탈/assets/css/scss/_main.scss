@@ -6,8 +6,8 @@
         .col-group-right { width:40% }
     }
     .col-group-right {
-        .fluid-card { 
-            ~ .fluid-card { margin-top:12px; }
+        .board-group { 
+            ~ .board-group { margin-top:12px; }
         }
 
         h3 {
@@ -38,6 +38,10 @@
                     color:#777;
                 }
             }
+        }
+        &.class-board-wrap {
+            max-height:412px;
+            overflow-y:auto;
         }
     }
 }
