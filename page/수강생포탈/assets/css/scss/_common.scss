@@ -326,6 +326,10 @@
         text-align: left;
         color: #212529;
     }
+
+    &:has(.nav) {
+        padding-bottom:0;
+    }
 }
 
 .card-body {

@@ -33,5 +33,18 @@ jQuery(function($){
 			return false;
 		}
 	});
-
 });
+
+
+function openMoAside(event){
+	var btn = event.currentTarget;
+    var menu = btn.querySelector('.m-menu');
+    var menuAside = document.querySelector('.m-menu-aside');
+    
+    if (menu) {
+        menu.classList.toggle('open');
+    }
+	if (menuAside) {
+        menuAside.classList.toggle('open');
+    }
+}

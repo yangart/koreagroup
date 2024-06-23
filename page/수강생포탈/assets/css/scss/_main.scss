@@ -48,16 +48,6 @@
 .card:has(.card-head).class-detail {
     padding:4px 0 0;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 4px 0 0 #f93bfd;
-    .card-head {
-        .btn-sm {
-            display:flex;
-            align-items:center;
-            padding:0;
-            .material-symbols-outlined {
-                margin-left:4px;
-            }
-        }
-    }
 }
 .class-list-wrap {
     padding:var(--bs-gutter-y) var(--bs-gutter-x);
@@ -110,8 +100,4 @@
             color:#000;
         }
     }
-}
-
-.nav {
-    margin-bottom:calc(var(--bs-gutter-y)/2);
 }

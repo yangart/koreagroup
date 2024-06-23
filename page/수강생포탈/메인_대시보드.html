@@ -18,7 +18,7 @@
 	<div id="wrapper">
 		<div id="header">
 			<h1 class="header-logo"><a href="javascript:;"><img src="./assets/img/header-logo.png" alt=""></a></h1>
-			<ul class="header-nav nav" id="headerNav">
+			<ul class="header-nav nav">
 				<li><a href="javascript:;" class="nav-btn">홈</a></li>
 				<li class="hoverdown">
 					<a href="javascript:;" class="nav-btn active" id="hNavHoverdown2">수강내역</a>
@@ -41,20 +41,78 @@
 						<li><a class="dropdown-item" href="javascript:;">따즈아 소개</a></li>
 					</ul>
 				</li>
-			</ul><!-- // headerNav -->
-			<div class="mobile-menu">
-				<ul>
-					<li class="item1 on"><a href="javascript:;"><em>홈</em></a></li>
-					<li class="item2"><a href="javascript:;"><em>수강내역</em></a></li>
-					<li class="item3"><a href="javascript:;"><em>커뮤니티</em></a></li>
-					<li class="item4"><a href="javascript:;"><em>교육과정</em></a></li>
-					<li class="item5"><a href="javascript:;"><em>학원정보</em></a></li>
-				</ul>
-			</div>
-			<ul class="header-icon nav" id="headerIcon">
-				<li><a href="javascript:;" class="nav-btn"><i class="h-ico-user"></i></a></li>
-				<li><a href="javascript:;" class="nav-btn"><i class="h-ico-out"></i></a></li>
-			</ul><!-- // headerIcon -->
+			</ul><!-- // header-nav -->
+			<ul class="util-menu">
+				<li class="for-pc"><button type="button" class="nav-btn"><span class="h-ico-user">user</ispan></button></li>
+				<li class="for-pc"><button type="button" class="nav-btn"><span class="h-ico-out">logout</span></button></li>
+				<li class="for-mo"><button type="button" class="nav-btn"><span class="material-symbols-rounded">settings</span></button></li>
+				<li class="for-mo"><button type="button" class="nav-btn" onclick="openMoAside(event);"><span class="m-menu">menu</span></button></li>
+			</ul><!-- // util-menu -->
+
+			<div class="m-menu-aside">
+				<div class="user-area">
+					<ul class="mypage-list">
+						<li>
+							<a href="javascript:;">
+								<span class="material-symbols-outlined">account_circle</span>
+								<em>내 정보</em>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="material-symbols-outlined">folder_open</span>
+								<em>나의 자료실</em>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="material-symbols-outlined">credit_score</span>
+								<em>결제/환불</em>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<span class="material-symbols-outlined">frame_person</span>
+								<em>휴학/복학</em>
+							</a>
+						</li>
+					</ul>
+					<div class="mypage-btns">
+						<button type="button" class="btn btn-outline-point"><b>김담당1</b> 멘토님께 <b>상담요청</b></button>
+						<button type="button" class="btn btn-outline-point-deep">취업상담</button>
+					</div>
+				</div>
+				<div class="service-area">
+					<ul class="service-list">
+						<li><a href="javascript:;"><span class="material-symbols-rounded">home</span>홈</a></li>
+						<li>
+							<a href="javascript:;"><span class="material-symbols-rounded">view_list</span>수강내역</a>
+							<ul class="depth2">
+								<li><a href="javascript:;">공지사항</a></li>
+								<li><a href="javascript:;">이벤트</a></li>
+								<li><a href="javascript:;">특강/세미나</a></li>
+								<li><a href="javascript:;">자격증 정보(민간)</a></li>
+								<li><a href="javascript:;">자격증 정보(공공)</a></li>
+								<li><a href="javascript:;">취업 및 진학정보 게시판</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:;"><span class="material-symbols-rounded">forum</span>커뮤니티</a></li>
+						<li><a href="javascript:;"><span class="material-symbols-rounded">school</span>교육과정</a></li>
+						<li>
+							<a href="javascript:;"><span class="material-symbols-rounded">search_check_2</span>학원정보</a>
+							<ul class="depth2">
+								<li><a href="javascript:;">빈강의실 찾기</a></li>
+								<li><a href="javascript:;">학원내부맵</a></li>
+								<li><a href="javascript:;">따즈아 소개</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="aside-footer">
+					<button type="button" class="btn btn-outline-cancel">로그아웃</button>
+					<p class="copyright">Copyright ⓒ KOREA EDU GROUP. All Rights Reserved.</p>
+				</div>
+			</div><!-- // m-menu-aside -->
 		</div>
 		<!-- // header -->
 
@@ -222,14 +280,17 @@
 						</div>
 					</div>
 					<div class="card fluid-card">
-						<div class="card-body">
+						<div class="card-head">
+
 							<ul class="nav archive-nav" id="archiveNav" role="tablist">
 								<li><a href="#" class="nav-btn active" data-bs-toggle="tab" role="tab" data-bs-target="#detailsPanel1" aria-controls="detailsPanel1" aria-selected="true">커뮤니티(공지사항)</a></li>
 								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#detailsPanel2" aria-controls="detailsPanel2" aria-selected="false">이벤트</a></li>
 								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#detailsPanel3" aria-controls="detailsPanel3" aria-selected="false">특강/세미나</a></li>
 								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#detailsPanel4" aria-controls="detailsPanel4" aria-selected="false">취업 및 진학정보</a></li>
 							</ul>
-
+							<button type="button" class="btn-sm txt-success">더보기<span class="material-symbols-outlined fs-18px">add_circle</span></button>
+						</div>
+						<div class="card-body">
 							<div class="card-panel fluid-card" id="detailsPanel">
 								<div class="tab-pane active" id="detailsPanel1" role="tabpanel">
 									<ul class="card-list-simple">
@@ -241,14 +302,14 @@
 											</a>
 										</li>
 										<li class="noti-fixed">
-											<a href="javascript:;" data-bs-toggle="modal" data-bs-target="#pageModalQnaUpdate">
+											<a href="javascript:;">
 												<div class="link">Q&amp;A 작성폼 입니다.</div>
 												<div class="name">이미애</div>
 												<div class="date">2023-07-01 10:20</div>
 											</a>
 										</li>
 										<li>
-											<a href="javascript:;" data-bs-toggle="modal" data-bs-target="#pageModalQnaDetail">
+											<a href="javascript:;">
 												<div class="link">Q&amp;A 상세 페이지 입니다.</div>
 												<div class="name">이미애</div>
 												<div class="date">2023-07-01 10:20</div>
@@ -297,11 +358,6 @@
 											</a>
 										</li>
 									</ul><!-- // card-list-simple -->
-
-									<div class="card-panel-pin">
-										<a href="javascript:;" class="btn btn-point-deep">버튼</a>
-										<a href="javascript:;" class="btn btn-outline-active btn-sm">사용</a>
-									</div>
 
 								</div>
 							</div><!-- // card-panel -->
@@ -432,7 +488,7 @@
 				</div>
 				<div class="popover-footer">
 					<button type="button" class="btn btn-sm btn-outline-primary popover-close">닫기</button>
-					<button type="button" class="btn btn-sm btn-primary">저장</button>
+					<button type="button" class="btn btn-sm btn-primary popover-close">저장</button>
 				</div>
 			</form>
 		</div>

@@ -351,6 +351,14 @@ a {
     padding: 4px 10px;
     font-size: 14px;
     line-height: 20px;
+    &:has([class^='material-symbols']) {
+        display:flex;
+        align-items:center;
+        padding:0;
+        .material-symbols-outlined {
+            margin-left:4px;
+        }
+    }
 }
 .btn-group-xs>.btn,
 .btn-xs {
@@ -493,6 +501,26 @@ a {
         color: #495057;
         background-color: #fff;
         border-color: #495057;
+    }
+}
+.btn-outline-point {
+    background-color:var(--regit-bg);
+    color:var(--regit);
+    border-color:var(--regit);
+    &:hover,
+    &:focus-visible {
+        background-color: var(--regit);
+        color:#fff;
+    }
+}
+.btn-outline-point-deep {
+    background-color:var(--refund-bg);
+    color:var(--refund);
+    border-color:var(--refund);
+    &:hover,
+    &:focus-visible {
+        background-color: var(--refund);
+        color:#fff;
     }
 }
 .btn-round {
@@ -1297,8 +1325,16 @@ $breakpoint : (
     xl:1200px,
     xxl:1400px
 );
+$breakpointMin : (
+    xs:481px,
+    sm:576px,
+    md:768px, //mo
+    lg:992px,
+    xl:1201px,
+    xxl:1401px
+);
 
-@mixin breakpoint($breakpoint-name) {
+@mixin breakpointMax($breakpoint-name) {
     $value: map-get($breakpoint, $breakpoint-name);
     @if $value {
         @media (max-width: $value) {
@@ -1309,13 +1345,37 @@ $breakpoint : (
     }
 }
 
-@include breakpoint(xxl) {
+@mixin breakpointMin($breakpointMin-name) {
+    $value: map-get($breakpointMin, $breakpointMin-name);
+    @if $value {
+        @media (min-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint '#{$breakpointMin-name}' not found in \$breakpoint map.";
+    }
+}
+
+@include breakpointMax(xxl) {
     :root {
         --min-width:100%;
     }
 }
-@include breakpoint(xl) {}
-@include breakpoint(lg) {}
-@include breakpoint(md) {}
-@include breakpoint(sm) {}
-@include breakpoint(xs) {}
+@include breakpointMax(xl) {}
+@include breakpointMax(lg) {}
+@include breakpointMax(md) {
+    *::-webkit-scrollbar {
+        width: 0;
+        height:0;
+    }
+    *::-webkit-scrollbar-thumb {
+        background:none;
+        border-radius:0;
+        border-left:0;
+    }
+    *::-webkit-scrollbar-track {
+        background:transparant;
+    }
+}
+@include breakpointMax(sm) {}
+@include breakpointMax(xs) {}
