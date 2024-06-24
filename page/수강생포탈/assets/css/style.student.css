@@ -107,6 +107,7 @@
   background: rgba(0, 0, 0, 0.1);
   border-radius: 0;
   border-left: 6px solid #fff;
+  border-top: 6px solid #fff;
 }
 
 *::-webkit-scrollbar-track {
@@ -8637,4 +8638,160 @@ table .bg td {
 .my-class-list li .title {
   font-weight: 600;
   color: #000;
+}
+
+.dashboard .carousel-inner .carousel-item.active,
+.dashboard .carousel-inner .carousel-item-start,
+.dashboard .carousel-inner .carousel-item-next,
+.dashboard .carousel-inner .carousel-item-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.dashboard .carousel-inner .carousel-item-right.active,
+.dashboard .carousel-inner .carousel-item-next,
+.dashboard .carousel-item-next:not(.carousel-item-start) {
+  -webkit-transform: translateX(50%) !important;
+          transform: translateX(50%) !important;
+}
+.dashboard .carousel-inner .carousel-item-left.active,
+.dashboard .carousel-item-prev:not(.carousel-item-end),
+.dashboard .active.carousel-item-start,
+.dashboard .carousel-item-prev:not(.carousel-item-end) {
+  -webkit-transform: translateX(-50%) !important;
+          transform: translateX(-50%) !important;
+}
+.dashboard .carousel-item-next.carousel-item-start, .dashboard .active.carousel-item-end {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+.dashboard .carousel-inner .carousel-item-prev,
+.dashboard .carousel-item-prev:not(.carousel-item-end) {
+  -webkit-transform: translateX(-50%) !important;
+          transform: translateX(-50%) !important;
+}
+.dashboard .carousel.container {
+  padding: 0;
+  height: 100%;
+}
+.dashboard .carousel.container div {
+  height: 100%;
+}
+.dashboard .carousel.container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dashboard .carousel.container a img {
+  background: #ccc;
+  max-height: calc(100% - 28px);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.dashboard .carousel.container a p {
+  white-space: nowrap;
+  margin-top: 8px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dashboard .carousel.container .carousel-control-next,
+.dashboard .carousel.container .carousel-control-prev {
+  width: 32px;
+  bottom: 28px;
+}
+.dashboard .carousel.container .carousel-control-next:hover,
+.dashboard .carousel.container .carousel-control-prev:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.dashboard .card-list-seminar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  gap: 8px;
+}
+.dashboard .card-list-seminar li {
+  height: 100%;
+}
+.dashboard .card-list-seminar li a {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dashboard .card-list-seminar li a img {
+  display: block;
+  aspect-ratio: 12/17;
+  max-height: calc(100% - 32px);
+}
+.dashboard .card-list-seminar li a p {
+  white-space: nowrap;
+  margin: 8px 0 0;
+  height: 20px;
+  width: 120px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dashboard .job-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  gap: 8px;
+}
+.dashboard .job-list li {
+  min-width: 180px;
+  width: 180px;
+  border-radius: 8px;
+  height: 100%;
+}
+.dashboard .job-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+  gap: 8px;
+}
+.dashboard .job-list li a .txt-area {
+  margin-top: 12px;
+}
+.dashboard .job-list li a .txt-area em {
+  font-size: 16px;
+  color: #000;
+}
+.dashboard .job-list li a .txt-area cite {
+  font-size: 14px;
+  font-style: normal;
+  color: #777;
+}
+.dashboard .job-list li a .txt-area p {
+  margin-top: 12px;
 }/*# sourceMappingURL=style.student.css.map */
