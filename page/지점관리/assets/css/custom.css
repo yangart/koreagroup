@@ -824,7 +824,6 @@ select:not(.form-select) {
 }
 .table-write th {
   font-weight: 600;
-  width: 78px;
   font-size: 14px;
   font-weight: 600;
   color: #aaa;
