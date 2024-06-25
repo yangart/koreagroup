@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+	<style>
+	
+	</style>
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">설정 관리</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="flex-area mb-3 text-dark fs-15px">
+						<div class="d-flex gap-4">
+							<div><b>컴퓨터강남</b></div>
+						</div>
+					</div>
+					<div class="table-scroll-y" style="max-height: 550px;">
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:12%">
+								<col style="">
+								<col style="">
+								<col style="width:10%">
+								<col style="width:10%">
+							</colgroup>
+							<thead class="table-light">
+								<tr>
+									<th class="text-start">적용 단계</th>
+									<th class="text-start">적용 조건</th>
+									<th class="text-start">기준일자</th>
+									<th>관리 기간<br>(지점)</th>
+									<th>관리 기간<br>(타 지점)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-start">01 유입</td>
+									<td class="text-start">최초 DB 유입 시</td>
+									<td class="text-start">DB유입일자</td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+								</tr>
+								<tr>
+									<td class="text-start">02 컨택</td>
+									<td class="text-start">컨택메모 내 통화량 입력 후 저장 시</td>
+									<td class="text-start">통화시간 저장일자</td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+								</tr>
+								<tr>
+									<td class="text-start">03 방문</td>
+									<td class="text-start">방문 상담 관리 내 방문체크 설정 시</td>
+									<td class="text-start">마지막 방문일자</td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+								</tr>
+								<tr>
+									<td class="text-start">04 처리</td>
+									<td class="text-start">DB 상태= 재입력, 상담불가</td>
+									<td class="text-start">DB 상태 저장일자</td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+								</tr>
+								<tr>
+									<td class="text-start">05 COD</td>
+									<td class="text-start">수강상태=신규</td>
+									<td class="text-start">COD 등록일자</td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+								</tr>
+								<tr>
+									<td class="text-start">06 수강</td>
+									<td class="text-start">수강상태=재학 or 휴학 </td>
+									<td class="text-start">수강생 등록일자</td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+								</tr>
+								<tr>
+									<td class="text-start">07 종강</td>
+									<td class="text-start">수강상태=수료</td>
+									<td class="text-start">마지막 강의일자</td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+								</tr>
+								<tr>
+									<td class="text-start">08 중퇴</td>
+									<td class="text-start">수강상태=중퇴</td>
+									<td class="text-start">중퇴일자</td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+									<td><input type="text" class="form-control text-center" value="3"></td>
+								</tr>
+								<tr>
+									<td class="text-start">09 온라인</td>
+									<td class="text-start">온라인 강의 결제내역 존재 시</td>
+									<td class="text-start">온라인 강의 결제일시</td>
+									<td><input type="text" class="form-control text-center" value=""></td>
+									<td><input type="text" class="form-control text-center" value=""></td>
+								</tr>
+								<tr>
+									<td class="text-start">학사관리</td>
+									<td class="text-start">학사일지 작성</td>
+									<td class="text-start">학사일지 작성일자</td>
+									<td><input type="text" class="form-control text-center" value="10"></td>
+									<td><input type="text" class="form-control text-center" value="10"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-primary">저장</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+</body>
+
+</html>
