@@ -527,16 +527,25 @@ body {
 @include breakpointMax(xxl) {
   
 }
-@include breakpointMax(xl) {
-  :root {
-    --bs-gutter-x: 16px;
-    --bs-gutter-y: 16px;
+
+@include breakpointMin(xl) {
+  .col-group-right {
+    display:flex !important;
   }
+}
+@include breakpointMax(xl) {
+  /* 대시보드 */
+  .dashboard {
+
+  }
+
+  /* 수강내역 */
   #container {
     height: auto;
     overflow: unset;
-    padding: var(--bs-gutter-y) 0 80px 0;
-
+    &:has(.flex-box-apply) {
+      height:100%;
+    }
   }
   .page-location {
     padding:0 var(--bs-gutter-x); 
@@ -544,36 +553,21 @@ body {
   .flex-box-apply {
     flex-direction: column;
     flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
     [class^=col-group-] {
       width:100%;
       flex:1;
+      padding:0;
     }
-    .cont-detail-list { max-height:400px; }
-    .card-list-simple { max-height:300px; }
+    // .cont-detail-list { max-height:400px; }
+    // .card-list-simple { max-height:300px; }
   } 
   .card { 
     border-radius:0; 
     border-left:0;
     border-right:0;
   }
-}
-
-
-@include breakpointMax(lg) {
-
-}
-@include breakpointMin(md){
-  .for-pc { display:flex; }
-  .for-mo { display:none; }
-}
-@include breakpointMax(md) {
-  .header-nav { display:none; }
-  .mobile-menu { display:block; }
-
-  .for-pc { display:none; }
-  .for-mo { display:flex; }
-
-
   #wrapper {
     padding-top:56px;
   }
@@ -589,5 +583,3 @@ body {
     --aside-fs:3.6vmin;
   }
 }
-@include breakpointMax(sm) {}
-@include breakpointMax(xs) {}

@@ -167,10 +167,11 @@
 				</div>
 
 				<div class="col-group-right fluid-card">
-					<div class="card class-detail">
+					<div class="card class-detail m-modal">
+						<button type="button" class="m-close" onclick="$('#classDetail').hide();"></button>
 						<div class="card-head bg-gray">
 							<strong>[KDI] 포토샵 따라하기</strong>
-							<button type="button" class="btn-sm txt-success" id="showSetBoard" data-bs-toggle="popover" title="게시판 설정">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
+							<button type="button" class="btn-sm txt-success for" id="showSetBoard" data-bs-toggle="popover" title="게시판 설정">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
 						</div><!-- // card-head -->
 
 						<div class="card-body">
@@ -249,6 +250,7 @@
 								</dl><!-- // card-attendance -->
 							</div>
 							<div class="col-group-right class-board-wrap">
+								<button type="button" class="btn-sm txt-success for-mo" id="showSetBoard-m" data-bs-toggle="popover" title="게시판 설정">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
 								<div class="board-group">
 									<h3>공지사항</h3>
 									<ul class="list-group">

@@ -49,12 +49,15 @@ function openMoAside(event){
     }
 }
 
-var eventCarousel = document.querySelector('#eventCarousel')
-var carousel = new bootstrap.Carousel(eventCarousel, {
-   interval: 0
-});
+
 
 $('.carousel .carousel-item').each(function(){
+
+	var eventCarousel = document.querySelector('#eventCarousel')
+	var carousel = new bootstrap.Carousel(eventCarousel, {
+	interval: 0
+	});
+
     var minPerSlide = 2;
     var next = $(this).next();
     if (!next.length) {

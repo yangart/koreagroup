@@ -1362,9 +1362,12 @@ $breakpointMin : (
         --min-width:100%;
     }
 }
-@include breakpointMax(xl) {}
-@include breakpointMax(lg) {}
-@include breakpointMax(md) {
+@include breakpointMax(xl) {
+    :root,
+    .row {
+        --bs-gutter-x:16px;
+        --bs-gutter-y:16px;
+    }
     *::-webkit-scrollbar {
         width: 0;
         height:0;
@@ -1377,6 +1380,10 @@ $breakpointMin : (
     *::-webkit-scrollbar-track {
         background:transparant;
     }
+}
+@include breakpointMax(lg) {}
+@include breakpointMax(md) {
+    
 }
 @include breakpointMax(sm) {}
 @include breakpointMax(xs) {}

@@ -229,3 +229,75 @@
         }
     }
 }
+
+
+
+@include breakpointMin(xl){
+    .for-pc { display:flex !important; }
+    .for-mo { display:none !important; }
+}
+@include breakpointMax(xl) {
+    .for-pc { display:none !important; }
+    .for-mo { display:flex !important; }
+
+    #container .col-group {
+        flex-direction: column;
+    }
+    .class-detail.m-modal {
+        position:fixed;
+        z-index:999;
+        top:56px;
+        left:0;
+        width:100%;
+        height:calc(100% - 56px);
+    }
+    .class-board-wrap {
+        .btn-sm:has([class^=material-symbols]) {
+            margin-left:auto;
+        }
+    }
+    .card:has(.card-head).class-detail { 
+        box-shadow:none; 
+        padding:0;
+    }
+    .dashboard {
+        .card-body{
+            .col-group-right.class-board-wrap {
+                max-height:none;
+                overflow: visible;
+            }
+            &:has(.col-group-left) {
+                flex-direction: column;
+                .col-group-left,
+                .col-group-right {
+                    width:100%;
+                }
+            }
+        }
+    }
+    .card-subject-column {
+        flex-direction: row;
+        align-items: stretch;
+        gap: var(--bs-gutter-x);
+        .text {
+            width:auto;
+        }
+        .text-card {
+            align-items: stretch;
+            li { justify-content: center; }
+        }
+    }
+}
+@include breakpointMax(lg) {
+}
+@include breakpointMin(md){
+}
+@include breakpointMax(md){
+    .header-nav { display:none; }
+    .mobile-menu { display:block; }
+}
+@include breakpointMax(md) {
+    
+}
+@include breakpointMax(sm) {}
+@include breakpointMax(xs) {}
