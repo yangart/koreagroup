@@ -7572,6 +7572,9 @@ button:focus {
   opacity: 0;
 }
 
+table .bg {
+  background-color: #F3FEFF;
+}
 table .bg th,
 table .bg td {
   background-color: #F3FEFF;
@@ -8099,6 +8102,307 @@ table .bg td {
   background-size: cover;
 }
 
+@media (max-width: 1200px) {
+  .box-list,
+  .job-list,
+  .event-v-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .event-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .modal-dialog {
+    padding: 16px;
+    -webkit-transform: none;
+            transform: none;
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-width: auto !important;
+    min-height: 100%;
+    transform: none !important;
+  }
+  .modal-dialog .modal-content {
+    max-height: calc(100vh - 32px) !important;
+  }
+  .fnc-area {
+    margin-bottom: 8px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .sch-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+  }
+  .sch-area > .l-area,
+  .sch-area > .r-area {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    gap: 4px;
+  }
+  .sch-area {
+    padding: 12px;
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius);
+  }
+  .sch-area > .l-area input,
+  .sch-area > .l-area select {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .sch-area > .r-area > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .info-list {
+    font-size: 12px;
+  }
+  .info-list > li cite {
+    min-width: 48px;
+  }
+  .box-list,
+  .job-list,
+  .event-v-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .event-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  .box-list.col1 {
+    gap: 8px;
+  }
+  .box-list .box-header,
+  .box-list .box-body,
+  .box-list .box-footer {
+    padding: 12px;
+  }
+  .box-list .box-footer {
+    gap: 4px;
+  }
+  .box-list .box-footer .btn {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 12px;
+  }
+  .event-v-list {
+    gap: 24px 8px;
+  }
+  /*table */
+  .table-list th,
+  .table-list td,
+  .table-info th,
+  .table-info td {
+    font-size: 13px;
+  }
+  .table-list {
+    text-align: left;
+  }
+  .table-list thead {
+    display: none;
+  }
+  .table-list col,
+  .table-list thead th,
+  .table-list thead td,
+  .table-list tbody th,
+  .table-list tbody td {
+    display: inline-block;
+    width: auto;
+    border: none;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    min-height: 0;
+    line-height: 1.3;
+  }
+  .table-list tbody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
+  }
+  .table-list tbody tr {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border-color-light);
+    padding: 16px;
+    border-radius: var(--border-radius);
+  }
+  .table-list tbody td {
+    vertical-align: middle;
+    margin-right: 16px;
+  }
+  .table-list tbody td[data-tit]::before {
+    content: attr(data-tit) " : ";
+    display: inline-block;
+    margin-right: 4px;
+    text-align: left;
+    color: #8d97a2;
+    vertical-align: top;
+    font-weight: 500;
+  }
+  .table-list tbody td.text-start {
+    display: block;
+    margin-right: 0;
+  }
+  .table-list tbody td.text-start a {
+    display: block;
+    overflow: hidden;
+  }
+  .table-list tbody .m-row {
+    display: block;
+    text-align: left;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .table-write {
+    border-top: 1px solid var(--border-color-light);
+    border-bottom: 1px solid var(--border-color-light);
+    table-layout: auto;
+    overflow: hidden;
+  }
+  .bg-light + .table-write {
+    margin-top: 12px;
+  }
+  .table-write col,
+  .table-write colgroup {
+    display: none;
+  }
+  .table-write th,
+  .table-write td {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    line-height: 1.33;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: hidden;
+  }
+  .table-write th {
+    padding: 12px 16px;
+  }
+  .table-write td {
+    padding: 12px 16px;
+  }
+  .job-view .job-view-info-list {
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: auto;
+  }
+  .curriculum .page-header {
+    margin: 0 0 20px;
+  }
+  .curriculum .page-header h3 {
+    font-size: 21px;
+    font-weight: 200;
+    margin-bottom: 12px;
+  }
+  .curriculum .page-header h3 span em {
+    font-weight: 300;
+    font-style: normal;
+  }
+  .curriculum .curriculum-wr {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .curriculum .curriculum-cont-tit {
+    margin-bottom: 40px;
+  }
+  .curriculum .curriculum-cont-tit h3 {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+  .curriculum .curriculum-cont-tit span {
+    font-size: 15px;
+    width: 100%;
+    display: block;
+    font-weight: 200;
+    line-height: 1.6;
+  }
+  .curriculum .count-Texts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .curriculum .count-Texts > div {
+    width: 100%;
+    text-align: center;
+  }
+  .curriculum .count-Texts > div h3 {
+    font-size: 80px;
+  }
+  .curriculum .curriculum-list .dep03 li dl dd {
+    display: none;
+  }
+  .curriculum .curriculum-list .dep03 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .curriculum .curriculum-list .dep03 li {
+    margin-top: 0;
+  }
+  .curriculum .curriculum-list .dep03 li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.17s linear;
+    transition: 0.17s linear;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .curriculum .curriculum-list .dep03 li a:after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: relative;
+    background: url("https://koreaitacademy.com/2023/img/icon-ar-right-bk.png") left center no-repeat;
+    background-size: cover;
+    margin-right: 20px;
+  }
+  .curriculum .curriculum-list .dep03 li a:hover {
+    text-decoration: none;
+    background: #0070f0;
+    color: #fff !important;
+  }
+  .curriculum .curriculum-list .dep03 li a:hover:after {
+    background: url("https://koreaitacademy.com/2023/img/icon-ar-right-wh.png") left center no-repeat;
+    background-size: cover;
+  }
+}
 .csIntro {
   width: 100%;
   line-height: 1.6;
