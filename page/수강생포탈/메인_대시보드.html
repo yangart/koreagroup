@@ -168,10 +168,10 @@
 
 				<div class="col-group-right fluid-card">
 					<div class="card class-detail m-modal">
-						<button type="button" class="m-close" onclick="$('#classDetail').hide();"></button>
+						<button type="button" class="m-close" onclick="$('.class-detail').hide();"></button>
 						<div class="card-head bg-gray">
 							<strong>[KDI] 포토샵 따라하기</strong>
-							<button type="button" class="btn-sm txt-success for" id="showSetBoard" data-bs-toggle="popover" title="게시판 설정">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
+							<button type="button" class="btn-sm txt-success for0-" id="showSetBoard" data-bs-toggle="popover" title="게시판 설정">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
 						</div><!-- // card-head -->
 
 						<div class="card-body">
@@ -250,7 +250,6 @@
 								</dl><!-- // card-attendance -->
 							</div>
 							<div class="col-group-right class-board-wrap">
-								<button type="button" class="btn-sm txt-success for-mo" id="showSetBoard-m" data-bs-toggle="popover" title="게시판 설정">게시판 설정 <span class="material-symbols-outlined fs-18px">dashboard_customize</span></button>
 								<div class="board-group">
 									<h3>공지사항</h3>
 									<ul class="list-group">
@@ -289,7 +288,6 @@
 								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#detailsPanel3" aria-controls="detailsPanel3" aria-selected="false">특강/세미나</a></li>
 								<li><a href="#" class="nav-btn" data-bs-toggle="tab" role="tab" data-bs-target="#detailsPanel4" aria-controls="detailsPanel4" aria-selected="false">취업 및 진학정보</a></li>
 							</ul>
-							<button type="button" class="btn-sm txt-success">더보기<span class="material-symbols-outlined fs-18px">add_circle</span></button>
 						</div>
 						<div class="card-body">
 							<div class="card-panel fluid-card" id="detailsPanel">
@@ -359,73 +357,74 @@
 											</a>
 										</li>
 									</ul><!-- // card-list-simple -->
+									<button type="button" class="btn-sm txt-success">더보기<span class="material-symbols-outlined fs-18px">add_circle</span></button>
 								</div>
 
 								<div class="tab-pane" id="detailsPanel2" role="tabpanel">
 									<div id="eventCarousel" class="carousel slide container" data-bs-ride="carousel">
 										<div class="carousel-inner w-100">
 										  <div class="carousel-item active">
-											<div class="col-md-6">
-												<a href="javascript:;">
-													<img class="img-fluid" src="http://placehold.it/380?text=1">
-													<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.이벤트 제목이 보여집니다.이벤트 제목이 보여집니다.</p>
-												</a>
+											<div class="row">
+												<div class="col-md-6">
+													<a href="javascript:;">
+														<img class="img-fluid" src="http://placehold.it/380?text=1">
+														<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.이벤트 제목이 보여집니다.이벤트 제목이 보여집니다.</p>
+													</a>
+												</div>
+												<div class="col-md-6">
+													<a href="javascript:;">
+														<img class="img-fluid" src="http://placehold.it/380?text=2">
+														<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
+													</a>
+												</div>
 											</div>
 										  </div>
 										  <div class="carousel-item">
-											<div class="col-md-6">
-												<a href="javascript:;">
-													<img class="img-fluid" src="http://placehold.it/380?text=2">
-													<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
-												</a>
+											<div class="row">
+												<div class="col-md-6">
+													<a href="javascript:;">
+														<img class="img-fluid" src="http://placehold.it/380?text=3">
+														<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
+													</a>
+												</div>
+												<div class="col-md-6">
+													<a href="javascript:;">
+														<img class="img-fluid" src="http://placehold.it/380?text=4">
+														<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
+													</a>
+												</div>
 											</div>
 										  </div>
 										  <div class="carousel-item">
-											<div class="col-md-6">
-												<a href="javascript:;">
-													<img class="img-fluid" src="http://placehold.it/380?text=3">
-													<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
-												</a>
+											<div class="row">
+												<div class="col-md-6">
+													<a href="javascript:;">
+														<img class="img-fluid" src="http://placehold.it/380?text=5">
+														<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
+													</a>
+												</div>
+												<div class="col-md-6">
+													<a href="javascript:;">
+														<img class="img-fluid" src="http://placehold.it/380?text=6">
+														<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
+													</a>
+												</div>
 											</div>
 										  </div>
 										  <div class="carousel-item">
-											<div class="col-md-6">
-												<a href="javascript:;">
-													<img class="img-fluid" src="http://placehold.it/380?text=4">
-													<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
-												</a>
-											</div>
-										  </div>
-										  <div class="carousel-item">
-											<div class="col-md-6">
-												<a href="javascript:;">
-													<img class="img-fluid" src="http://placehold.it/380?text=5">
-													<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
-												</a>
-											</div>
-										  </div>
-										  <div class="carousel-item">
-											<div class="col-md-6">
-												<a href="javascript:;">
-													<img class="img-fluid" src="http://placehold.it/380?text=6">
-													<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
-												</a>
-											</div>
-										  </div>
-										  <div class="carousel-item">
-											<div class="col-md-6">
-												<a href="javascript:;">
-													<img class="img-fluid" src="http://placehold.it/380?text=7">
-													<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
-												</a>
-											</div>
-										  </div>
-										  <div class="carousel-item">
-											<div class="col-md-6">
-												<a href="javascript:;">
-													<img class="img-fluid" src="http://placehold.it/380?text=8">
-													<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
-												</a>
+											<div class="row">
+												<div class="col-md-6">
+													<a href="javascript:;">
+														<img class="img-fluid" src="http://placehold.it/380?text=7">
+														<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
+													</a>
+												</div>
+												<div class="col-md-6">
+													<a href="javascript:;">
+														<img class="img-fluid" src="http://placehold.it/380?text=8">
+														<p>[YYYY-MM-DD ~ YYYY-MM-DD] 이벤트 제목이 보여집니다.</p>
+													</a>
+												</div>
 											</div>
 										  </div>
 										</div>
@@ -438,6 +437,7 @@
 										  <span class="visually-hidden">Next</span>
 										</button>
 									  </div>
+									  <button type="button" class="btn-sm txt-success">더보기<span class="material-symbols-outlined fs-18px">add_circle</span></button>
 								</div>
 
 								<div class="tab-pane" id="detailsPanel3" role="tabpanel">
@@ -491,6 +491,7 @@
 											</a>
 										</li>
 									</ul>
+									<button type="button" class="btn-sm txt-success">더보기<span class="material-symbols-outlined fs-18px">add_circle</span></button>
 								</div>
 
 								<div class="tab-pane" id="detailsPanel4" role="tabpanel">
@@ -544,6 +545,7 @@
 											</a>
 										</li>
 									</ul>
+									<button type="button" class="btn-sm txt-success">더보기<span class="material-symbols-outlined fs-18px">add_circle</span></button>
 								</div>
 							</div><!-- // card-panel -->
 						</div>
@@ -834,10 +836,12 @@
 
 			function handleEventClick(info) {
 				var eventCategory = info.event.extendedProps.category;
-				if (eventCategory === '면접') {
-					$('#pageModalInterview').modal('show');
-				} else if (eventCategory === '상담') {
+				if (eventCategory === '수강') {
+					$('.class-detail').show();
+				} else if (eventCategory === '대기') {
 					window.open('popup.html', '_blank', 'width=600,height=400');
+				} else {
+					$('.class-detail').show();
 				}
 			}
 

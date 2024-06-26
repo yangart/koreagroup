@@ -51,26 +51,26 @@ function openMoAside(event){
 
 
 
-$('.carousel .carousel-item').each(function(){
+// $('.carousel .carousel-item').each(function(){
 
-	var eventCarousel = document.querySelector('#eventCarousel')
-	var carousel = new bootstrap.Carousel(eventCarousel, {
-	interval: 0
-	});
+// 	var eventCarousel = document.querySelector('#eventCarousel')
+// 	var carousel = new bootstrap.Carousel(eventCarousel, {
+// 	interval: 0
+// 	});
 
-    var minPerSlide = 2;
-    var next = $(this).next();
-    if (!next.length) {
-    next = $(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
+//     // var minPerSlide = 2;
+//     // var next = $(this).next();
+//     // if (!next.length) {
+//     // next = $(this).siblings(':first');
+//     // }
+//     // next.children(':first-child').clone().appendTo($(this));
     
-    for (var i=0;i<minPerSlide;i++) {
-        next=next.next();
-        if (!next.length) {
-        	next = $(this).siblings(':first');
-      	}
+//     // for (var i=0;i<minPerSlide;i++) {
+//     //     next=next.next();
+//     //     if (!next.length) {
+//     //     	next = $(this).siblings(':first');
+//     //   	}
         
-        next.children(':first-child').clone().appendTo($(this));
-      }
-});
+//     //     next.children(':first-child').clone().appendTo($(this));
+//     //   }
+// });

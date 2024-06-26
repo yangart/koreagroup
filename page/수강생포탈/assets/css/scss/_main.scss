@@ -102,35 +102,37 @@
     }
 }
 .dashboard {
-    .carousel-inner .carousel-item.active,
-    .carousel-inner .carousel-item-start, 
-    .carousel-inner .carousel-item-next,
-    .carousel-inner .carousel-item-prev { display:flex;gap:8px; }
-    .carousel-inner .carousel-item-right.active,
-    .carousel-inner .carousel-item-next,
-    .carousel-item-next:not(.carousel-item-start) {
-        transform: translateX(50%) !important;
-    }
+    // .carousel-inner .carousel-item.active,
+    // .carousel-inner .carousel-item-start, 
+    // .carousel-inner .carousel-item-next,
+    // .carousel-inner .carousel-item-prev { display:flex;gap:8px; }
+    // .carousel-inner .carousel-item-right.active,
+    // .carousel-inner .carousel-item-next,
+    // .carousel-item-next:not(.carousel-item-start) {
+    //     transform: translateX(50%) !important;
+    // }
 
-    .carousel-inner .carousel-item-left.active,
-    .carousel-item-prev:not(.carousel-item-end),
-    .active.carousel-item-start,
-    .carousel-item-prev:not(.carousel-item-end) {
-        transform: translateX(-50%) !important;
-    }
+    // .carousel-inner .carousel-item-left.active,
+    // .carousel-item-prev:not(.carousel-item-end),
+    // .active.carousel-item-start,
+    // .carousel-item-prev:not(.carousel-item-end) {
+    //     transform: translateX(-50%) !important;
+    // }
 
-    .carousel-item-next.carousel-item-start, .active.carousel-item-end {
-        transform: translateX(0) !important;
-    }
+    // .carousel-item-next.carousel-item-start, .active.carousel-item-end {
+    //     transform: translateX(0) !important;
+    // }
 
-    .carousel-inner .carousel-item-prev,
-    .carousel-item-prev:not(.carousel-item-end) {
-        transform: translateX(-50%) !important;
-    }
+    // .carousel-inner .carousel-item-prev,
+    // .carousel-item-prev:not(.carousel-item-end) {
+    //     transform: translateX(-50%) !important;
+    // }
     .carousel.container {
         padding:0;
-        height:100%;
+        height: calc(100% - 28px);
+        max-width:100%;
         div { height:100%; }
+        .row { --bs-gutter-x:8px; }
         a { 
             display:flex;
             height: 100%;
@@ -138,8 +140,10 @@
 
             img {
                 background:#ccc;
-                max-height: calc(100% - 28px);
-                flex:1;
+                //max-height: calc(100% - 28px);
+                // flex:1;
+                width:100%;
+                height: calc(100% - 28px);
                 // object-fit: contain;
             }
             p {
@@ -235,6 +239,9 @@
 @include breakpointMin(xl){
     .for-pc { display:flex !important; }
     .for-mo { display:none !important; }
+    .card:has(.card-head).class-detail {
+        display:flex !important;
+    }
 }
 @include breakpointMax(xl) {
     .for-pc { display:none !important; }
@@ -243,29 +250,33 @@
     #container .col-group {
         flex-direction: column;
     }
-    .class-detail.m-modal {
+    .card:has(.card-head).class-detail.m-modal {
         position:fixed;
         z-index:999;
-        top:56px;
-        left:0;
-        width:100%;
-        height:calc(100% - 56px);
+        top:100px;
+        left:calc(50% - 340px);
+        width:680px;
+        height:auto;
+        max-height:calc(100% - 200px);
+        box-shadow:0 0 50px rgba(0,0,0,.3);
+        padding:0;
+        display:none;
+
+        .card-head .btn-sm:has([class^=material-symbols]) {
+            margin-right:30px;
+        }
     }
     .class-board-wrap {
         .btn-sm:has([class^=material-symbols]) {
             margin-left:auto;
         }
     }
-    .card:has(.card-head).class-detail { 
-        box-shadow:none; 
-        padding:0;
-    }
     .dashboard {
+        display:block;
+        .col-group-right.fluid-card {
+            height:auto;
+        }
         .card-body{
-            .col-group-right.class-board-wrap {
-                max-height:none;
-                overflow: visible;
-            }
             &:has(.col-group-left) {
                 flex-direction: column;
                 .col-group-left,
@@ -273,7 +284,12 @@
                     width:100%;
                 }
             }
+            .col-group-right.class-board-wrap {
+                max-height:460px;
+            }
         }
+        .carousel.container .col-md-6 { width:50%; }
+        .carousel.container a img { aspect-ratio: 3/1; }
     }
     .card-subject-column {
         flex-direction: row;
@@ -287,14 +303,43 @@
             li { justify-content: center; }
         }
     }
+    .fc.fc-direction-ltr {
+        .fc-toolbar-title { width:136px; }
+        .fc-toolbar.fc-header-toolbar .fc-button {
+            padding:0.2em 0.3em;
+        }
+    }
+
 }
 @include breakpointMax(lg) {
 }
 @include breakpointMin(md){
 }
+
 @include breakpointMax(md){
     .header-nav { display:none; }
     .mobile-menu { display:block; }
+    .btn-group-sm > .btn:has([class^=material-symbols]), 
+    .btn-sm:has([class^=material-symbols]) { white-space:nowrap; }
+    #container .dashboard .col-group-left {
+        display:block;
+        height:auto;
+    }
+    .card-subject-column {
+        flex-direction:column;
+    }
+    #container .dashboard .col-group-right {
+        margin-top:0;
+    }
+    #calendar { aspect-ratio:2/3}
+    .card:has(.card-head).class-detail.m-modal {
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        max-height:100%;
+        border-radius:0;
+    }
 }
 @include breakpointMax(md) {
     

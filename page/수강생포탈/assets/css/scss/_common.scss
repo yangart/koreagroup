@@ -1258,8 +1258,13 @@ $transition-collapse: height .35s ease;
     display: none;
 
     &.active {
-        display: block;
+        display: flex;
         height:100%;
+        flex-direction: column;
+    }
+    .btn-sm.txt-success {
+        margin-top:8px;
+        margin-left:auto;
     }
 }
 
@@ -3781,21 +3786,20 @@ button:focus {
         padding: 0;
         height: calc(100% - 56px);
         display:none;
-
-        .m-close {
-            display:block;
-            width: 24px;
-            height: 24px;
-            margin: 0;
-            padding: 0;
-            background: url(../img/modal-close-ico@2x.png) no-repeat 50% 50%;
-            background-size: 24px auto;
-            opacity: 1;
-            position:absolute;
-            z-index:9;
-            top:var(--bs-gutter-y);
-            right:var(--bs-gutter-x);
-        }
+    }
+    .m-close {
+        display:block;
+        width: 24px;
+        height: 24px;
+        margin: 0;
+        padding: 0;
+        background: url(../img/modal-close-ico@2x.png) no-repeat 50% 50%;
+        background-size: 24px auto;
+        opacity: 1;
+        position:absolute;
+        z-index:9;
+        top:var(--bs-gutter-y);
+        right:var(--bs-gutter-x);
     }
 }
 @include breakpointMax(lg) {}
