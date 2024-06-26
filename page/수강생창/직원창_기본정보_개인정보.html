@@ -94,7 +94,7 @@
 					</div>
 					<div class="card-body">
 						<div class="row row-0 mb-lg-5">
-							<div class="card-member-profile col-auto">
+							<div class="card-member-profile">
 								<div class="member-profile-box">
 									<div class="member-profile-img"><img src="./assets/img/profile-sample.jpg"
 											alt="프로필 사진"></div>
@@ -105,68 +105,66 @@
 								</div>
 							</div>
 							<!-- // card-member-profile -->
-
-							<div class="card-member-info col-auto">
-								<div class="card-member-head">
-									<h6>김직원3</h6>
-								</div>
-								<div class="info-area">
-									<span>여자</span> /
-									<span>idid</span> /
-									<span><small>사원번호</small> 2165498</span>
-								</div>
-								<div class="row fs-14px">
-									<div class="col-3">
-										<label for="" class="form-label">이름</label>
-										<input type="text" class="form-control" id="">
-									</div>
-									<div class="col-3">
-										<label for="" class="form-label">상태</label>
-										<div>재직</div>
-									</div>
-									<div class="col-3">
-										<label for="" class="form-label">소속</label>
-										<select id="" class="form-select" data-choices data-choices-search-false>
-											<option value="01">컴퓨터강남 &gt; 사업부 &gt; 1_1팀</option>
-											<option value="02">option 2</option>
-											<option value="03">option 3</option>
-										</select>
-									</div>
-									<div class="col-3">
-										<label for="" class="form-label">입사일(최초)/퇴사일
-										</label>
-										<div>2024-03-12 (2000-01-01) / 2024-12-31</div>
-									</div>
-									<div class="col-3">
-										<label for="" class="form-label">직위</label>
-										<div>과장</div>
-									</div>
-									<div class="col-3">
-										<label for="" class="form-label">직책</label>
-										<div>
-											컴퓨터홍대 &gt; 사업부&gt; 과장<br>
-											컴퓨터부산 &gt; 사업부 &gt; 부장
+							<div class="card-member-info row row-0">
+								<div class="col-2">
+									<div class="d-flex flex-column align-center justify-content-center" style="height: 180px;">
+										<h6 class="mb-3">김직원3</h6>
+										<div class="info-area">
+											<span class="d-block">여자</span>
+											<span class="d-block">idid</span> 
+											<span class="d-block"><small>사원번호</small> 2165498</span>
 										</div>
 									</div>
-									<div class="col-3">
-										<label for="" class="form-label">계약 유형</label>
-										<div>정규직</div>
-									</div>
-									<div class="col-3">
-										<label for="" class="form-label">입사 유형</label>
-										<div>재입사</div>
-									</div>
-									<div class="col-3">
-										<label for="" class="form-label">이메일</label>
-										<input type="text" class="form-control" id="">
-									</div>
-									<div class="col-3">
-										<label for="" class="form-label">권한그룹</label>
-										<div>사업부(신인멘토)</div>
-									</div>
-								</div>
-								<div class="d-flex justify-content-sm-between">
 									<button type="button" class="btn btn-light">비밀번호 초기화</button>
+								</div>
+								<div class="col-10">
+									<table class="table-write table-fixed">
+										<colgroup>
+											<col style="width: 15%;">
+											<col>
+											<col style="width: 15%;">
+											<col>
+										</colgroup>
+										<tr>
+											<th>이름</th>
+											<td><input type="text" class="form-control flex-grow-1" id=""></td>
+											<th>상태</th>
+											<td>재직</td>
+										</tr>
+										<tr>
+											<th>소속</th>
+											<td><select id="" class="form-select">
+												<option value="01">컴퓨터강남 &gt; 사업부 &gt; 1_1팀</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select></td>
+											<th>입사일(최초)/퇴사일</th>
+											<td>2024-03-12 (2000-01-01) / 2024-12-31</td>
+										</tr>
+										<tr>
+											<th>직위</th>
+											<td>과장</td>
+											<th>직책</th>
+											<td>
+												컴퓨터홍대 &gt; 사업부&gt; 과장<br>
+												컴퓨터부산 &gt; 사업부 &gt; 부장
+											</td>
+										</tr>
+										<tr>
+											<th>계약 유형</th>
+											<td>정규직</td>
+											<th>입사 유형</th>
+											<td>재입사</td>
+										</tr>
+										<tr>
+											<th>이메일</th>
+											<td><input type="text" class="form-control" id=""></td>
+											<th>권한그룹</th>
+											<td>사업부(신인멘토)</td>
+										</tr>
+									</table>
+								</div>
+								<div class="d-flex flex-right">
 									<button type="submit" class="btn btn-primary">저장</button>
 								</div><!-- // row -->
 							</div><!-- // card-member-info -->
