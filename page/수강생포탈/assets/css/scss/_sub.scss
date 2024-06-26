@@ -1,28 +1,3 @@
-
-// *::-webkit-scrollbar {
-//     width: 6px;
-//     height: 6px;
-//     box-sizing: border-box;
-// }
-// *::-webkit-scrollbar-thumb {
-//     border-radius: 2em;
-// }
-// *::-webkit-scrollbar-track {
-//     width: 16px;
-//     background-color: transparent;
-// }
-
-/*layout*/
-.nav.archive-nav + .nav.card-tabs {
-    margin-top:20px;
-}
-.nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    a {
-        white-space: nowrap;
-    }
-}
 /* 설문지 */
 .survey-area,
 .survey-list {
@@ -37,93 +12,10 @@
     }
 }
 
-/* component */
-.box-list {
-    &.col2 {
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-.overflow-y-auto {
-    overflow-y: auto;
-}
-.btn-delete {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: url(../img/modal-survey-ico@2x.png) no-repeat 50% 50% / 16px auto;
-    text-indent: -9999px;
-    font-size: 0;
-    vertical-align: middle;
-}
-.border-box {
-    border:1px solid var(--body-color);
-    margin-bottom: var(--bs-gutter-y);
-    padding:var(--bs-gutter-x);
-    border-radius: var(--border-radius);
-}
-.bullet,
-.bullet-dash  {
-    li {
-        position: relative;
-        padding-left:12px;
-        &::before {
-            position: absolute;
-            left:0;
-            content: "⋅";
-        }
-        @at-root .bullet-dash li::before {
-            content: "-";
-        }
-    }
-}
-.file-cus {
-    input[type=file] {
-      position: absolute;
-      width: 0;
-      height: 0;
-      opacity: 0;
-    }
-}
-table {
-    .bg {
-        background-color: $bg-light-primary;
-        th,
-        td {
-            background-color: $bg-light-primary;
-        }
-    }
-}
-
-
-/*pay-total */
-.pay-total-list {
-    margin-top:20px;
-    padding:20px;
-    border-top:2px solid var(--body-color);
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    gap:4px;
-    li {
-        display: flex;
-        gap:8px;
-        justify-content: flex-end;
-    }
-}
-.pay-total {
-    display: flex;
-    gap:16px;
-    justify-content: flex-end;
-    font-size:18px;
-    background-color: var(--border-color-light);
-    padding:20px;
-}
-
 /*커뮤니티*/
 .event-list,
 .event-v-list {
     display: grid;
- 
     gap:24px;
     li {
         overflow: hidden;
@@ -372,7 +264,6 @@ table {
         background-color:$bg-light-primary;
         border-left: none;
     }
-    
 }
 
 /* 교육과정 */
@@ -410,7 +301,57 @@ table {
     .curriculum-list .dep03 li a:hover{text-decoration:none; background:#0070f0; color:#fff !important; }
     .curriculum-list  .dep03 li a:hover:after{background: url('https://koreaitacademy.com/2023/img/icon-ar-right-wh.png') left center no-repeat;background-size:cover; }
 }
-
+/*따즈아*/
+.csIntro {width:100%; line-height:1.6;max-width:1060px; margin:0 auto; position:relative;}
+.csIntro * { line-height:1.6 }
+.csIntro:after {content:""; display:table; clear:both;}
+.csIntro img {display:block; max-width:100%; margin:0 auto;}
+.csIntro h3 {font-family:"Rajdhani", sans-serif; font-size:16pt; color:#202020; font-weight:700; text-align:center; text-transform:uppercase;}
+.csIntro01 {background:url("http://old.ddazua.com/img/course/intro01_bg.jpg")no-repeat center center; background-size:auto 100%;}
+.csIntro02 {padding-top:60px; padding-bottom:60px;}
+.csiSlider {margin:0 -10px;}
+.csiCont {padding:40px 10px 0 10px;}
+.csiCont em {display:block; padding-bottom:58%;}
+.csiCont h5 {letter-spacing:-0.075em; color:#333333; font-weight:500; font-size:14pt; margin-top:15px;}
+.csiCont p {letter-spacing:-0.075em; color:#666666; font-size:11pt;}
+.csipSlider {margin:0 -10px;}
+.csipSlider .slick-slide {padding:40px 10px 0 10px;}
+.csipSlider .slick-slide em {display:block; padding-bottom:58%;}
+.csIntro03 {background:#fafafa; padding-top:60px; padding-bottom:60px; text-align:center;}
+.csIntro03 h4 {font-size:18pt; color:#202020; margin-top:50px; font-weight:700;}
+.csIntro03 p {font-size:11pt; color:#202020;}
+.csIntro03 h5 {margin-top:30px; font-size:18pt; color:#202020; font-weight:700; position:relative; padding-bottom:100px;}
+.csIntro03 h5:after {content:""; display:block; width:1px; height:70px; background:#000; position:absolute; left:50%; bottom:0;}
+.csIntro03 h5 span {font-weight:300;}
+.csIntro03 dl {}
+.csIntro03 dl dt {margin-top:20px; font-size:18pt; color:#202020; font-weight:700;}
+.csIntro03 dl dt span {color:#ed1c24;}
+.csIntro03 dl dd {font-size:11pt; color:#666666;}
+.csIntro04 {background:url("http://old.ddazua.com/img/course/intro04_bg.jpg")no-repeat center center; text-align:center; padding:60px 0;}
+.csIntro04 h3 {font-weight:300; color:#fff; font-size:24pt; letter-spacing:-0.075em;}
+.csIntro04 h3 span {font-weight:700;}
+.csIntro04 ul {display:inline-block; white-space:nowrap; text-align:left; margin-top:10px;}
+.csIntro04 ul li {color:#fff; font-weight:300; padding:2px 0; font-size:11pt; padding-left:25px; background:url("http://old.ddazua.com/img/course/intro04_chk.png")no-repeat left center;}
+.csIntro05 {text-align:center; padding:60px 0; color:#202020;}
+.csIntro05 h3 {font-size:20pt; font-weight:700; line-height:1.0em;}
+.csIntro05 h3 em {font-style:normal; display:block; font-weight:300; font-size:11pt;}
+.csIntro05 h4 {font-size:11pt; font-weight:300; line-height:1.3em; margin-top:20px; padding-bottom:85px; position:relative; margin-bottom:10px;}
+.csIntro05 h4:after {content:""; display:block; width:1px; height:70px; background:#000; position:absolute; left:50%; bottom:0;}
+.csIntro05 h4 span {display:block;}
+.csIntro05 h5 {font-size:24pt; font-weight:300;}
+.csIntro05 h5 b {font-weight:700;}
+.csIntro05 h5 span {display:inline-block; position:relative;}
+.csIntro05 h5 span:after {content:""; display:block; position:absolute; left:-2px; right:-8px; bottom:-3px;; height:20px; background:url("http://old.ddazua.com/img/course/intro05_underline.png")no-repeat center bottom; background-size:100% auto;}
+.csIntro05 ul {padding-top:50px;}
+.csIntro05 ul li {display:inline-block; white-space:nowrap; width:230px;}
+.csIntro05 ul li em {display:block; margin:0 auto; width:110px; height:110px; border-radius: 110px 110px 110px 110px; -moz-border-radius: 110px 110px 110px 110px; -webkit-border-radius: 110px 110px 110px 110px;}
+.csIntro05 ul li p {margin-top:15px; line-height:1.2em;}
+.csIntro06 {background:url("http://old.ddazua.com/img/course/intro06_bg.jpg")no-repeat center center; text-align:center; padding:60px 0;}
+.csIntro06 h3 {color:#fff; padding-top:380px; padding-bottom:30px; letter-spacing:-0.075em; line-height:1.3em; font-weight:300; font-size:20pt; background:url("http://old.ddazua.com/img/course/intro06_logo.png")no-repeat center top;}
+.csIntro06 h3 span {display:block;}
+.csIntro06 h3 span b {font-weight:700;}
+.csIntro06 a {display:inline-block; padding:10px 50px; background:#fff; color:#333; font-weight:300; font-size:12pt;}
+.csIntro06 a span {font-weight:500;}
 
 //pc wide 1400
 @include breakpointMax(xxl) {
@@ -419,7 +360,6 @@ table {
 
 //pc 1200
 @include breakpointMax(xl) {
-    .box-list,
     .job-list,
     .event-v-list{
         grid-template-columns: repeat(4, 1fr);
@@ -430,65 +370,64 @@ table {
         gap:16px;
     }
 }
-
+@include breakpointMin(lg) {
+    /*따즈아 */
+    .csiCont {width:33.3333% !important;}
+	.csipSlider .slick-slide {width:33.3333% !important;}
+}
 //ta 992
 @include breakpointMax(lg) {
-
+    /*따즈아 */
+    .csIntro {padding-left:15px; padding-right:15px;}
+	.csiSlider {margin:0; padding:20px 0 0;}
+	.csiCont {padding:0;}
+	.csiCont em {background-size:cover !important;}
+	.csiCont h5 {font-size:12pt; margin-top:10px; text-align:center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+	.csiCont p {font-size:10pt; text-align:center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+	.csiSlider .slick-dots {text-align:center; margin-top:10px;}
+	.csiSlider .slick-dots li {display:inline-block; width:10px; height:10px; background:#ddd; margin:0 2px; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px;}
+	.csiSlider .slick-dots li.slick-active {background:#ed1c24 ;}
+	.csiSlider .slick-dots button {display:none;}
+	.csipSlider {margin:0; padding:20px 0 0;}
+	.csipSlider .slick-slide {padding:0;}
+	.csipSlider .slick-slide em {background-size:cover !important;}
+	.csipSlider .slick-dots {text-align:center; margin-top:10px;}
+	.csipSlider .slick-dots li {display:inline-block; width:10px; height:10px; background:#ddd; margin:0 2px; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px;}
+	.csipSlider .slick-dots li.slick-active {background:#ed1c24 ;}
+	.csipSlider .slick-dots button {display:none;}
+	.csIntro03 {background:#fafafa; padding-top:60px; padding-bottom:60px; text-align:center;}
+	.csIntro03 h4 {font-size:14pt; margin-top:30px;}
+	.csIntro03 p {font-size:10pt;}
+	.csIntro03 h5 {margin-top:15px; font-size:14pt; padding-bottom:60px;}
+	.csIntro03 h5:after {height:40px;}
+	.csIntro03 dl dt {margin-top:20px; font-size:12pt;}
+	.csIntro03 dl dd {font-size:10pt;}
+	.csIntro03 dl dd span {display:block;}
+	.csIntro04 {background-size:cover;}
+	.csIntro04 h3 {font-size:18pt;}
+	.csIntro04 ul li {font-size:10pt; padding-left:15px; background-size:10px auto;}
+	.csIntro05 h3 {font-size:18pt; line-height:1.3em;}
+	.csIntro05 h3 span {display:block;}
+	.csIntro05 h3 em {font-size:9pt;}
+	.csIntro05 h4 {font-size:10pt; margin-top:15px; padding-bottom:60px; margin-bottom:10px; line-height:1.4em;}
+	.csIntro05 h4:after {height:40px;}
+	.csIntro05 h4 span {display:inline;}
+	.csIntro05 h5 {font-size:18pt;}
+	.csIntro05 ul {padding-top:30px;}
+	.csIntro05 ul:after {content:""; display:table; clear:both;}
+	.csIntro05 ul li {display:block; width:33.3333%; float:left;}
+	.csIntro05 ul li em {width:60px; height:60px; background-size:50% auto !important;}
+	.csIntro05 ul li p {margin-top:10px; font-size:8pt; line-height:1.4em;}
+	.csIntro06 {background-size:cover;}
+	.csIntro06 h3 {padding-top:190px; padding-bottom:15px;font-size:14pt; background-size:170px auto;}
+	.csIntro06 h3 span {display:block;}
+	.csIntro06 h3 span b {font-weight:700;}
+	.csIntro06 a {display:inline-block; padding:10px 50px; background:#fff; color:#333; font-weight:300; font-size:12pt;}
+	.csIntro06 a span {font-weight:500;}
 }
 
 //ta 768
 @include breakpointMax(md){
-    .modal-dialog {
-        padding:16px;
-        transform: none;
-        margin:0 !important;
-        max-width: 100% !important;
-        min-width: auto !important;
-        min-height: 100%;
-        transform: none !important;
-        .modal-content {
-            max-height: calc(100vh - 32px) !important;
-        }
-    }
-    .fnc-area {
-        margin-bottom: 8px;
-        flex-wrap: wrap;
-    }
-    .sch-area {
-        flex-direction: column;
-        gap:8px;
-        > .l-area,
-        > .r-area {
-            justify-content: flex-start;
-            width: 100%;
-            gap:4px;
-        }
-    }
-    .sch-area  {
-        padding:12px;
-        border:1px solid var(--border-color-light);
-        border-radius: var(--border-radius);
-        > .l-area {
-           input,
-           select {
-            flex:1;
-           }
-        }
-        > .r-area {
-            > * {
-                flex:1;
-            }
-        }
-    }
-    .info-list {
-        > li {
-            cite {
-                min-width: 48px;
-            }
-        }
-        font-size:12px;
-    }
-    .box-list,
     .job-list,
     .event-v-list {
         grid-template-columns: repeat(2, 1fr);
@@ -498,132 +437,9 @@ table {
         grid-template-columns: repeat(1, 1fr);
         gap:16px;
     }
-    .box-list {
-        &.col1 {
-            gap:8px;
-        }
-        .box-header,
-        .box-body,
-        .box-footer {
-            padding:12px;
-        }
-        .box-footer {
-            gap:4px;
-            .btn {
-                padding-left: 4px;
-                padding-right: 4px;
-                font-size:12px;
-            }
-        }
-    }
     .event-v-list  {
         gap:24px 8px;
     }
-
-    /*table */
-    .table-list,
-    .table-info {
-        th,
-        td {
-            font-size:13px;
-        }
-    }
-    .table-list  {
-		text-align: left;
-		thead {
-			display: none;
-		}
-		col,
-		thead th,
-		thead td,
-		tbody th,
-		tbody td  {
-			display: inline-block;
-			width: auto;
-			border: none;
-			height: auto;
-			min-height: 0;
-			padding: 0;
-			margin-bottom: 8px;
-			min-height:0;
-			line-height: 1.3;
-		}
-		tbody {
-            display: flex;
-            flex-direction: column;
-            gap:8px;
-			tr {
-				display: block;
-				width: 100%;
-				border: 1px solid var(--border-color-light);
-				padding: 16px;
-                border-radius: var(--border-radius);
-                // & > *:last-child {
-                //     margin-bottom: 0;
-                // }
-			}
-			td {
-				vertical-align: middle;
-				margin-right:16px;
-				&[data-tit]::before {
-					content: attr(data-tit) " : ";
-					display: inline-block;
-					margin-right:4px;
-					text-align: left;
-					color:#8d97a2;
-					vertical-align: top;
-					font-weight: 500;
-				}
-				&.text-start {
-					display: block;
-					margin-right: 0;
-                    a {
-                        display: block;
-                        overflow: hidden;
-                    }
-				}
-			}
-			.m-row {
-				display: block;
-				text-align: left;
-				padding-right:0;
-				margin-right:0;
-			}
-		}
-	}
-    .table-write {
-        border-top:1px solid var(--border-color-light);
-        border-bottom:1px solid var(--border-color-light);
-        table-layout: auto;
-        overflow: hidden;
-        @at-root .bg-light + .table-write{
-            margin-top:12px;
-        }
-        col,
-        colgroup {
-            display: none;
-        }
-        th,
-        td {
-            display: block;
-            width: 100%;
-            height: auto;		
-            border: none;
-            line-height: 1.33;
-            text-align: left;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-        th {
-            padding: 12px 16px;
-        }
-
-        td {
-            padding: 12px 16px;
-            
-        }
-    }
-
     .job-view {
         .job-view-info-list {
             padding-left:0;
@@ -654,7 +470,6 @@ table {
         .curriculum-list .dep03 li a:hover:after{background: url('https://koreaitacademy.com/2023/img/icon-ar-right-wh.png') left center no-repeat;background-size:cover; }
     }   
 }
-
 
 //mo 576
 @include breakpointMax(sm) {

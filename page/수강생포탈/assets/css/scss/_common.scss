@@ -3674,6 +3674,10 @@ button:focus {
     }
 }
 
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
 .box-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -3681,6 +3685,9 @@ button:focus {
     &.col1 {
         grid-template-columns: auto;
         gap:16px;
+    }
+    &.col2 {
+        grid-template-columns: repeat(2,1fr);
     }
     > li {
         display: flex;
@@ -3759,7 +3766,44 @@ button:focus {
         min-width: 120px;
     }
 }
-
+.btn-delete {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/modal-survey-ico@2x.png) no-repeat 50% 50% / 16px auto;
+    text-indent: -9999px;
+    font-size: 0;
+    vertical-align: middle;
+}
+.border-box {
+    border:1px solid var(--body-color);
+    margin-bottom: var(--bs-gutter-y);
+    padding:var(--bs-gutter-x);
+    border-radius: var(--border-radius);
+}
+.bullet,
+.bullet-dash  {
+    li {
+        position: relative;
+        padding-left:12px;
+        &::before {
+            position: absolute;
+            left:0;
+            content: "⋅";
+        }
+        @at-root .bullet-dash li::before {
+            content: "-";
+        }
+    }
+}
+.file-cus {
+    input[type=file] {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+}
 .m-close { display:none; }
 
 
@@ -3801,11 +3845,81 @@ button:focus {
         top:var(--bs-gutter-y);
         right:var(--bs-gutter-x);
     }
+    .box-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 @include breakpointMax(lg) {}
 @include breakpointMax(md) {
-    
+    .mbody-clause-title {
+        font-size: 14px;
+        span {
+            font-size: 12px;
+        }
+    }
+    .fnc-area {
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+    }
+    .sch-area  {
+        flex-direction: column;
+        gap:8px;
+        padding:12px;
+        border:1px solid var(--border-color-light);
+        border-radius: var(--border-radius);
+        > .l-area,
+        > .r-area {
+            justify-content: flex-start;
+            width: 100%;
+            gap:4px;
+        }
+        > .l-area {
+           input,
+           select {
+            flex:1;
+           }
+        }
+        > .r-area {
+            > * {
+                flex:1;
+            }
+        }
+    }
 
+    .info-list {
+        > li {
+            cite {
+                min-width: 48px;
+            }
+        }
+        font-size:12px;
+    }
+    .box-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap:8px;
+        &.col1 {
+            gap:8px;
+        }
+        .box-header,
+        .box-body,
+        .box-footer {
+            padding:12px;
+        }
+        .box-footer {
+            gap:4px;
+            .btn {
+                padding-left: 4px;
+                padding-right: 4px;
+                font-size:12px;
+            }
+        }
+    }
 }
 @include breakpointMax(sm) {}
-@include breakpointMax(xs) {}
+@include breakpointMax(xs) {
+    .box-list {
+        .box-footer {
+            flex-direction: column;
+        }
+    }
+}

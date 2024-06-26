@@ -499,8 +499,8 @@ body {
 .flex-box-contents {
   display: flex;
   flex-wrap: wrap;
-  margin-left:calc(var(--bs-gutter-x)* -.5);
-  margin-right:calc(var(--bs-gutter-x)* -.5);
+  // margin-left:calc(var(--bs-gutter-x)* -.5);
+  // margin-right:calc(var(--bs-gutter-x)* -.5);
   overflow:hidden;
   flex-direction: column;
   height:100%;
