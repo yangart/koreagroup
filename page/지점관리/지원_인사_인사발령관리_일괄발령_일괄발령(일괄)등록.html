@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1_1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xxl modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">인사발령 (일괄)</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-3">
+							<div class="table-head position-relative">
+								<div class="table-title mb-3">대상<span class="text-req ms-1">*</span></div>
+
+								<ul class="nav modal-tabmenu justify-content-end" id="modalTabMenu" role="tablist" style="position: absolute; right: 0; width: 100%;">
+									<li><a class="tab-btn active" href="#modalTabs1" data-bs-toggle="tab" role="tab" aria-controls="modalTabs1" aria-selected="true">개인</a></li>
+									<li><a class="tab-btn" href="#modalTabs2" data-bs-toggle="tab" role="tab" aria-controls="modalTabs2" aria-selected="false" tabindex="-1">팀</a></li>
+								</ul>
+							</div>
+
+							<div class="modal-tabpanel" id="modalTabPanel">
+								<div class="tab-pane active" id="modalTabs1" role="tabpanel">
+									<div class="row row-x6">
+										<div class="col-3">
+											<select class="form-select">
+												<option value="01">계열</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+										<div class="col-3">
+											<select class="form-select">
+												<option value="01">지점</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+										<div class="col-3">
+											<select class="form-select">
+												<option value="01">부서</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+										<div class="col-3">
+											<select class="form-select">
+												<option value="01">팀</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="row pt-2 row-x6">
+										<div class="col-10">
+											<input type="text" class="form-control" placeholder="이름">
+										</div>
+										<div class="col">
+											<button type="button" class="btn btn-point-deep search-btn">검색</button>
+										</div>
+									</div>
+									<div class="mbody-survey bg-white mt-2 pb-0">
+										<div class="mbody-survey-list simplebar-scrollable-y" data-simplebar data-simplebar-auto-hide="false" style="max-height: 587px;">
+											<div class="list-item">
+												<div class="title">
+													<p>홍길동1 대리 / 팀장</p> 
+												</div>
+												<a href="#" class="btn btn-outline-primary btn-sm">추가</a>
+											</div>
+											<div class="list-item">
+												<div class="title">
+													<p>홍길동1 대리 / 팀장</p> 
+												</div>
+												<a href="#" class="btn btn-outline-primary btn-sm">추가</a>
+											</div>
+											<div class="list-item">
+												<div class="title">
+													<p>홍길동1 대리 / 팀장</p> 
+												</div>
+												<a href="#" class="btn btn-outline-primary btn-sm">추가</a>
+											</div>
+											<div class="list-item">
+												<div class="title">
+													<p>홍길동1 대리 / 팀장</p> 
+												</div>
+												<a href="#" class="btn btn-outline-primary btn-sm">추가</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane" id="modalTabs2" role="tabpanel">
+									<div class="row row-x6">
+										<div class="col-6">
+											<select class="form-select">
+												<option value="01">계열</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+										<div class="col-6">
+											<select class="form-select">
+												<option value="01">지점</option>
+												<option value="02">option 2</option>
+												<option value="03">option 3</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="mbody-survey bg-white mt-2 pb-0">
+										<div class="mbody-survey-list simplebar-scrollable-y" data-simplebar data-simplebar-auto-hide="false" style="max-height: 627px;">
+											<div class="list-item">
+												<div class="title">
+													<p>사업부 > 1-1팀 (105명)</p> 
+												</div>
+												<a href="#" class="btn btn-outline-primary btn-sm">추가</a>
+											</div>
+											<div class="list-item">
+												<div class="title">
+													<p>사업부 > 1-1팀 (105명)</p> 
+												</div>
+												<a href="#" class="btn btn-outline-primary btn-sm">추가</a>
+											</div>
+											<div class="list-item">
+												<div class="title">
+													<p>사업부 > 1-1팀 (105명)</p> 
+												</div>
+												<a href="#" class="btn btn-outline-primary btn-sm">추가</a>
+											</div>
+										</div>
+									</div>						
+								</div>
+							</div>
+						</div>
+						<div class="col-9">
+							<div class="table-head justify-content-start gap-2">
+								<div class="table-title">발령 정보 (총 <span class="text-primary">200</span> 명)</div>
+								<div class="col-auto">
+									<select class="form-select">
+										<option value="01">기안 유형</option>
+										<option value="02">option 2</option>
+										<option value="03">option 3</option>
+									</select>
+								</div>
+							</div>
+							<p class="p-5 text-center text-secondary">기안 유형을 선택해주세요.</p>
+							<div class="table-responsive">
+								<table class="table-card">
+									<colgroup>
+										<col style="min-width: 48px;">
+										<col style="min-width: 100px;">
+										<col style="min-width: 200px;">
+										<col style="min-width: 100px;">
+										<col style="min-width: 100px;">
+										<col style="min-width: 120px;">
+										<col style="min-width: 120px;">
+										<col style="min-width: 120px;">
+										<col style="min-width: 120px;">
+										<col style="min-width: 120px;">
+										<col style="min-width: 120px;">
+										<col style="min-width: 100px;">
+										<col style="min-width: 140px;">
+										<col style="min-width: 160px;">
+										<col style="min-width: 100px;">
+										<col style="min-width: 100px;">
+										<col style="min-width: 100px;">
+									</colgroup>
+									<thead class="table-light">
+										<tr>
+											<th>순번</th>
+											<th>이름<span class="text-req ms-1">*</span></th>
+											<th>소속</th>
+											<th>직위</th>
+											<th>계약유형</th>
+											<th>
+												<select class="form-select">
+													<option value="01">이동 계열</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</th>
+											<th>
+												<select class="form-select">
+													<option value="01">지점</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</th>
+											<th>
+												<select class="form-select">
+													<option value="01">부서</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</th>
+											<th>
+												<select class="form-select">
+													<option value="01">팀</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</th>
+											<th>
+												<select class="form-select">
+													<option value="01">변경 직위</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</th>
+											<th>
+												<select class="form-select">
+													<option value="01">조정</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</th>
+											<th>담당업무</th>
+											<th>임명(겸직/면직)</th>
+											<th>
+												<input type="text" class="form-control flatpickr-input form-datepicker" placeholder="" value="발령일">													
+											</th>
+											<th>메모</th>
+											<th>파일</th>
+											<th>관리</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>홍길동1</td>
+											<td class="text-start">컴퓨터 &gt; 강남 &gt; 사업부 &gt; 1-1팀</td>
+											<td>대리</td>
+											<td>정규직</td>
+											<td>
+												<select class="form-select">
+													<option value="01">이동 계열</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">지점</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">부서</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">팀</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">변경 직위</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">조정</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<div class="d-flex gap-1">
+													<button type="button" class="btn btn-outline-primary btn-sm">임명 <span class="badge text-bg-secondary">1</span></button>								
+													<button type="button" class="btn btn-outline-primary btn-sm">면직 <span class="badge text-bg-secondary">1</span></button>
+												</div>								
+											</td>
+											<td>
+												<div class="col-auto">
+													<div class="input-group-flatpickr">
+														<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													</div>
+												</div>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-danger btn-sm">삭제</button>								
+											</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>홍길동1</td>
+											<td class="text-start">컴퓨터 &gt; 강남 &gt; 사업부 &gt; 1-1팀</td>
+											<td>대리</td>
+											<td>정규직</td>
+											<td>
+												<select class="form-select">
+													<option value="01">이동 계열</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">지점</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">부서</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">팀</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">변경 직위</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">조정</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<div class="d-flex gap-1">
+													<button type="button" class="btn btn-outline-primary btn-sm">임명 <span class="badge text-bg-secondary">1</span></button>								
+													<button type="button" class="btn btn-outline-primary btn-sm">면직 <span class="badge text-bg-secondary">1</span></button>
+												</div>								
+											</td>
+											<td>
+												<div class="col-auto">
+													<div class="input-group-flatpickr">
+														<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													</div>
+												</div>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-danger btn-sm">삭제</button>								
+											</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>홍길동1</td>
+											<td class="text-start">컴퓨터 &gt; 강남 &gt; 사업부 &gt; 1-1팀</td>
+											<td>대리</td>
+											<td>정규직</td>
+											<td>
+												<select class="form-select">
+													<option value="01">이동 계열</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">지점</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">부서</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">팀</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">변경 직위</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">조정</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<div class="d-flex gap-1">
+													<button type="button" class="btn btn-outline-primary btn-sm">임명 <span class="badge text-bg-secondary">1</span></button>								
+													<button type="button" class="btn btn-outline-primary btn-sm">면직 <span class="badge text-bg-secondary">1</span></button>
+												</div>								
+											</td>
+											<td>
+												<div class="col-auto">
+													<div class="input-group-flatpickr">
+														<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													</div>
+												</div>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-danger btn-sm">삭제</button>								
+											</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>홍길동1</td>
+											<td class="text-start">컴퓨터 &gt; 강남 &gt; 사업부 &gt; 1-1팀</td>
+											<td>대리</td>
+											<td>정규직</td>
+											<td>
+												<select class="form-select">
+													<option value="01">이동 계열</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">지점</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">부서</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">팀</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">변경 직위</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">조정</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<div class="d-flex gap-1">
+													<button type="button" class="btn btn-outline-primary btn-sm">임명 <span class="badge text-bg-secondary">1</span></button>								
+													<button type="button" class="btn btn-outline-primary btn-sm">면직 <span class="badge text-bg-secondary">1</span></button>
+												</div>								
+											</td>
+											<td>
+												<div class="col-auto">
+													<div class="input-group-flatpickr">
+														<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													</div>
+												</div>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-danger btn-sm">삭제</button>								
+											</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>홍길동1</td>
+											<td class="text-start">컴퓨터 &gt; 강남 &gt; 사업부 &gt; 1-1팀</td>
+											<td>대리</td>
+											<td>정규직</td>
+											<td>
+												<select class="form-select">
+													<option value="01">이동 계열</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">지점</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">부서</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">팀</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">변경 직위</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<select class="form-select">
+													<option value="01">조정</option>
+													<option value="02">option 2</option>
+													<option value="03">option 3</option>
+												</select>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<div class="d-flex gap-1">
+													<button type="button" class="btn btn-outline-primary btn-sm">임명 <span class="badge text-bg-secondary">1</span></button>								
+													<button type="button" class="btn btn-outline-primary btn-sm">면직 <span class="badge text-bg-secondary">1</span></button>
+												</div>								
+											</td>
+											<td>
+												<div class="col-auto">
+													<div class="input-group-flatpickr">
+														<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+													</div>
+												</div>														
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-primary btn-sm">추가</button>								
+											</td>
+											<td>
+												<button type="button" class="btn btn-outline-danger btn-sm">삭제</button>								
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+							<a href="#" class="btn btn-outline-danger">삭제</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point">저장</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1_1').modal('show');
+			$('#pageModal1_2').modal('show');
+			$('#pageModal2').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>
