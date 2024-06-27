@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+	<style>
+	
+	</style>
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xs modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">영수증</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="p-2 pt-0 fs-15px">
+						<dl class="d-flex justify-content-between">
+							<dt>거래일시</dt>
+							<dd>2024-06-10</dd>
+						</dl>
+						<dl class="d-flex justify-content-between pt-2 pb-2">
+							<dt>단말기번호</dt>
+							<dd>9000001002</dd>
+						</dl>
+						<dl class="d-flex justify-content-between">
+							<dt>승인번호</dt>
+							<dd>12345678</dd>
+						</dl>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-card">
+							<thead class="table-light">
+								<tr>
+									<th class="text-start">품목</th>
+									<th>수량</th>
+									<th class="text-end">단가</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-start">Aftereffects</td>
+									<td>1</td>
+									<td class="text-end">30,000원</td>
+								</tr>
+								<tr>
+									<td class="text-start">Photoshop</td>
+									<td>1</td>
+									<td class="text-end">70,000원</td>
+								</tr>
+								<tr>
+									<td class="text-start">Photoshop</td>
+									<td>1</td>
+									<td class="text-end">30,000원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="p-3 text-bg-light rounded mt-2 fs-15px">
+						<dl class="d-flex justify-content-between">
+							<dt>판매금액</dt>
+							<dd>130,000원</dd>
+						</dl>
+						<dl class="d-flex justify-content-between pt-3">
+							<dt>할&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;인</dt>
+							<dd>0원</dd>
+						</dl>
+						<dl class="d-flex justify-content-between pt-3 pb-3">
+							<dt>세&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금</dt>
+							<dd>0원</dd>
+						</dl>
+						<dl class="d-flex justify-content-between">
+							<dt>합&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;계</dt>
+							<dd>130,000원</dd>
+						</dl>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point-deep">출력</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>

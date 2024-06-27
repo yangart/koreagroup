@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+	<style>
+	
+	</style>
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">판매 내역</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<div class="table-responsive">
+						<table class="table table-card">
+							<thead class="table-light">
+								<tr>
+									<th>지점</th>
+									<th>수강생</th>
+									<th>유형</th>
+									<th>결제</th>
+									<th>환불</th>
+									<th>응시</th>
+									<th>결제금액</th>
+									<th>환불금액</th>
+									<th>상태</th>
+									<th>담당 멘토</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>컴퓨터강남</td>
+									<td><a href="#" class="btn-link">홍길동(1234)</a></td>
+									<td>ACP</td>
+									<td>3</td>
+									<td>2</td>
+									<td>1</td>
+									<td class="text-end">130,000</td>
+									<td class="text-end">70,000</td>
+									<td>결제완료</td>
+									<td><a href="#" class="btn-link">홍길동2</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="d-flex mt-4 mb-2 justify-content-between align-items-center">
+						<div class="table-title">사유</div>
+						<button type="button" class="btn btn-point-deep sm">환불신청</button>
+					</div>
+					<table class="table-card border-line">
+						<colgroup>
+							<col style="width: 42px;">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>
+									<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+								</th>
+								<th>시험과목</th>
+								<th>대면여부</th>
+								<th>응시유형</th>
+								<th>응시료</th>
+								<th>추천강사</th>
+								<th>상태</th>
+								<th>응시코드</th>
+								<th>응시여부</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="form-check empty"><input class="form-check-input" type="checkbox"></div>
+								</td>
+								<td class="text-start">Aftereffects</td>
+								<td>비대면</td>
+								<td>재응시</td>
+								<td>30,000</td>
+								<td>김강사</td>
+								<td class="text-start">결제완료</td>
+								<td><button type="button" class="btn btn-outline-primary">재발급</button></td>
+								<td>미응시</td>
+							</tr>	
+							<tr>
+								<td>
+									<div class="form-check empty"><input class="form-check-input" type="checkbox" disabled></div>
+								</td>
+								<td class="text-start">Photoshop</td>
+								<td>대면</td>
+								<td>신규</td>
+								<td>70,000</td>
+								<td>김강사</td>
+								<td class="text-start">환불완료<br>2024-01-01 12:30:31</td>
+								<td><b>ABC1234ABC</b></td>
+								<td>미응시</td>
+							</tr>	
+							<tr>
+								<td>
+									<div class="form-check empty"><input class="form-check-input" type="checkbox" disabled></div>
+								</td>
+								<td class="text-start">Photoshop</td>
+								<td>대면</td>
+								<td>신규</td>
+								<td>70,000</td>
+								<td>김강사</td>
+								<td class="text-start">환불신청 <button type="button" class="btn btn-outline-primary">환불완료</button></td>
+								<td><b>ABC1234ABC</b></td>
+								<td>미응시</td>
+							</tr>					
+						</tbody>
+					</table>
+
+					<div class="d-flex gap-4 p-3 text-bg-light rounded mt-2 justify-content-end align-items-center">
+						<div><b>총 3건</b><small>(신규 1건, 재응시 2건)</small></div>
+						<div><b>총 응시료 :</b> 130,000 원</div>
+						<div><b>총 할인 :</b> 0 원</div>
+						<div><b>최종 결제금액 :</b><strong class="fs-20px">130,000</strong>원</div>
+					</div>
+
+					<div class="table-title mt-4 mb-2">결제내역</div>
+					<table class="table-card">
+						<colgroup>
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>결제유형</th>
+								<th>결제금액</th>
+								<th>결제상태</th>
+								<th>요청일시</th>
+								<th>처리일시</th>
+								<th>관리</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-start">PG(카드)</td>
+								<td class="text-danger">-130,000</td>
+								<td>환불</td>
+								<td>2024-01-10 13:11:44</td>
+								<td>2024-01-10 13:11:44</td>
+								<td></td>
+							</tr>	
+							<tr>
+								<td class="text-start">카드</td>
+								<td>60,000</td>
+								<td>결제완료</td>
+								<td>2024-01-10 13:11:44</td>
+								<td>2024-01-10 13:11:44</td>
+								<td><button type="button" class="btn btn-outline-primary">영수증</button></td>
+							</tr>
+							<tr>
+								<td class="text-start">PG(카드)</td>
+								<td>130,000</td>
+								<td>환불</td>
+								<td>2024-01-10 13:11:44</td>
+								<td>2024-01-10 13:11:44</td>
+								<td></td>
+							</tr>				
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1').modal('show');
+		});
+	</script>
+
+</body>
+
+</html>
