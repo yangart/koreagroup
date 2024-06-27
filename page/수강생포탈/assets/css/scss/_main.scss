@@ -234,7 +234,10 @@
     }
 }
 
-
+.card:has(#mainBanner) {
+    padding:0;
+    overflow:hidden;
+}
 
 @include breakpointMin(xl){
     .for-pc { display:flex !important; }

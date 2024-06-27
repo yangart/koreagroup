@@ -8047,6 +8047,11 @@ button:focus {
   margin-top: 12px;
 }
 
+.card:has(#mainBanner) {
+  padding: 0;
+  overflow: hidden;
+}
+
 @media (min-width: 1201px) {
   .for-pc {
     display: -webkit-box !important;
