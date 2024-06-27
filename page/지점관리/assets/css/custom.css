@@ -4,7 +4,6 @@
 	Date	: 2024-06-01
 	Project	: Korea Edu Group
 */
-@import url("scss/hwa.css");
 #scroll-top {
   display: none;
 }
@@ -577,6 +576,83 @@ input:-webkit-autofill {
   margin-top: 4px;
 }
 
+/* 2024-06-10 */
+.table-body .table th {
+  height: 49px;
+}
+
+.form-list {
+  padding-left: 20px;
+  position: relative;
+}
+
+.form-list:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 0;
+  top: 10px;
+  border: 1px solid var(--bs-gray-200);
+  border-radius: 100%;
+}
+
+.modal-survey-list.overflow-y-scroll {
+  padding-right: 5px;
+  max-height: 40vh;
+}
+
+.lnb-scroll-y, .box-scroll-y {
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 0;
+}
+
+.title-group {
+  height: 52px;
+}
+
+.table td i.file {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 16px 16px;
+  margin-left: 2px;
+  background-image: url(../../img/nav-menu-ico11@2x.png);
+}
+
+.table td i.new {
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.table td i.comment {
+  width: 12px;
+  height: 12px;
+  background: url(../../img/breadcrumb-item-ico@2x.png) no-repeat 0 50%/12px 12px;
+  margin-right: 5px;
+  padding: 0;
+}
+
+.comment-profile {
+  width: 40px;
+  height: 40px;
+}
+
+.form-radio-box {
+  height: 32px;
+}
+
+.border-right {
+  border-right: 1px solid var(--bs-gray-200);
+}
+
 .tit-area-bg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,7 +692,6 @@ ul.bullet-dash li::before {
   content: "- ";
 }
 
-/* 2024-06-10 */
 .card-header.card-search .row > div {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -640,7 +715,7 @@ ul.bullet-dash li::before {
   display: inline-block;
   width: 28px;
   height: 28px;
-  background: url(../libs/feather-icons/icons/trash-2.svg) no-repeat 50% 50%/16px auto;
+  background: url(../lifbs/feather-icons/icons/trash-2.svg) no-repeat 50% 50%/16px auto;
   text-indent: -9999px;
   font-size: 0;
 }
