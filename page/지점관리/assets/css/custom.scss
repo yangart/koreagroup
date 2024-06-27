@@ -13,10 +13,10 @@
 
 
 .inner-scroll {height: 683px;overflow-y: auto;}
-::-webkit-scrollbar {width: 10px; height: 10px}
-::-webkit-scrollbar-thumb {background-color: rgba(64, 81, 137);border-radius: 10px;}
-::-webkit-scrollbar-thumb:hover {background-color: rgba(54, 69, 116);border-radius: 10px;}
-::-webkit-scrollbar-track {background-color: rgba(64, 81, 137, 0.1);border-radius: 10px;}
+::-webkit-scrollbar {width: 6px; height: 6px}
+::-webkit-scrollbar-thumb {background-color: rgba(64, 81, 137);border-radius: 3px;}
+::-webkit-scrollbar-thumb:hover {background-color: rgba(54, 69, 116,1);border-radius: 3px;}
+::-webkit-scrollbar-track {background-color: rgba(64, 81, 137, 0.1);border-radius: 3px;}
 
 
 .auth-page-wrapper {display: flex;height: 100vh;align-items: center;}

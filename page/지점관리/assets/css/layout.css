@@ -182,7 +182,7 @@ body{overflow-y: hidden;margin:0;font-family:var(--font-family);font-size:var(--
 .breadcrumb-item.active{color:#6571ff;font-weight:600;}
 .breadcrumb-item + .breadcrumb-item{margin-left:8px;padding:0;}
 .breadcrumb-item + .breadcrumb-item::before{content:'';width:12px;height:20px;background:url(../img/breadcrumb-item-ico@2x.png) no-repeat 0 50% / 12px 12px;margin-right:8px;padding:0;}
-.page-header-right{display:flex;align-items:center;}
+.page-header-right{display:flex;align-items:center;margin-left:auto;}
 .page-header .btn-topbar{width:36px;height:36px;-webkit-transition:all .5s ease;transition:all .5s ease;border:0 none;border-radius:50%;background-color:transparent;padding:0;}
 .page-header .btn-topbar.active,.page-header .btn-topbar:active,.page-header .btn-topbar:focus,.page-header .btn-topbar:hover{background-color:rgba(53, 119, 241, 0.12);}
 .page-header .btn-topbar i{display:block;width:36px;height:36px;background-position:50% 50%;background-size:20px 20px;background-repeat:no-repeat;}

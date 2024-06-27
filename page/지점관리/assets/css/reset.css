@@ -123,7 +123,7 @@ a:hover,a:active,a:focus{text-decoration:none}
 .bg-secondary{background-color:#0ab39c !important;}
 .bg-warning{background-color:#ffa133 !important;}
 .bg-danger{background-color:#ff3366 !important;}
-.bg-light{background-color:##f8f9fa !important;}
+.bg-light{background-color:#f8f9fa !important;}
 .bg-success{background-color:#405189 !important;}
 .btn-link{text-decoration:underline !important;color:#076aff;}
 
@@ -131,15 +131,19 @@ a:hover,a:active,a:focus{text-decoration:none}
 .txt-secondary{color:#0ab39c !important;}
 .txt-warning{color:#ffa133 !important;}
 .txt-danger{color:#ff3366 !important;}
-.txt-light{color:##f8f9fa !important;}
+.txt-light{color:#f8f9fa !important;}
 .txt-success{color:#405189 !important;}
 
 .color-primary{color:#076aff !important;}
 .color-secondary{color:#0ab39c !important;}
 .color-warning{color:#ffa133 !important;}
 .color-danger{color:#ff3366 !important;}
-.color-light{color:##f8f9fa !important;}
+.color-light{color:#f8f9fa !important;}
 .color-success{color:#405189 !important;}
+
+
+.color-red{color:#ff3366 !important;}
+.color-blue{color:#076aff !important;}
 
 .btn-icon{}
 .btn-icon i{text-indent:-9999px;font-size:0;}
@@ -430,6 +434,24 @@ textarea.form-editor{height:392px;}
 .gap-32px{gap:32px;}
 .gap-36px{gap:36px;}
 .gap-40px{gap:40px;}
+
+.h-15 { height:15% }
+.h-20 { height:20% }
+.h-25 { height:25% }
+.h-30 { height:30% }
+.h-35 { height:35% }
+.h-40 { height:40% }
+.h-45 { height:45% }
+.h-50 { height:50% }
+.h-55 { height:55% }
+.h-60 { height:60% }
+.h-65 { height:65% }
+.h-70 { height:70% }
+.h-75 { height:75% }
+.h-80 { height:80% }
+.h-85 { height:85% }
+.h-90 { height:90% }
+.h-95 { height:95% }
 
 .row>*{position:relative}
 .flex-row{--bs-gutter-x:0px;--bs-gutter-y:0px;}
