@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal1_1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xxl modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">국비훈련 현황 설정</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+						id="close-modal"></button>
+				</div><!-- // modal-header -->
+				<div class="modal-body">
+					<table class="table-write mb-lg-3 table-fixed">
+						<thead>
+							<tr>
+								<th colspan="10">기본정보</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>계열</th>
+								<td>컴퓨터</td>
+								<th>지점</th>
+								<td>강남</td>
+								<th>훈련 유형</th>
+								<td>산대특</td>
+								<th>국기직종</th>
+								<td>-</td>
+								<th>NCS 분류</th>
+								<td>문화콘텐츠제작</td>
+							</tr>
+							<tr>
+								<th>과목명</th>
+								<td colspan="3">과목명</td>
+								<th>강의상태</th>
+								<td>수강중</td>
+								<th>강사명</th>
+								<td>강사1</td>
+								<th>수업 시작 시각</th>
+								<td>09:30</td>
+							</tr>
+							<tr>
+								<th>개강일</th>
+								<td>2024-01-07</td>
+								<th>종강일</th>
+								<td>2024-01-07</td>
+								<th>회차</th>
+								<td>19</td>
+								<th>정원(국비)</th>
+								<td>20</td>
+								<th>모집 훈련생수</th>
+								<td><input type="text" class="form-control text-right"></td>
+							</tr>
+						</tbody>
+					</table>
+					<ul class="nav nav-tabs mb-4">
+						<li class="nav-item"><a class="nav-link active" href="#">훈련비(정부지원금)</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">훈련생 정보</a></li>
+					</ul>
+					<div class="row">
+						<div class="col-4">
+							<div class="list-group">
+								<button type="button" class="list-group-item list-group-item-action">
+									<span class="d-flex justify-content-between align-items-center">
+										<strong>훈련비(정부지원금)</strong>
+										<strong>총 <span class="txt-primary">628,810,060</span>원</strong>
+									</span>
+								</button>
+								<button type="button" class="list-group-item list-group-item-action list-group-item-dark">
+									<span class="d-flex justify-content-between align-items-center">
+										<small class="d-flex gap-2"><span>1차</span><span>2024-01-08 12:11:09 확정</span></small>
+										<small>628,810,060 원</small>
+									</span>
+								</button>
+								<button type="button" class="list-group-item list-group-item-action">
+									<span class="d-flex justify-content-between align-items-center">
+										<small class="d-flex gap-2"><span>2차</span><span>미확정</span></small>
+										<small>628,810,060 원</small>
+									</span>
+								</button>
+							</div>
+							<div class="mt-3">
+								<button class="btn btn-outline-active">추가</button>
+							</div>
+						</div>
+						<div class="col-8">
+							<div class="tit-area-bg">
+								<div class="tit">
+									훈련비(정부지원금) - 2 차
+								</div>
+								<div>
+									<button type="button" class="btn btn-outline-primary">엑셀로 일괄 입력하기</button>
+								</div>
+							</div>
+							<table class="table fs-14px">
+								<thead>
+									<tr>
+										<th>번호</th>
+										<th>이름</th>
+										<th>생년월일</th>
+										<th>대상자구분</th>
+										<th>지원대상자구분</th>
+										<th>담당 멘토</th>
+										<th style="background-color:gainsboro;">훈련비(정부지원금) <i class="text-req">*</i></th>
+										<th>메모</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>김수강</td>
+										<td>2024-01-01</td>
+										<td>01유형-요건심사형</td>
+										<td>실업자</td>
+										<td>김멘토 책임멘토</td>
+										<td style="background-color:gainsboro;">
+											<div class="d-flex gap-1 align-items-center">
+												<input type="text" class="form-control align-right"><small>원</small>
+											</div>
+										</td>
+										<td>
+											<input type="text" class="form-control">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point">저장</a>
+							<a href="#" class="btn btn-point">확정</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+		$(function () {
+			$('#pageModal1_1').modal('show');
+		});
+	</script>
+
+	<!-- tooltip -->
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.bundle.js"></script>
+	<script>
+		$(function () {			
+			const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+			const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+		});	
+	</script>
+</body>
+
+</html>

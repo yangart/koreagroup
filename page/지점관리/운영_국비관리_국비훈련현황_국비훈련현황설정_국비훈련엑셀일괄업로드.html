@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- 파일 등록 -->
+	<div class="modal fade" id="pageModal1" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">국비훈련 정보 엑셀 일괄 입력하기</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+					<div class="border border-dark p-3 fs-14px mb-3">
+						<strong class="txt-primary">※ 엑셀로 일괄 입력하는 방법</strong><br>
+						1) 먼저 [다운로드] 버튼을 눌러 엑셀 양식을 다운로드 하세요.<br>
+						2) HRD 사이트에서 해당 훈련 과정의 [HRD 훈련생유형구분], [HRD취업정보확인] 엑셀 파일을 다운로드 하세요.<br>
+						3) [엑셀 양식]에 있는 칼럼명과 일치하는 항목을 [HRD] 엑셀파일에서 찾은 후 복사 붙여넣기 하세요.<br>
+						4) [파일 찾기] 버튼을 눌러 데이터 입력이 완료된 엑셀 양식을 선택하세요.<br>
+						5) 마지막으로 [업로드] 버튼을 누르면 엑셀 파일의 데이터가 일괄 입력 됩니다.<br><br>
+
+						<ul class="bullet-dash">
+							<li>동일한 이름과 동일한 생년월일을 가진 서로 다른 수강생이 존재할 경우 해당 수강생들은 엑셀로 일괄 입력되지 않습니다. 직접 입력으로 진행해 주세요.</li>
+							<li>모든 항목을 입력하지 않아도 업로드 가능합니다. </li>
+						</ul>
+					</div>
+					<table class="table-write">
+						<colgroup>
+							<col style="width:20%">
+							<col style="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>일괄 입력 양식</th>
+								<td>
+									<a href="#none" class="btn btn-outline-primary">다운로드</a>
+								</td>
+							</tr>
+							<tr>
+								<th>일괄 입력하기</th>
+								<td>
+									<input type="file" class="form-control" id="">
+								</td>
+							</tr>
+						</tbody>
+					</table><!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-point">업로드</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- // modal : 파일 등록 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script>
+	$(function(){
+		$('#pageModal1').modal('show');
+	});
+	</script>
+
+</body>
+</html>
