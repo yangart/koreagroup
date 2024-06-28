@@ -290,6 +290,9 @@ ul.bullet-dash {
 	max-height: calc(100vh - (var(--bs-modal-margin) * 2));
 	.modal-body {
 	  overflow-y: auto;
+	  &:has(.overflow-y-auto) {
+		overflow-y:hidden;
+	  }
 	}
   }
   

@@ -487,6 +487,7 @@ textarea.form-editor{height:392px;}
 .table td.row{display:table-cell !important;--bs-gutter-x:0px !important;--bs-gutter-y:0px !important;margin:0 !important;}
 
 .col-64px{width:100%;max-width:calc(var(--bs-gutter-x) + 64px);}
+.col-80px{width:100%;max-width:calc(var(--bs-gutter-x) + 80px);}
 .col-90px{width:100%;max-width:calc(var(--bs-gutter-x) + 90px);}
 .col-100px{width:100%;max-width:calc(var(--bs-gutter-x) + 100px);}
 .col-120px{width:100%;max-width:calc(var(--bs-gutter-x) + 120px);}
@@ -495,6 +496,10 @@ textarea.form-editor{height:392px;}
 .col-200px{width:100%;max-width:calc(var(--bs-gutter-x) + 200px);}
 .col-320px{width:100%;max-width:calc(var(--bs-gutter-x) + 320px);}
 .col-340px{width:100%;max-width:calc(var(--bs-gutter-x) + 340px);}
+.col-360px{width:100%;max-width:calc(var(--bs-gutter-x) + 360px);}
+.col-480px{width:100%;max-width:calc(var(--bs-gutter-x) + 480px);}
+.col-520px{width:100%;max-width:calc(var(--bs-gutter-x) + 520px);}
+.col-560px{width:100%;max-width:calc(var(--bs-gutter-x) + 560px);}
 
 .offset-5p{margin-left:5%;}
 .offset-10p{margin-left:10%;}

@@ -582,5 +582,27 @@
 .dashboard-body .table-card td { white-space:nowrap; }
 .card .card-head { display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
 
+.btn-sm:has(.ico-setting) { width:28px;height:28px;padding:0;display:flex;align-items: center;justify-content: center;}
+.ico-setting { display:block;width:16px;height:16px;;background:url(../img/app-menu-ico12@2x.png) 50% 50% no-repeat;background-size:16px 16px}
+
+.dashboard-tabmenu{ flex:1;box-shadow:inset 0 -1px 0 0 #e9ebec;}
+.dashboard-tabmenu li{ flex:auto; }
+.dashboard-tabmenu li .tab-btn{display:flex;flex-direction:column;justify-content:center;align-items:center;height:48px;padding:0 8px;font-size:16px;font-weight:600;line-height:1.43;color:#b5b5b5;}
+.dashboard-tabmenu li .tab-btn small { font-size:12px; }
+.dashboard-tabmenu li .tab-btn.active{color:#212529;box-shadow:inset 0 -2px 0 0 #6571ff;}
+
+.dashboard-tabpanel > .tab-pane {display:none;}
+.dashboard-tabpanel > .tab-pane.active{display:block;}
+
 .status-board { display:flex;justify-content: center;flex-direction: column;font-size:14px;flex:auto;padding:16px;border-radius:8px;background:#d1e7dd55; }
 .status-board strong { font-size:20px; }
+
+i.line { display:inline-block;position:relative;letter-spacing:-0.12em;font-size:11px;position:relative;top:-1px; }
+i.line:before { content:'--';vertical-align:text-bottom;}
+i.line:after { content:'--';vertical-align:text-bottom;}
+
+.card-list-simple li { display:flex;gap:2px;align-items:center;justify-content:space-between;font-size:14px;padding:12px 8px;border-bottom:1px solid #e9ecef;cursor:pointer; }
+.card-list-simple li a { flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+.card-list-simple li b { font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+.card-list-simple li:hover { background-color:var(--bs-gray-100); }
+.card-list-simple li time { font-size:13px;color:#808080 }

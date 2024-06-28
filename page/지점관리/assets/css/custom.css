@@ -809,6 +809,9 @@ ul.bullet-dash li::before {
 .modal-content .modal-body {
   overflow-y: auto;
 }
+.modal-content .modal-body:has(.overflow-y-auto) {
+  overflow-y: hidden;
+}
 
 /* form */
 .file-cus input[type=file] {
