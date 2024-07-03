@@ -175,6 +175,9 @@
 .profile-card-close{display:inline-block;padding-left:20px;background:url(../img/profile-close-ico@2x.png) no-repeat 0 50% / 16px auto;font-size:14px;font-weight:600;line-height:1.43;color:#405189;}
 
 .profile-content{max-width:958px;margin:70px auto;}
+.profile-content-full {margin:70px 0;}
+.profile-content-full.mbody-forms .table-head {margin-top:20px;margin-bottom:8px;}
+.profile-content-full.mbody-forms .row{--bs-gutter-x: 24px;--bs-gutter-y: 16px;}
 
 /* Modal */
 .modal{min-width:1024px;padding:0 1.75rem !important}
@@ -280,7 +283,6 @@ body:not(.modal-open) .modal-wrap .modal-footer,
 .modal-xs .modal-body{padding:30px 20px;text-align:center;}
 
 .modal-body .table-head{margin-top:20px;margin-bottom:8px;}
-
 
 .modal-body .table-card>:not(caption)>*>*{padding:6px 2px;}
 .modal-body .table-card .badge{margin-right:3px;padding:0 10px;border-radius:20px;line-height:20px;font-size:12px;font-weight:600;text-align:center;color:#fff;}
