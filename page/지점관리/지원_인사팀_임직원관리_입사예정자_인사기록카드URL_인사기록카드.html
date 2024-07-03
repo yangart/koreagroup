@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>지점관리자</title>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta property="og:title" content="지점관리자">
+		<meta property="og:description" content="지점관리자">
+		<meta name="description" content="지점관리자">
+		<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css"
+			rel="stylesheet" type="text/css" />
+		<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet"
+			type="text/css" />
+		<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css"
+			rel="stylesheet" type="text/css" />
+		<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css"
+			rel="stylesheet" type="text/css" />
+
+		<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+	</head>
+
+<body class="overflow-y"><!-- /* 2024-02-04 추가 */ -->
+	<div id="profile-wrapper">
+
+		<div class="app-menu navbar-menu">
+			<div id="scrollbar">
+				<div id="two-column-menu"></div>
+				<ul class="navbar-nav" id="navbar-nav"></ul>
+			</div><!-- scrollbar -->
+		</div><!-- // navbar-menu -->
+
+		
+
+		<div class="profile-card-top">
+			<div class="navbar-brand-box">
+				<a href="#" class="logo"><img src="./assets/img/app-menu-logo@2x.png" alt=""></a>
+				<button type="button" class="btn" id="vertical-hover"></button>
+			</div><!-- // navbar-brand-box -->
+			<h3 class="profile-card-title d-flex align-items-center" style="height: 50px;">
+				인사기록카드
+				<ul class="nav modal-header-step step1">
+					<li class="item1">SETP1<b class="ms-2">대상자 확인</b></li>
+					<li class="item2">SETP2<b class="ms-2">입사유형</b></li>
+					<li class="item3">SETP3 <b class="ms-2">계정 생성</b></li>
+				</ul>			
+				</h3>
+
+			<a class="profile-card-close" href="#"><i class="ri-logout-box-line"></i> <span class="fs-14">나가기</span></a>
+
+		</div><!-- // profile-card-top -->
+
+		<div class="profile-content">
+			<div class="container-fluid">
+
+				<!-- card : SETP1 대상자 확인 -->
+				<div class="card card-form">
+					<div class="card-header">
+						<h4 class="card-title mb-0">대상자 확인</h4>
+					</div>
+					<div class="card-body">
+						<div class="mbody-title">입사를 축하 드립니다. 입사 대상자 확인을 진행해 주세요.</div>
+
+						<div class="row row-gap-12x col-lg-12">
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">이름</label>										
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/user-check.svg" alt="이름"></span>
+									<input type="text" class="form-control" id="" value="김합격">
+								</div>
+							</div>
+						</div>
+						<div class="row row-gap-12x col-lg-12">
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">휴대폰번호</label>										
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/smartphone.svg" alt="휴대폰번호"></span>
+									<input type="text" class="form-control" id="" value="010-1234-1234">
+								</div>
+							</div>
+						</div>
+						<div class="form-btn d-flex align-items-center justify-content-end">
+							<span class="fs-13px me-3">
+								입사 대상자가 아닙니다. 입력하신 정보를 확인해 주세요.
+							</span>
+							<button type="submit" class="btn btn-point">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- // card : SETP1 대상자 확인 -->
+
+				<!-- card : SETP2 입사유형 확인 -->
+				<div class="card card-form">
+					<div class="card-header">
+						<h4 class="card-title mb-0">입사유형 확인</h4>
+					</div>
+					<div class="card-body">
+						<div class="mbody-title">인사기록카드 작성을 위해 다음의 절차를 진행해 주세요.</div>
+
+						<div class="row row-gap-12x col-lg-12">
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">이름</label>										
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/user-check.svg" alt="이름"></span>
+									<input type="text" class="form-control" id="" value="김합격">
+								</div>
+							</div>
+						</div>
+						<div class="row row-gap-12x col-lg-12">
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">휴대폰번호</label>										
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/smartphone.svg" alt="휴대폰번호"></span>
+									<input type="text" class="form-control" id="" value="010-1234-1234">
+								</div>
+							</div>
+						</div>
+
+						<div class="mbody-title mt-3">개인정보수집활용동의서</div>
+
+						<div class="mbody-attendance simplebar-scrollable-y" data-simplebar style="overflow-x: hidden; max-height: 400px;">
+							<table class="table table-card">
+								<colgroup>
+									<col style="width:33.33%">
+									<col style="width:33.33%">
+									<col style="">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>수집 항목</th>
+										<th>수집 및 이용 목적</th>
+										<th>보유 및 이용기간</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>강의실 내부 영상녹화</td>
+										<td>시설관리 (화재,범죄,도난방지)</td>
+										<td>약1개월</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="align-left">※ 저희 학원은 위와 같이 영상정보처리기기를 설치,운영합니다.</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="3">
+
+											<div class="form-inline">
+												<div>위와 같이 개인정보를 수집ㆍ이용하는데 동의하십니까?</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_a" value="a" checked="">
+													<label class="form-check-label" for="inlineRadio5_a">예</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="inlineRadio5" id="inlineRadio5_b" value="b">
+													<label class="form-check-label" for="inlineRadio5_b">아니오</label>
+												</div>
+											</div>
+
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+
+						<div class="form-btn d-flex align-items-center justify-content-end">
+							<span class="fs-13px me-3">
+								필수 정보를 입력해 주세요.
+							</span>
+							<button type="submit" class="btn btn-point">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- // card : SETP2 입사유형 확인 -->
+
+				<!-- card : SETP3 계정 생성 -->
+				<div class="card card-form">
+					<div class="card-header">
+						<h4 class="card-title mb-0">계정 생성</h4>
+					</div>
+					<div class="card-body">
+						<div class="mbody-title">신규 입사자입니다. 계정을 생성하세요.</div>
+
+						<div class="row row-gap-12x col-lg-8">
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">아이디</label>								
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/user.svg" alt="아이디"></span>
+									<input type="text" class="form-control" id="" placeholder="아이디를 입력하세요.">
+								</div>
+								<span class="form-warning">중복된 아이디가 있습니다.</span>
+							</div>
+							<div class="col-lg-6">
+								<label for="" class="form-label visually-hidden">중복확인</label>
+								<div><a href="#" class="btn btn-point-deep">중복확인</a></div>
+							</div>
+						</div>
+
+						<div class="row row-gap-12x col-lg-8">
+							<div class="col-lg-6">
+								<label for="userPw" class="form-label visually-hidden">비밀번호</label>
+								<div class="input-group">
+									<span class="input-group-text" id=""><img src="./assets/img/lock.svg" alt="비밀번호"></span>
+									<input type="password" class="form-control" id="userPw" placeholder="8~16자, 영문/숫자 포함">
+								</div>								
+								<span class="form-warning">8~16자, 영문/숫자 포함 필수</span>
+							</div>
+							<div class="col-lg-6">
+								<label for="userPwChk" class="form-label visually-hidden">비밀번호 확인</label>
+								<div class="input-group">
+									<input type="password" class="form-control" id="userPwChk" placeholder="비밀번호 확인">
+								</div>	
+								<span class="form-warning">비밀번호가 일치하지 않습니다.</span>								
+							</div>
+						</div>
+
+						<div class="form-btn d-flex align-items-center justify-content-end">
+							<span class="fs-13px me-3">
+								존재하는 아이디 입니다.
+							</span>
+							<button type="submit" class="btn btn-point">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- // card : SETP3 계정 생성 -->
+
+				<div class="form-btn">
+					<span class="fs-13px me-3">아이디가 생성되었습니다. 다음 버튼을 클릭해서 인사기록카드를 작성하세요.</span>
+					<button type="submit" class="btn btn-point">저장</button>
+					<button type="submit" class="btn btn-point">전송</button>
+					<button type="submit" class="btn btn-point">완료</button>
+				</div>
+
+			</div>
+		</div><!-- // profile-content -->
+
+	</div><!-- // profile-wrapper -->
+
+	<!-- 인사기록카드 -->
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xxl modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">인사기록카드</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">
+	
+					<div class="mbody-forms">					
+
+						<div class="table-head">
+							<div class="flex-grow-1 row gx-8px">
+								<div class="col-auto"><div class="table-title">기본정보</div></div>
+							</div>
+							<div class="flex-shrink-0 row">
+								<div class="col-auto">
+									<a href="#" class="btn btn-point-deep btn-sm">제출</a>
+									<a href="#" class="btn btn-point btn-sm">저장</a>
+								</div>
+							</div>
+
+						</div><!-- // table-head -->
+
+						<table class="table table-card">
+							<colgroup>
+								<col style="width:20%">
+								<col style="">
+							</colgroup>
+							<tbody  class="table-light">
+								<tr>
+									<th>
+										<p class="fs-20px"><strong>김직원</strong></p>
+										<p class="fs-14px">사원번호 2165498</p>
+									</th>
+									<td class="px-3">
+										<div class="row">
+											<div class="col-12 col-lg-6">
+												<dl class="row">
+													<dt>소속<i class="text-req ms-1">*</i></dt>
+													<dd>
+														<div class="row gx-6px">
+															<div class="col-12 col-lg-3 mb-2 mb-lg-0">
+																<select class="form-select" data-choices="" data-choices-search-false="">
+																	<option value="01">계열</option>
+																	<option value="02">option 2</option>
+																	<option value="03">option 3</option>
+																</select>
+															</div>
+															<div class="col-12 col-lg-3 mb-2 mb-lg-0">
+																<select class="form-select" data-choices="" data-choices-search-false="">
+																	<option value="01">지점</option>
+																	<option value="02">option 2</option>
+																	<option value="03">option 3</option>
+																</select>
+															</div>
+															<div class="col-12 col-lg-3 mb-2 mb-lg-0">
+																<select class="form-select" data-choices="" data-choices-search-false="">
+																	<option value="01">부서</option>
+																	<option value="02">option 2</option>
+																	<option value="03">option 3</option>
+																</select>
+															</div>
+															<div class="col-12 col-lg-3 mb-2 mb-lg-0">
+																<select class="form-select" data-choices="" data-choices-search-false="">
+																	<option value="01">팀</option>
+																	<option value="02">option 2</option>
+																	<option value="03">option 3</option>
+																</select>
+															</div>
+														</div>															
+													</dd>
+												</dl>
+											</div>
+											<div class="col-12 col-lg-6">
+												<dl class="row">
+													<dt>입사일<i class="text-req ms-1">*</i></dt>
+													<dd>
+														<div class="col-140px">
+															<div class="input-group-flatpickr">
+																<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+															</div>
+														</div>							
+													</dd>
+												</dl>
+											</div>
+											<div class="col-12 col-lg-6 mt-2">
+												<dl class="row">
+													<dt>직위 (직책)<i class="text-req ms-1">*</i></dt>
+													<dd>
+														<div class="row gx-6px">
+															<div class="col-12 col-lg-3 mb-2 mb-lg-0">
+																<select class="form-select" data-choices="" data-choices-search-false="">
+																	<option value="01">직위</option>
+																	<option value="02">option 2</option>
+																	<option value="03">option 3</option>
+																</select>
+															</div>
+															<div class="col-12 col-lg-3">
+																<select class="form-select" data-choices="" data-choices-search-false="">
+																	<option value="01">직책</option>
+																	<option value="02">option 2</option>
+																	<option value="03">option 3</option>
+																</select>
+															</div>
+														</div>							
+													</dd>
+												</dl>
+											</div>
+											<div class="col-12 col-lg-6 mt-2">
+												<dl class="row">
+													<dt>경력/신입<i class="text-req ms-1">*</i></dt>
+													<dd>
+														<div class="row gx-6px">
+															<div class="col-12 col-lg-3">
+																<select class="form-select" data-choices="" data-choices-search-false="">
+																	<option value="01">경력</option>
+																	<option value="02">option 2</option>
+																	<option value="03">option 3</option>
+																</select>
+															</div>
+														</div>						
+													</dd>
+												</dl>
+											</div>
+											<div class="col-12 col-lg-6 mt-2">
+												<dl class="row">
+													<dt>계약 유형<i class="text-req ms-1">*</i></dt>
+													<dd>
+														<div class="row gx-6px">
+															<div class="col-12 col-lg-3">
+																<select class="form-select" data-choices="" data-choices-search-false="">
+																	<option value="01">정규직</option>
+																	<option value="02">option 2</option>
+																	<option value="03">option 3</option>
+																</select>
+															</div>
+														</div>							
+													</dd>
+												</dl>
+											</div>
+											<div class="col-12 col-lg-6 mt-2">
+												<dl class="row">
+													<dt>입사 유형<i class="text-req ms-1">*</i></dt>
+													<dd>
+														<div class="row gx-6px">
+															<div class="col-auto">
+																<div class="form-inline">
+																	<div class="form-check">
+																		<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
+																		<label class="form-check-label" for="inlineRadio1_a">신규</label>
+																	</div>
+																	<div class="form-check">
+																		<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+																		<label class="form-check-label" for="inlineRadio1_b">재입사</label>
+																	</div>
+																</div>	
+															</div>
+														</div>							
+													</dd>
+												</dl>
+											</div>	
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table><!-- // 기본정보 -->
+
+						<div class="row">
+							<div class="col-12 col-lg-6 mt-0">
+
+								<div class="table-head" style="margin-top: 28px;">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">인적사항</div></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card">
+									<tbody>
+										<tr>
+											<td>
+												<div class="row">
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>주민등록번호<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-180px">
+																		<input type="text" class="form-control" value="040101-3000000" disabled="">
+																	</div>
+																</div>																
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>성별<i class="text-req ms-1">*</i></dt>
+															<dd>남</dd>
+														</dl>
+													</div>
+													<div class="col-12 mt-0">
+														<dl class="row pt-2">
+															<dt>생년월일<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-180px">
+																		<input type="text" class="form-control" value="20040101" disabled="">
+																	</div>
+																	<div class="col-auto">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">양력</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-0">
+														<dl class="row pt-2">
+															<dt>휴대폰번호<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<input type="text" class="form-control" value="01012345678">
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-0">
+														<dl class="row pt-2">
+															<dt>개인 이메일<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<input type="text" class="form-control" value="이메일주소@email.com">
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-0">
+														<dl class="row pt-2">
+															<dt>비상 연락처</dt>
+															<dd>
+																<input type="text" class="form-control" value="01012345678">
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-0">
+														<dl class="row pt-2">
+															<dt>내선번호</dt>
+															<dd>
+																<input type="text" class="form-control" value="">
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 mt-0">
+														<dl class="row pt-2">
+															<dt>주소</dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-12">
+																		<div class="input-group">
+																			<a href="#" class="btn btn-point-deep btn-sm">주소검색</a>
+																			<input type="text" class="form-control" value="서울시 강남구 강남대로 286">
+																		</div>
+																	</div>
+																	<div class="col-12 mt-1">
+																		<input type="text" class="form-control" value="" placeholder="상세 주소">
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table><!-- // 인적사항 -->
+
+								<div class="table-head">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">계좌 정보</div></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card">
+									<tbody>
+										<tr>
+											<td>
+												<div class="row">
+													<div class="col-12 mt-2">
+														<dl class="row pt-2">
+															<dt>계좌번호<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-180px">
+																		<input type="text" class="form-control" value="" placeholder="은행명">	
+																	</div>
+																	<div class="col-auto">
+																		<a href="#" class="btn btn-outline-light btn-sm btn-review"><small class="d-lg-none">검색</small></a>
+																	</div>
+																	<div class="col-auto">
+																		<input type="text" class="form-control" value="12345678987654321">
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-0">
+														<dl class="row pt-2">
+															<dt>예금주<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-180px">
+																		<input type="text" class="form-control" value="">
+																	</div>
+																</div>																
+															</dd>
+														</dl>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table><!-- // 계좌 정보 -->
+
+								<div class="table-head">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">가족</div></div>
+									</div>
+									<div class="flex-shrink-0 row">
+										<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card">
+									<tbody>
+										<tr>
+											<td>
+												<div class="row">
+													<div class="col-12 col-lg-11">
+														<dl class="row">
+															<dt class="d-none">이름</dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-120px">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">부</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																	<div class="col-120px">
+																		<input type="text" class="form-control" value="김아빠" />
+																	</div>
+																	<div class="col-140px">
+																		<div class="input-group-flatpickr">
+																			<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+																		</div>
+																	</div>
+																	<div class="col-180px">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">건강보험적용</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																	<div class="col-140px">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">비동거</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-1 d-flex align-items-center justify-content-center">
+														<a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a>
+													</div>
+												</div>										
+											</td>
+										</tr>
+									</tbody>
+								</table><!-- // 가족 -->
+
+								<div class="table-head">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">병역 / 보훈</div></div>
+									</div>
+									<div class="flex-shrink-0 row">
+										<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card">
+									<tbody>
+										<tr>
+											<td>
+												<div class="row">
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>보훈<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="form-inline">
+																	<div class="form-check">
+																		<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_a" value="a" checked="">
+																		<label class="form-check-label" for="inlineRadio1_a">해당없음</label>
+																	</div>
+																	<div class="form-check">
+																		<input class="form-check-input" type="radio" name="inlineRadio1" id="inlineRadio1_b" value="b">
+																		<label class="form-check-label" for="inlineRadio1_b">대상</label>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>장애<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="form-inline">
+																	<div class="form-check">
+																		<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_a" value="a" checked="">
+																		<label class="form-check-label" for="inlineRadio2_a">해당없음</label>
+																	</div>
+																	<div class="form-check">
+																		<input class="form-check-input" type="radio" name="inlineRadio2" id="inlineRadio2_b" value="b">
+																		<label class="form-check-label" for="inlineRadio2_b">대상</label>
+																	</div>
+																</div>															
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 mt-2">
+														<dl class="row pt-2">
+															<dt>병역<i class="text-req ms-1">*</i></dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-auto">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">군필</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																	<div class="col-auto">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">군별</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																	<div class="col-auto">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">계급</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																	<div class="col-auto">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">전역구분</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																</div>
+																<div class="row row-x6 mt-1">
+																	<div class="col-140px">
+																		<div class="input-group-flatpickr">
+																			<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="입대일" value="">
+																		</div>
+																	</div>
+																	<div class="col-140px">
+																		<div class="input-group-flatpickr">
+																			<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="제대일" value="">
+																		</div>
+																	</div>
+
+																</div>																	
+															</dd>
+														</dl>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table><!-- // 병역 / 보훈 -->
+
+								<div class="table-head">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">계약 정보</div></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card">
+									<tbody>
+										<tr>
+											<td>
+												<div class="row">
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>계약 기간</dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-140px">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">2 년</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																	<div class="col-140px">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">0 개월</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																</div>
+															</dd>
+														</dl>
+													</div>
+													<div class="col-12 col-lg-6 mt-2">
+														<dl class="row pt-2">
+															<dt>급여</dt>
+															<dd>
+																<div class="row row-x6">
+																	<div class="col-140px">
+																		<select class="form-select" data-choices data-choices-search-false>
+																			<option value="01">시간</option>
+																			<option value="02">option 2</option>
+																			<option value="03">option 3</option>
+																		</select>
+																	</div>
+																	<div class="col-140px">
+																		<input type="text" class="form-control text-end" value="">
+																	</div>
+																	<div class="col-auto col-dash">원</div>
+																</div>																
+															</dd>
+														</dl>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table><!-- // 계약 정보 -->
+
+							</div>
+							<div class="col-12 col-lg-6 mt-0">
+				
+								<div class="table-head">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">학력</div></div>
+									</div>
+									<div class="flex-shrink-0 row">
+										<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card">
+									<tbody>
+										<tr>
+											<td>
+												<div class="row">
+													<div class="col-12 col-lg-11">
+														<div class="row">
+															<div class="col-12 col-lg-6 mt-2">
+																<dl class="row pt-2">
+																	<dt>학교명<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<input type="text" class="form-control" value="" placeholder="">	
+																			</div>
+																		</div>
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-2">
+																<dl class="row pt-2">
+																	<dt>학교 구분 <i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<select class="form-select" data-choices data-choices-search-false>
+																					<option value="01">대학교(2.,3 년)</option>
+																					<option value="02">option 2</option>
+																					<option value="03">option 3</option>
+																				</select>
+																			</div>
+																		</div>																
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>입학일<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-140px">
+																				<div class="input-group-flatpickr">
+																					<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+																				</div>
+																			</div>
+																			<div class="col-auto">
+																				<select class="form-select" data-choices data-choices-search-false>
+																					<option value="01">만점선택</option>
+																					<option value="02">option 2</option>
+																					<option value="03">option 3</option>
+																				</select>
+																			</div>
+																		</div>	
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>졸업일<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-140px">
+																				<div class="input-group-flatpickr">
+																					<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+																				</div>
+																			</div>
+																			<div class="col-auto">
+																				<select class="form-select" data-choices data-choices-search-false>
+																					<option value="01">만점선택</option>
+																					<option value="02">option 2</option>
+																					<option value="03">option 3</option>
+																				</select>
+																			</div>
+																		</div>															
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>전공<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<input type="text" class="form-control" value="" placeholder="">	
+																			</div>
+																		</div>
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>학점</dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-180px">
+																				<input type="text" class="form-control" value="">
+																			</div>
+																			<div class="col-auto">
+																				<select class="form-select" data-choices data-choices-search-false>
+																					<option value="01">만점선택</option>
+																					<option value="02">option 2</option>
+																					<option value="03">option 3</option>
+																				</select>
+																			</div>
+																		</div>															
+																	</dd>
+																</dl>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 col-lg-1 d-flex align-items-center justify-content-center">
+														<a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table><!-- // 학력 -->
+
+								<div class="table-head">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">경력</div></div>
+									</div>
+									<div class="flex-shrink-0 row">
+										<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card">
+									<tbody>
+										<tr>
+											<td>
+												<div class="row">
+													<div class="col-12 col-lg-11">
+														<div class="row">
+															<div class="col-12 col-lg-6 mt-2">
+																<dl class="row pt-2">
+																	<dt>회사명<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<input type="text" class="form-control" value="" placeholder="">	
+																			</div>
+																		</div>
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-2">
+																<dl class="row pt-2">
+																	<dt>계약 유형<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<select class="form-select" data-choices data-choices-search-false>
+																					<option value="01">대학교(2.,3 년)</option>
+																					<option value="02">option 2</option>
+																					<option value="03">option 3</option>
+																				</select>
+																			</div>
+																		</div>																
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>입사일<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-140px">
+																				<div class="input-group-flatpickr">
+																					<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+																				</div>
+																			</div>
+																		</div>	
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>퇴사일<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-140px">
+																				<div class="input-group-flatpickr">
+																					<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+																				</div>
+																			</div>
+																			<div class="col-auto">
+																				<select class="form-select" data-choices data-choices-search-false>
+																					<option value="01">만점선택</option>
+																					<option value="02">option 2</option>
+																					<option value="03">option 3</option>
+																				</select>
+																			</div>
+																		</div>															
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>직위/직책<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<input type="text" class="form-control" value="" placeholder="">	
+																			</div>
+																		</div>
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>급여</dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-140px">
+																				<select class="form-select" data-choices data-choices-search-false>
+																					<option value="01">연봉</option>
+																					<option value="02">option 2</option>
+																					<option value="03">option 3</option>
+																				</select>
+																			</div>
+																			<div class="col-140px">
+																				<input type="text" class="form-control text-end" value="20,000,000">
+																			</div>
+																			<div class="col-auto col-dash">원</div>
+																		</div>																
+																	</dd>
+																</dl>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 col-lg-1 d-flex align-items-center justify-content-center">
+														<a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table><!-- // 경력 -->
+
+								<div class="table-head">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">자격증</div></div>
+									</div>
+									<div class="flex-shrink-0 row">
+										<div class="col-auto"><a href="#" class="btn btn-point btn-sm">추가</a></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card">
+									<tbody>
+										<tr>
+											<td>
+												<div class="row">
+													<div class="col-12 col-lg-11">
+														<div class="row">
+															<div class="col-12 col-lg-6 mt-2">
+																<dl class="row pt-2">
+																	<dt>자격증명<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<input type="text" class="form-control" value="" placeholder="">	
+																			</div>
+																		</div>
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-2">
+																<dl class="row pt-2">
+																	<dt>발행처<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<input type="text" class="form-control" value="" placeholder="">	
+																			</div>
+																		</div>															
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-0">
+																<dl class="row pt-2">
+																	<dt>취득일<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-140px">
+																				<div class="input-group-flatpickr">
+																					<input type="text" id="startDate" class="form-control flatpickr-input form-datepicker" placeholder="" value="2022.08.10">
+																				</div>
+																			</div>
+																			<div class="col-auto">
+																				<select class="form-select" data-choices data-choices-search-false>
+																					<option value="01">만점선택</option>
+																					<option value="02">option 2</option>
+																					<option value="03">option 3</option>
+																				</select>
+																			</div>
+																		</div>															
+																	</dd>
+																</dl>
+															</div>
+															<div class="col-12 col-lg-6 mt-1">
+																<dl class="row pt-2">
+																	<dt>자격번호<i class="text-req ms-1">*</i></dt>
+																	<dd>
+																		<div class="row row-x6">
+																			<div class="col-12">
+																				<input type="text" class="form-control" value="" placeholder="">	
+																			</div>
+																		</div>															
+																	</dd>
+																</dl>
+															</div>
+														</div>
+													</div>
+													<div class="col-12 col-lg-1 d-flex align-items-center justify-content-center">
+														<a href="#" class="btn btn-outline-light btn-sm btn-del"><small class="d-lg-none">삭제</small></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table><!-- // 자격증 -->
+
+								<div class="table-head">
+									<div class="flex-grow-1 row gx-8px">
+										<div class="col-auto"><div class="table-title">입사 서류</div></div>
+									</div>
+								</div><!-- // table-head -->
+								<table class="table table-card table-align-left">
+									<tbody>
+										<tr>
+											<td>이력서 <span class="text-req">*</span></td>
+											<td class="text-center"><a href="#" class="file-down">파일있음</a></td>
+											<!-- <td><input class="form-control" type="file"></td> -->
+											<td>[특별처리] 환불공제금변경.pdf <a href="#" class="btn-delete">삭제</a></td>
+										</tr>
+										<tr>
+											<td>주민등록등본 <span class="text-req">*</span></td>
+											<td class="text-center"><div href="#" class="file-down disabled">파일없음</div></td>
+											<td><input class="form-control" type="file"></td>
+										</tr>
+										<tr>
+											<td>통장사본 <span class="text-req">*</span></td>
+											<td class="text-center"><a href="#" class="file-down">파일있음</a></td>
+											<td><input class="form-control" type="file"></td>
+										</tr>
+										<tr>
+											<td>졸업증명서 (교육부)</td>
+											<td class="text-center"><a href="#" class="file-down">파일있음</a></td>
+											<td><input class="form-control" type="file"></td>
+										</tr>
+										<tr>
+											<td>력증명서 (해당자)</td>
+											<td class="text-center"><div href="#" class="file-down disabled">파일없음</div></td>
+											<td><input class="form-control" type="file"></td>
+										</tr>
+										<tr>
+											<td>근로계약서</td>
+											<td><div href="#" class="file-down disabled">파일없음</div></td>
+											<td><input class="form-control" type="file"></td>
+										</tr>
+										<tr>
+											<td>업무서약서</td>
+											<td class="text-center"><a href="#" class="file-down">파일있음</a></td>
+											<td><input class="form-control" type="file"></td>
+										</tr>
+										<tr>
+											<td>시범강의평가서 (교육부)</td>
+											<td class="text-center"><a href="#" class="file-down">파일있음</a></td>
+											<td><input class="form-control" type="file"></td>
+										</tr>
+										<tr>
+											<td>개인정보 수집 활용 동의서</td>
+											<td class="text-center"><a href="#" class="btn btn-outline-active btn-sm">동의하기</a></td>
+											<td><input class="form-control" type="file"></td>
+										</tr>
+									</tbody>
+								</table><!-- // 입사 서류 -->
+
+							</div>
+						</div>
+
+					</div><!-- // mbody-forms -->
+
+				</div><!-- // modal-body -->
+
+			</div>
+		</div>
+	</div><!-- // modal : 인사기록카드 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<!-- <script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script> -->
+
+	<script>
+	$(function(){
+		$('#pageModal17').modal('show');
+	});
+	</script>
+
+</body>
+</html>
