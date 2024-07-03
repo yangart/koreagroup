@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">특이사항</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">	
+					<div class="mbody-forms">	
+						<div class="row">
+							<div class="col"><textarea class="form-control form-editor col" rows="10" style="height: 80px !important;" placeholder="금일 업무 특이사항을 작성해 주세요."></textarea></div>
+							<div class="col-1"><button type="button" class="btn btn-sm btn-point-deep w-100">제출</button></div>
+						</div>
+						<hr class="border my-3 opacity-50">
+						<div class="row">
+							<div class="col-55p">
+								<div class="fnc-area mt-2">
+									<div class="l-area">
+										<input type="hidden" id="startDate" class="form-control flatpickr-input form-datepicker w-auto" placeholder="" value="2022-08-10">
+										<select disabled>
+											<option>강남</option>
+										</select>
+										<select>
+											<option>강남</option>
+										</select>
+										<select>
+											<option>강남</option>
+										</select>
+										<select>
+											<option>강남</option>
+										</select>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+											<label class="form-check-label" for="flexCheckDefault">
+											  신규 댓글만 보기
+											</label>
+										  </div>
+									</div>									
+								</div>
+								<div class="table-responsive">															
+									<table class="table-card">
+										<colgroup>
+											<col style="width:200px">
+											<col style="width:140px;">
+											<col style="width:auto;">
+											<col style="width:160px;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>소속</th>
+												<th>이름</th>
+												<th>내용</th>
+												<th>등록일시</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>컴퓨터강남 &gt; 사업부 &gt; 1-3팀</td>
+												<td>김맨토34 경력멘토</td>
+												<td class="align-left"><a href="#" class="btn-link">국내 해외 취업관련 세미나</a></td>
+												<td>2024-01-09 09:00</td>
+											</tr>
+											<tr>
+												<td>컴퓨터강남 &gt; 사업부 &gt; 1-3팀</td>
+												<td>김맨토34 경력멘토</td>
+												<td class="align-left"><a href="#" class="btn-link">국내 해외 취업관련 세미나</a></td>
+												<td>2024-01-09 09:00</td>
+											</tr>
+											<tr>
+												<td>컴퓨터강남 &gt; 사업부 &gt; 1-3팀</td>
+												<td>김맨토34 경력멘토</td>
+												<td class="align-left"><a href="#" class="btn-link">국내 해외 취업관련 세미나</a></td>
+												<td>2024-01-09 09:00</td>
+											</tr>
+											<tr>
+												<td>컴퓨터강남 &gt; 사업부 &gt; 1-3팀</td>
+												<td>김맨토34 경력멘토</td>
+												<td class="align-left"><a href="#" class="btn-link">국내 해외 취업관련 세미나</a></td>
+												<td>2024-01-09 09:00</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div><!-- // col -->
+							<div class="col-45p">
+								<div class="mbody-title">
+									<div>댓글</div>
+								</div><!-- // mbody-title -->
+
+								<div class="mbody-reply">
+									<div class="mbody-reply-list simplebar-scrollable-y h-100" data-simplebar data-simplebar-auto-hide="false" style="max-height:500px;">
+										<div class="list-item">
+											<div class="d-flex justify-content-between"><b>본사 디자인팀</b><span>(2023-09-18) 14:23:00)</span></div>
+											<div>사진 이미지가 누락되었습니다.	<br>확인 부탁드립니다.</div>
+										</div>
+										<div class="list-item">
+											<div class="d-flex justify-content-between"><b>컴퓨터 강남지점 홍길동 원장</b><span>(2023-09-18) 14:23:00)</span></div>
+											<div>기획 의도에 맞게 디자인 잘 나온 것 같습니다. <br>수정 사항 없습니다.</div>
+										</div>
+										<div class="list-item">
+											<div class="d-flex justify-content-between"><b>본사 디자인팀</b><span>(2023-09-18) 14:23:00)</span></div>
+											<div>네 알겠습니다. 수정 사항 없는 것으로 <br>마무리 하겠습니다.</div>
+										</div>
+										<div class="list-item">
+											<div class="d-flex justify-content-between"><b>컴퓨터 강남지점 홍길동 원장</b><span>(2023-09-18) 14:23:00)</span></div>
+											<div>네 수고하셨습니다. 완료처리 하겠습니다.</div>
+										</div>
+									</div>
+									<div class="mbody-reply-enter">
+										<textarea class="form-control" placeholder="시안 확인 부탁드립니다."></textarea>
+									</div>
+								</div><!-- // mbody-reply -->
+							</div><!-- // col -->
+						</div><!-- // row -->
+					</div><!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div><!-- // modal : 특이사항 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal17').modal('show');
+	});
+	</script>
+
+</body>
+</html>

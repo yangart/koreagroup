@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/flatpickr.custom.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/libs/flatpickr-4.6.13/css/themes/material_green.css" rel="stylesheet" type="text/css" />
+
+	<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="modal fade" id="pageModal17" tabindex="-1" role="dialog" aria-hidden="false">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title">목표매출</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+				</div><!-- // modal-header -->
+
+				<div class="modal-body">	
+					<div class="mbody-forms">	
+						<div class="fnc-area">
+							<div class="l-area">
+								<select>
+									<option>2024년</option>
+								</select>
+								<select>
+									<option>2024년 05월 (2024-04-10 ~ 2024-05-09)</option>
+								</select>
+								<input type="hidden" id="startDate" class="form-control flatpickr-input form-datepicker w-auto" placeholder="" value="2022-08-10">
+							</div>
+						</div>
+						<ul class="d-flex gap-1">
+							<li class="border rounded px-2 py-4 text-center col align-items-center">
+								<p class="mb-1">나의 목표 매출</p>
+								<strong>123,345,355</strong>
+							</li>
+							<li class="border rounded px-2 py-4 text-center col align-items-center">
+								<p class="mb-1">팀 목표 매출</p>
+								<strong>123,345,355,545</strong>
+							</li>
+							<li class="border rounded px-2 py-4 text-center col align-items-center">
+								<p class="mb-1">부서 목표 매출</p>
+								<strong>123,345,355,444,233</strong>
+							</li>
+							<li class="border rounded px-2 py-4 text-center col align-items-center">
+								<p class="mb-1">지점 목표 매출</p>
+								<strong>123,345,355,778,000,000</strong>
+							</li>
+						</ul>
+						<div class="d-flex mt-2 gap-2">
+							<div class="col-8 d-flex gap-2 px-3 py-3 border rounded bg-light-alpha">
+								<div class="col d-flex flex-column">
+									<label class="fs-14px">1주차 목표 매출</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col d-flex flex-column">
+									<label class="fs-14px">1주차 목표 매출</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col d-flex flex-column">
+									<label class="fs-14px">1주차 목표 매출</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col d-flex flex-column">
+									<label class="fs-14px">1주차 목표 매출</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col d-flex flex-column">
+									<label class="fs-14px">1주차 목표 매출</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col d-flex  align-items-end ">
+									<button type="button" class="btn btn-md btn-point-deep">저장</button>
+								</div>
+							</div>
+							<div class="col-4 d-flex gap-2 px-3 py-3 border rounded bg-secondary-alpha">
+								<div class="col d-flex flex-column">
+									<label class="fs-14px">1주차 목표 매출</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col d-flex flex-column">
+									<label class="fs-14px">1주차 목표 매출</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col d-flex  align-items-end ">
+									<button type="button" class="btn btn-md btn-point-deep">저장</button>
+								</div>
+							</div>
+						</div>
+						<hr class="border my-3 opacity-50">
+						<div class="fnc-area mt-2">
+							<div class="l-area">
+								<input type="hidden" id="startDate" class="form-control flatpickr-input form-datepicker w-auto" placeholder="" value="2022-08-10">
+								<select disabled>
+									<option>강남</option>
+								</select>
+								<select>
+									<option>강남</option>
+								</select>
+								<select>
+									<option>강남</option>
+								</select>
+								<select>
+									<option>강남</option>
+								</select>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+									<label class="form-check-label" for="flexCheckDefault">
+										신규 댓글만 보기
+									</label>
+									</div>
+							</div>									
+						</div>
+						<div class="table-responsive">															
+							<table class="table-card">
+								<colgroup>
+									<col style="width:200px">
+									<col style="width:140px;">
+									<col style="width:auto;">
+									<col style="width:160px;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th rowspan="2">소속</th>
+										<th rowspan="2">이름</th>
+										<th colspan="6">내용</th>
+										<th rowspan="2">금일<br>입금 예정</th>
+										<th rowspan="2">전일<br>광고비 지출액</th>
+									</tr>
+									<tr>
+										<th>전체</th>
+										<th>1주차</th>
+										<th>1주차</th>
+										<th>1주차</th>
+										<th>1주차</th>
+										<th>1주차</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+							</table>
+						</div>
+					</div><!-- // mbody-forms -->
+				</div><!-- // modal-body -->
+
+				<div class="modal-footer">
+					<div class="d-flex justify-content-between w-100">
+						<div class="d-flex gap-1">
+							<a href="#" class="btn btn-outline-primary">닫기</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div><!-- // modal : 특이사항 -->
+
+	<button type="button" class="btn" id="scroll-top"></button>
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
+	<script src="./assets/libs/feather-icons/feather.min.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/flatpickr.ko.js"></script>
+	<script src="./assets/libs/flatpickr-4.6.13/js/plugins/rangePlugin.js"></script>
+
+	<script src="./assets/js/layout.js"></script>
+	<script src="./assets/js/common.js"></script>
+	<script src="./assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#startDate').flatpickr({
+			dateFormat: 'Y-m-d', // 날짜 및 시간 형식 설정 (예: 2023-09-12 15:30)
+			enableTime: false,        // 시간 선택 활성화
+			time_24hr: false,         // 24시간 형식 사용
+			//minDate: 'today',        // 오늘 이전 날짜 선택 비활성화
+			//maxDate: '2023-12-31',   // 특정 날짜까지 선택 가능
+			//defaultDate: 'today',    // 초기 날짜 설정 (현재 날짜와 시간)
+			//disable: ['2023-11-15', '2023-11-20', '2023-11-27'], // 특정 날짜 비활성화
+			locale: 'ko',            // 한국어로 지역화
+			onOpen: function(selectedDates, dateStr, instance) {
+				// 위젯이 열릴 때 실행할 코드
+			},
+			onClose: function(selectedDates, dateStr, instance) {
+				// 위젯이 닫힐 때 실행할 코드
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// 날짜가 변경될 때 실행할 코드
+			},
+			disableMobile: true,      // 모바일 기기에서 위젯 비활성화
+			altInput: true,           // 추가 입력란 활성화
+			altFormat: 'Y-m-d', // 추가 입력란의 날짜 및 시간 형식
+			"plugins": [new rangePlugin({ input: "#endDate"})]
+		})
+
+	</script>
+
+	<script>
+	$(function(){
+		$('#pageModal17').modal('show');
+	});
+	</script>
+
+</body>
+</html>
