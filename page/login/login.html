@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" data-layout="vertical" data-sidebar-size="lg" data-preloader="disable">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>지점관리자</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<meta property="og:title" content="지점관리자">
+	<meta property="og:description" content="지점관리자">
+	<meta name="description" content="지점관리자">
+	<link href="./assets/libs/bootstrap-5.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./assets/css/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="login-wrap">
+        <div class="login">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="login-main" role="tabpanel" aria-labelledby="login-main-tab" tabindex="0">
+                    <img src="assets/images/login/login_img_main.png" alt="지점관리자">
+                </div>
+                <div class="tab-pane fade" id="login-mentor" role="tabpanel" aria-labelledby="login-mentor-tab" tabindex="0">
+                    <img src="assets/images/login/login_img_mentor.png" alt="멘토포털">
+                </div>
+                <div class="tab-pane fade" id="login-instructor" role="tabpanel" aria-labelledby="login-instructor-tab" tabindex="0">
+                    <img src="assets/images/login/login_img_instructor.png" alt="강사포털">
+                </div>
+                <div class="tab-pane fade" id="login-executive" role="tabpanel" aria-labelledby="login-executive-tab" tabindex="0">
+                    <img src="assets/images/login/login_img_executive.png" alt="경영진포털">
+                </div>
+                <div class="login-visual-txt">
+                    <p>최고의 인재가 모여 꿈을 실현하는<strong>코리아교육그룹</strong></p>
+                </div>
+            </div>
+            <div class="login-inner">
+                <span class="logo"><img src="assets/images/login/logo_keg.png" alt="KOREA EDUCATION GROUP"></span>
+                <h1>로그인</h1>
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="login-main-tab" data-bs-toggle="pill" data-bs-target="#login-main" type="button" role="tab" aria-controls="login-main" aria-selected="true">지점 관리자</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="login-mentor-tab" data-bs-toggle="pill" data-bs-target="#login-mentor" type="button" role="tab" aria-controls="login-mentor" aria-selected="false">멘토포털</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="login-instructor-tab" data-bs-toggle="pill" data-bs-target="#login-instructor" type="button" role="tab" aria-controls="login-instructor" aria-selected="false">강사포털</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="login-executive-tab" data-bs-toggle="pill" data-bs-target="#login-executive" type="button" role="tab" aria-controls="login-executive" aria-selected="false">경영진포털</button>
+                    </li>
+                </ul>
+
+                <fieldset>
+                    <legend>코리아교육그룹 로그인</legend>
+                    <div class="input-group-vertical">
+                        <input type="text" placeholder="아이디를 입력하세요." class="form-control">
+                        <input type="password" placeholder="비밀번호를 입력하세요." class="form-control">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input rounded-circle" type="checkbox" value="" id="auth-remember-check">
+                        <label class="form-check-label" for="auth-remember-check">로그인 정보저장</label>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-lg btn-primary" type="button">로그인</button>
+                    </div>
+                    <p class="text-end">
+                        <a href="" class="fs-13px">아이디 또는 비밀번호를 잊으셨나요?</a>
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
