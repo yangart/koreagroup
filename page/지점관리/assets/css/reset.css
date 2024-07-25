@@ -37,9 +37,13 @@
     --first-color:#6571ff;
     --second-color:#405189;
     --third-color:#2d65cd;
-    --first-color-alpha:#6571ff11;
+    /* --first-color-alpha:#6571ff11;
     --second-color-alpha:#40518911;
-    --third-color-alpha:#2d65cd11;
+    --third-color-alpha:#2d65cd11; */
+    
+    --first-color-alpha:#F5F6FF;
+    --second-color-alpha:#F2F3F7;
+    --third-color-alpha:#F1F5FC;
     
     --color-ye:#ffa133;
     --color-or:#ff710a;

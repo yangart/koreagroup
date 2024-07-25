@@ -794,7 +794,7 @@
 								</tbody>
 							</table>
 							
-							<div class="table-responsive">
+							<div class="table-sticky" data-sot-left="6" style="max-height: 640px;">
 								<table class="table-card border-line">
 									<thead>
 										<tr>
@@ -882,6 +882,58 @@
 											<td class="text-end">200,000</td>
 											<td class="text-end">-</td>
 										</tr>
+										<tr>
+											<td>1</td>
+											<td>컴퓨터강남</td>
+											<td>1234</td>
+											<td>인사팀</td>
+											<td>김미영</td>
+											<td>대리</td>
+											<td><b>2023-01-01</b></td>
+											<td><b></b></td>
+											<td></td>
+											<td class="text-end">209.0</td>
+											<td class="text-end">26,585,640</td>
+											<td class="text-end">1,874,970</td>
+											<td class="text-end">200,000</td>
+											<td class="text-end">140,500</td>
+											<td class="text-end">9</td>
+											<td class="text-end">2,215,470</td>
+											<td class="text-end">10,407</td>
+											<td class="text-end">2,174,970</td>
+											<td class="text-end">1,874,970</td>
+											<td class="text-end">200,000</td>
+											<td class="text-end">100,000</td>
+											<td class="text-end">1,874,970</td>
+											<td class="text-end">200,000</td>
+											<td class="text-end">100,000</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>컴퓨터강남</td>
+											<td>1234</td>
+											<td>인사팀</td>
+											<td>김미영</td>
+											<td>대리</td>
+											<td><b>2023-01-01</b></td>
+											<td><b></b></td>
+											<td></td>
+											<td class="text-end">209.0</td>
+											<td class="text-end">26,585,640</td>
+											<td class="text-end">1,874,970</td>
+											<td class="text-end">200,000</td>
+											<td class="text-end">-</td>
+											<td class="text-end">-</td>
+											<td class="text-end">2,215,470</td>
+											<td class="text-end">10,407</td>
+											<td class="text-end">2,174,970</td>
+											<td class="text-end">1,874,970</td>
+											<td class="text-end">200,000</td>
+											<td class="text-end">-</td>
+											<td class="text-end">1,874,970</td>
+											<td class="text-end">200,000</td>
+											<td class="text-end">-</td>
+										</tr>
 									</tbody>
 									<tfoot>
 										<tr>
@@ -897,7 +949,7 @@
 								</table>
 							</div>
 
-							<div class="table-responsive mt-3">
+							<div class="table-sticky mt-3" data-sot-left="11" style="max-height: 640px;">
 								<table class="table-card border-line">
 									<thead>
 										<tr>
@@ -1102,7 +1154,17 @@
 		})
 
 	</script>
+	<!-- 테이블 고정 -->
+	<script src="./assets/libs/StickyOnTable.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var stickyTables = document.querySelectorAll(".table-sticky");
 
+			stickyTables.forEach(function(table) {
+				StickyOnTable.apply(table);
+			});
+		});
+	</script>
 </body>
 
 </html>

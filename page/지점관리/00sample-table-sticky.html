@@ -1754,8 +1754,17 @@
 		<!-- 테이블 고정 -->
 		<script src="./assets/libs/StickyOnTable.js"></script>
 		<script>
+			// table-sticky 1개 
+			// document.addEventListener('DOMContentLoaded', function () {
+			// 	StickyOnTable.apply(document.querySelector(".table-sticky"));
+			// });
+			// table-sticky 여러개
 			document.addEventListener('DOMContentLoaded', function () {
-				StickyOnTable.apply(document.querySelector(".table-sticky"));
+				var stickyTables = document.querySelectorAll(".table-sticky");
+
+				stickyTables.forEach(function(table) {
+					StickyOnTable.apply(table);
+				});
 			});
 		</script>
 	</body>
