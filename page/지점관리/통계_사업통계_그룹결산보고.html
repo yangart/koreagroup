@@ -868,26 +868,24 @@
 									</li>
 								</ul>
 							</div>
-							<div class="accordion mt-5" id="accordionExample">
+							<div class="accordion mt-4" id="accordionExample">
+
 								<div class="accordion-item">
-									<h2 class="accordion-header">
-										<button class="accordion-button" type="button" data-bs-toggle="collapse"
-											data-bs-target="#collapseOne" aria-expanded="true"
-											aria-controls="collapseOne">
+									<h2 class="accordion-header" id="headingOne">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 											결산 요약
 										</button>
 									</h2>
-									<div id="collapseOne" class="accordion-collapse collapse show"
-										data-bs-parent="#accordionExample">
+									<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 										<div class="accordion-body">
-											<div class="row gap-2">
-												<div class="col-30p">
+											<div class="row">
+												<div class="col-4 pe-2">
 													<div class="table-tit mb-2">주차별 현황</div>
 													<div class="table-responsive">
 														<table class="table table-card">
 															<thead>
 																<tr>
-																	<th></th>
+																	<th style="min-width:50px"></th>
 																	<th class="text-end">목표 매출</th>
 																	<th class="text-end">주차 매출</th>
 																	<th>도달율</th>
@@ -930,7 +928,7 @@
 														</table>
 													</div>
 												</div>
-												<div class="col">
+												<div class="col-8">
 													<div class="row gap-2">
 														<div class="col">
 															<div class="table-tit mb-2">디비/상담 현재 일 평균</div>
@@ -979,12 +977,12 @@
 													</div>
 													<div class="row mt-4">
 														<div class="col">
-															<div class="table-tit mb-2">디비/상담 영업 예상</div>
+															<div class="table-tit mb-2">전년 매출 비교</div>
 															<div class="table-responsive">
 																<table class="table table-card">
 																	<thead>
 																		<tr>
-																			<th></th>
+																			<th style="min-width:80px"></th>
 																			<th>디비당 매출(공식)</th>
 																			<th>디비당 매출(전체)</th>
 																			<th>상담당 매출</th>
@@ -1035,9 +1033,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="row mt-5 gap-3">
-								<div class="col" style="overflow: hidden;">
-									<div class="table-sticky" style="max-height: 480px;" data-sot-left="1">
+							<div class="mt-4 overflow-x">
+								<div class="d-flex gap-2">
+									<div>
 										<table class="table table-card">
 											<thead>
 												<tr>
@@ -1108,9 +1106,7 @@
 											</tbody>
 										</table>
 									</div>
-								</div>
-								<div class="col" style="overflow: hidden;">
-									<div class="table-sticky" style="max-height: 320px;" data-sot-left="1">
+									<div>
 										<table class="table table-card">
 											<thead>
 												<tr>
@@ -1278,7 +1274,6 @@
 
 	</div><!-- // layout-wrapper -->
 
-	<button type="button" class="btn" id="scroll-top"></button>
 	<script src="./assets/libs/jquery-3.7.1/jquery.min.js"></script>
 	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.min.js"></script>
 	<script src="./assets/libs/simplebar/simplebar.min.js"></script>
@@ -1292,8 +1287,8 @@
 	<script src="./assets/js/common.js"></script>
 	<script src="./assets/js/custom.js"></script>
 
-	<!-- 드롭다운 -->
-	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+	<!-- 드롭다운 
+	<script src="./assets/libs/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>-->
 
 	<!-- 테이블 고정 -->
 	<script src="./assets/libs/StickyOnTable.js"></script>

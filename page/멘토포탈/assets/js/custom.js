@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
 	// Scroll Back Top Button
-	var toTop = document.getElementById("backToTop");
-	toTop.addEventListener("click", backToTop);
-	function backToTop() {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
+	// var toTop = document.getElementById("backToTop");
+	// toTop.addEventListener("click", backToTop);
+	// function backToTop() {
+	// 	document.body.scrollTop = 0;
+	// 	document.documentElement.scrollTop = 0;
+	// }
 });
 jQuery(function($){
 	

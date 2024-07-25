@@ -845,7 +845,7 @@ a.list-more {
 
         .grow {
             flex-grow: 1 !important;
-            width:100%;
+            width:calc(100% - 130px);
             >div+div {
                 margin-top: 9px;
             }

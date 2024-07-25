@@ -90,6 +90,15 @@
   --fc-highlight-color: rgba(188, 232, 241, 0.3);
   --fc-today-bg-color: rgba(255, 220, 40, 0.15);
   --fc-now-indicator-color: red;
+
+  --regit-bg: #386a1f11;
+  --standby-bg: #ff710a11;
+  --finish-bg: #00b03111;
+  --refund-bg: #40518911;
+  --regit:var(--first-color);
+  --standby:var(--second-color);
+  --finish:var(--third-color);
+  --refund:var(--btn-deep-color);
 }
 .material-symbols-outlined {
   font-variation-settings:
@@ -242,7 +251,7 @@ a, button {
   background:none;
   padding:0;
 }
-address, em, i {
+address, em, i, cite {
   font-style: normal;
 }
 hr {
@@ -2326,4 +2335,11 @@ table + .form-btn  { margin-top:20px; }
 }
 @function add-alpha($color-variable, $alpha) {
   @return "#{$color-variable}#{$alpha}";
+}
+
+.flex-1 { flex:1; }
+
+.flex-shrink-1.flex-grow-1 {
+  overflow:hidden;
+  overflow-y:auto;
 }

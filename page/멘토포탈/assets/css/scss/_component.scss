@@ -7,7 +7,15 @@
   }
   .fc-timegrid-body {
     width: 100% !important;
-    min-height: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+  .fc-timegrid-axis-chunk > table, 
+  .fc-timegrid-slots {
+    height:100%;
+  }
+  .fc-scroller-liquid-absolute {
+    overflow:hidden !important;
   }
   .fc-scrollgrid table {
     width: 100% !important;
@@ -306,6 +314,183 @@
   &:active:focus {
     box-shadow: none;
   }
+}
+
+.popover {
+  --bs-gutter-x:24px;
+  --bs-gutter-y:24px;
+  border-color:var(--regit);
+
+  .list-group .list-group-item {
+    padding:6px 12px;
+  }
+
+  .form-check {
+    position: relative;
+    text-align: left;
+    min-height: 20px;
+    margin: 0;
+    padding-left: 24px;
+
+    .form-check-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
+    &.empty {
+        width: 18px;
+        min-height: 18px;
+        line-height: 18px;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+
+        .form-check-input {
+            float: none;
+            margin: 0;
+            position: relative;
+            left: auto;
+            top: auto;
+        }    }
+    label {
+        cursor: pointer;
+    }
+    .form-check-input {
+        float: left;
+        margin-left: 0;
+    }
+}
+.form-check-input,
+.form-check-label {
+    line-height: 20px;
+}
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    position:static !important;
+
+    &[type=checkbox] {
+        border-radius: 2px;
+    }
+    &:checked {
+        background-color: var(--first-color);
+        border-color: var(--first-color);
+
+        +.form-check-label {}    }
+}
+.form-check-label {
+    cursor: pointer;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.form-check-input+.form-check-label {
+    margin: 0;
+}
+.form-label {
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    color: #aaa;
+
+    &.disabled {
+        opacity: 0;
+    }
+}
+.form-inline {
+    display: flex;
+    align-items: center;
+    height: var(--form-control-height);
+
+    +.form-inline {
+        margin-left: 10px;
+    }
+    >div {
+        display: inline-block;
+
+        +div {
+            margin-left: 8px;
+        }    }
+    *:not(.form-check)+.form-check {
+        margin-left: 30px;
+    }
+    .btn {
+        margin-bottom: 0;
+    }
+    .btn-check {
+        margin-left: 0;
+    }
+}
+  .popover-header {
+    background-color: var(--regit-bg);
+    padding:calc(var(--bs-gutter-y)/2) calc(var(--bs-gutter-x)/2);
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    .material-symbols-rounded {
+      cursor:pointer;
+      margin-left:4px;
+    }
+    &:empty {
+      display: none;
+    }
+    .popover-close {
+      font-size:0;
+
+    }
+  }
+  &.bs-popover-auto[data-popper-placement^=top]>.popover-arrow::before, 
+  &.bs-popover-top>.popover-arrow::before {
+    border-top-color: var(--regit);
+  }
+  &.bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::before, 
+  &.bs-popover-bottom>.popover-arrow::before {
+    border-bottom-color: var(--regit);
+  }
+  &.bs-popover-auto[data-popper-placement^=left]>.popover-arrow::before, 
+  &.bs-popover-left>.popover-arrow::before {
+    border-left-color: var(--regit);
+  }
+  &.bs-popover-auto[data-popper-placement^=right]>.popover-arrow::before, 
+  &.bs-popover-right>.popover-arrow::before {
+    border-right-color: var(--regit);
+  }
+
+  .popover-body {
+    padding:calc(var(--bs-gutter-y)/2) calc(var(--bs-gutter-x)/2);
+    .popover-noti-list {
+      li {
+        position:relative;
+        font-size:14px;
+        line-height:1.3;
+        padding-left:8px;
+        &:before {
+          content:'';
+          width:2px;
+          height:2px;
+          position:absolute;
+          top:calc(0.65em - 1px);
+          left:0;
+          background:#555;
+        }
+        &:only-child:before { content:none; }
+        + li { margin-top:4px; }
+      }
+    }
+  }
+  .popover-footer {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:calc(var(--bs-gutter-y)/2);
+  }
+}
+.popover-set-board {
+  margin-left:-12px !important;
 }
 
 /* bootstrap datepicker */

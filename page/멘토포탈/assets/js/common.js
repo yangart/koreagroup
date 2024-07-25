@@ -918,9 +918,9 @@
     [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')).map(function(e) {
         return new bootstrap.Tooltip(e)
     }),
-    [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]')).map(function(e) {
-        return new bootstrap.Popover(e)
-    }),
+    // [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]')).map(function(e) {
+    //     return new bootstrap.Popover(e)
+    // }),
     document.getElementById("reset-layout") && document.getElementById("reset-layout").addEventListener("click", function() {
         sessionStorage.clear(),
         window.location.reload()
